@@ -84,9 +84,9 @@
 
     #defocus-devices { animation: fade-devices 40s linear infinite; }
     @keyframes fade-devices {
-      0%,14% { opacity: 0; }
-      17%,27% { opacity: 0.5; }
-      30%,100% { opacity: 0; }
+      0%, 14% { opacity: 0; }
+      17%, 27% { opacity: 0.5; }
+      30%, 100% { opacity: 0; }
     }
 
     #no-port-forwarding { animation: fade-no-forwarding 40s linear infinite; }
@@ -96,7 +96,7 @@
       35%, 44% { opacity: 0.6; }
       46%, 100% { opacity: 0; }
     }
-    
+
     #with-port-forwarding { animation: fade-with-forwarding 40s linear infinite; }
     @keyframes fade-with-forwarding {
       0%, 53% { opacity: 0; }
@@ -109,7 +109,7 @@
     @keyframes fade-title-focus {
       0%, 26% { opacity: 0; }
       28%, 32% { opacity: 0.6; }
-      35%, 52%, 100% { opacity: 0; }
+      35%, 100% { opacity: 0; }
     }
 
     #router-request, #request-label { animation: fade-in-router-request 40s linear infinite; }
@@ -188,7 +188,7 @@
       75% { opacity: 0; transform: scale(0); }
       76.5%, 96% { opacity: 1; transform: scale(1); }
       98% { opacity: 0; transform: scale(1); }
-      100% { transform: scale(0); }
+      100% { opacity: 0; transform: scale(0); }
     }
 
     #laptop-x { animation: fade-laptop-x 40s linear infinite; }
@@ -215,7 +215,7 @@
 
     #port { animation: fade-in-port 40s cubic-bezier(.45,.45,.73,.99) infinite; }
     @keyframes fade-in-port {
-      0%,62% { opacity: 0; transform: translateX(10px) }
+      0%, 62% { opacity: 0; transform: translateX(10px) }
       64%, 96% { opacity: 1; transform: translateX(0) }
       98%, 100% { opacity: 0; }
     }
@@ -236,14 +236,16 @@
 
     #success-arrow-laptop { animation: expand-success-laptop 40s cubic-bezier(.45,.45,.73,.99) infinite; }
     @keyframes expand-success-laptop {
-      0%, 75% { transform: scale(0,0); }
-      77%, 100% { transform: scale(1,1); }
+      0%, 75% { transform: scale(0,0); opacity: 1; }
+      77%, 96% { transform: scale(1,1); opacity: 1; }
+      98%, 100% { opacity: 0; }
     }
 
     #port-tick { animation: write-on-port-tick 40s ease-in-out infinite; }
     @keyframes write-on-port-tick {
-      0%, 79% { stroke-dashoffset: 1; }
-      81%, 100% { stroke-dashoffset: 0; }
+      0%, 79% { stroke-dashoffset: 1; opacity: 1; }
+      81%, 96% { stroke-dashoffset: 0; opacity: 1; }
+      98%, 100% { stroke-dashoffset: 0; opacity: 0; }
     }
 
     #titles, #labels, #arrows { animation: end-fade 40s linear infinite; }
@@ -487,19 +489,23 @@
     </g>
     <g id="device-labels"
        font-size="6" text-anchor="middle">
-      <text id="laptop-address">
-        <tspan  class="device-address" x="347.5" y="89" fill="var(--kārikiōrangi)">192.168.1.60</tspan>
-        <tspan id="laptop-port-label"
-               x="347.5" y="98" fill="var(--whero)">Port 443</tspan>
-      </text>
-      <text id="mobile-address"
+      <g id="laptop-address">
+        <text class="device-address">
+          <tspan x="346" y="89" fill="var(--kārikiōrangi)">192.168.1.60</tspan>
+        </text>
+        <text id="laptop-port-label">
+          <tspan x="346" y="98"
+                 fill="var(--whero)">Port 443</tspan>
+        </text>
+      </g>
+      <text id="mobile-address" class="device-address"
             transform="translate(0,4)">
-        <tspan  class="device-address" x="368.5" y="138" fill="var(--kārikiōrangi)">192.168.1.70</tspan>
+        <tspan x="368.5" y="138" fill="var(--kārikiōrangi)">192.168.1.70</tspan>
       </text>
 
-      <text id="imac-address"
+      <text id="imac-address" class="device-address"
             transform="translate(0,5)">
-        <tspan  class="device-address" x="347.5" y="186" fill="var(--kārikiōrangi)">192.168.1.80</tspan>
+        <tspan x="347.5" y="186" fill="var(--kārikiōrangi)">192.168.1.80</tspan>
       </text>
     </g>
   </g>
