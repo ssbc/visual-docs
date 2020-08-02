@@ -1,22 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-  width="48" height="48" viewBox="0 0 48 48">
+     width="48" height="48"
+     viewBox="0 0 48 48">
   <title>Ethernet 48px</title>
-  <g stroke="#303030" stroke-linejoin="round" stroke-width="1">
+  <g stroke="#303030" stroke-linejoin="round">
     <rect id="surround"
           fill="#999"
-          width="43" height="39" x="2.5" y="4.5" ry="1"/>
+          width="39" height="35" x="4.5" y="6.5" rx=".5" ry=".5"/>
     <path id="port"
-          fill="#4d4d4d" d="M34 10.5c.47 0 .5.03.5.5v5.5H42c.47 0 .5.03.5.5v23c0 .47-.03.5-.5.5H6c-.47 0-.5-.03-.5-.5V17c0-.47.03-.5.5-.5h7.48V11c0-.47.05-.5.52-.5h2.5V8c0-.47-.2-.5.27-.5H31c.47 0 .5.03.5.5v2.5z"/>
+          fill="#4d4d4d"
+          d="M33.5 12.5v5h7v21H7.7l-.2-21h7v-5h3v-3h13v3z"/>
   </g>
-  <g id="pins"
-     fill="#fff">
-    <rect width="2" height="6" x="9" y="33"/>
-    <rect width="2" height="6" x="13" y="33"/>
-    <rect width="2" height="6" x="17" y="33"/>
-    <rect width="2" height="6" x="21" y="33"/>
-    <rect width="2" height="6" x="25" y="33"/>
-    <rect width="2" height="6" x="29" y="33"/>
-    <rect width="2" height="6" x="33" y="33"/>
-    <rect width="2" height="6" x="37" y="33"/>
-  </g>
+  <path id="pins"
+        fill="#fff"
+        d="M9 33h2v5H9zM13 33h2v5h-2zM17 33h2v5h-2zM21 33h2v5h-2zM25 33h2v5h-2zM29 33h2v5h-2zM33 33h2v5h-2zM37 33h2v5h-2z"/>
 </svg>

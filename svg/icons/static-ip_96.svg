@@ -1,22 +1,18 @@
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 48 48"
-   height="48" width="48">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="96" height="96"
+     viewBox="0 0 48 48">
   <title>Static IP 96px</title>
-  <g stroke="#303030"
-    stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="#999" stroke="#303030"
+     stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round">
+    <path id="boxes"
+          d="M2.5 32.5h9v9h-9zM19.5 32.5h9v9h-9zM36.5 32.5h9v9h-9z"/>
+    <path id="routes" fill="none"
+          d="M6.75 31v-5.75h34.5v5.75M24 21v10"/>
     <path id="pin"
-          fill="#4d4d4d"
-          d="m 24,0.25 c -3.75,0 -6.8,3 -6.8,6.9 0,5.7 6.8,12.9 6.8,12.9 0,0 6.8,-7.1 6.8,-12.9 0,-3.8 -3,-6.9 -6.8,-6.9 z
-          m -0,4.3 a 2.6,2.6 0 0 1 0,0 2.6,2.6 0 0 1 2.6,2.6 2.6,2.6 0 0 1 -2.6,2.6 2.6,2.6 0 0 1 -2.6,-2.6 2.6,2.6 0 0 1 2.6,-2.7 z"/>
-    <g id="boxes"
-       fill="#999999">
-      <rect y="36.25" x="0.25" height="11.5" width="11.5"/>
-      <rect y="36.25" x="18.25" height="11.5" width="11.5"/>
-      <rect y="36.25" x="36.25" height="11.5" width="11.5"/>
-    </g>
-    <path id="routes"
-          fill="none"
-          d="m6,35 v-6 h36 v6 M24,21 V35"/>
+          fill-rule="evenodd"
+          d="M29.5 9.98c0 4.61-5.5 9.52-5.5 9.52
+             s-5.5-4.9-5.5-9.52a5.49 5.49 0 0111 0
+             M25.5 10a1.5 1.5 0 01-1.5 1.5 1.5 1.5 0 01-1.5-1.5
+             A1.5 1.5 0 0124 8.5a1.5 1.5 0 011.5 1.5z"/>
   </g>
 </svg>

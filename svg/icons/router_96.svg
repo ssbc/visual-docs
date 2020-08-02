@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="96" height="96" viewBox="0 0 48 48">
+   viewBox="0 0 48 48"
+   height="96" width="96">
   <title>Router 96px</title>
   <style>/* <![CDATA[ */
     #wifi-a { animation: fade-a 6s linear infinite; }
@@ -25,32 +26,37 @@
       0%,10%,      23%,70%,      73%,     87%,100% { fill-opacity: 0.5; }
             11%,22%,      71%,72%,   74%,86%        { fill-opacity: 1; }
     }
-    /* ]]> */</style>
+  /* ]]> */</style>
   <g id="wifi-waves"
-         fill="none" stroke="#999" stroke-linecap="round" stroke-width="1">
+     stroke-width=".5" stroke-linecap="round"
+     fill="none" stroke="#999">
     <path id="wifi-a"
-          d="M37.94 12.1a3.1 3.1 0 012.55-.63 3.1 3.1 0 012.12 1.56"/>
+          d="m 35.2,10.851004 a 3,3 0 0 1 2.3,-1.1000001 3,3 0 0 1 2.4,1.1000001"/>
     <path id="wifi-b"
-          d="M36.45 9.21a7.17 7.9 0 018.73 1.8"/>
+       d="m 33.1,8.4494794 a 7.8,7.1 78.6 0 1 8.9,0"/>
     <path id="wifi-c"
-          d="M34.72 6.49a10.97 12.4 0 0113.03 2.6"/>
+       d="m 31,6.1394894 a 12.3,10.9 78.6 0 1 13,0"/>
   </g>
   <rect id="router-base"
-        fill="#737373" stroke="#303030" stroke-width=".5"
-        width="39.6" height="7.04" x=".25" y="28.45" ry="1.37"/>
+        fill="#737373" stroke="#303030"
+        stroke-width=".5"
+        x="2.25" y="27.25" height="9.5" width="41.5" rx="1.25" ry="1.25"/>
   <g id="lights"
-     fill="#fff" stroke="#4d4d4d" stroke-width=".25">
+     stroke-width=".25"
+     fill="#fff" stroke="#4d4d4d">
     <circle id="light-a"
-            cx="4.25" cy="31.75" r="1"/>
+       r="1.75" cy="31.875" cx="6.875"/>
     <circle id="light-b"
-            cx="8.25" cy="31.75" r="1"/>
+       r="1.75" cy="31.875" cx="13"/>
     <circle id="light-c"
-            cx="12.25" cy="31.75" r="1"/>
+       r="1.75" cy="31.875" cx="19.125"/>
   </g>
   <circle id="antenna-base"
-          fill="#4d4d4d" stroke="#303030" stroke-width=".25"
-          cx="35.75" cy="31.75" r="2" />
+          fill="#4d4d4d" stroke="#303030"
+          stroke-width=".25"
+          r="2.875" cy="32" cx="37"/>
   <path id="antenna"
-        fill="#737373" stroke="#303030" stroke-width=".5"
-        d="M34.82 30.82l4.01-16.09c.43-1.5 2.13-1.2 1.9.42l-3.06 16.3c-.38 2.07-3.41 1.53-2.85-.63z"/>
+        fill="#737373" stroke="#303030"
+        stroke-width=".5"
+        d="m 35.75,14.5 c 0.25,-2.344163 3.25,-2.338619 3.5,0 l 0.5,16.5 c 0.1,3 -4.6,3 -4.5,0 z"/>
 </svg>

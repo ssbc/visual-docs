@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="48" height="48" viewBox="0 0 48 48">
-  <title>Router 48px</title>
+     width="48" height="48"
+     viewBox="0 0 48 48">
+  <title>
+    Router 48px
+  </title>
   <style>/* <![CDATA[ */
     #wifi-a { animation: fade-a 6s linear infinite; }
     @keyframes fade-a {
@@ -29,28 +32,28 @@
   <g id="wifi-waves"
          fill="none" stroke="#999" stroke-linecap="round" stroke-width="1">
     <path id="wifi-a"
-          d="M37.8 12.03a3.06 3.06 0 012.52-.63 3.06 3.06 0 012.1 1.55"/>
+          d="M35.2 10.6a3 3 0 012.3-1.1 3 3 0 012.4 1.1"/>
     <path id="wifi-b"
-          d="M36.32 9.17a7.1 7.82 0 018.64 1.78"/>
+          d="M33.1 8.1a7.8 7.1 78.6 018.9 0"/>
     <path id="wifi-c"
-          d="M34.6 6.47a10.86 12.27 0 0112.9 2.57"/>
+          d="M31 6a12.3 10.9 78.6 0113 0"/>
   </g>
   <rect id="router-base"
         fill="#737373" stroke="#303030" stroke-width="1"
-        width="39.18" height="6.96" x=".5" y="28.2" ry="1.35"/>
+        width="41" height="9" x="2.5" y="27.5" rx="1.5" ry="1.5"/>
   <g id="lights"
      fill="#fff" stroke="#4d4d4d" stroke-width=".5">
     <circle id="light-a"
-            cx="4.5" cy="31.5" r="1"/>
+            cx="7" cy="32" r="1.75"/>
     <circle id="light-b"
-            cx="8.5" cy="31.5" r="1"/>
+            cx="13" cy="32" r="1.75"/>
     <circle id="light-c"
-            cx="12.5" cy="31.5" r="1"/>
+            cx="19" cy="32" r="1.75"/>
   </g>
   <circle id="antenna-base"
           fill="#4d4d4d" stroke="#303030" stroke-width=".5"
-          cx="35.5" cy="31.5" r="2.25" />
+          cx="37" cy="32" r="2.8"/>
   <path id="antenna"
-        fill="#737373" stroke="#303030" stroke-width="1"
-        d="M34.57 30.57l4.01-16.09c.43-1.5 2.13-1.2 1.9.42l-3.06 16.3c-.38 2.07-3.41 1.53-2.85-.63z"/>
+        fill="#737373" stroke="#303030"
+        d="M36 14.3c.3-2.3 2.8-2.3 3 0l.5 16.7c.1 3-4.1 3-4 0z"/>
 </svg>
