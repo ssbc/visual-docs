@@ -1,0 +1,22 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 48 48"
+   height="48" width="48">
+  <title>Static IP 96px</title>
+  <g stroke="#303030"
+     stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+    <path id="pin"
+          fill="#4d4d4d"
+          d="m 24,0.25 c -3.75,0 -6.8,3 -6.8,6.9 0,5.7 6.8,12.9 6.8,12.9 0,0 6.8,-7.1 6.8,-12.9 0,-3.8 -3,-6.9 -6.8,-6.9 z
+          m -0,4.3 a 2.6,2.6 0 0 1 0,0 2.6,2.6 0 0 1 2.6,2.6 2.6,2.6 0 0 1 -2.6,2.6 2.6,2.6 0 0 1 -2.6,-2.6 2.6,2.6 0 0 1 2.6,-2.7 z"/>
+    <g id="boxes"
+       fill="#999999">
+      <rect y="36.25" x="0.25" height="11" width="11"/>
+      <rect y="36.25" x="18.25" height="11" width="11"/>
+      <rect y="36.25" x="36.25" height="11" width="11"/>
+    </g>
+    <path id="routes"
+          fill="none"
+          d="m6,35 v-6 h36 v6 M24,21 V35"/>
+  </g>
+</svg>

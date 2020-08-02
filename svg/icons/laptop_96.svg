@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="96" height="96" version="1.1" viewBox="0 0 48 48">
+  <title>Laptop 96px</title>
+  <g fill="none" stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt" >
+    <path id="screen-bg"
+          fill="#4d4d4d"
+          d="M42.42 32.2V10.36a.29.29 0 00-.29-.29H5.87a.29.29 0 00-.29.29v21.82z"/>
+    <path id="keyboard-bg"
+          fill="#4d4d4d"
+          d="M5.58 32.2l-5.61 4.7V38H47.5v-1l-5.36-4.52z"/>
+    <rect id="screen"
+          fill="#fff"
+          width="36" height="17.67" x="6" y="13" rx="0" ry="0"/>
+    <circle id="camera"
+            fill="#999"
+            cx="24" cy="11.5" r=".5" />
+    <path id="keyboard"
+          stroke="#999" stroke-width=".25"
+          d="M6 34.13h36
+             M7 33.13h33.99
+             M5 35.13h12m14.04 0H43
+             M17.76 35.13h12.5l1.24 2h-15z"/>
+    <path id="front-edge"
+          stroke="#999" stroke-width=".5"
+          d="M47.5 37.25H.5"/>
+    <path id="edge-shadow"
+          stroke="#737373"
+          d="M47.5 37.75H.5"/>
+    <path id="outline"
+          stroke="#303030"
+          d="M.25 36.88 v1.37 h47.5 v-1.38 l-5.5-4.37 v-22 c0-.16-.1-.25-.25-.25 H6 c-.16 0-.25.1-.25.25 v22 z
+             M6 32.25 H42"/>
+  </g>
+</svg>

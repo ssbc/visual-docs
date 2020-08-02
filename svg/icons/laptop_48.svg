@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="48" height="48" viewBox="0 0 48 48">
+  <title>Laptop 48px</title>
+  <g fill="none" stroke-width="1" stroke-linejoin="round" stroke-linecap="butt" >
+    <path id="screen-bg"
+          fill="#4d4d4d"
+          d="M42.42 32.2V10.36a.29.29 0 00-.29-.29H5.87a.29.29 0 00-.29.29v21.82"/>
+    <path id="keyboard-bg"
+          fill="#4d4d4d"
+          d="M5.58 32.2c0 .15.13.28.28.28l-5.61 4.7V38h47.5v-.83l-5.6-4.69c.14 0 .27-.13.27-.29"/>
+    <rect id="screen"
+          fill="#fff"
+          width="36" height="18" x="6" y="13" rx="0" ry="0"/>
+    <circle id="camera"
+            fill="#999"
+            cx="24" cy="11.5" r=".5"/>
+    <path id="keyboard"
+          stroke="#999" stroke-width=".5"
+          d="M6 34.25h36
+             M7 33.25h33.99
+             M5 35.25h12m14.04 0H43
+             M17.76 35.25h12.5l.99 2h-14.5z"/>
+    <path id="front-edge"
+      stroke="#999"
+      d="M47 37.5H1"/>
+    <path id="outline"
+          stroke="#303030"
+          d="M.5 36.75 v1.75 h47 v-1.75 l-5-4.25 V10.8 c0-.16-.21-.3-.37-.3H5.87 c-.16 0-.37.1-.37.25 V32.5 z
+             M5 32.5 H43"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="96" height="96" viewBox="0 0 48 48">
+  <title>Wi-Fi 96px</title>
+  <g fill="none" stroke="#303030" stroke-width="1">
+    <circle cx="24" cy="39.98" r="1.92" fill="#999"/>
+    <path d="M16.77 32.75a10.2 10.2 0 0114.46 0" />
+    <path d="M8.63 24.61A21.66 21.66 0 0124 18.25c6 0 11.43 2.43 15.37 6.36" />
+    <path d="M.5 15.84A33.13 33.13 0 0124 6.1c9.18 0 17.49 3.72 23.5 9.73" />
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="48" height="48" viewBox="0 0 48 48">
+  <title>Router 48px</title>
+  <style>/* <![CDATA[ */
+    #wifi-a { animation: fade-a 6s linear infinite; }
+    @keyframes fade-a {
+      0% { opacity: 0; }
+      10%, 80% { opacity: 1; }
+      90%, 100% { opacity: 0; }
+    }
+    #wifi-b { animation: fade-b 6s linear infinite; }
+    @keyframes fade-b {
+      0%, 5% { opacity: 0; }
+      15%, 85% { opacity: 1; }
+      95%, 100% { opacity: 0; }
+    }
+    #wifi-c { animation: fade-c 6s linear infinite; }
+    @keyframes fade-c {
+      0%, 10% { opacity: 0; }
+      20%, 90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    #light-a { animation: blink-a 4s linear infinite; }
+    @keyframes blink-a {
+      0%,10%,      23%,70%,      73%,     87%,100% { fill-opacity: 0.5; }
+            11%,22%,      71%,72%,   74%,86%        { fill-opacity: 1; }
+    }
+  /* ]]> */</style>
+  <g id="wifi-waves"
+         fill="none" stroke="#999" stroke-linecap="round" stroke-width="1">
+    <path id="wifi-a"
+          d="M37.8 12.03a3.06 3.06 0 012.52-.63 3.06 3.06 0 012.1 1.55"/>
+    <path id="wifi-b"
+          d="M36.32 9.17a7.1 7.82 0 018.64 1.78"/>
+    <path id="wifi-c"
+          d="M34.6 6.47a10.86 12.27 0 0112.9 2.57"/>
+  </g>
+  <rect id="router-base"
+        fill="#737373" stroke="#303030" stroke-width="1"
+        width="39.18" height="6.96" x=".5" y="28.2" ry="1.35"/>
+  <g id="lights"
+     fill="#fff" stroke="#4d4d4d" stroke-width=".5">
+    <circle id="light-a"
+            cx="4.5" cy="31.5" r="1"/>
+    <circle id="light-b"
+            cx="8.5" cy="31.5" r="1"/>
+    <circle id="light-c"
+            cx="12.5" cy="31.5" r="1"/>
+  </g>
+  <circle id="antenna-base"
+          fill="#4d4d4d" stroke="#303030" stroke-width=".5"
+          cx="35.5" cy="31.5" r="2.25" />
+  <path id="antenna"
+        fill="#737373" stroke="#303030" stroke-width="1"
+        d="M34.57 30.57l4.01-16.09c.43-1.5 2.13-1.2 1.9.42l-3.06 16.3c-.38 2.07-3.41 1.53-2.85-.63z"/>
+</svg>

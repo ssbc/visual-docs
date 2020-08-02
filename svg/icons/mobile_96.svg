@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="96" height="96" viewBox="0 0 48 48">
+  <title>Mobile 96px</title>
+  <g stroke-width="0.5" stroke-linecap="butt" >
+    <rect id="base"
+          fill="none" stroke="#303030" stroke-width="1"
+          width="23" height="47" x="12.5" y="0.5" ry="2.4"/>
+    <rect id="inner-edge"
+          fill="#4d4d4d" stroke="#4d4d4d"
+          width="22.5" height="46.5" x="12.75" y=".75" ry="2.2"/>
+    <rect id="screen"
+          fill="#fff"
+          width="22" height="40" x="13" y="3"/>
+    <circle id="camera"
+            fill="#fff"
+            cx="33" cy="1.5" r=".5"/>
+    <path id="speaker"
+          stroke="#999"
+          d="M23 1.25h2"/>
+    <path id="microphone"
+          stroke="#999"
+          d="M21 45.25h6"/>
+  </g>
+</svg>
