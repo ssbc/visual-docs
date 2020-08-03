@@ -34,224 +34,75 @@
     --waiporoporo-tint-a: hsl(289, 40%, 66%);
     }
 
-    #house-and-contents { animation: fade-in-house 40s linear infinite; }
-    @keyframes fade-in-house {
-      0% { opacity: 0; }
-      3%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
-    }
-
-    #router-label { animation: fade-in-router 40s linear infinite; }
-    @keyframes fade-in-router {
-      0%, 4% { opacity: 0; }
-      6%, 27% { opacity: 1; }
-      29%, 100% { opacity: 0; }
-    }
-    #router-address { animation: fade-router-address 40s linear infinite; }
-    @keyframes fade-router-address {
-      0%, 4% { opacity: 0; }
-      6%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
-    }
-
-    #wifi-waves { animation: fade-in-wifi 40s linear infinite; }
-    @keyframes fade-in-wifi {
-      0%,5% { opacity: 0; transform: scale(0); }
-      8%, 96% { opacity: 1; transform: scale(1); }
-      98%, 100% { opacity: 0; }
-    }
-
-    .device-address { animation: fade-in-devices 40s ease-in-out infinite; }
-    @keyframes fade-in-devices {
-      0%,9% { opacity: 0; }
-      12%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
-    }
-
-    #internet-symbol { animation: fade-in-internet 40s linear infinite; }
-    @keyframes fade-in-internet {
-      0%, 14% { opacity: 0; }
-      17%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
-    }
-
-    #internet-label { animation: fade-internet-label 40s linear infinite; }
-    @keyframes fade-internet-label {
-      0%, 14% { opacity: 0; }
-      17%, 27% { opacity: 1; }
-      29%, 100% { opacity: 0; }
-    }
-
-    #defocus-devices { animation: fade-devices 40s linear infinite; }
-    @keyframes fade-devices {
-      0%, 14% { opacity: 0; }
-      17%, 27% { opacity: 0.5; }
-      30%, 100% { opacity: 0; }
-    }
-
-    #no-port-forwarding { animation: fade-no-forwarding 40s linear infinite; }
-    @keyframes fade-no-forwarding {
-      0%, 27% { opacity: 0; }
-      29%, 32% { opacity: 1; }
-      35%, 44% { opacity: 0.6; }
-      46%, 100% { opacity: 0; }
-    }
-
-    #with-port-forwarding { animation: fade-with-forwarding 40s linear infinite; }
-    @keyframes fade-with-forwarding {
-      0%, 53% { opacity: 0; }
-      56%, 60% { opacity: 1; }
-      62%, 96% { opacity: 0.6; }
-      98%, 100% { opacity: 0; }
-    }
-
-    #focus-title { animation: fade-title-focus 40s linear infinite; }
-    @keyframes fade-title-focus {
-      0%, 26% { opacity: 0; }
-      28%, 32% { opacity: 0.6; }
-      35%, 100% { opacity: 0; }
-    }
-
-    #router-request, #request-label { animation: fade-in-router-request 40s linear infinite; }
+    #router-request, #request-label { animation: fade-in-router-request 20s linear infinite; }
     @keyframes fade-in-router-request {
-      0%, 17% { opacity: 0; }
-      19%, 24% { opacity: 1; }
-      25% { opacity: 0; }
-      35% { opacity: 0; }
-      36% { opacity: 1; }
-      49% { opacity: 1; }
-      50%, 70% { opacity: 0; }
-      72%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
+      0%, 30% { opacity: 0; }
+      34%, 100% { opacity: 1; }
     }
-    #port-request { animation: fade-in-port-request 40s ease-in-out infinite; }
+    #port-request { animation: fade-in-port-request 20s ease-in-out infinite; }
     @keyframes fade-in-port-request {
-      0%, 36% { opacity: 0; }
-      37% { opacity: 1; }
-      49% { opacity: 1; }
-      50%, 70% { opacity: 0; }
-      72%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
-    }
-    #internet-request { animation: slide-request 40s linear infinite; }
-    @keyframes slide-request {
-      0%, 36% { transform: translateX(6px); }
-      37% { transform: translateX(0); }
+      0%, 30% { opacity: 0; }
+      34%, 100% { opacity: 1; }
     }
 
-    #router-arrow { animation: fade-router-arrow 40s linear infinite; }
-    @keyframes fade-router-arrow {
-      0%, 16% { opacity: 0; transform: scaleX(0);}
-      16.5% { opacity: 1; }
-      19% { transform: scaleX(1); }
-      24% { opacity: 1; }
-      25%, 100% { opacity: 0; }
-    }
-
-    #port-arrow { animation: fade-port-arrow 40s linear infinite; }
+    #port-arrow { animation: fade-port-arrow 20s linear infinite forwards; }
     @keyframes fade-port-arrow {
-      0%, 38% { opacity: 0; transform: scaleX(0); }
-      38.5% { opacity: 1; }
-      41% { transform: scaleX(1); }
-      49% { opacity: 1; }
-      50% { opacity: 0; transform: scaleX(1); }
-      73% { opacity: 0; transform: scaleX(0); }
-      75%, 96% { opacity: 1; transform: scaleX(1); }
-      98%, 100% { opacity: 0; }
+      0%, 36% { opacity: 0; transform: scaleX(0); }
+      40%, 100% { opacity: 1; transform: scaleX(1); }
     }
 
-    .failure-arrow { animation: expand-right 40s cubic-bezier(.47,.63,.6,1.14) infinite; }
+    .failure-arrow { animation: expand-right 20s cubic-bezier(.47,.63,.6,1.14) infinite; }
     @keyframes expand-right {
       0%, 40% { opacity: 0; transform: scale(0,0); }
-      44% { opacity: 1; transform: scale(1,1); }
-      49% { opacity: 1; }
-      50% { opacity: 0; }
-      73% { transform: scale(1,1); }
-      75% { opacity: 0; transform: scale(0,0); }
-      77%, 96% { opacity: 1; transform: scale(1,1); }
-      98%, 100% { opacity: 0; }
+      44%, 100% { opacity: 1; transform: scale(1,1); }
     }
 
-    #failure-arrow-laptop { animation: expand-right-laptop 40s cubic-bezier(.47,.63,.6,1.14) infinite; }
-    @keyframes expand-right-laptop {
-      0%, 40% { opacity: 0; transform: scale(0,0); }
-      44% { opacity: 1; transform: scale(1,1); }
-      49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-
-    #mobile-x, #imac-x { animation: fade-in-x 40s linear infinite; }
+    #mobile-x, #imac-x { animation: fade-in-x 20s linear infinite; }
     @keyframes fade-in-x {
-      0%, 41% { opacity: 0; transform: scale(0); }
-      44%, 49% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0; }
-      75% { opacity: 0; transform: scale(0); }
-      76.5%, 96% { opacity: 1; transform: scale(1); }
-      98% { opacity: 0; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0); }
+      0%, 40% { opacity: 0; transform: scale(0); }
+      43%, 100% { opacity: 1; transform: scale(1); }
     }
 
-    #laptop-x { animation: fade-laptop-x 40s linear infinite; }
-    @keyframes fade-laptop-x {
-      0%, 41% { opacity: 0; transform: scale(0); }
-      44%, 49% { opacity: 1; transform: scale(1); }
-      50%, 100% { opacity: 0; }
-    }
-
-    #focus-laptop { animation: focus-laptop 40s linear infinite;
+    #focus-laptop { animation: focus-laptop 20s linear infinite;
     }
     @keyframes focus-laptop {
-      0%, 53% { opacity: 0; }
-      56%, 66% { opacity: .7;}
-      69%, 100% { opacity: 0;}
+      0%, 22% { opacity: .7;}
+      28%, 100% { opacity: 0;}
     }
-
-    #laptop-cover { animation: laptop-reveal 40s linear infinite; }
-    @keyframes laptop-reveal {
-      0%, 53% { opacity: 0; }
-      56%, 58% { opacity: .7;}
-      61%, 100% { opacity: 0;}
-    }
-
-    #port { animation: fade-in-port 40s cubic-bezier(.45,.45,.73,.99) infinite; }
+    #port { animation: fade-in-port 20s cubic-bezier(.45,.45,.73,.99) infinite; }
     @keyframes fade-in-port {
-      0%, 62% { opacity: 0; transform: translateX(10px) }
-      64%, 96% { opacity: 1; transform: translateX(0) }
-      98%, 100% { opacity: 0; }
+      0%, 14% { opacity: 0; transform: translateX(10px) }
+      18%, 100% { opacity: 1; transform: translateX(0) }
     }
 
-    #laptop-port-label { animation: fade-in-port-label 40s linear infinite; }
+    #laptop-port-label { animation: fade-in-port-label 20s linear infinite; }
     @keyframes fade-in-port-label {
-      0%, 62% { opacity: 0; }
-      64%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
+      0%, 14% { opacity: 0; }
+      18%, 100% { opacity: 1; }
     }
 
-    #laptop-address { animation: scroll-up 40s ease-in-out infinite; }
+    #laptop-address { animation: scroll-up 20s ease-in-out infinite; }
     @keyframes scroll-up {
-      0%, 62% { transform: translate(0,4px); }
-      64%, 98% { transform: translate(0,0); }
-      100% { transform: translate(0,4px); }
+      0%, 14% { transform: translate(0,4px); }
+      18%, 100% { transform: translate(0,0); }
     }
 
-    #success-arrow-laptop { animation: expand-success-laptop 40s cubic-bezier(.45,.45,.73,.99) infinite; }
+    #success-arrow-laptop { animation: expand-success-laptop 20s cubic-bezier(.45,.45,.73,.99) infinite; }
     @keyframes expand-success-laptop {
-      0%, 75% { transform: scale(0,0); opacity: 1; }
-      77%, 96% { transform: scale(1,1); opacity: 1; }
-      98%, 100% { opacity: 0; }
+      0%, 40% { transform: scale(0,0); opacity: 1; }
+      44%, 100% { transform: scale(1,1); opacity: 1; }
     }
 
-    #port-tick { animation: write-on-port-tick 40s ease-in-out infinite; }
+    #port-tick { animation: write-on-port-tick 20s ease-in-out infinite; }
     @keyframes write-on-port-tick {
-      0%, 79% { stroke-dashoffset: 1; opacity: 1; }
-      81%, 96% { stroke-dashoffset: 0; opacity: 1; }
-      98%, 100% { stroke-dashoffset: 0; opacity: 0; }
+      0%, 48% { stroke-dashoffset: 1; opacity: 1; }
+      52%, 100% { stroke-dashoffset: 0; opacity: 1; }
     }
 
-    #titles, #labels, #arrows { animation: end-fade 40s linear infinite; }
-    @keyframes end-fade {
-      0%, 96% { opacity: 1; }
-      98%, 100% { opacity: 0; }
+    #fade-in-out { animation: fadeout 20s linear infinite forwards; }
+    @keyframes fadeout {
+      5%, 90% { opacity: 0; }
+      0%, 96%, 100% { opacity: 1; }
     }
 
   </style>
@@ -281,21 +132,11 @@
             stroke="var(--whero-tint-a)"
             stroke-linejoin="round" stroke-width="1"
             marker-end="url(#connection-pointer)"
-            style="transform-origin:73.2px 140.6px 0px"
-            d="M73.2 139.1h130"/>
-      <path id="router-arrow"
-            stroke="var(--kārikiōrangi-tint-a)"
-            stroke-linejoin="round" stroke-width="1"
-            marker-end="url(#router-pointer)"
-            style="transform-origin:73.2px 140.6px 0px"
+            style="transform-origin:73.2px 140.6px 0px;"
             d="M73.2 139.1h130"/>
     </g>
     <g id="failure-arrows"
        stroke-dasharray="3 2">
-      <path id="failure-arrow-laptop"
-            stroke="var(--pango-tint-c)" marker-end="url(#disconnection-pointer)"
-            style="transform-origin:204px 140.6px 0px"
-            d="M213.2 136.3l80 -30.4"/>
       <path id="router-to-mobile" class="failure-arrow"
             stroke="var(--pango-tint-c)" marker-end="url(#disconnection-pointer)"
             style="transform-origin:204px 140.6px 0px"
@@ -319,18 +160,8 @@
           stroke-dashoffset="1"
           d="M385 95l2.5 2.5l7.5-10"/>
 
-    <path id="router-tick"
-          stroke="var(--kārikiōrangi-tint-a)" stroke-width="1"
-          pathLength="1"
-          stroke-dasharray="1"
-          stroke-dashoffset="1"
-          d="M230 137l2.5 2.5l7.5-10"/>
     <g id="x-symbols"
        stroke="var(--kōwhai-shade-a)" stroke-width="1">
-      <path id="laptop-x"
-            style="transform-origin:305px 101.5px 0px;"
-            d="M300 96.5l10 10
-               m-10 0l10-10"/>
       <path id="mobile-x"
             style="transform-origin:318.2px 140.2px 0px;"
             d="M313.2 135.2l10 10
@@ -467,22 +298,14 @@
         <tspan text-anchor="start" x="154" fill="var(--whero)">:443</tspan>
       </text>
     </g>
-    <text id="router-label"
-          text-anchor="start">
-      <tspan x="212" y="73">Router</tspan>
-    </text>
+
     <text id="router-address"
           text-anchor="start">
       <tspan x="212" y="83" fill="var(--kārikiōrangi)">72.243.14.15</tspan>
     </text>
-    <text id="internet-label">
-      <tspan x="43" y="100" text-anchor="middle">Internet</tspan>
-    </text>
+
     <g id="titles"
        fill="var(--kōwhai-shade-a)" font-size="10" font-weight="bold">
-      <text id="no-port-forwarding">
-        <tspan x="105" y="40" text-anchor="middle">No Port Forwarding</tspan>
-      </text>
       <text id="with-port-forwarding">
         <tspan x="105" y="40" text-anchor="middle">With Port Forwarding</tspan>
       </text>
@@ -513,17 +336,7 @@
         fill="var(--mā)"
         style="mix-blend-mode:screen; opacity:0;" fill-rule="evenodd"
         d="M195,0H425V234H0V90H195z M315,76h60v40h-60z"/>
-  <path id="laptop-cover"
-        fill="var(--mā)"
-        style="mix-blend-mode:screen; opacity:0;"
-        d="M315,76h60v40h-60z"/>
-  <path id="focus-title"
-        fill="var(--mā)"
-        style="mix-blend-mode:screen; opacity:0;"
-        d="M195,0H425V234H0V90H195z"/>
-  <path id="defocus-devices"
-        fill="var(--mā)"
-        style="mix-blend-mode:screen; opacity:0;"
-        d="M308,75h90v150h-90z"/>
-  <!-- <circle id="test" cx="230" cy="137" r="1" fill="red"/> -->
+  <rect id="fade-in-out"
+        width="425" height=" 234"
+        fill="var(--mā)" opacity="0"/>
 </svg>
