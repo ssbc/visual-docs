@@ -25,6 +25,11 @@ _3. Explanation of port forwarding_
 
 ----
 
+### Infrastructure Comparison 
+
+![](svg/corporate-server.svg)
+
+_Example text: With a 'normal' internet service, your data may be housed in a large corporate data center overseas._
 
 ## Icons
 
