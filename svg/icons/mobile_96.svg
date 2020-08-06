@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="96" height="96" viewBox="0 0 48 48">
+     width="96px" height="96px"
+     viewBox="0 0 48 48">
   <title>Mobile 96px</title>
   <g stroke-width="0.5" stroke-linecap="butt" >
     <rect id="base"

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-  width="500"
+  width="500px"
   viewBox="0 10 150 120"
   style="background:#fff;"
   >
@@ -53,9 +53,20 @@
     animation: expand 20s ease-in-out forwards infinite;
   }
   @keyframes expand {
-    0%, 35% { opacity: 0; transform: translate(1.45px,-2.2px) scale(0);}
-    37.5%, 40% { opacity: 1; transform: translate(1.45px,-2.2px) scale(0.06); transform-origin: 87.3px 52.8px 0px;  }
-    50%, 100% { opacity: 1; transform: scale(1); transform-origin: 87.3px 52.8px 0px; }
+    0%, 35% {
+      opacity: 0;
+      transform: translate(1.45px,-2.2px) scale(0);
+    }
+    37.5%, 40% {
+      opacity: 1;
+      transform: translate(1.45px,-2.2px) scale(0.06);
+      transform-origin: 87.3px 52.8px 0px;
+    }
+    50%, 100% {
+      opacity: 1;
+      transform: translate(0,0) scale(1);
+      transform-origin: 87.3px 52.8px 0px;
+    }
   }
 
   .zoom-line { animation: draw-on 20s ease-in-out forwards infinite; }
@@ -183,7 +194,7 @@
             m0-.5v1.83m1.76-4.05l1.77 2.7
             m0-5.38v5.4
             m0-5.4l3.53 5.4
-            M106.1 29.74v1.83
+            M104.1 29.74v1.83
             m6.97-1.37h-6.97
             m6.97-.5v1.84"/>
 
@@ -357,7 +368,7 @@
           d="M86.3 50.4 L64.6,48.9 L98.2,70 L89.7 52.3
           c-1,-2 -1,-1.7 -3.25 -2"/>
     <circle id="zoom-origin"
-          fill="hsla(0, 0%, 100%, .4)"
+          fill="none"
           stroke-width=".25"
           cx="87.3" cy="52.8" r="2.5"
           style="transform-origin: 87.3px 52.8px 0px;"/>

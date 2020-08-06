@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="96" height="96"
+     width="96px" height="96px"
      viewBox="0 0 48 48">
+  <title>WiFi 48px</title>
   <style>/* <![CDATA[ */
   /* comment or delete <style> section to remove animation */
     #wave-a { animation: fade-a 6s linear infinite; }
@@ -22,7 +23,8 @@
       90%, 100% { opacity: 0; }
     }
   /* ]]> */</style>
-  <g fill="#999" stroke="#303030" stroke-width=".5">
+  <g fill="#999" stroke="#303030"
+     stroke-width=".5" stroke-linejoin="round">
     <circle cx="24" cy="40" r="1.75"/>
     <path id="wave-a"
           d="M24 28.12c-2.7 0-4.79.74-6.26 1.59-1.47.84-2.48 1.88-2.62 1.99l2.18 2.73c.68-.54 1.17-1.1 2.19-1.69A8.69 8.69 0 0124 31.62c2.07 0 3.5.55 4.54 1.15 1.04.6 1.46 1.13 2.15 1.67l2.17-2.74c-.02-.02-1.09-1.1-2.56-1.95a12.44 12.44 0 00-6.3-1.63z"/>
