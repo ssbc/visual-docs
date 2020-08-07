@@ -31,6 +31,10 @@ _3. Explanation of port forwarding_
 
 _Example text: With a 'normal' internet service, your data may be housed in a large corporate data center overseas._
 
+![](svg/alternative-servers.svg)
+
+_Example text: A Pātaka server can be a small, simple device or a large professional setup, depending on your needs and preferences._
+
 ## Icons
 
 Examples of the style and format of icons, in 48px and 96px:
