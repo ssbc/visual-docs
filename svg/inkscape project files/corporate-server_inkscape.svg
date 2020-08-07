@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="163.2"
+   inkscape:export-xdpi="163.2"
+   inkscape:export-filename="/home/sam/gh/visual-docs/png/corporate-server.png"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="corporate-server_inkscape.svg"
+   id="svg5192"
+   version="1.1"
+   style="background:#fff;"
+   viewBox="0 10 150 120"
+   height="800px"
+   width="1000px">
+  <metadata
+     id="metadata5196">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="g4965"
+     inkscape:window-maximized="1"
+     inkscape:window-y="30"
+     inkscape:window-x="0"
+     inkscape:cy="201.84506"
+     inkscape:cx="450.13353"
+     inkscape:zoom="0.55065941"
+     showgrid="false"
+     id="namedview5194"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
+  <defs
+     id="defs4779">
+    <clipPath
+       class="zoom"
+       id="cutout">
+      <circle
+         id="circle4776"
+         r="40"
+         cy="89"
+         cx="63" />
+    </clipPath>
+  </defs>
+  <g
+     id="g4901"
+     style="display:inline"
+     inkscape:label="building"
+     inkscape:groupmode="layer">
+    <g
+       stroke-width=".5"
+       stroke="hsl(0, 0%, 19%)"
+       fill="#fff"
+       id="building">
+      <path
+         d="m 135.60394,41.652205 -19.50039,-1.6667 v 16.233658 h 19.50039 z"
+         fill="hsl(47, 77%, 46%)"
+         id="side-room" />
+      <path
+         d="m 135.60394,41.652205 -19.50039,-1.6667 v 4.566758 h 20.0004 z"
+         id="side-room-roof" />
+      <path
+         d="M17.82 34.54h102.27l.7 3.16H17.15l.67-3.16"
+         id="roof-l-under" />
+      <path
+         d="M20.35 31.54H122.2v24.68H20.35z"
+         fill="hsl(47, 74%, 73%)"
+         id="ceiling-r-wall" />
+      <path
+         d="M19.6 37.72H120.2V56.2H19.6z"
+         fill="hsl(47, 87%, 66%)"
+         id="back-wall" />
+      <path
+         d="M120.19 37.72l2.01-3"
+         id="int-right-ceiling-corner" />
+      <path
+         d="M20.35 34.69l-2.13 3v18.55h2.13V34.69"
+         fill="hsl(47, 77%, 46%)"
+         id="wall-left" />
+      <path
+         d="M19.83 31.54 l-2.02 3 -.63,3 2.01 -3z M19.83 31.54H122.1l.72 3.16H19.17l.66-3.16"
+         id="roof" />
+      <path
+         d="M73.8 29.7v1.84  m0-1.34h-6.96  m7.06-10.75l-7.06 10.79  m0-.5v1.83m1.76-4.05l1.77 2.7  m0-5.38v5.4  m0-5.4l3.53 5.4   M104.1 29.74v1.83  m6.97-1.37h-6.97  m6.97-.5v1.84"
+         id="sign-supports" />
+      <path
+         d="M72 19 h41 V29.7 h-41z"
+         fill="hsl(47, 87%, 66%)"
+         id="sign" />
+      <text
+         textLength="34px"
+         y="27.2"
+         x="92.5"
+         text-anchor="middle"
+         font-family="Roboto, Open Sans, Helvetica, sans-serif"
+         font-weight="bold"
+         font-size="9px"
+         stroke-width=".125"
+         id="bigcorp">bigcorp</text>
+      <use
+         id="use4792"
+         y="-13"
+         x="0"
+         xlink:href="#server-rack" />
+      <use
+         id="use4794"
+         y="-13"
+         x="4"
+         xlink:href="#server-rack" />
+      <use
+         id="use4796"
+         y="-13"
+         x="8"
+         xlink:href="#server-rack" />
+      <use
+         id="use4798"
+         y="-13"
+         x="12"
+         xlink:href="#server-rack" />
+      <use
+         id="use4800"
+         y="-13"
+         x="16"
+         xlink:href="#server-rack" />
+      <use
+         id="use4802"
+         y="-13"
+         x="20"
+         xlink:href="#server-rack" />
+      <use
+         id="use4804"
+         y="-13"
+         x="24"
+         xlink:href="#server-rack" />
+      <use
+         id="use4806"
+         y="-13"
+         x="28"
+         xlink:href="#server-rack" />
+      <use
+         id="use4808"
+         y="-13"
+         x="32"
+         xlink:href="#server-rack" />
+      <use
+         id="use4810"
+         y="-13"
+         x="36"
+         xlink:href="#server-rack" />
+      <use
+         id="use4812"
+         y="-13"
+         x="40"
+         xlink:href="#server-rack" />
+      <use
+         id="use4814"
+         y="-13"
+         x="44"
+         xlink:href="#server-rack" />
+      <use
+         id="use4816"
+         y="-13"
+         x="48"
+         xlink:href="#server-rack" />
+      <use
+         id="use4818"
+         y="-13"
+         x="52"
+         xlink:href="#server-rack" />
+      <use
+         id="use4820"
+         y="-13"
+         x="56"
+         xlink:href="#server-rack" />
+      <use
+         id="use4822"
+         y="-13"
+         x="60"
+         xlink:href="#server-rack" />
+      <use
+         id="use4824"
+         y="-13"
+         x="64"
+         xlink:href="#server-rack" />
+      <use
+         id="use4826"
+         y="-13"
+         x="68"
+         xlink:href="#server-rack" />
+      <use
+         id="use4828"
+         y="-13"
+         x="72"
+         xlink:href="#server-rack" />
+      <use
+         id="use4830"
+         y="-13"
+         x="76"
+         xlink:href="#server-rack" />
+      <use
+         id="use4832"
+         y="-13"
+         x="80"
+         xlink:href="#server-rack" />
+      <use
+         id="use4834"
+         y="-13"
+         x="84"
+         xlink:href="#server-rack" />
+      <use
+         id="use4836"
+         y="-13"
+         x="96"
+         xlink:href="#server-rack" />
+      <use
+         id="use4838"
+         y="0"
+         x="4"
+         xlink:href="#server-rack" />
+      <use
+         id="use4840"
+         y="0"
+         x="8"
+         xlink:href="#server-rack" />
+      <use
+         id="use4842"
+         y="0"
+         x="12"
+         xlink:href="#server-rack" />
+      <use
+         id="use4844"
+         y="0"
+         x="16"
+         xlink:href="#server-rack" />
+      <use
+         id="use4846"
+         y="0"
+         x="20"
+         xlink:href="#server-rack" />
+      <use
+         id="use4848"
+         y="0"
+         x="24"
+         xlink:href="#server-rack" />
+      <use
+         id="use4850"
+         y="0"
+         x="28"
+         xlink:href="#server-rack" />
+      <use
+         id="use4852"
+         y="0"
+         x="32"
+         xlink:href="#server-rack" />
+      <use
+         id="use4854"
+         y="0"
+         x="36"
+         xlink:href="#server-rack" />
+      <use
+         id="use4856"
+         y="0"
+         x="40"
+         xlink:href="#server-rack" />
+      <use
+         id="use4858"
+         y="0"
+         x="44"
+         xlink:href="#server-rack" />
+      <use
+         id="use4860"
+         y="0"
+         x="48"
+         xlink:href="#server-rack" />
+      <use
+         id="use4862"
+         y="0"
+         x="52"
+         xlink:href="#server-rack" />
+      <use
+         id="use4864"
+         y="0"
+         x="56"
+         xlink:href="#server-rack" />
+      <use
+         id="use4866"
+         y="0"
+         x="60"
+         xlink:href="#server-rack" />
+      <use
+         id="use4868"
+         y="0"
+         x="64"
+         xlink:href="#server-rack" />
+      <use
+         id="use4870"
+         y="0"
+         x="68"
+         xlink:href="#server-rack" />
+      <use
+         id="use4872"
+         y="0"
+         x="72"
+         xlink:href="#server-rack" />
+      <use
+         id="use4874"
+         y="0"
+         x="76"
+         xlink:href="#server-rack" />
+      <use
+         id="use4876"
+         y="0"
+         x="80"
+         xlink:href="#server-rack" />
+      <use
+         id="use4878"
+         y="0"
+         x="84"
+         xlink:href="#server-rack" />
+      <use
+         id="use4880"
+         y="0"
+         x="96"
+         xlink:href="#server-rack" />
+      <path
+         d="m22.5,50v6 h1.9v-6 h-1.9v6h-1.35v-4l1.35-2 m.6 .9h.75 m-.75,1h.75 m-.75,1h.75 m-.75,1h.75 m-.75,1h.75"
+         stroke-linejoin="round"
+         stroke-linecap="butt"
+         stroke-width=".5"
+         stroke="hsl(289, 40%, 30%)"
+         fill="hsl(289, 40%, 66%)"
+         id="server-rack" />
+      <g
+         id="g4893"
+         style="display:inline"
+         inkscape:label="interior"
+         inkscape:groupmode="layer">
+        <g
+           fill="hsl(47, 74%, 73%)"
+           stroke="hsl(0, 0%, 30%)"
+           id="interior">
+          <path
+             d="M20.62 44.12 h99.6                   l1.67 -1.57 h-101.27"
+             stroke-linecap="butt"
+             id="floor" />
+          <g
+             id="g4890"
+             style="display:inline"
+             inkscape:label="stairs"
+             inkscape:groupmode="layer">
+            <g
+               fill="hsl(47, 74%, 73%)"
+               id="stairs">
+              <path
+                 d="M109.5 34.72v21.5"
+                 fill="none"
+                 id="l-column" />
+              <path
+                 d="M116.5 34.72v21.5"
+                 fill="none"
+                 id="r-column" />
+              <path
+                 d="M117 47.75v-1h-1.8v1h-1v1h-1v1h-1v1h-1v1h-2v1h2l5 -5z"
+                 id="stair-b" />
+              <path
+                 d="M109 42.75v-1h2v1h1v1h1v1h1v1h1v1h1.8v1h-1.8l-5 -5z"
+                 id="stair-a" />
+              <path
+                 d="M109 52.75v-1h2v1h1v1h1v1h1v1h1v.45h-1.5l-3.45 -3.45z"
+                 id="stair-c" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g
+         id="g4898"
+         style="display:none"
+         inkscape:label="building-front"
+         inkscape:groupmode="layer">
+        <g
+           id="building-front">
+          <path
+             d="M 20.35,34.7 H 122.2 V 56.25 H 20.35 Z"
+             stroke-width="0.5"
+             stroke="#303030"
+             fill="#d0a91b"
+             id="wall" />
+          <path
+             d="m 29.22,50.25 v 6 h 1.9 v -6 z"
+             stroke-width="0.5"
+             stroke="#303030"
+             fill="#ffffff"
+             id="door" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g4920"
+     style="display:inline"
+     inkscape:label="cars"
+     inkscape:groupmode="layer">
+    <g
+       stroke-width=".5"
+       stroke="hsl(0, 0%, 45%)"
+       fill="#fff"
+       id="cars">
+      <path
+         d="M1.13 55.12c.29-.35 1.22-.33 1.29-.5.25-.62.46-1.08.9-1.13a10.7 10.7 0 013.11 0l.69 1.16 1.58.17c.78.17.78 1.73.2 1.73-.65 0-.73-.5-.73-.5H6.9s-.22.5-.67.5H3.97c-.45 0-.52-.33-.52-.33h-1.5s-.07.35-.63.33c-.17 0-.34-.21-.34-.33 0 0-.08-.8.17-1.1z"
+         id="car-l" />
+      <g
+         id="g4910"
+         style="display:inline"
+         inkscape:label="wheels-l"
+         inkscape:groupmode="layer">
+        <g
+           id="wheels-l">
+          <circle
+             id="circle4904"
+             r=".77"
+             cy="56.32"
+             cx="2.7" />
+          <circle
+             id="circle4906"
+             r=".77"
+             cy="56.32"
+             cx="7.57" />
+        </g>
+        <path
+           d="M11.1 55.29c.03-.7.72-1.74 1.23-1.8h4.04l.76 1.33h1c.89-.1.79 1.33.77 1.73h-.4c-.22 0-.4-.33-.4-.33h-1.53s-.17.33-.37.33h-2.4c-.17 0-.33-.33-.33-.33H11.9s-.13.33-.32.33h-.31c-.24 0-.17-.55-.17-1.26z"
+           id="car-r" />
+      </g>
+      <g
+         id="g4917"
+         style="display:inline"
+         inkscape:label="wheels-r"
+         inkscape:groupmode="layer">
+        <g
+           id="wheels-r">
+          <circle
+             id="circle4912"
+             r=".77"
+             cy="56.32"
+             cx="12.7" />
+          <circle
+             id="circle4914"
+             r=".77"
+             cy="56.32"
+             cx="17.37" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g4952"
+     style="display:inline"
+     inkscape:label="trees"
+     inkscape:groupmode="layer">
+    <g
+       stroke-width=".5"
+       stroke="hsl(0, 0%, 45%)"
+       fill="#fff"
+       id="trees">
+      <g
+         id="g4927"
+         style="display:inline"
+         inkscape:label="tree-l"
+         inkscape:groupmode="layer">
+        <g
+           id="tree-l">
+          <path
+             id="path4922"
+             d="M137.12 46.35s.9 2.25.28 3.9c-.36 1-.08 2.7.9 3.07.59.23 1.07.25 1.69 0a2.3 2.3 0 001.25-2.33l-.12-3.94z"
+             stroke="none" />
+          <path
+             id="path4924"
+             d="M137.97 53.07s.38.37.58 1.02c.37 1.81-.61 2.7 0 2.33.35-.18.7-.17 1.29-.03.66.23-.34-.49-.05-2.35.1-.64.66-1 .66-1m-3.35-6.6c0-1.17.94-2.1 2.07-2.1a2.08 2.08 0 011.87 2.98m-.47-.08a2.1 2.1 0 01.45 3.9m-.02-.74a2.12 2.12 0 01-.38 2.47c-.17.18-.63.58-1.13.6m-.82-.03a2.12 2.12 0 01-1.05-3.45m.38.21a2.08 2.08 0 01-1.6-2.05c0-.83.47-1.53 1.15-1.88" />
+        </g>
+      </g>
+      <g
+         id="g4934"
+         style="display:inline"
+         inkscape:label="tree-r"
+         inkscape:groupmode="layer">
+        <g
+           id="tree-r">
+          <path
+             id="path4929"
+             d="M145.19 46.52c-.89.28-1.55 1.3-1.55 2.5 0 .73.25 1.38.65 1.85l.15-.47a2.12 2.12 0 00.36 2.47c.19.18.65.58 1.14.6m1.16-.7c.34-.05.77-.38.95-.57a2.12 2.12 0 00.09-2.88l-.7.38a2.1 2.1 0 001.58-2.05c0-.83-.47-1.53-1.13-1.88m-.42 6.97s-.4.36-.6 1.01c-.35 1.82.63 3.04.02 2.67-.37-.18-.72-.17-1.3-.03-.67.23.33-.49.05-2.35-.09-.64-.67-1-.67-1m3.35-7.1c0-1.17-.92-2.1-2.05-2.1-1.15 0-2.07.93-2.07 2.1 0 .21 0 .58.2.96" />
+          <path
+             id="path4931"
+             d="M148.3 45.59s-.88 3-.26 4.66c.36 1 0 2.1-.97 2.45-.6.24-1 .87-1.63.64-1.14-.65-1.29-1.6-1.24-2.37l.07-4.3z"
+             stroke="none" />
+        </g>
+      </g>
+      <g
+         id="g4949"
+         style="display:inline"
+         inkscape:label="tree-m"
+         inkscape:groupmode="layer">
+        <g
+           id="tree-m">
+          <path
+             id="path4936"
+             d="M142.04 53.43s.38.33.58.91c.37 1.63-.62 2.42 0 2.1.35-.17.7-.16 1.28-.04.67.21-.33-.43-.05-2.1.1-.57.67-.9.67-.9" />
+          <path
+             id="path4938"
+             d="M141.19 47.41s.9 2.02.28 3.5c-.37.9-.08 2.41.9 2.74.58.21 1.07.23 1.68 0 1.14-.56 1.3-1.42 1.25-2.09l-.11-3.52z"
+             stroke="none" />
+          <path
+             id="path4940"
+             d="M141.17 47.48c0-1.04.93-1.88 2.07-1.88 1.13 0 2.06.84 2.06 1.88 0 .29-.06.56-.2.8" />
+          <path
+             id="path4942"
+             d="M144.64 48.2a2.1 1.88 0 01.45 3.5" />
+          <path
+             id="path4944"
+             d="M145.07 51.04a2.12 1.9 0 01-.38 2.21 1.9 1.9 0 01-1.14.54m-.81-.03a2.12 1.9 0 01-1.05-3.1" />
+          <path
+             id="path4946"
+             d="M142.07 50.86a2.08 1.87 0 01-1.6-1.84c0-.74.47-1.37 1.15-1.68" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g4962"
+     style="display:inline"
+     inkscape:label="flag"
+     inkscape:groupmode="layer">
+    <path
+       d="M131.07 47.29v9.6"
+       stroke-width=".5"
+       stroke-linecap="round"
+       stroke="hsl(0, 0%, 45%)"
+       fill="none"
+       id="flagpole" />
+    <g
+       stroke-width=".5"
+       stroke-linecap="butt"
+       fill="none"
+       id="flag">
+      <path
+         id="path4955"
+         d="M136.49 48.12h-5.08m5.08 1h-5.08"
+         stroke="#fff" />
+      <path
+         id="path4957"
+         d="M136.49 48.62h-5.08m5.08-1h-5.08m5.08 2h-5.08"
+         stroke="hsl(0, 65%, 42%)" />
+      <path
+         id="path4959"
+         d="M133.6 48.87v-1.5h-2.24v1.5z"
+         stroke="none"
+         fill="#8a7090" />
+    </g>
+  </g>
+  <g
+     id="g4965"
+     style="display:inline;opacity:0.5"
+     inkscape:label="building-mask"
+     inkscape:groupmode="layer">
+    <rect
+       height="120"
+       width="150"
+       y="10"
+       x="0"
+       fill="#ffffff"
+       id="building-mask" />
+  </g>
+  <g
+     id="g4973"
+     style="display:inline"
+     inkscape:label="zoom-outlines"
+     inkscape:groupmode="layer">
+    <g
+       stroke="#8a7090"
+       fill="none"
+       id="zoom-outlines">
+      <path
+         d="M 86.3,50.4 65,48.7 97.665309,68.543518 89.7,52.3 c -1,-2 -1,-1.7 -3.25,-2"
+         stroke="none"
+         fill-opacity="0.8"
+         fill="#bf86cb"
+         class="zoom"
+         id="cone"
+         sodipodi:nodetypes="ccccc" />
+      <circle
+         style="transform-origin: 87.3px 52.8px 0px;"
+         r="2.5"
+         cy="52.8"
+         cx="87.3"
+         stroke-width=".25"
+         fill="none"
+         id="zoom-origin" />
+      <path
+         d="M86.7 50.3L65,48.7"
+         stroke-width=".25"
+         class="zoom-line"
+         id="zoom-line-l" />
+      <path
+         d="M89.8 52.2L98.5,70"
+         stroke-width=".25"
+         class="zoom-line"
+         id="zoom-line-r" />
+      <circle
+         r="40.25"
+         cy="89"
+         cx="63"
+         stroke-width=".5"
+         class="zoom"
+         id="zoom-circle" />
+    </g>
+  </g>
+  <g
+     id="g5187"
+     style="display:inline"
+     inkscape:label="closeup-servers"
+     inkscape:groupmode="layer">
+    <g
+       clip-path="url(#cutout)"
+       opacity="1"
+       id="other-servers">
+      <circle
+         r="40"
+         cy="89"
+         cx="63"
+         fill="#ffffff"
+         class="zoom"
+         id="cutout-bg" />
+      <g
+         id="g4985"
+         style="display:inline"
+         inkscape:label="racks"
+         inkscape:groupmode="layer">
+        <g
+           fill="#999999"
+           id="racks">
+          <rect
+             id="rect4976"
+             height="70"
+             width="5"
+             y="55"
+             x="32.200001"
+             class="zoom" />
+          <rect
+             id="rect4978"
+             height="70"
+             width="5"
+             y="55"
+             x="25.799999"
+             class="zoom" />
+          <rect
+             id="rect4980"
+             height="70"
+             width="5"
+             y="55"
+             x="89.800003"
+             class="zoom" />
+          <rect
+             id="rect4982"
+             height="70"
+             width="5"
+             y="55"
+             x="96.199997"
+             class="zoom" />
+        </g>
+      </g>
+      <g
+         id="g5145"
+         style="display:inline"
+         inkscape:label="server"
+         inkscape:groupmode="layer">
+        <g
+           transform="translate(20,-20)"
+           id="server">
+          <rect
+             id="rect4987"
+             ry="1"
+             rx="1"
+             stroke="none"
+             height="12.6"
+             width="60.799999"
+             y="102.5"
+             x="13.2" />
+          <rect
+             id="rect4989"
+             ry="1"
+             rx="1"
+             stroke-width="0.5"
+             stroke-opacity="1"
+             fill-opacity="0.6"
+             fill="#ffffff"
+             height="12.6"
+             width="60.799999"
+             y="102.5"
+             x="13.2" />
+          <g
+             linejoin="round"
+             stroke-width="0.25"
+             stroke-opacity="1"
+             id="lcds">
+            <rect
+               id="rect4991"
+               height="2"
+               width="17"
+               y="104.65"
+               x="35" />
+            <rect
+               id="rect4993"
+               height="2"
+               width="17"
+               y="107.25"
+               x="35" />
+            <rect
+               id="rect4995"
+               height="2"
+               width="17"
+               y="109.85"
+               x="35" />
+          </g>
+          <g
+             stroke-linecap="round"
+             stroke-width="0.25"
+             stroke-opacity="1"
+             fill="none"
+             id="screws">
+            <circle
+               id="circle4998"
+               r="0.80000001"
+               cy="104.4"
+               cx="14.8" />
+            <path
+               id="path5000"
+               d="m 14.5,104.1 0.6,0.6" />
+            <circle
+               id="circle5002"
+               r="0.80000001"
+               cy="104.4"
+               cx="72.199997" />
+            <path
+               id="path5004"
+               d="m 71.9,104.1 0.6,0.6" />
+            <circle
+               id="circle5006"
+               r="0.80000001"
+               cy="113.4"
+               cx="14.8" />
+            <path
+               id="path5008"
+               d="m 14.5,113.1 0.6,0.6" />
+            <circle
+               id="circle5010"
+               r="0.80000001"
+               cy="113.4"
+               cx="72.199997" />
+            <path
+               id="path5012"
+               d="m 71.9,113.1 0.6,0.6" />
+          </g>
+          <g
+             stroke-width="0.4"
+             id="holes">
+            <circle
+               id="circle5015"
+               r="0.2"
+               cy="105.1"
+               cx="17.5" />
+            <circle
+               id="circle5017"
+               r="0.2"
+               cy="107.6"
+               cx="17.5" />
+            <circle
+               id="circle5019"
+               r="0.2"
+               cy="110.1"
+               cx="17.5" />
+            <circle
+               id="circle5021"
+               r="0.2"
+               cy="112.6"
+               cx="17.5" />
+            <circle
+               id="circle5023"
+               r="0.2"
+               cy="105.1"
+               cx="19.5" />
+            <circle
+               id="circle5025"
+               r="0.2"
+               cy="107.6"
+               cx="19.5" />
+            <circle
+               id="circle5027"
+               r="0.2"
+               cy="110.1"
+               cx="19.5" />
+            <circle
+               id="circle5029"
+               r="0.2"
+               cy="112.6"
+               cx="19.5" />
+            <circle
+               id="circle5031"
+               r="0.2"
+               cy="105.1"
+               cx="21.5" />
+            <circle
+               id="circle5033"
+               r="0.2"
+               cy="107.6"
+               cx="21.5" />
+            <circle
+               id="circle5035"
+               r="0.2"
+               cy="110.1"
+               cx="21.5" />
+            <circle
+               id="circle5037"
+               r="0.2"
+               cy="112.6"
+               cx="21.5" />
+            <circle
+               id="circle5039"
+               r="0.2"
+               cy="105.1"
+               cx="23.5" />
+            <circle
+               id="circle5041"
+               r="0.2"
+               cy="107.6"
+               cx="23.5" />
+            <circle
+               id="circle5043"
+               r="0.2"
+               cy="110.1"
+               cx="23.5" />
+            <circle
+               id="circle5045"
+               r="0.2"
+               cy="112.6"
+               cx="23.5" />
+            <circle
+               id="circle5047"
+               r="0.2"
+               cy="105.1"
+               cx="25.5" />
+            <circle
+               id="circle5049"
+               r="0.2"
+               cy="107.6"
+               cx="25.5" />
+            <circle
+               id="circle5051"
+               r="0.2"
+               cy="110.1"
+               cx="25.5" />
+            <circle
+               id="circle5053"
+               r="0.2"
+               cy="112.6"
+               cx="25.5" />
+            <circle
+               id="circle5055"
+               r="0.2"
+               cy="105.1"
+               cx="27.5" />
+            <circle
+               id="circle5057"
+               r="0.2"
+               cy="107.6"
+               cx="27.5" />
+            <circle
+               id="circle5059"
+               r="0.2"
+               cy="110.1"
+               cx="27.5" />
+            <circle
+               id="circle5061"
+               r="0.2"
+               cy="112.6"
+               cx="27.5" />
+            <circle
+               id="circle5063"
+               r="0.2"
+               cy="105.1"
+               cx="29.5" />
+            <circle
+               id="circle5065"
+               r="0.2"
+               cy="107.6"
+               cx="29.5" />
+            <circle
+               id="circle5067"
+               r="0.2"
+               cy="110.1"
+               cx="29.5" />
+            <circle
+               id="circle5069"
+               r="0.2"
+               cy="112.6"
+               cx="29.5" />
+            <circle
+               id="circle5071"
+               r="0.2"
+               cy="105.1"
+               cx="31.5" />
+            <circle
+               id="circle5073"
+               r="0.2"
+               cy="107.6"
+               cx="31.5" />
+            <circle
+               id="circle5075"
+               r="0.2"
+               cy="110.1"
+               cx="31.5" />
+            <circle
+               id="circle5077"
+               r="0.2"
+               cy="112.6"
+               cx="31.5" />
+            <circle
+               id="circle5079"
+               r="0.2"
+               cy="105.1"
+               cx="55" />
+            <circle
+               id="circle5081"
+               r="0.2"
+               cy="107.6"
+               cx="55" />
+            <circle
+               id="circle5083"
+               r="0.2"
+               cy="110.1"
+               cx="55" />
+            <circle
+               id="circle5085"
+               r="0.2"
+               cy="112.6"
+               cx="55" />
+            <circle
+               id="circle5087"
+               r="0.2"
+               cy="105.1"
+               cx="57" />
+            <circle
+               id="circle5089"
+               r="0.2"
+               cy="107.6"
+               cx="57" />
+            <circle
+               id="circle5091"
+               r="0.2"
+               cy="110.1"
+               cx="57" />
+            <circle
+               id="circle5093"
+               r="0.2"
+               cy="112.6"
+               cx="57" />
+            <circle
+               id="circle5095"
+               r="0.2"
+               cy="105.1"
+               cx="59" />
+            <circle
+               id="circle5097"
+               r="0.2"
+               cy="107.6"
+               cx="59" />
+            <circle
+               id="circle5099"
+               r="0.2"
+               cy="110.1"
+               cx="59" />
+            <circle
+               id="circle5101"
+               r="0.2"
+               cy="112.6"
+               cx="59" />
+            <circle
+               id="circle5103"
+               r="0.2"
+               cy="105.1"
+               cx="61" />
+            <circle
+               id="circle5105"
+               r="0.2"
+               cy="107.6"
+               cx="61" />
+            <circle
+               id="circle5107"
+               r="0.2"
+               cy="110.1"
+               cx="61" />
+            <circle
+               id="circle5109"
+               r="0.2"
+               cy="112.6"
+               cx="61" />
+            <circle
+               id="circle5111"
+               r="0.2"
+               cy="105.1"
+               cx="63" />
+            <circle
+               id="circle5113"
+               r="0.2"
+               cy="107.6"
+               cx="63" />
+            <circle
+               id="circle5115"
+               r="0.2"
+               cy="110.1"
+               cx="63" />
+            <circle
+               id="circle5117"
+               r="0.2"
+               cy="112.6"
+               cx="63" />
+            <circle
+               id="circle5119"
+               r="0.2"
+               cy="105.1"
+               cx="65" />
+            <circle
+               id="circle5121"
+               r="0.2"
+               cy="107.6"
+               cx="65" />
+            <circle
+               id="circle5123"
+               r="0.2"
+               cy="110.1"
+               cx="65" />
+            <circle
+               id="circle5125"
+               r="0.2"
+               cy="112.6"
+               cx="65" />
+            <circle
+               id="circle5127"
+               r="0.2"
+               cy="105.1"
+               cx="67" />
+            <circle
+               id="circle5129"
+               r="0.2"
+               cy="107.6"
+               cx="67" />
+            <circle
+               id="circle5131"
+               r="0.2"
+               cy="110.1"
+               cx="67" />
+            <circle
+               id="circle5133"
+               r="0.2"
+               cy="112.6"
+               cx="67" />
+            <circle
+               id="circle5135"
+               r="0.2"
+               cy="105.1"
+               cx="69" />
+            <circle
+               id="circle5137"
+               r="0.2"
+               cy="107.6"
+               cx="69" />
+            <circle
+               id="circle5139"
+               r="0.2"
+               cy="110.1"
+               cx="69" />
+            <circle
+               id="circle5141"
+               r="0.2"
+               cy="112.6"
+               cx="69" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g5181"
+         style="display:inline"
+         inkscape:label="server-copies"
+         inkscape:groupmode="layer">
+        <g
+           id="g5179"
+           stroke="#999999"
+           fill="#e6e6e6">
+          <use
+             height="100%"
+             width="100%"
+             id="use5147"
+             y="-28"
+             x="-64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5149"
+             y="-14"
+             x="-64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5151"
+             y="0"
+             x="-64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5153"
+             y="14"
+             x="-64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5155"
+             y="28"
+             x="-64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5157"
+             y="-42"
+             x="0"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5159"
+             y="-28"
+             x="0"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5161"
+             y="-14"
+             x="0"
+             xlink:href="#server"
+             class="zoom" />
+          <!-- position of #focused server -->
+          <use
+             height="100%"
+             width="100%"
+             id="use5163"
+             y="14"
+             x="0"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5165"
+             y="28"
+             x="0"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5167"
+             y="42"
+             x="0"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5169"
+             y="-28"
+             x="64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5171"
+             y="-14"
+             x="64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5173"
+             y="0"
+             x="64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5175"
+             y="14"
+             x="64.199997"
+             xlink:href="#server"
+             class="zoom" />
+          <use
+             height="100%"
+             width="100%"
+             id="use5177"
+             y="28"
+             x="64.199997"
+             xlink:href="#server"
+             class="zoom" />
+        </g>
+      </g>
+      <g
+         id="g5184"
+         style="display:inline"
+         inkscape:label="focused-server"
+         inkscape:groupmode="layer">
+        <use
+           stroke="#8a7090"
+           fill="#bf86cb"
+           xlink:href="#server"
+           class="zoom"
+           id="focused"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="g5190"
+     style="display:none;opacity:0.998"
+     inkscape:label="fadeout-mask"
+     inkscape:groupmode="layer">
+    <rect
+       height="120"
+       width="150"
+       y="10"
+       x="0"
+       fill="#fff"
+       id="fadeout-mask" />
+  </g>
+</svg>
