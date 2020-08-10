@@ -24,6 +24,7 @@ Planned illustrations, animations and icons, and current progress made.
 | Compare: corporate server|        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/corporate-server.svg)  |             |
 | Compare: Āhau / SSB      |        ✔       |       ✔      |     ✔ (basic)     |     ✔     | ![](svg/alternative-servers.svg) |           |
 | **Replication:**         |                |              |           |           |                                |    **-**    |
+| Compare: Facebook etc    |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | Local sync over WiFi     |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | Pātaka-to-Pātaka         |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | **Encryption:**          |                |              |           |           |                                |    **-**    |
