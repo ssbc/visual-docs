@@ -345,16 +345,33 @@
   <path id="flagpole"
         fill="none" stroke="var(--pango-tint-b)"
         stroke-linecap="round" stroke-width=".5"
-        d="M131.07 47.29v9.6"/>
+        d="M128 46.25v12"/>
 
   <g id="flag"
     fill="none" stroke-linecap="butt" stroke-width=".5">
-    <path stroke="#fff"
-          d="M136.49 48.12h-5.08m5.08 1h-5.08"/>
+    <path fill="#fff"
+          d="M128 46.5h10v4.5h-10"/>
     <path stroke="var(--whero)"
-          d="M136.49 48.62h-5.08m5.08-1h-5.08m5.08 2h-5.08"/>
+          d="M128 46.75h10m-10 1h10m-10 1h10m-10 1h10m-10 1h10m-10 1"/>
     <path fill="var(--waiporoporo)" stroke="none"
-          d="M133.6 48.87v-1.5h-2.24v1.5z"/>
+          d="M128 46.5v3 h4.5v-3z"/>
+    <g id="stars"
+       fill="#fff">
+      <circle cx="128.5" cy="47" r=".25"/>
+      <circle cx="129.38" cy="47" r=".25"/>
+      <circle cx="130.25" cy="47" r=".25"/>
+      <circle cx="131.13" cy="47" r=".25"/>
+      <circle cx="132" cy="47" r=".25"/>
+      <circle cx="129" cy="48" r=".25"/>
+      <circle cx="129.88" cy="48" r=".25"/>
+      <circle cx="130.75" cy="48" r=".25"/>
+      <circle cx="131.63" cy="48" r=".25"/>
+      <circle cx="128.5" cy="49" r=".25"/>
+      <circle cx="129.38" cy="49" r=".25"/>
+      <circle cx="130.25" cy="49" r=".25"/>
+      <circle cx="131.13" cy="49" r=".25"/>
+      <circle cx="132" cy="49" r=".25"/>
+    </g>
   </g>
 
   <rect id="building-mask"
