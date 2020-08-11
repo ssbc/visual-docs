@@ -22,9 +22,10 @@ Planned illustrations, animations and icons, and current progress made.
 | Support chat icon        |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | **Infrastructure:**      |                |              |           |           |                                |      ✖️      |
 | Compare: corporate server|        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/corporate-server.svg)  |             |
-| Compare: Āhau / SSB      |        ✔       |       ✔      |     ✔ (basic)     |     ✔     | ![](svg/alternative-servers.svg) |           |
+| Compare: Āhau / SSB      |        ✔       |       ✔      |✔ (basic)  |     ✔     | ![](svg/alternative-servers.svg) |           |
 | **Replication:**         |                |              |           |           |                                |    **-**    |
 | Compare: Facebook etc    |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
+| Sync via Internet/Pātaka |        ✔       |       ✔      | ✔ (basic) |     ✔     | ![](svg/replication-via-internet.svg)|             |
 | Local sync over WiFi     |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | Pātaka-to-Pātaka         |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | **Encryption:**          |                |              |           |           |                                |    **-**    |
