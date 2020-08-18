@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1000" height="1000"
-     viewBox="0 0 1000 1000">
-  <title>Replication via Pātaka</title>
+     width="1000" height="800"
+     viewBox="000 0 1000 800">
+  <title>Replication via WiFi router</title>
   <style>/* <![CDATA[ */
   /* ]]> */</style>
   <defs>
@@ -168,359 +168,196 @@
     </g>
   </defs>
 
-
-  <g id="house-top">
-    <path id="house-outline-top"
-          style="transform-origin:500px 0px 0px;"
-          transform="scale(1)"
-          fill="hsl(0, 85%, 95%)" stroke="hsl(0, 65%, 42%)"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-          d="M695 155 l-195-113 l-195 113
-          l12.3-7 v297 h365.4 v-297z"/>
-
-    <g id="pc"
-       stroke-linejoin="round" stroke-miterlimit="4"
-       style="transform-origin:500px 200px 0px;">
-      <g transform="translate(60, -30) scale(.85)">
-        <g stroke-linecap="butt" stroke-width="1" transform="translate(0, 5)">
-          <path fill="#4d4d4d" stroke="#4d4d4d"
-  				d="M609.5 282.9l-51.4-40.2v145.4l51.4 40.1z"/>
-          <rect width="80.8" height="145.4" x="609.5" y="282.9" fill="#737373" stroke="#303030" ry="0"/>
-          <path fill="#999" stroke="#303030"
-  				d="M609.5 282.9l-51.4-40.2H639l51.4 40.2z"/>
-          <circle cx="650.3" cy="385.6" r="10.6" fill="#737373" stroke="#a7f1f1" stroke-opacity=".9"/>
-          <rect width="56.9" height="16.3" x="622" y="304.1" fill="#737373" stroke="#4d4d4d" ry="0"/>
-          <rect width="56.9" height="16.3" x="622" y="330.1" fill="#737373" stroke="#4d4d4d" ry="0"/>
-        </g>
-
-        <g>
-          <g stroke="#303030" stroke-linecap="round" stroke-width="1">
-            <path fill="#999"
-          				d="M424 420h80l14 10h-108z"/>
-            <path fill="#737373"
-          				d="M488 379h-48V425h48z"/>
-          </g>
-          <g stroke="#303030" stroke-linecap="butt" stroke-width="1">
-            <rect fill="#737373"
-          				x="344" y="235" width="236" height="145"/>
-            <path fill="#999"
-          				d="M344 235l8-5 h220 l8 5z"/>
-          </g>
-          <rect id="screen" fill="#fff" stroke="#303030" stroke-linecap="butt" stroke-width="1"
-  				x="354" y="243" width="216" height="129"/>
-          <path id="reflection" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-width="1"
-  				d="M571 243v130h-218v-130"/>
-          <g id="pātaka-symbol"
-             fill="#a51d2d" stroke="#000"
-             stroke-linecap="round" stroke-width=".2">
-            <path d="M447.3 319.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
-            <path d="M451.6 330.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
-          </g>
-          <g id="pātaka-files"
-             style="transform:translate(25px, 0)">
-            <rect id="copy-a"
-                  style="opacity: 0; transform-origin: 440px 400px 0px;"
-                  x="420" y="285" width="40" height="40"
-                  fill="#e9fbfb" stroke="#59b5b5"
-                  rx="5" stroke-width="5"/>
-            <rect id="file-a"
-                  style="transform-origin: 490px 400px 0px;"
-                  x="420" y="285" width="40" height="40"
-                  fill="#e9fbfb" stroke="#59b5b5"
-                  rx="5" stroke-width="5"/>
-            <rect id="copy-b"
-                  style="opacity: 0; transform-origin: 490px 400px 0px;"
-                  x="470" y="285" width="40" height="40"
-                  fill="#fcf8e9" stroke="#d0a81b"
-                  rx="5" stroke-width="5"/>
-            <rect id="file-b"
-                  style="transform-origin: 490px 305px 0px;"
-                  x="470" y="285" width="40" height="40"
-                  fill="#fcf8e9" stroke="#d0a81b"
-                  rx="5" stroke-width="5"/>
-          </g>
-        </g>
-      </g>
-    </g>
-
-    <g id="router-top"
-      transform="translate(824, 48)rotate(90)"
-      stroke-linecap="round" stroke-linejoin="miter">
-      <rect fill="hsl(0, 85%, 74%)" stroke="#303030" stroke-width=".6"
-            width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
-      <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
-              cx="386.27" cy="290.74" r="5.95"/>
-      <path fill="hsl(0, 85%, 74%)" stroke="#303030" stroke-width=".6"
-            d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
-      <g id="waves-l"
-         fill="none" stroke="#a51d2d" stroke-width=".6">
-        <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
-        <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
-        <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
-      </g>
-      <g id="lights-l"
-         fill="#fff" stroke="#303030" stroke-width=".6"
-         >
-        <circle cx="387.89" cy="380.02" r="2.71"/>
-        <circle cx="387.89" cy="369.02" r="2.71"/>
-        <circle cx="387.89" cy="357.84" r="2.71"/>
-      </g>
-    </g>
-  </g>
-
-  <g id="house-left"
-     transform="translate(0, 400)">
-    <path id="house-outline-left"
-          fill="#fcf8e9" stroke="#d0a81b"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-			    d="M411 264l-195-113 l-195 113
-          l12.3-7 v297 h365.4 v-297z"/>
-    <g id="imac"
-       style="transform-origin:240px 510px 0px"
-       stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
-      <path fill="#4c4c4c"
-            d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
-      <path fill="#737373"
-            d="M184.37 534.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
-      <path fill="none" stroke="#303030"
-            d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
-      <rect fill="#4c4c4c" stroke="#303030"
-            width="199.45" height="121.54" x="118.35" y="390.11" rx="7.87" ry="7.88"/>
-      <circle fill="#737373"
-              cx="219.76" cy="394.05" r="1.97"/>
-      <rect fill="#fff"
-            width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
-
-            <!-- <circle id="highlight-left"
-              style="transform-origin:260.5px 443.8px 0px"
-              cx="260.5" cy="443.8" r="25" fill="hsl(47, 77%, 46%)" /> -->
-      <!-- <g id="refresh-left"
-        style="transform-origin:217.06px 444.18px 0px">
-         <path fill="none" stroke="hsl(47, 77%, 46%)"
-               marker-start="url(#marker-curve-left)" stroke-width="2" stroke-linecap="round"
-               d="m 231.198,458.318 c -3.619,3.618 -8.617,5.856 -14.138,5.856 -11.042,0 -19.994,-8.952 -19.994,-19.994" />
-         <path fill="none" stroke="hsl(47, 77%, 46%)"
-               marker-start="url(#marker-curve-left)" stroke-width="2" stroke-linecap="round"
-               d="m 202.922,430.042 c 3.619,-3.618 8.617,-5.856 14.138,-5.856 11.042,0 19.994,8.952 19.994,19.994"
-              />
-      </g> -->
-      <circle id="copy-kuia-left"
-              style="transform:scale(0); transform-origin:240px 400px 0px;"
-              cx="170.5" cy="443.5" r="22"
-              fill="#e9fbfb" stroke="#5ab5b5"
-              stroke-width="5"/>
-      <use id="kuia-imac"
-           xlink:href="#kuia"
-           x="150" y="423" />
-      <path id="link-left"
-            style="transform: scale(0); transform-origin: 195px 444px 0px;"
-            d="M195,444 h41"
-            stroke="#4c4c4c" stroke-width="2"/>
-      <g id="add-icon-left"
-         style="opacity: 0; transform-origin:260.6px 443.18px 0px"
-         stroke-width="2" fill="hsl(47, 77%, 46%)" stroke="#fff">
-         <circle cx="260.6" cy="443.18" r="18"/>
-         <path d="M248.6 443.18 h24 m-12 -12 v24"/>
-      </g>
-      <circle id="copy-koro-left"
-              style="opacity: 0; transform-origin:226.89px 400px 0px;"
-              cx="260.5" cy="443.5" r="22"
-              fill="#fcf8e9" stroke="#d0a81b"
-              stroke-width="5"/>
-      <use id="koro-imac"
-           xlink:href="#koro"
-           x="240" y="423" />
-    </g>
-
-    <g id="router-l"
-      stroke-linecap="round" stroke-linejoin="miter">
-      <rect fill="#f4d35d" stroke="#303030" stroke-width=".6"
-            width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
-      <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
-              cx="386.27" cy="290.74" r="5.95"/>
-      <path fill="#f4d35d" stroke="#303030" stroke-width=".6"
-            d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
-      <g id="waves-l"
-         fill="none" stroke="#b1911b" stroke-width=".6">
-        <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
-        <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
-        <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
-      </g>
-      <g id="lights-l"
-         fill="#fff" stroke="#303030" stroke-width=".6"
-         >
-        <circle cx="387.89" cy="380.02" r="2.71"/>
-        <circle cx="387.89" cy="369.02" r="2.71"/>
-        <circle cx="387.89" cy="357.84" r="2.71"/>
-      </g>
-    </g>
-  </g>
-
-  <g id="house-right"
-     transform="translate(0, 400)">
-    <path id="house-outline-right"
+  <g id="house">
+    <path id="house-outline"
          fill="#e9fbfb" stroke="#59b5b5"
          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-         d="M590 264l195-113 l195 113
-         l-12.3-7 v297 h-365.4 v-297z"/>
-    <g id="laptop"
-       style="transform-origin:782.9px 520px 0px;"
-       stroke-linecap="butt" stroke-linejoin="round">
-     <path id="screen-bg"
-           fill="#4d4d4d" stroke-width="2"
-     d="M859.34 508.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
-     <path id="keyboard-bg"
-           fill="#4d4d4d" stroke-width="2"
-     d="M706.46 508.64L684 528.07v5.77h200.55v-5.77l-25.2-19.43z"/>
-     <rect id="screen"
-           fill="#fff" stroke-width="2"
-           width="151.2" height="75.6" x="707.3" y="424.64" rx="0" ry="0"/>
-     <circle id="camera"
-             fill="#999" stroke="none" stroke-width="1.22"
-             cx="782.9" cy="420.44" r="1.05" />
-     <path fill="none" stroke="#999" stroke-width=".59"
-           d="M758.54 521.24h46.2l8.4 8.4h-63z"/>
-     <path fill="none" stroke="#999" stroke-width=".59"
-           d="M704.78 521.24h49.56m54.6 0h54.6"/>
-     <path fill="none" stroke="#999" stroke-width=".59"
-           d="M712.34 512.84h142.8"/>
-     <path id="keyboard"
-           fill="none" stroke="#999" stroke-width=".59"
-           d="M708.14 517.04h151.2"/>
-     <path id="front-edge"
-           fill="none" stroke="#999" stroke-width="1.2"
-           d="M884.54 529.64h-199.5"/>
-     <path id="edge-shadow"
-           fill="none" stroke="#737373" stroke-width="2.02"
-           d="M884.54 533.84h-199.5"/>
-     <path id="outline"
-           fill="none" stroke="#303030" stroke-width="2.02"
-           d="M684 528.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
+         d="M500 90l-495 250 l12 -6.5 v350 h965.4 v-350 l12 6.5z"/>
 
-     <g id="add-icon-right"
-        style="opacity: 0; transform-origin:752.5px 457.5px 0px"
-        stroke-width="2" fill="#5ab5b5" stroke="#fff">
-        <circle cx="752.5" cy="457.5" r="18"/>
-        <path d="M740.5 457.5 h24 m-12 -12 v24" />
-     </g>
-     <circle id="copy-kuia-right"
-             style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
-             cx="752.5" cy="457.5" r="22"
-             fill="#e9fbfb" stroke="#5ab5b5"
-             stroke-width="5"/>
-     <use id="kuia-laptop"
-          xlink:href="#kuia"
-          x="732" y="437"
-          style="opacity:0;"/>
-    <path id="link-right"
-          style="transform: scale(0); transform-origin: 774px 457px 0px;"
-          d="M774,457 h26"
-          stroke="#4c4c4c" stroke-width="2"/>
-      <circle id="copy-koro-right"
-              style="transform: scale(0); transform-origin:817px 457.5px 0px;"
-              cx="817" cy="457.5" r="22"
-              fill="#fcf8e9" stroke="#d0a81b"
-              stroke-width="5"/>
-     <use id="koro-laptop"
-          xlink:href="#koro"
-          x="796.5" y="437"
-          style="opacity:0;"/>
-     <g id="refresh-right"
-        opacity="0"
-        style="transform-origin:817.06px 457.18px 0px">
-        <path fill="none" stroke="#5ab5b5"
-              marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
-              d="m 831.198,471.318 c -3.619,3.618 -8.617,5.856 -14.138,5.856 -11.042,0 -19.994,-8.952 -19.994,-19.994" />
-        <path fill="none" stroke="#5ab5b5"
-              marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
-              d="m 802.922,443.042 c 3.619,-3.618 8.617,-5.856 14.138,-5.856 11.042,0 19.994,8.952 19.994,19.994"
-             />
-     </g>
-
-    </g>
-    <g id="router-r"
-       stroke-linecap="round">
-      <rect fill="#59b5b5" stroke="#303030" stroke-width=".6"
-            width="19.84" height="111.65" x="605.26" y="279.38" ry="3.79"/>
-      <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
-              cx="615.72" cy="290.74" r="5.95" />
-      <path id="antenna-1"
-            fill="#59b5b5" stroke="#303030" stroke-width=".6"
-            d="M618.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
-      <g id="waves-r"
-			fill="none" stroke="#59b5b5" stroke-width=".6">
-        <path d="M670.91 279.38a9.74 9.74 0 00-4.14-12.99"/>
-        <path d="M678.85 282.8a17.5 17.5 0 00-7.4-23.8"/>
-        <path d="M686.79 286.95a26.33 26.33 0 00-11.37-35.71"/>
+      <g id="router"
+        transform="translate(824, -180)rotate(90)"
+        stroke-linecap="round" stroke-linejoin="miter">
+        <rect fill="#59b5b5" stroke="#303030" stroke-width=".6"
+              width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
+        <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
+                cx="386.27" cy="290.74" r="5.95"/>
+        <path fill="#59b5b5" stroke="#303030" stroke-width=".6"
+              d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
+        <g id="waves-l"
+           fill="none" stroke="#59b5b5" stroke-width=".6">
+          <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
+          <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
+          <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
+        </g>
+        <g id="lights-l"
+           fill="#fff" stroke="#303030" stroke-width=".6"
+           >
+          <circle cx="387.89" cy="380.02" r="2.71"/>
+          <circle cx="387.89" cy="369.02" r="2.71"/>
+          <circle cx="387.89" cy="357.84" r="2.71"/>
+        </g>
       </g>
-      <g id="lights-r"
-         fill="#fff" stroke="#303030" stroke-width=".6">
-        <circle cx="614.1" cy="380.02" r="2.71"/>
-        <circle cx="614.1" cy="369.02" r="2.71"/>
-        <circle cx="614.1" cy="357.84" r="2.71"/>
+
+      <g id="imac"
+         style="transform-origin:240px 400px 0px"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
+        <path fill="#4c4c4c"
+              d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+        <path fill="#737373"
+              d="M184.37 534.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
+        <path fill="none" stroke="#303030"
+              d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+        <rect fill="#4c4c4c" stroke="#303030"
+              width="199.45" height="121.54" x="118.35" y="390.11" rx="7.87" ry="7.88"/>
+        <circle fill="#737373"
+                cx="219.76" cy="394.05" r="1.97"/>
+        <rect fill="#fff"
+              width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
+
+
+        <circle id="copy-kuia-left"
+                style="transform:scale(0); transform-origin:240px 400px 0px;"
+                cx="170.5" cy="443.5" r="22"
+                fill="#e9fbfb" stroke="#5ab5b5"
+                stroke-width="5"/>
+        <use id="kuia-imac"
+             xlink:href="#kuia"
+             x="150" y="423" />
+        <path id="link-left"
+              style="transform: scale(0); transform-origin: 195px 444px 0px;"
+              d="M195,444 h41"
+              stroke="#4c4c4c" stroke-width="2"/>
+        <g id="add-icon-left"
+           style="opacity: 0; transform-origin:260.6px 443.18px 0px"
+           stroke-width="2" fill="hsl(47, 77%, 46%)" stroke="#fff">
+           <circle cx="260.6" cy="443.18" r="18"/>
+           <path d="M248.6 443.18 h24 m-12 -12 v24"/>
+        </g>
+        <circle id="copy-koro-left"
+                style="opacity: 0; transform-origin:226.89px 400px 0px;"
+                cx="260.5" cy="443.5" r="22"
+                fill="#fcf8e9" stroke="#d0a81b"
+                stroke-width="5"/>
+        <use id="koro-imac"
+             xlink:href="#koro"
+             x="240" y="423" />
       </g>
+
+
+
+      <g id="laptop"
+         style="transform-origin:782.9px 400px 0px;"
+         stroke-linecap="butt" stroke-linejoin="round">
+       <path id="screen-bg"
+             fill="#4d4d4d" stroke-width="2"
+       d="M859.34 508.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
+       <path id="keyboard-bg"
+             fill="#4d4d4d" stroke-width="2"
+       d="M706.46 508.64L684 528.07v5.77h200.55v-5.77l-25.2-19.43z"/>
+       <rect id="screen"
+             fill="#fff" stroke-width="2"
+             width="151.2" height="75.6" x="707.3" y="424.64" rx="0" ry="0"/>
+       <circle id="camera"
+               fill="#999" stroke="none" stroke-width="1.22"
+               cx="782.9" cy="420.44" r="1.05" />
+       <path fill="none" stroke="#999" stroke-width=".59"
+             d="M758.54 521.24h46.2l8.4 8.4h-63z"/>
+       <path fill="none" stroke="#999" stroke-width=".59"
+             d="M704.78 521.24h49.56m54.6 0h54.6"/>
+       <path fill="none" stroke="#999" stroke-width=".59"
+             d="M712.34 512.84h142.8"/>
+       <path id="keyboard"
+             fill="none" stroke="#999" stroke-width=".59"
+             d="M708.14 517.04h151.2"/>
+       <path id="front-edge"
+             fill="none" stroke="#999" stroke-width="1.2"
+             d="M884.54 529.64h-199.5"/>
+       <path id="edge-shadow"
+             fill="none" stroke="#737373" stroke-width="2.02"
+             d="M884.54 533.84h-199.5"/>
+       <path id="outline"
+             fill="none" stroke="#303030" stroke-width="2.02"
+             d="M684 528.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
+
+       <g id="add-icon-right"
+          style="opacity: 0; transform-origin:752.5px 457.5px 0px"
+          stroke-width="2" fill="#5ab5b5" stroke="#fff">
+          <circle cx="752.5" cy="457.5" r="18"/>
+          <path d="M740.5 457.5 h24 m-12 -12 v24" />
+       </g>
+       <circle id="copy-kuia-right"
+               style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
+               cx="752.5" cy="457.5" r="22"
+               fill="#e9fbfb" stroke="#5ab5b5"
+               stroke-width="5"/>
+       <use id="kuia-laptop"
+            xlink:href="#kuia"
+            x="732" y="437"
+            style="opacity:0;"/>
+      <path id="link-right"
+            style="transform: scale(0); transform-origin: 774px 457px 0px;"
+            d="M774,457 h21"
+            stroke="#4c4c4c" stroke-width="2"/>
+        <circle id="copy-koro-right"
+                style="transform: scale(0); transform-origin:817px 457.5px 0px;"
+                cx="817" cy="457.5" r="22"
+                fill="#fcf8e9" stroke="#d0a81b"
+                stroke-width="5"/>
+       <use id="koro-laptop"
+            xlink:href="#koro"
+            x="796.5" y="437"
+            style="opacity:0;"/>
+       <g id="refresh-right"
+          opacity="0"
+          style="transform-origin:817.06px 457.18px 0px">
+          <path fill="none" stroke="#5ab5b5"
+                marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
+                d="m 831.198,471.318 c -3.619,3.618 -8.617,5.856 -14.138,5.856 -11.042,0 -19.994,-8.952 -19.994,-19.994" />
+          <path fill="none" stroke="#5ab5b5"
+                marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
+                d="m 802.922,443.042 c 3.619,-3.618 8.617,-5.856 14.138,-5.856 11.042,0 19.994,8.952 19.994,19.994"
+               />
+       </g>
+
+      </g>
+
+    <g id="top-arrows"
+       transform="translate(0, 400)"
+       fill="none" stroke="hsl(0, 65%, 42%)"
+       stroke-width="2" marker-end="url(#marker-top)">
+      <g id="top-to-left-arrows">
+
+      </g>
+      <g id="top-to-right-arrows">
+
+
+     </g>
     </g>
-  </g>
 
-  <g id="top-arrows"
-     transform="translate(0, 400)"
-     fill="none" stroke="hsl(0, 65%, 42%)"
-     stroke-width="2" marker-end="url(#marker-top)">
-    <g id="top-to-left-arrows">
-      <path id="pātaka-to-router-top-left"
-             style="transform-origin:460px -55px 0px;"
-             d="M460,-55 l0 80"/>
-      <path id="router-top-to-router-l"
-            style="transform-origin:460px 46px 0px;"
-           d="M460 46L396.73 325"/>
-      <path id="router-l-to-imac"
-            style="transform-origin:376.89px 300px 0px;"
-           d="M376.89 300l-120 35"/>
+
+    <g id="left-arrows"
+       fill="none" stroke="hsl(47, 77%, 46%)"
+       stroke-width="2" marker-end="url(#marker-left)">
+      <path id="imac-to-router"
+            style="transform-origin:314px 400px 0px;"
+            d="M314,400 l160,-180"/>
+        <path id="router-to-laptop"
+           style="transform-origin:500px 216px 0px;"
+           d="M500,216 l240,200"/>
     </g>
-    <g id="top-to-right-arrows">
-      <path id="pātaka-to-router-top-right"
-             style="transform-origin:490px -55px 0px;"
-             d="M490,-55 l0 80"/>
-    <path id="router-top-to-router-r"
-         style="transform-origin:500px 46px 0px;"
-         d="m 500,46 99,270"/>
-    <path id="router-r-to-laptop"
-         style="transform-origin:625.1px 300px 0px;"
-         d="m 625.1,300 120,40"/>
-   </g>
-  </g>
 
+    <g id="right-arrows"
+       fill="none" stroke="#5ab5b5"
+       stroke-width="2" marker-end="url(#marker-right)">
+       <path id="laptop-to-router"
+             style="transform-origin:706px 416.24px 0px;"
+  					d="M706 416.24l-200,-196"/>
+      <path id="router-to-imac"
+            style="transform-origin:476px 216px 0px;"
+           d="M476 216l-220 170"/>
+    </g>
 
-  <g id="left-arrows"
-     transform="translate(0, 400)"
-     fill="none" stroke="hsl(47, 77%, 46%)"
-     stroke-width="2" marker-end="url(#marker-left)">
-    <path id="imac-to-router-l"
-          style="transform-origin:314px 392px 0px;"
-          d="m 314,392 l60,-59"/>
-    <path id="router-l-to-router-top"
-          style="transform-origin:396.73px 315px 0px;"
-          d="m 396.73,315 l65,-269"/>
-    <path id="router-top-left-to-pātaka"
-          style="transform-origin:465px 25px 0px;"
-					d="M465,25 l10-80"/>
-  </g>
-
-  <g id="right-arrows"
-     transform="translate(0, 400)"
-     fill="none" stroke="#5ab5b5"
-     stroke-width="2" marker-end="url(#marker-right)">
-     <path id="laptop-to-router-r"
-           style="transform-origin:706px 416.24px 0px;"
-					d="M706 416.24L625.1 350"/>
-     <path id="router-r-to-router-top"
-           style="transform-origin:605.26px 335.2px 0px;"
-					d="M605.26 335.2l-95.26,-289.2"/>
-    <path id="router-top-right-to-pātaka"
-          style="transform-origin:500px 25px 0px;"
-					d="M500,25 l-20-80"/>
-  </g>
-
+</g>
 
   <script>// <![CDATA[ /*
 
@@ -545,7 +382,7 @@
 
     tl
       .add({
-        targets: '#house-top, #house-left, #house-right',
+        targets: '#house',
         opacity: [0, 1],
         duration: 1000
       })
@@ -589,41 +426,6 @@
         delay: anime.stagger(350)
       }, '-=250')
       .add({
-        targets: '#pc',
-        scale: [1, 1.4]
-      }, '-=400')
-      .add({
-        targets: '#pātaka-symbol',
-        opacity: [1, 0]
-      }, '-=200')
-      .add({
-        targets: '#file-a',
-        opacity: [0, 1],
-        scale: [.5, 1]
-      })
-      .add({
-        targets: '#right-arrows > path',
-        opacity: [1, 0],
-      }, '-=250')
-      .add({
-        targets: '#copy-a',
-        duration: 1500,
-        keyframes: [
-          { opacity: 0 },
-          { opacity: 1, scale: 1 },
-          { opacity: 0, scale: 0 }
-        ]
-      }, '+=1000')
-      .add({
-        targets: '#pc',
-        scale: [1.4, 1]
-      }, '-=400')
-      .add({
-        targets: '#top-to-left-arrows > path',
-        scale: [0, .9],
-        delay: anime.stagger(350)
-      }, '-=250')
-      .add({
         targets: '#imac',
         scale: [1, 1.7]
       }, '-=400')
@@ -642,8 +444,9 @@
          opacity: [0, 1],
          duration: 300
        }, '-=400')
+
        .add({
-         targets: '#top-to-left-arrows > path',
+         targets: '#right-arrows > path',
          opacity: [1, 0],
        }, '-=250')
        .add({
@@ -687,41 +490,7 @@
            scale: [0, .9],
            delay: anime.stagger(350)
          }, '-=250')
-         .add({
-           targets: '#pc',
-           scale: [1, 1.4]
-         }, '-=400')
-         .add({
-           targets: '#file-b',
-           opacity: [0, 1],
-           scale: [.5, 1]
-         })
-         .add({
-          targets: '#pātaka-files',
-          translateX: -25
-         }, '-=500')
-         .add({
-           targets: '#left-arrows > path',
-           opacity: [1, 0],
-         }, '-=250')
-         .add({
-           targets: '#copy-b',
-           duration: 1500,
-           keyframes: [
-             { opacity: 0 },
-             { opacity: 1, scale: 1 },
-             { opacity: 0, scale: 0 }
-           ]
-         }, '+=1000')
-         .add({
-           targets: '#pc',
-           scale: [1.4, 1]
-         }, '-=400')
-         .add({
-           targets: '#top-to-right-arrows > path',
-           scale: [0, .9],
-           delay: anime.stagger(350)
-         }, '-=250')
+
          .add({
            targets: '#laptop',
            scale: [1, 1.7]
@@ -743,78 +512,23 @@
           }, '-=400')
           .add({
              targets: '#link-right',
-             scale: [0, 1],
+             scale: [0, 1]
            }, '-=150')
+           .add({
+             targets: '#left-arrows > path',
+             opacity: [1, 0]
+           }, '-=250')
           .add({
-            targets: '#top-to-right-arrows > path',
-            opacity: [1, 0],
+            targets: '#laptop',
+            scale: [2, 1],
+            duration: 800
           }, '+=1000')
           .add({
-                targets: '#laptop',
-                scale: [2, 1],
-                duration: 800
-          }, '+=1000')
-          .add({
-            targets: '#house-top, #house-left, #house-right',
+            targets: '#house',
             opacity: [1, 0],
             duration: 1000
           }, '+=5000')
 
-    //   .add({
-    //     targets: '#koro',
-    //     opacity: [0, 1],
-    //     duration: 300
-    //   })
-    //   .add({
-    //     targets: '#refresh-right',
-    //     opacity: [0, 1],
-    //     easing: 'easeInOutSine',
-    //     duration: 300
-    //   }, '+=1000')
-    //   .add({
-    //     targets: '#refresh-right',
-    //     rotate: '-8turn',
-    //     easing: 'easeInOutSine',
-    //     duration: 5000
-    //   })
-    //
-    //   .add({
-    //     targets: '#highlight',
-    //     scale: [0, 1],
-    //     duration: 300
-    //   }, 5500)
-    //
-    //   .add({
-    //     targets: '#refresh-right',
-    //     opacity: [1, 0],
-    //     easing: 'easeInOutSine'
-    //   })
-    //   .add({
-    //     targets: '#highlight',
-    //     scale: [1, 0],
-    //     duration: 300
-    //   }, 8000)
-    //   .add({
-    //     targets: '#left-arrows > path',
-    //     scale: [0, .9],
-    //     delay: anime.stagger(350)
-    //   }, '-=200')
-    //
-    //   .add({
-    //     targets: '#koro-laptop',
-    //     opacity: [0, 1],
-    //     duration: 300
-    //   })
-    //   .add({
-    //     targets: '#left-arrows > path',
-    //     opacity: [1, 0],
-    //     delay: anime.stagger(150)
-    //   })
-    //   .add({
-    //     targets: '#koro, #koro-laptop',
-    //     opacity: [1, 0],
-    //     duration: 1000
-    //   }, '+=4000')
-     // ]]></script>
-
+  // ]]>
+  </script>
 </svg>

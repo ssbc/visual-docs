@@ -18,6 +18,7 @@ Planned illustrations, animations and icons, and current progress made.
 | Port Forwarding          |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/port-forwarding_03_with-port-forwarding.svg)| ✖️ |
 | **Āhau-specific icons:** |                |              |           |           |                                |    **-**    |
 | Whānau archive icon      |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
+| Pātaka connect code      |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | Encrypted message        |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | Support chat icon        |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | **Infrastructure:**      |                |              |           |           |                                |      ✖️      |
@@ -25,8 +26,8 @@ Planned illustrations, animations and icons, and current progress made.
 | Compare: Āhau / SSB      |        ✔       |       ✔      |✔ (basic)  |     ✔     | ![](svg/alternative-servers.svg) |           |
 | **Replication:**         |                |              |           |           |                                |    **-**    |
 | Compare: Facebook etc    |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
-| Sync via Internet/Pātaka |        ✔       |       ✔      | ✔ (basic) |     ✔     | ![](svg/replication-via-internet.svg)|             |
-| Local sync over WiFi     |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
+| Sync via Internet/Pātaka |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/replication-via-internet.svg)|             |
+| Local sync over WiFi     |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/replication-local.svg)|             |
 | Pātaka-to-Pātaka         |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | **Encryption:**          |                |              |           |           |                                |    **-**    |
 | Data on a Pātaka         |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
