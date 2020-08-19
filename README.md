@@ -25,7 +25,17 @@ _3. Explanation of port forwarding_
 
 ----
 
-### Infrastructure Comparison 
+### Replication: connecting via a pātaka
+
+![](gif/replication-via-internet.gif)
+
+_**Note:** These two 'replication' animations have been written using [anime.js](https://animejs.com) within SVG, as it provides much, much more flexibility than writing animation directly in CSS within SVG. As Github will not play JS animations within Markdown, the above embedded animation is a GIF recording of the animation, which means a lower resolution and frame-rate, and much higher filesize. The source SVGs can be downloaded and opened with a web browser to display the animation. Once the animation has been finalized, I'll make a CSS-in-SVG version._
+
+![](gif/replication-local.gif)
+
+----
+
+### Infrastructure Comparison
 
 ![](svg/corporate-server.svg)
 
