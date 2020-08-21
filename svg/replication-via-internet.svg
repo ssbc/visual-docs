@@ -4,6 +4,12 @@
      viewBox="0 0 1000 1000">
   <title>Replication via Pātaka</title>
   <style>/* <![CDATA[ */
+    .packet {
+      opacity: 0;
+      stroke-width: 6px;
+      stroke-dasharray: .08 .004 .016 .008 .012 .012 .008 .016 .004 1;
+      stroke-dashoffset: 1.148;
+    }
   /* ]]> */</style>
   <defs>
     <marker id="marker-curve-left"
@@ -171,6 +177,7 @@
 
   <g id="house-top">
     <path id="house-outline-top"
+          class="secondary"
           style="transform-origin:500px 0px 0px;"
           transform="scale(1)"
           fill="hsl(0, 85%, 95%)" stroke="hsl(0, 65%, 42%)"
@@ -179,6 +186,7 @@
           l12.3-7 v297 h365.4 v-297z"/>
 
     <g id="pc"
+       class="pātaka"
        stroke-linejoin="round" stroke-miterlimit="4"
        style="transform-origin:500px 200px 0px;">
       <g transform="translate(60, -30) scale(.85)">
@@ -193,7 +201,7 @@
           <rect width="56.9" height="16.3" x="622" y="330.1" fill="#737373" stroke="#4d4d4d" ry="0"/>
         </g>
 
-        <g>
+        <g id="screen">
           <g stroke="#303030" stroke-linecap="round" stroke-width="1">
             <path fill="#999"
           				d="M424 420h80l14 10h-108z"/>
@@ -206,10 +214,12 @@
             <path fill="#999"
           				d="M344 235l8-5 h220 l8 5z"/>
           </g>
-          <rect id="screen" fill="#fff" stroke="#303030" stroke-linecap="butt" stroke-width="1"
-  				x="354" y="243" width="216" height="129"/>
-          <path id="reflection" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-width="1"
-  				d="M571 243v130h-218v-130"/>
+          <rect id="screen"
+                fill="#fff" stroke="#303030" stroke-linecap="butt" stroke-width="1"
+  				      x="354" y="243" width="216" height="129"/>
+          <path id="reflection"
+                fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-width="1"
+  				      d="M571 243v130h-218v-130"/>
           <g id="pātaka-symbol"
              fill="#a51d2d" stroke="#000"
              stroke-linecap="round" stroke-width=".2">
@@ -219,7 +229,7 @@
           <g id="pātaka-files"
              style="transform:translate(25px, 0)">
             <rect id="copy-a"
-                  style="opacity: 0; transform-origin: 440px 400px 0px;"
+                  style="opacity: 0; transform-origin: 460px 400px 0px;"
                   x="420" y="285" width="40" height="40"
                   fill="#e9fbfb" stroke="#59b5b5"
                   rx="5" stroke-width="5"/>
@@ -234,7 +244,7 @@
                   fill="#fcf8e9" stroke="#d0a81b"
                   rx="5" stroke-width="5"/>
             <rect id="file-b"
-                  style="transform-origin: 490px 305px 0px;"
+                  style="transform-origin: 490px 400px 0px;"
                   x="470" y="285" width="40" height="40"
                   fill="#fcf8e9" stroke="#d0a81b"
                   rx="5" stroke-width="5"/>
@@ -244,6 +254,7 @@
     </g>
 
     <g id="router-top"
+      class="secondary"
       transform="translate(824, 48)rotate(90)"
       stroke-linecap="round" stroke-linejoin="miter">
       <rect fill="hsl(0, 85%, 74%)" stroke="#303030" stroke-width=".6"
@@ -253,7 +264,7 @@
       <path fill="hsl(0, 85%, 74%)" stroke="#303030" stroke-width=".6"
             d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
       <g id="waves-l"
-         fill="none" stroke="#a51d2d" stroke-width=".6">
+         fill="none" stroke="#a51d2d" stroke-width="1">
         <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
         <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
         <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
@@ -271,11 +282,13 @@
   <g id="house-left"
      transform="translate(0, 400)">
     <path id="house-outline-left"
+      class="secondary"
           fill="#fcf8e9" stroke="#d0a81b"
           stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
 			    d="M411 264l-195-113 l-195 113
           l12.3-7 v297 h365.4 v-297z"/>
     <g id="imac"
+       class="whānau-member"
        style="transform-origin:240px 510px 0px"
        stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
       <path fill="#4c4c4c"
@@ -291,19 +304,6 @@
       <rect fill="#fff"
             width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
 
-            <!-- <circle id="highlight-left"
-              style="transform-origin:260.5px 443.8px 0px"
-              cx="260.5" cy="443.8" r="25" fill="hsl(47, 77%, 46%)" /> -->
-      <!-- <g id="refresh-left"
-        style="transform-origin:217.06px 444.18px 0px">
-         <path fill="none" stroke="hsl(47, 77%, 46%)"
-               marker-start="url(#marker-curve-left)" stroke-width="2" stroke-linecap="round"
-               d="m 231.198,458.318 c -3.619,3.618 -8.617,5.856 -14.138,5.856 -11.042,0 -19.994,-8.952 -19.994,-19.994" />
-         <path fill="none" stroke="hsl(47, 77%, 46%)"
-               marker-start="url(#marker-curve-left)" stroke-width="2" stroke-linecap="round"
-               d="m 202.922,430.042 c 3.619,-3.618 8.617,-5.856 14.138,-5.856 11.042,0 19.994,8.952 19.994,19.994"
-              />
-      </g> -->
       <circle id="copy-kuia-left"
               style="transform:scale(0); transform-origin:240px 400px 0px;"
               cx="170.5" cy="443.5" r="22"
@@ -314,7 +314,7 @@
            x="150" y="423" />
       <path id="link-left"
             style="transform: scale(0); transform-origin: 195px 444px 0px;"
-            d="M195,444 h41"
+            d="M195,444 h41.4"
             stroke="#4c4c4c" stroke-width="2"/>
       <g id="add-icon-left"
          style="opacity: 0; transform-origin:260.6px 443.18px 0px"
@@ -333,18 +333,19 @@
     </g>
 
     <g id="router-l"
+      class="secondary"
       stroke-linecap="round" stroke-linejoin="miter">
       <rect fill="#f4d35d" stroke="#303030" stroke-width=".6"
-            width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
+            width="19.84" height="111.65" x="377.89" y="279.38" ry="3.79"/>
       <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
-              cx="386.27" cy="290.74" r="5.95"/>
+              cx="387.27" cy="290.74" r="5.95"/>
       <path fill="#f4d35d" stroke="#303030" stroke-width=".6"
-            d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
+            d="M384.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
       <g id="waves-l"
-         fill="none" stroke="#b1911b" stroke-width=".6">
-        <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
-        <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
-        <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
+         fill="none" stroke="#b1911b" stroke-width="1">
+        <path d="M332.08 279.38a9.74 9.74 0 014.15-12.99"/>
+        <path d="M324.14 282.8a17.5 17.5 0 017.4-23.8"/>
+        <path d="M316.2 286.95a26.33 26.33 0 0111.37-35.71"/>
       </g>
       <g id="lights-l"
          fill="#fff" stroke="#303030" stroke-width=".6"
@@ -359,11 +360,13 @@
   <g id="house-right"
      transform="translate(0, 400)">
     <path id="house-outline-right"
+      class="secondary"
          fill="#e9fbfb" stroke="#59b5b5"
          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
          d="M590 264l195-113 l195 113
          l-12.3-7 v297 h-365.4 v-297z"/>
     <g id="laptop"
+      class="whānau-member"
        style="transform-origin:782.9px 520px 0px;"
        stroke-linecap="butt" stroke-linejoin="round">
      <path id="screen-bg"
@@ -414,13 +417,13 @@
           style="opacity:0;"/>
     <path id="link-right"
           style="transform: scale(0); transform-origin: 774px 457px 0px;"
-          d="M774,457 h26"
+          d="M774,457 h21.6"
           stroke="#4c4c4c" stroke-width="2"/>
-      <circle id="copy-koro-right"
-              style="transform: scale(0); transform-origin:817px 457.5px 0px;"
-              cx="817" cy="457.5" r="22"
-              fill="#fcf8e9" stroke="#d0a81b"
-              stroke-width="5"/>
+    <circle id="copy-koro-right"
+            style="transform: scale(0); transform-origin:817px 457.5px 0px;"
+            cx="817" cy="457.5" r="22"
+            fill="#fcf8e9" stroke="#d0a81b"
+            stroke-width="5"/>
      <use id="koro-laptop"
           xlink:href="#koro"
           x="796.5" y="437"
@@ -439,28 +442,66 @@
 
     </g>
     <g id="router-r"
+       class="secondary"
        stroke-linecap="round">
       <rect fill="#59b5b5" stroke="#303030" stroke-width=".6"
-            width="19.84" height="111.65" x="605.26" y="279.38" ry="3.79"/>
+            width="19.84" height="111.65" x="603.26" y="279.38" ry="3.79"/>
       <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
-              cx="615.72" cy="290.74" r="5.95" />
+              cx="613.72" cy="290.74" r="5.95" />
       <path id="antenna-1"
             fill="#59b5b5" stroke="#303030" stroke-width=".6"
-            d="M618.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
+            d="M616.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
       <g id="waves-r"
-			fill="none" stroke="#59b5b5" stroke-width=".6">
-        <path d="M670.91 279.38a9.74 9.74 0 00-4.14-12.99"/>
-        <path d="M678.85 282.8a17.5 17.5 0 00-7.4-23.8"/>
-        <path d="M686.79 286.95a26.33 26.33 0 00-11.37-35.71"/>
+			   fill="none" stroke="#59b5b5" stroke-width="1">
+        <path d="M668.91 279.38a9.74 9.74 0 00-4.14-12.99"/>
+        <path d="M676.85 282.8a17.5 17.5 0 00-7.4-23.8"/>
+        <path d="M684.79 286.95a26.33 26.33 0 00-11.37-35.71"/>
       </g>
       <g id="lights-r"
          fill="#fff" stroke="#303030" stroke-width=".6">
-        <circle cx="614.1" cy="380.02" r="2.71"/>
-        <circle cx="614.1" cy="369.02" r="2.71"/>
-        <circle cx="614.1" cy="357.84" r="2.71"/>
+        <circle cx="613.1" cy="380.02" r="2.71"/>
+        <circle cx="613.1" cy="369.02" r="2.71"/>
+        <circle cx="613.1" cy="357.84" r="2.71"/>
       </g>
     </g>
   </g>
+
+  <g id="internet"
+     class="internet"
+  	 fill="hsl(289, 40%, 66%)" stroke="#303030">
+    <circle stroke-width="1"
+            cx="500" cy="580" r="71.5"/>
+    <ellipse stroke-width="1"
+            cx="500" cy="580" rx="52.37" ry="71.5"/>
+    <ellipse stroke-width="1"
+            cx="500" cy="580" rx="19.13" ry="71.5"/>
+    <path id="latitude-lines"
+          fill="none" stroke-width="1"
+          d="m 430.68,563.4975 a 950.82,950.82 0 0 1 138.85,0
+            m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21
+            m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
+            m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
+
+  </g>
+
+  <g id="packets">
+    <path id="right-to-top-packet" class="packet"
+          pathLength="1"
+          fill="none" stroke="#5ab5b5"
+          d="M500 508.5c5.47-.25 11.34 10.17 14.3 24 3.03 14.19 3.44 17.79 4.15 28.64 15.12.3 23.18.7 32.3 1.17 4.06 17.29.48 47.46-10.47 63.4 3.74-.24 16.28-1.82 16.28-1.82"/>
+    <path id="top-to-left-packet" class="packet"
+          pathLength="1"
+          fill="none" stroke="hsl(0, 65%, 42%)"
+          d="M443.65 623.89c8.16 1.17 26.55 3.44 42.07 3.68-5.48-23.25-4.83-50.32-4.24-66.43-11.14-.4-22.02.8-32.22 1.18 3.95-24.37 22.64-53.47 50.74-53.82"/>
+    <path id="left-to-top-packet" class="packet"
+          pathLength="1"
+          fill="none" stroke="hsl(47, 77%, 46%)"
+          d="M500 508.5c-6.5-.3-12.68 13.94-14.3 24 8.25-.48 28.6 0 28.6 0 3.83 12.31 6.3 51.58 4.14 66.48-12.42.74-58.64-.25-69.13-1.02.46 5.23 5.85 20.9 10.53 27.91-5.5-.51-16.19-1.98-16.19-1.98"/>
+    <path id="top-to-right-packet" class="packet"
+          pathLength="1"
+          fill="none" stroke="hsl(0, 65%, 42%)"
+          d="M556.56 623.89s-12.54 1.58-16.28 1.81c5.02-7.64 9.2-20.22 10.42-27.81-12.45.53-47.5 1.93-69.14 1.1-2.28-22.5.4-52.49 4.14-66.5 3.35-12.52 7.8-23.8 14.3-23.99"/>
+      </g>
 
   <g id="top-arrows"
      transform="translate(0, 400)"
@@ -468,65 +509,99 @@
      stroke-width="2" marker-end="url(#marker-top)">
     <g id="top-to-left-arrows">
       <path id="pātaka-to-router-top-left"
-             style="transform-origin:460px -55px 0px;"
-             d="M460,-55 l0 80"/>
-      <path id="router-top-to-router-l"
-            style="transform-origin:460px 46px 0px;"
-           d="M460 46L396.73 325"/>
-      <path id="router-l-to-imac"
+            style="transform-origin:460px -55px 0px;"
+            d="M470,-55 l20 80"/>
+      <path id="router-top-to-internet-left"
+            style="transform-origin:500px 46px 0px;"
+            d="M500 46v60"/>
+      <path id="internet-to-router-left"
+            style="transform-origin:444px 224px 0px;"
+            d="M444 224l-44 70"/>
+      <path id="router-left-to-imac"
             style="transform-origin:376.89px 300px 0px;"
            d="M376.89 300l-120 35"/>
     </g>
     <g id="top-to-right-arrows">
       <path id="pātaka-to-router-top-right"
-             style="transform-origin:490px -55px 0px;"
-             d="M490,-55 l0 80"/>
-    <path id="router-top-to-router-r"
-         style="transform-origin:500px 46px 0px;"
-         d="m 500,46 99,270"/>
-    <path id="router-r-to-laptop"
-         style="transform-origin:625.1px 300px 0px;"
-         d="m 625.1,300 120,40"/>
+            style="transform-origin:490px -55px 0px;"
+            d="M490,-55 l10 80"/>
+      <path id="router-top-to-internet-right"
+            style="transform-origin:500px 46px 0px;"
+            d="M500 46v60"/>
+      <path id="internet-to-router-right"
+            style="transform-origin:556px 224px 0px;"
+            d="m 556,224 l44,70"/>
+      <path id="router-right-to-laptop"
+            style="transform-origin:625.1px 300px 0px;"
+            d="m 625.1,300 120,40"/>
    </g>
   </g>
-
 
   <g id="left-arrows"
      transform="translate(0, 400)"
      fill="none" stroke="hsl(47, 77%, 46%)"
      stroke-width="2" marker-end="url(#marker-left)">
-    <path id="imac-to-router-l"
+    <path id="imac-to-router-left"
           style="transform-origin:314px 392px 0px;"
           d="m 314,392 l60,-59"/>
-    <path id="router-l-to-router-top"
+    <path id="router-left-to-internet"
           style="transform-origin:396.73px 315px 0px;"
-          d="m 396.73,315 l65,-269"/>
+          d="m 396.73,315 l46,-88"/>
+    <path id="internet-left-to-router-top"
+          style="transform-origin:500px 108px 0px;"
+          d="m 500,108 v-60"/>
     <path id="router-top-left-to-pātaka"
-          style="transform-origin:465px 25px 0px;"
-					d="M465,25 l10-80"/>
+          style="transform-origin:500px 25px 0px;"
+					d="M500,25 v-80"/>
   </g>
 
   <g id="right-arrows"
      transform="translate(0, 400)"
      fill="none" stroke="#5ab5b5"
      stroke-width="2" marker-end="url(#marker-right)">
-     <path id="laptop-to-router-r"
-           style="transform-origin:706px 416.24px 0px;"
-					d="M706 416.24L625.1 350"/>
-     <path id="router-r-to-router-top"
-           style="transform-origin:605.26px 335.2px 0px;"
-					d="M605.26 335.2l-95.26,-289.2"/>
+    <path id="laptop-to-router-r"
+          style="transform-origin:706px 416.24px 0px;"
+      		d="M706 416.24L625.1 350"/>
+    <path id="router-r-to-internet"
+          style="transform-origin:605.26px 335.2px 0px;"
+					d="M605.26 335.2l-48,-110"/>
+    <path id="internet-to-router-top-right"
+          style="transform-origin:500px 108px 0px;"
+          d="M500 108 v-60"/>
     <path id="router-top-right-to-pātaka"
           style="transform-origin:500px 25px 0px;"
 					d="M500,25 l-20-80"/>
   </g>
 
+  <g id="labels"
+    font-family="IBM Plex Sans, Roboto Sans, monospace"
+    font-size="32px"
+    text-anchor="middle">
+    <text id="pātaka-label"
+      class="pātaka"
+          fill="hsl(0, 65%, 42%)"
+          x="500" y="140">
+          Pātaka</text>
 
-  <script>// <![CDATA[ /*
+    <text id="internet-label"
+          class="internet"
+          fill="hsl(289, 40%, 30%)"
+          x="500" y="495">
+          Internet</text>
+    <text id="whānau-member-left"
+      class="whānau-member"
+          fill="hsl(47, 77%, 46%)"
+          x="220" y="770">
+          Whānau Member</text>
+    <text id="whānau-member-right"
+      class="whānau-member"
+          fill="#5ab5b5"
+          x="780" y="770">
+          Whānau Member</text>
+  </g>
 
-
-
-
+  <script>
+    // <![CDATA[
 
      /* anime.js v3.2.0
      * (c) 2020 Julian Garnier
@@ -546,8 +621,33 @@
     tl.add({
         targets: '#house-top, #house-left, #house-right',
         opacity: [0, 1],
-        duration: 1000
+        duration: 100
       }, 1000)
+      .add({
+        targets: '.pātaka',
+        opacity: [0, 1],
+        duration: 1000
+      })
+      .add({
+        targets: '.internet',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=250')
+      .add({
+        targets: '.whānau-member',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=250')
+      .add({
+        targets: '.secondary',
+        opacity: [0, 1],
+        duration: 1000
+      }, '+=1000')
+      .add({
+        targets: '#labels',
+        opacity: [1, 0],
+        duration: 1000
+      }, '+=2000')
       .add({
         targets: '#laptop',
         scale: [1, 2]
@@ -581,9 +681,23 @@
         targets: '#laptop',
         scale: [2, 1],
         duration: 800
-      }, '-=400')
+      }, '-=600')
       .add({
-        targets: '#right-arrows > path',
+        targets: '#laptop-to-router-r, #router-r-to-internet',
+        scale: [0, 0.9],
+        delay: anime.stagger(350)
+      }, '-=350')
+      .add({
+        targets: '#right-to-top-packet',
+        keyframes: [
+          { strokeDashoffset: [0.148, 0.148], opacity: 0, duration: 1 },
+          { strokeDashoffset: [0.148, 0.188], opacity: 1, duration: 100 },
+          { strokeDashoffset: [0.188, 1.104], opacity: 1, duration: 800 },
+          { strokeDashoffset: [1.104, 1.148], opacity: 0, duration: 100 }
+        ]
+      }, '-=100')
+      .add({
+        targets: '#internet-to-router-top-right, #router-top-right-to-pātaka',
         scale: [0, 0.9],
         delay: anime.stagger(350)
       }, '-=250')
@@ -618,7 +732,21 @@
         scale: [1.4, 1]
       }, '-=400')
       .add({
-        targets: '#top-to-left-arrows > path',
+        targets: '#pātaka-to-router-top-left, #router-top-to-internet-left',
+        scale: [0, 0.9],
+        delay: anime.stagger(350)
+      }, '-=250')
+      .add({
+        targets: '#top-to-left-packet',
+        keyframes: [
+          { strokeDashoffset: [0.148, 0.148], opacity: 0, duration: 1 },
+          { strokeDashoffset: [0.148, 0.188], opacity: 1, duration: 100 },
+          { strokeDashoffset: [0.188, 1.104], opacity: 1, duration: 800 },
+          { strokeDashoffset: [1.104, 1.148], opacity: 0, duration: 100 }
+        ]
+      }, '-=100')
+      .add({
+        targets: '#internet-to-router-left, #router-left-to-imac',
         scale: [0, 0.9],
         delay: anime.stagger(350)
       }, '-=250')
@@ -680,9 +808,23 @@
         targets: '#imac',
         scale: [1.7, 1],
         duration: 800
-      }, '-=400')
+      }, '-=600')
       .add({
-        targets: '#left-arrows > path',
+        targets: '#imac-to-router-left, #router-left-to-internet',
+        scale: [0, 0.9],
+        delay: anime.stagger(350)
+      }, '-=350')
+      .add({
+        targets: '#left-to-top-packet',
+        keyframes: [
+          { strokeDashoffset: [0.148, 0.148], opacity: 0, duration: 1 },
+          { strokeDashoffset: [0.148, 0.188], opacity: 1, duration: 100 },
+          { strokeDashoffset: [0.188, 1.104], opacity: 1, duration: 800 },
+          { strokeDashoffset: [1.104, 1.148], opacity: 0, duration: 100 }
+        ]
+      }, '-=100')
+      .add({
+        targets: '#internet-left-to-router-top, #router-top-left-to-pātaka',
         scale: [0, 0.9],
         delay: anime.stagger(350)
       }, '-=250')
@@ -715,9 +857,23 @@
       .add({
         targets: '#pc',
         scale: [1.4, 1]
-      }, '-=400')
+      }, '-=600')
       .add({
-        targets: '#top-to-right-arrows > path',
+        targets: '#pātaka-to-router-top-right, #router-top-to-internet-right',
+        scale: [0, 0.9],
+        delay: anime.stagger(350)
+      }, '-=350')
+      .add({
+        targets: '#top-to-right-packet',
+        keyframes: [
+          { strokeDashoffset: [0.148, 0.148], opacity: 0, duration: 1 },
+          { strokeDashoffset: [0.148, 0.188], opacity: 1, duration: 100 },
+          { strokeDashoffset: [0.188, 1.104], opacity: 1, duration: 800 },
+          { strokeDashoffset: [1.104, 1.148], opacity: 0, duration: 100 }
+        ]
+      }, '-=100')
+      .add({
+        targets: '#internet-to-router-right, #router-right-to-laptop',
         scale: [0, 0.9],
         delay: anime.stagger(350)
       }, '-=250')
@@ -754,7 +910,7 @@
         duration: 800
       }, '+=1000')
       .add({
-        targets: '#house-top, #house-left, #house-right',
+        targets: '#house-top, #house-left, #house-right, #internet',
         opacity: [1, 0],
         duration: 1000
       }, '+=5000')
