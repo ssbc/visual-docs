@@ -4,12 +4,15 @@
      viewBox="0 0 1000 1000">
   <title>Replication via Pātaka</title>
   <style>/* <![CDATA[ */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
     .packet {
       opacity: 0;
       stroke-width: 6px;
       stroke-dasharray: .08 .004 .016 .008 .012 .012 .008 .016 .004 1;
       stroke-dashoffset: 1.148;
     }
+
   /* ]]> */</style>
   <defs>
     <marker id="marker-curve-left"
@@ -305,7 +308,7 @@
             width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
 
       <circle id="copy-kuia-left"
-              style="transform:scale(0); transform-origin:240px 400px 0px;"
+              style="transform:scale(0); transform-origin:255px 400px 0px;"
               cx="170.5" cy="443.5" r="22"
               fill="#e9fbfb" stroke="#5ab5b5"
               stroke-width="5"/>
@@ -314,7 +317,7 @@
            x="150" y="423" />
       <path id="link-left"
             style="transform: scale(0); transform-origin: 195px 444px 0px;"
-            d="M195,444 h41.4"
+            d="M195,444 h41.5"
             stroke="#4c4c4c" stroke-width="2"/>
       <g id="add-icon-left"
          style="opacity: 0; transform-origin:260.6px 443.18px 0px"
@@ -420,7 +423,7 @@
             d="M774,457 h21.6"
             stroke="#4c4c4c" stroke-width="2"/>
       <circle id="copy-koro-right"
-              style="transform: scale(0); transform-origin:817px 457.5px 0px;"
+              style="transform: scale(0); transform-origin:775px 425px 0px;"
               cx="817" cy="457.5" r="22"
               fill="#fcf8e9" stroke="#d0a81b"
               stroke-width="5"/>
@@ -430,7 +433,6 @@
           style="opacity:0;"/>
     </g>
 
-    </g>
     <g id="router-r"
        class="secondary"
        stroke-linecap="round">
@@ -499,8 +501,8 @@
      stroke-width="2" marker-end="url(#marker-top)">
     <g id="top-to-left-arrows">
       <path id="pātaka-to-router-top-left"
-            style="transform-origin:460px -55px 0px;"
-            d="M470,-55 l20 80"/>
+            style="transform-origin:475px -55px 0px;"
+            d="M475,-55 l20 80"/>
       <path id="router-top-to-internet-left"
             style="transform-origin:500px 46px 0px;"
             d="M500 46v60"/>
@@ -523,7 +525,7 @@
             d="m 556,224 l44,70"/>
       <path id="router-right-to-laptop"
             style="transform-origin:625.1px 300px 0px;"
-            d="m 625.1,300 120,40"/>
+            d="m 625.1,300 120,45"/>
    </g>
   </g>
 
@@ -564,7 +566,7 @@
   </g>
 
   <g id="labels"
-    font-family="IBM Plex Sans, Roboto Sans, monospace"
+    font-family="'Poppins', sans-serif"
     font-size="32px"
     text-anchor="middle">
     <text id="pātaka-label"
@@ -586,10 +588,9 @@
     <text id="whānau-member-right"
       class="whānau-member"
           fill="#5ab5b5"
-          x="780" y="770">
+          x="790" y="770">
           Whānau Member</text>
   </g>
-
   <script>
     // <![CDATA[
 

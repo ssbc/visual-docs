@@ -4,6 +4,8 @@
      viewBox="000 0 1000 1000">
   <title>Replication via WiFi router</title>
   <style>/* <![CDATA[ */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
     .packet {
       opacity: 0;
       stroke-dasharray: .02 .001 .004 .002 .003 .003 .002 .004 .001 1;
@@ -402,7 +404,7 @@
             d="M774,567 h21"
             stroke="#4c4c4c" stroke-width="2"/>
         <circle id="copy-koro-right"
-                style="transform: scale(0); transform-origin:817px 567.5px 0px;"
+                style="transform: scale(0); transform-origin:764px 528px 0px;"
                 cx="817" cy="567.5" r="22"
                 fill="#fcf8e9" stroke="#d0a81b"
                 stroke-width="5"/>
@@ -434,22 +436,22 @@
          fill="none" stroke="hsl(47, 77%, 46%)"
          stroke-width="2" marker-end="url(#marker-left)">
         <path id="imac-to-router"
-              style="transform-origin:270px 490.1px 0px;"
-              d="m 270,490.1 58.3,-279.1"/>
+              style="transform-origin:288px 475px 0px;"
+              d="m 288,475 45,-275"/>
           <path id="router-to-laptop"
              style="transform-origin:328.7px 211px 0px;"
-             d="m 328.7,211 459,305.2"/>
+             d="m 328.7,211 l425,283"/>
       </g>
 
       <g id="right-arrows"
          fill="none" stroke="hsl(0, 65%, 42%)"
          stroke-width="2" marker-end="url(#marker-right)">
          <path id="laptop-to-router"
-               style="transform-origin:710px 515px 0px;"
-    					d="m710,515 -391.5,-304"/>
+               style="transform-origin:690px 515px 0px;"
+    					d="m690,515 -365,-314"/>
         <path id="router-to-imac"
               style="transform-origin:328.7px 211px 0px;"
-             d="m328.7,211 -149,255"/>
+             d="m328.7,211 -149,230"/>
       </g>
   </g>
   <g id="connection-symbols">
@@ -490,7 +492,7 @@
   </g>
 
   <g id="labels"
-    font-family="IBM Plex Mono, Roboto Mono, monospace"
+    font-family="'Poppins', sans-serif"
     font-size="32px"
     text-anchor="middle">
 
@@ -534,12 +536,7 @@
         opacity: [0, 1],
         duration: 1000
       }, 1000)
-      .add({
-        targets: '#router-label',
-        opacity: [0, 1],
-        duration: 1000
-      }, '-=500')
-
+      
       .add({
         targets: '#no-connection-label, #no-connection-left, #no-connection-right',
         opacity: [0, 1],
@@ -707,7 +704,7 @@
           { scale: 0, transformOrigin: '752.5px 557.5px 0px' },
           { scale: 1, transformOrigin: '752.5px 557.5px 0px' },
           { scale: 1, transformOrigin: '752.5px 557.5px 0px' },
-          { scale: 0, transformOrigin: '706px 516.24px 0px' }
+          { scale: 0, transformOrigin: '690px 516.24px 0px' }
         ]
       }, '+=200')
       .add({
@@ -771,8 +768,8 @@
         keyframes: [
           { opacity: 0, scale: 0, transformOrigin: '261px 543px 0px' },
           { opacity: 1, scale: 1, transformOrigin: '261px 543px 0px' },
-          { opacity: 1, scale: 1, transformOrigin: '265px 500px 0px' },
-          { opacity: 0, scale: 0, transformOrigin: '265px 500px 0px' }
+          { opacity: 1, scale: 1, transformOrigin: '261px 500px 0px' },
+          { opacity: 0, scale: 0, transformOrigin: '261px 500px 0px' }
         ]
       }, '-=20')
       .add({
@@ -794,8 +791,8 @@
         targets: '#copy-koro-right',
         duration: 1800,
         keyframes: [
-          { scale: 0 },
-          { scale: 1 },
+          { scale: 0, opacity: 0 },
+          { scale: 1, opacity: 1 },
           { scale: 1, opacity: 1 },
           { opacity: 0 }
         ]
@@ -804,7 +801,7 @@
         targets: '#koro-laptop',
         opacity: [0, 1],
         duration: 300
-      }, '-=400')
+      }, '-=600')
       .add({
         targets: '#link-right',
         scale: [0, 1]
