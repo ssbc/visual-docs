@@ -263,13 +263,13 @@
               cx="386.27" cy="290.74" r="5.95"/>
       <path fill="hsl(0, 85%, 74%)" stroke="#303030" stroke-width=".6"
             d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
-      <g id="waves-l"
+      <g id="waves-top"
          fill="none" stroke="#a51d2d" stroke-width="1">
         <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
         <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
         <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
       </g>
-      <g id="lights-l"
+      <g id="lights-top"
          fill="#fff" stroke="#303030" stroke-width=".6"
          >
         <circle cx="387.89" cy="380.02" r="2.71"/>
@@ -400,45 +400,35 @@
            fill="none" stroke="#303030" stroke-width="2.02"
            d="M684 528.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
 
-     <g id="add-icon-right"
+      <g id="add-icon-right"
         style="opacity: 0; transform-origin:752.5px 457.5px 0px"
         stroke-width="2" fill="#5ab5b5" stroke="#fff">
         <circle cx="752.5" cy="457.5" r="18"/>
         <path d="M740.5 457.5 h24 m-12 -12 v24" />
-     </g>
-     <circle id="copy-kuia-right"
-             style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
-             cx="752.5" cy="457.5" r="22"
-             fill="#e9fbfb" stroke="#5ab5b5"
-             stroke-width="5"/>
-     <use id="kuia-laptop"
-          xlink:href="#kuia"
-          x="732" y="437"
-          style="opacity:0;"/>
-    <path id="link-right"
-          style="transform: scale(0); transform-origin: 774px 457px 0px;"
-          d="M774,457 h21.6"
-          stroke="#4c4c4c" stroke-width="2"/>
-    <circle id="copy-koro-right"
-            style="transform: scale(0); transform-origin:817px 457.5px 0px;"
-            cx="817" cy="457.5" r="22"
-            fill="#fcf8e9" stroke="#d0a81b"
-            stroke-width="5"/>
-     <use id="koro-laptop"
+      </g>
+      <circle id="copy-kuia-right"
+              style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
+              cx="752.5" cy="457.5" r="22"
+              fill="#e9fbfb" stroke="#5ab5b5"
+              stroke-width="5"/>
+      <use id="kuia-laptop"
+           xlink:href="#kuia"
+           x="732" y="437"
+           style="opacity:0;"/>
+      <path id="link-right"
+            style="transform: scale(0); transform-origin: 774px 457px 0px;"
+            d="M774,457 h21.6"
+            stroke="#4c4c4c" stroke-width="2"/>
+      <circle id="copy-koro-right"
+              style="transform: scale(0); transform-origin:817px 457.5px 0px;"
+              cx="817" cy="457.5" r="22"
+              fill="#fcf8e9" stroke="#d0a81b"
+              stroke-width="5"/>
+      <use id="koro-laptop"
           xlink:href="#koro"
           x="796.5" y="437"
           style="opacity:0;"/>
-     <g id="refresh-right"
-        opacity="0"
-        style="transform-origin:817.06px 457.18px 0px">
-        <path fill="none" stroke="#5ab5b5"
-              marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
-              d="m 831.198,471.318 c -3.619,3.618 -8.617,5.856 -14.138,5.856 -11.042,0 -19.994,-8.952 -19.994,-19.994" />
-        <path fill="none" stroke="#5ab5b5"
-              marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
-              d="m 802.922,443.042 c 3.619,-3.618 8.617,-5.856 14.138,-5.856 11.042,0 19.994,8.952 19.994,19.994"
-             />
-     </g>
+    </g>
 
     </g>
     <g id="router-r"

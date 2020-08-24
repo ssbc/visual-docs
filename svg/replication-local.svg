@@ -1,9 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1000" height="800"
-     viewBox="000 0 1000 800">
+     width="1000" height="1000"
+     viewBox="000 0 1000 1000">
   <title>Replication via WiFi router</title>
   <style>/* <![CDATA[ */
+    .packet {
+      opacity: 0;
+      stroke-dasharray: .02 .001 .004 .002 .003 .003 .002 .004 .001 1;
+      stroke-dashoffset: 1.037;
+    }
+    .symbol-wave { opacity: 0; }
   /* ]]> */</style>
   <defs>
     <marker id="marker-curve-left"
@@ -12,17 +18,22 @@
             stroke-width="1" stroke-linejoin="round" stroke-linecap="round"
             d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
     </marker>
-    <marker id="marker-curve-right"
-            refX="0" refY="0" orient="auto" overflow="visible">
-      <path stroke="#5ab5b5" fill="none"
-            stroke-width="1" stroke-linejoin="round" stroke-linecap="round"
-            d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
+    <marker id="start-marker-internet"
+            orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="hsl(289, 40%, 66%)"
+            d="M10.69-4.44L-1.33-.02 10.7 4.4a-7.52 7.52 0 010 -8.84z"/>
     </marker>
-    <marker id="marker-top"
+    <marker id="end-marker-internet"
 			      orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="hsl(0, 65%, 42%)"
+      <path fill="hsl(289, 40%, 66%)"
             d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
     </marker>
+    <marker id="marker-disconnected"
+            orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="none" stroke="hsl(0, 0%, 60%)"
+            d="m -1,3.9 10,-3.9 -10,-3.9 c 1.9,2.6 1.9,5.2 0,7.8 z"/>
+    </marker>
+
     <marker id="marker-left"
 			      orient="auto" overflow="visible" refX="0" refY="0">
       <path fill="hsl(47, 77%, 46%)"
@@ -30,9 +41,26 @@
     </marker>
     <marker id="marker-right"
 			      orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="#5ab5b5"
+      <path fill="hsl(0, 65%, 42%)"
             d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
     </marker>
+    <g id="wifi-symbol"
+       stroke-width=".5" stroke-linejoin="round">
+      <circle cx="24" cy="40" r="1.75"/>
+      <path d="M24 28.12c-2.7 0-4.79.74-6.26 1.59-1.47.84-2.48 1.88-2.62 1.99l2.18 2.73c.68-.54 1.17-1.1 2.19-1.69A8.69 8.69 0 0124 31.62c2.07 0 3.5.55 4.54 1.15 1.04.6 1.46 1.13 2.15 1.67l2.17-2.74c-.02-.02-1.09-1.1-2.56-1.95a12.44 12.44 0 00-6.3-1.63z"/>
+      <path d="M24 16a22 22 0 00-10.96 3.02c-2.73 1.56-4.64 3.36-5.16 3.78l2.2 2.73c.9-.73 2.35-2.13 4.7-3.48A18.43 18.43 0 0124 19.5c3.77-.01 6.87 1.24 9.2 2.62 1.17.69 2.14 1.41 2.9 2.02.75.6 1.2 1.05 1.69 1.42l2.11-2.8c-.1-.08-.76-.66-1.6-1.34-.85-.68-1.96-1.51-3.31-2.31a21.4 21.4 0 00-11-3.11z"/>
+      <path d="M24 3.7A32.73 32.73 0 007.41 8.27c-2 1.16-3.6 2.36-4.77 3.32-1.18.95-2.1 1.8-2.1 1.8l2.13 2.78c.58-.45 1.11-1 2.18-1.87a33.9 33.9 0 014.33-3.01 28.93 28.93 0 0129.52-.1 32.99 32.99 0 014.3 2.97c1.07.88 1.7 1.5 2.27 1.95l2.15-2.76c-.15-.11-1.03-.93-2.21-1.9a36.48 36.48 0 00-4.75-3.3A32.53 32.53 0 0024 3.7z"/>
+    </g>
+    <g id="animated-wifi-symbol"
+       stroke-width=".5" stroke-linejoin="round">
+      <circle cx="24" cy="40" r="1.75"/>
+      <path id="symbol-wave-a" class="symbol-wave"
+            d="M24 28.12c-2.7 0-4.79.74-6.26 1.59-1.47.84-2.48 1.88-2.62 1.99l2.18 2.73c.68-.54 1.17-1.1 2.19-1.69A8.69 8.69 0 0124 31.62c2.07 0 3.5.55 4.54 1.15 1.04.6 1.46 1.13 2.15 1.67l2.17-2.74c-.02-.02-1.09-1.1-2.56-1.95a12.44 12.44 0 00-6.3-1.63z"/>
+      <path id="symbol-wave-b" class="symbol-wave"
+            d="M24 16a22 22 0 00-10.96 3.02c-2.73 1.56-4.64 3.36-5.16 3.78l2.2 2.73c.9-.73 2.35-2.13 4.7-3.48A18.43 18.43 0 0124 19.5c3.77-.01 6.87 1.24 9.2 2.62 1.17.69 2.14 1.41 2.9 2.02.75.6 1.2 1.05 1.69 1.42l2.11-2.8c-.1-.08-.76-.66-1.6-1.34-.85-.68-1.96-1.51-3.31-2.31a21.4 21.4 0 00-11-3.11z"/>
+      <path id="symbol-wave-c" class="symbol-wave"
+            d="M24 3.7A32.73 32.73 0 007.41 8.27c-2 1.16-3.6 2.36-4.77 3.32-1.18.95-2.1 1.8-2.1 1.8l2.13 2.78c.58-.45 1.11-1 2.18-1.87a33.9 33.9 0 014.33-3.01 28.93 28.93 0 0129.52-.1 32.99 32.99 0 014.3 2.97c1.07.88 1.7 1.5 2.27 1.95l2.15-2.76c-.15-.11-1.03-.93-2.21-1.9a36.48 36.48 0 00-4.75-3.3A32.53 32.53 0 0024 3.7z"/>
+    </g>
     <g id="kuia"
        transform="scale(.085)">
       <defs>
@@ -168,200 +196,324 @@
     </g>
   </defs>
 
+  <g id="disconnected-internet"
+     fill="none" stroke="hsl(0, 0%, 60%)"
+     stroke-dasharray="4,4">
+    <circle stroke-width="2"
+            cx="100" cy="98" r="71.5"/>
+    <ellipse stroke-width="2"
+            cx="100" cy="98" rx="52.37" ry="71.5"/>
+    <ellipse stroke-width="2"
+            cx="100" cy="98" rx="19.13" ry="71.5"/>
+    <path id="latitude-lines"
+          fill="none" stroke-width="2"
+          d="m 30.68,81.4975 a 950.82,950.82 0 0 1 138.85,0
+            m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21
+            m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
+            m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
+  </g>
+
+  <g id="connected-internet"
+     class="internet"
+     fill="hsl(289, 40%, 66%)" stroke="#303030">
+    <circle stroke-width="1"
+            cx="100" cy="98" r="71.5"/>
+    <ellipse stroke-width="1"
+            cx="100" cy="98" rx="52.37" ry="71.5"/>
+    <ellipse stroke-width="1"
+            cx="100" cy="98" rx="19.13" ry="71.5"/>
+    <path id="latitude-lines"
+          fill="none" stroke-width="1"
+          d="m 30.68,81.4975 a 950.82,950.82 0 0 1 138.85,0
+            m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21
+            m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
+            m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
+    <g id="packets"
+       fill="none" stroke="#fff" stroke-width="2">
+      <path id="bottom-to-top-reverse"
+           class="packet" pathLength="1"
+           d="m 100,26.5 c 8.5,-0.1 16.9,22.5 18.5,52.6 -10.9,-0.4 -56.9,-0.2 -69.2,1.2 -4.2,18.8 -0.3,45.6 10.6,63.6 5.89,0.6 20.9,1.7 25.8,1.7 1.8,9.4 8,24.1 14.3,23.9"/>
+      <path id="left-to-right"
+            class="packet" pathLength="1"
+            d="m 43.7,54.2 c 30,-5.1 73.1,-4.4 96.6,-1.9 10.6,16.5 14.9,45.1 10.4,63.6 6.5,-0.2 18.8,-1.2 18.8,-1.2"/>
+      <path id="top-to-bottom-reverse"
+            class="packet" pathLength="1"
+            d="m 100,169.5 c 7.4,0 16.6,-20.1 18.4,-52.5 h -36.9 c -3.3,-55.7 8.1,-90.5 18.5,-90.5"/>
+      <path id="right-to-left"
+            class="packet" pathLength="1"
+            d="m 169.5,81.5 c 0,0 -10.7,-0.9 -18.8,-1.2 7.4,47.7 -17.1,89.2 -50.8,89.2 -24.5,0 -45.3,-24.5 -50.4,-53.5 -4.5,-0.2 -19,-1 -19,-1"/>
+      <path id="bottom-to-top"
+            class="packet" pathLength="1"
+            d="m 100,169.5 c -6.3,0.2 -12.5,-14.5 -14.3,-23.9 -4.9,-0 -19.91,-1.1 -25.8,-1.7 -10.9,-18 -14.8,-44.8 -10.6,-63.6 12.3,-1.4 58.3,-1.6 69.2,-1.2 -1.6,-30.1 -10,-52.7 -18.5,-52.6"/>
+      <path id="left-to-right-reverse"
+            class="packet" pathLength="1"
+            d="m 169.5,114.7 c 0,0 -12.3,1 -18.8,1.2 4.5,-18.5 0.2,-47.1 -10.4,-63.6 -23.5,-2.5 -66.6,-3.2 -96.6,1.9"/>
+      <path id="top-to-bottom"
+            class="packet" pathLength="1"
+            d="m 100,26.5 c -10.4,0 -21.8,34.8 -18.5,90.5 l 36.9,0 c -1.8,32.4 -11,52.5 -18.4,52.5"/>
+      <path id="right-to-left-reverse"
+            class="packet" pathLength="1"
+            d="m 30.5,115 c 0,0 14.5,0.8 19,1 5.1,29 25.9,53.5 50.4,53.5 33.7,0 58.2,-41.5 50.8,-89.2 8.1,0.3 18.8,1.2 18.8,1.2"/>
+    </g>
+  </g>
+
+
   <g id="house">
     <path id="house-outline"
          fill="#e9fbfb" stroke="#59b5b5"
-         stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-         d="M500 90l-495 250 l12 -6.5 v350 h965.4 v-350 l12 6.5z"/>
+         stroke-linecap="round" stroke-linejoin="round"
+         d="M500 90l-495 250 l12 -6.5 v550 h965.4 v-550 l12 6.5z"/>
 
       <g id="router"
-        transform="translate(824, -180)rotate(90)"
-        stroke-linecap="round" stroke-linejoin="miter">
-        <rect fill="#59b5b5" stroke="#303030" stroke-width=".6"
-              width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
-        <circle fill="#4c4c4c" stroke="#303030" stroke-width=".4"
-                cx="386.27" cy="290.74" r="5.95"/>
-        <path fill="#59b5b5" stroke="#303030" stroke-width=".6"
-              d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
-        <g id="waves-l"
-           fill="none" stroke="#59b5b5" stroke-width=".6">
-          <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
-          <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
-          <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
+         fill="#59b5b5" stroke="#303030"
+         stroke-linecap="round" stroke-linejoin="miter">
+        <rect transform="matrix(-0.45,-0.89,-0.89,0.45,0,0)"
+              width="29.75" height="167.5" x="-336.5" y="-282" ry="5.7"/>
+        <circle fill="#4c4c4c" stroke-width=".5"
+                cx="381.9" cy="168.4" r="8.5"/>
+        <path d="m379.5,173.8 51.1,48.4 c 5,4.5 10.4,-0.4 5.8,-5.9 l -48.1,-51.5 c -6.2,-6.3 -15.7,2.5 -8.8,9 z"/>
+        <g id="waves-local"
+           fill="none" stroke="#59b5b5" stroke-width="4">
+          <path d="m 434.4,234.6 a 14.6,14.6 0 0 0 14.6,-14.3"/>
+          <path d="m 435.2,247.5 a 26.25,26.25 0 0 0 26.9,-26"/>
+          <path d="m 435,261 a 39.5,39.5 0 0 0 40.1,-39.4"/>
         </g>
-        <g id="lights-l"
-           fill="#fff" stroke="#303030" stroke-width=".6"
+        <g id="waves-internet"
+           fill="none" stroke="hsl(289, 40%, 66%)" stroke-width="4">
+          <path d="m 434.4,234.6 a 14.6,14.6 0 0 0 14.6,-14.3"/>
+          <path d="m 435.2,247.5 a 26.25,26.25 0 0 0 26.9,-26"/>
+          <path d="m 435,261 a 39.5,39.5 0 0 0 40.1,-39.4"/>
+        </g>
+        <g id="lights-off"
+           fill="hsl(180, 30%, 80%)">
+          <circle cx="261.2" cy="226.6" r="4"/>
+          <circle cx="276" cy="219.1" r="4"/>
+          <circle cx="290.9" cy="211.6" r="4"/>
+        </g>
+        <circle id="internet-connected-light"
+                stroke-width=".6"
+                fill="hsl(289, 40%, 66%)" cx="261.2" cy="226.6" r="4.2"/>
+        <g id="local-connection-lights"
+           fill="#fff" stroke-width=".6"
            >
-          <circle cx="387.89" cy="380.02" r="2.71"/>
-          <circle cx="387.89" cy="369.02" r="2.71"/>
-          <circle cx="387.89" cy="357.84" r="2.71"/>
+          <circle cx="276" cy="219.1" r="4.2"/>
+          <circle cx="290.9" cy="211.6" r="4.2"/>
         </g>
       </g>
 
       <g id="imac"
-         style="transform-origin:240px 400px 0px"
+         style="transform-origin:218px 561.4px 0px"
          stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
         <path fill="#4c4c4c"
-              d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+              d="M253.19 634.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
         <path fill="#737373"
-              d="M184.37 534.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
+              d="M184.37 634.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
         <path fill="none" stroke="#303030"
-              d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+              d="M253.19 634.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
         <rect fill="#4c4c4c" stroke="#303030"
-              width="199.45" height="121.54" x="118.35" y="390.11" rx="7.87" ry="7.88"/>
+              width="199.45" height="121.54" x="118.35" y="490.11" rx="7.87" ry="7.88"/>
         <circle fill="#737373"
-                cx="219.76" cy="394.05" r="1.97"/>
+                cx="219.76" cy="494.05" r="1.97"/>
         <rect fill="#fff"
-              width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
+              width="191.58" height="101.84" x="122.29" y="497.99" rx="0" ry="0"/>
 
 
         <circle id="copy-kuia-left"
-                style="transform:scale(0); transform-origin:240px 400px 0px;"
-                cx="170.5" cy="443.5" r="22"
-                fill="#e9fbfb" stroke="#5ab5b5"
+                style="transform:scale(0); transform-origin:208px 490px 0px;"
+                cx="170.5" cy="543.5" r="22"
+                fill="hsl(0, 85%, 95%)" stroke="hsl(0, 65%, 42%)"
                 stroke-width="5"/>
         <use id="kuia-imac"
              xlink:href="#kuia"
-             x="150" y="423" />
+             x="150" y="523" />
         <path id="link-left"
-              style="transform: scale(0); transform-origin: 195px 444px 0px;"
-              d="M195,444 h41"
+              style="transform: scale(0); transform-origin: 195px 544px 0px;"
+              d="M195,544 h41"
               stroke="#4c4c4c" stroke-width="2"/>
         <g id="add-icon-left"
-           style="opacity: 0; transform-origin:260.6px 443.18px 0px"
+           style="opacity: 0; transform-origin:260.6px 543.18px 0px"
            stroke-width="2" fill="hsl(47, 77%, 46%)" stroke="#fff">
-           <circle cx="260.6" cy="443.18" r="18"/>
-           <path d="M248.6 443.18 h24 m-12 -12 v24"/>
+           <circle cx="260.6" cy="543.18" r="18"/>
+           <path d="M248.6 543.18 h24 m-12 -12 v24"/>
         </g>
         <circle id="copy-koro-left"
-                style="opacity: 0; transform-origin:226.89px 400px 0px;"
-                cx="260.5" cy="443.5" r="22"
+                style="opacity: 0; transform-origin:265px 500px 0px;"
+                cx="260.5" cy="543.5" r="22"
                 fill="#fcf8e9" stroke="#d0a81b"
                 stroke-width="5"/>
         <use id="koro-imac"
              xlink:href="#koro"
-             x="240" y="423" />
+             x="240" y="523" />
       </g>
 
 
 
       <g id="laptop"
-         style="transform-origin:782.9px 400px 0px;"
+         style="transform-origin:795px 575px 0px;"
          stroke-linecap="butt" stroke-linejoin="round">
        <path id="screen-bg"
              fill="#4d4d4d" stroke-width="2"
-       d="M859.34 508.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
+       d="M859.34 618.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
        <path id="keyboard-bg"
              fill="#4d4d4d" stroke-width="2"
-       d="M706.46 508.64L684 528.07v5.77h200.55v-5.77l-25.2-19.43z"/>
+       d="M706.46 618.64L684 638.07v5.77h200.55v-5.77l-25.2-19.43z"/>
        <rect id="screen"
              fill="#fff" stroke-width="2"
-             width="151.2" height="75.6" x="707.3" y="424.64" rx="0" ry="0"/>
+             width="151.2" height="75.6" x="707.3" y="534.64" rx="0" ry="0"/>
        <circle id="camera"
                fill="#999" stroke="none" stroke-width="1.22"
-               cx="782.9" cy="420.44" r="1.05" />
+               cx="782.9" cy="530.44" r="1.05" />
        <path fill="none" stroke="#999" stroke-width=".59"
-             d="M758.54 521.24h46.2l8.4 8.4h-63z"/>
+             d="M758.54 631.24h46.2l8.4 8.4h-63z"/>
        <path fill="none" stroke="#999" stroke-width=".59"
-             d="M704.78 521.24h49.56m54.6 0h54.6"/>
+             d="M704.78 631.24h49.56m54.6 0h54.6"/>
        <path fill="none" stroke="#999" stroke-width=".59"
-             d="M712.34 512.84h142.8"/>
+             d="M712.34 622.84h142.8"/>
        <path id="keyboard"
              fill="none" stroke="#999" stroke-width=".59"
-             d="M708.14 517.04h151.2"/>
+             d="M708.14 627.04h151.2"/>
        <path id="front-edge"
              fill="none" stroke="#999" stroke-width="1.2"
-             d="M884.54 529.64h-199.5"/>
+             d="M884.54 639.64h-199.5"/>
        <path id="edge-shadow"
              fill="none" stroke="#737373" stroke-width="2.02"
-             d="M884.54 533.84h-199.5"/>
+             d="M884.54 643.84h-199.5"/>
        <path id="outline"
              fill="none" stroke="#303030" stroke-width="2.02"
-             d="M684 528.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
+             d="M684 638.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
 
        <g id="add-icon-right"
-          style="opacity: 0; transform-origin:752.5px 457.5px 0px"
-          stroke-width="2" fill="#5ab5b5" stroke="#fff">
-          <circle cx="752.5" cy="457.5" r="18"/>
-          <path d="M740.5 457.5 h24 m-12 -12 v24" />
+          style="opacity: 0; transform-origin:752.5px 567.5px 0px"
+          stroke-width="2" fill="hsl(0, 65%, 42%)" stroke="#fff">
+          <circle cx="752.5" cy="567.5" r="18"/>
+          <path d="M740.5 567.5 h24 m-12 -12 v24" />
        </g>
        <circle id="copy-kuia-right"
-               style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
-               cx="752.5" cy="457.5" r="22"
-               fill="#e9fbfb" stroke="#5ab5b5"
+               style="transform: scale(0); transform-origin:752.5px 567.5px 0px;"
+               cx="752.5" cy="567.5" r="22"
+               fill="hsl(0, 85%, 95%)" stroke="hsl(0, 65%, 42%)"
                stroke-width="5"/>
        <use id="kuia-laptop"
             xlink:href="#kuia"
-            x="732" y="437"
+            x="732" y="547"
             style="opacity:0;"/>
       <path id="link-right"
-            style="transform: scale(0); transform-origin: 774px 457px 0px;"
-            d="M774,457 h21"
+            style="transform: scale(0); transform-origin: 774px 567px 0px;"
+            d="M774,567 h21"
             stroke="#4c4c4c" stroke-width="2"/>
         <circle id="copy-koro-right"
-                style="transform: scale(0); transform-origin:817px 457.5px 0px;"
-                cx="817" cy="457.5" r="22"
+                style="transform: scale(0); transform-origin:817px 567.5px 0px;"
+                cx="817" cy="567.5" r="22"
                 fill="#fcf8e9" stroke="#d0a81b"
                 stroke-width="5"/>
        <use id="koro-laptop"
             xlink:href="#koro"
-            x="796.5" y="437"
+            x="796.5" y="547"
             style="opacity:0;"/>
-       <g id="refresh-right"
-          opacity="0"
-          style="transform-origin:817.06px 457.18px 0px">
-          <path fill="none" stroke="#5ab5b5"
-                marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
-                d="m 831.198,471.318 c -3.619,3.618 -8.617,5.856 -14.138,5.856 -11.042,0 -19.994,-8.952 -19.994,-19.994" />
-          <path fill="none" stroke="#5ab5b5"
-                marker-start="url(#marker-curve-right)" stroke-width="2" stroke-linecap="round"
-                d="m 802.922,443.042 c 3.619,-3.618 8.617,-5.856 14.138,-5.856 11.042,0 19.994,8.952 19.994,19.994"
-               />
-       </g>
-
+      </g>
+    </g>
+    <g id="arrows">
+      <g id="internet-arrows"
+         fill="none" stroke-width="2">
+        <path id="internet-disconnected-line"
+              stroke="hsl(0, 0%, 60%)"
+              stroke-dasharray="4 4"
+              d="m 158,144 91,71"/>
+        <path id="x-disconnected"
+              style="transform-origin: 203.5px 179.5px 0px;"
+              stroke="hsl(289, 40%, 66%)" stroke-width="4"
+              d="m 188.5,194.5 30,-30 m -30,0 30,30"/>
+        <path id="internet-connected-arrow"
+              stroke="hsl(289, 40%, 66%)"
+              marker-start="url(#start-marker-internet)" marker-end="url(#end-marker-internet)"
+              style="transform-origin: 203.5px 179.5px 0px;"
+              d="m 158,144 91,71"/>
       </g>
 
-    <g id="top-arrows"
-       transform="translate(0, 400)"
-       fill="none" stroke="hsl(0, 65%, 42%)"
-       stroke-width="2" marker-end="url(#marker-top)">
-      <g id="top-to-left-arrows">
-
+      <g id="left-arrows"
+         fill="none" stroke="hsl(47, 77%, 46%)"
+         stroke-width="2" marker-end="url(#marker-left)">
+        <path id="imac-to-router"
+              style="transform-origin:270px 490.1px 0px;"
+              d="m 270,490.1 58.3,-279.1"/>
+          <path id="router-to-laptop"
+             style="transform-origin:328.7px 211px 0px;"
+             d="m 328.7,211 459,305.2"/>
       </g>
-      <g id="top-to-right-arrows">
 
-
-     </g>
+      <g id="right-arrows"
+         fill="none" stroke="hsl(0, 65%, 42%)"
+         stroke-width="2" marker-end="url(#marker-right)">
+         <path id="laptop-to-router"
+               style="transform-origin:710px 515px 0px;"
+    					d="m710,515 -391.5,-304"/>
+        <path id="router-to-imac"
+              style="transform-origin:328.7px 211px 0px;"
+             d="m328.7,211 -149,255"/>
+      </g>
+  </g>
+  <g id="connection-symbols">
+    <g id="no-connection-left"
+       fill="hsl(0, 0%, 80%)" stroke="#303030" stroke-width=".5">
+      <use xlink:href="#wifi-symbol" x="194" y="519"/>
+      <path stroke="#fff" stroke-width="4"
+            d="M204 555 l3.6,3 l30-36 l-3.6-3z"/>
+      <path d="M204 555 l3.6,3 l30-36 l-3.6-3z"/>
+    </g>
+    <g id="no-connection-right"
+        transform="scale(0.8)"
+        style="transform-origin: 760px 547px 0px;"
+       fill="hsl(0, 0%, 80%)" stroke="#303030" stroke-width=".5">
+      <use xlink:href="#wifi-symbol" x="760" y="547"/>
+      <path stroke="#fff" stroke-width="4"
+            d="M770 583 l3.6,3 l30-36 l-3.6-3z"/>
+      <path d="M770 583 l3.6,3 l30-36 l-3.6-3z"/>
     </g>
 
+    <use id="local-connection-left"
+         xlink:href="#animated-wifi-symbol" x="194" y="519"
+         fill="#5ab5b5"/>
+    <use id="local-connection-right"
+        transform="scale(0.8)"
+        style="transform-origin: 760px 547px 0px;"
+         xlink:href="#animated-wifi-symbol" x="760" y="547"
+         fill="#5ab5b5"/>
 
-    <g id="left-arrows"
-       fill="none" stroke="hsl(47, 77%, 46%)"
-       stroke-width="2" marker-end="url(#marker-left)">
-      <path id="imac-to-router"
-            style="transform-origin:314px 400px 0px;"
-            d="M314,400 l160,-180"/>
-        <path id="router-to-laptop"
-           style="transform-origin:500px 216px 0px;"
-           d="M500,216 l240,200"/>
+    <use id="internet-connection-left"
+        xlink:href="#animated-wifi-symbol" x="194" y="519"
+        fill="hsl(289, 40%, 66%)"/>
+    <use id="internet-connection-right"
+       transform="scale(0.8)"
+       style="transform-origin: 760px 547px 0px;"
+        xlink:href="#animated-wifi-symbol" x="760" y="547"
+        fill="hsl(289, 40%, 66%)"/>
+  </g>
+
+  <g id="labels"
+    font-family="IBM Plex Mono, Roboto Mono, monospace"
+    font-size="32px"
+    text-anchor="middle">
+
+    <text id="no-connection-label"
+          fill="hsl(0, 0%, 50%)"
+          x="510" y="570">
+          No Connection</text>
+    <g id="local-connection-label">
+      <text fill="#5ab5b5"
+            x="510" y="550"
+           >Wi-Fi Connected</text>
+      <text fill="hsl(0, 0%, 50%)"
+            x="510" y="590"
+           >No Internet</text>
     </g>
-
-    <g id="right-arrows"
-       fill="none" stroke="#5ab5b5"
-       stroke-width="2" marker-end="url(#marker-right)">
-       <path id="laptop-to-router"
-             style="transform-origin:706px 416.24px 0px;"
-  					d="M706 416.24l-200,-196"/>
-      <path id="router-to-imac"
-            style="transform-origin:476px 216px 0px;"
-           d="M476 216l-220 170"/>
-    </g>
-
-</g>
-
+    <text id="internet-connection-label"
+          fill="hsl(289, 40%, 66%)"
+          x="510" y="570">
+          Internet Connected</text>
+  </g>
   <script>
     // <![CDATA[
-    
+
     /* anime.js v3.2.0
     * (c) 2020 Julian Garnier
     * Released under the MIT license
@@ -376,7 +528,6 @@
       duration: 500,
       easing: 'easeInOutQuad'
     })
-
     tl
       .add({
         targets: '#house',
@@ -384,9 +535,156 @@
         duration: 1000
       }, 1000)
       .add({
-        targets: '#laptop',
-        scale: [1, 2]
+        targets: '#router-label',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=500')
+
+      .add({
+        targets: '#no-connection-label, #no-connection-left, #no-connection-right',
+        opacity: [0, 1],
+        duration: 1000
+      })
+
+      .add({
+        targets: '#local-connection-lights > circle',
+        opacity: [0, 1],
+        delay: anime.stagger(250)
       }, '+=2000')
+
+      .add({
+        targets: '#no-connection-label, #no-connection-left, #no-connection-right',
+        opacity: [1, 0],
+        duration: 1000
+      }, '-=750')
+
+      .add({
+        targets: '#connected-internet',
+        opacity: [0, 1],
+        duration: 2000
+      }, '-=750')
+      .add({
+        targets: '.packet',
+        easing: 'linear',
+        delay: anime.stagger(250),
+        keyframes: [
+          { strokeDashoffset: [0.037, 0.037], opacity: 0, duration: 1 },
+          { strokeDashoffset: [0.037, 0.137], opacity: 1, duration: 150 },
+          { strokeDashoffset: [0.137, 0.937], opacity: 1, duration: 1200 },
+          { strokeDashoffset: [0.937, 1.037], opacity: 0, duration: 150 }
+        ]
+      }, '-=1000')
+
+      .add({
+        targets: '#internet-connected-arrow',
+        scale: [0, 1],
+      }, '-=1500')
+      .add({
+        targets: '#internet-connected-light',
+        opacity: [0, 1],
+      }, '-=500')
+
+      .add({
+        targets: '#waves-internet > path',
+        opacity: [0, 1],
+        delay: anime.stagger(200)
+      }, '-=250')
+
+      .add({
+        targets: '#internet-connection-left, #internet-connection-right',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=1000')
+      .add({
+        targets: '.symbol-wave',
+        keyframes: [
+          { opacity: [0, 1], duration: 500 },
+          { opacity: [1, 1], duration: 500 },
+          { opacity: [1, 0], duration: 500 },
+          { opacity: [0, 1], duration: 500 }
+        ],
+        delay: anime.stagger(250)
+      }, '-=1000')
+      .add({
+        targets: '#internet-connection-label',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=1500')
+
+      .add({
+        targets: '#internet-connection-label, #internet-connection-left, #internet-connection-right',
+        opacity: [1, 0],
+        duration: 1000
+      }, '+=5000')
+      .add({
+        targets: '#connected-internet',
+        opacity: [1, 0],
+        duration: 1000
+      }, '+=0')
+      .add({
+        targets: '#disconnected-internet',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=1000')
+      .add({
+        targets: '#internet-connected-arrow',
+        opacity: [1, 0],
+        scale: [1, 0.8]
+      }, '-=750')
+      .add({
+        targets: '#internet-disconnected-line',
+        opacity: [0, 1],
+      }, '-=750')
+      .add({
+        targets: '#x-disconnected',
+        scale: [0, 1],
+      }, '-=500')
+      .add({
+        targets: '#internet-connected-light',
+        opacity: [1, 0],
+      }, '-=500')
+      .add({
+        targets: '#waves-internet > path',
+        opacity: [1, 0],
+        duration: 1000
+      }, '-=250')
+
+
+      .add({
+        targets: '#waves-local > path',
+        opacity: [0, 1],
+        duration: 1000
+      }, '+=250')
+      .add({
+        targets: '#local-connection-left, #local-connection-right',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=1500')
+      .add({
+        targets: '.symbol-wave',
+        keyframes: [
+          { opacity: [0, 1], duration: 500 },
+          { opacity: [1, 1], duration: 500 },
+          { opacity: [1, 0], duration: 500 },
+          { opacity: [0, 1], duration: 500 }
+        ],
+        delay: anime.stagger(250)
+      }, '-=1000')
+      .add({
+        targets: '#local-connection-label',
+        opacity: [0, 1],
+        duration: 1000
+      }, '-=1000')
+      .add({
+        targets: '#local-connection-label, #local-connection-left, #local-connection-right',
+        opacity: [1, 0],
+        duration: 1000
+      }, '+=2000')
+
+      .add({
+        targets: '#laptop',
+        scale: [1.2, 2.2]
+      }, '+=500')
       .add({
         targets: '#add-icon-right',
         keyframes: [
@@ -406,25 +704,25 @@
         targets: '#copy-kuia-right',
         duration: 1800,
         keyframes: [
-          { scale: 0, transformOrigin: '752.5px 457.5px 0px' },
-          { scale: 1, transformOrigin: '752.5px 457.5px 0px' },
-          { scale: 1, transformOrigin: '752.5px 457.5px 0px' },
-          { scale: 0, transformOrigin: '706px 416.24px 0px' }
+          { scale: 0, transformOrigin: '752.5px 557.5px 0px' },
+          { scale: 1, transformOrigin: '752.5px 557.5px 0px' },
+          { scale: 1, transformOrigin: '752.5px 557.5px 0px' },
+          { scale: 0, transformOrigin: '706px 516.24px 0px' }
         ]
       }, '+=200')
       .add({
         targets: '#laptop',
-        scale: [2, 1],
+        scale: [2.2, 1.2],
         duration: 800
       }, '-=400')
       .add({
         targets: '#right-arrows > path',
         scale: [0, 0.9],
         delay: anime.stagger(350)
-      }, '-=250')
+      }, '-=350')
       .add({
         targets: '#imac',
-        scale: [1, 1.7]
+        scale: [1.2, 2]
       }, '-=400')
       .add({
         targets: '#copy-kuia-left',
@@ -435,7 +733,7 @@
           { scale: 1, opacity: 1 },
           { scale: 1, opacity: 0 }
         ]
-      }, '-=500')
+      }, '-=600')
       .add({
         targets: '#kuia-imac',
         opacity: [0, 1],
@@ -471,25 +769,26 @@
         targets: '#copy-koro-left',
         duration: 1800,
         keyframes: [
-          { opacity: 0, scale: 0, transformOrigin: '261px 443px 0px' },
-          { opacity: 1, scale: 1, transformOrigin: '261px 443px 0px' },
-          { opacity: 1, scale: 1, transformOrigin: '300px 400px 0px' },
-          { opacity: 0, scale: 0, transformOrigin: '300px 400px 0px' }
+          { opacity: 0, scale: 0, transformOrigin: '261px 543px 0px' },
+          { opacity: 1, scale: 1, transformOrigin: '261px 543px 0px' },
+          { opacity: 1, scale: 1, transformOrigin: '265px 500px 0px' },
+          { opacity: 0, scale: 0, transformOrigin: '265px 500px 0px' }
         ]
       }, '-=20')
       .add({
         targets: '#imac',
-        scale: [1.7, 1],
+        scale: [2, 1.2],
         duration: 800
       }, '-=400')
+
       .add({
         targets: '#left-arrows > path',
         scale: [0, 0.9],
         delay: anime.stagger(350)
-      }, '-=250')
+      }, '-=350')
       .add({
         targets: '#laptop',
-        scale: [1, 1.7]
+        scale: [1.2, 2.2]
       }, '-=400')
       .add({
         targets: '#copy-koro-right',
@@ -516,19 +815,14 @@
       }, '-=250')
       .add({
         targets: '#laptop',
-        scale: [1.7, 1],
+        scale: [2.2, 1.2],
         duration: 800
       }, '+=1000')
       .add({
-        targets: '#house',
+        targets: '#house, #disconnected-internet, #internet-disconnected-line, #x-disconnected',
         opacity: [1, 0],
         duration: 1000
       }, '+=5000')
-      .add({
-        targets: '#house',
-        opacity: [0, 0],
-        duration: 1000
-      })
 
     // ]]>
   </script>
