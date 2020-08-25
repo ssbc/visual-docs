@@ -29,6 +29,9 @@ _3. Explanation of port forwarding_
 ### Replication: connecting via a pātaka
 
 ![](gif/replication-via-internet.gif)
+
+### Replication: connecting locally
+
 ![](gif/replication-local.gif)
 
 _**Note:** These two 'replication' animations have been written using [anime.js](https://animejs.com) within SVG, as it provides much, much more flexibility than writing animation directly in CSS within SVG.
