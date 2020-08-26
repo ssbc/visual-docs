@@ -5,27 +5,6 @@ Made as Scalable Vector Graphic (SVG) files, animated as needed with CSS.
 These are made to accompany and illustrate text explanations.
 
 ## Animations
-An example of the style and format of animations:
-
-### Port Forwarding (full animation)
-![](svg/port-forwarding.svg)
-
-In practice this would probably make more sense when split up and displayed alongside
-the text explanations, like so:
-
-![](svg/port-forwarding_01_scenario.svg)
-_1. Explanation of how/why an internet request is made_
-
-----
-![](svg/port-forwarding_02_no-port-forwarding.svg)
-_2. Explanation of ports, and a request for a specific port_
-
-----
-![](svg/port-forwarding_03_with-port-forwarding.svg)
-_3. Explanation of port forwarding_
-
-----
-
 ### Replication: connecting via a pātaka
 
 ![](gif/replication-via-internet.gif)
@@ -57,6 +36,24 @@ corporate data center overseas._
 
 _Example text: A Pātaka server can be a small, simple device or a large professional
 setup, depending on your needs and preferences._
+
+
+### Port Forwarding (full animation)
+![](svg/port-forwarding.svg)
+
+In practice this would probably make more sense when split up and displayed alongside
+the text explanations, like so:
+
+![](svg/port-forwarding_01_scenario.svg)
+_1. Explanation of how/why an internet request is made_
+
+----
+![](svg/port-forwarding_02_no-port-forwarding.svg)
+_2. Explanation of ports, and a request for a specific port_
+
+----
+![](svg/port-forwarding_03_with-port-forwarding.svg)
+_3. Explanation of port forwarding_
 
 ## Icons
 
