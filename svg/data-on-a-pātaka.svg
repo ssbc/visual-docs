@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 1000"
+     width="1000" height="1000">
+  <title>Data on a Pātaka</title>
+  <style>
+    /* <![CDATA[ */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    /* ]]> */
+  </style>
+  <defs>
+    <marker id="marker-curve-top"
+            orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="none" stroke="#437a7a"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+            d="M2.4 2.1l-3-2 3-2"/>
+    </marker>
+    <marker id="marker-curve-bottom"
+            orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="none" stroke="#8a7090"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+            d="M2.4 2.1l-3-2 3-2"/>
+    </marker>
+  </defs>
+
+  <g id="iphone"
+     stroke-linecap="butt">
+    <rect id="i-base"
+          width="160.5" height="328" x="635.7" y="126" ry="19.1"
+          fill="none" stroke="#303030" stroke-width="7" />
+    <rect id="i-inner-edge"
+          width="157" height="324.5" x="637.5" y="127.7" ry="18.8"
+          fill="#4d4d4d" stroke="#4d4d4d" stroke-width="3.5" />
+    <path id="i-screen"
+          fill="#fff" stroke-width="3.5"
+          d="M642.7 147a14 14 0 0114-13.8H674s.2 12 10.5 12h62.8c10.3 0 10.5-12 10.5-12h17.4c7.4 0 14 5.1 14 13.7v284.5c0 9.8-5.1 16.2-18.3 16.2H661c-13.7 0-18.3-6-18.3-16.2z"/>
+    <circle id="i-camera"
+            cx="734.7" cy="136.9" r="3.5"
+            fill="#fff" stroke-width="3.5"/>
+    <path id="i-speaker"
+          stroke="#999" stroke-width="3.5"
+          d="M709 136h14"/>
+  </g>
+
+  <g id="android" stroke-linecap="butt">
+    <rect id="a-base"
+          width="161" height="329" x="635.5" y="545" ry="16.8"
+          fill="none" stroke="#303030" stroke-width="7" />
+    <rect id="a-inner-edge"
+          width="157.5" height="325.5" x="637.3" y="546.8" ry="15.4"
+          fill="#4d4d4d" stroke="#4d4d4d" stroke-width="3.5"/>
+    <path fill="#fff"
+          stroke-width="3.5"
+          d="M639 562.5h154v280H639z"/>
+    <circle id="a-camera"
+            cx="779" cy="552" r="3.5"
+            fill="#fff" stroke-width="3.5"/>
+    <path id="a-speaker"
+          stroke="#999" stroke-width="3.5"
+          d="M709 550.3h14"/>
+    <path id="a-microphone"
+          stroke="#999" stroke-width="3.5"
+          d="M695 858.3h42"/>
+  </g>
+
+  <g id="keys">
+    <path id="key-a"
+          fill="none" stroke="#437a7a"
+          stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+          d="M872.7 232.5v12.7m33.6-12.7h-48.5v12.8m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z"/>
+    <path id="key-b"
+          fill="none" stroke="#f4d35d"
+          stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+          d="M872.7 299v12.7m33.6-12.7h-48.5v12.8m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z"/>
+    <path id="key-c"
+          fill="none" stroke="#8a7090"
+          stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+          d="M860 642.5v12.7m33.5-12.7h-48.4v12.8m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.4-6.8-14.4-15.2 0-8.4 6.5-15.2 14.4-15.2s14.3 6.8 14.3 15.2z" />
+  </g>
+
+  <g id="a-files-iphone">
+    <g id="a-file-a1">
+    <path fill="#e9fbfb"
+          d="M689.3 177.8l14.8 14.7v28h-42.8v-42.7h28"/>
+    <path fill="#437a7a"
+          d="M689.3 177.8l14.8 14.7v28h-42.8v-42.7h28m0-6.1h-28a6.1 6.1 0 00-6.1 6v42.8c0 3.4 2.7 6.2 6 6.2h42.9c3.3 0 6-2.8 6-6.2v-28a6 6 0 00-1.7-4.3l-14.8-14.7a6 6 0 00-4.3-1.8zm-21.9 36.6H698v6.1h-30.6zm0-12.2H698v6.1h-30.6zm0-12.2h21.4v6h-21.4z"/>
+    </g>
+    <g id="a-file-a2">
+      <path fill="#437a7a"
+            d="M704 287.2h-42.7v-42.8H704zm6.2-42.8c0-3.3-2.8-6-6.1-6h-42.8a6.1 6.1 0 00-6.1 6v42.8c0 3.4 2.7 6.1 6 6.1h42.9c3.3 0 6-2.7 6-6z"/>
+      <path fill="#e9fbfb"
+            d="M704 287.2h-42.7v-42.8H704z"/>
+      <path fill="#437a7a"
+            d="M689.2 265.4l-9.2 11.8-6.5-7.9-9.2 11.8H701z"/>
+    </g>
+    <g id="a-file-b1">
+      <path fill="#437a7a"
+            d="M770.7 220.6H728v-42.8h42.8zm6.1-42.8c0-3.4-2.7-6.1-6-6.1h-42.9a6.1 6.1 0 00-6 6v42.9c0 3.3 2.7 6 6 6h42.8c3.4 0 6.1-2.7 6.1-6z"/>
+      <path fill="#e9fbfb"
+            d="M770.7 220.6H728v-42.8h42.8z"/>
+      <path fill="#437a7a"
+            d="M755.9 198.7l-9.2 11.8-6.5-7.8-9.2 11.7h36.7z"/>
+    </g>
+  </g>
+
+  <g id="b-files-iphone">
+    <g id="b-file-a3">
+      <path fill="#fcf8e9"
+        d="M704 353.6h-42.7v-42.8H704z"/>
+      <path fill="#f4d35d"
+        d="M704 353.6h-42.7v-42.8H704zm6.2-42.8c0-3.4-2.8-6.1-6.1-6.1h-42.8a6.1 6.1 0 00-6.1 6v42.9c0 3.3 2.7 6 6 6h42.9c3.3 0 6-2.7 6-6zM689.2 331.7l-9.2 11.8-6.5-7.9-9.2 11.8H701z"/>
+    </g>
+    <g id="b-file-a4">
+      <path fill="#fcf8e9"
+            d="M689.3 377.4l14.8 14.8v28h-42.8v-42.8h28"/>
+      <path fill="#f4d35d"
+            d="M689.3 377.4l14.8 14.8v28h-42.8v-42.8h28m0-6h-28a6.1 6.1 0 00-6.1 6v42.8c0 3.4 2.7 6.1 6 6.1h42.9c3.3 0 6-2.7 6-6v-28.1a6 6 0 00-1.7-4.3L693.6 373a6 6 0 00-4.3-1.8zm-22 36.6H698v6.1h-30.5zm0-12.2H698v6h-30.5zm0-12.2h21.5v6h-21.4z"/>
+    </g>
+    <g id="b-file-b2">
+      <path fill="#fcf8e9"
+            d="M756 244.4l14.7 14.8v28H728v-42.8h28"/>
+      <path fill="#f4d35d"
+            d="M756 244.4l14.7 14.8v28H728v-42.8h28m0-6h-28a6.1 6.1 0 00-6 6v42.8c0 3.4 2.7 6.1 6 6.1h42.8c3.4 0 6.1-2.7 6.1-6v-28.1a6 6 0 00-1.8-4.3L760.3 240a6 6 0 00-4.3-1.8zM734.2 275h30.5v6.1h-30.5zm0-12.2h30.5v6h-30.5zm0-12.2h21.3v6h-21.3z"/>
+    </g>
+    <g id="b-file-b3">
+      <path fill="#fcf8e9"
+            d="M770.7 353.6H728v-42.8h42.8z"/>
+      <path fill="#f4d35d"
+            d="M770.7 353.6H728v-42.8h42.8zm6.1-42.8c0-3.4-2.7-6.1-6-6.1h-42.9a6.1 6.1 0 00-6 6v42.9c0 3.3 2.7 6 6 6h42.8c3.4 0 6.1-2.7 6.1-6zM755.9 331.7l-9.2 11.8-6.5-7.9-9.2 11.8h36.7z"/>
+    </g>
+  </g>
+
+  <g id="c-files-android">
+    <g id="c-file-a1">
+      <path fill="#f5edf7"
+            d="M704 630.6h-42.7v-42.8H704z"/>
+      <path fill="#8a7090"
+            d="M704 630.6h-42.7v-42.8H704zm6.2-42.8c0-3.4-2.8-6.1-6.1-6.1h-42.8a6.1 6.1 0 00-6.1 6v42.9c0 3.3 2.7 6 6 6h42.9c3.3 0 6-2.7 6-6zM689.2 608.7l-9.2 11.8-6.5-7.8-9.2 11.7H701z"/>
+    </g>
+    <g id="c-file-a2">
+      <path fill="#f5edf7"
+            d="M689.3 654.4l14.8 14.8v28h-42.8v-42.8h28"/>
+      <path fill="#8a7090"
+            d="M689.3 654.4l14.8 14.8v28h-42.8v-42.8h28m0-6h-28a6.1 6.1 0 00-6.1 6v42.8c0 3.4 2.7 6.1 6 6.1h42.9c3.3 0 6-2.7 6-6v-28.1a6 6 0 00-1.7-4.3L693.6 650a6 6 0 00-4.3-1.8zm-22 36.6H698v6.1h-30.5zm0-12.2H698v6h-30.5zm0-12.2h21.5v6h-21.4z"/>
+    </g>
+    <g id="c-file-b1">
+      <path fill="#f5edf7"
+            d="M770.7 630.6H728v-42.8h42.8z"/>
+      <path fill="#8a7090"
+            d="M770.7 630.6H728v-42.8h42.8zm6.1-42.8c0-3.4-2.7-6.1-6-6.1h-42.9a6.1 6.1 0 00-6 6v42.9c0 3.3 2.7 6 6 6h42.8c3.4 0 6.1-2.7 6.1-6zM755.9 608.7l-9.2 11.8-6.5-7.8-9.2 11.7h36.7z"/>
+    </g>
+    <g id="c-file-b2">
+      <path fill="#f5edf7"
+            d="M770.7 697.2H728v-42.8h42.8z"/>
+      <path fill="#8a7090"
+            d="M770.7 697.2H728v-42.8h42.8zm6.1-42.8c0-3.3-2.7-6-6-6h-42.9a6.1 6.1 0 00-6 6v42.8c0 3.4 2.7 6.1 6 6.1h42.8c3.4 0 6.1-2.7 6.1-6zM755.9 675.4l-9.2 11.8-6.5-7.9-9.2 11.8h36.7z"/>
+    </g>
+  </g>
+
+  <g id="pātaka-imac">
+    <g id="imac-stand">
+      <path fill="#4c4c4c"
+            d="M295.2 644.6H154.7c15.7-14.6 23.6-22.5 23.6-38.3 0-23.6-7.9-23.6-7.9-23.6H280s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+      <path fill="#737373"
+            d="M157.5 643.5c13.5-13.5 15.7-16.9 20.8-29.3 31.5 23 61.8 23 93.3 0 4.5 13.5 6.2 14 21.3 29.3z"/>
+      <path fill="none" stroke="#303030"
+            stroke-linejoin="round" stroke-width=".5"
+            d="M295.2 644.6H154.7c15.7-14.6 23.6-22.5 23.6-38.3 0-23.6-7.9-23.6-7.9-23.6H280s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+    </g>
+    <rect width="398.9" height="243.1" x="25.5" y="355.4" rx="15.7" ry="15.8"
+          fill="#4c4c4c" stroke="#303030"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
+    <circle cx="228.3" cy="363.3" r="3.9"
+            fill="#737373"/>
+    <rect id="imac-screen"
+          width="383.2" height="203.7" x="33.4" y="371.1" rx="0" ry="0"
+          fill="#fff" />
+
+    <g id="group-a-files"
+       fill="#437a7a">
+      <path d="M151 489h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V489c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M271 434h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V434c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M331 544h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V544c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <g fill="#e6e6e6">
+        <path d="M151 489h-32.1v-32h32z"/>
+        <path d="M271 434h-32.1v-32h32z"/>
+        <path d="M331 544h-32.1v-32h32z"/>
+      </g>
+    </g>
+
+    <g id="group-b-files"
+       fill="#f4d35d">
+      <path d="M151 544h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V544c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M211 434h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V434c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M271 489h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V489c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M271 544h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V544c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M331 489h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V489c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <g fill="#e6e6e6" >
+        <path d="M151 544h-32.1v-32h32z"/>
+        <path d="M211 434h-32.1v-32h32z"/>
+        <path d="M271 489h-32.1v-32h32z"/>
+        <path d="M271 544h-32.1v-32h32z"/>
+        <path d="M331 489h-32.1v-32h32z"/>
+      </g>
+    </g>
+
+    <g id="group-c-files"
+       fill="#8a7090">
+      <path d="M151 434h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V434c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M211 489h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V489c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M211 544h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V544c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <path d="M331 434h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V434c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+      <g fill="#e6e6e6">
+        <path d="M151 434h-32.1v-32h32z"/>
+        <path d="M211 489h-32.1v-32h32z"/>
+        <path d="M211 544h-32.1v-32h32z"/>
+        <path d="M331 434h-32.1v-32h32z"/>
+      </g>
+    </g>
+    <g id="pātaka-keys"
+       opacity="0.5">
+      <g id="pātaka-key-a">
+        <path fill="#437a7a"
+              d="M398.6 402c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V434c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+        <path fill="none" stroke="#fff"
+              stroke-linejoin="round" stroke-width="3.4"
+              d="M369.2 418v5m12.8-5h-18.5v5.1M393 418c0 3.2-2.4 5.8-5.5 5.8-3 0-5.4-2.6-5.4-5.8 0-3.2 2.4-5.8 5.4-5.8 3 0 5.5 2.6 5.5 5.8z" />
+      </g>
+      <g id="pātaka-key-b">
+        <path fill="#f4d35d"
+              d="M398.6 457c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V489c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+        <path fill="none" stroke="#fff"
+              stroke-linejoin="round" stroke-width="3.4"
+              d="M369.2 473v5m12.8-5h-18.5v5.1M393 473c0 3.2-2.4 5.8-5.5 5.8-3 0-5.4-2.6-5.4-5.8 0-3.2 2.4-5.8 5.4-5.8 3 0 5.5 2.6 5.5 5.8z" />
+      </g>
+      <g id="pātaka-key-c">
+        <path fill="#8a7090"
+              d="M398.6 512c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V544c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+        <path fill="none" stroke="#fff"
+              stroke-linejoin="round" stroke-miterlimit="4" stroke-width="3.4" d="M369.2 528v5m12.8-5h-18.5v5.1M393 528c0 3.2-2.4 5.8-5.5 5.8-3 0-5.4-2.6-5.4-5.8 0-3.2 2.4-5.8 5.4-5.8 3 0 5.5 2.6 5.5 5.8z" />
+      </g>
+    </g>
+  </g>
+
+  <!-- <g id="arrows">
+    <g id="refresh-android"
+       fill="none" stroke="#8a7090"
+       stroke-linecap="round" stroke-width="4"
+       marker-start="url(#marker-curve-bottom)"
+       style="transform-origin:716px 710px 0px;">
+      <path d="m 744.3,738.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
+      <path d="m 687.7,681.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
+    </g>
+    <g id="refresh-iphone"
+       fill="none" stroke="#437a7a"
+       stroke-linecap="round" stroke-width="4"
+       marker-start="url(#marker-curve-top)"
+       style="transform-origin:716px 290px 0px;">
+      <path d="m 744.3,318.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
+      <path d="m 687.7,261.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
+    </g>
+    <path id="request-key-a"
+          stroke="#437a7a" stroke-width="4"
+          stroke-dasharray="8,8"
+          d="M632.3 291.7L425.5 417"/>
+    <path id="request-key-b"
+          stroke="#f4d35d" stroke-width="4"
+          stroke-dasharray="8,8" stroke-dashoffset="8"
+          d="M632.3 291.7L425.5 417"/>
+    <path id="request-key-c"
+          stroke="#8a7090"
+          stroke-width="4"
+          d="M635.5 709.5L425.1 561.8" />
+    <path id="response-files-a"
+          stroke="#437a7a" stroke-linecap="round" stroke-width="4"
+          d="M424.7 371.7L632.3 265" />
+    <path id="response-files-b"
+          stroke="#f4d35d" stroke-linecap="round" stroke-width="4"
+          d="M424.6 415l207.5-64.7" />
+    <path id="response-files-c"
+          fill="none" stroke="#8a7090" stroke-width="4"
+          d="M425.4 554.8L631.2 620" />
+  </g> -->
+
+  <g id="labels">
+    <text id="label-imac"
+          fill="#d54848"
+          font-family="'Poppins', sans-serif" font-size="32"
+          text-anchor="middle" x="225" y="700"
+          >Pātaka</text>
+    <text id="label-iphone"
+          fill="#062828"
+          font-family="'Poppins', sans-serif" font-size="32"
+          text-anchor="middle" x="715" y="490"
+          >Member of 2 groups</text>
+    <text id="label-android"
+          fill="#34033f"
+          font-family="'Poppins', sans-serif" font-size="32"
+          text-anchor="middle" x="715" y="920"
+          >Member of 1 group</text>
+  </g>
+</svg>
