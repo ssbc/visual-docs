@@ -55,6 +55,12 @@ _2. Explanation of ports, and a request for a specific port_
 ![](svg/port-forwarding_03_with-port-forwarding.svg)
 _3. Explanation of port forwarding_
 
+### Data on a Pātaka
+![](svg/data-on-a-pātaka.svg)
+_(not yet animated) - the aim is to show that multiple groups
+have data stored on the server, but it cannot be read by the
+Kaitiaki / sysadmin or people outside of those groups._
+
 ## Icons
 
 Examples of the style and format of icons, in 48px and 96px:
