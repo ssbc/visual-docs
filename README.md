@@ -13,7 +13,7 @@ These are made to accompany and illustrate text explanations.
 
 ![](gif/replication-local.gif)
 
-_**Note:** These two 'replication' animations have been written using [anime.js](https://animejs.com) within SVG, as it provides much, much more flexibility than writing animation directly in CSS within SVG.
+_**Note:** These two 'replication' animations and the 'data-on-a-pātaka' animation have been written using [anime.js](https://animejs.com) within SVG, as it provides much, much more flexibility than writing animation directly in CSS within SVG.
 As Github will not play JS animations within Markdown, the above embedded animation is a recording of the animation, converted to GIF so it can be played anywhere.
 The source SVGs can also be downloaded and opened with a web browser to display the animation at full quality, or to inspect/edit the code. Once the animation has been finalized, I'll make a CSS-in-SVG version, as GIFs are worse by basically every measure - see this comparison using the 'local replication' animation:_
 
@@ -22,6 +22,13 @@ The source SVGs can also be downloaded and opened with a web browser to display 
 | Resolution |  ∞     | 2000px | 1000px |
 | Framerate  | ~60fps | 30fps  | 15fps  |
 | Filesize   | 0.05Mb | 1.5Mb  | 2.9Mb  |
+
+----
+### Data on a Pātaka
+
+![](gif/data-on-a-pātaka.gif)
+
+_Three groups have their data backed up and synchronized on a Pātaka. Group members can only access files from their own groups - the Pātaka will update them with new data when they connect. Kaitiaki / sysadmin cannot access the files, they can only see which group created them. People can be members of more than one group._
 
 ----
 

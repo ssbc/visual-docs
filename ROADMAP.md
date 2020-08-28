@@ -30,4 +30,4 @@ Planned illustrations, animations and icons, and current progress made.
 | Local sync over WiFi     |        ✔       |       ✔      |     ✔     |     ✔     | ![](gif/replication-local.gif)|             |
 | Pātaka-to-Pātaka         |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
 | **Encryption:**          |                |              |           |           |                                |    **-**    |
-| Data on a Pātaka         |        ✔       |       ✔      |     ✖️     |     ✔     | ![](svg/data-on-a-pātaka.svg)  |             |
+| Data on a Pātaka         |        ✔       |       ✔      |     ✔     |     ✔     | ![](gif/data-on-a-pātaka.gif)  |             |
