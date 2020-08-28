@@ -725,7 +725,7 @@
 
     const tl = anime.timeline({
       autoplay: true,
-      // loop: true,
+      loop: true,
       duration: 500,
       easing: 'easeInOutQuad'
     })
