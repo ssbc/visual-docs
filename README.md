@@ -14,7 +14,7 @@ or adapt these animations. These links will take you right where you want to go:
   - [in a website](./Using-Animations.md#using-animations-in-a-website)
   - [on social media / ssb / github](./Using-Animations.md#using-animations-on-social-media)
   - [in a video](./Using-Animations.md#using-animations-in-a-video)
-- [**How to edit animations**](./Ediitng-Animations.md)
+- [**How to edit animations**](./Editing-Animations.md)
   - [editing SVG](./Editing-Animations.md#editing-svg)
   - [editing CSS](./Editing-Animations.md#editing-css)
   - [editing anime.js](./Editing-Animations.md#editing-anime-js)
@@ -22,10 +22,10 @@ or adapt these animations. These links will take you right where you want to go:
 - [**How to make videos or GIFs**](Making-Video-or-GIF.md)
   - [recording your screen](./Making-Video-or-GIF.md#recording-your-screen)
   - [converting to gif](./Making-Video-or-GIF.md#converting-to-gif)
-- [**How to make static images**](#making-static-images)
-  - [making static SVG](./Making-Static-Images.md#making-static-svgs)
-  - [making PNG](./Making-Static-Images.md#making-static-pngs)
-  - [making JPEG](./Making-Static-Images.md#making-static-jpegs)
+- [**How to make static images**](./Making-Static-Images.md)
+  - [making static SVG](./Making-Static-Images.md#making-static-svg)
+  - [making PNG](./Making-Static-Images.md#making-static-png)
+  - [making JPEG](./Making-Static-Images.md#making-static-jpeg)
 
 ----
 
