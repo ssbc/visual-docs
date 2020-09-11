@@ -1,12 +1,13 @@
-## Using Animations
+# Using Animations
 How to use these depends on _where_ you will be using them:
 
-- [in a website](#using-animations-in-a-website)
-- [on social media / forums / github](#using-animations-on-social-media)
-- [in a video](#video)
+- [**in a website**](#using-animations-in-a-website)
+- [**on social media / forums / github**](#using-animations-on-social-media)
+- [**in a video**](#video)
 
-### Using animations in a website
-Good choice! Using these animations in a website that you control gives you the
+## Using animations in a website
+Good choice! :thumbsup:
+Using these animations in a website that you control gives you the
 best combination of performance, filesize, accessibility and flexibility.
 You should be able to just copy and paste the entire content of the SVG file into
 the body of your HTML page, like this:
@@ -37,7 +38,7 @@ using multiple SVGs in the same site.
 - [Targeting SVGs from your site's CSS](#targeting-svgs-from-your-sites-css)
 - [Extra Homework](#extra-homework) (for nerds)
 
-#### Removing embedded Javascript libraries
+### Removing embedded Javascript libraries
 In the code of the SVG, you'll see whether it has been animated with CSS or
 [anime.js](animejs.com). (There will either be a bunch of CSS rules in the
 `<style>` section starting with `@keyframes`, or there will be a huge `<script>`
@@ -50,12 +51,12 @@ can reference that.
 
 _**TODO:** explain how ↑_
 
-#### Removing embedded fonts
+### Removing embedded fonts
 Similarly, the CSS animations have been designed to work as `<img>` elements, so
 they can be embedded in places like Github markdown or SSB, and they'll loop happily
 forever, like a super-lightweight, high-resolution, high-framerate GIF.
 (The anime.js animations will not work as `<img>` - they must be inline or in an
-`<object>`) As `<img>` elements can reference external resources (like fonts)
+`<object>`) As `<img>` elements cannot reference external resources (like fonts)
 I have embedded a subset of the '[Dosis](https://fonts.google.com/specimen/Dosis)'
 typeface, which is used [on the Āhau website](https://www.ahau.io/).
 There will be `<style>` section at the end of the file, which starts like this
@@ -74,7 +75,7 @@ your site's CSS instead.
 
 _**TODO:** explain how ↑_
 
-#### Adjusting IDs as needed
+### Adjusting IDs as needed
 If a bunch of these animations are inline in the same page, there may be some
 conflicting `id` attributes, meaning that an animation that references `#pātaka`
 or `#laptop` may in fact animate an element with the same `id` in a different SVG.
@@ -84,7 +85,7 @@ may need to use a text editor's Find & Replace functionality to replace eg.
 `pātaka-replication-via-internet`. Please let me know about your experience by
 opening an [issue](https://github.com/ssbc/visual-docs/issues)!
 
-#### Targeting SVGs from your site's CSS
+### Targeting SVGs from your site's CSS
 Currently all the SVGs are self-contained, so they all have `height` and `width`
 attributes set on the main `<svg>` tag. This is fine, but if you have multiple
 SVGs in your site, or if you want the image size to adjust based on media queries
@@ -96,7 +97,7 @@ setting colors) from the site's CSS which makes changing/updating in the future
 easier, as you only have to make changes in one part of your site, not in every
 single SVG.
 
-#### Extra homework
+### Extra homework
 - Anime.js has a bunch of helper functions to control playback of animations. If
 you know how, or you're willing to learn, you could add functionality to your
 site for people to play/pause/skip animations. Have a look through the
@@ -105,7 +106,7 @@ what you can come up with.
 - Using the same helper functions, you could come up with a way to show relevant
 text explanations at the relevant point in the animations.
 
-### Using animations on social media
+## Using animations on social media
 Unfortunately most communication on the web happens on websites which you don't
 control - and most social media sites don't allow animated SVGs. Many website
 builders (like Squarespace) don't allow SVG either.
@@ -124,15 +125,15 @@ sharing, even if they can't see or load the GIF.
 
 [How to add alternative text to Facebook photos](https://www.lireo.com/how-to-add-alternative-text-to-facebook-photos/)
 
-### Using animations in a video
-You'll find the high-quality screen recordings of these animations in the `📁️ mp4`
+## Using animations in a video
+You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](./mp4)
 folder. You can import these into the video editing tool of your choice, mix them
 with footage as you like, and export new videos. If you're going to be uploading
 the resulting video to a service like YouTube or Vimeo (which will compress the
 video) make sure that you're exporting your new video at a high quality setting.
 If you're going to be sharing the video on a peer-to-peer network, please export
 your video at a low-or-medium quality setting, to reduce file size.
-These settings will be different with different editing software (I recommend 
+These settings will be different with different editing software (I recommend
 [Kdenlive](kdenlive.org)!) so I can't give you exact settings, but you should
 experiment with settings until you find a balance that you're happy with.
 

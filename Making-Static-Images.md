@@ -1,12 +1,12 @@
+# Making static images
 
-## Making static images
-  - [making static SVG](#making-static-svg)
-  - [making PNG](#making-static-png)
-  - [making JPEG](#making-static-jpeg)
+Maybe you need static images for a PDF, or for print? You may be able to make static vector images by just editing the SVG files with a text editor, or you may need a vector editing program like Inkscape or Illustrator, particularly if you want to create PNG images.
 
-Maybe you need static images for a PDF, or for print? You may be able to make static images by just editing the SVG files with a text editor, or you may need a vector editing program like Inkscape or Illustrator.
+  - [**making static SVG**](#making-static-svg)
+  - [**making PNG**](#making-static-png)
+  - [**making JPEG**](#making-static-jpeg)
 
-### Making static SVG
+## Making static SVG
 Open the file with a text editor / IDE. If the SVG is animated with anime.js, you'll see a big `<script>` section at the bottom of the file. Delete this entire section, up to and including the closing `</script>` tag (but not the final `</svg>` tag!). Does your static SVG look as you had hoped? Probably not, I'm guessing.
 
 You can remove unnecessary items from the image by reading their `id` property to find it in the code, and either adding an `opacity="0"` attribute to that element, or commenting out the code by wrapping that part in `<!-- ` and ` -->`:
@@ -27,7 +27,7 @@ You'll also want to make sure that there aren't any specific CSS rules being app
 If your static SVG is looking good (check it in a browser if you haven't already!) then you're all done. Just save the SVG and it can be used in websites.
 If you want to do more tweaking, or if you want to make PNG images from it, you can open it with [Inkscape](inkscape.org) or another vector editor.
 
-### Making static PNG
+## Making static PNG
 Instructions for [Inkscape](inkscape.org):
 
 When you open the SVG in a graphical vector editor like Inkscape, the colors might not display properly or at all. This may be due to the use of CSS variables to set colors in the SVG, i.e. rather than:
@@ -60,7 +60,12 @@ Now you can export a PNG image. PNG are raster images, i.e. an image described i
 3. Click _Export As..._ to choose a folder and filename for your PNG.
 4. Click _Export_
 
-### Making static JPEG
+----
+_or..._ instead of all that, you could try a :construction:**DIRTY HACK**:hocho:
+
+(Just take a screenshot while you're playing the animation in a browser.)
+
+## Making static JPEG
 
 Please don't.
 
