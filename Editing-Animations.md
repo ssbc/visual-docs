@@ -6,8 +6,9 @@ files, the animation syntax, the formats and what you can do with them.
 ## Contents
 
 - [**editing SVG**](#editing-svg)
+- [**changing fonts**](#changing-fonts)
 - [**editing CSS**](#editing-css)
-- [**editing anime.js**](#editing-anime-js)
+- [**editing anime.js**](#editing-animejs)
 - [**editing video**](#editing-video)
 
 ## Editing SVG
@@ -46,7 +47,15 @@ to life.
 Illustrator. But there may be some snags along the way - see the
 [_Making Static Images_](./making-static-images.md) document for more info.
 
-
+## Changing Fonts
+The SVG files which contain text and are animated with CSS have embedded fonts,
+so that they will look right when used as an `<img>` (and thus can't access external
+resources like Google Fonts etc). Fonts can make an SVG quite heavy, so I've only
+used a subset of my chosen typeface (Dosis), which is just Basic Latin, `.`, `:`, `?`
+and the macron vowels used in Māori (`ĀāĒēĪīŌōŪū`). If you want to use a different
+typeface, or a different subset of Dosis, you can read Amelia Bellamy-Royd's 
+[article on embedding data URI fonts](https://oreillymedia.github.io/Using_SVG/extras/ch07-dataURI-fonts.html)
+and use [Font Squirrel's webfont generator](https://www.fontsquirrel.com/tools/webfont-generator).
 
 ## Editing CSS
 CSS animations are contained within the `<style>` section near the top of the SVG,
