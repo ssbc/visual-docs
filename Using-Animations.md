@@ -45,7 +45,7 @@ In the code of the SVG, you'll see whether it has been animated with CSS or
 section at the end, starting with 'anime.js')
 
 If you're putting multiple SVGs inline in your HTML, it doesn't make much sense
-to serve a 16.9kb copy of anime.js with each one. Instead you should link to or
+to redundantly serve a 16.9kb copy of anime.js within each one. Instead you should link to or
 serve anime.js once, in a `<script>` tag in your HTML, and then each animation
 can reference that.
 
@@ -80,7 +80,8 @@ If a bunch of these animations are inline in the same page, there may be some
 conflicting `id` attributes, meaning that an animation that references `#pātaka`
 or `#laptop` may in fact animate an element with the same `id` in a different SVG.
 I haven't yet tested this or done anything to mitigate it. If this happens, you
-may need to use a text editor's Find & Replace functionality to replace eg.
+may need to use a text editor's Find & Replace functionality to replace generic
+ids with more specific ones, eg.
 `id="pātaka"` and `#pātaka` with `id="pātaka-replication-via-internet"` and
 `pātaka-replication-via-internet`. Please let me know about your experience by
 opening an [issue](https://github.com/ssbc/visual-docs/issues)!
