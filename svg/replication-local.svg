@@ -8,8 +8,8 @@
 
     .packet {
       opacity: 0;
-      stroke-dasharray: .02 .001 .004 .002 .003 .003 .002 .004 .001 1;
-      stroke-dashoffset: 1.037;
+      stroke-dasharray: .04 .002 .008 .004 .006 .006 .004 .008 .002 1;
+      stroke-dashoffset: 1.074;
     }
     .symbol-wave { opacity: 0; }
   /* ]]> */</style>
@@ -231,7 +231,7 @@
             m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
             m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
     <g id="packets"
-       fill="none" stroke="#fff" stroke-width="2">
+       fill="none" stroke="#fff" stroke-width="3">
       <path id="bottom-to-top-reverse"
            class="packet" pathLength="1"
            d="m 100,26.5 c 8.5,-0.1 16.9,22.5 18.5,52.6 -10.9,-0.4 -56.9,-0.2 -69.2,1.2 -4.2,18.8 -0.3,45.6 10.6,63.6 5.89,0.6 20.9,1.7 25.8,1.7 1.8,9.4 8,24.1 14.3,23.9"/>
@@ -536,7 +536,7 @@
         opacity: [0, 1],
         duration: 1000
       }, 1000)
-      
+
       .add({
         targets: '#no-connection-label, #no-connection-left, #no-connection-right',
         opacity: [0, 1],
@@ -565,10 +565,10 @@
         easing: 'linear',
         delay: anime.stagger(250),
         keyframes: [
-          { strokeDashoffset: [0.037, 0.037], opacity: 0, duration: 1 },
-          { strokeDashoffset: [0.037, 0.137], opacity: 1, duration: 150 },
-          { strokeDashoffset: [0.137, 0.937], opacity: 1, duration: 1200 },
-          { strokeDashoffset: [0.937, 1.037], opacity: 0, duration: 150 }
+          { strokeDashoffset: [0.074, 0.074], opacity: 0, duration: 1 },
+          { strokeDashoffset: [0.074, 0.174], opacity: 1, duration: 150 },
+          { strokeDashoffset: [0.174, 0.974], opacity: 1, duration: 1200 },
+          { strokeDashoffset: [0.974, 1.074], opacity: 0, duration: 150 }
         ]
       }, '-=1000')
 
