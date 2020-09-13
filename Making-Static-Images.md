@@ -7,7 +7,15 @@ Maybe you need static images for a PDF, or for print? You may be able to make st
   - [**making JPEG**](#making-static-jpeg)
 
 ## Making static SVG
-Open the file with a text editor / IDE. If the SVG is animated with anime.js, you'll see a big `<script>` section at the bottom of the file. Delete this entire section, up to and including the closing `</script>` tag (but not the final `</svg>` tag!). Does your static SVG look as you had hoped? Probably not, I'm guessing.
+Open the file with a text editor / IDE. If the SVG is animated with anime.js, you'll see a big `<script>` section at the bottom of the file. 
+Delete this entire section, up to and including the closing `</script>` tag (but not the final `</svg>` tag!). 
+If the SVG is animated with CSS, you can delete or comment out all of the `@keyframes` rules. 
+
+```css
+/* comments in CSS are wrapped like this */
+```
+
+Does your static SVG look as you had hoped? Probably not, I'm guessing.
 
 You can remove unnecessary items from the image by reading their `id` property to find it in the code, and either adding an `opacity="0"` attribute to that element, or commenting out the code by wrapping that part in `<!-- ` and ` -->`:
 
