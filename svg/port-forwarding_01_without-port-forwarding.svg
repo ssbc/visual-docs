@@ -1,0 +1,366 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 425 234">
+  <style>
+    :root {
+      --pango: hsl(0, 0%, 19%);
+      --pango-tint-a: hsl(0, 0%, 30%);
+      --pango-tint-b: hsl(0, 0%, 45%);
+      --pango-tint-c: hsl(0, 0%, 60%);
+
+      --whero: hsl(0, 65%, 42%);
+      --whero-tint-a: hsl(0, 63%, 56%);
+      --whero-tint-b: hsl(0, 85%, 74%);
+      --whero-shade-a: hsl(0, 93%, 16%);f
+
+      --kārikiōrangi: hsl(180, 29%, 37%) ;
+      --kārikiōrangi-shade-a: hsl(180, 74%, 9%);
+      --kārikiōrangi-tint-a: hsl(180, 38%, 53%);
+      --kārikiōrangi-tint-b: hsl(180, 72%, 80%);
+
+      --mā: hsl(0, 0%, 100%);
+      --mā-shade-c: hsl(0, 0%, 90%);
+      --mā-shade-b: hsl(0, 0%, 95%);
+      --mā-shade-a: hsl(0, 0%, 98%);
+
+      --kōwhai: hsl(47, 87%, 66%);
+      --kōwhai-shade-b: hsl(47, 74%, 40%);
+      --kōwhai-shade-a: hsl(47, 77%, 46%);
+      --kōwhai-tint-a: hsl(47, 74%, 73%);
+
+      --waiporoporo: #8a7090;
+      --waiporoporo-shade-b: hsl(289, 91%, 13%);
+      --waiporoporo-shade-a: hsl(289, 40%, 30%);
+      --waiporoporo-tint-a: hsl(289, 40%, 66%);
+    }
+
+    #everything { animation: fade-all 35s linear infinite forwards; }
+    @keyframes fade-all {
+      3%, 94.3% { opacity: 1; }
+      0%, 97.7%, 100% { opacity: 0; }
+    }
+
+    #request-via-internet-title { animation: fade-request-title 35s linear infinite; }
+    @keyframes fade-request-title {
+      0%, 32%, 100% { opacity: 0; }
+      2.6%, 29% { opacity: 1; }
+    }
+
+    #no-port-forwarding-title { animation: fade-no-pf-title 35s linear infinite; }
+    @keyframes fade-no-pf-title {
+      0%, 33% { opacity: 0; }
+      36%, 100% { opacity: 1; }
+    }
+
+    #router-label { animation: fade-in-router 35s linear infinite; }
+    @keyframes fade-in-router {
+      0%, 3.4%, 32%, 100% { opacity: 0; }
+      6.8%, 29% { opacity: 1; }
+    }
+
+    #router-address { animation: fade-router-address 35s linear infinite; }
+    @keyframes fade-router-address {
+      0%, 3.4% { opacity: 0; }
+      6.8%, 100% { opacity: 1; }
+    }
+
+    #wifi-waves { animation: fade-in-wifi 35s linear infinite; }
+    @keyframes fade-in-wifi {
+      0%, 4% { opacity: 0; transform: scale(0); }
+      7%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    .device-address { animation: fade-in-devices 35s ease-in-out infinite; }
+    @keyframes fade-in-devices {
+      0%, 8% { opacity: 0; }
+      10.5%, 100% { opacity: 1; }
+    }
+
+    #internet-symbol { animation: fade-in-internet 35s linear infinite; }
+    @keyframes fade-in-internet {
+      0%, 12% { opacity: 0; }
+      14.6%, 100% { opacity: 1; }
+    }
+
+    #internet-label { animation: fade-internet-label 35s linear infinite; }
+    @keyframes fade-internet-label {
+      0%, 12% { opacity: 0; }
+      14.6%, 43% { opacity: 1; }
+    }
+
+    #devices, #device-labels { animation: defocus-devices 35s linear infinite; }
+    @keyframes defocus-devices {
+      0%, 12% { opacity: 1; }
+      14.6%, 33% { opacity: 0.5; }
+      36%, 100% { opacity: 1; }
+    }
+
+    #router-request, #request-label { animation: fade-in-router-request 35s linear infinite; }
+    @keyframes fade-in-router-request {
+      0%, 14.6%, 33%, 38.7% { opacity: 0; }
+      16.3%, 29%, 39.8%, 100% { opacity: 1; }
+    }
+
+    #router-arrow { animation: fade-router-arrow 35s linear infinite; }
+    @keyframes fade-router-arrow {
+      0%, 14.7% { opacity: 0; transform: scaleX(0);}
+      15.1% { opacity: 1; }
+      17.3% { transform: scaleX(1); }
+      20.5%, 29% { opacity: 1; }
+      32%, 100% { opacity: 0; }
+    }
+
+    #port-request { animation: fade-in-port-request 35s ease-in-out infinite; }
+    @keyframes fade-in-port-request {
+      0%, 39.8% { opacity: 0; }
+      41%, 100% { opacity: 1; }
+    }
+    #internet-request { animation: slide-request 35s linear infinite; }
+    @keyframes slide-request {
+      0%, 39.8% { transform: translateX(8px); }
+      41% { transform: translateX(0); }
+    }
+
+    #port-arrow { animation: fade-port-arrow 35s linear infinite; }
+    @keyframes fade-port-arrow {
+      0%, 33%, 44.1% { opacity: 0; transform: scaleX(0); }
+      44.7% { opacity: 1; }
+      47.5%, 100% { transform: scaleX(1); opacity: 1; }
+    }
+
+    #failure-arrow-laptop { animation: expand-right-laptop 35s cubic-bezier(.47,.63,.6,1.14) infinite; }
+    @keyframes expand-right-laptop {
+      0%, 46.4% { opacity: 0; transform: scale(0); }
+      51%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    #failure-arrow-mobile { animation: expand-right-mobile 35s cubic-bezier(.47,.63,.6,1.14) infinite; }
+    @keyframes expand-right-mobile {
+      0%, 47.4% { opacity: 0; transform: scale(0); }
+      52%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    #failure-arrow-imac { animation: expand-right-imac 35s cubic-bezier(.47,.63,.6,1.14) infinite; }
+    @keyframes expand-right-imac {
+      0%, 48.4% { opacity: 0; transform: scale(0); }
+      53%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    #laptop-x { animation: fade-in-laptop-x 35s linear infinite; }
+    @keyframes fade-in-laptop-x {
+      0%, 48% { opacity: 0; transform: scale(0); }
+      50%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    #mobile-x { animation: fade-in-mobile-x 35s linear infinite; }
+    @keyframes fade-in-mobile-x {
+      0%, 49% { opacity: 0; transform: scale(0); }
+      51%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    #imac-x { animation: fade-in-imac-x 35s linear infinite; }
+    @keyframes fade-in-imac-x {
+      0%, 50% { opacity: 0; transform: scale(0); }
+      52%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+  </style>
+  <defs>
+    <marker id="disconnection-pointer"
+			orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--pango-tint-c)" d="M-5.2-2.4L1.3 0l-6.5 2.4c1-1.4 1-3.4 0-4.8z" transform="scale(1.8)"/>
+    </marker>
+    <marker id="connection-pointer"
+			orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--whero-tint-a)" d="M-5.2-2.4L1.3 0l-6.5 2.4c1-1.4 1-3.4 0-4.8z"/>
+    </marker>
+    <marker id="router-pointer"
+			orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--kārikiōrangi-tint-a)" d="M-5.2-2.4L1.3 0l-6.5 2.4c1-1.4 1-3.4 0-4.8z"/>
+    </marker>
+  </defs>
+<g id="everything">
+  <g id="arrows"
+		 fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
+    <g id="internet-to-router-arrow" style="transform-origin:73.2px 140.6px 0px">
+      <path id="router-arrow"
+            stroke="var(--kārikiōrangi-tint-a)"
+            stroke-linejoin="round" stroke-width="1"
+            marker-end="url(#router-pointer)"
+            style="transform-origin:73.2px 140.6px 0px"
+            d="M73.2 139.1h130"/>
+      <path id="port-arrow"
+            stroke="var(--whero-tint-a)" stroke-linejoin="round" stroke-width="1" marker-end="url(#connection-pointer)" style="transform-origin:73.2px 140.6px 0px" d="M73.2 139.1h130"/>
+    </g>
+    <g id="failure-arrows"
+			 stroke-dasharray="3 2">
+      <path id="failure-arrow-laptop"
+            stroke="var(--pango-tint-c)" marker-end="url(#disconnection-pointer)" style="transform-origin:204px 140.6px 0px" d="M213.2 136.3l80 -30.4"/>
+      <path id="failure-arrow-mobile"
+            stroke="var(--pango-tint-c)" marker-end="url(#disconnection-pointer)" style="transform-origin:204px 140.6px 0px" d="M218.2 140.2h85"/>
+      <path id="failure-arrow-imac"
+            stroke="var(--pango-tint-c)" marker-end="url(#disconnection-pointer)" style="transform-origin:204px 140.6px 0px" d="M219 146.4l68 25.8"/>
+    </g>
+
+    <g id="x-symbols"
+       fill="var(--kōwhai-shade-a)"
+       font-family="'Dosis', monospace" font-size="12" text-anchor="middle">
+      <text id="laptop-x"
+            style="transform-origin:305px 105px 0px;"
+            x="305" y="108">?</text>
+      <text id="mobile-x"
+            style="transform-origin:318.2px 144px 0px;"
+            x="318" y="147">?</text>
+      <text id="imac-x"
+            style="transform-origin:295.8px 179px 0px;"
+            x="296" y="182">?</text>
+    </g>
+
+  </g>
+
+  <g id="house-and-contents">
+    <path id="house-outline"
+			    fill="none" stroke="var(--kārikiōrangi-tint-a)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M200.2 67.2L308.4 4.5l106.8 62-6.8-4v165h-200v-165z"/>
+    <g id="devices">
+      <g id="laptop"
+			   stroke-linecap="round" stroke-linejoin="round">
+        <path fill="var(--pango-tint-b)" stroke="var(--pango)" stroke-width=".5" d="M316.2 114.2h58.5v-1l-4-5.7-50.6-.1-4 5.8v1z"/>
+        <rect width="50.8" height="30.9" x="320.1" y="76.7" rx=".4" ry=".4" fill="var(--pango-tint-b)" stroke="var(--pango)" stroke-width=".5"/>
+        <rect width="50.5" height="24.7" x="320.2" y="79.4" rx="0" ry="0" fill="var(--mā)" stroke="var(--pango)" stroke-width=".3"/>
+        <circle cx="345.4" cy="77.7" r=".5" fill="var(--pango-tint-a)"/>
+        <g id="keyboard"
+			     fill="none" stroke="var(--pango)" stroke-width=".3">
+          <path d="M320.2 110.3h50.4"/>
+          <path d="M320.9 109.3H370"/>
+          <path d="M321.4 108.4h48"/>
+          <path d="M374.8 113.2h-20.5m-17.8 0H316"/>
+          <path fill="var(--pango-tint-a)" d="M316.4 114h58v-.6h-58z"/>
+          <path fill="var(--pango-tint-a)" d="M337.8 111.5H353l1.2 1.8h-17.8z"/>
+        </g>
+      </g>
+
+      <g id="mobile"
+			   stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
+        <g transform="rotate(90)">
+          <rect width="26.5" height="52.9" x="127" y="-393.9" ry="2.6" fill="var(--pango-tint-a)" stroke="var(--pango)" stroke-linejoin="round" stroke-width=".5"/>
+          <path fill="var(--mā)" d="M127.3-391.2h25.9v45h-25.9z"/>
+          <circle cx="150.1" cy="-392.5" r=".7" fill="var(--mā)"/>
+        </g>
+        <path fill="none" stroke="var(--pango)" d="M392.5 138.9v2.6"/>
+        <path fill="none" stroke="var(--pango)" d="M343.6 137.6v5.3"/>
+      </g>
+
+      <g id="imac"
+			   stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
+        <path fill="var(--pango-tint-a)" d="M359.9 220.5h-25c2.8-2.6 4.2-4 4.2-6.8 0-4.2-1.4-4.2-1.4-4.2h19.5s-1.4 0-1.4 4.2c0 2.8 1.4 4.2 4 6.8z"/>
+        <path fill="var(--pango-tint-b)" d="M335.4 220.3c2.4-2.4 2.8-3 3.7-5.2 5.6 4.1 11 4.1 16.6 0 .8 2.4 1.1 2.5 3.8 5.2h-24.1z"/>
+        <path fill="none" stroke="var(--pango)" d="M359.9 220.5h-25c2.8-2.6 4.2-4 4.2-6.8 0-4.2-1.4-4.2-1.4-4.2h19.5s-1.4 0-1.4 4.2c0 2.8 1.4 4.2 4 6.8z"/>
+        <rect width="71" height="43.2" x="311.9" y="169.1" rx="2.8" ry="2.8" fill="var(--pango-tint-a)" stroke="var(--pango)"/>
+        <circle cx="348" cy="170.5" r=".7" fill="var(--pango-tint-b)"/>
+        <rect width="68.2" height="36.2" x="313.3" y="171.9" rx="0" ry="0" fill="var(--mā)"/>
+      </g>
+    </g>
+
+    <g id="router"
+			 fill="var(--kārikiōrangi-tint-a)" stroke="var(--pango)" stroke-linecap="round" stroke-linejoin="miter" stroke-width=".5">
+      <rect width="11" height="61.9" x="208.6" y="102.4" ry="2.1"/>
+      <circle cy="108.7" cx="214.4" r="3.3" fill="var(--pango-tint-a)"/>
+      <path id="antenna"
+			d="M215.8 110.4l24.5-8.8c2.3-.9 1.6-3.5-1-2.9                l-25 7.3c-3.1 1-1.8 5.6 1.5 4.4z"/>
+      <g id="wifi-waves"
+			   fill="none" stroke="var(--kārikiōrangi-tint-a)" style="transform-origin:240px 100px 0px">
+        <path d="M245 102.4a5.4 5.4 0 00-2.3-7.2"/>
+        <path d="M249.4 104.3a9.7 9.7 0 00-4.1-13.2"/>
+        <path d="M253.8 106.6a14.6 14.6 0 00-6.3-19.8"/>
+      </g>
+      <g id="router-lights"
+			   fill="var(--mā)" stroke="var(--pango)" stroke-width=".5">
+        <circle r="1.5" cx="213.5" cy="158.2"/>
+        <circle r="1.5" cx="213.5" cy="152.1"/>
+        <circle r="1.5" cx="213.5" cy="145.9"/>
+      </g>
+    </g>
+  </g>
+
+  <g id="internet-symbol"
+		 fill="none" stroke="var(--waiporoporo-tint-a)" stroke-width=".5">
+    <g fill="var(--waiporoporo)">
+      <ellipse cx="43.2" cy="140.6" rx="33" ry="32.9"/>
+      <ellipse cx="43.2" cy="140.6" rx="24.2" ry="32.9"/>
+      <ellipse cx="43.2" cy="140.6" rx="8.8" ry="32.9"/>
+    </g>
+    <path fill="none" d="M43.2 149.3c-11.6 0-22.5-.4-32-1
+                        m0-15.4a440.7 440.7 0 0164 0
+                        m.1 15.3c-9.5.7-20.4 1.1-32 1.1"/>
+    <path fill="none" d="M43.2 162.5c-9.2 0-18-.6-26-1.8
+                        m.1-40.3a185.5 185.5 0 0152.2 0
+                        m-.2 40.3c-8 1.2-16.8 1.8-26 1.8"/>
+  </g>
+
+
+  <g id="labels"
+     fill="var(--pango)" font-family="'Dosis', monospace" font-size="8">
+    <text id="request-label">
+      <tspan text-anchor="middle" x="133" y="119" fill="var(--pango-tint-a)">request:</tspan>
+    </text>
+    <g id="internet-request"
+       letter-spacing="0.6">
+      <text id="router-request"
+			y="130">
+        <tspan text-anchor="end" x="149" fill="var(--kārikiōrangi)">72.243.14.15</tspan>
+      </text>
+      <text id="port-request"
+			y="130">
+        <tspan text-anchor="start" x="150" fill="var(--whero)">:443</tspan>
+      </text>
+    </g>
+    <text id="router-label"
+          text-anchor="start">
+      <tspan x="212" y="73">Router</tspan>
+    </text>
+    <text id="router-address"
+          text-anchor="start" letter-spacing="0.6">
+      <tspan x="212" y="83" fill="var(--kārikiōrangi)">72.243.14.15</tspan>
+    </text>
+    <text id="internet-label">
+      <tspan x="43" y="100" text-anchor="middle">Internet</tspan>
+    </text>
+    <g id="titles"
+			 fill="var(--kōwhai-shade-a)" font-size="10" font-weight="bold">
+      <text id="request-via-internet-title">
+        <tspan x="105" y="40" text-anchor="middle">Request via the Internet</tspan>
+      </text>
+      <text id="no-port-forwarding-title">
+        <tspan x="105" y="40" text-anchor="middle">Without Port Forwarding</tspan>
+      </text>
+    </g>
+    <g id="device-labels"
+       font-size="6" letter-spacing="0.6" text-anchor="middle">
+      <g id="laptop-address">
+        <text class="device-address">
+          <tspan x="346" y="93" fill="var(--kārikiōrangi)">192.168.1.60</tspan>
+        </text>
+      </g>
+      <text id="mobile-address"
+			      class="device-address" transform="translate(0,4)">
+        <tspan x="368.5" y="138" fill="var(--kārikiōrangi)">192.168.1.70</tspan>
+      </text>
+
+      <text id="imac-address"
+			      class="device-address" transform="translate(0,5)">
+        <tspan x="347.5" y="186" fill="var(--kārikiōrangi)">192.168.1.80</tspan>
+      </text>
+    </g>
+  </g>
+</g>
+  <style>
+  /* <![CDATA[ */
+    @font-face {
+      font-family: 'Dosis';
+      src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+
+    }
+  /* ]]> */
+  </style>
+</svg>

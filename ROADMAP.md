@@ -15,7 +15,7 @@ Planned illustrations, animations and icons, and current progress made.
 | Static IP icon           |        ✔       |       ✔      |   **-**   |     ✔     | ![](svg/icons/static-ip_48.svg)|             |
 | **Pātaka Setup:**        |                |              |           |           |                                |    **-**    |
 | Static IP address        |        ✔       |       ✖️      |     ✖️     |     ✖️     |                                |             |
-| Port Forwarding          |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/port-forwarding_03_with-port-forwarding.svg)| ✖️ |
+| Port Forwarding          |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/port-forwarding_02_with-port-forwarding.svg)| ✖️ |
 | **Āhau-specific icons:** |                |              |           |           |                                |    **-**    |
 | Whānau archive icon      |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | Pātaka connect code      |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
