@@ -4,7 +4,7 @@
      viewBox="0 0 1000 1000">
   <title>Replication via Pātaka</title>
   <style>/* <![CDATA[ */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
     .packet {
       opacity: 0;
@@ -566,7 +566,7 @@
   </g>
 
   <g id="labels"
-    font-family="'Poppins', sans-serif"
+    font-family="'Dosis', sans-serif"
     font-size="32px"
     text-anchor="middle">
     <text id="pātaka-label"

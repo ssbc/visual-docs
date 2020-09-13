@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
   width="500px"
   viewBox="0 10 150 120"
-  style="background:#fff;"
   >
    <style>/* <![CDATA[ */
    :root {
@@ -35,7 +34,6 @@
    --waiporoporo-shade-a: hsl(289, 40%, 30%);
    --waiporoporo-tint-a: hsl(289, 40%, 66%);
    }
-
   #building-front { animation: reveal 20s linear forwards infinite; }
   @keyframes reveal {
     0%, 15% { opacity: 1; }
@@ -75,16 +73,16 @@
     50%, 100% { stroke-dashoffset: 0; }
   }
 
-  #building-mask { animation: defocus-building 20s ease-in-out forwards infinite; }
+  #mask-opacity { animation: defocus-building 20s ease-in-out forwards infinite; }
   @keyframes defocus-building {
     0%, 40% { opacity: 0; }
     49.5%, 100% { opacity: 0.5; }
   }
 
-  #fadeout-mask { animation: fadeout 20s ease-in-out forwards infinite; }
-  @keyframes fadeout {
-    5%, 96% { opacity: 0; }
-    0%, 98%, 100% { opacity: 1; }
+  #everything{ animation: fadeall 20s ease-in-out forwards infinite; }
+  @keyframes fadeall {
+    5%, 93% { opacity: 1; }
+    0%, 98%, 100% { opacity: 0; }
   }
   /* ]]> */</style>
 
@@ -155,293 +153,308 @@
       </g>
     </g>
   </defs>
+  <g id="everything">
+    <g id="building-and-surrounds" mask="url(#building-mask)">
+      <g id="building"
+         fill="#fff" stroke="var(--pango)" stroke-width=".5">
+        <path id="side-room"
+              fill="var(--kōwhai-shade-a)"
+              d="m 135.60394,41.652205 -19.50039,-1.6667 v 16.233658 h 19.50039 z"/>
 
-  <g id="building"
-     fill="#fff" stroke="var(--pango)" stroke-width=".5">
-    <path id="side-room"
-          fill="var(--kōwhai-shade-a)"
-          d="m 135.60394,41.652205 -19.50039,-1.6667 v 16.233658 h 19.50039 z"/>
+        <path id="side-room-roof"
+              d="m 135.60394,41.652205 -19.50039,-1.6667 v 4.566758 h 20.0004 z"/>
 
-    <path id="side-room-roof"
-          d="m 135.60394,41.652205 -19.50039,-1.6667 v 4.566758 h 20.0004 z"/>
+        <path id="roof-l-under"
+              d="M17.82 34.54h102.27l.7 3.16H17.15l.67-3.16"/>
 
-    <path id="roof-l-under"
-          d="M17.82 34.54h102.27l.7 3.16H17.15l.67-3.16"/>
+        <path id="ceiling-r-wall"
+              fill="var(--kōwhai-tint-a)"
+              d="M20.35 31.54H122.2v24.68H20.35z"/>
 
-    <path id="ceiling-r-wall"
-          fill="var(--kōwhai-tint-a)"
-          d="M20.35 31.54H122.2v24.68H20.35z"/>
-
-    <path id="back-wall"
-      fill="var(--kōwhai)"
-          d="M19.6 37.72H120.2V56.2H19.6z"/>
-
-    <path id="int-right-ceiling-corner"
-          d="M120.19 37.72l2.01-3"/>
-
-    <path id="wall-left"
-          fill="var(--kōwhai-shade-a)"
-          d="M20.35 34.69l-2.13 3v18.55h2.13V34.69"/>
-
-    <path id="roof"
-          d="M19.83 31.54 l-2.02 3 -.63,3 2.01 -3z
-          M19.83 31.54H122.1l.72 3.16H19.17l.66-3.16"/>
-
-    <path id="sign-supports"
-          d="M73.8 29.7v1.84
-            m0-1.34h-6.96
-            m7.06-10.75l-7.06 10.79
-            m0-.5v1.83m1.76-4.05l1.77 2.7
-            m0-5.38v5.4
-            m0-5.4l3.53 5.4
-            M104.1 29.74v1.83
-            m6.97-1.37h-6.97
-            m6.97-.5v1.84"/>
-
-    <path id="sign"
+        <path id="back-wall"
           fill="var(--kōwhai)"
-          d="M72 19
-            h41 V29.7 h-41z"/>
+              d="M19.6 37.72H120.2V56.2H19.6z"/>
 
-    <text id="bigcorp"
-          stroke-width=".125"
-          font-size="9px" font-weight="bold" font-family="Roboto, Open Sans, Helvetica, sans-serif"
-          text-anchor="middle" x="92.5" y="27.2" textLength="34px"
-           >bigcorp</text>
+        <path id="int-right-ceiling-corner"
+              d="M120.19 37.72l2.01-3"/>
 
-    <use href="#server-rack" x="0" y="-13"/>
-    <use href="#server-rack" x="4" y="-13"/>
-    <use href="#server-rack" x="8" y="-13"/>
-    <use href="#server-rack" x="12" y="-13"/>
-    <use href="#server-rack" x="16" y="-13"/>
-    <use href="#server-rack" x="20" y="-13"/>
-    <use href="#server-rack" x="24" y="-13"/>
-    <use href="#server-rack" x="28" y="-13"/>
-    <use href="#server-rack" x="32" y="-13"/>
-    <use href="#server-rack" x="36" y="-13"/>
-    <use href="#server-rack" x="40" y="-13"/>
-    <use href="#server-rack" x="44" y="-13"/>
-    <use href="#server-rack" x="48" y="-13"/>
-    <use href="#server-rack" x="52" y="-13"/>
-    <use href="#server-rack" x="56" y="-13"/>
-    <use href="#server-rack" x="60" y="-13"/>
-    <use href="#server-rack" x="64" y="-13"/>
-    <use href="#server-rack" x="68" y="-13"/>
-    <use href="#server-rack" x="72" y="-13"/>
-    <use href="#server-rack" x="76" y="-13"/>
-    <use href="#server-rack" x="80" y="-13"/>
-    <use href="#server-rack" x="84" y="-13"/>
-    <use href="#server-rack" x="96" y="-13"/>
+        <path id="wall-left"
+              fill="var(--kōwhai-shade-a)"
+              d="M20.35 34.69l-2.13 3v18.55h2.13V34.69"/>
 
-    <use href="#server-rack" x="4" y="0"/>
-    <use href="#server-rack" x="8" y="0"/>
-    <use href="#server-rack" x="12" y="0"/>
-    <use href="#server-rack" x="16" y="0"/>
-    <use href="#server-rack" x="20" y="0"/>
-    <use href="#server-rack" x="24" y="0"/>
-    <use href="#server-rack" x="28" y="0"/>
-    <use href="#server-rack" x="32" y="0"/>
-    <use href="#server-rack" x="36" y="0"/>
-    <use href="#server-rack" x="40" y="0"/>
-    <use href="#server-rack" x="44" y="0"/>
-    <use href="#server-rack" x="48" y="0"/>
-    <use href="#server-rack" x="52" y="0"/>
-    <use href="#server-rack" x="56" y="0"/>
-    <use href="#server-rack" x="60" y="0"/>
-    <use href="#server-rack" x="64" y="0"/>
-    <use href="#server-rack" x="68" y="0"/>
-    <use href="#server-rack" x="72" y="0"/>
-    <use href="#server-rack" x="76" y="0"/>
-    <use href="#server-rack" x="80" y="0"/>
-    <use href="#server-rack" x="84" y="0"/>
-    <use href="#server-rack" x="96" y="0"/>
+        <path id="roof"
+              d="M19.83 31.54 l-2.02 3 -.63,3 2.01 -3z
+              M19.83 31.54H122.1l.72 3.16H19.17l.66-3.16"/>
 
-    <path id="server-rack"
-       fill="var(--waiporoporo-tint-a)" stroke="var(--waiporoporo-shade-a)"
-       stroke-width=".5"
-       stroke-linecap="butt" stroke-linejoin="round"
-       d="m22.5,50v6 h1.9v-6 h-1.9v6h-1.35v-4l1.35-2
-          m.6 .9h.75 m-.75,1h.75 m-.75,1h.75 m-.75,1h.75 m-.75,1h.75"/>
+        <path id="sign-supports"
+              d="M73.8 29.7v1.84
+                m0-1.34h-6.96
+                m7.06-10.75l-7.06 10.79
+                m0-.5v1.83m1.76-4.05l1.77 2.7
+                m0-5.38v5.4
+                m0-5.4l3.53 5.4
+                M104.1 29.74v1.83
+                m6.97-1.37h-6.97
+                m6.97-.5v1.84"/>
 
-    <g id="interior"
-       stroke="var(--pango-tint-a)"
-       fill="var(--kōwhai-tint-a)">
-      <path id="floor"
-            stroke-linecap="butt"
-            d="M20.62 44.12
-            h99.6
-            l1.67 -1.57
-            h-101.27"/>
+        <path id="sign"
+              fill="var(--kōwhai)"
+              d="M72 19
+                h41 V29.7 h-41z"/>
 
-      <g id="stairs"
-         fill="var(--kōwhai-tint-a)">
-        <path id="l-column"
-              fill="none"
-              d="M109.5 34.72v21.5"/>
-        <path id="r-column"
-              fill="none"
-              d="M116.5 34.72v21.5"/>
-        <path id="stair-b"
-              d="M117 47.75v-1h-1.8v1h-1v1h-1v1h-1v1h-1v1h-2v1h2l5 -5z"/>
-        <path id="stair-a"
-              d="M109 42.75v-1h2v1h1v1h1v1h1v1h1v1h1.8v1h-1.8l-5 -5z"/>
-        <path id="stair-c"
-              d="M109 52.75v-1h2v1h1v1h1v1h1v1h1v.45h-1.5l-3.45 -3.45z"/>
+        <text id="bigcorp"
+              stroke-width=".125"
+              font-size="9px" font-family="'Dosis', sans-serif"
+              text-anchor="middle" x="92.5" y="27.5" textLength="38px"
+               >BIGCORP</text>
+
+        <use href="#server-rack" x="0" y="-13"/>
+        <use href="#server-rack" x="4" y="-13"/>
+        <use href="#server-rack" x="8" y="-13"/>
+        <use href="#server-rack" x="12" y="-13"/>
+        <use href="#server-rack" x="16" y="-13"/>
+        <use href="#server-rack" x="20" y="-13"/>
+        <use href="#server-rack" x="24" y="-13"/>
+        <use href="#server-rack" x="28" y="-13"/>
+        <use href="#server-rack" x="32" y="-13"/>
+        <use href="#server-rack" x="36" y="-13"/>
+        <use href="#server-rack" x="40" y="-13"/>
+        <use href="#server-rack" x="44" y="-13"/>
+        <use href="#server-rack" x="48" y="-13"/>
+        <use href="#server-rack" x="52" y="-13"/>
+        <use href="#server-rack" x="56" y="-13"/>
+        <use href="#server-rack" x="60" y="-13"/>
+        <use href="#server-rack" x="64" y="-13"/>
+        <use href="#server-rack" x="68" y="-13"/>
+        <use href="#server-rack" x="72" y="-13"/>
+        <use href="#server-rack" x="76" y="-13"/>
+        <use href="#server-rack" x="80" y="-13"/>
+        <use href="#server-rack" x="84" y="-13"/>
+        <use href="#server-rack" x="96" y="-13"/>
+
+        <use href="#server-rack" x="4" y="0"/>
+        <use href="#server-rack" x="8" y="0"/>
+        <use href="#server-rack" x="12" y="0"/>
+        <use href="#server-rack" x="16" y="0"/>
+        <use href="#server-rack" x="20" y="0"/>
+        <use href="#server-rack" x="24" y="0"/>
+        <use href="#server-rack" x="28" y="0"/>
+        <use href="#server-rack" x="32" y="0"/>
+        <use href="#server-rack" x="36" y="0"/>
+        <use href="#server-rack" x="40" y="0"/>
+        <use href="#server-rack" x="44" y="0"/>
+        <use href="#server-rack" x="48" y="0"/>
+        <use href="#server-rack" x="52" y="0"/>
+        <use href="#server-rack" x="56" y="0"/>
+        <use href="#server-rack" x="60" y="0"/>
+        <use href="#server-rack" x="64" y="0"/>
+        <use href="#server-rack" x="68" y="0"/>
+        <use href="#server-rack" x="72" y="0"/>
+        <use href="#server-rack" x="76" y="0"/>
+        <use href="#server-rack" x="80" y="0"/>
+        <use href="#server-rack" x="84" y="0"/>
+        <use href="#server-rack" x="96" y="0"/>
+
+        <path id="server-rack"
+           fill="var(--waiporoporo-tint-a)" stroke="var(--waiporoporo-shade-a)"
+           stroke-width=".5"
+           stroke-linecap="butt" stroke-linejoin="round"
+           d="m22.5,50v6 h1.9v-6 h-1.9v6h-1.35v-4l1.35-2
+              m.6 .9h.75 m-.75,1h.75 m-.75,1h.75 m-.75,1h.75 m-.75,1h.75"/>
+
+        <g id="interior"
+           stroke="var(--pango-tint-a)"
+           fill="var(--kōwhai-tint-a)">
+          <path id="floor"
+                stroke-linecap="butt"
+                d="M20.62 44.12
+                h99.6
+                l1.67 -1.57
+                h-101.27"/>
+
+          <g id="stairs"
+             fill="var(--kōwhai-tint-a)">
+            <path id="l-column"
+                  fill="none"
+                  d="M109.5 34.72v21.5"/>
+            <path id="r-column"
+                  fill="none"
+                  d="M116.5 34.72v21.5"/>
+            <path id="stair-b"
+                  d="M117 47.75v-1h-1.8v1h-1v1h-1v1h-1v1h-1v1h-2v1h2l5 -5z"/>
+            <path id="stair-a"
+                  d="M109 42.75v-1h2v1h1v1h1v1h1v1h1v1h1.8v1h-1.8l-5 -5z"/>
+            <path id="stair-c"
+                  d="M109 52.75v-1h2v1h1v1h1v1h1v1h1v.45h-1.5l-3.45 -3.45z"/>
+          </g>
+        </g>
+
+        <g id="building-front">
+          <path id="wall"
+                fill="var(--kōwhai-shade-a)" stroke="var(--pango)"
+                stroke-width=".5"
+                d="M20.35 34.7H122.2v21.55H20.35z"/>
+
+          <path id="door"
+                fill="#fff" stroke="var(--pango)" stroke-width=".5"
+                d="M29.22 50.25v6h1.9v-6z"/>
+        </g>
+      </g>
+
+      <g id="cars"
+         fill="#fff" stroke="var(--pango-tint-b)" stroke-width=".5">
+        <path id="car-l"
+          d="M1.13 55.12c.29-.35 1.22-.33 1.29-.5.25-.62.46-1.08.9-1.13a10.7 10.7 0 013.11 0l.69 1.16 1.58.17c.78.17.78 1.73.2 1.73-.65 0-.73-.5-.73-.5H6.9s-.22.5-.67.5H3.97c-.45 0-.52-.33-.52-.33h-1.5s-.07.35-.63.33c-.17 0-.34-.21-.34-.33 0 0-.08-.8.17-1.1z"/>
+        <g id="wheels-l">
+          <circle cx="2.7" cy="56.32" r=".77"/>
+          <circle cx="7.57" cy="56.32" r=".77"/>
+        </g>
+        <path id="car-r"
+          d="M11.1 55.29c.03-.7.72-1.74 1.23-1.8h4.04l.76 1.33h1c.89-.1.79 1.33.77 1.73h-.4c-.22 0-.4-.33-.4-.33h-1.53s-.17.33-.37.33h-2.4c-.17 0-.33-.33-.33-.33H11.9s-.13.33-.32.33h-.31c-.24 0-.17-.55-.17-1.26z"/>
+        <g id="wheels-l">
+          <circle cx="12.7" cy="56.32" r=".77"/>
+          <circle cx="17.37" cy="56.32" r=".77"/>
+        </g>
+      </g>
+
+      <g id="trees"
+         fill="#fff" stroke="var(--pango-tint-b)" stroke-width=".5">
+        <g id="tree-l">
+          <path stroke="none"
+            d="M137.12 46.35s.9 2.25.28 3.9c-.36 1-.08 2.7.9 3.07.59.23 1.07.25 1.69 0a2.3 2.3 0 001.25-2.33l-.12-3.94z"/>
+          <path
+            d="M137.97 53.07s.38.37.58 1.02c.37 1.81-.61 2.7 0 2.33.35-.18.7-.17 1.29-.03.66.23-.34-.49-.05-2.35.1-.64.66-1 .66-1m-3.35-6.6c0-1.17.94-2.1 2.07-2.1a2.08 2.08 0 011.87 2.98m-.47-.08a2.1 2.1 0 01.45 3.9m-.02-.74a2.12 2.12 0 01-.38 2.47c-.17.18-.63.58-1.13.6m-.82-.03a2.12 2.12 0 01-1.05-3.45m.38.21a2.08 2.08 0 01-1.6-2.05c0-.83.47-1.53 1.15-1.88"/>
+        </g>
+        <g id="tree-r">
+           <path d="M145.19 46.52c-.89.28-1.55 1.3-1.55 2.5 0 .73.25 1.38.65 1.85l.15-.47a2.12 2.12 0 00.36 2.47c.19.18.65.58 1.14.6m1.16-.7c.34-.05.77-.38.95-.57a2.12 2.12 0 00.09-2.88l-.7.38a2.1 2.1 0 001.58-2.05c0-.83-.47-1.53-1.13-1.88m-.42 6.97s-.4.36-.6 1.01c-.35 1.82.63 3.04.02 2.67-.37-.18-.72-.17-1.3-.03-.67.23.33-.49.05-2.35-.09-.64-.67-1-.67-1m3.35-7.1c0-1.17-.92-2.1-2.05-2.1-1.15 0-2.07.93-2.07 2.1 0 .21 0 .58.2.96"/>
+          <path stroke="none"
+                d="M148.3 45.59s-.88 3-.26 4.66c.36 1 0 2.1-.97 2.45-.6.24-1 .87-1.63.64-1.14-.65-1.29-1.6-1.24-2.37l.07-4.3z"/>
+        </g>
+        <g id="tree-m">
+          <path  d="M142.04 53.43s.38.33.58.91c.37 1.63-.62 2.42 0 2.1.35-.17.7-.16 1.28-.04.67.21-.33-.43-.05-2.1.1-.57.67-.9.67-.9"/>
+          <path stroke="none"
+                d="M141.19 47.41s.9 2.02.28 3.5c-.37.9-.08 2.41.9 2.74.58.21 1.07.23 1.68 0 1.14-.56 1.3-1.42 1.25-2.09l-.11-3.52z"/>
+          <path d="M141.17 47.48c0-1.04.93-1.88 2.07-1.88 1.13 0 2.06.84 2.06 1.88 0 .29-.06.56-.2.8"/>
+          <path d="M144.64 48.2a2.1 1.88 0 01.45 3.5"/>
+          <path d="M145.07 51.04a2.12 1.9 0 01-.38 2.21 1.9 1.9 0 01-1.14.54m-.81-.03a2.12 1.9 0 01-1.05-3.1"/>
+          <path d="M142.07 50.86a2.08 1.87 0 01-1.6-1.84c0-.74.47-1.37 1.15-1.68"/>
+        </g>
+      </g>
+
+      <path id="flagpole"
+            fill="none" stroke="var(--pango-tint-b)"
+            stroke-linecap="round" stroke-width=".5"
+            d="M128 46.25v12"/>
+
+      <g id="flag"
+        fill="none" stroke-linecap="butt" stroke-width=".5">
+        <path fill="#fff"
+              d="M128 46.5h10v4.5h-10"/>
+        <path stroke="var(--whero)"
+              d="M128 46.75h10m-10 1h10m-10 1h10m-10 1h10m-10 1h10m-10 1"/>
+        <path fill="var(--waiporoporo)" stroke="none"
+              d="M128 46.5v3 h4.5v-3z"/>
+        <g id="stars"
+           fill="#fff">
+          <circle cx="128.5" cy="47" r=".25"/>
+          <circle cx="129.38" cy="47" r=".25"/>
+          <circle cx="130.25" cy="47" r=".25"/>
+          <circle cx="131.13" cy="47" r=".25"/>
+          <circle cx="132" cy="47" r=".25"/>
+          <circle cx="129" cy="48" r=".25"/>
+          <circle cx="129.88" cy="48" r=".25"/>
+          <circle cx="130.75" cy="48" r=".25"/>
+          <circle cx="131.63" cy="48" r=".25"/>
+          <circle cx="128.5" cy="49" r=".25"/>
+          <circle cx="129.38" cy="49" r=".25"/>
+          <circle cx="130.25" cy="49" r=".25"/>
+          <circle cx="131.13" cy="49" r=".25"/>
+          <circle cx="132" cy="49" r=".25"/>
+        </g>
       </g>
     </g>
 
-    <g id="building-front">
-      <path id="wall"
-            fill="var(--kōwhai-shade-a)" stroke="var(--pango)"
-            stroke-width=".5"
-            d="M20.35 34.7H122.2v21.55H20.35z"/>
+    <mask id="building-mask">
+      <rect fill="#fff"
+            x="0" y="10" width="150" height="120" />
+      <rect id="mask-opacity"
+            fill="#000" opacity="0"
+            x="0" y="10" width="150" height="120" />
+    </mask>
 
-      <path id="door"
-            fill="#fff" stroke="var(--pango)" stroke-width=".5"
-            d="M29.22 50.25v6h1.9v-6z"/>
+    <g id="zoom-outlines"
+       fill="none" stroke="var(--waiporoporo)">
+      <path id="cone" class="zoom"
+            fill="var(--waiporoporo-tint-a)" fill-opacity=".8" stroke="none"
+            d="M86.3 50.4 L64.6,48.9 L98.2,70 L89.7 52.3
+            c-1,-2 -1,-1.7 -3.25 -2"/>
+      <circle id="zoom-origin"
+            fill="none"
+            stroke-width=".25"
+            cx="87.3" cy="52.8" r="2.5"
+            style="transform-origin: 87.3px 52.8px 0px;"/>
+      <path id="zoom-line-l"
+            class="zoom-line"
+            stroke-width=".25"
+            pathLength="1" stroke-dashoffset="1" stroke-dasharray="1"
+            d="M86.7 50.3L65,48.7"/>
+      <path id="zoom-line-r"
+            class="zoom-line"
+            stroke-width=".25"
+            pathLength="1" stroke-dashoffset="1" stroke-dasharray="1"
+            d="M89.8 52.2L98.5,70"/>
+      <circle id="zoom-circle"
+              class="zoom"
+              stroke-width=".5" cx="63" cy="89" r="40.25"/>
     </g>
+
+    <g id="other-servers"
+       opacity="1" clip-path="url(#cutout)">
+       <circle id="cutout-bg"
+               class="zoom"
+               fill="#fff"
+               cx="63" cy="89" r="40"/>
+      <g id="racks"
+         fill="var(--pango-tint-c)">
+        <rect class="zoom" x="32.2" y="55" width="5" height="70"/>
+        <rect class="zoom" x="25.8" y="55" width="5" height="70"/>
+        <rect class="zoom" x="89.8" y="55" width="5" height="70"/>
+        <rect class="zoom" x="96.2" y="55" width="5" height="70"/>
+       </g>
+
+       <g fill="var(--mā-shade-c)" stroke="var(--pango-tint-c)">
+        <use class="zoom" href="#server" x="-64.2" y="-28"/>
+        <use class="zoom" href="#server" x="-64.2" y="-14"/>
+        <use class="zoom" href="#server" x="-64.2" y="0"/>
+        <use class="zoom" href="#server" x="-64.2" y="14"/>
+        <use class="zoom" href="#server" x="-64.2" y="28"/>
+
+        <use class="zoom" href="#server" x="0" y="-42"/>
+        <use class="zoom" href="#server" x="0" y="-28"/>
+        <use class="zoom" href="#server" x="0" y="-14"/>
+        <!-- position of #focused server -->
+        <use class="zoom" href="#server" x="0" y="14"/>
+        <use class="zoom" href="#server" x="0" y="28"/>
+        <use class="zoom" href="#server" x="0" y="42"/>
+
+        <use class="zoom" href="#server" x="64.2" y="-28"/>
+        <use class="zoom" href="#server" x="64.2" y="-14"/>
+        <use class="zoom" href="#server" x="64.2" y="0"/>
+        <use class="zoom" href="#server" x="64.2" y="14"/>
+        <use class="zoom" href="#server" x="64.2" y="28"/>
+      </g>
+    </g>
+    <use id="focused" class="zoom" href="#server" fill="var(--waiporoporo-tint-a)" stroke="var(--waiporoporo)"/>
   </g>
+  <style>
+  /* <![CDATA[ */
+    @font-face {
+      font-family: 'Dosis';
+      src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
+      font-weight: normal;
+      font-style: normal;
 
-  <g id="cars"
-     fill="#fff" stroke="var(--pango-tint-b)" stroke-width=".5">
-    <path id="car-l"
-      d="M1.13 55.12c.29-.35 1.22-.33 1.29-.5.25-.62.46-1.08.9-1.13a10.7 10.7 0 013.11 0l.69 1.16 1.58.17c.78.17.78 1.73.2 1.73-.65 0-.73-.5-.73-.5H6.9s-.22.5-.67.5H3.97c-.45 0-.52-.33-.52-.33h-1.5s-.07.35-.63.33c-.17 0-.34-.21-.34-.33 0 0-.08-.8.17-1.1z"/>
-    <g id="wheels-l">
-      <circle cx="2.7" cy="56.32" r=".77"/>
-      <circle cx="7.57" cy="56.32" r=".77"/>
-    </g>
-    <path id="car-r"
-      d="M11.1 55.29c.03-.7.72-1.74 1.23-1.8h4.04l.76 1.33h1c.89-.1.79 1.33.77 1.73h-.4c-.22 0-.4-.33-.4-.33h-1.53s-.17.33-.37.33h-2.4c-.17 0-.33-.33-.33-.33H11.9s-.13.33-.32.33h-.31c-.24 0-.17-.55-.17-1.26z"/>
-    <g id="wheels-l">
-      <circle cx="12.7" cy="56.32" r=".77"/>
-      <circle cx="17.37" cy="56.32" r=".77"/>
-    </g>
-  </g>
-
-  <g id="trees"
-     fill="#fff" stroke="var(--pango-tint-b)" stroke-width=".5">
-    <g id="tree-l">
-      <path stroke="none"
-        d="M137.12 46.35s.9 2.25.28 3.9c-.36 1-.08 2.7.9 3.07.59.23 1.07.25 1.69 0a2.3 2.3 0 001.25-2.33l-.12-3.94z"/>
-      <path
-        d="M137.97 53.07s.38.37.58 1.02c.37 1.81-.61 2.7 0 2.33.35-.18.7-.17 1.29-.03.66.23-.34-.49-.05-2.35.1-.64.66-1 .66-1m-3.35-6.6c0-1.17.94-2.1 2.07-2.1a2.08 2.08 0 011.87 2.98m-.47-.08a2.1 2.1 0 01.45 3.9m-.02-.74a2.12 2.12 0 01-.38 2.47c-.17.18-.63.58-1.13.6m-.82-.03a2.12 2.12 0 01-1.05-3.45m.38.21a2.08 2.08 0 01-1.6-2.05c0-.83.47-1.53 1.15-1.88"/>
-    </g>
-    <g id="tree-r">
-       <path d="M145.19 46.52c-.89.28-1.55 1.3-1.55 2.5 0 .73.25 1.38.65 1.85l.15-.47a2.12 2.12 0 00.36 2.47c.19.18.65.58 1.14.6m1.16-.7c.34-.05.77-.38.95-.57a2.12 2.12 0 00.09-2.88l-.7.38a2.1 2.1 0 001.58-2.05c0-.83-.47-1.53-1.13-1.88m-.42 6.97s-.4.36-.6 1.01c-.35 1.82.63 3.04.02 2.67-.37-.18-.72-.17-1.3-.03-.67.23.33-.49.05-2.35-.09-.64-.67-1-.67-1m3.35-7.1c0-1.17-.92-2.1-2.05-2.1-1.15 0-2.07.93-2.07 2.1 0 .21 0 .58.2.96"/>
-      <path stroke="none"
-            d="M148.3 45.59s-.88 3-.26 4.66c.36 1 0 2.1-.97 2.45-.6.24-1 .87-1.63.64-1.14-.65-1.29-1.6-1.24-2.37l.07-4.3z"/>
-    </g>
-    <g id="tree-m">
-      <path  d="M142.04 53.43s.38.33.58.91c.37 1.63-.62 2.42 0 2.1.35-.17.7-.16 1.28-.04.67.21-.33-.43-.05-2.1.1-.57.67-.9.67-.9"/>
-      <path stroke="none"
-            d="M141.19 47.41s.9 2.02.28 3.5c-.37.9-.08 2.41.9 2.74.58.21 1.07.23 1.68 0 1.14-.56 1.3-1.42 1.25-2.09l-.11-3.52z"/>
-      <path d="M141.17 47.48c0-1.04.93-1.88 2.07-1.88 1.13 0 2.06.84 2.06 1.88 0 .29-.06.56-.2.8"/>
-      <path d="M144.64 48.2a2.1 1.88 0 01.45 3.5"/>
-      <path d="M145.07 51.04a2.12 1.9 0 01-.38 2.21 1.9 1.9 0 01-1.14.54m-.81-.03a2.12 1.9 0 01-1.05-3.1"/>
-      <path d="M142.07 50.86a2.08 1.87 0 01-1.6-1.84c0-.74.47-1.37 1.15-1.68"/>
-    </g>
-  </g>
-
-  <path id="flagpole"
-        fill="none" stroke="var(--pango-tint-b)"
-        stroke-linecap="round" stroke-width=".5"
-        d="M128 46.25v12"/>
-
-  <g id="flag"
-    fill="none" stroke-linecap="butt" stroke-width=".5">
-    <path fill="#fff"
-          d="M128 46.5h10v4.5h-10"/>
-    <path stroke="var(--whero)"
-          d="M128 46.75h10m-10 1h10m-10 1h10m-10 1h10m-10 1h10m-10 1"/>
-    <path fill="var(--waiporoporo)" stroke="none"
-          d="M128 46.5v3 h4.5v-3z"/>
-    <g id="stars"
-       fill="#fff">
-      <circle cx="128.5" cy="47" r=".25"/>
-      <circle cx="129.38" cy="47" r=".25"/>
-      <circle cx="130.25" cy="47" r=".25"/>
-      <circle cx="131.13" cy="47" r=".25"/>
-      <circle cx="132" cy="47" r=".25"/>
-      <circle cx="129" cy="48" r=".25"/>
-      <circle cx="129.88" cy="48" r=".25"/>
-      <circle cx="130.75" cy="48" r=".25"/>
-      <circle cx="131.63" cy="48" r=".25"/>
-      <circle cx="128.5" cy="49" r=".25"/>
-      <circle cx="129.38" cy="49" r=".25"/>
-      <circle cx="130.25" cy="49" r=".25"/>
-      <circle cx="131.13" cy="49" r=".25"/>
-      <circle cx="132" cy="49" r=".25"/>
-    </g>
-  </g>
-
-  <rect id="building-mask"
-        fill="#fff"
-        x="0" y="10" width="150" height="120" />
-
-  <g id="zoom-outlines"
-     fill="none" stroke="var(--waiporoporo)">
-    <path id="cone" class="zoom"
-          fill="var(--waiporoporo-tint-a)" fill-opacity=".8" stroke="none"
-          d="M86.3 50.4 L64.6,48.9 L98.2,70 L89.7 52.3
-          c-1,-2 -1,-1.7 -3.25 -2"/>
-    <circle id="zoom-origin"
-          fill="none"
-          stroke-width=".25"
-          cx="87.3" cy="52.8" r="2.5"
-          style="transform-origin: 87.3px 52.8px 0px;"/>
-    <path id="zoom-line-l"
-          class="zoom-line"
-          stroke-width=".25"
-          pathLength="1" stroke-dashoffset="1" stroke-dasharray="1"
-          d="M86.7 50.3L65,48.7"/>
-    <path id="zoom-line-r"
-          class="zoom-line"
-          stroke-width=".25"
-          pathLength="1" stroke-dashoffset="1" stroke-dasharray="1"
-          d="M89.8 52.2L98.5,70"/>
-    <circle id="zoom-circle"
-            class="zoom"
-            stroke-width=".5" cx="63" cy="89" r="40.25"/>
-  </g>
-
-  <g id="other-servers"
-     opacity="1" clip-path="url(#cutout)">
-     <circle id="cutout-bg"
-             class="zoom"
-             fill="#fff"
-             cx="63" cy="89" r="40"/>
-    <g id="racks"
-       fill="var(--pango-tint-c)">
-      <rect class="zoom" x="32.2" y="55" width="5" height="70"/>
-      <rect class="zoom" x="25.8" y="55" width="5" height="70"/>
-      <rect class="zoom" x="89.8" y="55" width="5" height="70"/>
-      <rect class="zoom" x="96.2" y="55" width="5" height="70"/>
-     </g>
-
-     <g fill="var(--mā-shade-c)" stroke="var(--pango-tint-c)">
-      <use class="zoom" href="#server" x="-64.2" y="-28"/>
-      <use class="zoom" href="#server" x="-64.2" y="-14"/>
-      <use class="zoom" href="#server" x="-64.2" y="0"/>
-      <use class="zoom" href="#server" x="-64.2" y="14"/>
-      <use class="zoom" href="#server" x="-64.2" y="28"/>
-
-      <use class="zoom" href="#server" x="0" y="-42"/>
-      <use class="zoom" href="#server" x="0" y="-28"/>
-      <use class="zoom" href="#server" x="0" y="-14"/>
-      <!-- position of #focused server -->
-      <use class="zoom" href="#server" x="0" y="14"/>
-      <use class="zoom" href="#server" x="0" y="28"/>
-      <use class="zoom" href="#server" x="0" y="42"/>
-
-      <use class="zoom" href="#server" x="64.2" y="-28"/>
-      <use class="zoom" href="#server" x="64.2" y="-14"/>
-      <use class="zoom" href="#server" x="64.2" y="0"/>
-      <use class="zoom" href="#server" x="64.2" y="14"/>
-      <use class="zoom" href="#server" x="64.2" y="28"/>
-    </g>
-  </g>
-  <use id="focused" class="zoom" href="#server" fill="var(--waiporoporo-tint-a)" stroke="var(--waiporoporo)"/>
-  <rect id="fadeout-mask"
-        fill="#fff"
-        x="0" y="10" width="150" height="120" />
+    }
+  /* ]]> */
+  </style>
 </svg>
