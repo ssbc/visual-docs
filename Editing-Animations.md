@@ -24,6 +24,11 @@ Brackets or VS Code, with an SVG Preview plugin.
 More info and links to these editors & plugins can be found in the
 [tools page](https://solarpunk.cool/zines/draw-with-code/tools.html) of the zine.
 
+- using an IDE will also allow you to [fold](https://flight-manual.atom.io/using-atom/sections/folding/) nested content, and only unfold the
+specific parts you're interested in, allowing you to navigate through a 1588-line complex SVG and maintain an overview:
+![A complex SVG file, folded tidily](./png/documentation/folded-svg.png)
+
+
 - Every element in every animation either has its own `id`, or is in a `<g>` (group)
 with an `id`. If you're still not sure which part of the image the code refers to,
 try commenting it out (Select it, then use the shortcut **Ctrl + \\** in Atom).
@@ -53,7 +58,7 @@ so that they will look right when used as an `<img>` (and thus can't access exte
 resources like Google Fonts etc). Fonts can make an SVG quite heavy, so I've only
 used a subset of my chosen typeface (Dosis), which is just Basic Latin, `.`, `:`, `?`
 and the macron vowels used in Māori (`ĀāĒēĪīŌōŪū`). If you want to use a different
-typeface, or a different subset of Dosis, you can read Amelia Bellamy-Royd's 
+typeface, or a different subset of Dosis, you can read Amelia Bellamy-Royd's
 [article on embedding data URI fonts](https://oreillymedia.github.io/Using_SVG/extras/ch07-dataURI-fonts.html)
 and use [Font Squirrel's webfont generator](https://www.fontsquirrel.com/tools/webfont-generator).
 
@@ -189,7 +194,6 @@ tl
     duration: 1000
   }, '+=400')
 ```
-
 This is an anime.js timeline, and it's what you should be editing. It may look complicated, but it's less so than CSS animation, and very flexible once you get used to it. You can check out the [documentation](https://animejs.com/documentation/) for more specifics, but let's break it down:
 
 ```javascript
@@ -285,6 +289,11 @@ The relative delay means that the label will start fading in 500ms _after_ the p
 Those relative delays are super-helpful when you want to make timing changes to a timeline. In a complex CSS animation, you would have to adjust EVERY! SINGLE! CHANGE! from that point on. :weary:
 With anime.js, if you're using relative delays, everything just slides to a new point in time, maintaining the sequence with the animations around it. So you can delete sections or add new ones, and the rest of the timeline will be OK.
 Have a play around with the animations, and check out the [anime.js documentation](https://animejs.com/documentation/) if anything doesn't make sense.
+
+I would recommend using the [folding](https://flight-manual.atom.io/using-atom/sections/folding/) function in your IDE if you want to find your way around:
+
+![A complex anime.js timeline, folded tidily](./png/documentation/folded-js.png)
+
 
 
 ## Editing video
