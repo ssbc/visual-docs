@@ -622,7 +622,7 @@
             m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z"/>
     </defs>
     <g id="group-a"
-       fill="#5f9ea0" stroke="#5f9ea0">
+       fill="#5f9ea0" stroke="#2f4f4f">
       <use xlink:href="#laptop" x="310" y="120"/>
       <use xlink:href="#laptop" x="70" y="120"/>
       <use xlink:href="#mobile" x="190" y="110"/>
@@ -637,7 +637,7 @@
          transform="scale(.5)"/>
     </g>
     <g id="group-b"
-       fill="#E3B23C" stroke="hsl(47, 74%, 20%)">
+       fill="#E3B23C" stroke="hsl(42, 80%, 20%)">
       <use xlink:href="#laptop"
            x="-160" y="340"/>
       <use xlink:href="#key"
@@ -818,28 +818,28 @@
             font-weight="bold"
             >Pātaka</text>
       <text id="label-member-a"
-            fill="hsl(180, 74%, 17%)"
+            fill="#2f4f4f"
             x="715" y="496"
             >Member of Group A</text>
       <text id="label-member-a-b"
-            fill="hsl(180, 74%, 17%)"
+            fill="#2f4f4f"
             x="715" y="496"
             >Member of Groups A &amp; B</text>
       <text id="label-member-c"
-            fill="hsl(360, 65%, 30%)"
+            fill="hsl(360, 85%, 22%)"
             x="715" y="920"
             >Member of Group C</text>
       <g font-size="24">
         <text id="label-group-a"
-              fill="hsl(180, 74%, 17%)"
+              fill="#2f4f4f"
               x="225" y="220"
               >Group A</text>
         <text id="label-group-b"
-              fill="hsl(42, 74%, 30%)"
+              fill="hsl(42, 80%, 20%)"
               x="-140" y="670"
               >Group B</text>
         <text id="label-group-c"
-              fill="hsl(360, 65%, 30%)"
+              fill="hsl(360, 85%, 22%)"
               x="225" y="945"
               >Group C</text>
       </g>
@@ -895,11 +895,11 @@
     .add({ targets: '#pātaka-imac',
       opacity: [0, 1],
       duration: 1200
-    }, '+=600')
+    }, '+=300')
     .add({ targets: '#label-pātaka',
       opacity: [0, 1],
       duration: 1000
-    })
+    }, '-=250')
     .add({ targets: '#pātaka-symbol',
       opacity: [1, 0],
       duration: 600
@@ -1180,7 +1180,7 @@
         { translateX: [-96, -96], duration: 600 },
         { translateX: [-96, 0], duration: 300 }
       ]
-    }, '+=500')
+    }, '+=250')
     .add({ targets: '#sync-1c-overlay',
       opacity: [0, 1]
     }, '-=800')
