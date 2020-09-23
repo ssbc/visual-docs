@@ -1,37 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="svg8" version="1.1"
+<svg xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 425 234"
      style="font-family:'Dosis', monospace;" >
+
+  <title>With Port Forwarding</title>
+
   <style>
     :root {
-    --pango: hsl(0, 0%, 19%);
-    --pango-tint-a: hsl(0, 0%, 30%);
-    --pango-tint-b: hsl(0, 0%, 45%);
-    --pango-tint-c: hsl(0, 0%, 60%);
+      --outline-color: hsl(0, 0%, 22%);
+      --devices-color: hsl(0, 0%, 29.8%);
+      --mid-grey: hsl(0, 0%, 41.2%);
+      --mid-light-grey: hsl(0, 0%, 60%);
+      --white: hsl(0, 0%, 100%);
 
-    --whero: hsl(0, 65%, 42%);
-    --whero-tint-a: hsl(0, 63%, 56%);
-    --whero-tint-b: hsl(0, 85%, 74%);
-    --whero-shade-a: hsl(0, 93%, 16%);
+      --port-color: hsl(360, 65.4%, 42%);
+      --port-arrow-color: hsl(360, 70%, 60%);
 
-    --kārikiōrangi: hsl(180, 29%, 37%) ;
-    --kārikiōrangi-shade-a: hsl(180, 74%, 9%);
-    --kārikiōrangi-tint-a: hsl(180, 38%, 53%);
-    --kārikiōrangi-tint-b: hsl(180, 72%, 80%);
+      --local-text-color: hsl(180, 25.4%, 40%);
+      --local-outline-color: hsl(182, 25.5%, 50%);
 
-    --mā: hsl(0, 0%, 100%);
-    --mā-shade-c: hsl(0, 0%, 90%);
-    --mā-shade-b: hsl(0, 0%, 95%);
-    --mā-shade-a: hsl(0, 0%, 98%);
+      --title-color: hsl(42, 70%, 43%);
 
-    --kōwhai: hsl(47, 87%, 66%);
-    --kōwhai-shade-b: hsl(47, 74%, 40%);
-    --kōwhai-shade-a: hsl(47, 77%, 46%);
-    --kōwhai-tint-a: hsl(47, 74%, 73%);
-
-    --waiporoporo: #8a7090;
-    --waiporoporo-shade-b: hsl(289, 91%, 13%);
-    --waiporoporo-shade-a: hsl(289, 40%, 30%);
-    --waiporoporo-tint-a: hsl(289, 40%, 66%);
+      --internet-color: hsl(210, 14.3%, 53.3%);
+      --internet-tint: hsl(210, 14.3%, 90%);
+      --internet-shade: hsl(210, 24%, 22%);
     }
 
     #everything { animation: fade-all 20s linear infinite; }
@@ -60,8 +51,8 @@
 
     #port { animation: fade-in-port 20s cubic-bezier(.45,.45,.73,.99) infinite; }
     @keyframes fade-in-port {
-      0%, 14% { opacity: 0; transform: translateX(10px) }
-      18%, 100% { opacity: 1; transform: translateX(0) }
+      0%, 14% { opacity: 0; transform: translateX(10px); }
+      18%, 100% { opacity: 1; transform: translateX(0); }
     }
 
     #port-path { animation: fade-in-port-path 20s cubic-bezier(.45,.45,.73,.99) infinite; }
@@ -100,31 +91,39 @@
       51%, 100% { stroke-dashoffset: 0; opacity: 1; }
     }
   </style>
+
   <defs>
+
     <marker id="disconnection-pointer"
             orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="var(--pango-tint-c)"
+      <path fill="var(--mid-light-grey)"
             d="M-5.2-2.4L1.3 0l-6.5 2.4c1-1.4 1-3.4 0-4.8z"
             transform="scale(1.8)"/>
     </marker>
+
     <marker id="connection-pointer"
             orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="var(--whero-tint-a)"
+      <path fill="var(--port-arrow-color)"
             d="M-5.2-2.4L1.3 0l-6.5 2.4c1-1.4 1-3.4 0-4.8z"/>
     </marker>
+
     <marker id="router-pointer"
             orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="var(--kārikiōrangi-tint-a)"
+      <path fill="var(--local-outline-color)"
             d="M-5.2-2.4L1.3 0l-6.5 2.4c1-1.4 1-3.4 0-4.8z"/>
     </marker>
+
   </defs>
+
   <g id="everything">
+
     <g id="arrows"
        fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
-       <g id="internet-to-router-arrow"
+
+      <g id="internet-to-router-arrow"
           style="transform-origin:73.2px 140.6px 0px">
         <path id="port-arrow"
-              stroke="var(--whero-tint-a)"
+              stroke="var(--port-arrow-color)"
               stroke-linejoin="round" stroke-width="1"
               marker-end="url(#connection-pointer)"
               style="transform-origin:73.2px 140.6px 0px;"
@@ -132,13 +131,12 @@
       </g>
 
       <path id="success-arrow-laptop"
-            stroke="var(--whero-tint-a)" marker-end="url(#connection-pointer)"
+            stroke="var(--port-arrow-color)" marker-end="url(#connection-pointer)"
             stroke-width="1"
             style="transform-origin:213.2px 136.3px 0px;"
             d="M213.2 136.3l97.4 -37"/>
-
       <path id="port-tick"
-            stroke="var(--whero-tint-a)" stroke-width="1"
+            stroke="var(--port-arrow-color)" stroke-width="1"
             pathLength="1"
             stroke-dasharray="1"
             stroke-dashoffset="1"
@@ -146,75 +144,83 @@
     </g>
 
     <g id="focus-laptop">
+
       <g id="house-and-contents">
         <path id="house-outline"
-              fill="none" stroke="var(--kārikiōrangi-tint-a)"
+              fill="none" stroke="var(--local-outline-color)"
               stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
               d="M200.2 67.2L308.4 4.5l106.8 62-6.8-4v165h-200v-165z"/>
-
         <!-- laptop can be found at the end of the file -->
 
         <g id="mobile"
            stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" >
+
           <g transform="rotate(90)">
-            <rect width="26.5" height="52.9" x="127" y="-393.9" ry="2.6"
-                  fill="var(--pango-tint-a)" stroke="var(--pango)"
+            <rect id="mobile-landscape"
+                  width="26.5" height="52.9" x="127" y="-393.9" ry="2.6"
+                  fill="var(--devices-color)" stroke="var(--outline-color)"
                   stroke-linejoin="round" stroke-width=".5"/>
-            <path fill="var(--mā)"
+            <path id="screen-landscape"
+                  fill="var(--white)"
                   d="M127.3-391.2h25.9v45h-25.9z"/>
-            <circle cx="150.1" cy="-392.5" r=".7"
-                    fill="var(--mā)"/>
+            <circle id="camera-mobile"
+                    cx="150.1" cy="-392.5" r=".7"
+                    fill="var(--white)"/>
           </g>
-          <path fill="none" stroke="var(--pango)"
+
+          <path id="speaker"
+                fill="none" stroke="var(--outline-color)"
                 d="M392.5 138.9v2.6"/>
-          <path fill="none" stroke="var(--pango)"
+          <path id="microphone"
+                fill="none" stroke="var(--outline-color)"
                 d="M343.6 137.6v5.3"/>
         </g>
 
         <g id="imac"
            stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
-          <path fill="var(--pango-tint-a)"
+          <path fill="var(--devices-color)"
                 d="M359.9 220.5h-25c2.8-2.6 4.2-4 4.2-6.8 0-4.2-1.4-4.2-1.4-4.2h19.5s-1.4 0-1.4 4.2c0 2.8 1.4 4.2 4 6.8z"/>
-          <path fill="var(--pango-tint-b)"
+          <path fill="var(--mid-grey)"
                 d="M335.4 220.3c2.4-2.4 2.8-3 3.7-5.2 5.6 4.1 11 4.1 16.6 0 .8 2.4 1.1 2.5 3.8 5.2h-24.1z"/>
-          <path fill="none" stroke="var(--pango)"
+          <path fill="none" stroke="var(--outline-color)"
                 d="M359.9 220.5h-25c2.8-2.6 4.2-4 4.2-6.8 0-4.2-1.4-4.2-1.4-4.2h19.5s-1.4 0-1.4 4.2c0 2.8 1.4 4.2 4 6.8z"/>
           <rect width="71" height="43.2" x="311.9" y="169.1" rx="2.8" ry="2.8"
-                fill="var(--pango-tint-a)" stroke="var(--pango)"/>
+                fill="var(--devices-color)" stroke="var(--outline-color)"/>
           <circle cx="348" cy="170.5" r=".7"
-                  fill="var(--pango-tint-b)"/>
+                  fill="var(--mid-grey)"/>
           <rect width="68.2" height="36.2" x="313.3" y="171.9" rx="0" ry="0"
-                fill="var(--mā)"/>
+                fill="var(--white)"/>
         </g>
 
         <g id="router"
-           fill="var(--kārikiōrangi-tint-a)" stroke="var(--pango)"
+           fill="var(--local-outline-color)" stroke="var(--outline-color)"
            stroke-linecap="round" stroke-linejoin="miter" stroke-width=".5">
           <rect width="11" height="61.9" x="208.6" y="102.4" ry="2.1"/>
           <circle cy="108.7" cx="214.4" r="3.3"
-                  fill="var(--pango-tint-a)"/>
+                  fill="var(--devices-color)"/>
           <path id="antenna"
                 d="M215.8 110.4l24.5-8.8c2.3-.9 1.6-3.5-1-2.9
                    l-25 7.3c-3.1 1-1.8 5.6 1.5 4.4z"/>
           <g id="wifi-waves"
-             fill="none" stroke="var(--kārikiōrangi-tint-a)"
+             fill="none" stroke="var(--local-outline-color)"
              style="transform-origin:240px 100px 0px">
             <path d="M245 102.4a5.4 5.4 0 00-2.3-7.2"/>
             <path d="M249.4 104.3a9.7 9.7 0 00-4.1-13.2"/>
             <path d="M253.8 106.6a14.6 14.6 0 00-6.3-19.8"/>
           </g>
           <g id="router-lights"
-             fill="var(--mā)" stroke="var(--pango)"  stroke-width=".5">
+             fill="var(--white)" stroke="var(--outline-color)"  stroke-width=".5">
             <circle r="1.5" cx="213.5" cy="158.2"/>
             <circle r="1.5" cx="213.5" cy="152.1"/>
             <circle r="1.5" cx="213.5" cy="145.9"/>
           </g>
         </g>
+
       </g>
 
       <g id="internet-symbol"
-         fill="none" stroke="var(--waiporoporo-tint-a)" stroke-width=".5">
-        <g fill="var(--waiporoporo)" >
+         fill="none" stroke="var(--internet-tint)" stroke-width=".5">
+        <g fill="var(--internet-color)" >
           <ellipse cx="43.2" cy="140.6" rx="33" ry="32.9"/>
           <ellipse cx="43.2" cy="140.6" rx="24.2" ry="32.9"/>
           <ellipse cx="43.2" cy="140.6" rx="8.8" ry="32.9"/>
@@ -231,27 +237,27 @@
 
 
       <g id="labels"
-        fill="var(--pango)" font-size="8">
+        fill="var(--outline-color)" font-size="8">
         <text id="request-label">
-          <tspan text-anchor="middle" x="133" y="119" fill="var(--pango-tint-a)">request:</tspan>
+          <tspan text-anchor="middle" x="133" y="119" fill="var(--devices-color)">request:</tspan>
         </text>
         <g id="internet-request">
           <text id="router-request"
                 letter-spacing="0.6"
                 y="130">
-            <tspan  text-anchor="end" x="149" fill="var(--kārikiōrangi)">72.243.14.15</tspan>
+            <tspan  text-anchor="end" x="149" fill="var(--local-text-color)">72.243.14.15</tspan>
           </text>
           <text id="port-request"
                 letter-spacing="0.6"
                 y="130">
-            <tspan text-anchor="start" x="150" fill="var(--whero)">:443</tspan>
+            <tspan text-anchor="start" x="150" fill="var(--port-color)">:443</tspan>
           </text>
         </g>
 
         <text id="router-address"
               text-anchor="start"
               letter-spacing="0.6">
-          <tspan x="212" y="83" fill="var(--kārikiōrangi)">72.243.14.15</tspan>
+          <tspan x="212" y="83" fill="var(--local-text-color)">72.243.14.15</tspan>
         </text>
 
         <g id="device-labels"
@@ -259,12 +265,12 @@
           <text id="mobile-address"
                 transform="translate(0,4)"
                 letter-spacing="0.6">
-            <tspan x="368.5" y="138" fill="var(--kārikiōrangi)">192.168.1.70</tspan>
+            <tspan x="368.5" y="138" fill="var(--local-text-color)">192.168.1.70</tspan>
           </text>
           <text id="imac-address"
                 transform="translate(0,5)"
                 letter-spacing="0.6">
-            <tspan x="347.5" y="186" fill="var(--kārikiōrangi)">192.168.1.80</tspan>
+            <tspan x="347.5" y="186" fill="var(--local-text-color)">192.168.1.80</tspan>
           </text>
         </g>
       </g>
@@ -273,52 +279,56 @@
     <g id="laptop"
        stroke-linecap="round" stroke-linejoin="round" >
        <path id="port-path"
-             stroke="var(--whero-tint-a)"
+             stroke="var(--port-arrow-color)"
              stroke-width="0.5" stroke-dasharray="3 2"
              style="transform-origin:213.2px 136.3px 0px;"
              d="M316 103 l-97 37
                 M316 91 l-97 37"/>
       <path id="port"
-            fill="var(--whero-tint-a)" stroke="var(--whero)" stroke-width=".5" d="M318.2 91.2h2.6v10h-2.6v.5a.5.5 0 11-1 0v-11a.5.5 0 111 0v.5z"/>
-      <path fill="var(--pango-tint-b)" stroke="var(--pango)"
+            fill="var(--port-arrow-color)" stroke="var(--port-color)" stroke-width=".5" d="M318.2 91.2h2.6v10h-2.6v.5a.5.5 0 11-1 0v-11a.5.5 0 111 0v.5z"/>
+      <path fill="var(--mid-grey)" stroke="var(--outline-color)"
             stroke-width=".5"
             d="M316.2 114.2h58.5v-1l-4-5.7-50.6-.1-4 5.8v1z"/>
       <rect width="50.8" height="30.9" x="320.1" y="76.7" rx=".4" ry=".4"
-            fill="var(--pango-tint-b)" stroke="var(--pango)"
+            fill="var(--mid-grey)" stroke="var(--outline-color)"
             stroke-width=".5"/>
       <rect width="50.5" height="24.7" x="320.2" y="79.4" rx="0" ry="0"
-            fill="var(--mā)" stroke="var(--pango)"
+            fill="var(--white)" stroke="var(--outline-color)"
             stroke-width=".3" />
-      <circle cx="345.4" cy="77.7" r=".5" fill="var(--pango-tint-a)"/>
+      <circle cx="345.4" cy="77.7" r=".5" fill="var(--devices-color)"/>
+
       <g id="keyboard"
-         fill="none" stroke="var(--pango)" stroke-width=".3">
+         fill="none" stroke="var(--outline-color)" stroke-width=".3">
         <path d="M320.2 110.3h50.4"/>
         <path d="M320.9 109.3H370"/>
         <path d="M321.4 108.4h48"/>
         <path d="M374.8 113.2h-20.5m-17.8 0H316"/>
-        <path fill="var(--pango-tint-a)"
+        <path fill="var(--devices-color)"
               d="M316.4 114h58v-.6h-58z"/>
-        <path fill="var(--pango-tint-a)"
+        <path fill="var(--devices-color)"
               d="M337.8 111.5H353l1.2 1.8h-17.8z"/>
       </g>
+
     </g>
+
     <g id="laptop-address"
        font-size="6" text-anchor="middle">
       <text letter-spacing="0.6">
-        <tspan x="346" y="89" fill="var(--kārikiōrangi)">192.168.1.60</tspan>
+        <tspan x="346" y="89" fill="var(--local-text-color)">192.168.1.60</tspan>
       </text>
       <text id="laptop-port-label">
         <tspan x="346" y="98"
-               fill="var(--whero)">Port 443</tspan>
+               fill="var(--port-color)">Port 443</tspan>
       </text>
     </g>
 
     <g id="titles"
-       fill="var(--kōwhai-shade-a)" font-size="10" font-weight="bold">
+       fill="var(--title-color)" font-size="10" font-weight="bold">
       <text id="with-port-forwarding">
         <tspan x="105" y="40" text-anchor="middle">With Port Forwarding</tspan>
       </text>
     </g>
+
   </g>
 
   <style>

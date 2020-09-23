@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="380" height="224"
+     viewBox="-2 -2 194 112"
+     version="1.1" style="border: #ccc solid 1px">
+  <title>Āhau animation colors</title>
+
+  <g id="greyscale">
+    <rect x="0" y="22" width="10" height="10" fill="#383838"/>
+    <rect x="0" y="22" width="10" height="10" fill="hsl(0, 0%, 22%)"/>
+    <rect x="0" y="29.8" width="10" height="10" fill="#4c4c4c"/>
+    <rect x="0" y="29.8" width="10" height="10" fill="hsl(0, 0%, 29.8%)"/>
+    <rect x="0" y="41" width="10" height="10" fill="#696969"/>
+    <rect x="0" y="41" width="10" height="10" fill="hsl(0, 0%, 41.2%)"/>
+    <rect x="0" y="60" width="10" height="10" fill="#999"/>
+    <rect x="0" y="60" width="10" height="10" fill="hsl(0, 0%, 60%) "/>
+    <rect x="0" y="75" width="10" height="10" fill="#ccc"/>
+    <rect x="0" y="75" width="10" height="10" fill="hsl(0, 0%, 80%)"/>
+    <rect x="0" y="90" width="10" height="10" fill="#e6e6e6"/>
+    <rect x="0" y="90" width="10" height="10" fill="hsl(0, 0%, 90%)"/>
+    <rect x="0" y="100" width="10" height="10" fill="#fff"/>
+    <rect x="0" y="100" width="10" height="10" fill="hsl(0, 0%, 100%)"/>
+  </g>
+
+  <g id="yellows">
+    <rect x="21" y="20" width="10" height="10" fill="#5c430a"/>
+    <rect x="21" y="20" width="10" height="10" fill="hsl(42, 80%, 20%)"/>
+    <rect x="21" y="43" width="10" height="10" fill="#ba8c21"/>
+    <rect x="21" y="43" width="10" height="10" fill="hsl(42, 70%, 43%)"/>
+    <rect x="21" y="56" width="10" height="10" fill="#e3b23c"/>
+    <rect x="21" y="56" width="10" height="10" fill="hsl(42, 74.9%, 56.3%)"/>
+    <rect x="21" y="75" width="10" height="10" fill="#f9d686"/>
+    <rect x="21" y="75" width="10" height="10" fill="hsl(42, 90%, 75%)"/>
+    <rect x="21" y="95" width="10" height="10" fill="#fef7e7"/>
+    <rect x="21" y="95" width="10" height="10" fill="hsl(42, 90%, 95%)"/>
+  </g>
+
+  <g id="pounamu">
+    <rect x="59" y="9.4" width="10" height="10" fill="#023000"/>
+    <rect x="59" y="9.4" width="10" height="10" fill="hsl(118, 100.0%, 9.4%)"/>
+  </g>
+
+  <g id="greens">
+    <rect x="73" y="36.3" width="10" height="10" fill="#2e8b57"/>
+    <rect x="73" y="36.3" width="10" height="10" fill="hsl(146, 50.3%, 36.3%)"/>
+    <rect x="73" y="70" width="10" height="10" fill="#8cd9ad"/>
+    <rect x="73" y="70" width="10" height="10" fill="hsl(146, 50.3%, 70%)"/>
+  </g>
+
+  <g id="teals">
+    <rect x="90" y="24.7" width="10" height="10" fill="#2f4f4f"/>
+    <rect x="90" y="24.7" width="10" height="10" fill="hsl(180, 25.4%, 24.7%)"/>
+    <rect x="90" y="35" width="10" height="10" fill="#4c8080"/>
+    <rect x="90" y="35" width="10" height="10" fill="hsl(180, 25.4%, 40%)"/>
+    <rect x="91" y="50" width="10" height="10" fill="#5f9ea0"/>
+    <rect x="91" y="50" width="10" height="10" fill="hsl(182, 25.5%, 50%)"/>
+    <rect x="91" y="65" width="10" height="10" fill="#8bbfc1"/>
+    <rect x="91" y="65" width="10" height="10" fill="hsl(182, 30%, 65%)"/>
+    <rect x="91" y="75" width="10" height="10" fill="#9ce0e2"/>
+    <rect x="91" y="75" width="10" height="10" fill="hsl(182, 55%, 75%)"/>
+    <rect x="91" y="95" width="10" height="10" fill="#e6fefe"/>
+    <rect x="91" y="95" width="10" height="10" fill="hsl(182, 95%, 95%)"/>
+  </g>
+
+  <g id="blues">
+    <rect x="105" y="22" width="10" height="10" fill="#2b3846"/>
+    <rect x="105" y="22" width="10" height="10" fill="hsl(210, 24%, 22%)"/>
+    <rect x="105" y="53" width="10" height="10" fill="#778899"/>
+    <rect x="105" y="53" width="10" height="10" fill="hsl(210, 14.3%, 53.3%)"/>
+    <rect x="105" y="90" width="10" height="10" fill="#e2e6e9"/>
+    <rect x="105" y="90" width="10" height="10" fill="hsl(210, 14.3%, 90%)"/>
+  </g>
+
+  <g id="reds">
+    <rect x="180" y="22" width="10" height="10" fill="#680808"/>
+    <rect x="180" y="22" width="10" height="10" fill="hsl(360, 85%, 22%)"/>
+    <rect x="180" y="42" width="10" height="10" fill="#b12526"/>
+    <rect x="180" y="42" width="10" height="10" fill="hsl(360, 65.4%, 42%)"/>
+    <rect x="180" y="52" width="10" height="10" fill="#d43535"/>
+    <rect x="180" y="52" width="10" height="10" fill="hsl(360, 65.4%, 52%)"/>
+    <rect x="180" y="60" width="10" height="10" fill="#e05252"/>
+    <rect x="180" y="60" width="10" height="10" fill="hsl(360, 70%, 60%)"/>
+    <rect x="180" y="75" width="10" height="10" fill="#f58989"/>
+    <rect x="180" y="75" width="10" height="10" fill="hsl(360, 85%, 75%)"/>
+    <rect x="180" y="95" width="10" height="10" fill="#fde7e7"/>
+    <rect x="180" y="95" width="10" height="10" fill="hsl(0, 85%, 95%)"/>
+  </g>
+
+</svg>
