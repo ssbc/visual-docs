@@ -107,7 +107,7 @@
     #light-c { animation-delay: 1s }
     /* ]]> */
   </style>
-  
+
   <g id="pi"
     style="transform-origin: 75px 492.6px 0px;"
      stroke-linejoin="round" stroke-opacity="1">
@@ -486,7 +486,8 @@
            fill="var(--pātaka-color)" />
 
       <g id="server-lights"
-         stroke="var(--contrast-highlight-color)" fill="var(--contrast-tint)" stroke- linecap="round" stroke-width=".7">
+         stroke="var(--contrast-highlight-color)" fill="var(--contrast-tint)"
+         stroke-linecap="round" stroke-width=".7">
         <circle id="light-a" cx="832.4" cy="362.1" r="2.5"/>
         <circle id="light-b" cx="845.5" cy="362.1" r="2.5"/>
         <circle id="light-c" cx="858.7" cy="362.1" r="2.5"/>
