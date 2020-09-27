@@ -12,6 +12,7 @@
       --pātaka-color: hsl(360, 65.4%, 42%);
       --pātaka-medium-tint: hsl(360, 70%, 60%);
       --pātaka-tint: hsl(360, 85%, 75%);
+      --pātaka-light: hsl(0, 85%, 95%);
 
       --outline-color: hsl(0, 0%, 22%);
       --devices-color: hsl(0, 0%, 29.8%);
@@ -20,16 +21,25 @@
       --light-grey: hsl(0, 0%, 90%);
       --white: hsl(0, 0%, 100%);
     }
-    #pi { animation: fadein-pi 20s ease infinite forwards; }
+
+    /* start and end fades */
+    #everything { animation: fade-all 20s linear infinite forwards; }
+    @keyframes fade-all {
+      0% { opacity: 0; }
+      1%, 98% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* introduce raspberry pi */
+    #pi { animation: fadein-pi 20s linear infinite forwards; }
     @keyframes fadein-pi {
      0%, 5%, 100% { opacity: 0; transform: scale(0.8); }
      7% { transform: scale(1); }
-     10%, 98% { opacity: 1; }
-     100% { opacity: 0; }
+     10%, 100% { opacity: 1; }
     }
 
-    #green-led, #red-led { animation: blink-led 20s linear infinite forwards; }
-    @keyframes blink-led {
+    #green-led { animation: blink-green 20s linear infinite forwards; }
+    @keyframes blink-green {
       0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
         stroke-opacity: 0;
         fill-opacity: .5;
@@ -39,462 +49,506 @@
         fill-opacity: 1;
       }
     }
-    #red-led { animation-delay: 1s; }
 
-    #laptop { animation: fadein-laptop 20s ease infinite forwards; }
+    #red-led { animation: blink-red 20s linear infinite forwards; }
+    @keyframes blink-red {
+      0%, 5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+        stroke-opacity: 0;
+        fill-opacity: .5;
+      }
+      10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+        stroke-opacity: 1;
+        fill-opacity: 1;
+      }
+    }
+
+    /* introduce laptop */
+    #laptop { animation: fadein-laptop 20s ease-out infinite forwards; }
     @keyframes fadein-laptop {
-     0%, 25% { opacity: 0; transform: scale(0.8); }
-     27% { transform: scale(1); }
-     30%, 98% { opacity: 1; }
+     0%, 15% { opacity: 0; transform: scale(0.8); }
+     17% { transform: scale(1); }
+     20%, 98% { opacity: 1; }
      100% { opacity: 0; }
     }
 
-    #back-keys, #mid-keys, #r-keys, #l-keys, #touchpad, #ring {
-      animation: lightup 20s linear infinite forwards;
+    #laptop-keyboard { animation: fade-in-laptop-keyboard 20s linear infinite forwards; }
+    @keyframes fade-in-laptop-keyboard {
+     0%, 17% { opacity: 0; }
+     21%, 100% { opacity: 1; }
     }
-    @keyframes lightup {
-     0%, 27% { opacity: 0; }
-     31%, 100% { opacity: 1; }
-    }
-    #mid-keys { animation-delay: 250ms; }
-    #r-keys, #l-keys, #touchpad { animation-delay: 500ms; }
-    #ring { animation-delay: 4.5s; }
 
-    #laptop-screen, #pātaka-laptop,
-    #pc-screen, #pātaka-pc, #reflection {
-     animation: fadein-screen 20s linear infinite forwards;
+    #laptop-screen {
+      animation: fade-in-laptop-screen 20s linear infinite forwards;
     }
-    @keyframes fadein-screen {
-     0%, 28% { opacity: 0; }
+    @keyframes fade-in-laptop-screen {
+     0%, 18% { opacity: 0; }
+     22%, 100% { opacity: 1; }
+    }
+
+    /* introduce pc */
+    #pc { animation: fadein-pc 20s ease-out infinite forwards; }
+    @keyframes fadein-pc {
+     0%, 27% { opacity: 0; transform: scale(0.8); }
+     29% { transform: scale(1); }
      32%, 100% { opacity: 1; }
     }
-    #laptop-screen { animation-delay: 0s; }
-    #pātaka-laptop { animation-delay: 1s; }
-    #pc-screen, #reflection { animation-delay: 4s; }
-    #pātaka-pc { animation-delay: 5s; }
 
-    #pc { animation: fadein-pc 20s linear infinite forwards; }
-    @keyframes fadein-pc {
-     0%, 45% { opacity: 0; transform: scale(0.8); }
-     47% { transform: scale(1); }
-     50%, 98% { opacity: 1; }
-     100% { opacity: 0; }
+    #ring { animation: fade-in-ring 20s linear infinite forwards; }
+    @keyframes fade-in-ring {
+     0%, 30% { opacity: 0; }
+     33%, 100% { opacity: 1; }
     }
 
+    #pc-screen-components { animation: fade-in-pc-components 20s linear infinite forwards; }
+    @keyframes fade-in-pc-components {
+     0%, 30.5% { opacity: 0; }
+     34%, 100% { opacity: 1; }
+    }
+
+    /* introduce servers */
     #servers { animation: fadein-servers 20s linear infinite forwards; }
     @keyframes fadein-servers {
-     0%, 65% { opacity: 0; }
-     70%, 98% { opacity: 1; }
-     100% { opacity: 0; }
+      0%, 40% { opacity: 0; transform: scale(0.8); }
+      42% { transform: scale(1); }
+      45%, 98% { opacity: 1; }
+      100% { opacity: 0; }
     }
 
-    .focused-server { animation: slot-in 20s ease infinite forwards; }
+    #focused-server-body, #focused-server-face { animation: slot-in 20s cubic-bezier(.66,.11,.39,1) infinite forwards; }
     @keyframes slot-in {
-     0%, 66% { transform: translate(42px, 34px); }
-     71%, 100% { transform: translate(0, 0); }
+     0%, 43% { opacity: 0; transform: translate(42px, 34px); }
+     44% { transform: translate(42px, 34px); }
+     45% { opacity: 1; }
+     49%, 100% { opacity: 1; transform: translate(0, 0); }
     }
 
-    #light-a, #light-b, #light-c { animation: blink-lights 20s ease infinite forwards; }
-    @keyframes blink-lights {
-      0%, 60%, 70%, 75%, 85%, 90%, 100% {
-        opacity: 0;
-      }
-      65%,80%,95% {
-        opacity: 1;
-      }
+    #light-a { animation: blink-light-a 20s ease infinite forwards; }
+    @keyframes blink-light-a {
+      0%, 50%, 60%, 70%, 80%, 90%, 100% { opacity: 0; }
+      55%, 65%, 75%, 85%, 95% { opacity: 1; }
     }
-    #light-b { animation-delay: 500ms }
-    #light-c { animation-delay: 1s }
+
+    #light-b { animation: blink-light-b 20s ease infinite forwards; }
+    @keyframes blink-light-b {
+      0%, 53%, 63%, 73%, 83%, 93%, 100% { opacity: 0; }
+      58%, 68%, 78%, 88%, 98% { opacity: 1; }
+    }
+
+    #light-c { animation: blink-light-c 20s ease infinite forwards; }
+    @keyframes blink-light-c {
+      0%, 56%, 66%, 76%, 86%, 96%, 100% { opacity: 0; }
+      61%, 71%, 81%, 91% { opacity: 1; }
+    }
+
     /* ]]> */
   </style>
+  <g id="everything">
 
-  <g id="pi"
-    style="transform-origin: 75px 492.6px 0px;"
-     stroke-linejoin="round" stroke-opacity="1">
-    <path id="base"
-        	fill="var(--mid-grey)"
-        	d="M41 491h74.5l8.4-6.6H49.6z"/>
-    <path id="base-side"
-          fill="var(--devices-color)"
-          d="M115.5 492.6v-1.8l8.4-6.4v1.8z"/>
-    <path id="base-outline"
-          fill="none" stroke="var(--outline-color)"
-          d="M41 490.8l74.5 1.8 8.4-6.4v-1.8H49.4z"/>
+    <g id="pi"
+      style="transform-origin: 75px 492.6px 0px;"
+       stroke-linejoin="round" stroke-opacity="1">
+      <path id="base"
+          	fill="var(--mid-grey)"
+          	d="M41 491h74.5l8.4-6.6H49.6z"/>
+      <path id="base-side"
+            fill="var(--devices-color)"
+            d="M115.5 492.6v-1.8l8.4-6.4v1.8z"/>
+      <path id="base-outline"
+            fill="none" stroke="var(--outline-color)"
+            d="M41 490.8l74.5 1.8 8.4-6.4v-1.8H49.4z"/>
 
-    <g id="pi-backrow-sides"
-       fill="var(--devices-color)" stroke="none">
-      <path id="backbox-side"
-           d="M69.8 486.2v-2.7l1.8-1.4v2.7z"/>
-      <path id="l-foot-fill"
-         	 d="M44.6 492.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
-      <path id="r-foot-fill"
-           d="M108.4 492.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
-      <path id="pinboard-side"
-         	 d="M116.1 486.7v-1.9l2.4-1.8v1.8z"/>
-      <path id="ethernet-side"
-         	 d="M59 489v-9.2l2.4-1.8v9.1z"/>
+      <g id="pi-backrow-sides"
+         fill="var(--devices-color)" stroke="none">
+        <path id="backbox-side"
+             d="M69.8 486.2v-2.7l1.8-1.4v2.7z"/>
+        <path id="l-foot-fill"
+           	 d="M44.6 492.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
+        <path id="r-foot-fill"
+             d="M108.4 492.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
+        <path id="pinboard-side"
+           	 d="M116.1 486.7v-1.9l2.4-1.8v1.8z"/>
+        <path id="ethernet-side"
+           	 d="M59 489v-9.2l2.4-1.8v9.1z"/>
+      </g>
+
+      <g id="pi-foot-outlines"
+         fill="none" stroke="var(--outline-color)" stroke-linecap="round">
+        <path id="l-foot"
+              d="M44.6 493.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
+        <path id="r-foot"
+             	d="M108.4 493.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
+      </g>
+
+      <g id="pi-backrow-tops"
+         fill="var(--light-grey)" stroke="none">
+        <path id="backbox-top"
+            	d="M61.4 483.5h8.4l1.8-1.4h-8.4z"/>
+        <path id="ethernet-top"
+              d="M41 479.8h18l2.4-1.8-18-.1z"/>
+        <path id="pinboard-top"
+            	d="M81.3 484.8H116l2.4-1.8-35 .1z"/>
+      </g>
+
+      <path id="pi-pin-gaps"
+            fill="none" stroke="var(--mid-light-grey)" stroke-linecap="butt"
+            d="M93.15 483 h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2"/>
+      <path id="pi-pins"
+            fill="none" stroke="var(--mid-grey)" stroke-linecap="round"
+            d="M115 484v-4.7
+              m-2.5,0v4.7 m-2.5,0v-4.7
+              m-2.5,0v4.7 m-2.5,0v-4.7
+              m-2.5,0v4.7 m-2.5,0v-4.7
+              m-2.5,0v4.7 m-2.5,0v-4.7
+              m-2.5,0v4.7 m-2.5,0v-4.7
+              m-2.5,0v4.7 m-2.5,0v-4.7"/>
+
+      <g id="pi-backrow-outlines"
+         fill="none" stroke="var(--mid-light-grey)">
+        <path id="pinboard-outline"
+            	d="M85.2 483l-2.4 1.8v1.8l33.3.1 2.4-1.8v-1.8h-3"/>
+        <path id="backbox-outline"
+              d="M63.2 482l-1.8 1.5v2.7h8.4l1.8-1.4v-2.7z"/>
+        <path id="ethernet-outline"
+            	d="M43.4 477.9l-2.4 1.9v9.2h18l2.4-1.9V478z"/>
+      </g>
+
+      <g id="pi-backrow-fronts"
+         fill="var(--light-grey)" stroke="var(--mid-light-grey)" >
+        <path id="backbox-front"
+            	d="M61.4 483.5v2.7h8.4v-2.7z"/>
+        <path id="pinboard-front"
+              d="M116.1 484.8H81.3v1.9H116z"/>
+        <path id="ethernet-front"
+            	d="M41 479.8v9.2h18v-9.2z"/>
+      </g>
+
+      <rect id="base-front"
+          	width="74.5" height="1.8" x="41" y="491" fill="var(--mid-light-grey)" stroke="var(--outline-color)"/>
+
+      <g id="pi-frontrow-sides"
+         fill="var(--devices-color)">
+        <path id="dc-side"
+              d="M63.2 491.3v-5.5l1.8-1.4v5.5z"/>
+        <path id="usb-side"
+            	d="M109 491.2v-3.6l3-2.3v3.7z"/>
+        <path id="hdmi-side"
+            	d="M90.9 491.3v-7.4l2.4-1.8v7.3z"/>
+      </g>
+
+      <g id="pi-frontrow-tops"
+         fill="var(--light-grey)">
+        <path id="dc-top"
+              d="M54.8 485.8h8.4l1.8-1.4h-8.4z"/>
+        <path id="usb-top"
+            	d="M101 487.6h8l3-2.3h-7.3z"/>
+        <path id="hdmi-top"
+              d="M72.8 484h18l2.5-2h-18z"/>
+      </g>
+
+      <g id="pi-frontrow-outlines"
+         fill="none" stroke="var(--mid-light-grey)">
+        <path id="usb-outline"
+              d="M104.7 485.3l-3.6 2.3v3.6h7.8l3-2.2v-3.7z"/>
+        <path id="dc-outline"
+              d="M56.6 484.4l-1.8 1.4v5.5h8.4l1.8-1.4v-5.5z"/>
+        <path id="hdmi-outline"
+              d="M75.2 482l-2.4 2v7.3h18l2.5-1.9v-7.3z"/>
+      </g>
+
+      <g id="pi-frontrow-fronts"
+         fill="var(--light-grey)" stroke="var(--mid-light-grey)" >
+        <rect id="dc-front"
+             fill="var(--light-grey)" stroke="var(--mid-light-grey)"
+             width="8.4" height="5.5" x="54.8" y="485.8"/>
+        <rect id="usb-front"
+             fill="var(--light-grey)" stroke="var(--mid-light-grey)"
+             width="7.8" height="3.7" x="101.1" y="487.6" rx="0" ry="0"/>
+        <rect id="hdmi-front"
+           	width="18" height="7.3" x="72.9" y="483.9"/>
+      </g>
+
+      <g id="pi-frontrow-ports"
+         fill="var(--devices-color)" stroke="none" stroke-linecap="round">
+        <circle id="dc-plug"
+                 fill="var(--devices-color)"
+               	cx="59" cy="488.5" r="2"/>
+        <path id="usb"
+            	d="M102.9 490.2h4s1-.7 1-1.5h-6c0 .7.8 1.5 1 1.5z"/>
+        <path id="hdmi"
+              d="M74.4 485.7v1.3c0 1.4 3 0 3 1.4 0 .7.4.6 1.4.6h6c1.2 0 1.4.2 1.4-.6 0-1.4 3 0 3-1.4v-1.3H74.3z"/>
+      </g>
+
+      <g id="leds"
+         style="transform-origin: 120px 485.5px 0px;"
+         transform="scale(1.5)">
+        <path id="green-led"
+              fill="var(--contrast-tint)" stroke="var(--contrast-highlight-color)" stroke-width=".3"
+            	d="M121.5 485.5c0-1-2.5-.9-2.4 0-.6.5 1.8.5 2.4 0z"/>
+        <path id="red-led"
+              fill="var(--pātaka-light)" stroke="var(--pātaka-tint)" stroke-width=".3"
+            	d="M119.7 487c0-1.2-2.5-1-2.5 0-.6.4 1.9.4 2.5 0z"/>
+      </g>
+
     </g>
 
-    <g id="pi-foot-outlines"
-       fill="none" stroke="var(--outline-color)" stroke-linecap="round">
-      <path id="l-foot"
-            d="M44.6 493.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
-      <path id="r-foot"
-           	d="M108.4 493.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
+    <g id="laptop"
+       style="transform-origin: 265px 478px 0px;" stroke-linejoin="round">
+      <path id="outline"
+            fill="var(--devices-color)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1"
+  			    d="M169.6 489.4v5.5h192v-5.6l-22.3-17.8V382c0-.7-.4-1-1-1H192.8c-.6 0-1 .4-1 1v89.5zm23.2-18.9h145.5"/>
+      <path id="front-edge"
+            fill="none" stroke="var(--mid-light-grey)" stroke-linecap="butt" stroke-width="1"
+  			    d="M360.6 490.9h-190"/>
+      <path id="edge-shadow"
+            fill="none" stroke="var(--mid-grey)" stroke-linecap="butt" stroke-width="2"
+  			    d="M360.6 493h-190"/>
+      <circle id="camera"
+              cx="265.6" cy="385.4" r="2"
+              fill="var(--mid-light-grey)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1"/>
+
+      <g id="laptop-keyboard">
+        <path id="touchpad"
+              fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width="1"
+    			    d="M240.3 481.9H291l5 8.1h-60.6z"/>
+        <path id="r-keys"
+              fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
+    			    d="M294 481.9h48.4"/>
+        <path id="l-keys"
+              fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
+    			    d="M188.8 481.9h48.5"/>
+        <path id="back-keys"
+              fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
+    			    d="M196.9 473.7h137.3"/>
+        <path id="mid-keys"
+              fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
+    			    d="M192.8 477.8h145.5"/>
+      </g>
+
+      <g id="laptop-screen">
+        <rect
+              fill="var(--white)" stroke="var(--outline-color)"
+          	  width="145.5" height="71.9" x="192.8" y="391.5"
+              stroke-linecap="butt" stroke-width="1"/>
+
+        <g id="pātaka-laptop"
+           fill="var(--pātaka-color)" stroke="var(--outline-color)"
+           stroke-dashoffset="0" stroke-linecap="round" stroke-width=".2">
+          <path d="M253.2 438.4v-7.8l-3.1 3.1-3.1-3 17.8-18V409h1.6v3.9l17.8 17.8-3.1 3.1-3-3-.1 7.7h-3.1v-10.9l-9.3-9.3-9.3 9.3v10.9z"/>
+          <path d="M256.3 446.1V440H250v-1.5h31v1.5h-6.2v6.2h-1.6V440h-15.5v6.2z"/>
+        </g>
+
+      </g>
+
     </g>
 
-    <g id="pi-backrow-tops"
-       fill="var(--light-grey)" stroke="none">
-      <path id="backbox-top"
-          	d="M61.4 483.5h8.4l1.8-1.4h-8.4z"/>
-      <path id="ethernet-top"
-            d="M41 479.8h18l2.4-1.8-18-.1z"/>
-      <path id="pinboard-top"
-          	d="M81.3 484.8H116l2.4-1.8-35 .1z"/>
+    <g id="pc"
+       style="transform-origin: 500px 470px 0px;"
+       stroke-linejoin="round" stroke-miterlimit="4">
+
+      <g id="tower"
+         stroke-linecap="butt" stroke-width="1">
+        <path fill="var(--devices-color)" stroke="var(--devices-color)"
+  			      d="M659.5 332.9l-51.4-40.2v165.4l51.4 40.1z"/>
+        <rect width="80.8" height="165.4" x="659.5" y="332.9"
+              fill="var(--mid-grey)" stroke="var(--outline-color)" ry="0"/>
+        <path fill="var(--mid-light-grey)" stroke="var(--outline-color)"
+  			      d="M659.5 332.9l-51.4-40.2H689l51.4 40.2z"/>
+        <circle id="ring"
+                cx="700.3" cy="435.6" r="10.6"
+                fill="none" stroke="var(--contrast-highlight-color)" stroke-opacity=".9"/>
+        <rect width="56.9" height="16.3" x="672" y="354.1"
+              fill="var(--mid-grey)" stroke="var(--devices-color)" ry="1"/>
+        <rect width="56.9" height="16.3" x="672" y="380.1"
+              fill="var(--mid-grey)" stroke="var(--devices-color)" ry="1"/>
+      </g>
+
+      <g id="monitor">
+
+        <g id="stand"
+           stroke="var(--outline-color)" stroke-linecap="round" stroke-width="1">
+          <path fill="var(--mid-grey)"
+  			        d="M543.3 465.1h-90.7l27.2 21.3h90.7z"/>
+          <path fill="var(--mid-grey)"
+  			        d="M-536.2 429.2h47.9V475h-47.9z" transform="scale(-1 1)"/>
+          <path fill="var(--devices-color)"
+  			        d="M485.3 429.2h3V475l-3-3.3z"/>
+        </g>
+
+        <g id="screen-frame"
+           stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
+          <path fill="var(--mid-grey)"
+  			        d="M621.8 285.6H393.3v141.8l3.6 2.8 228-.5-.6-142.2z"/>
+          <path fill="var(--devices-color)"
+  			        d="M393.3 285.6v140.8l3.6 2.8-.6-141.2z"/>
+          <path fill="var(--mid-light-grey)"
+  			        d="M396.3 288l228-.5-2.5-1.9H393.3z"/>
+        </g>
+
+        <g id="pc-screen-components">
+          <path id="pc-screen"
+                fill="var(--white)" stroke="var(--outline-color)"
+                stroke-linecap="butt" stroke-width="1"
+    			      d="M401.8 294.6h215.7v129H401.8z"/>
+          <path id="reflection"
+                fill="none" stroke="var(--light-grey)"
+                stroke-linecap="round" stroke-width="1"
+    			      d="M618.4 295v129.5H402.1"/>
+
+          <g id="pātaka-pc"
+             fill="var(--pātaka-color)" stroke="var(--outline-color)"
+             stroke-dashoffset="0" stroke-linecap="round" stroke-width=".2">
+            <path	d="M495.3 369.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
+            <path	d="M499.6 380.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+          </g>
+
+        </g>
+
+      </g>
+
     </g>
 
-    <path id="pi-pin-gaps"
-          fill="none" stroke="var(--mid-light-grey)" stroke-linecap="butt"
-          d="M93.15 483 h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2"/>
-    <path id="pi-pins"
-          fill="none" stroke="var(--mid-grey)" stroke-linecap="round"
-          d="M115 484v-4.7
-            m-2.5,0v4.7 m-2.5,0v-4.7
-            m-2.5,0v4.7 m-2.5,0v-4.7
-            m-2.5,0v4.7 m-2.5,0v-4.7
-            m-2.5,0v4.7 m-2.5,0v-4.7
-            m-2.5,0v4.7 m-2.5,0v-4.7
-            m-2.5,0v4.7 m-2.5,0v-4.7"/>
+    <g id="servers"
+       style="transform-origin:880px 500px 0px;">
 
-    <g id="pi-backrow-outlines"
-       fill="none" stroke="var(--mid-light-grey)">
-      <path id="pinboard-outline"
-          	d="M85.2 483l-2.4 1.8v1.8l33.3.1 2.4-1.8v-1.8h-3"/>
-      <path id="backbox-outline"
-            d="M63.2 482l-1.8 1.5v2.7h8.4l1.8-1.4v-2.7z"/>
-      <path id="ethernet-outline"
-          	d="M43.4 477.9l-2.4 1.9v9.2h18l2.4-1.9V478z"/>
-    </g>
+      <g id="server-frame-back"
+        fill="var(--mid-grey)" stroke="var(--devices-color)"
+        stroke-linecap="butt" stroke-linejoin="round" stroke-width=".5">
+        <path id="frame-br"
+    			    d="M906.5 257.7h3v209.5h-3z"/>
+        <path id="frame-fr"
+            	d="M954.8 289.1h3v209.5h-3z"/>
+        <circle fill="var(--outline-color)" stroke="none"
+                cx="956.3" cy="370" r="1.2" />
+        <circle fill="var(--outline-color)" stroke="none"
+                cx="956.3" cy="354.3" r="1.2" />
+      </g>
 
-    <g id="pi-backrow-fronts"
-       fill="var(--light-grey)" stroke="var(--mid-light-grey)" >
-      <path id="backbox-front"
-          	d="M61.4 483.5v2.7h8.4v-2.7z"/>
-      <path id="pinboard-front"
-            d="M116.1 484.8H81.3v1.9H116z"/>
-      <path id="ethernet-front"
-          	d="M41 479.8v9.2h18v-9.2z"/>
-    </g>
+      <g id="template-server-body"
+         stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="4">
+         <path id="server-fill"
+         	    stroke="var(--outline-color)" stroke-width="1"
+         	    d="M953 471.7 l-3-2.3 h-6.1 l-39.3,-30.7 l-133.6,-.5 v19l39.9,31.2 z"/>
+        <path id="l-side"
+        	    fill="var(--outline-color)" fill-opacity=".49" stroke="var(--outline-color)" stroke-width="1"
+        	    d="M771 438.2 v18.9 l39.9 31.2 v-16.6h-3 l-3-2.3 h6z"/>
+        <path id="server-top"
+        	    fill="none" stroke="var(--outline-color)" stroke-width="1"
+        	    d="M953 471.7l-3-2.3h-6.1l-39.3-30.7-133.6-.5 39.9 31.2h-6l3 2.3z"/>
+        <path id="rounded-top-indentation"
+        	    fill="var(--outline-color)" fill-opacity=".25" stroke="var(--devices-color)" stroke-width=".5"
+        	    d="M904.6 443.4c-3-2.4-9-2.4-6 0l6 4.7c3 2.4 9 2.4 6 0z"/>
+        <path id="square-top-indentation"
+        	    fill="var(--outline-color)" fill-opacity=".25" stroke="var(--devices-color)" stroke-width=".5"
+        	    d="M781.8 442l12.7 9.9c.6.5 1.9 1 2.4 1h27.3c1.2 0 1.2-.5.6-1l-12.7-10c-.6-.4-1.8-.9-2.4-.9h-27.9c-.6 0-.6.5 0 1z"/>
+      </g>
 
-    <rect id="base-front"
-        	width="74.5" height="1.8" x="41" y="491" fill="var(--mid-light-grey)" stroke="var(--outline-color)"/>
+      <use href="#template-server-body"
+        fill="var(--mid-light-grey)"/>
+      <use href="#template-server-body" y="-30"
+        fill="var(--mid-light-grey)"/>
+      <use href="#template-server-body" y="-60"
+        fill="var(--mid-light-grey)"/>
+      <use href="#template-server-body" y="-90"
+        fill="var(--mid-light-grey)"/>
+      <use href="#template-server-face" y="-90"
+           fill="var(--mid-grey)"/>
 
-    <g id="pi-frontrow-sides"
-       fill="var(--devices-color)">
-      <path id="dc-side"
-            d="M63.2 491.3v-5.5l1.8-1.4v5.5z"/>
-      <path id="usb-side"
-          	d="M109 491.2v-3.6l3-2.3v3.7z"/>
-      <path id="hdmi-side"
-          	d="M90.9 491.3v-7.4l2.4-1.8v7.3z"/>
-    </g>
+      <g id="focused-server-body"
+         class="focused-server">
+        <use href="#template-server-body" x="" y="-120"
+          fill="var(--pātaka-color)"/>
+      </g>
 
-    <g id="pi-frontrow-tops"
-       fill="var(--light-grey)">
-      <path id="dc-top"
-            d="M54.8 485.8h8.4l1.8-1.4h-8.4z"/>
-      <path id="usb-top"
-          	d="M101 487.6h8l3-2.3h-7.3z"/>
-      <path id="hdmi-top"
-            d="M72.8 484h18l2.5-2h-18z"/>
-    </g>
+      <use href="#template-server-body" y="-150"
+        fill="var(--mid-light-grey)"/>
+      <use href="#template-server-body" y="-180"
+        fill="var(--mid-light-grey)"/>
 
-    <g id="pi-frontrow-outlines"
-       fill="none" stroke="var(--mid-light-grey)">
-      <path id="usb-outline"
-            d="M104.7 485.3l-3.6 2.3v3.6h7.8l3-2.2v-3.7z"/>
-      <path id="dc-outline"
-            d="M56.6 484.4l-1.8 1.4v5.5h8.4l1.8-1.4v-5.5z"/>
-      <path id="hdmi-outline"
-            d="M75.2 482l-2.4 2v7.3h18l2.5-1.9v-7.3z"/>
-    </g>
+      <g id="server-frame-front"
+         fill="var(--mid-grey)" stroke="var(--devices-color)" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".5">
+        <path id="frame-bl"
+            	d="M772.3 257.7h3v209.5h-3z"/>
+        <path id="frame-fl"
+            	d="M802.8 289.1h3v209.5h-3z"/>
+        <circle fill="var(--outline-color)" stroke="none"
+                cx="804.5" cy="370" r="1.2" />
+        <circle fill="var(--outline-color)" stroke="none"
+                cx="804.5" cy="354.3" r="1.2" />
+      </g>
 
-    <g id="pi-frontrow-fronts"
-       fill="var(--light-grey)" stroke="var(--mid-light-grey)" >
-      <rect id="dc-front"
-           fill="var(--light-grey)" stroke="var(--mid-light-grey)"
-           width="8.4" height="5.5" x="54.8" y="485.8"/>
-      <rect id="usb-front"
-           fill="var(--light-grey)" stroke="var(--mid-light-grey)"
-           width="7.8" height="3.7" x="101.1" y="487.6" rx="0" ry="0"/>
-      <rect id="hdmi-front"
-         	width="18" height="7.3" x="72.9" y="483.9"/>
-    </g>
+      <g id="server-face-overlap"
+         stroke="var(--outline-color)" stroke-linejoin="round">
+        <path fill="var(--mid-grey)" stroke-width="1"
+              d="M821.8 381.7h-20v20.8h20"/>
+        <use xlink:href="#server-screw" x="0" y="-90" />
+        <use xlink:href="#server-screw" x="0" y="-105.7" />
+      </g>
 
-    <g id="pi-frontrow-ports"
-       fill="var(--devices-color)" stroke="none" stroke-linecap="round">
-      <circle id="dc-plug"
-               fill="var(--devices-color)"
-             	cx="59" cy="488.5" r="2"/>
-      <path id="usb"
-          	d="M102.9 490.2h4s1-.7 1-1.5h-6c0 .7.8 1.5 1 1.5z"/>
-      <path id="hdmi"
-            d="M74.4 485.7v1.3c0 1.4 3 0 3 1.4 0 .7.4.6 1.4.6h6c1.2 0 1.4.2 1.4-.6 0-1.4 3 0 3-1.4v-1.3H74.3z"/>
-    </g>
+      <g id="template-server-face"
+         stroke="var(--outline-color)" stroke-linejoin="round">
+        <path id="template-server-faceplate"
+            	stroke-width="1"
+            	d="M959 471.7v20.8H801.8v-20.8z"/>
 
-    <g id="leds"
-       style="transform-origin: 120px 485.5px 0px;"
-       transform="scale(1.5)">
-      <path id="green-led"
-            fill="var(--contrast-color)" stroke="var(--contrast-highlight-color)" stroke-width=".3"
-          	d="M121.5 485.5c0-1-2.5-.9-2.4 0-.6.5 1.8.5 2.4 0z"/>
-      <path id="red-led"
-            fill="var(--pātaka-medium-tint)" stroke="var(--pātaka-tint)" stroke-width=".3"
-          	d="M119.7 487c0-1.2-2.5-1-2.5 0-.6.4 1.9.4 2.5 0z"/>
+        <g id="server-screw"
+           fill="var(--white)"
+           stroke-width=".3" stroke-linecap="round">
+          <circle cx="804.5" cy="490" r="1.2" />
+          <path fill="none"
+                d="M805 490.5 l-1-1"/>
+        </g>
+
+        <use xlink:href="#server-screw" x="0" y="-15.7" />
+        <use xlink:href="#server-screw" x="151.8" y="-15.7" />
+        <use xlink:href="#server-screw" x="151.8" y="0" />
+
+        <g id="server-lights"
+           fill="var(--light-grey)" fill-opacity="0.8"
+           stroke-width=".5">
+          <circle cx="832.4" cy="482.1" r="2.6"/>
+          <circle cx="845.5" cy="482.1" r="2.6"/>
+          <circle cx="858.7" cy="482.1" r="2.6"/>
+        </g>
+
+        <g id="front-vents"
+           fill="var(--devices-color)" stroke-linecap="round" stroke-width=".5" >
+          <rect width="1.6" height="11.7" x="931" y="476.3" ry=".8"/>
+          <rect width="1.6" height="11.7" x="924.9" y="476.3" ry=".8"/>
+          <rect width="1.6" height="11.7" x="918.9" y="476.3" ry=".8"/>
+        </g>
+
+      </g>
+
+      <use href="#template-server-face"
+           fill="var(--mid-grey)"/>
+      <use href="#template-server-face" y="-30"
+           fill="var(--mid-grey)"/>
+      <use href="#template-server-face" y="-60"
+           fill="var(--mid-grey)"/>
+      <use href="#template-server-face" y="-150"
+           fill="var(--mid-grey)"/>
+      <use href="#template-server-face" y="-180"
+           fill="var(--mid-grey)"/>
+
+      <g id="focused-server-face"
+         class="focused-server">
+        <use href="#template-server-face" y="-120"
+             fill="var(--pātaka-color)" />
+
+        <g id="focused-server-lights"
+           stroke="var(--contrast-highlight-color)" stroke-opacity="0.5" fill="var(--contrast-tint)"
+           stroke-width="1.5">
+          <circle id="light-a"
+                  cx="832.4" cy="362.1" r="2.5"/>
+          <circle id="light-b"
+                  cx="845.5" cy="362.1" r="2.5"/>
+          <circle id="light-c"
+                  cx="858.7" cy="362.1" r="2.5"/>
+        </g>
+
+      </g>
+
     </g>
 
   </g>
-
-  <g id="laptop"
-     style="transform-origin: 265px 478px 0px;" stroke-linejoin="round">
-    <path id="outline"
-          fill="var(--devices-color)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1"
-			    d="M169.6 489.4v5.5h192v-5.6l-22.3-17.8V382c0-.7-.4-1-1-1H192.8c-.6 0-1 .4-1 1v89.5zm23.2-18.9h145.5"/>
-    <path id="front-edge"
-          fill="none" stroke="var(--mid-light-grey)" stroke-linecap="butt" stroke-width="1"
-			    d="M360.6 490.9h-190"/>
-    <path id="edge-shadow"
-          fill="none" stroke="var(--mid-grey)" stroke-linecap="butt" stroke-width="2"
-			    d="M360.6 493h-190"/>
-    <path id="touchpad"
-          fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width="1"
-			    d="M240.3 481.9H291l5 8.1h-60.6z"/>
-    <path id="r-keys"
-          fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
-			    d="M294 481.9h48.4"/>
-    <path id="l-keys"
-          fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
-			    d="M188.8 481.9h48.5"/>
-    <path id="back-keys"
-          fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
-			    d="M196.9 473.7h137.3"/>
-    <path id="mid-keys"
-          fill="none" stroke="var(--contrast-highlight-color)" stroke-linecap="butt" stroke-width=".5"
-			    d="M192.8 477.8h145.5"/>
-    <rect id="laptop-screen"
-      	  width="145.5" height="71.9" x="192.8" y="391.5" fill="var(--white)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1" rx="0" ry="0"/>
-    <circle id="camera"
-            cx="265.6" cy="385.4" r="2"
-            fill="var(--mid-light-grey)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1"/>
-
-    <g id="pātaka-laptop"
-       fill="var(--pātaka-color)" stroke="var(--outline-color)"
-       stroke-dashoffset="0" stroke-linecap="round" stroke-width=".2">
-      <path d="M253.2 438.4v-7.8l-3.1 3.1-3.1-3 17.8-18V409h1.6v3.9l17.8 17.8-3.1 3.1-3-3-.1 7.7h-3.1v-10.9l-9.3-9.3-9.3 9.3v10.9z"/>
-      <path d="M256.3 446.1V440H250v-1.5h31v1.5h-6.2v6.2h-1.6V440h-15.5v6.2z"/>
-    </g>
-
-  </g>
-
-  <g id="pc"
-     style="transform-origin: 500px 470px 0px;"
-     stroke-linejoin="round" stroke-miterlimit="4">
-
-    <g id="tower"
-       stroke-linecap="butt" stroke-width="1">
-      <path fill="var(--devices-color)" stroke="var(--devices-color)"
-			      d="M659.5 332.9l-51.4-40.2v165.4l51.4 40.1z"/>
-      <rect width="80.8" height="165.4" x="659.5" y="332.9"
-            fill="var(--mid-grey)" stroke="var(--outline-color)" ry="0"/>
-      <path fill="var(--mid-light-grey)" stroke="var(--outline-color)"
-			      d="M659.5 332.9l-51.4-40.2H689l51.4 40.2z"/>
-      <circle id="ring"
-              cx="700.3" cy="435.6" r="10.6"
-              fill="none" stroke="var(--contrast-highlight-color)" stroke-opacity=".9"/>
-      <rect width="56.9" height="16.3" x="672" y="354.1"
-            fill="var(--mid-grey)" stroke="var(--devices-color)" ry="1"/>
-      <rect width="56.9" height="16.3" x="672" y="380.1"
-            fill="var(--mid-grey)" stroke="var(--devices-color)" ry="1"/>
-    </g>
-
-    <g id="monitor">
-
-      <g id="stand"
-         stroke="var(--outline-color)" stroke-linecap="round" stroke-width="1">
-        <path fill="var(--mid-grey)"
-			        d="M543.3 465.1h-90.7l27.2 21.3h90.7z"/>
-        <path fill="var(--mid-grey)"
-			        d="M-536.2 429.2h47.9V475h-47.9z" transform="scale(-1 1)"/>
-        <path fill="var(--devices-color)"
-			        d="M485.3 429.2h3V475l-3-3.3z"/>
-      </g>
-
-      <g id="screen-frame"
-         stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
-        <path fill="var(--mid-grey)"
-			        d="M621.8 285.6H393.3v141.8l3.6 2.8 228-.5-.6-142.2z"/>
-        <path fill="var(--devices-color)"
-			        d="M393.3 285.6v140.8l3.6 2.8-.6-141.2z"/>
-        <path fill="var(--mid-light-grey)"
-			        d="M396.3 288l228-.5-2.5-1.9H393.3z"/>
-      </g>
-
-      <path id="pc-screen"
-            fill="var(--white)" stroke="var(--outline-color)"
-            stroke-linecap="butt" stroke-width="1"
-			      d="M401.8 294.6h215.7v129H401.8z"/>
-      <path id="reflection"
-            fill="none" stroke="var(--light-grey)"
-            stroke-linecap="round" stroke-width="1"
-			      d="M618.4 295v129.5H402.1"/>
-
-      <g id="pātaka-pc"
-         fill="var(--pātaka-color)" stroke="var(--outline-color)"
-         stroke-dashoffset="0" stroke-linecap="round" stroke-width=".2">
-        <path	d="M495.3 369.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
-        <path	d="M499.6 380.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
-      </g>
-
-    </g>
-
-  </g>
-
-  <g id="servers">
-
-    <g id="server-frame-back"
-      fill="var(--mid-grey)" stroke="var(--devices-color)"
-      stroke-linecap="butt" stroke-linejoin="round" stroke-width=".5">
-      <path id="frame-br"
-  			    d="M906.5 257.7h3v209.5h-3z"/>
-      <path id="frame-fr"
-          	d="M954.8 289.1h3v209.5h-3z"/>
-      <circle fill="var(--outline-color)" stroke="none"
-              cx="956.3" cy="370" r="1.2" />
-      <circle fill="var(--outline-color)" stroke="none"
-              cx="956.3" cy="354.3" r="1.2" />
-    </g>
-
-    <g id="template-server-body"
-       stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="4">
-       <path id="server-fill"
-       	    stroke="var(--outline-color)" stroke-width="1"
-       	    d="M953 471.7 l-3-2.3 h-6.1 l-39.3,-30.7 l-133.6,-.5 v19l39.9,31.2 z"/>
-      <path id="l-side"
-      	    fill="var(--outline-color)" fill-opacity=".49" stroke="var(--outline-color)" stroke-width="1"
-      	    d="M771 438.2 v18.9 l39.9 31.2 v-16.6h-3 l-3-2.3 h6z"/>
-      <path id="server-top"
-      	    fill="none" stroke="var(--outline-color)" stroke-width="1"
-      	    d="M953 471.7l-3-2.3h-6.1l-39.3-30.7-133.6-.5 39.9 31.2h-6l3 2.3z"/>
-      <path id="rounded-top-indentation"
-      	    fill="var(--outline-color)" fill-opacity=".25" stroke="var(--devices-color)" stroke-width=".5"
-      	    d="M904.6 443.4c-3-2.4-9-2.4-6 0l6 4.7c3 2.4 9 2.4 6 0z"/>
-      <path id="square-top-indentation"
-      	    fill="var(--outline-color)" fill-opacity=".25" stroke="var(--devices-color)" stroke-width=".5"
-      	    d="M781.8 442l12.7 9.9c.6.5 1.9 1 2.4 1h27.3c1.2 0 1.2-.5.6-1l-12.7-10c-.6-.4-1.8-.9-2.4-.9h-27.9c-.6 0-.6.5 0 1z"/>
-    </g>
-
-    <use href="#template-server-body"
-      fill="var(--mid-light-grey)"/>
-    <use href="#template-server-body" y="-30"
-      fill="var(--mid-light-grey)"/>
-    <use href="#template-server-body" y="-60"
-      fill="var(--mid-light-grey)"/>
-    <use href="#template-server-body" y="-90"
-      fill="var(--mid-light-grey)"/>
-    <use href="#template-server-face" y="-90"
-         fill="var(--mid-grey)"/>
-
-    <g id="focused-server-body"
-       class="focused-server">
-      <use href="#template-server-body" x="" y="-120"
-        fill="var(--pātaka-color)"/>
-    </g>
-
-    <use href="#template-server-body" y="-150"
-      fill="var(--mid-light-grey)"/>
-    <use href="#template-server-body" y="-180"
-      fill="var(--mid-light-grey)"/>
-
-    <g id="server-frame-front"
-       fill="var(--mid-grey)" stroke="var(--devices-color)" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".5">
-      <path id="frame-bl"
-          	d="M772.3 257.7h3v209.5h-3z"/>
-      <path id="frame-fl"
-          	d="M802.8 289.1h3v209.5h-3z"/>
-      <circle fill="var(--outline-color)" stroke="none"
-              cx="804.5" cy="370" r="1.2" />
-      <circle fill="var(--outline-color)" stroke="none"
-              cx="804.5" cy="354.3" r="1.2" />
-    </g>
-
-    <g id="server-face-overlap"
-       stroke="var(--outline-color)" stroke-linejoin="round">
-      <path fill="var(--mid-grey)" stroke-width="1"
-            d="M821.8 381.7h-20v20.8h20"/>
-      <use xlink:href="#server-screw" x="0" y="-90" />
-      <use xlink:href="#server-screw" x="0" y="-105.7" />
-    </g>
-
-    <g id="template-server-face"
-       stroke="var(--outline-color)" stroke-linejoin="round">
-      <path id="template-server-faceplate"
-          	stroke-width="1"
-          	d="M959 471.7v20.8H801.8v-20.8z"/>
-
-      <g id="server-screw"
-         fill="var(--white)"
-         stroke-width=".3" stroke-linecap="round">
-        <circle cx="804.5" cy="490" r="1.2" />
-        <path fill="none"
-              d="M805 490.5 l-1-1"/>
-      </g>
-
-      <use xlink:href="#server-screw" x="0" y="-15.7" />
-      <use xlink:href="#server-screw" x="151.8" y="-15.7" />
-      <use xlink:href="#server-screw" x="151.8" y="0" />
-
-      <g id="server-lights"
-         fill="var(--white)" stroke-linecap="round" stroke-width=".5">
-        <circle cx="832.4" cy="482.1" r="2.6"/>
-        <circle cx="845.5" cy="482.1" r="2.6"/>
-        <circle cx="858.7" cy="482.1" r="2.6"/>
-      </g>
-
-      <g id="front-vents"
-         fill="var(--devices-color)" stroke-linecap="round" stroke-width=".5" >
-        <rect width="1.6" height="11.7" x="931" y="476.3" ry=".8"/>
-        <rect width="1.6" height="11.7" x="924.9" y="476.3" ry=".8"/>
-        <rect width="1.6" height="11.7" x="918.9" y="476.3" ry=".8"/>
-      </g>
-
-    </g>
-
-    <use href="#template-server-face"
-         fill="var(--mid-grey)"/>
-    <use href="#template-server-face" y="-30"
-         fill="var(--mid-grey)"/>
-    <use href="#template-server-face" y="-60"
-         fill="var(--mid-grey)"/>
-    <use href="#template-server-face" y="-150"
-         fill="var(--mid-grey)"/>
-    <use href="#template-server-face" y="-180"
-         fill="var(--mid-grey)"/>
-
-    <g id="focused-server-face"
-       class="focused-server">
-      <use href="#template-server-face" y="-120"
-           fill="var(--pātaka-color)" />
-
-      <g id="server-lights"
-         stroke="var(--contrast-highlight-color)" fill="var(--contrast-tint)"
-         stroke-linecap="round" stroke-width=".7">
-        <circle id="light-a" cx="832.4" cy="362.1" r="2.5"/>
-        <circle id="light-b" cx="845.5" cy="362.1" r="2.5"/>
-        <circle id="light-c" cx="858.7" cy="362.1" r="2.5"/>
-      </g>
-
-    </g>
-
-  </g>
-
 </svg>
