@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 10 150 120">
+     viewBox="0 10 150 130">
   <style>/*
     <![CDATA[ */
 
@@ -31,45 +31,30 @@
     #building-front { animation: reveal 20s linear forwards infinite; }
     @keyframes reveal {
       0%, 15% { opacity: 1; }
-      25%, 100% { opacity: 0; }
-    }
-
-    #zoom-origin { animation: origin-appear 20s linear forwards infinite;  }
-    @keyframes origin-appear {
-      0%, 35% { transform: scale(0); opacity: 0; }
-      36.5%, 100% { transform: scale(1); opacity: 1; }
+      23%, 100% { opacity: 0; }
     }
 
     .zoom {
       animation: expand 20s ease-in-out forwards infinite;
     }
     @keyframes expand {
-      0%, 35% {
+      0%, 33% {
         opacity: 0;
         transform: translate(1.45px,-2.2px) scale(0);
       }
-      36.5%, 38% {
+      34% {
         opacity: 1;
-        transform: translate(1.45px,-2.2px) scale(0.06);
-        transform-origin: 87.3px 52.8px 0px;
       }
-      50%, 100% {
+      42.5%, 100% {
         opacity: 1;
         transform: translate(0,0) scale(1);
-        transform-origin: 87.3px 52.8px 0px;
       }
-    }
-
-    .zoom-line { animation: draw-on 20s ease-in-out forwards infinite; }
-    @keyframes draw-on {
-      0%, 40% { stroke-dashoffset: 1; }
-      50%, 100% { stroke-dashoffset: 0; }
     }
 
     #mask-opacity { animation: defocus-building 20s ease-in-out forwards infinite; }
     @keyframes defocus-building {
-      0%, 40% { opacity: 0; }
-      49.5%, 100% { opacity: 0.5; }
+      0%, 34.5% { opacity: 0; }
+      42.5%, 100% { opacity: 0.5; }
     }
 
     #server-light-a { animation: server-blink-a 20s linear forwards infinite; }
@@ -113,9 +98,14 @@
     <mask id="building-mask">
       <rect fill="var(--white)"
             x="0" y="10" width="150" height="120" />
+
       <rect id="mask-opacity"
             fill="#000" opacity="0"
             x="0" y="10" width="150" height="120" />
+      <circle fill="#ddd" class="zoom"
+              stroke="none"
+              style="transform-origin: 33.5px 52px 0px"
+              cx="35.5" cy="52.5" r="2.25"/>
     </mask>
 
     <g id="building-and-surrounds"
@@ -343,30 +333,26 @@
     </g>
 
     <g id="zoom-outlines"
-       fill="none" stroke="var(--server-shade)">
-      <path id="cone"
+       fill="none" stroke="var(--devices-color)">
+
+       <mask id="zoom-origin">
+         <rect x="0" y="0" width="120" height="120" fill="#fff" />
+         <circle fill="#888" class="zoom"
+                 stroke="none"
+                 style="transform-origin: 33.5px 52px 0px"
+                 cx="35.5" cy="52.5" r="2.25"/>
+       </mask>
+
+      <path id="cone" mask="url(#zoom-origin)"
             class="zoom"
-            fill="var(--server-tint)" fill-opacity=".8" stroke="none"
-            d="M86.3 50.4 L64.6,48.9 L98.2,70 L89.7 52.3
-            c-1,-2 -1,-1.7 -3.25 -2"/>
-      <circle id="zoom-origin"
-            fill="none"
+            fill="var(--mid-light-grey)" fill-opacity=".7"
             stroke-width=".25"
-            cx="87.3" cy="52.8" r="2.5"
-            style="transform-origin: 87.3px 52.8px 0px;"/>
-      <path id="zoom-line-l"
-            class="zoom-line"
-            stroke-width=".25"
-            pathLength="1" stroke-dashoffset="1" stroke-dasharray="1"
-            d="M86.7 50.3L65,48.7"/>
-      <path id="zoom-line-r"
-            class="zoom-line"
-            stroke-width=".25"
-            pathLength="1" stroke-dashoffset="1" stroke-dasharray="1"
-            d="M89.8 52.2L98.5,70"/>
+            style="transform-origin: 33px 52px 0px"
+            d="M35 50.05 L74,39.65 C 115,33 132,73 118,98 S 60,131 44.8,91 L33.2 53.5 c-0.5,-2.5 1,-3 1.8 -3.45"/>
       <circle id="zoom-circle"
               class="zoom"
-              stroke-width=".5" cx="63" cy="89" r="40.25"/>
+              style="transform-origin: 35.5px 52.5px 0px"
+              stroke-width=".5" cx="83" cy="79" r="40.25"/>
     </g>
 
     <g id="close-up-servers"
@@ -375,13 +361,14 @@
       <defs>
 
         <clipPath id="cutout"
-                  class="zoom" >
-          <circle cx="63" cy="89" r="40"/>
+                  class="zoom"
+                  style="transform-origin: 35.5px 52.5px 0px">
+          <circle cx="83" cy="79" r="40"/>
         </clipPath>
 
         <g id="template-server-body"
             stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="4"
-            style="transform-origin:-5px 70px 0px;" transform="scale(0.4, -0.4)">
+            style="transform-origin:28px 62px 0px;" transform="scale(0.4, -0.4)">
           <path id="server-fill"
                  stroke="var(--outline-color)" stroke-width="1"
                  d="M253 71.7 l-3-2.3 h-6.1 l-39.3,-30.7 l-133.6,-.5 v19l39.9,31.2 z"/>
@@ -401,7 +388,7 @@
 
         <g id="template-server-face"
             stroke="var(--outline-color)" stroke-linejoin="round"
-            style="transform-origin:-5px 70px 0px;" transform="scale(0.4, -0.4)">
+            style="transform-origin:28px 62px 0px;" transform="scale(0.4, -0.4)">
           <path id="template-server-faceplate"
                 stroke-width="1"
                 d="M259 71.7v20.8H101.8v-20.8z"/>
@@ -438,58 +425,75 @@
 
       <circle id="cutout-bg"
               class="zoom"
+              style="transform-origin: 35.5px 52.5px 0px"
               fill="var(--warehouse-tint)"
-              cx="63" cy="89" r="40"/>
+              cx="83" cy="79" r="40"/>
       <use href="#template-server-body"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            y="-12"
            fill="var(--server-tint)"/>
       <use href="#template-server-body"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            fill="var(--server-tint)"/>
       <use href="#template-server-body"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            y="12"
            fill="var(--server-tint)"/>
       <use href="#template-server-body"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            y="24"
            fill="var(--server-tint-a)"/>
       <use href="#template-server-body"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            y="36"
            fill="var(--server-tint)"/>
       <use href="#template-server-body"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            y="48"
            fill="var(--server-tint)"/>
 
       <g id="server-frame">
         <rect id="frame-bl"
               class="zoom"
-              x="26" y="50" width="2" height="100"
+              style="transform-origin: 35.5px 52.5px 0px"
+              x="46" y="40" width="2" height="100"
               fill="var(--server-shade)" stroke="var(--devices-color)" stroke-width="0.5"/>
         <rect id="frame-fr"
               class="zoom"
-              x="98" y="50" width="2" height="100"
+              style="transform-origin: 35.5px 52.5px 0px"
+              x="118" y="40" width="2" height="100"
               fill="var(--server-shade)" stroke="var(--devices-color)" stroke-width="0.5"/>
         <rect id="frame-fl"
               class="zoom"
-              x="38" y="50" width="2" height="100"
+              style="transform-origin: 35.5px 52.5px 0px"
+              x="58" y="40" width="2" height="100"
               fill="var(--server-shade)" stroke="var(--devices-color)" stroke-width="0.5"/>
       </g>
 
       <use href="#template-server-face"
-           class="zoom" y="-12"
+           class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
+           y="-12"
            fill="var(--server-color)"/>
       <use href="#template-server-face"
            class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
            fill="var(--server-color)"/>
       <use href="#template-server-face"
-           class="zoom" y="12"
+           class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
+           y="12"
            fill="var(--server-color)"/>
       <use href="#template-server-face"
-           class="zoom" y="24"
+           class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
+           y="24"
            fill="var(--server-highlight)"/>
 
       <g id="focused-server-lights"
@@ -497,26 +501,39 @@
          stroke-opacity="0.25"
          stroke-linecap="round" stroke-width="1">
         <circle id="server-light-a"
-               cx="50" cy="89.15" r="1.2"/>
+               cx="69.75" cy="77.95" r="1.2"/>
         <circle id="server-light-b"
-               cx="55.25" cy="89.15" r="1.2"/>
+               cx="75" cy="77.95" r="1.2"/>
         <circle id="server-light-c"
-               cx="60.5" cy="89.15" r="1.2"/>
+               cx="80.25" cy="77.95" r="1.2"/>
       </g>
 
       <use href="#template-server-face"
-           class="zoom" y="36"
+           class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
+           y="36"
            fill="var(--server-color)"/>
       <use href="#template-server-face"
-           class="zoom" y="48"
+           class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
+           y="48"
            fill="var(--server-color)"/>
       <use href="#template-server-face"
-           class="zoom" y="60"
+           class="zoom"
+           style="transform-origin: 35.5px 52.5px 0px"
+           y="60"
            fill="var(--server-color)"/>
     </g>
-
+    <!-- <polyline fill="none" stroke="#cc0f16" points="33.5,52.5 83,79 118,98"/>
+<circle cx="103" cy="99" r="0.5" fill="#CC0F16" stroke-width="0.1"/>
+<path id="cone"
+      class="zoom"
+      fill="green" fill-opacity=".8"
+      stroke-width=".25"
+      style="transform-origin: 33px 52px 0px"
+      d="M35 50.05 L74,39.65 C 115,33 132,73 118,98 S 60,131 44.8,91 L33.2 53.5
+      c-0.5,-2.5 1,-3 1.8 -3.45"/> -->
   </g>
-
   <style>
     /* <![CDATA[ */
     @font-face {
