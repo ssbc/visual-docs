@@ -19,6 +19,7 @@ or adapt these animations. These links will take you right where you want to go:
   - [changing fonts](./Editing-Animations.md#changing-fonts)
   - [editing CSS](./Editing-Animations.md#editing-css)
   - [editing anime.js](./Editing-Animations.md#editing-animejs)
+  - [**Converting an anime.js timeline to CSS**](./Editing-Animations.md#converting-an-animejs-timeline-to-css)
   - [editing video](./Editing-Animations.md#editing-video)
 - [**How to make videos or GIFs**](Making-Video-or-GIF.md)
   - [recording your screen](./Making-Video-or-GIF.md#recording-your-screen)
@@ -37,17 +38,21 @@ or adapt these animations. These links will take you right where you want to go:
 
 ### Replication: connecting locally
 
-![](gif/replication-local.gif)
+![](svg/replication-local_css.svg)
 
 _**Note:** These two 'replication' animations and the 'data-on-a-pātaka' animation have been written using [anime.js](https://animejs.com) within SVG, as it provides much, much more flexibility than writing animation directly in CSS within SVG.
-As Github will not play JS animations within Markdown, the above embedded animation is a recording of the animation, converted to GIF so it can be played anywhere.
-The source SVGs can also be downloaded and opened with a web browser to display the animation at full quality, or to inspect/edit the code. Once the animation has been finalized, I'll make a CSS-in-SVG version, as GIFs are worse by basically every measure - see this comparison using the 'local replication' animation:_
+As Github will not play JS animations within Markdown, the 'replication-via-internet' and 'data-on-a-pātaka' animations shown here are screen recordings of the javascript animation, converted to GIF so it can be played anywhere.
+Unfortunately, GIFs are worse than SVG by basically every measure - see this comparison using the 'local replication' animation:_
 
 |            | SVG    | MP4    | GIF    |
 |------------|--------|--------|--------|
 | Resolution |  ∞     | 2000px | 1000px |
 | Framerate  | ~60fps | 30fps  | 15fps  |
 | Filesize   | 0.05Mb | 1.5Mb  | 2.9Mb  |
+
+_The source SVGs can always be downloaded and opened with a web browser to display the animation at full quality, or to inspect/edit the code.
+Once the animation has been finalized, I'll make a CSS-in-SVG version. So far there is only one anime.js animation that has been converted to CSS ('svg/replication-local_anime.svg' => 'svg/replication-local_css.svg')._
+_I'm working on conversion script to make this easier ('convert-anime-to-css.js')._
 
 ----
 ### Data on a Pātaka

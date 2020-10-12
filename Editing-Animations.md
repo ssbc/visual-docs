@@ -9,6 +9,7 @@ files, the animation syntax, the formats and what you can do with them.
 - [**changing fonts**](#changing-fonts)
 - [**editing CSS**](#editing-css)
 - [**editing anime.js**](#editing-animejs)
+- [**Converting an anime.js timeline to CSS**](#converting-an-animejs-timeline-to-css)
 - [**editing video**](#editing-video)
 
 ## Editing SVG
@@ -228,14 +229,14 @@ So the timing so far is:
 ```javascript
 0: 'tl' starts
 
-500: '#a' starts its fade-in         ⊤
-                                     |
-1000: '#b' starts its fade-in     ⊤  |
-1250: '#a' finishes               |  ↓
-1500: '#c' starts its fade-in  ⊤  |
-1750: '#b' finishes            |  ↓
+500: '#a' starts its fade-in   ⊤
                                |
-2250: '#c' finishes            ↓
+1000: '#b' starts its fade-in  |  ⊤
+1250: '#a' finishes            ↓  |
+1500: '#c' starts its fade-in     |  ⊤
+1750: '#b' finishes               ↓  |
+                                     |
+2250: '#c' finishes                  ↓
 ```
 
 ok, next section:
@@ -253,10 +254,10 @@ ok, next section:
 That relative, negative delay means that the arrow will start growing _before_ the previous animation is entirely finished:
 
 ```javascript
-1750: '#b' finishes                 |  ↓
-2000: '#arrow' starts scaling up ⊤  |
-2250: '#c' finishes              |  ↓
-2500: '#arrow' finishes          ↓
+1750: '#b' finishes              ↓  |  
+2000: '#arrow' starts scaling up    |  ⊤
+2250: '#c' finishes                 ↓  |
+2500: '#arrow' finishes                ↓
 ```
 
 Note that because `tl` set the default duration as `500`, and we didn't specify otherwise, `#arrow` will take 500ms to animate on.
@@ -276,14 +277,14 @@ Last section:
 The relative delay means that the label will start fading in 500ms _after_ the previous animations are finished:
 
 ```javascript
-2000: '#arrow' starts scaling up            ⊤  |
-2250: '#c' finishes                         |  ↓
+2000: '#arrow' starts scaling up         |  ⊤
+2250: '#c' finishes                      ↓  |
 2500: '#arrow' finishes                     ↓
 
-3000: '#label-pātaka' starts fading in   ⊤
-                                         |
-                                         |
-3750: '#label-pātaka' finishes           ↓
+3000: '#label-pātaka' starts fading in         ⊤
+                                               |
+                                               |
+3750: '#label-pātaka' finishes                 ↓
 ```
 
 Those relative delays are super-helpful when you want to make timing changes to a timeline. In a complex CSS animation, you would have to adjust EVERY! SINGLE! CHANGE! from that point on. :weary:
@@ -294,7 +295,9 @@ I would recommend using the [folding](https://flight-manual.atom.io/using-atom/s
 
 ![A complex anime.js timeline, folded tidily](./png/documentation/folded-js.png)
 
-
+## Converting an anime.js timeline to CSS
+If you're planning to make any changes to the _timing_ of these animations, rather than just changing colors or swapping out elements, I highly recommend that you do so with anime.js rather than CSS, whenever you have the choice. However, you may need the end product to be a CSS animation (eg. for sharing on SBB or Github).
+In this case you'll need to convert the anime.js timeline into CSS animations, which would be _extremely_ difficult to attempt by hand. So I've started writing a script to make it much easier - you can find it and its documentation in the [`📁️ js`](./js) folder.
 
 ## Editing video
 You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](./mp4) folder. You can import these into the video editing tool of your choice, mix them with footage as you like, and export new videos.

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg id="alternative-servers"
+     xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="1000" height="600"
      viewBox="0 0 1000 600">
@@ -29,7 +30,6 @@
       1%, 98% { opacity: 1; }
       100% { opacity: 0; }
     }
-
     /* introduce raspberry pi */
     #pi { animation: fadein-pi 20s linear infinite forwards; }
     @keyframes fadein-pi {
@@ -37,7 +37,6 @@
      7% { transform: scale(1); }
      10%, 100% { opacity: 1; }
     }
-
     #green-led { animation: blink-green 20s linear infinite forwards; }
     @keyframes blink-green {
       0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
@@ -49,7 +48,6 @@
         fill-opacity: 1;
       }
     }
-
     #red-led { animation: blink-red 20s linear infinite forwards; }
     @keyframes blink-red {
       0%, 5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
@@ -61,7 +59,6 @@
         fill-opacity: 1;
       }
     }
-
     /* introduce laptop */
     #laptop { animation: fadein-laptop 20s ease-out infinite forwards; }
     @keyframes fadein-laptop {
@@ -70,13 +67,11 @@
      20%, 98% { opacity: 1; }
      100% { opacity: 0; }
     }
-
     #laptop-keyboard { animation: fade-in-laptop-keyboard 20s linear infinite forwards; }
     @keyframes fade-in-laptop-keyboard {
      0%, 17% { opacity: 0; }
      21%, 100% { opacity: 1; }
     }
-
     #laptop-screen {
       animation: fade-in-laptop-screen 20s linear infinite forwards;
     }
@@ -84,7 +79,6 @@
      0%, 18% { opacity: 0; }
      22%, 100% { opacity: 1; }
     }
-
     /* introduce pc */
     #pc { animation: fadein-pc 20s ease-out infinite forwards; }
     @keyframes fadein-pc {
@@ -92,19 +86,16 @@
      29% { transform: scale(1); }
      32%, 100% { opacity: 1; }
     }
-
     #ring { animation: fade-in-ring 20s linear infinite forwards; }
     @keyframes fade-in-ring {
      0%, 30% { opacity: 0; }
      33%, 100% { opacity: 1; }
     }
-
     #pc-screen-components { animation: fade-in-pc-components 20s linear infinite forwards; }
     @keyframes fade-in-pc-components {
      0%, 30.5% { opacity: 0; }
      34%, 100% { opacity: 1; }
     }
-
     /* introduce servers */
     #servers { animation: fadein-servers 20s linear infinite forwards; }
     @keyframes fadein-servers {
@@ -113,7 +104,6 @@
       45%, 98% { opacity: 1; }
       100% { opacity: 0; }
     }
-
     #focused-server-body, #focused-server-face { animation: slot-in 20s cubic-bezier(.66,.11,.39,1) infinite forwards; }
     @keyframes slot-in {
      0%, 43% { opacity: 0; transform: translate(42px, 34px); }
@@ -121,19 +111,16 @@
      45% { opacity: 1; }
      49%, 100% { opacity: 1; transform: translate(0, 0); }
     }
-
     #light-a { animation: blink-light-a 20s ease infinite forwards; }
     @keyframes blink-light-a {
       0%, 50%, 60%, 70%, 80%, 90%, 100% { opacity: 0; }
       55%, 65%, 75%, 85%, 95% { opacity: 1; }
     }
-
     #light-b { animation: blink-light-b 20s ease infinite forwards; }
     @keyframes blink-light-b {
       0%, 53%, 63%, 73%, 83%, 93%, 100% { opacity: 0; }
       58%, 68%, 78%, 88%, 98% { opacity: 1; }
     }
-
     #light-c { animation: blink-light-c 20s ease infinite forwards; }
     @keyframes blink-light-c {
       0%, 56%, 66%, 76%, 86%, 96%, 100% { opacity: 0; }
@@ -142,6 +129,68 @@
 
     /* ]]> */
   </style>
+  <defs>
+
+    <g id="monitor"
+       stroke-linejoin="round">
+
+      <g id="stand"
+         stroke="var(--outline-color)" stroke-linecap="round"  stroke-width="1">
+        <rect id="baseplate"
+              x="-42" y="95.1"
+              width="80" height="15" rx="1" ry="1"
+              style="transform-origin: 0px 93.8px 0px;" transform="skewX(50) translate(-12)"
+              fill="var(--mid-grey)" />
+        <rect id="stand-front"
+              fill="var(--mid-grey)"
+              x="-18" y="60"
+              width="30" height="44"/>
+        <rect fill="var(--devices-color)"
+              x="-21" y="60"
+              width="3" height="44" rx="1" ry="1"
+              style="transform-origin: -22.5px 82px 0px;" transform="skewY(50) translate(0,-5)"/>
+      </g>
+
+      <g id="screen-frame"
+         stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
+         <rect x="-117.6" y="-74.4"
+               width="228" height="142.2" rx="2" ry="2"
+               fill="var(--devices-color)" />
+        <path id="monitor-side"
+              fill="var(--outline-color)" stroke="none"
+              d="M-116.6 -73.9 l-0.5,1v140.2 l4,3 l-0.4,-1.2v-140.7l-3.2-2.5z"/>
+        <path id="monitor-top"
+              fill="var(--mid-light-grey)"  stroke="none"
+              d="M-114,-72 h227 l-2.5-1.9h-227z"/>
+        <rect x="-114" y="-72"
+              width="228" height="142.2" rx="2" ry="2"
+              fill="var(--mid-grey)" />
+        <line x1="-117.3" y1="66.9" x2="-112.9" y2="70"/>
+        <line x1="108.6" y1="-74.5" x2="113.2" y2="-71.6"/>
+      </g>
+
+      <g id="pc-screen-components">
+        <rect id="pc-screen"
+              fill="var(--white)" stroke="var(--outline-color)"
+              stroke-linecap="butt" stroke-width="1"
+              x="-108" y="-64.5" width="216" height="129"/>
+        <path id="reflection"
+              fill="none" stroke="var(--light-grey)"
+              stroke-linecap="round" stroke-width="1"
+              d="M109 -64v129.5h-215.7"/>
+      </g>
+
+      <g id="pātaka-pc"
+         fill="var(--pātaka-color)" stroke="var(--outline-color)"
+         stroke-dashoffset="0" stroke-linecap="round" stroke-width=".2">
+        <path	d="M-19.3 15.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
+        <path	d="M-15 26.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+      </g>
+
+    </g>
+
+  </defs>
+
   <g id="everything">
 
     <g id="pi"
@@ -362,49 +411,7 @@
               fill="var(--mid-grey)" stroke="var(--devices-color)" ry="1"/>
       </g>
 
-      <g id="monitor">
-
-        <g id="stand"
-           stroke="var(--outline-color)" stroke-linecap="round" stroke-width="1">
-          <path fill="var(--mid-grey)"
-  			        d="M543.3 465.1h-90.7l27.2 21.3h90.7z"/>
-          <path fill="var(--mid-grey)"
-  			        d="M-536.2 429.2h47.9V475h-47.9z" transform="scale(-1 1)"/>
-          <path fill="var(--devices-color)"
-  			        d="M485.3 429.2h3V475l-3-3.3z"/>
-        </g>
-
-        <g id="screen-frame"
-           stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
-          <path fill="var(--mid-grey)"
-  			        d="M621.8 285.6H393.3v141.8l3.6 2.8 228-.5-.6-142.2z"/>
-          <path fill="var(--devices-color)"
-  			        d="M393.3 285.6v140.8l3.6 2.8-.6-141.2z"/>
-          <path fill="var(--mid-light-grey)"
-  			        d="M396.3 288l228-.5-2.5-1.9H393.3z"/>
-        </g>
-
-        <g id="pc-screen-components">
-          <path id="pc-screen"
-                fill="var(--white)" stroke="var(--outline-color)"
-                stroke-linecap="butt" stroke-width="1"
-    			      d="M401.8 294.6h215.7v129H401.8z"/>
-          <path id="reflection"
-                fill="none" stroke="var(--light-grey)"
-                stroke-linecap="round" stroke-width="1"
-    			      d="M618.4 295v129.5H402.1"/>
-
-          <g id="pātaka-pc"
-             fill="var(--pātaka-color)" stroke="var(--outline-color)"
-             stroke-dashoffset="0" stroke-linecap="round" stroke-width=".2">
-            <path	d="M495.3 369.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
-            <path	d="M499.6 380.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
-          </g>
-
-        </g>
-
-      </g>
-
+      <use xlink:href="#monitor" x="530" y="380" />
     </g>
 
     <g id="servers"
@@ -507,7 +514,7 @@
            stroke-width=".5">
           <circle cx="832.4" cy="482.1" r="2.6"/>
           <circle cx="845.5" cy="482.1" r="2.6"/>
-          <circle cx="858.7" cy="482.1" r="2.6"/>
+          <circle cx="858.6" cy="482.1" r="2.6"/>
         </g>
 
         <g id="front-vents"
@@ -551,4 +558,5 @@
     </g>
 
   </g>
+
 </svg>

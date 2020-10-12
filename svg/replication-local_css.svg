@@ -1,0 +1,1031 @@
+<svg id="replication-local"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="000 0 1000 1000">
+
+  <title>Replication via WiFi router</title>
+
+  <style>
+    /* <![CDATA[ */
+    :root {
+      --disconnection-color: hsl(0, 0%, 60%);
+      --internet-color: hsl(146, 50.3%, 36.3%);
+      --imac-user-color: hsl(42, 74.9%, 56.3%);
+      --imac-user-tint: hsl(42, 90%, 95%);
+      --laptop-user-color: hsl(360, 65.4%, 42%);
+      --laptop-user-tint: hsl(0, 85%, 95%);
+      --icon-bg-color: hsl(180, 25.4%, 40%);
+      --outline-color: hsl(0, 0%, 22%);
+      --white: hsl(0, 0%, 100%);
+      --mid-grey: hsl(0, 0%, 41.2%);
+      --devices-color: hsl(0, 0%, 29.8%);
+      --pounamu: hsl(118, 100.0%, 9.4%);
+      --local-color-tint: hsl(210, 14.3%, 90%);
+      --local-color: hsl(210, 14.3%, 53.3%);
+      --local-color-shade: hsl(210, 24%, 22%);
+    }
+    .packet {
+      opacity: 0;
+      stroke-dasharray: .04 .002 .008 .004 .006 .006 .004 .008 .002 1;
+      stroke-dashoffset: 1.074;
+    }
+
+    #house, #no-connection-left, #no-connection-right, #no-connection-label, #local-connection-light-a, #local-connection-light-b, #connected-internet, #internet-connected-arrow, #internet-connected-light, #internet-connection-left, #internet-connection-right, #symbol-wave-a, #symbol-wave-b, #symbol-wave-c, #internet-wave-a, #internet-wave-b, #internet-wave-c, #internet-connection-label, #disconnected-internet, #internet-disconnected-line, #x-disconnected, #local-connection-left, #local-connection-right, #local-wave-a, #local-wave-b, #local-wave-c, #local-connection-label, #laptop, #add-icon-right, #kuia-laptop, #copy-kuia-right, #laptop-to-router, #router-to-imac, #copy-kuia-left, #imac, #kuia-imac, #add-icon-left, #koro-imac, #link-left, #copy-koro-left, #imac-to-router, #router-to-laptop, #copy-koro-right, #koro-laptop, #link-right {
+      animation-duration: 46.6s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    #bottom-to-top-reverse, #left-to-right, #top-to-bottom-reverse, #right-to-left, #bottom-to-top, #left-to-right-reverse, #top-to-bottom, #right-to-left-reverse {
+      animation-duration: 46.6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    #house { animation-name: house-anim; }
+  	@keyframes house-anim {
+      0%, 2.15% { opacity: 0; }
+      4.29% { opacity: 1; }
+      97.85% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    #no-connection-left { animation-name: no-connection-left-anim; }
+  	@keyframes no-connection-left-anim {
+      0%, 4.29% { opacity: 0; }
+      6.44% { opacity: 1; }
+      10.73% { opacity: 1; }
+      12.87%, 100% { opacity: 0; }
+    }
+    #no-connection-right { animation-name: no-connection-right-anim; }
+  	@keyframes no-connection-right-anim {
+      0%, 4.29% { opacity: 0; }
+      6.44% { opacity: 1; }
+      10.73% { opacity: 1; }
+      12.87%, 100% { opacity: 0; }
+    }
+    #no-connection-label { animation-name: no-connection-label-anim; }
+  	@keyframes no-connection-label-anim {
+      0%, 4.29% { opacity: 0; }
+      6.44% { opacity: 1; }
+      10.73% { opacity: 1; }
+      12.87%, 100% { opacity: 0; }
+    }
+    #local-connection-light-a { animation-name: local-connection-light-a-anim; }
+    @keyframes local-connection-light-a-anim {
+        0%, 10.73% { opacity: 0; },
+        11.8%, 100% { opacity: 1;  }
+    }
+    #local-connection-light-b { animation-name: local-connection-light-b-anim; }
+    @keyframes local-connection-light-b-anim {
+      0%, 11.27% { opacity: 0; },
+      12.34%, 100% { opacity: 1; }
+    }
+    #connected-internet { animation-name: connected-internet-anim; }
+  	@keyframes connected-internet-anim {
+      0%, 11.27% { opacity: 0; }
+      15.56% { opacity: 1; }
+      33.58% { opacity: 1; }
+      35.73%, 100% { opacity: 0; }
+    }
+    #bottom-to-top-reverse { animation-name: bottom-to-top-reverse-anim; }
+  	@keyframes bottom-to-top-reverse-anim {
+      0%, 13.41% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      13.74% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      16.31% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      16.63%, 100% { opacity: 0; }
+    }
+    #left-to-right { animation-name: left-to-right-anim; }
+  	@keyframes left-to-right-anim {
+      0%, 13.95% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      14.27% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      16.85% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      17.17%, 100% { opacity: 0; }
+    }
+    #top-to-bottom-reverse { animation-name: top-to-bottom-reverse-anim; }
+  	@keyframes top-to-bottom-reverse-anim {
+      0%, 14.48% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      14.49% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      14.81% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      17.38% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      17.71%, 100% { opacity: 0; }
+    }
+    #right-to-left { animation-name: right-to-left-anim; }
+  	@keyframes right-to-left-anim {
+      0%, 15.02% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      15.34% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      17.92% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      18.24%, 100% { opacity: 0; }
+    }
+    #bottom-to-top { animation-name: bottom-to-top-anim; }
+  	@keyframes bottom-to-top-anim {
+      0%, 15.56% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      15.88% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      18.46% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      18.78%, 100% { opacity: 0; }
+    }
+    #left-to-right-reverse { animation-name: left-to-right-reverse-anim; }
+  	@keyframes left-to-right-reverse-anim {
+      0%, 16.09% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      16.1% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      16.42% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      18.99% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      19.31%, 100% { opacity: 0; }
+    }
+    #top-to-bottom { animation-name: top-to-bottom-anim; }
+  	@keyframes top-to-bottom-anim {
+      0%, 16.63% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      16.95% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      19.53% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      19.85%, 100% { opacity: 0; }
+    }
+    #right-to-left-reverse { animation-name: right-to-left-reverse-anim; }
+  	@keyframes right-to-left-reverse-anim {
+      0%, 17.17% { stroke-dashoffset: 0.074px;
+  			       opacity: 0; }
+      17.49% { stroke-dashoffset: 0.174px;
+  			       opacity: 1; }
+      20.07% { stroke-dashoffset: 0.974px;
+  			       opacity: 1; }
+      20.39%, 100% { opacity: 0; }
+    }
+    #internet-connected-arrow { animation-name: internet-connected-arrow-anim; }
+  	@keyframes internet-connected-arrow-anim {
+      0%, 17.17% { transform: scale(0); }
+      18.24% { transform: scale(1); }
+      34.12% { opacity: 1;
+  			       transform: scale(1); }
+      35.19%, 100% { opacity: 0;
+  			       transform: scale(0.8); }
+    }
+    #internet-connected-light { animation-name: internet-connected-light-anim; }
+  	@keyframes internet-connected-light-anim {
+      0%, 19.31% { opacity: 0; }
+      20.39% { opacity: 1; }
+      34.66% { opacity: 1; }
+      35.73%, 100% { opacity: 0; }
+    }
+    #internet-connection-left { animation-name: internet-connection-left-anim; }
+  	@keyframes internet-connection-left-anim {
+      0%, 19.64% { opacity: 0; }
+      21.78% { opacity: 1; }
+      31.44% { opacity: 1; }
+      33.58%, 100% { opacity: 0; }
+    }
+    #internet-connection-right { animation-name: internet-connection-right-anim; }
+  	@keyframes internet-connection-right-anim {
+      0%, 19.64% { opacity: 0; }
+      21.78% { opacity: 1; }
+      31.44% { opacity: 1; }
+      33.58%, 100% { opacity: 0; }
+    }
+    #symbol-wave-a { animation-name: symbol-wave-a-anim; }
+  	@keyframes symbol-wave-a-anim {
+      0%, 19.64% { opacity: 0; }
+      20.71% { opacity: 1; }
+      21.78% { opacity: 1; }
+      22.86% { opacity: 0; }
+      23.93% { opacity: 1; }
+      37.48% { opacity: 1; }
+      37.88% { opacity: 0; }
+      38.95% { opacity: 1; }
+      40.02% { opacity: 1; }
+      41.09% { opacity: 0; }
+      42.17%, 100% { opacity: 1; }
+    }
+    #symbol-wave-b { animation-name: symbol-wave-b-anim; }
+  	@keyframes symbol-wave-b-anim {
+      0%, 20.17% { opacity: 0; }
+      21.25% { opacity: 1; }
+      22.32% { opacity: 1; }
+      23.39% { opacity: 0; }
+      24.46% { opacity: 1; }
+      38.01% { opacity: 1; }
+      38.41% { opacity: 0; }
+      39.49% { opacity: 1; }
+      40.56% { opacity: 1; }
+      41.63% { opacity: 0; }
+      42.7%, 100% { opacity: 1; }
+    }
+    #symbol-wave-c { animation-name: symbol-wave-c-anim; }
+  	@keyframes symbol-wave-c-anim {
+      0%, 20.71% { opacity: 0; }
+      21.78% { opacity: 1; }
+      22.86% { opacity: 1; }
+      23.93% { opacity: 0; }
+      25% { opacity: 1; }
+      38.55% { opacity: 1; }
+      38.95% { opacity: 0; }
+      40.02% { opacity: 1; }
+      41.09% { opacity: 1; }
+      42.17% { opacity: 0; }
+      43.24%, 100% { opacity: 1; }
+    }
+    #internet-wave-a { animation-name: internet-wave-a-anim; }
+    @keyframes internet-wave-a-anim {
+      0%, 19.85% { opacity: 0; }
+      20.92% { opacity: 1; }
+      35.19% { opacity: 1; }
+      37.34%, 100% { opacity: 0; }
+    }
+    #internet-wave-b { animation-name: internet-wave-b-anim; }
+    @keyframes internet-wave-b-anim {
+      0%, 20.28% { opacity: 0; }
+      21.35% { opacity: 1; }
+      35.19% { opacity: 1; }
+      37.34%, 100% { opacity: 0; }
+    }
+    #internet-wave-c { animation-name: internet-wave-c-anim; }
+    @keyframes internet-wave-c-anim {
+      0%, 20.71% { opacity: 0; }
+      21.78% { opacity: 1; }
+      35.19% { opacity: 1; }
+      37.34%, 100% { opacity: 0; }
+    }
+    #internet-connection-label { animation-name: internet-connection-label-anim; }
+  	@keyframes internet-connection-label-anim {
+      0%, 21.78% { opacity: 0; }
+      23.93% { opacity: 1; }
+      31.44% { opacity: 1; }
+      33.58%, 100% { opacity: 0; }
+    }
+    #disconnected-internet { animation-name: disconnected-internet-anim; }
+  	@keyframes disconnected-internet-anim {
+      0%, 33.58% { opacity: 0; }
+      35.73% { opacity: 1; }
+      97.85% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    #internet-disconnected-line { animation-name: internet-disconnected-line-anim; }
+  	@keyframes internet-disconnected-line-anim {
+      0%, 34.12% { opacity: 0; }
+      35.19% { opacity: 1; }
+      97.85% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    #x-disconnected { animation-name: x-disconnected-anim; }
+    @keyframes x-disconnected-anim {
+      0%, 34.66% { transform: scale(0); }
+      35.73% { transform: scale(1); }
+      97.85% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    #local-connection-left { animation-name: local-connection-left-anim; }
+  	@keyframes local-connection-left-anim {
+      0%, 36.8% { opacity: 0; }
+      38.95% { opacity: 1; }
+      47.53% { opacity: 1; }
+      49.68%, 100% { opacity: 0; }
+    }
+    #local-connection-right { animation-name: local-connection-right-anim; }
+  	@keyframes local-connection-right-anim {
+      0%, 36.8% { opacity: 0; }
+      38.95% { opacity: 1; }
+      47.53% { opacity: 1; }
+      49.68%, 100% { opacity: 0; }
+    }
+    #local-wave-a { animation-name: local-wave-a-anim; }
+    @keyframes local-wave-a-anim {
+      0%, 37.88% { opacity: 0; }
+      40.02%, 100% { opacity: 1; }
+    }
+    #local-wave-b { animation-name: local-wave-b-anim; }
+    @keyframes local-wave-b-anim {
+      0%, 37.88% { opacity: 0; }
+      40.02%, 100% { opacity: 1; }
+    }
+    #local-wave-c { animation-name: local-wave-c-anim; }
+    @keyframes local-wave-c-anim {
+      0%, 37.88% { opacity: 0; }
+      40.02%, 100% { opacity: 1; }
+    }
+    #local-connection-label { animation-name: local-connection-label-anim; }
+  	@keyframes local-connection-label-anim {
+      0%, 41.09% { opacity: 0; }
+      43.24% { opacity: 1; }
+      47.53% { opacity: 1; }
+      49.68%, 100% { opacity: 0; }
+    }
+    #laptop { animation-name: laptop-anim; }
+  	@keyframes laptop-anim {
+      0%, 50.75% { transform: scale(1.2); }
+      51.82% { transform: scale(2.2); }
+      58.8% { transform: scale(2.2); }
+      60.51% { transform: scale(1.2); }
+      78.11% { transform: scale(1.2); }
+      79.19% { transform: scale(2.2); }
+      85.41% { transform: scale(2.2); }
+      87.13%, 100% { transform: scale(1.2); }
+    }
+    #add-icon-right { animation-name: add-icon-right-anim; }
+  	@keyframes add-icon-right-anim {
+      0%, 52.25% { opacity: 0;
+  			       transform: scale(0); }
+      52.79% { opacity: 1;
+  			       transform: scale(1.05); }
+      53.86% { opacity: 1;
+  			       transform: scale(1); }
+      54.29% { opacity: 1;
+  			       transform: scale(0.8); }
+      54.72%, 100% { opacity: 1;
+  			       transform: scale(1); }
+    }
+    #kuia-laptop { animation-name: kuia-laptop-anim; }
+  	@keyframes kuia-laptop-anim {
+      0%, 54.72% { opacity: 0; }
+      55.36%, 100% { opacity: 1; }
+    }
+    #copy-kuia-right { animation-name: copy-kuia-right-anim; }
+  	@keyframes copy-kuia-right-anim {
+      0%, 56.76% { transform: scale(0);
+  			       transform-origin: 752.5px 567.5px 0px; }
+      57.72% { transform: scale(1);
+  			       transform-origin: 752.5px 557.5px 0px; }
+      58.69% { transform: scale(1);
+  			       transform-origin: 752.5px 557.5px 0px; }
+      59.66%, 100% { transform: scale(0);
+  			       transform-origin: 690px 516.24px 0px; }
+		}
+    #laptop-to-router { animation-name: laptop-to-router-anim; }
+  	@keyframes laptop-to-router-anim {
+      0%, 59.76% { transform: scale(0); }
+      60.84% { transform: scale(0.9); }
+      63.84% { opacity: 1; }
+      64.91%, 100% { opacity: 0; }
+    }
+    #router-to-imac { animation-name: router-to-imac-anim; }
+  	@keyframes router-to-imac-anim {
+      0%, 60.51% { transform: scale(0); }
+      61.59% { transform: scale(0.9); }
+      63.84% { opacity: 1; }
+      64.91%, 100% { opacity: 0; }
+    }
+    #copy-kuia-left { animation-name: copy-kuia-left-anim; }
+  	@keyframes copy-kuia-left-anim {
+      0%, 60.51% { transform: scale(0);
+  			       opacity: 1; }
+      61.48% { transform: scale(0);
+  			       opacity: 1; }
+      62.45% { transform: scale(1);
+  			       opacity: 1; }
+      63.41% { transform: scale(1);
+  			       opacity: 1; }
+      64.38%, 100% { transform: scale(1);
+  			       opacity: 0; }
+		}
+    #imac { animation-name: imac-anim; }
+  	@keyframes imac-anim {
+      0%, 60.73% { transform: scale(1.2); }
+      61.8% { transform: scale(2); }
+      76.18% { transform: scale(2); }
+      77.9%, 100% { transform: scale(1.2); }
+    }
+    #kuia-imac { animation-name: kuia-imac-anim; }
+  	@keyframes kuia-imac-anim {
+      0%, 63.52% { opacity: 0; }
+      64.16%, 100% { opacity: 1; }
+    }
+    #add-icon-left { animation-name: add-icon-left-anim; }
+  	@keyframes add-icon-left-anim {
+      0%, 67.06% { opacity: 0;
+  			       transform: scale(1); }
+      67.21% { opacity: 0;
+  			       transform: scale(0); }
+      67.75% { opacity: 1;
+  			       transform: scale(1.05); }
+      68.82% { opacity: 1;
+  			       transform: scale(1); }
+      70.97% { opacity: 1;
+  			       transform: scale(1); }
+      71.4% { opacity: 1;
+  			       transform: scale(0.8); }
+      71.83% { opacity: 1;
+  			       transform: scale(1); }
+      72.25%, 100% { opacity: 0;
+  			       transform: scale(1); }
+    }
+    #koro-imac { animation-name: koro-imac-anim; }
+  	@keyframes koro-imac-anim {
+      0%, 71.83% { opacity: 0; }
+      72.47%, 100% { opacity: 1; }
+    }
+    #link-left { animation-name: link-left-anim; }
+  	@keyframes link-left-anim {
+      0%, 72.15% { transform: scale(0); }
+      73.22%, 100% { transform: scale(1); }
+    }
+    #copy-koro-left { animation-name: copy-koro-left-anim; }
+  	@keyframes copy-koro-left-anim {
+      0%, 73.18% { opacity: 0;
+  			       transform: scale(1);
+  			       transform-origin: 265px 500px 0px; }
+      74.14% { opacity: 0;
+  			       transform: scale(0);
+  			       transform-origin: 261px 543px 0px; }
+      75.11% { opacity: 1;
+  			       transform: scale(1);
+  			       transform-origin: 261px 543px 0px; }
+      76.07% { opacity: 1;
+  			       transform: scale(1);
+  			       transform-origin: 261px 500px 0px; }
+      77.04%, 100% { opacity: 0;
+  			       transform: scale(0);
+  			       transform-origin: 261px 500px 0px; }
+		}
+    #imac-to-router { animation-name: imac-to-router-anim; }
+  	@keyframes imac-to-router-anim {
+      0%, 77.15% { transform: scale(0); }
+      78.22% { transform: scale(0.9); }
+      82.19% { opacity: 1; }
+      83.26%, 100% { opacity: 0; }
+    }
+    #router-to-laptop { animation-name: router-to-laptop-anim; }
+  	@keyframes router-to-laptop-anim {
+      0%, 77.9% { transform: scale(0); }
+      78.97% { transform: scale(0.9); }
+      82.19% { opacity: 1; }
+      83.26%, 100% { opacity: 0; }
+    }
+    #copy-koro-right { animation-name: copy-koro-right-anim; }
+  	@keyframes copy-koro-right-anim {
+      0%, 78.11% { transform: scale(0);
+  			       opacity: 1; }
+      79.08% { transform: scale(0);
+  			       opacity: 0; }
+      80.04% { transform: scale(1);
+  			       opacity: 1; }
+      81.01% { transform: scale(1);
+  			       opacity: 1; }
+      81.98%, 100% { transform: scale(1);
+  			       opacity: 0; }
+		}
+    #koro-laptop { animation-name: koro-laptop-anim; }
+  	@keyframes koro-laptop-anim {
+      0%, 80.69% { opacity: 0; }
+      81.33%, 100% { opacity: 1; }
+    }
+    #link-right { animation-name: link-right-anim; }
+  	@keyframes link-right-anim {
+      0%, 81.65% { transform: scale(0); }
+      82.73%, 100% { transform: scale(1); }
+    }
+    /* ]]> */
+  </style>
+
+  <defs>
+    <marker id="marker-curve-left"
+            refX="0" refY="0" orient="auto" overflow="visible">
+      <path stroke="var(--imac-user-color)" fill="none"
+            stroke-width="1" stroke-linejoin="round" stroke-linecap="round"
+            d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
+    </marker>
+    <marker id="start-marker-internet"
+            orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--internet-color)"
+            d="M10.69-4.44L-1.33-.02 10.7 4.4a-7.52 7.52 0 010 -8.84z"/>
+    </marker>
+    <marker id="end-marker-internet"
+			      orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--internet-color)"
+            d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
+    </marker>
+    <marker id="marker-disconnected"
+            orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="none" stroke="var(--disconnection-color)"
+            d="m -1,3.9 10,-3.9 -10,-3.9 c 1.9,2.6 1.9,5.2 0,7.8 z"/>
+    </marker>
+
+    <marker id="marker-left"
+			      orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--imac-user-color)"
+            d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
+    </marker>
+    <marker id="marker-right"
+			      orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--laptop-user-color)"
+            d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
+    </marker>
+    <g id="wifi-symbol"
+       stroke-width=".5" stroke-linejoin="round">
+      <circle cx="24" cy="40" r="1.75"/>
+      <path d="M24 28.12c-2.7 0-4.79.74-6.26 1.59-1.47.84-2.48 1.88-2.62 1.99l2.18 2.73c.68-.54 1.17-1.1 2.19-1.69A8.69 8.69 0 0124 31.62c2.07 0 3.5.55 4.54 1.15 1.04.6 1.46 1.13 2.15 1.67l2.17-2.74c-.02-.02-1.09-1.1-2.56-1.95a12.44 12.44 0 00-6.3-1.63z"/>
+      <path d="M24 16a22 22 0 00-10.96 3.02c-2.73 1.56-4.64 3.36-5.16 3.78l2.2 2.73c.9-.73 2.35-2.13 4.7-3.48A18.43 18.43 0 0124 19.5c3.77-.01 6.87 1.24 9.2 2.62 1.17.69 2.14 1.41 2.9 2.02.75.6 1.2 1.05 1.69 1.42l2.11-2.8c-.1-.08-.76-.66-1.6-1.34-.85-.68-1.96-1.51-3.31-2.31a21.4 21.4 0 00-11-3.11z"/>
+      <path d="M24 3.7A32.73 32.73 0 007.41 8.27c-2 1.16-3.6 2.36-4.77 3.32-1.18.95-2.1 1.8-2.1 1.8l2.13 2.78c.58-.45 1.11-1 2.18-1.87a33.9 33.9 0 014.33-3.01 28.93 28.93 0 0129.52-.1 32.99 32.99 0 014.3 2.97c1.07.88 1.7 1.5 2.27 1.95l2.15-2.76c-.15-.11-1.03-.93-2.21-1.9a36.48 36.48 0 00-4.75-3.3A32.53 32.53 0 0024 3.7z"/>
+    </g>
+    <g id="animated-wifi-symbol"
+       stroke-width=".5" stroke-linejoin="round">
+      <circle cx="24" cy="40" r="1.75"/>
+      <path id="symbol-wave-a" class="symbol-wave"
+            d="M24 28.12c-2.7 0-4.79.74-6.26 1.59-1.47.84-2.48 1.88-2.62 1.99l2.18 2.73c.68-.54 1.17-1.1 2.19-1.69A8.69 8.69 0 0124 31.62c2.07 0 3.5.55 4.54 1.15 1.04.6 1.46 1.13 2.15 1.67l2.17-2.74c-.02-.02-1.09-1.1-2.56-1.95a12.44 12.44 0 00-6.3-1.63z"/>
+      <path id="symbol-wave-b" class="symbol-wave"
+            d="M24 16a22 22 0 00-10.96 3.02c-2.73 1.56-4.64 3.36-5.16 3.78l2.2 2.73c.9-.73 2.35-2.13 4.7-3.48A18.43 18.43 0 0124 19.5c3.77-.01 6.87 1.24 9.2 2.62 1.17.69 2.14 1.41 2.9 2.02.75.6 1.2 1.05 1.69 1.42l2.11-2.8c-.1-.08-.76-.66-1.6-1.34-.85-.68-1.96-1.51-3.31-2.31a21.4 21.4 0 00-11-3.11z"/>
+      <path id="symbol-wave-c" class="symbol-wave"
+            d="M24 3.7A32.73 32.73 0 007.41 8.27c-2 1.16-3.6 2.36-4.77 3.32-1.18.95-2.1 1.8-2.1 1.8l2.13 2.78c.58-.45 1.11-1 2.18-1.87a33.9 33.9 0 014.33-3.01 28.93 28.93 0 0129.52-.1 32.99 32.99 0 014.3 2.97c1.07.88 1.7 1.5 2.27 1.95l2.15-2.76c-.15-.11-1.03-.93-2.21-1.9a36.48 36.48 0 00-4.75-3.3A32.53 32.53 0 0024 3.7z"/>
+    </g>
+    <g id="kuia"
+       transform="scale(.085)">
+      <defs>
+        <clipPath id="outline-circle">
+          <circle cx="242.4" cy="242.5" r="242.1"/>
+        </clipPath>
+      </defs>
+      <circle id="bg" cx="242.4" cy="242.5" r="242.1" fill="var(--icon-bg-color)"/>
+      <g clip-path="url(#outline-circle)">
+        <path id="kahu"
+              d="M62.9 422.3l130.5-32 188.5-60.5 44 67v24l-139.5 86.5s-137.5-4.5-139-5.5-84.5-79.5-84.5-79.5z"/>
+        <path id="skin"
+              fill="var(--white)"
+              d="M178.4 397.3l202-65s21.5 19.5 22.5 28.5c.9 8.4 10.9 46 12.3 51.4 4.4-4.5 8.7-9.2 12.7-14l-19.7-66.4-76.5-70s-3.2-86.2-3.2-92.6c0-6.5-30.2-70-30.2-70s-30.2-33.4-44.2-37.7c-14-4.3-34.5 5.4-34.5 5.4l-34.5 47.4L132.5 253 112 340.3l-40.6 64 107-7z"/>
+        <path fill="var(--white)"
+              d="M312 396.8c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
+              m-43.1-5.7c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
+              m-14 31.3c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9c1 2.1 0 4.6-2 5.5-.5.3-1.1.4-1.7.4z
+              M382.1 401.4c-1.6 0-3.1-.9-3.8-2.4L354 346.1a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.8 5.9z
+              M362 433.3c-1.6 0-3.1-.9-3.8-2.4L333.8 378a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z"/>
+        <path d="M110.3 419.3l-18.5-58.4 293.4-92.7 18.5 58.4-293.4 92.7zm-8-53l13.4 42.5 277.5-87.6-13.4-42.5-277.5 87.6z"/>
+        <defs>
+          <clipPath id="c">
+            <path id="b"
+        d="M142.4 348.5l178.6-56 23.4.8 23.4 9.2 12 16 5.2 10.8-220.6 67.2-22.7-31.2z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#c)">
+          <path id="d"
+                d="M154.1 412.6l-7.4-3.8 21-40.4-38.8-20.1 3.9-7.4 46.1 23.9z"/>
+          <g fill="var(--laptop-user-color)">
+            <use xlink:href="#d" x="0" y="0" />
+            <use xlink:href="#d" x="35" y="-11" />
+            <use xlink:href="#d" x="70" y="-22" />
+            <use xlink:href="#d" x="105" y="-33" />
+            <use xlink:href="#d" x="140" y="-44" />
+            <use xlink:href="#d" x="175" y="-55" />
+            <use xlink:href="#d" x="210" y="-66" />
+          </g>
+          <g>
+            <use xlink:href="#d" x="-17.5" y="5.5" />
+            <use xlink:href="#d" x="17.5" y="-5.5" />
+            <use xlink:href="#d" x="52.5" y="-16.5" />
+            <use xlink:href="#d" x="87.5" y="-27.5" />
+            <use xlink:href="#d" x="122.5" y="-38.5" />
+            <use xlink:href="#d" x="157.5" y="-49.5" />
+            <use xlink:href="#d" x="192.5" y="-60.5" />
+          </g>
+        </g>
+        <g id="hair"
+           fill="var(--mid-grey)">
+          <path d="M190.9 149c13-15.1-3-34.1 9.4-44.9 8-7 34.4-11.5 37.9-16 1.8-2.3 2.8-.4 2.5-17.7-.1-6.5.2-7.2-1.2-9.5s-13.7-7.9-40.1 4.2-46.4 68.6-51 82.6-14.8 30.6-26 37.6c-11.1 7-32 11.6-33.4 29.2s.5 26.4-10.2 34.3-23.5 9.9-20.4 29.2c4.4 27.4-6.1 40.3-11.6 48.7-36.4 55.6 30.4 90.9 30.4 90.9S33 366.1 159.4 298.8c24.1-12.8 36.7-8.8 51.5-25.7 6.5-7.4 5.6-28.8 2.8-36.6-2.4-6.9-12.1-9.3-19.9-39.9-5.2-20-9.9-39.4-2.9-47.6z"/>
+          <path d="M294.8 149c-13-15.1 3-34.1-9.4-44.9-8-7-34.4-11.5-37.9-16-1.8-2.3-2.8-.4-2.5-17.7.1-6.5-.2-7.2 1.2-9.5s13.7-7.9 40.1 4.2 46.4 68.6 51 82.6c4.6 13.9 14.8 30.6 26 37.6 11.1 7 32 11.6 33.4 29.2s-.5 26.4 10.2 34.3 23.5 9.9 20.4 29.2c-4.4 27.4 6.1 40.3 11.6 48.7 36.4 55.6-26 86.5-26 86.5S389.7 295.5 326.2 296c-27.3.2-36.4-5.8-51.2-22.7-6.5-7.4-5.6-28.8-2.8-36.6 2.5-6.9 12.1-9.3 19.9-39.9 4.9-20.2 9.7-39.6 2.7-47.8zm-108 138.5s-48.2 10.1-37.6 61.2 55 56.1 55 56.1-98.4 69.8-159.1-16.6c-34.3-49.1 141.7-100.7 141.7-100.7z"/>
+        </g>
+        <path id="lips"
+              d="M242.1 211.9 l3-1.8 s7.7-.8 12 .3 5.9 2.6 5.9 2.6-5 6-6.1 6.7 c-3 1.7-8.1 3.8-12.4 3.4L242.1 222.9 m0 -11l-3-1.8s-7.7-.8-12 .3-5.9 2.6-5.9 2.6 5 6 6.1 6.7c3 1.7 8.1 3.8 12.4 3.4L242.1 222.9"/>
+      </g>
+      <g id="moko-kauae"
+         fill="none" stroke="var(--outline-color)"
+         stroke-linecap="round" stroke-width="3">
+        <path d="M245.5 221.5v22.3m4.4-22.3V237m-9-15.5v22.3m-4.4-22.3V237"/>
+        <path d="m 249.9,236.6 c -0.014,1.39 -0.33,4.05 1.16,5.86 1.58,1.92 4.17,1.58 5.23,0.12 1.63,-2.23 0.28,-4.58 -1.33,-4.62"/>
+        <path d="m 236.5,236.6 c 0.014,1.39 0.33,4.05 -1.16,5.86 -1.58,1.92 -4.17,1.58 -5.23,0.12 -1.63,-2.23 -0.28,-4.58 1.33,-4.62"/>
+      </g>
+      <path id="chin-outline"
+            fill="var(--mid-grey)"
+            d="M260.8 248.2c-4 2.9-10.4 4.5-17.5 4.5-7.4 0-12.9-1.4-17.2-4.5l-.8-.5c-1.6-1-5.5-3.5-11.2-10.8l-1.7-2.2-1.4-1.8a30 30 0 013.2 12c4.1 4.4 7 6.2 8.4 7.1l.5.4a33.2 33.2 0 0020.1 5.4 36 36 0 0020.4-5.4c1.1-.8 3.7-2.6 7.8-7.2.1-1.2.8-7.8 2.8-11.5a56.7 56.7 0 01-13.4 14.5z"/>
+    </g>
+    <g id="koro"
+     transform="scale(.085)">
+      <circle cx="242.5" cy="243.5" r="242.1" fill="var(--icon-bg-color)"/>
+      <defs>
+        <clipPath id="bg-circle">
+          <circle cx="242.5" cy="243.5" r="242.1"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#bg-circle)">
+        <path fill="var(--white)"
+              d="M205.6 263.4l-3.3-23.3-24-49.3-1.3-27.4 1.3-44 24-44.7 42-2 38 2S295.6 97.4 299 100s2.7 46.7 2.7 46.7l3.4 19.8-.2 17.4-13.2 29.5-17.3 30-13.4 31.3-32.7 1.3-22.7-12.6z"/>
+        <polygon fill="var(--white)"
+                 points="260 490 315 480 295 450 275 450"/>
+        <polygon points="64.1 431.5 77.6 387.9 275.6 453 252.6 518 87.1 496.5 47.1 474.5"/>
+        <polygon points="311.1 430 349.6 512.5 432.1 425.5 403.5 385.5"/>
+        <polygon fill="var(--mid-grey)"
+                 points="271.7 452.9 294.9 383.4 315.3 430 405.8 382.4 374.5 318.7 283.4 389.2 100.1 321.6 78.6 387.3 271.6 452.9"/>
+        <path d="M81.3 388.7a4.4 4.4 0 01-4.1-6L98.5 325a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.6 4.6 0 01-4.2 2.9z"/>
+        <path d="M71.5 413.9a4 4 0 01-1.5-.3 4.3 4.3 0 01-2.6-5.6l31.1-85.1a4.3 4.3 0 015.6-2.6c2.3.8 3.5 3.4 2.6 5.6L75.6 411a4.3 4.3 0 01-4.1 2.9z"/>
+        <path fill="var(--white)"
+              d="M372 325.5s-.5-9.8-19.1-18.6-55.4-9.8-60.3-12.7c-4.9-2.9-11.8-22-11.8-22V235l-3.5.8c-5.9 8.1-11.7 18.2-13.2 20.8-2.2 3.7-24.5 4.6-24.5 4.6s-23-1-25.2-4.6c-1.6-2.6-7.5-12.9-13.4-21.1l-2-.5v37.2s-6.9 19.1-11.8 22-41.7 3.9-60.3 12.7-18.9 18.6-18.9 18.6l186.2 65-3.9-1 81.7-64z"/>
+        <path d="M293.3 394.1l-11.2-2.8 1-.8-178.9-62.4.1-2.8c.1-1.2 1.2-12.3 21.2-21.8 12.2-5.8 31.2-8.3 45.1-10.1 6.3-.8 13.5-1.8 14.9-2.5a61.7 61.7 0 009.9-19.5v-41.2l7.8 1.8.8 1.1c5.3 7.4 10.6 16.3 12.9 20.1l.5.9a79 79 0 0043.8 0l.6-1.1c2.2-3.7 7.4-12.5 12.6-19.6l.8-1.1 9.3-2.1v41.2c3.4 9.3 8 18.4 10 19.5 1.4.7 8.6 1.7 14.9 2.5 13.9 1.8 32.9 4.3 45 10.1 20 9.5 21.1 20.5 21.2 21.8l.1 1.9-81.7 63.9-.7 3zm-180.7-70.8l177.3 61.9 78-61c-1.2-2.7-4.9-8.4-16.5-13.9-11.1-5.3-29.5-7.7-42.9-9.4a63.8 63.8 0 01-17.7-3.5c-5.6-3.4-11.6-19.2-13.3-24l-.2-.6v-30.4c-3.8 5.7-7.3 11.6-9 14.5l-.9 1.4c-3.2 5.4-21.5 6.2-27.5 6.4h-.4c-25-1.1-27.4-5.1-28.2-6.4l-.8-1.3c-1.5-2.6-4.5-7.6-7.8-12.7v28.5l-.2.6c-1.7 4.8-7.7 20.6-13.3 24a63.8 63.8 0 01-17.7 3.5c-13.4 1.8-31.7 4.1-42.9 9.4-10.4 4.9-14.5 10-16 13z"/>
+        <path d="M199.1 238.8c-.2-.4-22.3-35.8-24.3-48.7l-1.1-6.3c-1.2-6.1-2.1-11-.2-17.4 2.1-6.9 3.8-22.1 3.8-22.3l7.3.8c-.1.6-1.8 16-4.1 23.6-1.4 4.7-.7 8.3.4 13.9l1.2 6.5c1.2 8 14.3 31.6 23.3 45.9l-6.3 4zM279.5 238.8l-6.2-3.9c8.9-14.3 22-37.9 23.3-45.9l1.2-6.5c1.1-5.6 1.8-9.2.4-13.9-2.3-7.6-4-22.9-4-23.6l7.3-.8c0 .1 1.7 15.3 3.8 22.3 1.9 6.4 1 11.3-.2 17.4-.4 1.9-.8 3.9-1.1 6.3-2.2 12.8-24.3 48.2-24.5 48.6zM257.5 497.1a4 4 0 01-1.5-.3 4.4 4.4 0 01-2.6-5.7l31.1-85.1c.8-2.3 3.4-3.5 5.6-2.6s3.5 3.4 2.6 5.6l-31.1 85.1c-.6 1.9-2.3 3-4.1 3z"/>
+        <path d="M268.9 455.9l-1.4-.2-187.2-62.3a4.4 4.4 0 01-2.8-5.6 4.4 4.4 0 015.6-2.8l187.2 62.2c2.3.8 3.6 3.3 2.8 5.6a4.4 4.4 0 01-4.2 3.1zM313.4 435.9l-22.9-45.2a4.4 4.4 0 011.9-5.9 4.4 4.4 0 015.9 1.9l18.9 37.3 84.4-44.1c2.2-1.1 4.8-.3 6 1.9s.3 4.8-1.9 6l-92.3 48.1z"/>
+        <path d="M108.9 401.2a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
+        <path fill="var(--white)"
+              d="M118.7 424.7a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM56.7 426.7a4.4 4.4 0 01-4.1-6L73.9 363a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
+        <path d="M157.9 417.9a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7L162.1 415a4.5 4.5 0 01-4.2 2.9z"/>
+        <path fill="var(--white)"
+              d="M167.7 453.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM178.7 511.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM395.1 419.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM440.1 448.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM367.1 490.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.8-.7.4-1.3.5-1.9.5z"/>
+        <path d="M366.6 414.7c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9a4 4 0 01-1.9.4z"/>
+        <g fill="none" stroke="var(--outline-color)"
+           stroke-linecap="round" stroke-width="4">
+          <path d="M238.8 189.7c-2.5-8.7 5.8-19.3 22.4-13.4 16.6 5.9 27 30.8 24.2 48"/>
+          <path d="M239.6 192.4c-2.4-8.3 9.4-18.1 22.5-10.1 14.5 8.8 22 30.9 17.2 52.5"/>
+          <path d="M240.2 193.9c-1.9-8 11-13.5 22.3-5.2 13 9.5 19 54.5 2.7 63.9"/>
+        </g>
+        <g fill="none" stroke="var(--outline-color)"
+           stroke-linecap="round"  stroke-width="4">
+          <path d="M241 189.9c2.5-8.8-5.8-19.6-22.4-13.6s-27 31.3-24.2 48.6"/>
+          <path d="M240.2 192.6c2.4-8.4-9.4-18.3-22.5-10.3-14.5 8.9-21.9 31.3-17.2 53.2"/>
+          <path d="M239.6 194.1c1.9-8.1-11-13.7-22.3-5.3-13 9.6-19 55.2-2.7 64.7"/>
+        </g>
+        <path fill="var(--pounamu)"
+          d="M301.7 191.9s-3.3 6.3-1.3 10.4 3 8.7 3 8.7 5.4 47.9 6.9 52.9c1.5 4.9 4.1 17.3 6.4 17.3s3-5.3 0-25.2-8.2-45.8-8.2-45.8 1.9-19.4-6.8-18.3z"/>
+        <g stroke="var(--outline-color)">
+          <path d="M242.1 158.5c-1 0-1.9-.6-2.3-1.6-.1-.3-2.8-7.1-2.6-21.9.1-5.6 3.8-15.2 11.9-23.3 7.2-7.3 20.6-15.9 43.4-15.9 1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5c-21.1 0-33.3 7.8-39.9 14.4a33.4 33.4 0 00-10.4 19.8c-.2 13.6 2.2 19.9 2.2 20 .5 1.3-.1 2.7-1.4 3.2-.3.3-.6.3-.9.3z"/>
+          <path d="M240.9 152.5c-.6-.5-3.6-3.5-2.6-12.5.3-2.7 2-6.6 4.4-10.3 2.1-3.2 5.8-8 11.6-12.3 8-5.9 21.6-12.1 41.5-8.3 1.4.3 2.3 1.6 2 2.9-.3 1.4-1.6 2.3-2.9 2a46.6 46.6 0 00-37.6 7.4c-9.2 6.8-13.7 15.8-14 19.1-.7 6.3.9 8.2.9 8.2l-.1-.1-3.2 3.9z"/>
+          <path d="M242 156.5c-.9 0-1.7-.4-2.2-1.3-.3-.5-2.7-5.2.1-13a38.3 38.3 0 0117.6-17.2 50 50 0 0141.5-1.7c1.3.5 2 1.9 1.5 3.2s-1.9 2-3.2 1.5a45 45 0 00-37.4 1.5 34.3 34.3 0 00-15.2 14.4c-2 5.6-.5 8.8-.4 8.8.7 1.2.3 2.7-.9 3.4-.5.2-.9.4-1.4.4z"/>
+          <path d="M242.3 158.7c-1.1 0-2.1-.7-2.4-1.8-.2-.6-1.5-5.6 2.6-12.4 2.1-3.4 9-9.8 19.7-12.9 8.9-2.7 23-3.8 39.3 6a2.5 2.5 0 01-2.5 4.3c-27-16.2-48.7-.4-52.1 5.2-2.9 4.9-2.1 8.3-2.1 8.4.4 1.3-.4 2.7-1.7 3.1l-.8.1zM230.6 210.5c-1.5.2-2.7-.1-3.5-.4-2-.9-3.4-2.7-3.8-4.9-.4-2.2.5-4.6 2.3-6 1.4-1.1 3.1-1.5 4.6-.8.7.3 1 1.1.8 1.8-.3.7-1.1 1.1-1.8.8-.8-.3-1.5.1-1.9.4-1 .8-1.5 2.2-1.3 3.4.2 1.2 1 2.2 2.1 2.7 1.4.6 3 .2 4.7-1 4.1-3.1 6.5-13.8 5.1-23-.1-.8.4-1.5 1.1-1.6s1.4.4 1.6 1.2c1.6 10.4-1.1 21.9-6.1 25.7a8 8 0 01-3.9 1.7z"/>
+          <path d="M248.9 210.5c1.5.2 2.7-.1 3.5-.4 2-.9 3.4-2.7 3.8-4.9.4-2.2-.5-4.6-2.3-6-1.4-1.1-3.1-1.5-4.6-.8-.7.3-1 1.1-.8 1.8.3.7 1.1 1.1 1.8.8.8-.3 1.5.1 1.9.4 1 .8 1.5 2.2 1.3 3.4-.2 1.2-1 2.2-2.1 2.7-1.4.6-3 .2-4.7-1-4.1-3.1-6.5-13.8-5.1-23 .1-.8-.4-1.5-1.1-1.6s-1.4.4-1.6 1.2c-1.6 10.4 1.1 21.9 6.1 25.7a8 8 0 003.9 1.7zM237.9 158.5l-.9-.2c-1.3-.5-1.9-2-1.4-3.2 0-.1 2.4-6.4 2.2-20 0-3.7-2.9-12.3-10.4-19.8-6.6-6.6-18.8-14.4-39.9-14.4-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5c22.8 0 36.2 8.6 43.4 15.9a38.2 38.2 0 0111.9 23.3c.2 14.8-2.5 21.6-2.6 21.9-.4.9-1.3 1.5-2.3 1.5z"/>
+          <path d="M239.1 152.5l-3.2-3.9-.1.1s1.6-1.9.9-8.2a36 36 0 00-14-19.1 46.6 46.6 0 00-37.6-7.4c-1.4.3-2.7-.6-2.9-2-.3-1.4.6-2.7 2-2.9a51.1 51.1 0 0141.5 8.3c5.8 4.3 9.5 9 11.6 12.3 2.5 3.8 4.1 7.6 4.4 10.3 1 9-2 12-2.6 12.5z"/>
+          <path d="M238 156.5l-1.2-.3a2.6 2.6 0 01-1-3.4c.1-.2 1.6-3.3-.4-8.9-2.4-6.5-21.5-27.1-52.6-15.9-1.3.5-2.7-.2-3.2-1.5s.2-2.7 1.5-3.2a50 50 0 0141.5 1.7 37.8 37.8 0 0117.6 17.2c2.8 7.8.4 12.5.1 13a3 3 0 01-2.3 1.3z"/>
+          <path d="M237.7 158.7l-.7-.1c-1.3-.4-2-1.8-1.7-3.1 0-.2.9-3.5-2.1-8.4-3.4-5.7-25.1-21.4-52.1-5.2-1.2.7-2.7.3-3.4-.9s-.3-2.7.9-3.4a48 48 0 0139.3-6 37 37 0 0119.7 12.9c4.1 6.8 2.7 11.8 2.6 12.4a2.7 2.7 0 01-2.5 1.8z"/>
+        </g>
+        <line x1="239.8" x2="239.8" y1="108.2" y2="213.5" fill="none" stroke="var(--white)" stroke-width="5"/>
+        <path fill="var(--pounamu)" stroke="var(--outline-color)"  stroke-width="9"
+          d="M346.9 482.6s-8.5 9-17.1 2.6c-8.7-6.5-21.7-31-41.5-34.3-19.7-3.3-22.6-21.3-22.6-21.3s-15.4.1-18-7.3.2-19.6.2-19.6-6-20.7-29.7-17.4c-11.5 1.6-14.9 3.1-14.9 3.1s-36.1-38 .4-67.3 73.6 22.9 80.6 32.2c22 28.9 24.2 71.5 37.2 92.6 12.5 20.4 15.3 19.1 19.7 20.5 4.5 1.4 14.4 8 5.7 16.2z"/>
+        <path fill="var(--mid-grey)"
+          d="M241.4 50.2c8.1 0 25.9 6.5 37.2 10.3 11.3 3.8 30.2 39.3 35.1 64.7 4.4 22.8-5.2 32.1-8 50.6l-6.9-2.1c-1.3-5.2-6.6-23.1-6.6-25.4 0-3.2 3.7-4.8 3.7-17.6s-13.5-36.2-16.3-41.1c-2.7-4.9-14.6-2.7-28.1-1.1-13.5 1.6-17.3-2.6-17.3-2.6l-1.1-35.7h8.3z"/>
+        <path fill="var(--mid-grey)"
+          d="M237.3 50.2c-8.1 0-25.9 6.5-37.2 10.3s-30.2 39.3-35.1 64.7c-4.4 22.8 5.2 32.1 8 50.6l6.3-1.3c1.3-5.2 6.6-23.1 6.6-25.4 0-3.2-3.1-5.6-3.1-18.5s13.6-36.2 16.3-41.1 14.6-2.7 28.1-1.1 17.3-2.6 17.3-2.6l1.1-35.7-8.3.1z"/>
+        <path d="M414.3 411.8c-1.7 0-3.3-1-4-2.6l-40.2-86.8a4.4 4.4 0 018-3.6l40.2 86.8a4.4 4.4 0 01-4 6.2z"/>
+      </g>
+    </g>
+  </defs>
+
+  <g id="disconnected-internet"
+     fill="none" stroke="var(--disconnection-color)"
+     stroke-dasharray="4,4">
+    <circle stroke-width="2"
+            cx="100" cy="98" r="71.5"/>
+    <ellipse stroke-width="2"
+            cx="100" cy="98" rx="52.37" ry="71.5"/>
+    <ellipse stroke-width="2"
+            cx="100" cy="98" rx="19.13" ry="71.5"/>
+    <path id="latitude-lines"
+          fill="none" stroke-width="2"
+          d="m 30.68,81.4975 a 950.82,950.82 0 0 1 138.85,0
+            m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21
+            m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
+            m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
+  </g>
+
+  <g id="connected-internet"
+     class="internet"
+     fill="var(--internet-color)" stroke="var(--outline-color)">
+    <circle stroke-width="1"
+            cx="100" cy="98" r="71.5"/>
+    <ellipse stroke-width="1"
+            cx="100" cy="98" rx="52.37" ry="71.5"/>
+    <ellipse stroke-width="1"
+            cx="100" cy="98" rx="19.13" ry="71.5"/>
+    <path id="latitude-lines"
+          fill="none" stroke-width="1"
+          d="m 30.68,81.4975 a 950.82,950.82 0 0 1 138.85,0
+            m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21
+            m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
+            m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
+
+    <g id="packets"
+       fill="none" stroke="var(--white)" stroke-width="3">
+      <path id="bottom-to-top-reverse"
+           class="packet" pathLength="1"
+           d="m 100,26.5 c 8.5,-0.1 16.9,22.5 18.5,52.6 -10.9,-0.4 -56.9,-0.2 -69.2,1.2 -4.2,18.8 -0.3,45.6 10.6,63.6 5.89,0.6 20.9,1.7 25.8,1.7 1.8,9.4 8,24.1 14.3,23.9"/>
+      <path id="left-to-right"
+            class="packet" pathLength="1"
+            d="m 43.7,54.2 c 30,-5.1 73.1,-4.4 96.6,-1.9 10.6,16.5 14.9,45.1 10.4,63.6 6.5,-0.2 18.8,-1.2 18.8,-1.2"/>
+      <path id="top-to-bottom-reverse"
+            class="packet" pathLength="1"
+            d="m 100,169.5 c 7.4,0 16.6,-20.1 18.4,-52.5 h -36.9 c -3.3,-55.7 8.1,-90.5 18.5,-90.5"/>
+      <path id="right-to-left"
+            class="packet" pathLength="1"
+            d="m 169.5,81.5 c 0,0 -10.7,-0.9 -18.8,-1.2 7.4,47.7 -17.1,89.2 -50.8,89.2 -24.5,0 -45.3,-24.5 -50.4,-53.5 -4.5,-0.2 -19,-1 -19,-1"/>
+      <path id="bottom-to-top"
+            class="packet" pathLength="1"
+            d="m 100,169.5 c -6.3,0.2 -12.5,-14.5 -14.3,-23.9 -4.9,-0 -19.91,-1.1 -25.8,-1.7 -10.9,-18 -14.8,-44.8 -10.6,-63.6 12.3,-1.4 58.3,-1.6 69.2,-1.2 -1.6,-30.1 -10,-52.7 -18.5,-52.6"/>
+      <path id="left-to-right-reverse"
+            class="packet" pathLength="1"
+            d="m 169.5,114.7 c 0,0 -12.3,1 -18.8,1.2 4.5,-18.5 0.2,-47.1 -10.4,-63.6 -23.5,-2.5 -66.6,-3.2 -96.6,1.9"/>
+      <path id="top-to-bottom"
+            class="packet" pathLength="1"
+            d="m 100,26.5 c -10.4,0 -21.8,34.8 -18.5,90.5 l 36.9,0 c -1.8,32.4 -11,52.5 -18.4,52.5"/>
+      <path id="right-to-left-reverse"
+            class="packet" pathLength="1"
+            d="m 30.5,115 c 0,0 14.5,0.8 19,1 5.1,29 25.9,53.5 50.4,53.5 33.7,0 58.2,-41.5 50.8,-89.2 8.1,0.3 18.8,1.2 18.8,1.2"/>
+    </g>
+
+  </g>
+
+  <g id="house">
+    <path id="house-outline"
+         fill="var(--local-color-tint)" stroke="var(--local-color)"
+         stroke-linecap="round" stroke-linejoin="round"
+         d="M500,90 l-495,250 l32,-16 v550 h926 v-550 l32,16z"/>
+
+    <g id="router"
+       fill="var(--local-color)" stroke="var(--outline-color)"
+       stroke-linecap="round" stroke-linejoin="miter">
+      <rect id="router-body"
+            transform="matrix(-0.45,-0.89,-0.89,0.45,0,0)"
+            width="29.75" height="167.5" x="-336.5" y="-282" ry="5.7"/>
+      <circle fill="var(--local-color-shade)" stroke-width=".5"
+              cx="381.9" cy="168.4" r="8.5"/>
+      <path id="antenna"
+            d="m379.5,173.8 51.1,48.4 c 5,4.5 10.4,-0.4 5.8,-5.9 l -48.1,-51.5 c -6.2,-6.3 -15.7,2.5 -8.8,9 z"/>
+
+      <g id="waves-local"
+         fill="none" stroke="var(--local-color)" stroke-opacity="0.5" stroke-width="4">
+        <path id="local-wave-a"
+              d="m 434.4,234.6 a 14.6,14.6 0 0 0 14.6,-14.3"/>
+        <path id="local-wave-b"
+              d="m 435.2,247.5 a 26.25,26.25 0 0 0 26.9,-26"/>
+        <path id="local-wave-c"
+              d="m 435,261 a 39.5,39.5 0 0 0 40.1,-39.4"/>
+      </g>
+
+      <g id="waves-internet"
+         fill="none" stroke="var(--internet-color)" stroke-opacity="0.5" stroke-width="4">
+        <path id="internet-wave-a"
+              d="m 434.4,234.6 a 14.6,14.6 0 0 0 14.6,-14.3"/>
+        <path id="internet-wave-b"
+              d="m 435.2,247.5 a 26.25,26.25 0 0 0 26.9,-26"/>
+        <path id="internet-wave-c"
+              d="m 435,261 a 39.5,39.5 0 0 0 40.1,-39.4"/>
+      </g>
+
+      <g id="lights-off"
+         fill="var(--local-color-tint)">
+        <circle cx="261.2" cy="226.6" r="4"/>
+        <circle cx="276" cy="219.1" r="4"/>
+        <circle cx="290.9" cy="211.6" r="4"/>
+      </g>
+
+      <circle id="internet-connected-light"
+              stroke-width="1.2"
+              fill="var(--internet-color)" stroke="var(--internet-color)" stroke-opacity="0.5"
+              cx="261.2" cy="226.6" r="4.2"/>
+
+      <g id="local-connection-lights"
+         fill="var(--white)" stroke="var(--white)" stroke-opacity="0.5"
+         stroke-width="1.2">
+        <circle id="local-connection-light-a"
+                cx="276" cy="219.1" r="4.2"/>
+        <circle id="local-connection-light-b"
+                cx="290.9" cy="211.6" r="4.2"/>
+      </g>
+
+    </g>
+
+    <g id="imac"
+       style="transform-origin:218px 561.4px 0px"
+       stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
+      <path fill="var(--devices-color)"
+            d="M253.19 634.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+      <path fill="var(--mid-grey)"
+            d="M184.37 634.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
+      <path fill="none" stroke="var(--outline-color)"
+            d="M253.19 634.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+      <rect fill="var(--devices-color)" stroke="var(--outline-color)"
+            width="199.45" height="121.54" x="118.35" y="490.11" rx="7.87" ry="7.88"/>
+      <circle fill="var(--mid-grey)"
+              cx="219.76" cy="494.05" r="1.97"/>
+      <rect fill="var(--white)"
+            width="191.58" height="101.84" x="122.29" y="497.99" rx="0" ry="0"/>
+      <circle id="copy-kuia-left"
+              style="transform:scale(0); transform-origin:208px 490px 0px;"
+              cx="170.5" cy="543.5" r="22"
+              fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
+              stroke-width="5"/>
+      <use id="kuia-imac"
+           xlink:href="#kuia"
+           x="150" y="523" />
+      <path id="link-left"
+            style="transform: scale(0); transform-origin: 195px 544px 0px;"
+            d="M195,544 h41"
+            stroke="var(--devices-color)" stroke-width="2"/>
+
+      <g id="add-icon-left"
+         style="opacity: 0; transform-origin:260.6px 543.18px 0px"
+         stroke-width="2" fill="var(--imac-user-color)" stroke="var(--white)">
+         <circle cx="260.6" cy="543.18" r="18"/>
+         <path d="M248.6 543.18 h24 m-12 -12 v24"/>
+      </g>
+
+      <circle id="copy-koro-left"
+              style="opacity: 0; transform-origin:265px 500px 0px;"
+              cx="260.5" cy="543.5" r="22"
+              fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
+              stroke-width="5"/>
+      <use id="koro-imac"
+           xlink:href="#koro"
+           x="240" y="523" />
+    </g>
+
+    <g id="laptop"
+       style="transform-origin:795px 575px 0px;"
+       stroke-linecap="butt" stroke-linejoin="round">
+      <path id="laptop-screen-bg"
+           fill="var(--devices-color)" stroke-width="2"
+      d="M859.34 618.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
+      <path id="laptop-keyboard-bg"
+           fill="var(--devices-color)" stroke-width="2"
+      d="M706.46 618.64L684 638.07v5.77h200.55v-5.77l-25.2-19.43z"/>
+      <rect id="laptop-screen"
+           fill="var(--white)" stroke-width="2"
+           width="151.2" height="75.6" x="707.3" y="534.64" rx="0" ry="0"/>
+      <circle id="laptop-camera"
+             fill="var(--mid-grey)" stroke="none" stroke-width="1.22"
+             cx="782.9" cy="530.44" r="1.05" />
+      <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
+           d="M758.54 631.24h46.2l8.4 8.4h-63z"/>
+      <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
+           d="M704.78 631.24h49.56m54.6 0h54.6"/>
+      <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
+           d="M712.34 622.84h142.8"/>
+      <path id="laptop-keyboard"
+           fill="none" stroke="var(--mid-grey)" stroke-width=".59"
+           d="M708.14 627.04h151.2"/>
+      <path id="laptop-front-edge"
+           fill="none" stroke="var(--mid-grey)" stroke-width="1.2"
+           d="M884.54 639.64h-199.5"/>
+      <path id="laptop-edge-shadow"
+           fill="none" stroke="var(--mid-grey)" stroke-width="2.02"
+           d="M884.54 643.84h-199.5"/>
+      <path id="laptop-outline"
+           fill="none" stroke="var(--outline-color)" stroke-width="2.02"
+           d="M684 638.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
+
+      <g id="add-icon-right"
+        style="opacity: 0; transform-origin:752.5px 567.5px 0px"
+        stroke-width="2" fill="var(--laptop-user-color)" stroke="var(--white)">
+        <circle cx="752.5" cy="567.5" r="18"/>
+        <path d="M740.5 567.5 h24 m-12 -12 v24" />
+      </g>
+
+      <circle id="copy-kuia-right"
+             style="transform: scale(0); transform-origin:752.5px 567.5px 0px;"
+             cx="752.5" cy="567.5" r="22"
+             fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
+             stroke-width="5"/>
+      <use id="kuia-laptop"
+          xlink:href="#kuia"
+          x="732" y="547"
+          style="opacity:0;"/>
+      <path id="link-right"
+          style="transform: scale(0); transform-origin: 774px 567px 0px;"
+          d="M774,567 h21"
+          stroke="var(--devices-color)" stroke-width="2"/>
+      <circle id="copy-koro-right"
+              style="transform: scale(0); transform-origin:764px 528px 0px;"
+              cx="817" cy="567.5" r="22"
+              fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
+              stroke-width="5"/>
+      <use id="koro-laptop"
+          xlink:href="#koro"
+          x="796.5" y="547"
+          style="opacity:0;"/>
+      </g>
+  </g>
+
+  <g id="arrows">
+
+    <g id="internet-arrows"
+       fill="none" stroke-width="2">
+      <path id="internet-disconnected-line"
+            stroke="var(--disconnection-color)"
+            stroke-dasharray="4 4"
+            d="m 158,144 91,71"/>
+      <path id="x-disconnected"
+            style="transform-origin: 203.5px 179.5px 0px;"
+            stroke="var(--internet-color)" stroke-width="4"
+            d="m 188.5,194.5 30,-30 m -30,0 30,30"/>
+      <path id="internet-connected-arrow"
+            stroke="var(--internet-color)"
+            marker-start="url(#start-marker-internet)" marker-end="url(#end-marker-internet)"
+            style="transform-origin: 203.5px 179.5px 0px;"
+            d="m 158,144 91,71"/>
+    </g>
+
+    <g id="left-arrows"
+       fill="none" stroke="var(--imac-user-color)"
+       stroke-width="2" marker-end="url(#marker-left)">
+      <path id="imac-to-router"
+            style="transform-origin:288px 475px 0px;"
+            d="m 288,475 45,-275"/>
+        <path id="router-to-laptop"
+           style="transform-origin:328.7px 211px 0px;"
+           d="m 328.7,211 l425,283"/>
+    </g>
+
+    <g id="right-arrows"
+       fill="none" stroke="var(--laptop-user-color)"
+       stroke-width="2" marker-end="url(#marker-right)">
+      <path id="laptop-to-router"
+             style="transform-origin:690px 515px 0px;"
+  					d="m690,515 -365,-314"/>
+      <path id="router-to-imac"
+            style="transform-origin:328.7px 211px 0px;"
+           d="m328.7,211 -149,230"/>
+    </g>
+
+  </g>
+
+  <g id="connection-symbols">
+
+    <g id="no-connection-left"
+       fill="var(--disconnection-color)" fill-opacity="0.5" stroke="var(--outline-color)" stroke-width=".5">
+      <use xlink:href="#wifi-symbol" x="194" y="519"/>
+      <path stroke="var(--white)" stroke-width="4"
+            d="M204 555 l3.6,3 l30-36 l-3.6-3z"/>
+      <path d="M204 555 l3.6,3 l30-36 l-3.6-3z"/>
+    </g>
+
+    <g id="no-connection-right"
+        transform="scale(0.8)"
+        style="transform-origin: 760px 547px 0px;"
+        fill="var(--disconnection-color)" fill-opacity="0.5" stroke="var(--outline-color)" stroke-width=".5">
+      <use xlink:href="#wifi-symbol" x="760" y="547"/>
+      <path stroke="var(--white)" stroke-width="4"
+            d="M770 583 l3.6,3 l30-36 l-3.6-3z"/>
+      <path d="M770 583 l3.6,3 l30-36 l-3.6-3z"/>
+    </g>
+
+    <use id="local-connection-left"
+         xlink:href="#animated-wifi-symbol" x="194" y="519"
+         fill="var(--local-color)"/>
+    <use id="local-connection-right"
+        transform="scale(0.8)"
+        style="transform-origin: 760px 547px 0px;"
+         xlink:href="#animated-wifi-symbol" x="760" y="547"
+         fill="var(--local-color)"/>
+    <use id="internet-connection-left"
+        xlink:href="#animated-wifi-symbol" x="194" y="519"
+        fill="var(--internet-color)"/>
+    <use id="internet-connection-right"
+       transform="scale(0.8)"
+       style="transform-origin: 760px 547px 0px;"
+        xlink:href="#animated-wifi-symbol" x="760" y="547"
+        fill="var(--internet-color)"/>
+  </g>
+
+  <g id="labels"
+     font-family="'Dosis', sans-serif"
+     font-size="32px"
+     text-anchor="middle">
+    <text id="no-connection-label"
+          fill="var(--disconnection-color)"
+          x="510" y="570">
+          No Connection</text>
+
+    <g id="local-connection-label">
+      <text fill="var(--local-color)"
+            x="510" y="550"
+           >Wi-Fi Connected</text>
+      <text fill="var(--local-color-shade)"
+            x="510" y="590"
+           >No Internet</text>
+    </g>
+
+    <text id="internet-connection-label"
+          fill="var(--internet-color)"
+          x="510" y="570">
+      Internet Connected</text>
+  </g>
+  <style>
+  /* <![CDATA[ */
+    @font-face {
+      font-family: 'Dosis';
+      src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+
+    }
+  /* ]]> */
+  </style>
+</svg>
