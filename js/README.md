@@ -3,11 +3,12 @@
 This is a helper script to convert an anime.js timeline into CSS animation, currently in a very raw stage, which just logs data to the browser console.
 
 ## What does it do?
-- calculates and logs the total duration of the timeline
+- calculates the total duration of the timeline
 - gets the `id` of each target (animated element) - they'll all need ids for now.
 - converts relative time values to absolute values (keyframes)
 - converts those keyframes to percentages of total duration
 - lists all keyframes, animated property and value changes for each target
+- duplicates the first and last keyframe of each animation at 0% and 100%
 - logs the `targets` object to the console.
 
 There's still a bit of manual work required for now.
@@ -24,15 +25,24 @@ Here's what you need to do currently - I'm aiming to automate many of these step
 })
 ```
 
-in the timeline declaration, set `loop:` to `false`
+in the timeline declaration, set `loop:` and `autoplay:` to `false`
 
 ```javascript
 const tl = anime.timeline({
-  autoplay: true,
+  autoplay: false,
   loop: false,
   duration: 500,
   easing: 'easeInOutQuad'
 })
+```
+
+after your timeline, paste the `timelineComplete` section:
+```javascript
+function timelineComplete () {
+  ...
+}
+tl.finished.then(timelineComplete)
+tl.play()
 ```
 
 Ensure that your animation target elements in the SVG always have an `id`:
@@ -57,16 +67,7 @@ Give each target an id, and then `targets: '#lights > circle'` will convert nice
 </g>
 ```
 
-Now you can open the SVG in a browser - run the animation all the way through once, to get the timeline duration, which will be the last (and highest) logged `timeline duration` number in your browser's Console.
-
-Paste this number as the value of the `timelineDuration` variable in `logAnimations`:
-
-```javascript
-const timelineDuration = 46002.2857304 // change value to your animation's timeline duration
-```
-
-Now you can run the animation again, and the percentage values for your keyframes will be correct.
-
+Now you can open the SVG in a browser - run the animation all the way through.
 Now you can copy the last logged `targets` object (in the browser Console, right-click on the logged object and choose _Copy Object_) and use it as the basis for
 your CSS animation.
 
@@ -74,7 +75,7 @@ The `targets` object contains a list of all animation targets, together with the
 
 ```javascript
 "#arrow": {
-    "17.17%": {
+    "0%, 17.17%": {
       "scale": "0"
     },
     "18.24%": {
@@ -84,7 +85,7 @@ The `targets` object contains a list of all animation targets, together with the
       "opacity": "1",
       "scale": "1"
     },
-    "35.19%": {
+    "35.19%, 100%": {
       "opacity": "0",
       "scale": "0.8"
     }
@@ -99,28 +100,15 @@ Here's a list of steps required:
 - convert to same-line curly braces for compactness & readability (the standard CSS multi-line style doesn't make sense for animations, where you want to compare one keyframe with another)
 ```css
 #arrow {
-    17.17% { scale: 0; }
+    0%, 17.17% { scale: 0; }
     18.24% { scale: 1; }
     34.12% { opacity: 1;
              scale: 1; }
-    35.19% { opacity: 0;
-             scale: 0.8; }
+    35.19%, 100% { opacity: 0;
+                   scale: 0.8; }
   }
 ```
 - assign an animation name of `id` name + 'anim' and create a `@keyframes` declaration for it
-```css
-#arrow { animation-name: arrow-anim; }
-@keyframes arrow-anim {
-  17.17% { scale: 0; }
-  18.24% { scale: 1; }
-  34.12% { opacity: 1;
-           scale: 1; }
-  35.19% { opacity: 0;
-           scale: 0.8; }
-}
-```
-
-- add in `0%` and `100%` values to ensure that it starts and finishes as expected.
 ```css
 #arrow { animation-name: arrow-anim; }
 @keyframes arrow-anim {
@@ -129,7 +117,7 @@ Here's a list of steps required:
   34.12% { opacity: 1;
            scale: 1; }
   35.19%, 100% { opacity: 0;
-           scale: 0.8; }
+                 scale: 0.8; }
 }
 ```
 - convert camelCase properties (like `strokeDashoffset` and `transformOrigin`) to kebab-case (`stroke-dashoffset`, `transform-origin`)
@@ -142,7 +130,7 @@ Here's a list of steps required:
   34.12% { opacity: 1;
            transform: scale(1); }
   35.19%, 100% { opacity: 0;
-           transform: scale(0.8); }
+                 transform: scale(0.8); }
 }
 ```
 - Currently there's a bug where sometimes the last keyframe of a multi-keyframe section has a percentage value, but no information about the animated property or its value, like this:
