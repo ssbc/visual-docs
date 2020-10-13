@@ -1,7 +1,7 @@
 # Visual Docs
 **Diagrams and animations documenting SSB and Āhau**
 
-Made as Scalable Vector Graphic (SVG) files, animated as needed with CSS or [anime.js](https://animejs.com).
+Made as Scalable Vector Graphic (SVG) files. Animations primarily written with [anime.js](https://animejs.com), and converted to CSS animation.
 These are made to accompany and illustrate text explanations.
 
 ## Table of Contents
@@ -34,30 +34,17 @@ or adapt these animations. These links will take you right where you want to go:
 ## Animations
 ### Replication: connecting via a pātaka
 
-![](gif/replication-via-internet.gif)
+![](svg/replication-via-internet_css.svg)
 
 ### Replication: connecting locally
 
+
 ![](svg/replication-local_css.svg)
-
-_**Note:** These two 'replication' animations and the 'data-on-a-pātaka' animation have been written using [anime.js](https://animejs.com) within SVG, as it provides much, much more flexibility than writing animation directly in CSS within SVG.
-As Github will not play JS animations within Markdown, the 'replication-via-internet' and 'data-on-a-pātaka' animations shown here are screen recordings of the javascript animation, converted to GIF so it can be played anywhere.
-Unfortunately, GIFs are worse than SVG by basically every measure - see this comparison using the 'local replication' animation:_
-
-|            | SVG    | MP4    | GIF    |
-|------------|--------|--------|--------|
-| Resolution |  ∞     | 2000px | 1000px |
-| Framerate  | ~60fps | 30fps  | 15fps  |
-| Filesize   | 0.05Mb | 1.5Mb  | 2.9Mb  |
-
-_The source SVGs can always be downloaded and opened with a web browser to display the animation at full quality, or to inspect/edit the code.
-Once the animation has been finalized, I'll make a CSS-in-SVG version. So far there is only one anime.js animation that has been converted to CSS ('svg/replication-local_anime.svg' => 'svg/replication-local_css.svg')._
-_I'm working on conversion script to make this easier ('convert-anime-to-css.js')._
 
 ----
 ### Data on a Pātaka
 
-![](gif/data-on-a-pātaka.gif)
+![](svg/data-on-a-pātaka_css.svg)
 
 _Three groups have their data backed up and synchronized on a Pātaka. Group members can only access files from their own groups - the Pātaka will update them with new data when they connect. Kaitiaki / sysadmin cannot access the files, they can only see which group created them. People can be members of more than one group._
 

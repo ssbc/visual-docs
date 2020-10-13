@@ -1537,8 +1537,7 @@
         duration: 1000,
         delay: anime.stagger(100)
       })
-        .add({
-          targets: '#sync-2a-overlay',
+      .add({ targets: '#sync-2a-overlay',
           opacity: [1, 0],
           duration: 300
       }, '-=800')

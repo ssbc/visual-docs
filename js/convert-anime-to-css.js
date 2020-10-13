@@ -45,7 +45,6 @@ function timelineComplete () {
   console.log('total timeline duration:', cumulativeTimelineDuration)
 
   const targetIds = Object.keys(targets)
-  console.log('target list:', targetIds)
 
   targetIds.forEach(id => {
     const absoluteKeyframes = Object.keys(targets[id])
@@ -56,7 +55,6 @@ function timelineComplete () {
 
       targets[id][percentageKeyframe] = targets[id][keyframe]
       delete targets[id][keyframe]
-      console.log(targets[id])
     })
     const percentageKeyframes = Object.keys(targets[id])
     // add a 0% & 100% keyframe to each animation so they start in the
@@ -74,34 +72,44 @@ function timelineComplete () {
       delete targets[id][oldLastKeyframe]
     }
   })
-  console.log('targets object:', targets)
-  let stringTargets = JSON.stringify(targets)
+
+  let animDetails = JSON.stringify(targets)
   // here comes some verbose and repetitive regex!
 
   // remove quotation marks
-  stringTargets = stringTargets.replace(/['"]+/g, '')
+  animDetails = animDetails.replace(/['"]+/g, '')
   // remove colons, except in css declaration
-  stringTargets = stringTargets.replace(/:{+/g, '{')
+  animDetails = animDetails.replace(/:{+/g, '{')
   // find target names, add #, create an animation-name & keyframes declaration
-  stringTargets = stringTargets.replace(/([^{%, .]{2,}){/g, '\n#$1 { animation-name: $1-anim; } \n@keyframes $1-anim {\n  ')
+  animDetails = animDetails.replace(/([^{%, .]{2,}){/g, '\n#$1 { animation-name: $1-anim; } \n@keyframes $1-anim {\n  ')
   // find commas in css declarations, replace them with a space
-  stringTargets = stringTargets.replace(/(?<=[a-z0-9]),/g, ' ')
+  animDetails = animDetails.replace(/(?<=[a-z0-9]),/g, ' ')
   // add a space to the end of css declarations
-  stringTargets = stringTargets.replace(/(?<=[a-z0-9])}/g, ' }')
-  // find spaces in css declarations, precede with a semicolon
-  stringTargets = stringTargets.replace(/(?<=[a-z0-9]) (?=[a-z0-9}])/g, '; ')
+  animDetails = animDetails.replace(/(?<=[a-z0-9])}/g, ' }')
+  // separate css declarations with a semicolon
+  animDetails = animDetails.replace(/([a-zA-ZĀā]*:[0-9][0-9]*\.*[0-9]*[px|deg|%]* *[0-9]*\.*[0-9]*[px|deg|%]* *[0-9]*\.*[0-9]*[px|deg|%]*)/g, '$1; ')
+  animDetails = animDetails.replace(/ ;/g, ';')
   // remove commas after closing curly braces
-  stringTargets = stringTargets.replace(/},/g, '}')
+  animDetails = animDetails.replace(/},/g, '}')
   // add spaces to keyframe declarations
-  stringTargets = stringTargets.replace(/%{/g, '% { ')
+  animDetails = animDetails.replace(/%{/g, '% { ')
   // separate two closing braces with a newline
-  stringTargets = stringTargets.replace(/}}/g, '}\n}')
+  animDetails = animDetails.replace(/}}/g, '}\n}')
   // separate keyframes with a newline
-  stringTargets = stringTargets.replace(/}([0-9])/g, '}\n  $1')
+  animDetails = animDetails.replace(/}([0-9])/g, '}\n  $1')
   // camelCase to kebab-case
-  stringTargets = stringTargets.replace(/(?<=[a-z]*)([A-Z])(?=[a-z]*)/g, '-$1')
-  stringTargets = stringTargets.replace(/(?<=[a-z]*-)([A-Z])(?=[a-z]*)/g, u => u.toLowerCase())
-  console.log(stringTargets)
+  animDetails = animDetails.replace(/(?<=[a-z]*)([A-Z])(?=[a-z]*)/g, '-$1')
+  animDetails = animDetails.replace(/(?<=[a-z]*-)([A-Z])(?=[a-z]*)/g, u => u.toLowerCase())
+  // remove enclosing curly braces
+  animDetails = animDetails.substring(1, animDetails.length - 1)
+
+  targetIds.forEach((id, index) => { targetIds[index] = '#' + id })
+  const selectorList = targetIds.toString()
+  const durationTimingDeclaration = ' {\n\tanimation-duration:' + cumulativeTimelineDuration + 'ms;\n\tanimation-timing-function: ease-in-out;\n\tanimation-iteration-count: infinite;\n}\n'
+  const cssAnimations = selectorList + durationTimingDeclaration + animDetails
+
+  console.log('CSS animations: ', cssAnimations)
 }
+
 tl.finished.then(timelineComplete)
 tl.play()

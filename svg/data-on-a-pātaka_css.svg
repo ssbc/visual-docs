@@ -1,0 +1,1866 @@
+<svg id="data-on-a-pātaka"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="-300 0 1300 1000"
+     width="1000px" height="769px">
+
+  <title>Data on a Pātaka</title>
+
+  <style>
+    /* <![CDATA[ */
+    :root {
+      --group-b-outline: hsl(42, 80%, 20%);
+      --group-b-color: hsl(42, 74.9%, 56.3%);
+      --group-b-highlight: hsl(42, 90%, 75%);
+      --group-b-tint: hsl(42, 90%, 95%);
+
+      --group-a-outline: hsl(180, 25.4%, 24.7%);
+      --group-a-color: hsl(182, 25.5%, 50%);
+      --group-a-highlight: hsl(182, 55%, 75%);
+      --group-a-tint: hsl(182, 95%, 95%);
+      --group-a-medium-tint: hsl(182, 30%, 65%);
+
+      --group-c-outline: hsl(360, 85%, 22%);
+      --group-c-symbol-color: hsl(360, 65.4%, 42%);
+      --group-c-color: hsl(360, 70%, 60%);
+      --group-c-files: hsl(360, 65.4%, 52%);
+      --group-c-highlight: hsl(360, 85%, 75%);
+      --group-c-tint: hsl(0, 85%, 95%);
+
+      --pātaka-color: hsl(360, 65.4%, 42%);
+      --pātaka-label-color: hsl(360, 65.4%, 52%);
+
+      --icon-bg-color: hsl(180, 25.4%, 40%);
+      --outline-color: hsl(0, 0%, 22%);
+      --white: hsl(0, 0%, 100%);
+      --mid-grey: hsl(0, 0%, 41.2%);
+      --mid-light-grey: hsl(0, 0%, 60%);
+      --encrypted-color: hsl(0, 0%, 80%);
+      --light-grey: hsl(0, 0%, 90%);
+      --devices-color: hsl(0, 0%, 29.8%);
+      --pounamu: hsl(118, 100.0%, 9.4%);
+    }
+
+    #everything,#group-a,#label-group-a,#group-b,#label-group-b,#group-c,#label-group-c,#pātaka-imac,#label-pātaka,#pātaka-symbol,#upload-c1,#upload-a1,#upload-b1,#c1,#a1,#b1,#upload-b2,#upload-c2,#upload-c3,#pātaka-files,#b2,#c2,#c3,#arrows,#labels,#iphone,#key-a,#label-member-a,#android,#key-c,#label-member-c,#refresh-iphone,#sync-request-iphone,#c1-highlight,#a1-highlight,#b1-highlight,#b2-highlight,#c2-highlight,#c3-highlight,#c1-copy-to-iphone,#a1-copy-to-iphone,#b1-copy-to-iphone,#b2-copy-to-iphone,#c2-copy-to-iphone,#c3-copy-to-iphone,#response-files-iphone,#c1-iphone-locked,#a1-iphone-locked,#b1-iphone-locked,#b2-iphone-locked,#c2-iphone-locked,#c3-iphone-locked,#a1-iphone,#sync-1a-overlay,#a1-iphone-highlight,#refresh-android,#sync-request-android,#c1-copy-to-android,#a1-copy-to-android,#b1-copy-to-android,#b2-copy-to-android,#c2-copy-to-android,#c3-copy-to-android,#response-files-android,#c1-android-locked,#a1-android-locked,#b1-android-locked,#b2-android-locked,#c2-android-locked,#c3-android-locked,#sync-1c-overlay,#c1-android-highlight,#c2-android-highlight,#c3-android-highlight,#c1-android,#c2-android,#c3-android,#upload-a2,#upload-b3,#upload-b4,#a2,#b3,#b4,#upload-c4,#upload-b5,#upload-a3,#c4,#b5,#a3,#key-b,#label-member-a-b,#sync-1b-overlay,#b1-iphone-highlight,#b2-iphone-highlight,#b1-iphone,#b2-iphone,#pātaka-overlay,#a2-highlight,#b3-highlight,#b4-highlight,#c4-highlight,#b5-highlight,#a3-highlight,#a2-copy-to-iphone,#b3-copy-to-iphone,#b4-copy-to-iphone,#c4-copy-to-iphone,#a2-iphone-locked,#b3-iphone-locked,#b4-iphone-locked,#c4-iphone-locked,#b5-iphone-locked,#a3-iphone-locked,#a2-iphone-highlight,#a3-iphone-highlight,#sync-2a-overlay,#a2-iphone,#a3-iphone,#b3-iphone-highlight,#b4-iphone-highlight,#b5-iphone-highlight,#sync-2b-overlay,#b3-iphone,#b4-iphone,#b5-iphone {
+	animation-duration:87483.49999999999ms;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+  #everything { animation-name: everything-anim; }
+  @keyframes everything-anim {
+    0%, 0.57% { opacity:0; }
+    0.59% { opacity:1; }
+    98.86% { opacity:1; }
+    100% { opacity:0; }
+  }
+  #group-a { animation-name: group-a-anim; }
+  @keyframes group-a-anim {
+    0%, 1.14% { transform: translateX(140px); opacity:0; }
+    2.51% { opacity:1; }
+    17.66% { transform: translateX(140px); }
+    19.49% { transform: translateX(0px); }
+    26.58% { opacity:1; }
+    27.72% { opacity:0.5; }
+    55.17% { opacity:0.5; }
+    56.32% { opacity:1; }
+    63.52% { opacity:1; }
+    64.09%, 100% { opacity:0.5; }
+  }
+  #label-group-a { animation-name: label-group-a-anim; }
+  @keyframes label-group-a-anim {
+    0%, 1.83% { opacity:0; }
+    3.2% { opacity:1; }
+    26.58% { opacity:1; }
+    27.15%, 100% { opacity:0; }
+  }
+  #group-b { animation-name: group-b-anim; }
+  @keyframes group-b-anim {
+    0%, 2.51% { transform: translateX(140px); opacity:0; }
+    3.89% { opacity:1; }
+    17.66% { transform: translateX(140px); }
+    19.49% { transform: translateX(0px); }
+    26.58% { opacity:1; }
+    27.72% { opacity:0.5; }
+    55.17% { opacity:0.5; }
+    56.32% { opacity:1; }
+    65.8% { opacity:1; }
+    66.37%, 100% { opacity:0.5; }
+  }
+  #label-group-b { animation-name: label-group-b-anim; }
+  @keyframes label-group-b-anim {
+    0%, 3.2% { opacity:0; }
+    4.57% { opacity:1; }
+    26.58% { opacity:1; }
+    27.15%, 100% { opacity:0; }
+  }
+  #group-c { animation-name: group-c-anim; }
+  @keyframes group-c-anim {
+    0%, 3.89% { transform: translateX(140px); opacity:0; }
+    5.26% { opacity:1; }
+    17.66% { transform: translateX(140px); }
+    19.49% { transform: translateX(0px); }
+    26.58% { opacity:1; }
+    27.72% { opacity:0.5; }
+    55.17% { opacity:0.5; }
+    56.32% { opacity:1; }
+    63.52% { opacity:1; }
+    64.09%, 100% { opacity:0.5; }
+  }
+  #label-group-c { animation-name: label-group-c-anim; }
+  @keyframes label-group-c-anim {
+    0%, 4.57% { opacity:0; }
+    5.94% { opacity:1; }
+    26.58% { opacity:1; }
+    27.15%, 100% { opacity:0; }
+  }
+  #pātaka-imac { animation-name: pātaka-imac-anim; }
+  @keyframes pātaka-imac-anim {
+    0%, 6.29% { transform: translateX(160px); opacity:0; }
+    7.66% { opacity:1; }
+    17.66% { transform: translateX(160px); }
+    19.49% { transform: translateX(0px); }
+    63.52% { opacity:1; }
+    64.09% { opacity:0.5; }
+    73.98% { opacity:0.5; }
+    74.55%, 100% { opacity:1; }
+  }
+  #label-pātaka { animation-name: label-pātaka-anim; }
+  @keyframes label-pātaka-anim {
+    0%, 7.37% { opacity:0; }
+    8.52% { opacity:1; }
+    17.66% { transform: translateX(0px); }
+    19.49% { transform: translateX(-20px); }
+    26.58% { opacity:1; }
+    27.15%, 100% { opacity:0; }
+  }
+  #pātaka-symbol { animation-name: pātaka-symbol-anim; }
+  @keyframes pātaka-symbol-anim {
+    0%, 10.12% { opacity:1; }
+    10.8%, 100% { opacity:0; }
+  }
+  #upload-c1 { animation-name: upload-c1-anim; }
+  @keyframes upload-c1-anim {
+    0%, 11.49% { transform: scale(0); opacity:1; }
+    12.06% { transform: scale(0.9); }
+    13.43% { opacity:1; }
+    13.89%, 100% { opacity:0; }
+  }
+  #upload-a1 { animation-name: upload-a1-anim; }
+  @keyframes upload-a1-anim {
+    0%, 11.95% { transform: scale(0); opacity:1; }
+    12.52% { transform: scale(0.9); }
+    13.43% { opacity:1; }
+    13.89%, 100% { opacity:0; }
+  }
+  #upload-b1 { animation-name: upload-b1-anim; }
+  @keyframes upload-b1-anim {
+    0%, 12.4% { transform: scale(0); opacity:1; }
+    12.97% { transform: scale(0.9); }
+    13.43% { opacity:1; }
+    13.89%, 100% { opacity:0; }
+  }
+  #c1 { animation-name: c1-anim; }
+  @keyframes c1-anim {
+    0%, 11.95% { transform: scale(0); }
+    12.52%, 100% { transform: scale(1); }
+  }
+  #a1 { animation-name: a1-anim; }
+  @keyframes a1-anim {
+    0%, 12.4% { transform: scale(0); }
+    12.97%, 100% { transform: scale(1); }
+  }
+  #b1 { animation-name: b1-anim; }
+  @keyframes b1-anim {
+    0%, 12.86% { transform: scale(0); }
+    13.43%, 100% { transform: scale(1); }
+  }
+  #upload-b2 { animation-name: upload-b2-anim; }
+  @keyframes upload-b2-anim {
+    0%, 14.35% { transform: scale(0); opacity:1; }
+    14.92% { transform: scale(0.9); }
+    16.06% { opacity:1; }
+    16.52%, 100% { opacity:0; }
+  }
+  #upload-c2 { animation-name: upload-c2-anim; }
+  @keyframes upload-c2-anim {
+    0%, 14.8% { transform: scale(0); opacity:1; }
+    15.37% { transform: scale(0.9); }
+    16.06% { opacity:1; }
+    16.52%, 100% { opacity:0; }
+  }
+  #upload-c3 { animation-name: upload-c3-anim; }
+  @keyframes upload-c3-anim {
+    0%, 15.26% { transform: scale(0); opacity:1; }
+    15.83% { transform: scale(0.9); }
+    16.06% { opacity:1; }
+    16.52%, 100% { opacity:0; }
+  }
+  #pātaka-files { animation-name: pātaka-files-anim; }
+  @keyframes pātaka-files-anim {
+    0%, 14.46% { transform: translateX(90px); }
+    15.37% { transform: translateX(60px); }
+    58.37% { transform: translateX(60px); }
+    59.06% { transform: translateX(30px); }
+    61.12% { transform: translateX(30px); }
+    61.8%, 100% { transform: translateX(0px); }
+  }
+  #b2 { animation-name: b2-anim; }
+  @keyframes b2-anim {
+    0%, 14.57% { transform: scale(0); }
+    15.15%, 100% { transform: scale(1); }
+  }
+  #c2 { animation-name: c2-anim; }
+  @keyframes c2-anim {
+    0%, 15.03% { transform: scale(0); }
+    15.6%, 100% { transform: scale(1); }
+  }
+  #c3 { animation-name: c3-anim; }
+  @keyframes c3-anim {
+    0%, 15.49% { transform: scale(0); }
+    16.06%, 100% { transform: scale(1); }
+  }
+  #arrows { animation-name: arrows-anim; }
+  @keyframes arrows-anim {
+    0%, 17.66% { transform: translateX(140px); }
+    19.49%, 100% { transform: translateX(0px); }
+  }
+  #labels { animation-name: labels-anim; }
+  @keyframes labels-anim {
+    0%, 17.66% { transform: translateX(140px); }
+    19.49%, 100% { transform: translateX(0px); }
+  }
+  #iphone { animation-name: iphone-anim; }
+  @keyframes iphone-anim {
+    0%, 18.12% { opacity:0; }
+    19.03% { opacity:1; }
+    41.02% { opacity:1; }
+    41.59% { opacity:0.5; }
+    65.8% { opacity:0.5; }
+    66.95%, 100% { opacity:1; }
+  }
+  #key-a { animation-name: key-a-anim; }
+  @keyframes key-a-anim {
+    0%, 18.57% { opacity:0; }
+    19.49% { opacity:1; }
+    36.22% { transform: translateX(0px); }
+    36.56% { transform: translateX(-96px); }
+    37.25% { transform: translateX(-96px); }
+    37.59% { transform: translateX(0px); }
+    41.02% { opacity:1; }
+    41.59% { opacity:0.5; }
+    65.8% { opacity:0.5; }
+    66.95% { opacity:1; }
+    82.51% { transform: translateX(0px); }
+    82.85% { transform: translateX(-96px); }
+    83.54% { transform: translateX(-96px); }
+    83.88%, 100% { transform: translateX(0px); opacity:1; }
+  }
+  #label-member-a { animation-name: label-member-a-anim; }
+  @keyframes label-member-a-anim {
+    0%, 19.72% { opacity:0; }
+    20.63% { opacity:1; }
+    26.58% { opacity:1; }
+    27.15%, 100% { opacity:0; }
+  }
+  #android { animation-name: android-anim; }
+  @keyframes android-anim {
+    0%, 21.78% { opacity:0; }
+    22.69% { opacity:1; }
+    26.58% { opacity:1; }
+    27.72% { opacity:0.5; }
+    41.02% { opacity:0.5; }
+    42.16% { opacity:1; }
+    55.17% { opacity:1; }
+    56.32%, 100% { opacity:0.5; }
+  }
+  #key-c { animation-name: key-c-anim; }
+  @keyframes key-c-anim {
+    0%, 22.23% { opacity:0; }
+    23.15% { opacity:1; }
+    26.58% { opacity:1; }
+    27.72% { opacity:0.5; }
+    41.02% { opacity:0.5; }
+    42.16% { opacity:1; }
+    50.37% { transform: translateX(0px); }
+    50.71% { transform: translateX(-96px); }
+    51.4% { transform: translateX(-96px); }
+    51.74% { transform: translateX(0px); }
+    55.17% { opacity:1; }
+    56.32%, 100% { opacity:0.5; }
+  }
+  #label-member-c { animation-name: label-member-c-anim; }
+  @keyframes label-member-c-anim {
+    0%, 23.38% { opacity:0; }
+    24.29% { opacity:1; }
+    26.58% { opacity:1; }
+    27.15%, 100% { opacity:0; }
+  }
+  #refresh-iphone { animation-name: refresh-iphone-anim; }
+  @keyframes refresh-iphone-anim {
+    0%, 27.38% { transform: scale(0) rotate(0deg); }
+    27.95% { transform: scale(1) rotate(0deg); }
+    29.89% { transform: scale(1) rotate(-3turn); }
+    30.35% { transform: scale(0) rotate(-3turn); }
+    74.89% { transform: scale(0) rotate(0deg); }
+    75.46% { transform: scale(1) rotate(0deg); }
+    77.41% { transform: scale(1) rotate(-3turn); }
+    77.86%, 100% { transform: scale(0) rotate(-3turn); }
+  }
+  #sync-request-iphone { animation-name: sync-request-iphone-anim; }
+  @keyframes sync-request-iphone-anim {
+    0%, 29.21% { transform: scale(0); }
+    29.78% { transform: scale(0.9); }
+    31.38% { opacity:1; transform: scale(0.9); }
+    31.95% { opacity:0; transform: scale(0.9); }
+    31.97% { opacity:1; transform: scale(0); }
+    76.72% { transform: scale(0); }
+    77.29% { transform: scale(0.9); }
+    77.52% { opacity:1; transform: scale(0.9); }
+    78.09% { opacity:0; transform: scale(0.9); }
+    78.11%, 100% { opacity:1; transform: scale(0); }
+  }
+  #c1-highlight { animation-name: c1-highlight-anim; }
+  @keyframes c1-highlight-anim {
+    0%, 30.23% { transform: scale(0); }
+    30.81% { transform: scale(1); }
+    32.77% { transform: scale(1); }
+    33.34% { transform: scale(0); }
+    44.68% { transform: scale(0); }
+    45.25% { transform: scale(1); }
+    49.51% { transform: scale(1); }
+    50.09%, 100% { transform: scale(0); }
+  }
+  #a1-highlight { animation-name: a1-highlight-anim; }
+  @keyframes a1-highlight-anim {
+    0%, 30.29% { transform: scale(0); }
+    30.86% { transform: scale(1); }
+    32.77% { transform: scale(1); }
+    33.34% { transform: scale(0); }
+    44.73% { transform: scale(0); }
+    45.3% { transform: scale(1); }
+    49.51% { transform: scale(1); }
+    50.09%, 100% { transform: scale(0); }
+  }
+  #b1-highlight { animation-name: b1-highlight-anim; }
+  @keyframes b1-highlight-anim {
+    0%, 30.35% { transform: scale(0); }
+    30.92% { transform: scale(1); }
+    32.77% { transform: scale(1); }
+    33.34% { transform: scale(0); }
+    44.79% { transform: scale(0); }
+    45.36% { transform: scale(1); }
+    49.51% { transform: scale(1); }
+    50.09%, 100% { transform: scale(0); }
+  }
+  #b2-highlight { animation-name: b2-highlight-anim; }
+  @keyframes b2-highlight-anim {
+    0%, 30.41% { transform: scale(0); }
+    30.98% { transform: scale(1); }
+    32.77% { transform: scale(1); }
+    33.34% { transform: scale(0); }
+    44.85% { transform: scale(0); }
+    45.42% { transform: scale(1); }
+    49.51% { transform: scale(1); }
+    50.09%, 100% { transform: scale(0); }
+  }
+  #c2-highlight { animation-name: c2-highlight-anim; }
+  @keyframes c2-highlight-anim {
+    0%, 30.46% { transform: scale(0); }
+    31.03% { transform: scale(1); }
+    32.77% { transform: scale(1); }
+    33.34% { transform: scale(0); }
+    44.9% { transform: scale(0); }
+    45.48% { transform: scale(1); }
+    49.51% { transform: scale(1); }
+    50.09%, 100% { transform: scale(0); }
+  }
+  #c3-highlight { animation-name: c3-highlight-anim; }
+  @keyframes c3-highlight-anim {
+    0%, 30.52% { transform: scale(0); }
+    31.09% { transform: scale(1); }
+    32.77% { transform: scale(1); }
+    33.34% { transform: scale(0); }
+    44.96% { transform: scale(0); }
+    45.53% { transform: scale(1); }
+    49.51% { transform: scale(1); }
+    50.09%, 100% { transform: scale(0); }
+  }
+  #c1-copy-to-iphone { animation-name: c1-copy-to-iphone-anim; }
+  @keyframes c1-copy-to-iphone-anim {
+    0%, 31.97% { transform: scale(1); }
+    32.54%, 100% { transform: scale(0); }
+  }
+  #a1-copy-to-iphone { animation-name: a1-copy-to-iphone-anim; }
+  @keyframes a1-copy-to-iphone-anim {
+    0%, 32.03% { transform: scale(1); }
+    32.6%, 100% { transform: scale(0); }
+  }
+  #b1-copy-to-iphone { animation-name: b1-copy-to-iphone-anim; }
+  @keyframes b1-copy-to-iphone-anim {
+    0%, 32.08% { transform: scale(1); }
+    32.65%, 100% { transform: scale(0); }
+  }
+  #b2-copy-to-iphone { animation-name: b2-copy-to-iphone-anim; }
+  @keyframes b2-copy-to-iphone-anim {
+    0%, 32.14% { transform: scale(1); }
+    32.71%, 100% { transform: scale(0); }
+  }
+  #c2-copy-to-iphone { animation-name: c2-copy-to-iphone-anim; }
+  @keyframes c2-copy-to-iphone-anim {
+    0%, 32.2% { transform: scale(1); }
+    32.77%, 100% { transform: scale(0); }
+  }
+  #c3-copy-to-iphone { animation-name: c3-copy-to-iphone-anim; }
+  @keyframes c3-copy-to-iphone-anim {
+    0%, 32.25% { transform: scale(1); }
+    32.83%, 100% { transform: scale(0); }
+  }
+  #response-files-iphone { animation-name: response-files-iphone-anim; }
+  @keyframes response-files-iphone-anim {
+    0%, 32.48% { transform: scale(0); }
+    33.05% { transform: scale(0.9); }
+    35.05% { opacity:1; transform: scale(0.9); }
+    35.63% { opacity:0; transform: scale(0.9); }
+    35.64% { opacity:1; transform: scale(0); }
+    79.06% { transform: scale(0); }
+    79.63% { transform: scale(0.9); }
+    81.35% { opacity:1; transform: scale(0.9); }
+    81.92% { opacity:0; transform: scale(0.9); }
+    81.94%, 100% { opacity:1; transform: scale(0); }
+  }
+  #c1-iphone-locked { animation-name: c1-iphone-locked-anim; }
+  @keyframes c1-iphone-locked-anim {
+    0%, 33.34% { transform: scale(0); }
+    33.91%, 100% { transform: scale(1); }
+  }
+  #a1-iphone-locked { animation-name: a1-iphone-locked-anim; }
+  @keyframes a1-iphone-locked-anim {
+    0%, 33.45% { transform: scale(0); opacity:1; }
+    34.03% { transform: scale(1); }
+    38.16% { transform: translateY(0px) translateX(0px); }
+    38.62% { transform: translateY(-222px) translateX(0px); }
+    38.85% { transform: translateY(-222px) translateX(-40px); }
+    39.07% { transform: translateY(-222px) translateX(-40px); opacity:1; }
+    39.42%, 100% { transform: translateY(-222px) translateX(-40px); opacity:0; }
+  }
+  #a1-iphone { animation-name: a1-iphone-anim; }
+  @keyframes a1-iphone-anim {
+    0%, 39.07% { opacity:0; }
+    39.09%, 100% { opacity:1; }
+  }
+  #b1-iphone-locked { animation-name: b1-iphone-locked-anim; }
+  @keyframes b1-iphone-locked-anim {
+    0%, 33.57% { transform: scale(0) translateX(0px) translateY(0px); opacity:1; }
+    34.14% { transform: scale(1); }
+    39.76% { transform: translateX(0px); }
+    39.99% { transform: translateX(-40px); }
+    71.23% { transform: translateX(-40px) translateY(0px); }
+    71.69% { transform: translateX(-40px) translateY(-222px); }
+    72.15% { transform: translateX(-40px) translateY(-222px); opacity:1; }
+    72.49%, 100% { transform: translateX(-40px) translateY(-222px); opacity:0; }
+  }
+  #b2-iphone-locked { animation-name: b2-iphone-locked-anim; }
+  @keyframes b2-iphone-locked-anim {
+    0%, 33.68% { transform: scale(0) translateX(0px) translateY(0px); opacity:1; }
+    34.25% { transform: scale(1); }
+    39.76% { transform: translateX(0px) translateY(0px); }
+    39.99% { transform: translateX(80px) translateY(0px); }
+    40.45% { transform: translateX(80px) translateY(42px); }
+    71.29% { transform: translateX(80px) translateY(42px); }
+    71.75% { transform: translateX(80px) translateY(-180px); }
+    72.2% { transform: translateX(80px) translateY(-180px); opacity:1; }
+    72.55%, 100% { transform: translateX(80px) translateY(-180px); opacity:0; }
+  }
+  #c2-iphone-locked { animation-name: c2-iphone-locked-anim; }
+  @keyframes c2-iphone-locked-anim {
+    0%, 33.8% { transform: scale(0); }
+    34.37% { transform: scale(1); }
+    39.76% { transform: translateX(0px); }
+    39.99% { transform: translateX(-40px); }
+    72.89% { transform: translateX(-40px) translateY(0px); }
+    73.12% { transform: translateX(0px) translateY(0px); }
+    73.58%, 100% { transform: translateX(0px) translateY(42px); }
+  }
+  #c3-iphone-locked { animation-name: c3-iphone-locked-anim; }
+  @keyframes c3-iphone-locked-anim {
+    0%, 33.91% { transform: scale(0); }
+    34.48% { transform: scale(1); }
+    39.76% { transform: translateX(0px); }
+    39.99% { transform: translateX(-40px); }
+    72.95% { transform: translateX(-40px) translateY(0px); }
+    73.18% { transform: translateX(0px) translateY(0px); }
+    73.63%, 100% { transform: translateX(0px) translateY(42px); }
+  }
+  #sync-1a-overlay { animation-name: sync-1a-overlay-anim; }
+  @keyframes sync-1a-overlay-anim {
+    0%, 36.67% { opacity:0; }
+    37.25% { opacity:1; }
+    39.42% { opacity:1; }
+    39.76%, 100% { opacity:0; }
+  }
+  #a1-iphone-highlight { animation-name: a1-iphone-highlight-anim; }
+  @keyframes a1-iphone-highlight-anim {
+    0%, 36.79% { transform: scale(0); }
+    37.13% { transform: scale(1); }
+    37.82% { transform: scale(1); }
+    38.16%, 100% { transform: scale(0); }
+  }
+  #refresh-android { animation-name: refresh-android-anim; }
+  @keyframes refresh-android-anim {
+    0%, 41.82% { transform: scale(0) rotate(0deg); }
+    42.39% { transform: scale(1) rotate(0deg); }
+    44.33% { transform: scale(1) rotate(-3turn); }
+    44.79%, 100% { transform: scale(0) rotate(-3turn); }
+  }
+  #sync-request-android { animation-name: sync-request-android-anim; }
+  @keyframes sync-request-android-anim {
+    0%, 43.65% { transform: scale(0); }
+    44.22% { transform: scale(0.9); }
+    45.82% { opacity:1; transform: scale(0.9); }
+    46.39% { opacity:0; transform: scale(0.9); }
+    46.41%, 100% { opacity:1; transform: scale(0); }
+  }
+  #c1-copy-to-android { animation-name: c1-copy-to-android-anim; }
+  @keyframes c1-copy-to-android-anim {
+    0%, 46.41% { transform: scale(1); }
+    46.98%, 100% { transform: scale(0); }
+  }
+  #a1-copy-to-android { animation-name: a1-copy-to-android-anim; }
+  @keyframes a1-copy-to-android-anim {
+    0%, 46.47% { transform: scale(1); }
+    47.04%, 100% { transform: scale(0); }
+  }
+  #b1-copy-to-android { animation-name: b1-copy-to-android-anim; }
+  @keyframes b1-copy-to-android-anim {
+    0%, 46.52% { transform: scale(1); }
+    47.09%, 100% { transform: scale(0); }
+  }
+  #b2-copy-to-android { animation-name: b2-copy-to-android-anim; }
+  @keyframes b2-copy-to-android-anim {
+    0%, 46.58% { transform: scale(1); }
+    47.15%, 100% { transform: scale(0); }
+  }
+  #c2-copy-to-android { animation-name: c2-copy-to-android-anim; }
+  @keyframes c2-copy-to-android-anim {
+    0%, 46.64% { transform: scale(1); }
+    47.21%, 100% { transform: scale(0); }
+  }
+  #c3-copy-to-android { animation-name: c3-copy-to-android-anim; }
+  @keyframes c3-copy-to-android-anim {
+    0%, 46.69% { transform: scale(1); }
+    47.27%, 100% { transform: scale(0); }
+  }
+  #response-files-android { animation-name: response-files-android-anim; }
+  @keyframes response-files-android-anim {
+    0%, 46.92% { opacity:1; transform: scale(0); }
+    47.49% { transform: scale(0.9); }
+    49.21% { opacity:1; transform: scale(0.9); }
+    49.78% { opacity:0; transform: scale(0.9); }
+    49.8%, 100% { opacity:0; transform: scale(0); }
+  }
+  #c1-android-locked { animation-name: c1-android-locked-anim; }
+  @keyframes c1-android-locked-anim {
+    48.07% { transform: scale(1); opacity:1; }
+    52.43% { transform: translateY(0px); }
+    52.89% { transform: translateY(-210px); }
+    53.34% { transform: translateY(-210px); opacity:1; }
+    0%, 47.49% { transform: scale(0); }
+    53.69%, 100% { transform: translateY(-210px); opacity:0; }
+  }
+  #a1-android-locked { animation-name: a1-android-locked-anim; }
+  @keyframes a1-android-locked-anim {
+    0%, 47.61% { transform: scale(0); }
+    48.18% { transform: scale(1); }
+    54.49% { transform: translateX(0px); }
+    54.72%, 100% { transform: translateX(-40px); }
+  }
+  #b1-android-locked { animation-name: b1-android-locked-anim; }
+  @keyframes b1-android-locked-anim {
+    0%, 47.72% { transform: scale(0); }
+    48.29% { transform: scale(1); }
+    54.49% { transform: translateX(0px); }
+    54.72%, 100% { transform: translateX(-40px); }
+  }
+  #b2-android-locked { animation-name: b2-android-locked-anim; }
+  @keyframes b2-android-locked-anim {
+    0%, 47.84% { transform: scale(0); }
+    48.41% { transform: scale(1); }
+    54.49% { transform: translateX(0px) translateY(0px); }
+    54.72% { transform: translateX(80px) translateY(0px); }
+    55.17%, 100% { transform: translateX(80px) translateY(42px); }
+  }
+  #c2-android-locked { animation-name: c2-android-locked-anim; }
+  @keyframes c2-android-locked-anim {
+    0%, 47.95% { transform: scale(0); }
+    48.52% { transform: scale(1); }
+    52.77% { transform: translateY(0px); opacity:1; }
+    53.23% { transform: translateY(-168px); opacity:1; }
+    53.69% { transform: translateY(-168px); opacity:1; }
+    54.03%, 100% { transform: translateY(-168px); opacity:0; }
+  }
+  #c3-android-locked { animation-name: c3-android-locked-anim; }
+  @keyframes c3-android-locked-anim {
+    0%, 48.07% { transform: scale(0); opacity:1; }
+    48.64% { transform: scale(1); }
+    52.89% { transform: translateY(0px); }
+    53.34% { transform: translateY(-168px); }
+    53.8% { transform: translateY(-168px); opacity:1; }
+    54.14%, 100% { transform: translateY(-168px); opacity:0; }
+  }
+  #sync-1c-overlay { animation-name: sync-1c-overlay-anim; }
+  @keyframes sync-1c-overlay-anim {
+    0%, 50.83% { opacity:0; }
+    51.4% { opacity:1; }
+    54.14% { opacity:1; }
+    54.49%, 100% { opacity:0; }
+  }
+  #c1-android-highlight { animation-name: c1-android-highlight-anim; }
+  @keyframes c1-android-highlight-anim {
+    0%, 50.94% { transform: scale(0); }
+    51.29% { transform: scale(1); }
+    51.97% { transform: scale(1); }
+    52.31%, 100% { transform: scale(0); }
+  }
+  #c2-android-highlight { animation-name: c2-android-highlight-anim; }
+  @keyframes c2-android-highlight-anim {
+    0%, 51% { transform: scale(0); }
+    51.34% { transform: scale(1); }
+    52.03% { transform: scale(1); }
+    52.37%, 100% { transform: scale(0); }
+  }
+  #c3-android-highlight { animation-name: c3-android-highlight-anim; }
+  @keyframes c3-android-highlight-anim {
+    0%, 51.06% { transform: scale(0); }
+    51.4% { transform: scale(1); }
+    52.09% { transform: scale(1); }
+    52.43%, 100% { transform: scale(0); }
+  }
+  #c1-android { animation-name: c1-android-anim; }
+  @keyframes c1-android-anim {
+    0%, 53.23% { opacity:0; }
+    53.25%, 100% { opacity:1; }
+  }
+  #c2-android { animation-name: c2-android-anim; }
+  @keyframes c2-android-anim {
+    0%, 53.34% { opacity:0; }
+    53.36%, 100% { opacity:1; }
+  }
+  #c3-android { animation-name: c3-android-anim; }
+  @keyframes c3-android-anim {
+    0%, 53.46% { opacity:0; }
+    53.48%, 100% { opacity:1; }
+  }
+  #upload-a2 { animation-name: upload-a2-anim; }
+  @keyframes upload-a2-anim {
+    0%, 57.46% { transform: scale(0); opacity:1; }
+    58.03% { transform: scale(0.9); }
+    59.86% { opacity:1; }
+    60.32%, 100% { opacity:0; }
+  }
+  #upload-b3 { animation-name: upload-b3-anim; }
+  @keyframes upload-b3-anim {
+    0%, 57.92% { transform: scale(0); opacity:1; }
+    58.49% { transform: scale(0.9); }
+    59.86% { opacity:1; }
+    60.32%, 100% { opacity:0; }
+  }
+  #upload-b4 { animation-name: upload-b4-anim; }
+  @keyframes upload-b4-anim {
+    0%, 58.37% { transform: scale(0); opacity:1; }
+    58.94% { transform: scale(0.9); }
+    59.86% { opacity:1; }
+    60.32%, 100% { opacity:0; }
+  }
+  #a2 { animation-name: a2-anim; }
+  @keyframes a2-anim {
+    0%, 57.92% { transform: scale(0); }
+    58.49%, 100% { transform: scale(1); }
+  }
+  #b3 { animation-name: b3-anim; }
+  @keyframes b3-anim {
+    0%, 58.37% { transform: scale(0); }
+    58.94%, 100% { transform: scale(1); }
+  }
+  #b4 { animation-name: b4-anim; }
+  @keyframes b4-anim {
+    0%, 58.83% { transform: scale(0); }
+    59.4%, 100% { transform: scale(1); }
+  }
+  #upload-c4 { animation-name: upload-c4-anim; }
+  @keyframes upload-c4-anim {
+    0%, 60.77% { transform: scale(0); opacity: 1; }
+    61.35% { transform: scale(0.9); }
+    63.06% { opacity:1; }
+    63.52%, 100% { opacity:0; }
+  }
+  #upload-b5 { animation-name: upload-b5-anim; }
+  @keyframes upload-b5-anim {
+    0%, 61.23% { transform: scale(0); opacity: 1; }
+    61.8% { transform: scale(0.9); }
+    63.06% { opacity:1; }
+    63.52%, 100% { opacity:0; }
+  }
+  #upload-a3 { animation-name: upload-a3-anim; }
+  @keyframes upload-a3-anim {
+    0%, 61.69% { transform: scale(0); opacity: 1; }
+    62.26% { transform: scale(0.9); }
+    63.06% { opacity:1; }
+    63.52%, 100% { opacity:0; }
+  }
+  #c4 { animation-name: c4-anim; }
+  @keyframes c4-anim {
+    0%, 61% { transform: scale(0); }
+    61.57%, 100% { transform: scale(1); }
+  }
+  #b5 { animation-name: b5-anim; }
+  @keyframes b5-anim {
+    0%, 61.46% { transform: scale(0); }
+    62.03%, 100% { transform: scale(1); }
+  }
+  #a3 { animation-name: a3-anim; }
+  @keyframes a3-anim {
+    0%, 61.92% { transform: scale(0); }
+    62.49%, 100% { transform: scale(1); }
+  }
+  #key-b { animation-name: key-b-anim; }
+  @keyframes key-b-anim {
+    0%, 65.23% { transform: translateX(-1028px) translateY(50px); opacity:0; }
+    65.8% { transform: translateX(-1028px) translateY(0px); opacity:1; }
+    67.17% { transform: translateX(0px); }
+    69.23% { transform: translateX(0px); }
+    69.58% { transform: translateX(-96px); }
+    70.26% { transform: translateX(-96px); }
+    70.6% { transform: translateX(0px); }
+    90.06% { transform: translateX(0px); }
+    90.4% { transform: translateX(-96px); }
+    91.08% { transform: translateX(-96px); }
+    91.43%, 100% { transform: translateX(0px); opacity:1; }
+  }
+  #label-member-a-b { animation-name: label-member-a-b-anim; }
+  @keyframes label-member-a-b-anim {
+    0%, 67.52% { opacity:0; }
+    68.66%, 100% { opacity:1; }
+  }
+  #sync-1b-overlay { animation-name: sync-1b-overlay-anim; }
+  @keyframes sync-1b-overlay-anim {
+    0%, 69.69% { opacity:0; }
+    70.26% { opacity:1; }
+    72.55% { opacity:1; }
+    72.89%, 100% { opacity:0; }
+  }
+  #b1-iphone-highlight { animation-name: b1-iphone-highlight-anim; }
+  @keyframes b1-iphone-highlight-anim {
+    0%, 69.8% { transform: scale(0); }
+    70.15% { transform: scale(1); }
+    70.83% { transform: scale(1); }
+    71.18%, 100% { transform: scale(0); }
+  }
+  #b2-iphone-highlight { animation-name: b2-iphone-highlight-anim; }
+  @keyframes b2-iphone-highlight-anim {
+    0%, 69.86% { transform: scale(0); }
+    70.2% { transform: scale(1); }
+    70.89% { transform: scale(1); }
+    71.23%, 100% { transform: scale(0); }
+  }
+  #b1-iphone { animation-name: b1-iphone-anim; }
+  @keyframes b1-iphone-anim {
+    0%, 72.09% { transform: translateX(40px) translateY(-42px); opacity:0; }
+    72.11% { transform: translateX(40px) translateY(-42px); opacity:1; }
+    83.65% { transform: translateX(40px) translateY(-42px); }
+    84.11% { transform: translateX(40px) translateY(0px); }
+    84.57%, 100% { transform: translateX(0px) translateY(0px); opacity:1; }
+  }
+  #b2-iphone { animation-name: b2-iphone-anim; }
+  @keyframes b2-iphone-anim {
+    0%, 72.2% { transform: translateX(0px) translateY(0px); opacity:0; }
+    72.22% { transform: translateX(40px) translateY(-42px); opacity:1; }
+    83.71% { transform: translateY(-42px) translateX(40px); }
+    84.17% { transform: translateY(0px) translateX(40px); }
+    84.63%, 100% { transform: translateY(0px) translateX(0px); opacity:1; }
+  }
+  #pātaka-overlay { animation-name: pātaka-overlay-anim; }
+  @keyframes pātaka-overlay-anim {
+    0%, 77.46% { opacity:0; }
+    78.03% { opacity:1; }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #a2-highlight { animation-name: a2-highlight-anim; }
+  @keyframes a2-highlight-anim {
+    0%, 77.81% { transform: scale(0); opacity:1; }
+    78.38% { transform: scale(1); }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #b3-highlight { animation-name: b3-highlight-anim; }
+  @keyframes b3-highlight-anim {
+    0%, 77.86% { transform: scale(0); opacity:1; }
+    78.43% { transform: scale(1); }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #b4-highlight { animation-name: b4-highlight-anim; }
+  @keyframes b4-highlight-anim {
+    0%, 77.92% { transform: scale(0); opacity:1; }
+    78.49% { transform: scale(1); }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #c4-highlight { animation-name: c4-highlight-anim; }
+  @keyframes c4-highlight-anim {
+    0%, 77.98% { transform: scale(0); opacity:1; }
+    78.55% { transform: scale(1); }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #b5-highlight { animation-name: b5-highlight-anim; }
+  @keyframes b5-highlight-anim {
+    0%, 78.03% { transform: scale(0); opacity:1; }
+    78.61% { transform: scale(1); }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #a3-highlight { animation-name: a3-highlight-anim; }
+  @keyframes a3-highlight-anim {
+    0%, 78.09% { transform: scale(0); opacity:1; }
+    78.66% { transform: scale(1); }
+    79.35% { opacity:1; }
+    79.92%, 100% { opacity:0; }
+  }
+  #a2-copy-to-iphone { animation-name: a2-copy-to-iphone-anim; }
+  @keyframes a2-copy-to-iphone-anim {
+    0%, 78.66% { transform: scale(1); }
+    79.23%, 100% { transform: scale(0); }
+  }
+  #b3-copy-to-iphone { animation-name: b3-copy-to-iphone-anim; }
+  @keyframes b3-copy-to-iphone-anim {
+    0%, 78.72% { transform: scale(1); }
+    79.29%, 100% { transform: scale(0); }
+  }
+  #b4-copy-to-iphone { animation-name: b4-copy-to-iphone-anim; }
+  @keyframes b4-copy-to-iphone-anim {
+    0%, 78.78% { transform: scale(1); }
+    79.35%, 100% { transform: scale(0); }
+  }
+  #c4-copy-to-iphone { animation-name: c4-copy-to-iphone-anim; }
+  @keyframes c4-copy-to-iphone-anim {
+    0%, 78.83% { transform: scale(1); }
+    79.41%, 100% { transform: scale(0); }
+  }
+  #a2-iphone-locked { animation-name: a2-iphone-locked-anim; }
+  @keyframes a2-iphone-locked-anim {
+    0%, 79.92% { transform: scale(0); opacity:1; }
+    80.49% { transform: scale(1); }
+    84.17% { transform: translateX(0px) translateY(0px); }
+    84.4% { transform: translateX(40px) translateY(0px); }
+    84.85% { transform: translateX(40px) translateY(-180px); }
+    85.31% { transform: translateX(40px) translateY(-180px); opacity:1; }
+    85.65%, 100% { transform: translateX(40px) translateY(-180px); opacity: 0; }
+  }
+  #b3-iphone-locked { animation-name: b3-iphone-locked-anim; }
+  @keyframes b3-iphone-locked-anim {
+    0%, 79.98% { transform: scale(0); opacity:1; }
+    80.55% { transform: scale(1); }
+    86.97% { transform: translateX(0px); }
+    87.2% { transform: translateX(-40px); }
+    91.2% { transform: translateY(0px) translateX(-40px); }
+    91.66% { transform: translateY(-96px) translateX(-40px); }
+    91.88% { transform: translateY(-96px) translateX(40px); }
+    92.11% { transform: translateY(-138px) translateX(40px); }
+    92.57% { transform: translateY(-138px) translateX(40px); opacity:1; }
+    92.91%, 100% { transform: translateY(-138px) translateX(40px); opacity:0; }
+  }
+  #b4-iphone-locked { animation-name: b4-iphone-locked-anim; }
+  @keyframes b4-iphone-locked-anim {
+    0%, 80.03% { transform: scale(0); opacity:1; }
+    80.61% { transform: scale(1); }
+    87.03% { transform: translateX(0px); }
+    87.25% { transform: translateX(-40px); }
+    91.26% { transform: translateY(0px) translateX(-40px); }
+    91.71% { transform: translateY(-96px) translateX(-40px); }
+    91.94% { transform: translateY(-96px) translateX(-80px); }
+    92.4% { transform: translateY(-96px) translateX(-80px); opacity:1; }
+    92.74%, 100% { transform: translateY(-96px) translateX(-80px); opacity: 0; }
+  }
+  #c4-iphone-locked { animation-name: c4-iphone-locked-anim; }
+  @keyframes c4-iphone-locked-anim {
+    0%, 80.09% { transform: scale(0) translateX(0px) translateY(0px); opacity:1; }
+    80.66% { transform: scale(1); }
+    87.03% { transform: translateX(0px) translateY(0px); }
+    87.25% { transform: translateX(80px) translateY(0px); }
+    87.48% { transform: translateX(80px) translateY(42px); }
+    92.91% { transform: translateX(80px) translateY(42px); }
+    93.14%, 100% { transform: translateX(0px) translateY(42px); }
+  }
+  #b5-iphone-locked { animation-name: b5-iphone-locked-anim; }
+  @keyframes b5-iphone-locked-anim {
+    0%, 80.15% { transform: scale(0); opacity:1;}
+    80.72% { transform: scale(1); }
+    87.08% { transform: translateX(0px); }
+    87.31% { transform: translateX(-40px); }
+    87.48% { transform: translateX(-40px); }
+    89.77% { transform: translateX(-40px); }
+    91.31% { transform: translateX(-40px) translateY(0px); }
+    91.54% { transform: translateX(0px) translateY(0px); }
+    91.88% { transform: translateX(0px) translateY(-54px); }
+    92.34% { transform: translateX(0px) translateY(-54px); opacity:1; }
+    92.68%, 100% { transform: scale(1) translateX(0px) translateY(-54px); opacity:0; }
+  }
+  #a3-iphone-locked { animation-name: a3-iphone-locked-anim; }
+  @keyframes a3-iphone-locked-anim {
+    0%, 80.21% { transform: scale(0); opacity:1; }
+    80.78% { transform: scale(1); }
+    84.45% { transform: translateY(0px); }
+    84.91% { transform: translateY(-138px); }
+    85.37% { transform: translateY(-138px); opacity:1; }
+    85.71%, 100% { transform: scale(1) translateY(-138px); opacity:0; }
+  }
+  #a2-iphone-highlight { animation-name: a2-iphone-highlight-anim; }
+  @keyframes a2-iphone-highlight-anim {
+    0%, 82.4% { transform: scale(0); }
+    82.74% { transform: scale(1); }
+    83.43% { transform: scale(1); }
+    83.77%, 100% { transform: scale(0); }
+  }
+  #a3-iphone-highlight { animation-name: a3-iphone-highlight-anim; }
+  @keyframes a3-iphone-highlight-anim {
+    0%, 82.45% { transform: scale(0); }
+    82.8% { transform: scale(1); }
+    83.48% { transform: scale(1); }
+    83.83%, 100% { transform: scale(0); }
+  }
+  #sync-2a-overlay { animation-name: sync-2a-overlay-anim; }
+  @keyframes sync-2a-overlay-anim {
+    0%, 82.97% { opacity:0; }
+    83.54% { opacity:1; }
+    86.05% { opacity:1; }
+    86.4%, 100% { opacity:0; }
+  }
+  #a2-iphone { animation-name: a2-iphone-anim; }
+  @keyframes a2-iphone-anim {
+    0%, 85.25% { opacity:0; }
+    85.27% { opacity:1; }
+    85.71% { opacity:1; }
+    86.85%, 100% { opacity:1; }
+  }
+  #a3-iphone { animation-name: a3-iphone-anim; }
+  @keyframes a3-iphone-anim {
+    0%, 85.37% { opacity:0; }
+    85.39% { opacity:1; }
+    85.83% { opacity:1; }
+    86.97%, 100% { opacity:1; }
+  }
+  #b3-iphone-highlight { animation-name: b3-iphone-highlight-anim; }
+  @keyframes b3-iphone-highlight-anim {
+    0%, 89.94% { transform: scale(0); }
+    90.28% { transform: scale(1); }
+    90.97% { transform: scale(1); }
+    91.31%, 100% { transform: scale(0); }
+  }
+  #b4-iphone-highlight { animation-name: b4-iphone-highlight-anim; }
+  @keyframes b4-iphone-highlight-anim {
+    0%, 90% { transform: scale(0); }
+    90.34% { transform: scale(1); }
+    91.03% { transform: scale(1); }
+    91.37%, 100% { transform: scale(0); }
+  }
+  #b5-iphone-highlight { animation-name: b5-iphone-highlight-anim; }
+  @keyframes b5-iphone-highlight-anim {
+    0%, 90.06% { transform: scale(0); }
+    90.4% { transform: scale(1); }
+    91.08% { transform: scale(1); }
+    91.43%, 100% { transform: scale(0); }
+  }
+  #sync-2b-overlay { animation-name: sync-2b-overlay-anim; }
+  @keyframes sync-2b-overlay-anim {
+    0%, 90.51% { opacity:0; }
+    91.08% { opacity:1; }
+    92% { opacity:1; }
+    92.34%, 100% { opacity:0; }
+  }
+  #b3-iphone { animation-name: b3-iphone-anim; }
+  @keyframes b3-iphone-anim {
+    0%, 92.34% { opacity:0; }
+    92.36%, 100% { opacity:1; }
+  }
+  #b4-iphone { animation-name: b4-iphone-anim; }
+  @keyframes b4-iphone-anim {
+    0%, 92.34% { opacity:0; }
+    92.36%, 100% { opacity:1; }
+  }
+  #b5-iphone { animation-name: b5-iphone-anim; }
+  @keyframes b5-iphone-anim {
+    0%, 92.34% { opacity:0; }
+    92.91%, 100% { opacity:1; }
+  }
+    /* ]]> */
+  </style>
+
+  <defs>
+    <g id="file-copy">
+      <path fill="var(--mid-light-grey)"
+            d="M770.7 220.6H728v-42.8h42.8z"/>
+      <path d="M770.7 220.6H728v-42.8h42.8zm6.1-42.8c0-3.4-2.7-6.1-6-6.1h-42.9a6.1 6.1 0 00-6 6v42.9c0 3.3 2.7 6 6 6h42.8c3.4 0 6.1-2.7 6.1-6z"/>
+    </g>
+    <g id="image-file"
+       stroke-width="4">
+      <path d="M4 2h28c1,0 2,1 2,2
+            v28c0 1-1 2-2 2
+            h-28c-1,0 -2,-1 -2-2
+            v-28c0-1 1-2 2-2z"/>
+      <path fill="none"
+            d="M10 26l2-2.5 2.1 2.5zM18.4 26l3.8-5 3.8 5z"/>
+    </g>
+    <g id="encrypted-file"
+       stroke-width="4"
+       fill="var(--encrypted-color)">
+      <path d="M4 2h28c1,0 2,1 2,2
+            v28c0 1-1 2-2 2
+            h-28c-1,0 -2,-1 -2-2
+            v-28c0-1 1-2 2-2z"/>
+    </g>
+    <g id="text-file"
+       stroke-width="4">
+      <path d="M4 2h18c.5 0 1.3.3 1.5.5l10 10c.4.4.5.9.5 1.5v18c0 1-1 2-2 2h-28c-1,0 -2,-1 -2-2v-28c0-1.2.8-2 2-2z"/>
+      <path d="M8 10h14
+               m-14 8h20
+               m-20 8h20"/>
+    </g>
+    <filter id="highlight-blur"
+            x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+    </filter>
+  </defs>
+
+  <g id="everything"
+     opacity="1">
+
+    <g id="iphone">
+      <rect id="i-base"
+            width="160.5" height="328" x="635.7" y="126" ry="19.1"
+            fill="none" stroke="var(--outline-color)" stroke-width="7" />
+      <rect id="i-inner-edge"
+            width="157" height="324.5" x="637.5" y="127.7" ry="18.8"
+            fill="var(--devices-color)" stroke="var(--devices-color)" stroke-width="3.5" />
+      <path id="i-screen"
+            fill="var(--white)" stroke-width="3.5"
+            d="M642.7 147a14 14 0 0114-13.8H674s.2 12 10.5 12h62.8c10.3 0 10.5-12 10.5-12h17.4c7.4 0 14 5.1 14 13.7v284.5c0 9.8-5.1 16.2-18.3 16.2H661c-13.7 0-18.3-6-18.3-16.2z"/>
+      <circle id="i-camera"
+              cx="734.7" cy="136.9" r="3.5"
+              fill="var(--white)" stroke-width="3.5"/>
+      <path id="i-speaker"
+            stroke="var(--mid-light-grey)" stroke-width="3.5"
+            d="M709 136h14"/>
+
+      <g id="a-files-iphone"
+        fill="var(--group-a-tint)" stroke="var(--group-a-color)">
+        <use id="a1-iphone"
+             xlink:href="#text-file" x="656" y="170" />
+        <use id="a2-iphone"
+             xlink:href="#image-file" x="696" y="170"/>
+        <use id="a3-iphone"
+             xlink:href="#image-file" x="736" y="170"/>
+      </g>
+
+      <g id="b-files-iphone"
+         fill="var(--group-b-tint)" stroke="var(--group-b-color)">
+        <use id="b1-iphone"
+              xlink:href="#text-file" x="656" y="212"/>
+        <use id="b2-iphone"
+            xlink:href="#image-file" x="696" y="212"/>
+        <use id="b3-iphone"
+             xlink:href="#image-file" x="736" y="212" />
+        <use id="b4-iphone"
+            xlink:href="#text-file" x="656" y="254" />
+        <use id="b5-iphone"
+             xlink:href="#text-file" x="696" y="254" />
+      </g>
+
+      <g id="locked-files-iphone">
+        <!-- sync 1 iphone -->
+        <!-- c1, a1, b1, b2, c2, c3 -->
+        <use id="c1-iphone-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="656" y="392"
+             style="transform-origin:640px 300px 0px;"/>
+        <rect id="a1-iphone-highlight"
+           x="694" y="390" width="40" height="40"
+           fill="var(--group-a-highlight)" filter="url(#highlight-blur)"
+           style="transform-origin: 714px 410px 0px; transform: scale(0);"/>
+        <use id="a1-iphone-locked"
+             stroke="var(--group-a-color)"
+             xlink:href="#encrypted-file" x="696" y="392"
+             style="transform-origin:640px 300px 0px;"/>
+        <rect id="b1-iphone-highlight"
+          x="694" y="390" width="40" height="40"
+          fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+          style="transform-origin: 714px 410px 0px; transform: scale(0);"/>
+        <use id="b1-iphone-locked"
+             stroke="var(--group-b-color)"
+             xlink:href="#encrypted-file" x="736" y="392"
+             style="transform-origin:640px 300px 0px;"/>
+        <rect id="b2-iphone-highlight"
+          x="734" y="390" width="40" height="40"
+          fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+          style="transform-origin: 754px 410px 0px; transform: scale(0);"/>
+        <use id="b2-iphone-locked"
+             stroke="var(--group-b-color)"
+             xlink:href="#encrypted-file" x="656" y="350"
+             style="transform-origin:640px 300px 0px;"/>
+        <use id="c2-iphone-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="696" y="350"
+             style="transform-origin:640px 300px 0px;"/>
+        <use id="c3-iphone-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="736" y="350"
+             style="transform-origin:640px 300px 0px;"/>
+
+        <!-- sync 2 iphone -->
+        <!-- a2, b3, b4, c4, b5, a3 -->
+        <rect id="a2-iphone-highlight"
+              x="654" y="348" width="40" height="40"
+              fill="var(--group-a-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 674px 368px 0px; transform: scale(0);"/>
+        <use id="a2-iphone-locked"
+             stroke="var(--group-a-color)"
+             xlink:href="#encrypted-file" x="656" y="350"
+             style="transform-origin:640px 300px 0px;"/>
+        <rect id="b3-iphone-highlight"
+              x="654" y="348" width="40" height="40"
+              fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 674px 368px 0px; transform: scale(0);"/>
+        <use id="b3-iphone-locked"
+            stroke="var(--group-b-color)"
+            xlink:href="#encrypted-file" x="696" y="350"
+            style="transform-origin:640px 300px 0px;"/>
+        <rect id="b4-iphone-highlight"
+              x="694" y="348" width="40" height="40"
+              fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 714px 368px 0px; transform: scale(0);"/>
+        <use id="b4-iphone-locked"
+            stroke="var(--group-b-color)"
+            xlink:href="#encrypted-file" x="736" y="350"
+            style="transform-origin:640px 300px 0px;"/>
+        <use id="c4-iphone-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="656" y="308"
+             style="transform-origin:640px 300px 0px;"/>
+        <rect id="b5-iphone-highlight"
+             x="654" y="306" width="40" height="40"
+             fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+             style="transform-origin: 674px 326px 0px; transform: scale(0);"/>
+        <use id="b5-iphone-locked"
+           stroke="var(--group-b-color)"
+           xlink:href="#encrypted-file" x="696" y="308"
+           style="transform-origin:640px 300px 0px;"/>
+        <rect id="a3-iphone-highlight"
+              x="734" y="306" width="40" height="40"
+              fill="var(--group-a-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 754px 326px 0px; transform: scale(0);"/>
+        <use id="a3-iphone-locked"
+             stroke="var(--group-a-color)"
+             xlink:href="#encrypted-file" x="736" y="308"
+             style="transform-origin:640px 300px 0px;"/>
+       </g>
+
+       <g id="sync-1a-overlay"
+          stroke="var(--light-grey)" style="opacity:0;">
+          <use xlink:href="#encrypted-file" x="656" y="392"/>
+          <use xlink:href="#encrypted-file" x="736" y="392"/>
+          <use xlink:href="#encrypted-file" x="656" y="350"/>
+          <use xlink:href="#encrypted-file" x="696" y="350"/>
+          <use xlink:href="#encrypted-file" x="736" y="350"/>
+       </g>
+
+       <g id="sync-1b-overlay"
+          stroke="var(--light-grey)" style="opacity:0;">
+          <use xlink:href="#encrypted-file" x="656" y="392"/>
+          <use xlink:href="#encrypted-file" x="656" y="350"/>
+          <use xlink:href="#encrypted-file" x="696" y="350"/>
+       </g>
+
+       <g id="sync-2a-overlay"
+          stroke="var(--light-grey)" style="opacity:0;">
+          <use xlink:href="#encrypted-file" x="656" y="392"/>
+          <use xlink:href="#encrypted-file" x="696" y="392"/>
+          <use xlink:href="#encrypted-file" x="736" y="392"/>
+          <use xlink:href="#encrypted-file" x="696" y="350"/>
+          <use xlink:href="#encrypted-file" x="736" y="350"/>
+          <use xlink:href="#encrypted-file" x="656" y="308"/>
+          <use xlink:href="#encrypted-file" x="696" y="308"/>
+       </g>
+
+       <g id="sync-2b-overlay"
+          stroke="var(--light-grey)" style="opacity:1;">
+          <use xlink:href="#encrypted-file" x="656" y="392"/>
+          <use xlink:href="#encrypted-file" x="696" y="392"/>
+          <use xlink:href="#encrypted-file" x="736" y="392"/>
+          <use xlink:href="#encrypted-file" x="736" y="350"/>
+       </g>
+
+    </g>
+
+    <g id="android">
+      <rect id="a-base"
+            width="161" height="329" x="635.5" y="545" ry="16.8"
+            fill="none" stroke="var(--outline-color)" stroke-width="7" />
+      <rect id="a-inner-edge"
+            width="157.5" height="325.5" x="637.3" y="546.8" ry="15.4"
+            fill="var(--devices-color)" stroke="var(--devices-color)" stroke-width="3.5"/>
+      <path fill="var(--white)"
+            stroke-width="3.5"
+            d="M639 562.5h154v280H639z"/>
+      <circle id="a-camera"
+              cx="779" cy="552" r="3.5"
+              fill="var(--white)" stroke-width="3.5"/>
+      <path id="a-speaker"
+            stroke="var(--mid-light-grey)" stroke-width="3.5"
+            d="M709 550.3h14"/>
+      <path id="a-microphone"
+            stroke="var(--mid-light-grey)" stroke-width="3.5"
+            d="M695 858.3h42"/>
+
+      <g id="c-files-android"
+         fill="var(--group-c-tint)" stroke="var(--group-c-color)">
+        <use id="c1-android"
+            xlink:href="#image-file" x="656" y="582" />
+        <use id="c2-android"
+             xlink:href="#image-file" x="696" y="582" />
+        <use id="c3-android"
+            xlink:href="#text-file" x="736" y="582" />
+      </g>
+
+      <g id="locked-files-android">
+        <rect id="c1-android-highlight"
+           x="654" y="790" width="40" height="40"
+           fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+           style="transform-origin: 674px 810px 0px; transform: scale(0);"/>
+        <use id="c1-android-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="656" y="792"
+             style="transform-origin:640px 680px 0px;"/>
+        <use id="a1-android-locked"
+             stroke="var(--group-a-color)"
+             xlink:href="#encrypted-file" x="696" y="792"
+             style="transform-origin:640px 680px 0px;"/>
+        <use id="b1-android-locked"
+             stroke="var(--group-b-color)"
+             xlink:href="#encrypted-file" x="736" y="792"
+             style="transform-origin:640px 680px 0px;"/>
+        <use id="b2-android-locked"
+             stroke="var(--group-b-color)"
+             xlink:href="#encrypted-file" x="656" y="750"
+             style="transform-origin:640px 680px 0px;"/>
+        <rect id="c2-android-highlight"
+          x="694" y="748" width="40" height="40"
+          fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+          style="transform-origin: 714px 768px 0px; transform: scale(0);"/>
+        <use id="c2-android-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="696" y="750"
+             style="transform-origin:640px 680px 0px;"/>
+        <rect id="c3-android-highlight"
+          x="734" y="748" width="40" height="40"
+          fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+          style="transform-origin: 754px 768px 0px; transform: scale(0);"/>
+        <use id="c3-android-locked"
+             stroke="var(--group-c-color)"
+             xlink:href="#encrypted-file" x="736" y="750"
+             style="transform-origin:640px 680px 0px;"/>
+      </g>
+
+      <g id="sync-1c-overlay"
+         stroke="var(--light-grey)">
+        <use xlink:href="#encrypted-file" x="696" y="792"/>
+        <use xlink:href="#encrypted-file" x="736" y="792"/>
+        <use xlink:href="#encrypted-file" x="656" y="750"/>
+      </g>
+
+    </g>
+
+    <g id="keys">
+      <path id="key-a"
+            fill="none" stroke="var(--group-a-color)"
+            stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+            style="transform-origin: 890px 232.5px 0px;"
+            d="M872.7 232.5v12.7m33.6-12.7h-48.5v12.8
+            m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z"/>
+      <path id="key-b"
+            fill="none" stroke="var(--group-b-color)"
+            stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+            style="transform-origin: 890px 299px 0px;"
+            d="M872.7 299v12.7m33.6-12.7h-48.5v12.8m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z"/>
+      <path id="key-c"
+            fill="none" stroke="var(--group-c-symbol-color)"
+            stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+            style="transform-origin: 890px 642.5px 0px;"
+            d="M872.7 642.5v12.7m33.6-12.7h-48.5v12.8m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z" />
+    </g>
+
+    <g id="pātaka-imac">
+
+      <g id="imac-stand">
+        <path fill="var(--devices-color)"
+              d="M295.2 644.6H154.7c15.7-14.6 23.6-22.5 23.6-38.3 0-23.6-7.9-23.6-7.9-23.6H280s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+        <path fill="var(--mid-grey)"
+              d="M157.5 643.5c13.5-13.5 15.7-16.9 20.8-29.3 31.5 23 61.8 23 93.3 0 4.5 13.5 6.2 14 21.3 29.3z"/>
+        <path fill="none" stroke="var(--outline-color)"
+              stroke-linejoin="round" stroke-width=".5"
+              d="M295.2 644.6H154.7c15.7-14.6 23.6-22.5 23.6-38.3 0-23.6-7.9-23.6-7.9-23.6H280s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+      </g>
+
+      <rect width="398.9" height="243.1" x="25.5" y="355.4" rx="15.7" ry="15.8"
+            fill="var(--devices-color)" stroke="var(--outline-color)"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
+      <circle cx="228.3" cy="363.3" r="3.9"
+              fill="var(--mid-grey)"/>
+      <rect id="imac-screen"
+            width="383.2" height="203.7" x="33.4" y="371.1"
+            fill="var(--white)" />
+
+      <g id="pātaka-symbol"
+         fill="var(--pātaka-color)" stroke="var(--outline-color)"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" transform="translate(168, 410) scale(2.5)">
+        <path	d="M5.3 39.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
+        <path	d="M9.6 50.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+      </g>
+
+      <g id="pātaka-files">
+
+        <defs>
+
+          <g id="pātaka-file">
+            <path d="M151 489h-32.1v-32h32zm4.6-32c0-2.6-2.1-4.6-4.6-4.6h-32.1c-2.5 0-4.6 2-4.6 4.5V489c0 2.6 2 4.6 4.6 4.6h32c2.6 0 4.7-2 4.7-4.6z"/>
+            <path fill="var(--encrypted-color)"
+                d="M151 489h-32.1v-32h32z"/>
+          </g>
+
+        </defs>
+
+        <g id="group-a-files"
+           fill="var(--group-a-color)">
+          <use id="a1-copy-to-iphone"
+               xlink:href="#a1"
+               style="transform-origin: 424px 372px 0px;"
+               opacity="0.5"/>
+          <use id="a1-copy-to-android"
+               xlink:href="#a1"
+               style="transform-origin:424px 555px 0px;"
+               opacity="0.5"/>
+          <rect id="a1-highlight"
+               x="111" y="449" width="48" height="48"
+               fill="var(--group-a-highlight)" filter="url(#highlight-blur)"
+               style="transform-origin: 135px 473px 0px; transform: scale(0);"/>
+          <use id="a1"
+               xlink:href="#pātaka-file" x="0" y="0"
+               style="transform-origin: 75px 354px 0px;" />
+          <use id="a2-copy-to-iphone"
+              xlink:href="#a2"
+              style="transform-origin: 424px 372px 0px;"
+              opacity="0.5"/>
+          <use id="a2-copy-to-android"
+              xlink:href="#a2"
+              style="transform-origin:424px 555px 0px;"
+              opacity="0.5"/>
+          <rect id="a2-highlight"
+                x="231" y="394" width="48" height="48"
+                fill="var(--group-a-highlight)" filter="url(#highlight-blur)"
+                style="transform-origin: 255px 418px 0px; transform: scale(0);"/>
+          <use id="a2" xlink:href="#pātaka-file" x="120" y="-55"
+               style="transform-origin: 206px 370px 0px;" />
+          <!-- ↓ a3 moved below group-c-files ↓ -->
+        </g>
+
+        <g id="group-b-files"
+           fill="var(--group-b-color)">
+          <use id="b1-copy-to-iphone"
+              xlink:href="#b1"
+              style="transform-origin: 424px 372px 0px;"
+              opacity="0.5"/>
+          <use id="b1-copy-to-android"
+              xlink:href="#b1"
+              style="transform-origin:424px 555px 0px;"
+              opacity="0.5"/>
+          <rect id="b1-highlight"
+              x="111" y="504" width="48" height="48"
+              fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 135px 528px 0px; transform: scale(0);"/>
+          <use id="b1"
+               xlink:href="#pātaka-file" x="0" y="55"
+               style="transform-origin: -67px 435px 0px;" />
+          <use id="b2-copy-to-iphone"
+              xlink:href="#b2"
+              style="transform-origin: 424px 372px 0px;"
+              opacity="0.5"/>
+          <use id="b2-copy-to-android"
+              xlink:href="#b2"
+              style="transform-origin:424px 555px 0px;"
+              opacity="0.5"/>
+          <rect id="b2-highlight"
+              x="171" y="394" width="48" height="48"
+              fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 195px 418px 0px; transform: scale(0);"/>
+          <use id="b2"
+              xlink:href="#pātaka-file" x="60" y="-55"
+              style="transform-origin: -36px 450px 0px;" />
+          <use id="b3-copy-to-iphone"
+             xlink:href="#b3"
+             style="transform-origin: 424px 372px 0px;"
+             opacity="0.5"/>
+          <use id="b3-copy-to-android"
+             xlink:href="#b3"
+             style="transform-origin:424px 555px 0px;"
+             opacity="0.5"/>
+          <rect id="b3-highlight"
+                x="231" y="449" width="48" height="48"
+                fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+                style="transform-origin: 255px 473px 0px; transform: scale(0);"/>
+          <use id="b3"
+               style="transform-origin: 32px 475px 0px"
+               xlink:href="#pātaka-file" x="120" y="0" />
+          <use id="b4-copy-to-iphone"
+               xlink:href="#b4"
+               style="transform-origin: 424px 372px 0px;"
+               opacity="0.5"/>
+          <use id="b4-copy-to-android"
+               xlink:href="#b4"
+               style="transform-origin:424px 555px 0px;"
+               opacity="0.5"/>
+          <rect id="b4-highlight"
+                   x="231" y="504" width="48" height="48"
+                   fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+                   style="transform-origin: 255px 528px 0px; transform: scale(0);"/>
+          <use id="b4"
+               xlink:href="#pātaka-file" x="120" y="55"
+               style="transform-origin: 32px 569px 0px"/>
+          <!-- ↓ b5 moved below group-c-files ↓ -->
+        </g>
+
+        <g id="group-c-files"
+           fill="var(--group-c-files)">
+
+          <use id="c1-copy-to-iphone"
+               xlink:href="#c1"
+               style="transform-origin: 424px 372px 0px;"
+               opacity="0.5"/>
+          <use id="c1-copy-to-android"
+               xlink:href="#c1"
+               style="transform-origin:424px 555px 0px;"
+               opacity="0.5"/>
+          <rect id="c1-highlight"
+                x="111" y="394" width="48" height="48"
+                fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+                style="transform-origin: 135px 418px 0px; transform: scale(0);" />
+          <use id="c1"
+               xlink:href="#pātaka-file" x="0" y="-55"
+               style="transform-origin:71px 603px 0px;"/>
+
+          <use id="c2-copy-to-iphone"
+               xlink:href="#c2"
+               style="transform-origin: 424px 372px 0px;"
+               opacity="0.5"/>
+          <use id="c2-copy-to-android"
+               xlink:href="#c2"
+               style="transform-origin:424px 555px 0px;"
+               opacity="0.5"/>
+          <rect id="c2-highlight"
+                x="171" y="449" width="48" height="48"
+                fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+                style="transform-origin: 195px 473px 0px; transform: scale(0);" />
+          <use id="c2"
+               xlink:href="#pātaka-file" x="60" y="0"
+               style="transform-origin:190px 600px 0px;" />
+
+          <use id="c3-copy-to-iphone"
+               xlink:href="#c3"
+               style="transform-origin: 424px 372px 0px;"
+               opacity="0.5"/>
+          <use id="c3-copy-to-android"
+               xlink:href="#c3"
+               style="transform-origin:424px 555px 0px;"
+               opacity="0.5"/>
+          <rect id="c3-highlight"
+                x="171" y="504" width="48" height="48"
+                fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+                style="transform-origin: 195px 528px 0px; transform: scale(0);" />
+          <use id="c3"
+               xlink:href="#pātaka-file" x="60" y="55"
+               style="transform-origin:255px 603px 0px;" />
+
+          <use id="c4-copy-to-iphone"
+               xlink:href="#c4"
+               style="transform-origin: 424px 372px 0px;"
+               opacity="0.5"/>
+          <use id="c4-copy-to-android"
+               xlink:href="#c4"
+               style="transform-origin:424px 555px 0px;"
+               opacity="0.5"/>
+          <rect id="c4-highlight"
+                 x="291" y="394" width="48" height="48"
+                 fill="var(--group-c-highlight)" filter="url(#highlight-blur)"
+                 style="transform-origin: 315px 418px 0px; transform: scale(0);" />
+          <use id="c4"
+               xlink:href="#pātaka-file" x="180" y="-55"
+               style="transform-origin: 280px 555px 0px;"/>
+        </g>
+
+        <use id="b5-copy"
+             xlink:href="#b5"
+             style="transform-origin: 425px 415px 0px; transform: scale(1);"
+             opacity="0.5"/>
+        <rect id="b5-highlight"
+              x="291" y="449" width="48" height="48"
+              fill="var(--group-b-highlight)" filter="url(#highlight-blur)"
+              style="transform-origin: 315px 473px 0px; transform: scale(0);"/>
+
+        <g id="b5"
+           fill="var(--group-b-color)"
+           style="transform-origin: 32px 395px 0px">
+          <use xlink:href="#pātaka-file" x="180" y="0" />
+        </g>
+
+        <g id="a3"
+           fill="var(--group-a-color)"
+           style="transform-origin: 328px 370px 0px">
+          <use id="a3-copy"
+              xlink:href="#pātaka-file" x="180" y="55"
+              style="transform-origin: 424px 372px 0px;"
+              opacity="0.5"/>
+          <rect id="a3-highlight"
+                x="291" y="504" width="48" height="48"
+                fill="var(--group-a-highlight)" filter="url(#highlight-blur)"
+                style="transform-origin: 315px 528px 0px; transform: scale(0);" />
+           <use xlink:href="#pātaka-file" x="180" y="55" />
+        </g>
+
+        <g id="pātaka-overlay"
+           fill="var(--light-grey)" style="opacity:0;">
+          <use xlink:href="#pātaka-file" x="0" y="-55"/>
+          <use xlink:href="#pātaka-file" x="0" y="0"/>
+          <use xlink:href="#pātaka-file" x="0" y="55"/>
+          <use xlink:href="#pātaka-file" x="60" y="-55"/>
+          <use xlink:href="#pātaka-file" x="60" y="0"/>
+          <use xlink:href="#pātaka-file" x="60" y="55"/>
+        </g>
+
+      </g>
+
+    </g>
+
+    <g id="groups">
+      <defs id="group-icons">
+        <g id="laptop"
+           style="transform-origin:24px 24px 0px;" transform="scale(2.5)"
+           stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt" >
+          <path id="laptop-screen-bg"
+                 stroke="none"
+                 d="M42.42 32.2V10.36a.29.29 0 00-.29-.29H5.87a.29.29 0 00-.29.29v21.82z"/>
+          <path id="laptop-screen-bg"
+                stroke="none" fill="var(--outline-color)" fill-opacity=".2"
+                d="M42.42 32.2V10.36a.29.29 0 00-.29-.29H5.87a.29.29 0 00-.29.29v21.82z"/>
+          <path id="laptop-keyboard-bg"
+                stroke="none"
+                d="M5.58 32.2l-5.61 4.7V38H47.5v-1l-5.36-4.52z"/>
+          <rect id="laptop-screen"
+                fill="var(--white)" fill-opacity="0.95" stroke="none"
+                width="36" height="17.67" x="6" y="13"/>
+          <circle id="laptop-camera"
+                  fill="var(--mid-light-grey)"
+                  cx="24" cy="11.5" r=".25" />
+          <path id="laptop-keyboard"
+                fill="none" stroke-width=".25"
+                d="M6 34.13h36 M7 33.13h33.99 M5 35.13h12m14.04 0H43 M17.76 35.13h12.5l1.24 2h-15z"/>
+          <path id="laptop-front-edge"
+                fill="none" stroke-width=".5"
+                d="M47.5 37.25H.5"/>
+          <path id="laptop-edge-shadow"
+                fill="none" stroke="var(--outline-color)" opacity=".2"
+                d="M47.5 37.75H.5"/>
+          <path id="laptop-outline"
+                fill="none" stroke="var(--outline-color)"
+                d="M.25 36.88 v1.37 h47.5 v-1.38 l-5.5-4.37 v-22 c0-.16-.1-.25-.25-.25 H6 c-.16 0-.25.1-.25.25 v22 z
+                   M6 32.25 H42"/>
+        </g>
+        <g id="mobile"
+           style="transform-origin:24px 24px 0px;" transform="scale(2)"
+           stroke-width="0.5" stroke-linecap="butt" >
+          <rect id="mobile-base"
+                fill="none" stroke="var(--outline-color)" stroke-width="1"
+                width="23" height="47" x="12.5" y="0.5" ry="2.4"/>
+          <rect id="mobile-inner-edge"
+                width="22.5" height="46.5" x="12.75" y=".75" ry="2.2"/>
+          <rect id="mobile-screen"
+                fill="var(--white)" fill-opacity="0.95" stroke="none"
+                width="22" height="40" x="13" y="3"/>
+          <circle id="mobile-camera"
+                  fill="var(--white)" fill-opacity="0.95" stroke="none"
+                  cx="33" cy="1.5" r=".5"/>
+          <path id="mobile-speaker"
+                stroke="var(--mid-light-grey)"
+                d="M23 1.5h2"/>
+          <path id="mobile-microphone"
+                stroke="var(--mid-light-grey)"
+                d="M21 45.25h6"/>
+        </g>
+        <path id="key"
+              fill="none"
+              stroke-linecap="butt" stroke-linejoin="round" stroke-width="10"
+              d="M0 0v12.7
+              m33.6-12.7h-48.5v12.8
+              m77.1-12.8c0 8.4-6.4 15.2-14.3 15.2-8 0-14.3-6.8-14.3-15.2 0-8.4 6.4-15.2 14.3-15.2 8 0 14.3 6.8 14.3 15.2z"/>
+      </defs>
+
+      <g id="group-a"
+         fill="var(--group-a-color)" stroke="var(--group-a-outline)">
+        <use xlink:href="#laptop" x="310" y="120"/>
+        <use xlink:href="#laptop" x="70" y="120"/>
+        <use xlink:href="#mobile" x="190" y="110"/>
+        <use xlink:href="#key" x="170" y="120"
+             stroke="var(--group-a-color)"
+             transform="scale(.5)"/>
+        <use xlink:href="#key" x="408" y="120"
+            stroke="var(--group-a-color)"
+            transform="scale(.5)"/>
+       <use xlink:href="#key" x="650" y="120"
+           stroke="var(--group-a-color)"
+           transform="scale(.5)"/>
+      </g>
+
+      <g id="group-b"
+         fill="var(--group-b-color)" stroke="var(--group-b-outline)">
+        <use xlink:href="#laptop"
+             x="-160" y="340"/>
+        <use xlink:href="#key"
+             x="-520" y="720"
+             stroke="var(--group-b-color)"
+             transform="scale(.5)"/>
+        <use xlink:href="#laptop"
+             x="-160" y="560"/>
+        <use xlink:href="#key"
+             x="-520" y="950"
+             stroke="var(--group-b-color)"
+             transform="scale(.5)"/>
+        <use xlink:href="#mobile"
+             x="-160" y="450"/>
+        <use xlink:href="#key"
+             x="-520" y="1170"
+             stroke="var(--group-b-color)"
+             transform="scale(.5)"/>
+      </g>
+
+      <g id="group-c"
+         fill="var(--group-c-color)" stroke="var(--group-c-outline)">
+        <use xlink:href="#laptop"
+             x="90" y="810"/>
+        <use xlink:href="#key"
+             x="200" y="1800"
+             stroke="var(--group-c-symbol-color)"
+             transform="scale(.5)"/>
+        <use xlink:href="#laptop"
+             x="240" y="810"/>
+        <use xlink:href="#key"
+             x="505" y="1800"
+             stroke="var(--group-c-symbol-color)"
+             transform="scale(.5)"/>
+        <use xlink:href="#mobile"
+             x="368" y="802"/>
+        <use xlink:href="#key"
+             x="764" y="1800"
+             stroke="var(--group-c-symbol-color)"
+             transform="scale(.5)"/>
+      </g>
+    </g>
+
+    <g id="arrows"
+       stroke-width="4" stroke-linecap="round">
+
+      <defs id="markers"
+            stroke-linejoin="round" stroke-width="1">
+
+        <marker id="marker-curve-a"
+               orient="auto" overflow="visible" refX="0" refY="0">
+          <path fill="none" stroke="var(--group-a-color)"
+                d="M2.4 2.1l-3-2 3-2"/>
+        </marker>
+
+        <marker id="marker-curve-bottom"
+               orient="auto" overflow="visible" refX="0" refY="0">
+          <path fill="none" stroke="var(--group-c-symbol-color)"
+                d="M2.4 2.1l-3-2 3-2"/>
+        </marker>
+
+        <marker id="marker-a"
+               orient="auto" overflow="visible" refX="0" refY="0">
+          <path fill="var(--group-a-color)" stroke="var(--group-a-color)"
+                d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+                   </marker>
+
+        <marker id="marker-b"
+               orient="auto" overflow="visible" refX="0" refY="0">
+          <path fill="var(--group-b-color)" stroke="var(--group-b-color)"
+                d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+        </marker>
+
+        <marker id="marker-c"
+               orient="auto" overflow="visible" refX="0" refY="0">
+          <path fill="var(--group-c-symbol-color)" stroke="var(--group-c-symbol-color)"
+                d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+        </marker>
+
+      </defs>
+
+      <g id="refresh-android"
+         fill="none" stroke="var(--group-c-symbol-color)"
+         marker-start="url(#marker-curve-bottom)"
+         style="transform-origin:716px 710px 0px;">
+        <path d="m 744.3,738.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
+        <path d="m 687.7,681.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
+      </g>
+
+      <g id="refresh-iphone"
+         fill="none" stroke="var(--group-a-color)"
+         marker-start="url(#marker-curve-a)"
+         style="transform-origin:716px 290px 0px;">
+        <path d="m 744.3,318.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
+        <path d="m 687.7,261.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
+      </g>
+
+      <g id="uploads">
+        <path id="upload-a1"
+              stroke="var(--group-a-color)"
+              marker-end="url(#marker-a)"
+              style="transform-origin:100px 182px 0px;"
+              d="m 100,182 65,172"/>
+        <path id="upload-a2"
+              stroke="var(--group-a-color)"
+              marker-end="url(#marker-a)"
+              style="transform-origin:135px 182px 0px;"
+              d="m 135,182 87.5,172.176"/>
+        <path id="upload-b1"
+              stroke="var(--group-b-color)"
+              marker-end="url(#marker-b)"
+              style="transform-origin:-84px 365px 0px;"
+              d="m -87,365 110, 70"/>
+        <path id="upload-b2"
+              stroke="var(--group-b-color)"
+              marker-end="url(#marker-b)"
+              style="transform-origin:-110px 475px 0px;"
+              d="m -110,475 134, -25"/>
+        <path id="upload-b3"
+              stroke="var(--group-b-color)"
+              marker-end="url(#marker-b)"
+              style="transform-origin:-110px 475px 0px;"
+              d="m -110,475 h134"/>
+        <path id="upload-b4"
+              stroke="var(--group-b-color)"
+              marker-end="url(#marker-b)"
+              style="transform-origin:-88px 590px 0px;"
+              d="m -88,590 l112, -19"/>
+        <path id="upload-b5"
+              stroke="var(--group-b-color)"
+              marker-end="url(#marker-b)"
+              style="transform-origin:-84px 365px 0px;"
+              d="m -87,365 110, 30"/>
+        <path id="upload-a3"
+              stroke="var(--group-a-color)"
+              marker-end="url(#marker-a)"
+              style="transform-origin:340px 183px 0px;"
+              d="m 340,183 -10,170"/>
+        <path id="upload-c1"
+              stroke="var(--group-c-symbol-color)"
+              marker-end="url(#marker-c)"
+              style="transform-origin:110px 798px 0px;"
+              d="m 110,798 51,-195"/>
+        <path id="upload-c3"
+              stroke="var(--group-c-symbol-color)"
+              marker-end="url(#marker-c)"
+              style="transform-origin:385px 780px 0px;"
+              d="m 385,780 -85,-180"/>
+        <path id="upload-c2"
+              stroke="var(--group-c-symbol-color)"
+              marker-end="url(#marker-c)"
+              style="transform-origin:250px 798px 0px;"
+              d="m 250,798 5,-195"/>
+        <path id="upload-c4"
+              stroke="var(--group-c-symbol-color)"
+              marker-end="url(#marker-c)"
+              style="transform-origin:280px 798px 0px;"
+              d="m 280,798 16,-195"/>
+      </g>
+
+      <path id="sync-request-iphone"
+            stroke="var(--group-a-color)"
+            marker-end="url(#marker-a)"
+            style="transform-origin:632px 292px 0px;"
+            d="M632 292L425.5 402"/>
+      <path id="sync-request-android"
+            stroke="var(--group-c-symbol-color)"
+            stroke-width="4"
+            marker-end="url(#marker-c)"
+            style="transform-origin:630px 650px 0px;"
+            d="M630 650L425.1 561.8" />
+      <path id="response-files-iphone"
+            stroke="var(--group-a-color)"
+            marker-end="url(#marker-a)"
+            style="transform-origin:425px 372px 0px;"
+            d="M424 372L632 300" />
+      <path id="response-files-android"
+            fill="none" stroke="var(--group-c-symbol-color)"
+            marker-end="url(#marker-c)"
+            style="transform-origin:425px 555px 0px;"
+            d="M425 555L630 680" />
+    </g>
+
+    <g id="labels"
+      font-family="'Dosis', sans-serif" font-size="32"
+      text-anchor="middle">
+      <text id="label-pātaka"
+            fill="var(--pātaka-label-color)"
+            x="245" y="700"
+            font-weight="bold"
+            >Pātaka</text>
+      <text id="label-member-a"
+            fill="var(--group-a-outline)"
+            x="715" y="496"
+            >Member of Group A</text>
+      <text id="label-member-a-b"
+            fill="var(--group-a-outline)"
+            x="715" y="496"
+            >Member of Groups A &amp; B</text>
+      <text id="label-member-c"
+            fill="var(--group-c-outline)"
+            x="715" y="920"
+            >Member of Group C</text>
+
+      <g id="group-labels"
+         font-size="24">
+        <text id="label-group-a"
+              fill="var(--group-a-outline)"
+              x="225" y="220"
+              >Group A</text>
+        <text id="label-group-b"
+              fill="var(--group-b-outline)"
+              x="-140" y="670"
+              >Group B</text>
+        <text id="label-group-c"
+              fill="var(--group-c-outline)"
+              x="225" y="945"
+              >Group C</text>
+      </g>
+
+    </g>
+
+  </g>
+  <style>
+    /* <![CDATA[ */
+      @font-face {
+        font-family: 'Dosis';
+        src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+    /* ]]> */
+  </style>
+</svg>
