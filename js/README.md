@@ -68,59 +68,8 @@ Give each target an id, and then `targets: '#lights > circle'` will convert nice
 ```
 
 Now you can open the SVG in a browser - run the animation all the way through.
-Now you can copy the last logged `targets` object (in the browser Console, right-click on the logged object and choose _Copy Object_) and use it as the basis for
-your CSS animation.
+Then you can copy the logged CSS animation - there's a couple more manual changes to make however:
 
-The `targets` object contains a list of all animation targets, together with their keyframes:
-
-```javascript
-"#arrow": {
-    "0%, 17.17%": {
-      "scale": "0"
-    },
-    "18.24%": {
-      "scale": "1"
-    },
-    "34.12%": {
-      "opacity": "1",
-      "scale": "1"
-    },
-    "35.19%, 100%": {
-      "opacity": "0",
-      "scale": "0.8"
-    }
-  },
-```
-
-Currently you'll need to do a bunch of [regex](https://en.wikipedia.org/wiki/Regular_expression) find-and-replace to make this data fit the CSS syntax.
-Here's a list of steps required:
-- remove all quotes and commas
-- remove the colon after each target name & percentage
-- add semicolons after each value
-- convert to same-line curly braces for compactness & readability (the standard CSS multi-line style doesn't make sense for animations, where you want to compare one keyframe with another)
-```css
-#arrow {
-    0%, 17.17% { scale: 0; }
-    18.24% { scale: 1; }
-    34.12% { opacity: 1;
-             scale: 1; }
-    35.19%, 100% { opacity: 0;
-                   scale: 0.8; }
-  }
-```
-- assign an animation name of `id` name + 'anim' and create a `@keyframes` declaration for it
-```css
-#arrow { animation-name: arrow-anim; }
-@keyframes arrow-anim {
-  0%, 17.17% { scale: 0; }
-  18.24% { scale: 1; }
-  34.12% { opacity: 1;
-           scale: 1; }
-  35.19%, 100% { opacity: 0;
-                 scale: 0.8; }
-}
-```
-- convert camelCase properties (like `strokeDashoffset` and `transformOrigin`) to kebab-case (`stroke-dashoffset`, `transform-origin`)
 - combine any `translate`, `rotate`, `scale`, and `skew` properties into a single `transform` property
 ```css
 #arrow { animation-name: arrow-anim; }

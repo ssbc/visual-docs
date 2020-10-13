@@ -63,14 +63,45 @@ function timelineComplete () {
     // correct initial position and hold at the end
     const oldFirstKeyframe = percentageKeyframes[0]
     const oldLastKeyframe = percentageKeyframes[percentageKeyframes.length - 1]
-    const newFirstKeyframe = '0%, ' + oldFirstKeyframe
-    const newLastKeyframe = oldLastKeyframe + ', 100%'
-    targets[id][newFirstKeyframe] = targets[id][oldFirstKeyframe]
-    targets[id][newLastKeyframe] = targets[id][oldLastKeyframe]
-    delete targets[id][oldFirstKeyframe]
-    delete targets[id][oldLastKeyframe]
+    if (oldFirstKeyframe !== '0%') {
+      const newFirstKeyframe = '0%, ' + oldFirstKeyframe
+      targets[id][newFirstKeyframe] = targets[id][oldFirstKeyframe]
+      delete targets[id][oldFirstKeyframe]
+    }
+    if (oldLastKeyframe !== '100%') {
+      const newLastKeyframe = oldLastKeyframe + ', 100%'
+      targets[id][newLastKeyframe] = targets[id][oldLastKeyframe]
+      delete targets[id][oldLastKeyframe]
+    }
   })
   console.log('targets object:', targets)
+  let stringTargets = JSON.stringify(targets)
+  // here comes some verbose and repetitive regex!
+
+  // remove quotation marks
+  stringTargets = stringTargets.replace(/['"]+/g, '')
+  // remove colons, except in css declaration
+  stringTargets = stringTargets.replace(/:{+/g, '{')
+  // find target names, add #, create an animation-name & keyframes declaration
+  stringTargets = stringTargets.replace(/([^{%, .]{2,}){/g, '\n#$1 { animation-name: $1-anim; } \n@keyframes $1-anim {\n  ')
+  // find commas in css declarations, replace them with a space
+  stringTargets = stringTargets.replace(/(?<=[a-z0-9]),/g, ' ')
+  // add a space to the end of css declarations
+  stringTargets = stringTargets.replace(/(?<=[a-z0-9])}/g, ' }')
+  // find spaces in css declarations, precede with a semicolon
+  stringTargets = stringTargets.replace(/(?<=[a-z0-9]) (?=[a-z0-9}])/g, '; ')
+  // remove commas after closing curly braces
+  stringTargets = stringTargets.replace(/},/g, '}')
+  // add spaces to keyframe declarations
+  stringTargets = stringTargets.replace(/%{/g, '% { ')
+  // separate two closing braces with a newline
+  stringTargets = stringTargets.replace(/}}/g, '}\n}')
+  // separate keyframes with a newline
+  stringTargets = stringTargets.replace(/}([0-9])/g, '}\n  $1')
+  // camelCase to kebab-case
+  stringTargets = stringTargets.replace(/(?<=[a-z]*)([A-Z])(?=[a-z]*)/g, '-$1')
+  stringTargets = stringTargets.replace(/(?<=[a-z]*-)([A-Z])(?=[a-z]*)/g, u => u.toLowerCase())
+  console.log(stringTargets)
 }
 tl.finished.then(timelineComplete)
 tl.play()
