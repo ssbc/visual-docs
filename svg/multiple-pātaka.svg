@@ -1,0 +1,1544 @@
+<svg id="multiple-pātaka"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1000 1000"
+     width="800px"
+     style="border: 1px solid hsl(0, 0%, 50%); margin: auto; overflow: visible;">
+
+  <title>Multiple Pātaka</title>
+
+  <style>
+    /* <![CDATA[ */
+    @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+    text { font-family: 'Dosis', sans-serif; }
+    :root {
+      --group-b-outline: hsl(42, 80%, 20%);
+      --group-b-color: hsl(42, 74.9%, 56.3%);
+      --group-b-highlight: hsl(42, 90%, 75%);
+      --group-b-tint: hsl(42, 90%, 95%);
+
+      --icon-bg-color: hsl(180, 25.4%, 40%);
+      --group-a-outline: hsl(180, 25.4%, 24.7%);
+      --group-a-color: hsl(182, 25.5%, 50%);
+      --group-a-highlight: hsl(182, 55%, 75%);
+      --group-a-tint: hsl(182, 95%, 95%);
+      --group-a-medium-tint: hsl(182, 30%, 65%);
+
+      --group-c-outline: hsl(360, 85%, 22%);
+      --group-c-symbol-color: hsl(360, 65.4%, 42%);
+      --group-c-color: hsl(360, 70%, 60%);
+      --group-c-files: hsl(360, 65.4%, 52%);
+      --group-c-highlight: hsl(360, 85%, 75%);
+      --group-c-tint: hsl(0, 85%, 95%);
+
+      --pātaka-color: hsl(360, 65.4%, 42%);
+      --pātaka-label-color: hsl(360, 65.4%, 52%);
+
+      --icon-bg-color: hsl(180, 25.4%, 40%);
+      --outline-color: hsl(0, 0%, 22%);
+      --white: hsl(0, 0%, 100%);
+      --mid-grey: hsl(0, 0%, 41.2%);
+      --mid-light-grey: hsl(0, 0%, 60%);
+      --encrypted-color: hsl(0, 0%, 80%);
+      --light-grey: hsl(0, 0%, 90%);
+      --devices-color: hsl(0, 0%, 29.8%);
+      --pounamu: hsl(118, 100.0%, 9.4%);
+    }
+    /* ]]> */
+  </style>
+
+  <defs id="referenced-elements">
+
+    <g id="devices">
+
+      <g id="mobile"
+         stroke-linecap="butt" transform="scale(4)" stroke-width="0.5">
+
+        <rect id="mobile_inner-edge"
+              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
+        <rect id="mobile_screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              width="22" height="40" x="-11" y="-21"/>
+        <circle id="mobile_camera"
+                fill="var(--white)" fill-opacity="0.95" stroke="none"
+                cx="9" cy="-22.5" r=".5"/>
+        <path id="mobile_speaker"
+              d="M-1 -22h2"/>
+        <path id="mobile_microphone"
+              d="M-3 21h6"/>
+        <rect id="mobile_base"
+              fill="none" stroke="var(--outline-color)" stroke-width="0.5"
+              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
+      </g>
+
+      <g id="mobile-icon"
+         transform="scale(0.5)" stroke-width="1">
+        <rect id="mobile-icon_inner-edge"
+              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
+        <rect id="mobile-icon_screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              width="20" height="38" x="-10" y="-20"/>
+        <rect id="mobile-icon_base"
+              fill="none" stroke-width="0.5"
+              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
+        <use xlink:href="#follow-symbol" y="-1"/>
+      </g>
+
+      <g id="mobile-icon_onscreen"
+         transform="scale(1.1)" stroke-width="1">
+        <rect id="mobile-icon_onscreen_inner-edge"
+              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
+        <rect id="mobile-icon_onscreen_screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              width="20" height="38" x="-10" y="-20"/>
+        <rect id="mobile-icon_onscreen_base"
+              fill="none" stroke-width="0.5"
+              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
+      </g>
+
+      <g id="mobile-follow-mobile"
+         transform="scale(0.75)" stroke-width="1">
+        <rect id="mobile-icon-inner-edge"
+              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
+        <rect id="mobile-icon-screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              width="20" height="38" x="-10" y="-20"/>
+        <rect id="mobile-icon-base"
+              fill="none" stroke-width="0.5"
+              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
+        <use xlink:href="#follow-symbol" y="-1"/>
+      </g>
+
+      <g id="imac">
+
+        <defs>
+          <path id="stand-shape"
+                d="M70 144.6 h-140.5 c15.7,-14.6 23.6,-22.5 23.6,-38.3 0,-23.6 -7.9,-23.6 -7.9,-23.6
+                  h110.61 s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+        </defs>
+
+        <use xlink:href="#stand-shape"
+             fill="var(--devices-color)"/>
+        <path id="stand-lit"
+              fill="var(--mid-grey)"
+              d="M-67.5 143.5c13.5-13.5 15.7-16.9 20.8-29.3 31.5 23 61.8 23 93.3 0 4.5 13.5 6.2 14 21.3 29.3z"/>
+        <use xlink:href="#stand-shape"
+             fill="none" stroke="var(--outline-color)"
+             stroke-linejoin="round" stroke-width=".5"/>
+        <rect x="-199.5" y="-144.6"
+              width="398.9" height="243.1" rx="15.7" ry="15.8"
+              fill="var(--devices-color)" stroke="var(--outline-color)"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
+        <circle cx="0" cy="-136.7" r="3.9"
+                fill="var(--mid-grey)"/>
+        <rect id="imac-screen"
+              x="-191.6" y="-128.1"
+              width="383.2" height="203.7"
+              fill="var(--white)" />
+      </g>
+
+      <g id="imac-icon"
+         transform="scale(0.75)">
+
+        <defs>
+          <path id="stand-shape-icon"
+                d="M7 14.4 h-14.1 c1.6,-1.5 2.4,-2.3 2.4,-3.8 0,-2.4 -0.8,-2.4 -0.8,-2.4
+                  h11.1 s-0.8 0-0.8 2.4c0 1.6 0.8 2.4 2.3 3.8z"/>
+        </defs>
+
+        <use xlink:href="#stand-shape-icon"
+             fill="var(--devices-color)"/>
+        <path id="stand-lit"
+              fill="var(--mid-grey)"
+              d="M-6.8 14.4c1.4-1.4 1.6-1.7 2.1-2.9 3.2 2.3 6.2 2.3 9.3 0 0.5 1.4 0.6 1.4 2.1 2.9z"/>
+        <use xlink:href="#stand-shape-icon"
+             fill="none" stroke="var(--outline-color)"
+             stroke-linejoin="round" stroke-width=".5"/>
+        <rect x="-20" y="-14.5"
+              width="39.9" height="24.3" rx="1.6" ry="1.6"
+              fill="var(--devices-color)" stroke="var(--outline-color)"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
+        <rect id="imac-screen"
+              x="-19.2" y="-12.8"
+              width="38.3" height="20.4"
+              fill="var(--white)" />
+        <use xlink:href="#follow-symbol" y="-3"
+             fill="var(--pātaka-color)" stroke="var(--pātaka-color)"/>
+      </g>
+
+      <g id="laptop"
+         transform="scale(6)"
+         stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt" >
+        <path id="laptop-screen-bg"
+               stroke="none"
+               d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
+        <path id="laptop-screen-bg-overlay"
+              stroke="none" fill="var(--outline-color)" fill-opacity=".2"
+              d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v 21.84z"/>
+        <path id="laptop-keyboard-bg"
+              stroke="none"
+              d="m -18.32,8.2 -5.61,4.7 v 1.2 h 47.53 v -1.2 l -5.36,-4.7 z"/>
+        <rect id="laptop-screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              x="-18" y="-11"
+              width="36" height="17.67" />
+        <circle id="laptop-camera"
+                fill="var(--mid-light-grey)"
+                cx="0" cy="-12.5" r=".25" />
+        <path id="laptop-keyboard"
+              fill="none" stroke-width=".25"
+              d="m -18,10.13 h 36 m -35,-1 h 33.99 m -35.99,2 h 12 m 14.04,0 h 11.96 m -25.24,0 h 12.5 l 1.24,2 h -15 z"/>
+        <path id="laptop-edge-shadow"
+              fill="none" stroke-width="1.5" opacity=".2"
+              d="m -23.5,13.75 h 47"/>
+        <path id="laptop-front-edge"
+              fill="none" stroke-width=".5"
+              d="m -23.5,13.25 h 47"/>
+        <path id="laptop-outline"
+              fill="none" stroke="var(--outline-color)"
+              d="m 18,8.25 h -36 m -5.75,4.63 5.5,-4.38 v -22 c 0,-0.15 0.09,-0.25 0.25,-0.25 h 36 c 0.15,0 0.25,0.09 0.25,0.25 v 22 l 5.5,4.37 v 1.38 h -47.5 z"/>
+      </g>
+
+      <g id="laptop-icon">
+        <path id="laptop-icon-screen-bg"
+               fill="var(--devices-color)" stroke="none"
+               d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
+        <path id="laptop-icon-keyboard-bg"
+              fill="var(--devices-color)" stroke="none"
+              d="m -18.32,8.2 -5.61,4.7 v 1.1 h 47.53 v -1.1 l -5.36,-4.7 z"/>
+        <rect id="laptop-icon-screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              x="-17" y="-11"
+              width="34" height="17.67" />
+        <path id="laptop-icon-outline"
+              fill="none" stroke="var(--outline-color)"
+              d="m 18,8.25 h -36 m -5.75,4.63 5.5,-4.38 v -22 c 0,-0.15 0.09,-0.25 0.25,-0.25 h 36 c 0.15,0 0.25,0.09 0.25,0.25 v 22 l 5.5,4.37 v 1.38 h -47.5 z
+              M -23.75,13.3 h47.5"/>
+      </g>
+
+      <g id="laptop-icon_pātaka"
+         transform="scale(1.56)">
+        <use xlink:href="#laptop-icon"/>
+        <use xlink:href="#stroke-pātaka" y="-2" />
+      </g>
+
+      <g id="laptop-icon_follow">
+        <use xlink:href="#laptop-icon"/>
+        <use xlink:href="#follow-symbol" y="-2.5"
+             fill="var(--pātaka-color)" stroke="var(--pātaka-color)"/>
+      </g>
+
+      <g id="raspberry-pi"
+        style="transform-origin: -5px 1.6px 0px;"
+         stroke-linejoin="round" stroke-opacity="1">
+        <path id="base"
+            	fill="var(--mid-grey)"
+            	d="M-39 0h74.5l8.4-6.6H-30.4z"/>
+        <path id="base-side"
+              fill="var(--devices-color)"
+              d="M35.5 1.6v-1.8l8.4-6.4v1.8z"/>
+        <path id="base-outline"
+              fill="none" stroke="var(--outline-color)"
+              d="M-39,-0.2 v1.8h74.5 l8.4-6.4v-1.8h-74.5z"/>
+
+        <g id="pi-backrow-sides"
+           fill="var(--devices-color)" stroke="none">
+          <path id="backbox-side"
+               d="M-10.2 -4.8v-2.7l1.8-1.4v2.7z"/>
+          <path id="l-foot-fill"
+             	 d="M-35.4 1.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
+          <path id="r-foot-fill"
+               d="M28.4 1.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
+          <path id="pinboard-side"
+             	 d="M36.1 -4.3v-1.9l2.4-1.8v1.8z"/>
+          <path id="ethernet-side"
+             	 d="M-21 -2v-9.2l2.4-1.8v9.1z"/>
+        </g>
+
+        <g id="pi-foot-outlines"
+           fill="none" stroke="var(--outline-color)" stroke-linecap="round">
+          <path id="l-foot"
+                d="M-35.4 2.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
+          <path id="r-foot"
+               	d="M28.4 2.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
+        </g>
+
+        <g id="pi-backrow-tops"
+           fill="var(--light-grey)" stroke="none">
+          <path id="backbox-top"
+              	d="M-18.6 -7.5h8.4l1.8-1.4h-8.4z"/>
+          <path id="ethernet-top"
+                d="M-39 -11.2h18l2.4-1.8-18-.1z"/>
+          <path id="pinboard-top"
+              	d="M1.3 -6.2H36l2.4-1.8-35 .1z"/>
+        </g>
+
+        <path id="pi-pin-gaps"
+              fill="none" stroke="var(--mid-light-grey)" stroke-linecap="butt"
+              d="M13.15 -8 h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2"/>
+        <path id="pi-pins"
+              fill="none" stroke="var(--mid-grey)" stroke-linecap="round"
+              d="M35 -7v-4.7
+                m-2.5,0v4.7 m-2.5,0v-4.7
+                m-2.5,0v4.7 m-2.5,0v-4.7
+                m-2.5,0v4.7 m-2.5,0v-4.7
+                m-2.5,0v4.7 m-2.5,0v-4.7
+                m-2.5,0v4.7 m-2.5,0v-4.7
+                m-2.5,0v4.7 m-2.5,0v-4.7"/>
+
+        <g id="pi-backrow-outlines"
+           fill="none" stroke="var(--mid-light-grey)">
+          <path id="pinboard-outline"
+              	d="M5.2 -8l-2.4 1.8v1.8l33.3.1 2.4-1.8v-1.8h-3"/>
+          <path id="backbox-outline"
+                d="M-16.8 -9l-1.8 1.5v2.7h8.4l1.8-1.4v-2.7z"/>
+          <path id="ethernet-outline"
+              	d="M-36.6 -13.1l-2.4 1.9v9.2h18l2.4-1.9V-13z"/>
+        </g>
+
+        <g id="pi-backrow-fronts"
+           fill="var(--light-grey)" stroke="var(--mid-light-grey)" >
+          <path id="backbox-front"
+              	d="M-18.6 -7.5v2.7h8.4v-2.7z"/>
+          <path id="pinboard-front"
+                d="M-3.9 -6.2h39.9v1.9h-39.9z"/>
+
+          <path id="ethernet-front"
+              	d="M-39 -11.2v9.2h18v-9.2z"/>
+        </g>
+
+        <rect id="base-front"
+            	width="74.5" height="1.8" x="-39" y="0" fill="var(--mid-light-grey)" stroke="var(--outline-color)"/>
+
+        <g id="pi-frontrow-sides"
+           fill="var(--devices-color)">
+          <path id="dc-side"
+                d="M-16.8 0.3v-5.5l1.8-1.4v5.5z"/>
+          <path id="usb-side"
+              	d="M29 0.2v-3.6l3-2.3v3.7z"/>
+          <path id="hdmi-side"
+              	d="M10.9 0.3v-7.4l2.4-1.8v7.3z"/>
+        </g>
+
+        <g id="pi-frontrow-tops"
+           fill="var(--light-grey)">
+          <path id="dc-top"
+                d="M-25.2 -5.2h8.4l1.8-1.4h-8.4z"/>
+          <path id="usb-top"
+              	d="M21 -3.4h8l3-2.3h-7.3z"/>
+          <path id="hdmi-top"
+                d="M-7.2 -7h18l2.5-2h-18z"/>
+        </g>
+
+        <g id="pi-frontrow-outlines"
+           fill="none" stroke="var(--mid-light-grey)">
+          <path id="usb-outline"
+                d="M24.7 -5.7l-3.6 2.3v3.6h7.8l3-2.2v-3.7z"/>
+          <path id="dc-outline"
+                d="M-23.4 -6.6l-1.8 1.4v5.5h8.4l1.8-1.4v-5.5z"/>
+          <path id="hdmi-outline"
+                d="M-4.8 -9l-2.4 2v7.3h18l2.5-1.9v-7.3z"/>
+        </g>
+
+        <g id="pi-frontrow-fronts"
+           fill="var(--light-grey)" stroke="var(--mid-light-grey)" >
+          <rect id="dc-front"
+               fill="var(--light-grey)" stroke="var(--mid-light-grey)"
+               width="8.4" height="5.5" x="-25.2" y="-5.2"/>
+          <rect id="usb-front"
+               fill="var(--light-grey)" stroke="var(--mid-light-grey)"
+               width="7.8" height="3.7" x="21.1" y="-3.4" rx="0" ry="0"/>
+          <rect id="hdmi-front"
+             	width="18" height="7.3" x="-7.1" y="-7.1"/>
+        </g>
+
+        <g id="pi-frontrow-ports"
+           fill="var(--devices-color)" stroke="none" stroke-linecap="round">
+          <circle id="dc-plug"
+                   fill="var(--devices-color)"
+                 	cx="-21" cy="-2.5" r="2"/>
+          <path id="usb"
+              	d="M22.9 -0.8h4s1-.7 1-1.5h-6c0 .7.8 1.5 1 1.5z"/>
+          <path id="hdmi"
+                d="M-5.6 -5.3v1.3c0 1.4 3 0 3 1.4 0 .7.4.6 1.4.6h6c1.2 0 1.4.2 1.4-.6 0-1.4 3 0 3-1.4v-1.3H-5.6z"/>
+        </g>
+
+        <g id="leds"
+           style="transform-origin: 40px -6.5px 0px;"
+           transform="scale(1.5)">
+          <path id="green-led"
+                fill="var(--contrast-tint)" stroke="var(--contrast-highlight-color)" stroke-width=".3"
+              	d="M41.5 -6.5c0-1-2.5-.9-2.4 0-.6.5 1.8.5 2.4 0z"/>
+          <path id="red-led"
+                fill="var(--pātaka-light)" stroke="var(--pātaka-tint)" stroke-width=".3"
+              	d="M39.7 -4c0-1.2-2.5-1-2.5 0-.6.4 1.9.4 2.5 0z"/>
+        </g>
+
+      </g>
+
+      <g id="pi-drive"
+        style="transform-origin: -5px 1.6px 0px;"
+         stroke-linejoin="round" stroke-opacity="1">
+        <path id="drive"
+            	fill="var(--mid-grey)"
+            	d="M-39,-0.2 v6h74.5 l8.4-6.4v-6h-74.5z"/>
+        <path id="drive-side"
+              fill="var(--devices-color)"
+              d="M35.5 6v-6l8.4-6.4v6z"/>
+        <path id="drive-outline"
+              fill="none" stroke="var(--outline-color)"
+              d="M-39,-0.2 v6h74.5 l8.4-6.4v-6h-74.5z"/>
+        <rect id="drive-front"
+            	width="74.5" height="6" x="-39" y="0" fill="var(--mid-light-grey)" stroke="var(--outline-color)"/>
+      </g>
+
+      <g id="pi-screen">
+        <rect x="-46" y="-33"
+              width="92" height="66" rx="2"
+              fill="var(--white)" stroke="var(--devices-color)"
+              stroke-width="4"/>
+      </g>
+
+      <g id="servers"
+         style="transform-origin:880px 500px 0px;">
+
+        <g id="server-frame-back"
+          fill="var(--mid-grey)" stroke="var(--devices-color)"
+          stroke-linecap="butt" stroke-linejoin="round" stroke-width=".5">
+          <path id="frame-br"
+      			    d="M26.5 -92.3h3v209.5h-3z"/>
+          <path id="frame-fr"
+              	d="M74.8 -60.9h3v209.5h-3z"/>
+          <circle fill="var(--outline-color)" stroke="none"
+                  cx="76.3" cy="-30" r="1.2" />
+          <circle fill="var(--outline-color)" stroke="none"
+                  cx="76.3" cy="4.3" r="1.2" />
+        </g>
+
+        <g id="template-server-body"
+           stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="4">
+           <path id="server-fill"
+           	    stroke="var(--outline-color)" stroke-width="1"
+           	    d="M73 121.7 l-3-2.3 h-6.1 l-39.3,-30.7 l-133.6,-.5 v19l39.9,31.2 z"/>
+          <path id="l-side"
+          	    fill="var(--outline-color)" fill-opacity=".49" stroke="var(--outline-color)" stroke-width="1"
+          	    d="M-109 88.2 v18.9 l39.9 31.2 v-16.6h-3 l-3-2.3 h6z"/>
+          <path id="server-top"
+          	    fill="none" stroke="var(--outline-color)" stroke-width="1"
+          	    d="M73 121.7l-3-2.3h-6.1l-39.3-30.7-133.6-.5 39.9 31.2h-6l3 2.3z"/>
+          <path id="rounded-top-indentation"
+          	    fill="var(--outline-color)" fill-opacity=".25" stroke="var(--devices-color)" stroke-width=".5"
+          	    d="M24.6 93.4c-3-2.4-9-2.4-6 0l6 4.7c3 2.4 9 2.4 6 0z"/>
+          <path id="square-top-indentation"
+          	    fill="var(--outline-color)" fill-opacity=".25" stroke="var(--devices-color)" stroke-width=".5"
+          	    d="M-98.2 92l12.7 9.9c.6.5 1.9 1 2.4 1h27.3c1.2 0 1.2-.5.6-1l-12.7-10c-.6-.4-1.8-.9-2.4-.9h-27.9c-.6 0-.6.5 0 1z"/>
+        </g>
+
+        <use href="#template-server-body"
+          fill="var(--mid-light-grey)"/>
+        <use href="#template-server-body" y="-30"
+          fill="var(--mid-light-grey)"/>
+        <use href="#template-server-body" y="-60"
+          fill="var(--mid-light-grey)"/>
+        <use href="#template-server-body" y="-90"
+          fill="var(--mid-light-grey)"/>
+        <use href="#template-server-face" y="-90"
+             fill="var(--mid-grey)"/>
+
+        <g id="focused-server-body"
+           class="focused-server">
+          <use href="#template-server-body" x="0" y="-120"
+            fill="var(--pātaka-color)"/>
+        </g>
+
+        <use href="#template-server-body" y="-150"
+          fill="var(--mid-light-grey)"/>
+        <use href="#template-server-body" y="-180"
+          fill="var(--mid-light-grey)"/>
+
+        <g id="server-frame-front"
+           fill="var(--mid-grey)" stroke="var(--devices-color)" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".5">
+          <path id="frame-bl"
+              	d="M-107.7 -92.3h3v209.5h-3z"/>
+          <path id="frame-fl"
+              	d="M-77.2 -60.9h3v209.5h-3z"/>
+          <circle fill="var(--outline-color)" stroke="none"
+                  cx="-75.5" cy="20" r="1.2" />
+          <circle fill="var(--outline-color)" stroke="none"
+                  cx="-75.5" cy="4.3" r="1.2" />
+        </g>
+
+        <g id="server-face-overlap"
+           stroke="var(--outline-color)" stroke-linejoin="round">
+          <path fill="var(--mid-grey)" stroke-width="1"
+                d="M-58.2 31.7h-20v20.8h20"/>
+          <use xlink:href="#server-screw" x="0" y="-90" />
+          <use xlink:href="#server-screw" x="0" y="-105.7" />
+        </g>
+
+        <g id="template-server-face"
+           stroke="var(--outline-color)" stroke-linejoin="round">
+          <path id="template-server-faceplate"
+              	stroke-width="1"
+              	d="M79 121.7v20.8h-157.2v-20.8z"/>
+
+          <g id="server-screw"
+             fill="var(--white)"
+             stroke-width=".3" stroke-linecap="round">
+            <circle cx="-75.5" cy="140" r="1.2" />
+            <path fill="none"
+                  d="M-75 140.5 l-1-1"/>
+          </g>
+
+          <use xlink:href="#server-screw" x="0" y="-15.7" />
+          <use xlink:href="#server-screw" x="151.8" y="-15.7" />
+          <use xlink:href="#server-screw" x="151.8" y="0" />
+
+          <g id="server-lights"
+             fill="var(--light-grey)" fill-opacity="0.8"
+             stroke-width=".5">
+            <circle cx="-47.6" cy="132.1" r="2.6"/>
+            <circle cx="-34.5" cy="132.1" r="2.6"/>
+            <circle cx="-21.4" cy="132.1" r="2.6"/>
+          </g>
+
+          <g id="front-vents"
+             fill="var(--devices-color)" stroke-linecap="round" stroke-width=".5" >
+            <rect width="1.6" height="11.7" x="51" y="126.3" ry=".8"/>
+            <rect width="1.6" height="11.7" x="44.9" y="126.3" ry=".8"/>
+            <rect width="1.6" height="11.7" x="38.9" y="126.3" ry=".8"/>
+          </g>
+
+        </g>
+
+        <use href="#template-server-face"
+             fill="var(--mid-grey)"/>
+        <use href="#template-server-face" y="-30"
+             fill="var(--mid-grey)"/>
+        <use href="#template-server-face" y="-60"
+             fill="var(--mid-grey)"/>
+        <use href="#template-server-face" y="-150"
+             fill="var(--mid-grey)"/>
+        <use href="#template-server-face" y="-180"
+             fill="var(--mid-grey)"/>
+
+        <g id="focused-server-face"
+           class="focused-server">
+          <use href="#template-server-face" y="-120"
+               fill="var(--pātaka-color)" />
+
+          <g id="focused-server-lights"
+             stroke="var(--contrast-highlight-color)" stroke-opacity="0.5" fill="var(--contrast-tint)"
+             stroke-width="1.5">
+            <circle id="light-a"
+                    cx="-47.6" cy="12.1" r="2.5"/>
+            <circle id="light-b"
+                    cx="-34.5" cy="12.1" r="2.5"/>
+            <circle id="light-c"
+                    cx="-21.4" cy="12.1" r="2.5"/>
+          </g>
+
+        </g>
+
+      </g>
+
+      <g id="server-monitor"
+         stroke-linejoin="round">
+
+        <g id="stand"
+           stroke="var(--outline-color)" stroke-linecap="round"  stroke-width="1">
+          <rect id="baseplate"
+                x="-38" y="95.1"
+                width="80" height="15" rx="1" ry="1"
+                style="transform-origin: 0px 93.8px 0px;" transform="skewX(50) translate(-12)"
+                fill="var(--mid-grey)" />
+          <rect id="stand-front"
+                fill="var(--devices-color)"
+                x="-14" y="60"
+                width="30" height="44"/>
+          <rect fill="var(--outline-color)"
+                x="-17" y="60"
+                width="3" height="44" rx="1" ry="1"
+                style="transform-origin: -18.5px 82px 0px;" transform="skewY(50) translate(0,-5)"/>
+        </g>
+
+        <g id="screen-frame"
+           stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
+          <rect x="-147.6" y="-74.4"
+                 width="288" height="142.2" rx="2" ry="2"
+                 fill="var(--devices-color)" />
+          <path id="monitor-side"
+                fill="var(--outline-color)" stroke="none"
+                d="M-146.6 -73.9 l-0.5,1v140.2 l4,3 l-0.4,-1.2v-140.7l-3.2-2.5z"/>
+          <path id="monitor-top"
+                fill="var(--mid-grey)"  stroke="none"
+                d="M-144,-72 h287 l-2.5-1.9h-287z"/>
+          <rect x="-144" y="-72"
+                width="288" height="142.2" rx="2" ry="2"
+                fill="var(--devices-color)" />
+          <line x1="-147.3" y1="66.9" x2="-142.9" y2="70"/>
+          <line x1="138.6" y1="-74.5" x2="143.2" y2="-71.6"/>
+        </g>
+
+        <g id="pc-screen-components">
+          <rect id="pc-screen"
+                fill="var(--white)" stroke="var(--outline-color)"
+                stroke-linecap="butt" stroke-width="1"
+                x="-139" y="-66" width="278" height="131"/>
+          <path id="reflection"
+                fill="none" stroke="var(--mid-light-grey)"
+                stroke-linecap="round" stroke-width="1"
+                d="M139.5 -65v130.5h-276.5"/>
+        </g>
+
+      </g>
+
+    </g>
+
+    <g id="lines-and-symbols">
+
+      <g id="pātaka-symbol"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" >
+        <path d="M-17.3 15v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
+        <path d="M-13.4 25.9v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+      </g>
+
+      <g id="stroke-pātaka"
+         fill="none" stroke="var(--pātaka-color)">
+        <path stroke-width="1.5" d="M-6,1.5L0,-4.5L6,1.5 M-4,-0.5V4 M4,-0.5V4"/>
+        <path d="M0,-6.5V-4 M-5.5,4H5.5 M-3,4V6.5 M3,4V6.5"/>
+      </g>
+
+      <g id="follow-symbol"
+         stroke-linecap="round" stroke-width="1.5">
+        <circle cx="-4" cy="4" r="0.5"/>
+        <path fill="none" d="M-4.25,-0.25 A 4.5,4.5 0 0 1 0.25,4.25"/>
+        <path fill="none" d="M-4.25,-4.25 A 8.5,8.5 0 0 1 4.25,4.25"/>
+      </g>
+
+      <use id="pātaka-symbol-large"
+           xlink:href="#pātaka-symbol" transform="scale(2)"/>
+      <path id="pixel-pātaka"
+            fill="var(--pātaka-color)" stroke="none"
+            d="m-26,2 h4v-4h4v-4h4v-4h4v-4h4v-4h4v-8h4v8h4v4h4v4h4v4h4v4h4v4h4v4h-8v8h4v4h-8v8h-4v-8h-20v8h-4v-8h-8v-4h4v-8h-8z
+           m12,-4v16h28v-16h-4v-4h-4v-4h-4v-4h-4v4h-4v4h-4v4z"/>
+      <polyline id="mobile-to-first-icon-line"
+                stroke="var(--mid-grey)" stroke-dasharray="2,2"
+                points="0,0 14,0"/>
+      <polyline id="twin-follow-lines"
+                fill="none" stroke="var(--mid-grey)"
+                stroke-dasharray="2,2"
+                points="30,-20 0,0 30,20"/>
+      <polyline id="first-follow-line"
+                fill="none" stroke="var(--mid-grey)"
+                stroke-dasharray="2,2"
+                points="30,-20 0,0"/>
+      <polyline id="second-follow-line"
+                fill="none" stroke="var(--mid-grey)"
+                stroke-dasharray="2,2"
+                points="0,0 30,20"/>
+      <polyline id="third-follow-line"
+                fill="none" stroke="var(--mid-grey)"
+                stroke-dasharray="2,2"
+                points="0,0 28,38"/>
+    </g>
+
+    <g id="files-and-buttons">
+
+      <g id="file-copy">
+        <path fill="var(--mid-light-grey)"
+              d="M21.4 21.4h-42.8v-42.8h42.8z"/>
+        <path d="M21.4 21.4h-42.8v-42.8h42.8z
+              m6.1-42.8c0-3.4-2.7-6.1-6-6.1h-42.8a6.1 6.1 0 00-6 6v42.8c0 3.3 2.7 6 6 6h42.8c3.4 0 6.1-2.7 6.1-6z"/>
+      </g>
+
+      <g id="image-file"
+         stroke-width="4">
+        <path d="M-14 -16h28c1,0 2,1 2,2
+              v28c0 1-1 2-2 2
+              h-28c-1,0 -2,-1 -2-2
+              v-28c0-1 1-2 2-2z"/>
+        <path fill="none"
+              d="M-8 8l2-2.5 2.1 2.5z
+              M0.4 8l3.8-5 3.8 5z"/>
+      </g>
+
+      <g id="encrypted-file"
+         stroke-width="4"
+         fill="var(--encrypted-color)">
+        <path d="M-14 -16h28c1,0 2,1 2,2
+              v28c0 1-1 2-2 2
+              h-28c-1,0 -2,-1 -2-2
+              v-28c0-1 1-2 2-2z"/>
+      </g>
+
+      <g id="text-file"
+         stroke-width="4">
+        <path d="M-14 -16h18c.5 0 1.3.3 1.5.5l10 10c.4.4.5.9.5 1.5v18c0 1-1 2-2 2h-28c-1,0 -2,-1 -2-2v-28c0-1.2.8-2 2-2z"/>
+        <path d="M-10 -8h14
+                 m-14 8h20
+                 m-20 8h20"/>
+      </g>
+
+      <g id="kuia"
+         transform="scale(.085)">
+
+        <clipPath id="outline-circle">
+          <circle cx="242.4" cy="242.5" r="242.1"/>
+        </clipPath>
+
+        <circle id="kuia-bg"
+                cx="242.4" cy="242.5" r="242.1"
+                fill="var(--icon-bg-color)"/>
+
+        <g clip-path="url(#outline-circle)">
+          <path id="skin"
+                fill="var(--white)"
+                d="M178.4 397.3l202-65s21.5 19.5 22.5 28.5c.9 8.4 10.9 46 12.3 51.4 4.4-4.5 8.7-9.2 12.7-14l-19.7-66.4-76.5-70s-3.2-86.2-3.2-92.6c0-6.5-30.2-70-30.2-70s-30.2-33.4-44.2-37.7c-14-4.3-34.5 5.4-34.5 5.4l-34.5 47.4L132.5 253 112 340.3l-40.6 64 107-7z"/>
+
+          <g id="kākahu">
+            <path d="M62.9 422.3l130.5-32 188.5-60.5 44 67v24l-139.5 86.5s-137.5-4.5-139-5.5-84.5-79.5-84.5-79.5z"/>
+            <path fill="var(--white)"
+                  d="M312 396.8c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
+                  m-43.1-5.7c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
+                  m-14 31.3c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9c1 2.1 0 4.6-2 5.5-.5.3-1.1.4-1.7.4z
+                  M382.1 401.4c-1.6 0-3.1-.9-3.8-2.4L354 346.1a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.8 5.9z
+                  M362 433.3c-1.6 0-3.1-.9-3.8-2.4L333.8 378a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z"/>
+            <path d="M110.3 419.3l-18.5-58.4 293.4-92.7 18.5 58.4-293.4 92.7zm-8-53l13.4 42.5 277.5-87.6-13.4-42.5-277.5 87.6z"/>
+
+            <clipPath id="c">
+              <path id="b"
+                    d="M142.4 348.5l178.6-56 23.4.8 23.4 9.2 12 16 5.2 10.8-220.6 67.2-22.7-31.2z"/>
+            </clipPath>
+
+            <g clip-path="url(#c)">
+              <path id="d"
+                    d="M154.1 412.6l-7.4-3.8 21-40.4-38.8-20.1 3.9-7.4 46.1 23.9z"/>
+
+              <g fill="var(--pātaka-color)">
+                <use xlink:href="#d" x="0" y="0" />
+                <use xlink:href="#d" x="35" y="-11" />
+                <use xlink:href="#d" x="70" y="-22" />
+                <use xlink:href="#d" x="105" y="-33" />
+                <use xlink:href="#d" x="140" y="-44" />
+                <use xlink:href="#d" x="175" y="-55" />
+                <use xlink:href="#d" x="210" y="-66" />
+              </g>
+
+              <g>
+                <use xlink:href="#d" x="-17.5" y="5.5" />
+                <use xlink:href="#d" x="17.5" y="-5.5" />
+                <use xlink:href="#d" x="52.5" y="-16.5" />
+                <use xlink:href="#d" x="87.5" y="-27.5" />
+                <use xlink:href="#d" x="122.5" y="-38.5" />
+                <use xlink:href="#d" x="157.5" y="-49.5" />
+                <use xlink:href="#d" x="192.5" y="-60.5" />
+              </g>
+
+            </g>
+
+          </g>
+
+          <g id="hair"
+             fill="var(--mid-grey)">
+            <path d="M190.9 149c13-15.1-3-34.1 9.4-44.9 8-7 34.4-11.5 37.9-16 1.8-2.3 2.8-.4 2.5-17.7-.1-6.5.2-7.2-1.2-9.5s-13.7-7.9-40.1 4.2-46.4 68.6-51 82.6-14.8 30.6-26 37.6c-11.1 7-32 11.6-33.4 29.2s.5 26.4-10.2 34.3-23.5 9.9-20.4 29.2c4.4 27.4-6.1 40.3-11.6 48.7-36.4 55.6 30.4 90.9 30.4 90.9S33 366.1 159.4 298.8c24.1-12.8 36.7-8.8 51.5-25.7 6.5-7.4 5.6-28.8 2.8-36.6-2.4-6.9-12.1-9.3-19.9-39.9-5.2-20-9.9-39.4-2.9-47.6z"/>
+            <path d="M294.8 149c-13-15.1 3-34.1-9.4-44.9-8-7-34.4-11.5-37.9-16-1.8-2.3-2.8-.4-2.5-17.7.1-6.5-.2-7.2 1.2-9.5s13.7-7.9 40.1 4.2 46.4 68.6 51 82.6c4.6 13.9 14.8 30.6 26 37.6 11.1 7 32 11.6 33.4 29.2s-.5 26.4 10.2 34.3 23.5 9.9 20.4 29.2c-4.4 27.4 6.1 40.3 11.6 48.7 36.4 55.6-26 86.5-26 86.5S389.7 295.5 326.2 296c-27.3.2-36.4-5.8-51.2-22.7-6.5-7.4-5.6-28.8-2.8-36.6 2.5-6.9 12.1-9.3 19.9-39.9 4.9-20.2 9.7-39.6 2.7-47.8zm-108 138.5s-48.2 10.1-37.6 61.2 55 56.1 55 56.1-98.4 69.8-159.1-16.6c-34.3-49.1 141.7-100.7 141.7-100.7z"/>
+          </g>
+
+          <path id="lips"
+                d="M242.1 211.9 l3-1.8 s7.7-.8 12 .3 5.9 2.6 5.9 2.6-5 6-6.1 6.7 c-3 1.7-8.1 3.8-12.4 3.4L242.1 222.9 m0 -11l-3-1.8s-7.7-.8-12 .3-5.9 2.6-5.9 2.6 5 6 6.1 6.7c3 1.7 8.1 3.8 12.4 3.4L242.1 222.9"/>
+        </g>
+
+        <g id="moko-kauae"
+           fill="none" stroke="var(--outline-color)"
+           stroke-linecap="round" stroke-width="3">
+          <path d="M245.5 221.5v22.3m4.4-22.3V237m-9-15.5v22.3m-4.4-22.3V237"/>
+          <path d="m 249.9,236.6 c -0.014,1.39 -0.33,4.05 1.16,5.86 1.58,1.92 4.17,1.58 5.23,0.12 1.63,-2.23 0.28,-4.58 -1.33,-4.62"/>
+          <path d="m 236.5,236.6 c 0.014,1.39 0.33,4.05 -1.16,5.86 -1.58,1.92 -4.17,1.58 -5.23,0.12 -1.63,-2.23 -0.28,-4.58 1.33,-4.62"/>
+        </g>
+
+        <path id="chin-outline"
+              fill="var(--mid-grey)"
+              d="M260.8 248.2c-4 2.9-10.4 4.5-17.5 4.5-7.4 0-12.9-1.4-17.2-4.5l-.8-.5c-1.6-1-5.5-3.5-11.2-10.8l-1.7-2.2-1.4-1.8a30 30 0 013.2 12c4.1 4.4 7 6.2 8.4 7.1l.5.4a33.2 33.2 0 0020.1 5.4 36 36 0 0020.4-5.4c1.1-.8 3.7-2.6 7.8-7.2.1-1.2.8-7.8 2.8-11.5a56.7 56.7 0 01-13.4 14.5z"/>
+      </g>
+
+      <g id="add-icon"
+         stroke-width="2" stroke="var(--white)">
+         <circle cx="0" cy="0" r="18"/>
+         <path d="M-12,0 h24 m-12 -12 v24"/>
+      </g>
+
+      <g id="invite-button">
+        <defs>
+          <rect id="button-shape"
+                x="-38" y="-12" width="76" height="24" rx="1" ry="1"/>
+        </defs>
+        <use id="button-standard"
+             xlink:href="#button-shape"
+             fill="var(--pātaka-color)"/>
+        <use xlink:href="#follow-symbol" x="-26" fill="var(--white)" stroke="var(--white)" />
+
+        <g id="join-pātaka-text"
+           fill="var(--white)" font-size="10">
+          <text x="6" y="4" text-anchor="middle">Join Pātaka</text>
+        </g>
+
+      </g>
+
+      <g id="follow-notification" >
+        <use xlink:href="#button-shape" fill="none" />
+        <use xlink:href="#follow-symbol" x="-26"/>
+
+        <g id="following-text"
+           stroke="none" font-size="10">
+          <text x="6" y="4" text-anchor="middle">Following</text>
+        </g>
+
+      </g>
+
+      <use id="button_hover"
+           xlink:href="#button-shape"
+           fill="hsla(0,0%,100%,0.4)"/>
+    </g>
+
+    <filter id="highlight-blur"
+            x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+    </filter>
+
+  </defs>
+
+  <g id="pātaka-pi" opacity="0">
+    <use xlink:href="#pi-screen"
+         x="100" y="420" />
+    <use xlink:href="#pi-drive" x="80" y="476" />
+    <use xlink:href="#raspberry-pi"
+         x="80" y="470" />
+    <use xlink:href="#pixel-pātaka"
+         x="100" y="420" />
+  </g>
+
+  <!-- transform="scale(2) translate(0)" -->
+<!-- transform="scale(1) translate(-220)" -->
+  <g id="pātaka_laptop" opacity="1"
+     transform="scale(2) translate(0)"
+     style="transform-origin: 500px 490px 0px;">
+
+    <g id="follow-lines_laptop"
+       stroke="var(--mid-grey)"
+       stroke-dasharray="2,2">
+       <!-- transform="rotate(12)" -->
+       <!-- transform="rotate(-41) translate(10)" -->
+      <line id="line_first-follow_laptop"
+            x1="366" y1="360" x2="400" y2="390"
+            style="transform-origin: 400px 390px 0px;"/>
+      <line id="line_second-follow_laptop"
+            transform="rotate(24)"
+            x1="366" y1="390" x2="400" y2="390"
+            style="transform-origin: 400px 390px 0px;"/>
+      <line id="line_third-follow_laptop" opacity="0"
+            transform="rotate(12)"
+            x1="368" y1="420" x2="400" y2="390"
+            style="transform-origin: 400px 390px 0px;"/>
+      <line id="line_fourth-follow_laptop" opacity="0"
+            x1="366" y1="440" x2="400" y2="390"
+            style="transform-origin: 400px 390px 0px;"/>
+    </g>
+
+    <use xlink:href="#laptop"
+         x="500" y="405"
+         fill="var(--devices-color)" stroke="var(--outline-color)"/>
+    <use id="pātaka-symbol_laptop"
+         xlink:href="#pātaka-symbol"
+         x="500" y="385"
+         fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
+
+    <use id="follow-notification_laptop_a"
+         xlink:href="#follow-notification"
+         transform="scale(0.6)"
+         style="transform-origin: 500px 427px 0px;"
+         fill="var(--group-a-outline)" stroke="var(--group-a-color)"
+         x="500" y="427" />
+    <use id="mobile-icon_onscreen-laptop_a"
+         style="transform-origin: 388px 390px 0px;"
+         xlink:href="#mobile-icon_onscreen" x="500" y="385"
+         fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+    <use id="follow-notification_laptop_b"
+         xlink:href="#follow-notification"
+         transform="scale(0.6)"
+         style="transform-origin: 500px 427px 0px;"
+         fill="var(--group-b-outline)" stroke="var(--group-b-color)"
+         x="500" y="427" />
+    <use id="mobile-icon_onscreen-laptop_b"
+         style="transform-origin: 388px 390px 0px;"
+         xlink:href="#mobile-icon_onscreen" x="500" y="385"
+         fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+
+
+   <!-- transform="translate(0,-15)" -->
+    <g id="laptop-follow-icons">
+      <use id="mobile-icon-a_follow_laptop"
+           xlink:href="#mobile-icon" x="368" y="345"
+           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+      <use id="mobile-icon-b_follow_laptop"
+           xlink:href="#mobile-icon" x="368" y="375"
+           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+      <use id="mobile-icon-c_follow_laptop" opacity="0"
+           xlink:href="#mobile-icon" x="368" y="405"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+      <use xlink:href="#imac-icon" opacity="0"
+           x="368" y="435" />
+    </g>
+
+  </g>
+
+  <g id="imac" opacity="0"
+     transform="translate(200)">
+    <use xlink:href="#imac"
+         x="500" y="350" />
+    <use id="imac-symbol"
+         xlink:href="#pātaka-symbol-large"
+         x="500" y="320"
+         fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
+    <use id="line_first-fof_imac"
+         transform="rotate(-20)"
+         xlink:href="#first-follow-line" x="745" y="300"
+         style="transform-origin: 745px 300px 0px;"/>
+    <use id="line_second-fof_imac"
+         transform="rotate(-33.8)"
+         xlink:href="#second-follow-line" x="745" y="300"
+         style="transform-origin: 745px 300px 0px;"/>
+    <use id="line_third-fof_imac"
+         transform="rotate(0)"
+         xlink:href="#third-follow-line" x="745" y="300"
+         style="transform-origin: 745px 300px 0px;"/>
+    <use id="laptop-icon_follow_imac"
+         style="transform-origin: 296px 704px 0px;"
+         xlink:href="#laptop-icon_follow" x="730" y="300" />
+    <use id="pātaka-mobile-icon-a_follow_b"
+         xlink:href="#mobile-follow-mobile" x="775" y="260"
+         fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+    <use id="pātaka-mobile-icon-b_follow_b"
+         xlink:href="#mobile-follow-mobile" x="775" y="300"
+         fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+    <use id="pātaka-mobile-icon-c_follow_b"
+         xlink:href="#mobile-follow-mobile" x="775" y="340"
+         fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+  </g>
+
+  <g id="pātaka-server" opacity="0">
+    <use xlink:href="#servers" x="900" y="350" />
+    <use xlink:href="#server-monitor" x="640" y="385" />
+    <use id="imac-symbol"
+         xlink:href="#pātaka-symbol-large"
+         x="640" y="385"
+         fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
+  </g>
+
+  <g id="mobiles">
+
+    <g id="mobile-a"
+       style="transform-origin: 296px 704px 0px;" transform="scale(1)">
+      <use xlink:href="#mobile"
+           x="250" y="750"
+           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+
+      <g id="invite-to-laptop_a"
+         style="transform-origin: 295px 690px 0px;">
+        <use id="laptop-icon_invite-a"
+             xlink:href="#laptop-icon_pātaka" x="250" y="730"
+             style="transform-origin: 295px 700px 0px;"/>
+
+        <g id="invite-button_a"
+           style="transform-origin: 250px 780px 0px;">
+          <use xlink:href="#invite-button" x="250" y="780"/>
+          <use id="invite-button_hover-a"
+               xlink:href="#button_hover" x="250" y="780"/>
+        </g>
+
+      </g>
+
+      <use id="follow-notification_a"
+           fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
+           style="transform-origin: 250px 780px 0px;"
+           xlink:href="#follow-notification" x="250" y="780"/>
+      <use id="line_a-to-laptop"
+           xlink:href="#mobile-to-first-icon-line"
+           x="297" y="700" style="transform-origin: 297px 700px 0px;"/>
+      <use id="line_first-fof_a"
+           xlink:href="#first-follow-line" x="345" y="700"
+           style="transform-origin: 345px 700px 0px;"/>
+      <use id="line_second-fof_a" opacity="0"
+           transform="rotate(-33.8)"
+           xlink:href="#second-follow-line" x="345" y="700"
+           style="transform-origin: 345px 700px 0px;"/>
+      <use id="line_third-fof_a" opacity="0"
+           transform="rotate(0)"
+           xlink:href="#third-follow-line" x="345" y="700"
+           style="transform-origin: 345px 700px 0px;"/>
+      <use id="laptop-icon_follow_a"
+           style="transform-origin: 296px 704px 0px;"
+           xlink:href="#laptop-icon_follow" x="330" y="700" />
+      <use id="mobile-icon-b_follow_a"
+           xlink:href="#mobile-follow-mobile" x="375" y="700"
+           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+      <use id="mobile-icon-c_follow_a" opacity="0"
+           xlink:href="#mobile-follow-mobile" x="375" y="720"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+
+      <g id="whakapapa-records-a" opacity="0">
+        <circle id="copy_kuia-a"
+                cx="250" cy="720" r="22"
+                fill="var(--group-a-tint)" stroke="var(--group-a-color)"
+                stroke-width="5"/>
+        <use id="add-icon_a"
+             xlink:href="#add-icon" x="250" y="720" />
+        <use id="kuia_a"
+             xlink:href="#kuia" x="229.2" y="699" opacity="0.5"/>
+      </g>
+
+    </g>
+
+    <!-- transform="scale(1) translate(100)" -->
+    <g id="mobile-b"
+       style="transform-origin: 500px 704px 0px;">
+      <use xlink:href="#mobile"
+           x="500" y="750"
+           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+
+      <g id="invite-to-laptop_b"
+        style="transform-origin: 500px 665px 0px;">
+        <use id="laptop-icon_invite-b"
+             style="transform-origin: 544px 700px 0px;"
+             xlink:href="#laptop-icon_pātaka" x="500" y="730"/>
+
+        <g id="invite-button_b"
+           style="transform-origin: 500px 780px 0px;">
+          <use xlink:href="#invite-button" x="500" y="780"/>
+          <use id="invite-button_hover-b"
+               xlink:href="#button_hover" x="500" y="780"/>
+        </g>
+      </g>
+
+      <use id="follow-notification_b"
+           fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
+           style="transform-origin: 500px 780px 0px;"
+           xlink:href="#follow-notification" x="500" y="780"/>
+      <use id="line_b-to-laptop"
+           xlink:href="#mobile-to-first-icon-line"
+           x="547" y="700" style="transform-origin: 547px 700px 0px;"/>
+<!-- transform="rotate(-20)" -->
+      <use id="line_first-fof_b"
+           xlink:href="#first-follow-line" x="595" y="700"
+           style="transform-origin: 595px 700px 0px;"/>
+      <use id="follow-lines_b" opacity="0"
+           xlink:href="#twin-follow-lines" x="595" y="700"
+           style="transform-origin: 595px 700px 0px;"/>
+      <use id="laptop-icon_follow_b"
+           style="transform-origin: 546px 704px 0px;"
+           xlink:href="#laptop-icon_follow" x="580" y="700" />
+      <use id="mobile-icon-a_follow_b"
+           xlink:href="#mobile-follow-mobile" x="625" y="700"
+           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+      <use id="mobile-icon-c_follow_b" opacity="0"
+           xlink:href="#mobile-follow-mobile" x="625" y="720"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+    </g>
+
+    <!-- transform="scale(1) translate(50)" -->
+    <g id="mobile-c"
+       style="transform-origin: 796px 704px 0px;">
+      <use xlink:href="#mobile"
+           x="750" y="750"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+
+      <g id="invite-to-laptop_c"
+         style="transform-origin: 705px 690px 0px;">
+        <use xlink:href="#laptop-icon_pātaka" x="750" y="730"/>
+        <use xlink:href="#invite-button" x="750" y="780"/>
+      </g>
+
+      <use id="line_c-to-laptop"
+           xlink:href="#mobile-to-first-icon-line"
+           x="797" y="700" style="transform-origin: 797px 700px 0px;"/>
+      <use id="follow-lines_c"
+           xlink:href="#twin-follow-lines" x="845" y="700"
+           style="transform-origin: 845px 700px 0px;"/>
+      <use id="laptop_follow_c"
+           style="transform-origin: 796px 704px 0px;"
+           xlink:href="#laptop-icon_follow" x="830" y="700"/>
+      <use id="mobile-icon-a_follow_c"
+           xlink:href="#mobile-follow-mobile" x="875" y="680"
+           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+      <use id="mobile-icon-b_follow_c"
+           xlink:href="#mobile-follow-mobile" x="875" y="720"
+           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+    </g>
+
+  </g>
+
+  <g id="arrows" opacity="1"
+       stroke-width="4" stroke-linecap="round">
+
+    <defs id="markers"
+          stroke-linejoin="round" stroke-width="1">
+
+      <marker id="marker-curve-a"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="none" stroke="var(--group-a-color)"
+              d="M2.4 2.1l-3-2 3-2"/>
+      </marker>
+
+      <marker id="marker-curve-bottom"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="none" stroke="var(--group-c-symbol-color)"
+              d="M2.4 2.1l-3-2 3-2"/>
+      </marker>
+
+      <marker id="marker-a"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="var(--group-a-color)" stroke="var(--group-a-color)"
+              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+                 </marker>
+
+      <marker id="marker-b"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="var(--group-b-color)" stroke="var(--group-b-color)"
+              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+      </marker>
+
+      <marker id="marker-c"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="var(--group-c-symbol-color)" stroke="var(--group-c-symbol-color)"
+              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+      </marker>
+
+      <marker id="marker-d"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="var(--mid-grey)" stroke="var(--mid-grey)"
+              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
+      </marker>
+
+      <marker id="marker-e"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="none" stroke="var(--mid-grey)"
+              d="M2,-4 L-4,0 2,4"/>
+      </marker>
+
+      <marker id="marker-f"
+             orient="auto" overflow="visible" refX="0" refY="0">
+        <path fill="none" stroke="var(--mid-grey)"
+              d="M-2,-4 L4,0 -2,4"/>
+      </marker>
+
+    </defs>
+
+    <g id="arrows-invites"
+       stroke="var(--mid-grey)">
+      <path id="arrow-invite-a"
+            marker-end="url(#marker-d)"
+            style="transform-origin:431px 500px 0px;"
+            d="M 431,500 305,675"/>
+      <path id="arrow-invite-b"
+            marker-end="url(#marker-d)"
+            style="transform-origin:500px 500px 0px;"
+            d="M 500,500 500,645"/>
+      <path id="arrow-invite-c"
+            marker-end="url(#marker-d)"
+            style="transform-origin:569px 500px 0px;"
+            d="M 569,500 695,675"/>
+      <path id="arrow-accept-a" opacity="0"
+           style="transform-origin: 312px 640px 0px;"
+           marker-end="url(#marker-d)"
+           d="M 312,640 429,512"/>
+    </g>
+
+    <g id="follow-lines"
+       stroke="var(--mid-grey)"
+       stroke-width="4" stroke-dasharray="8,8"
+       marker-start="url(#marker-e)"
+       marker-end="url(#marker-f)">
+       <path id="line_mutual-follow_laptop_a"
+             style="transform-origin: 375px 577.5px 0px;"
+             d="M 429,512 312,640"/>
+       <path id="line_mutual-follow_laptop_b"
+             style="transform-origin: 500px 556px 0px;"
+             d="M 500,516 500,586"/>
+       <line id="laptop-mobile-c-follow-line"
+             opacity="0"
+             x1="500" y1="405" x2="750" y2="750"/>
+       <line id="laptop-mobile-c-follow-line"
+             opacity="0"
+             x1="280" y1="405" x2="700" y2="350"/>
+    </g>
+
+    <g id="refresh-android" opacity="0"
+       fill="none" stroke="var(--group-c-symbol-color)"
+       marker-start="url(#marker-curve-bottom)"
+       style="transform-origin:716px 710px 0px;">
+      <path d="m 744.3,738.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
+      <path d="m 687.7,681.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
+    </g>
+
+    <g id="refresh-iphone" opacity="0"
+       fill="none" stroke="var(--group-a-color)"
+       marker-start="url(#marker-curve-a)"
+       style="transform-origin:716px 290px 0px;">
+      <path d="m 744.3,318.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
+      <path d="m 687.7,261.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
+    </g>
+
+    <g id="uploads" opacity="0">
+      <path id="upload-a1"
+            stroke="var(--group-a-color)"
+            marker-end="url(#marker-a)"
+            style="transform-origin:100px 182px 0px;"
+            d="m 100,182 65,172"/>
+      <path id="upload-a2"
+            stroke="var(--group-a-color)"
+            marker-end="url(#marker-a)"
+            style="transform-origin:135px 182px 0px;"
+            d="m 135,182 87.5,172.176"/>
+      <path id="upload-b1"
+            stroke="var(--group-b-color)"
+            marker-end="url(#marker-b)"
+            style="transform-origin:-84px 365px 0px;"
+            d="m -87,365 110, 70"/>
+      <path id="upload-b2"
+            stroke="var(--group-b-color)"
+            marker-end="url(#marker-b)"
+            style="transform-origin:-110px 475px 0px;"
+            d="m -110,475 134, -25"/>
+      <path id="upload-b3"
+            stroke="var(--group-b-color)"
+            marker-end="url(#marker-b)"
+            style="transform-origin:-110px 475px 0px;"
+            d="m -110,475 h134"/>
+      <path id="upload-b4"
+            stroke="var(--group-b-color)"
+            marker-end="url(#marker-b)"
+            style="transform-origin:-88px 590px 0px;"
+            d="m -88,590 l112, -19"/>
+      <path id="upload-b5"
+            stroke="var(--group-b-color)"
+            marker-end="url(#marker-b)"
+            style="transform-origin:-84px 365px 0px;"
+            d="m -87,365 110, 30"/>
+      <path id="upload-a3"
+            stroke="var(--group-a-color)"
+            marker-end="url(#marker-a)"
+            style="transform-origin:340px 183px 0px;"
+            d="m 340,183 -10,170"/>
+      <path id="upload-c1"
+            stroke="var(--group-c-symbol-color)"
+            marker-end="url(#marker-c)"
+            style="transform-origin:110px 798px 0px;"
+            d="m 110,798 51,-195"/>
+      <path id="upload-c3"
+            stroke="var(--group-c-symbol-color)"
+            marker-end="url(#marker-c)"
+            style="transform-origin:385px 780px 0px;"
+            d="m 385,780 -85,-180"/>
+      <path id="upload-c2"
+            stroke="var(--group-c-symbol-color)"
+            marker-end="url(#marker-c)"
+            style="transform-origin:250px 798px 0px;"
+            d="m 250,798 5,-195"/>
+      <path id="upload-c4"
+            stroke="var(--group-c-symbol-color)"
+            marker-end="url(#marker-c)"
+            style="transform-origin:280px 798px 0px;"
+            d="m 280,798 16,-195"/>
+    </g>
+
+    <path id="sync-request-iphone" opacity="0"
+          stroke="var(--group-a-color)"
+          marker-end="url(#marker-a)"
+          style="transform-origin:632px 292px 0px;"
+          d="M632 292L425.5 402"/>
+    <path id="sync-request-android" opacity="0"
+          stroke="var(--group-c-symbol-color)"
+          stroke-width="4"
+          marker-end="url(#marker-c)"
+          style="transform-origin:630px 650px 0px;"
+          d="M630 650L425.1 561.8" />
+    <path id="response-files-iphone" opacity="0"
+          stroke="var(--group-a-color)"
+          marker-end="url(#marker-a)"
+          style="transform-origin:425px 372px 0px;"
+          d="M424 372L632 300" />
+    <path id="response-files-android" opacity="0"
+          fill="none" stroke="var(--group-c-symbol-color)"
+          marker-end="url(#marker-c)"
+          style="transform-origin:425px 555px 0px;"
+          d="M425 555L630 680" />
+  </g>
+
+  <g id="guides-horizontal" opacity="0" >
+    <line x1="0%" y1="66.67%" x2="100%" y2="66.67%" stroke="hsla(210,50%,70%, 0.6)"/>
+    <line x1="0%" y1="50%" x2="1000" y2="50%" stroke="hsla(210,50%,50%, 0.5)"/>
+    <line x1="0%" y1="33.33%" x2="100%" y2="33.33%" stroke="hsla(210,50%,70%, 0.6)"/>
+  </g>
+  <g id="guides-vertical" opacity="0" >
+    <line x1="33.33%" y1="0%" x2="33.33%" y2="100%" stroke="hsla(210,50%,70%, 0.6)"/>
+    <line x1="50%" y1="0%" x2="50%" y2="100%" stroke="hsla(210,50%,50%, 0.5)"/>
+    <line x1="66.67%" y1="0%" x2="66.67%" y2="100%" stroke="hsla(210,50%,70%, 0.6)"/>
+  </g>
+
+  <script>
+    // <![CDATA[
+
+     /* anime.js v3.2.0
+     * (c) 2020 Julian Garnier
+     * Released under the MIT license
+     * animejs.com
+     */
+
+    !function(n,e){
+      "object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):n.anime=e()}(this,function(){"use strict";var n={update:null,begin:null,loopBegin:null,changeBegin:null,change:null,changeComplete:null,loopComplete:null,complete:null,loop:1,direction:"normal",autoplay:!0,timelineOffset:0},e={duration:1e3,delay:0,endDelay:0,easing:"easeOutElastic(1, .5)",round:0},r=["translateX","translateY","translateZ","rotate","rotateX","rotateY","rotateZ","scale","scaleX","scaleY","scaleZ","skew","skewX","skewY","perspective","matrix","matrix3d"],t={CSS:{},springs:{}};function a(n,e,r){return Math.min(Math.max(n,e),r)}function o(n,e){return n.indexOf(e)>-1}function u(n,e){return n.apply(null,e)}var i={arr:function(n){return Array.isArray(n)},obj:function(n){return o(Object.prototype.toString.call(n),"Object")},pth:function(n){return i.obj(n)&&n.hasOwnProperty("totalLength")},svg:function(n){return n instanceof SVGElement},inp:function(n){return n instanceof HTMLInputElement},dom:function(n){return n.nodeType||i.svg(n)},str:function(n){return"string"==typeof n},fnc:function(n){return"function"==typeof n},und:function(n){return void 0===n},hex:function(n){return/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(n)},rgb:function(n){return/^rgb/.test(n)},hsl:function(n){return/^hsl/.test(n)},col:function(n){return i.hex(n)||i.rgb(n)||i.hsl(n)},key:function(r){return!n.hasOwnProperty(r)&&!e.hasOwnProperty(r)&&"targets"!==r&&"keyframes"!==r}};function c(n){var e=/\(([^)]+)\)/.exec(n);return e?e[1].split(",").map(function(n){return parseFloat(n)}):[]}function s(n,e){var r=c(n),o=a(i.und(r[0])?1:r[0],.1,100),u=a(i.und(r[1])?100:r[1],.1,100),s=a(i.und(r[2])?10:r[2],.1,100),f=a(i.und(r[3])?0:r[3],.1,100),l=Math.sqrt(u/o),d=s/(2*Math.sqrt(u*o)),p=d<1?l*Math.sqrt(1-d*d):0,h=1,v=d<1?(d*l-f)/p:-f+l;function g(n){var r=e?e*n/1e3:n;return r=d<1?Math.exp(-r*d*l)*(h*Math.cos(p*r)+v*Math.sin(p*r)):(h+v*r)*Math.exp(-r*l),0===n||1===n?n:1-r}return e?g:function(){var e=t.springs[n];if(e)return e;for(var r=0,a=0;;)if(1===g(r+=1/6)){if(++a>=16)break}else a=0;var o=r*(1/6)*1e3;return t.springs[n]=o,o}}function f(n){return void 0===n&&(n=10),function(e){return Math.ceil(a(e,1e-6,1)*n)*(1/n)}}var l,d,p=function(){var n=11,e=1/(n-1);function r(n,e){return 1-3*e+3*n}function t(n,e){return 3*e-6*n}function a(n){return 3*n}function o(n,e,o){return((r(e,o)*n+t(e,o))*n+a(e))*n}function u(n,e,o){return 3*r(e,o)*n*n+2*t(e,o)*n+a(e)}return function(r,t,a,i){if(0<=r&&r<=1&&0<=a&&a<=1){var c=new Float32Array(n);if(r!==t||a!==i)for(var s=0;s<n;++s)c[s]=o(s*e,r,a);return function(n){return r===t&&a===i?n:0===n||1===n?n:o(f(n),t,i)}}function f(t){for(var i=0,s=1,f=n-1;s!==f&&c[s]<=t;++s)i+=e;var l=i+(t-c[--s])/(c[s+1]-c[s])*e,d=u(l,r,a);return d>=.001?function(n,e,r,t){for(var a=0;a<4;++a){var i=u(e,r,t);if(0===i)return e;e-=(o(e,r,t)-n)/i}return e}(t,l,r,a):0===d?l:function(n,e,r,t,a){for(var u,i,c=0;(u=o(i=e+(r-e)/2,t,a)-n)>0?r=i:e=i,Math.abs(u)>1e-7&&++c<10;);return i}(t,i,i+e,r,a)}}}(),h=(l={linear:function(){return function(n){return n}}},d={Sine:function(){return function(n){return 1-Math.cos(n*Math.PI/2)}},Circ:function(){return function(n){return 1-Math.sqrt(1-n*n)}},Back:function(){return function(n){return n*n*(3*n-2)}},Bounce:function(){return function(n){for(var e,r=4;n<((e=Math.pow(2,--r))-1)/11;);return 1/Math.pow(4,3-r)-7.5625*Math.pow((3*e-2)/22-n,2)}},Elastic:function(n,e){void 0===n&&(n=1),void 0===e&&(e=.5);var r=a(n,1,10),t=a(e,.1,2);return function(n){return 0===n||1===n?n:-r*Math.pow(2,10*(n-1))*Math.sin((n-1-t/(2*Math.PI)*Math.asin(1/r))*(2*Math.PI)/t)}}},["Quad","Cubic","Quart","Quint","Expo"].forEach(function(n,e){d[n]=function(){return function(n){return Math.pow(n,e+2)}}}),Object.keys(d).forEach(function(n){var e=d[n];l["easeIn"+n]=e,l["easeOut"+n]=function(n,r){return function(t){return 1-e(n,r)(1-t)}},l["easeInOut"+n]=function(n,r){return function(t){return t<.5?e(n,r)(2*t)/2:1-e(n,r)(-2*t+2)/2}}}),l);function v(n,e){if(i.fnc(n))return n;var r=n.split("(")[0],t=h[r],a=c(n);switch(r){case"spring":return s(n,e);case"cubicBezier":return u(p,a);case"steps":return u(f,a);default:return u(t,a)}}function g(n){try{return document.querySelectorAll(n)}catch(n){return}}function m(n,e){for(var r=n.length,t=arguments.length>=2?arguments[1]:void 0,a=[],o=0;o<r;o++)if(o in n){var u=n[o];e.call(t,u,o,n)&&a.push(u)}return a}function y(n){return n.reduce(function(n,e){return n.concat(i.arr(e)?y(e):e)},[])}function b(n){return i.arr(n)?n:(i.str(n)&&(n=g(n)||n),n instanceof NodeList||n instanceof HTMLCollection?[].slice.call(n):[n])}function x(n,e){return n.some(function(n){return n===e})}function M(n){var e={};for(var r in n)e[r]=n[r];return e}function w(n,e){var r=M(n);for(var t in n)r[t]=e.hasOwnProperty(t)?e[t]:n[t];return r}function k(n,e){var r=M(n);for(var t in e)r[t]=i.und(n[t])?e[t]:n[t];return r}function O(n){return i.rgb(n)?(r=/rgb\((\d+,\s*[\d]+,\s*[\d]+)\)/g.exec(e=n))?"rgba("+r[1]+",1)":e:i.hex(n)?(t=n.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(n,e,r,t){return e+e+r+r+t+t}),a=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(t),"rgba("+parseInt(a[1],16)+","+parseInt(a[2],16)+","+parseInt(a[3],16)+",1)"):i.hsl(n)?function(n){var e,r,t,a=/hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(n)||/hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%,\s*([\d.]+)\)/g.exec(n),o=parseInt(a[1],10)/360,u=parseInt(a[2],10)/100,i=parseInt(a[3],10)/100,c=a[4]||1;function s(n,e,r){return r<0&&(r+=1),r>1&&(r-=1),r<1/6?n+6*(e-n)*r:r<.5?e:r<2/3?n+(e-n)*(2/3-r)*6:n}if(0==u)e=r=t=i;else{var f=i<.5?i*(1+u):i+u-i*u,l=2*i-f;e=s(l,f,o+1/3),r=s(l,f,o),t=s(l,f,o-1/3)}return"rgba("+255*e+","+255*r+","+255*t+","+c+")"}(n):void 0;var e,r,t,a}function C(n){var e=/[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?(%|px|pt|em|rem|in|cm|mm|ex|ch|pc|vw|vh|vmin|vmax|deg|rad|turn)?$/.exec(n);if(e)return e[1]}function B(n,e){return i.fnc(n)?n(e.target,e.id,e.total):n}function P(n,e){return n.getAttribute(e)}function I(n,e,r){if(x([r,"deg","rad","turn"],C(e)))return e;var a=t.CSS[e+r];if(!i.und(a))return a;var o=document.createElement(n.tagName),u=n.parentNode&&n.parentNode!==document?n.parentNode:document.body;u.appendChild(o),o.style.position="absolute",o.style.width=100+r;var c=100/o.offsetWidth;u.removeChild(o);var s=c*parseFloat(e);return t.CSS[e+r]=s,s}function T(n,e,r){if(e in n.style){var t=e.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase(),a=n.style[e]||getComputedStyle(n).getPropertyValue(t)||"0";return r?I(n,a,r):a}}function D(n,e){return i.dom(n)&&!i.inp(n)&&(P(n,e)||i.svg(n)&&n[e])?"attribute":i.dom(n)&&x(r,e)?"transform":i.dom(n)&&"transform"!==e&&T(n,e)?"css":null!=n[e]?"object":void 0}function E(n){if(i.dom(n)){for(var e,r=n.style.transform||"",t=/(\w+)\(([^)]*)\)/g,a=new Map;e=t.exec(r);)a.set(e[1],e[2]);return a}}function F(n,e,r,t){var a,u=o(e,"scale")?1:0+(o(a=e,"translate")||"perspective"===a?"px":o(a,"rotate")||o(a,"skew")?"deg":void 0),i=E(n).get(e)||u;return r&&(r.transforms.list.set(e,i),r.transforms.last=e),t?I(n,i,t):i}function N(n,e,r,t){switch(D(n,e)){case"transform":return F(n,e,t,r);case"css":return T(n,e,r);case"attribute":return P(n,e);default:return n[e]||0}}function A(n,e){var r=/^(\*=|\+=|-=)/.exec(n);if(!r)return n;var t=C(n)||0,a=parseFloat(e),o=parseFloat(n.replace(r[0],""));switch(r[0][0]){case"+":return a+o+t;case"-":return a-o+t;case"*":return a*o+t}}function L(n,e){if(i.col(n))return O(n);if(/\s/g.test(n))return n;var r=C(n),t=r?n.substr(0,n.length-r.length):n;return e?t+e:t}function j(n,e){return Math.sqrt(Math.pow(e.x-n.x,2)+Math.pow(e.y-n.y,2))}function S(n){for(var e,r=n.points,t=0,a=0;a<r.numberOfItems;a++){var o=r.getItem(a);a>0&&(t+=j(e,o)),e=o}return t}function q(n){if(n.getTotalLength)return n.getTotalLength();switch(n.tagName.toLowerCase()){case"circle":return o=n,2*Math.PI*P(o,"r");case"rect":return 2*P(a=n,"width")+2*P(a,"height");case"line":return j({x:P(t=n,"x1"),y:P(t,"y1")},{x:P(t,"x2"),y:P(t,"y2")});case"polyline":return S(n);case"polygon":return r=(e=n).points,S(e)+j(r.getItem(r.numberOfItems-1),r.getItem(0))}var e,r,t,a,o}function $(n,e){var r=e||{},t=r.el||function(n){for(var e=n.parentNode;i.svg(e)&&i.svg(e.parentNode);)e=e.parentNode;return e}(n),a=t.getBoundingClientRect(),o=P(t,"viewBox"),u=a.width,c=a.height,s=r.viewBox||(o?o.split(" "):[0,0,u,c]);return{el:t,viewBox:s,x:s[0]/1,y:s[1]/1,w:u/s[2],h:c/s[3]}}function X(n,e){function r(r){void 0===r&&(r=0);var t=e+r>=1?e+r:0;return n.el.getPointAtLength(t)}var t=$(n.el,n.svg),a=r(),o=r(-1),u=r(1);switch(n.property){case"x":return(a.x-t.x)*t.w;case"y":return(a.y-t.y)*t.h;case"angle":return 180*Math.atan2(u.y-o.y,u.x-o.x)/Math.PI}}function Y(n,e){var r=/[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g,t=L(i.pth(n)?n.totalLength:n,e)+"";return{original:t,numbers:t.match(r)?t.match(r).map(Number):[0],strings:i.str(n)||e?t.split(r):[]}}function Z(n){return m(n?y(i.arr(n)?n.map(b):b(n)):[],function(n,e,r){return r.indexOf(n)===e})}function Q(n){var e=Z(n);return e.map(function(n,r){return{target:n,id:r,total:e.length,transforms:{list:E(n)}}})}function V(n,e){var r=M(e);if(/^spring/.test(r.easing)&&(r.duration=s(r.easing)),i.arr(n)){var t=n.length;2===t&&!i.obj(n[0])?n={value:n}:i.fnc(e.duration)||(r.duration=e.duration/t)}var a=i.arr(n)?n:[n];return a.map(function(n,r){var t=i.obj(n)&&!i.pth(n)?n:{value:n};return i.und(t.delay)&&(t.delay=r?0:e.delay),i.und(t.endDelay)&&(t.endDelay=r===a.length-1?e.endDelay:0),t}).map(function(n){return k(n,r)})}function z(n,e){var r=[],t=e.keyframes;for(var a in t&&(e=k(function(n){for(var e=m(y(n.map(function(n){return Object.keys(n)})),function(n){return i.key(n)}).reduce(function(n,e){return n.indexOf(e)<0&&n.push(e),n},[]),r={},t=function(t){var a=e[t];r[a]=n.map(function(n){var e={};for(var r in n)i.key(r)?r==a&&(e.value=n[r]):e[r]=n[r];return e})},a=0;a<e.length;a++)t(a);return r}(t),e)),e)i.key(a)&&r.push({name:a,tweens:V(e[a],n)});return r}function H(n,e){var r;return n.tweens.map(function(t){var a=function(n,e){var r={};for(var t in n){var a=B(n[t],e);i.arr(a)&&1===(a=a.map(function(n){return B(n,e)})).length&&(a=a[0]),r[t]=a}return r.duration=parseFloat(r.duration),r.delay=parseFloat(r.delay),r}(t,e),o=a.value,u=i.arr(o)?o[1]:o,c=C(u),s=N(e.target,n.name,c,e),f=r?r.to.original:s,l=i.arr(o)?o[0]:f,d=C(l)||C(s),p=c||d;return i.und(u)&&(u=f),a.from=Y(l,p),a.to=Y(A(u,l),p),a.start=r?r.end:0,a.end=a.start+a.delay+a.duration+a.endDelay,a.easing=v(a.easing,a.duration),a.isPath=i.pth(o),a.isColor=i.col(a.from.original),a.isColor&&(a.round=1),r=a,a})}var G={css:function(n,e,r){return n.style[e]=r},attribute:function(n,e,r){return n.setAttribute(e,r)},object:function(n,e,r){return n[e]=r},transform:function(n,e,r,t,a){if(t.list.set(e,r),e===t.last||a){var o="";t.list.forEach(function(n,e){o+=e+"("+n+") "}),n.style.transform=o}}};function R(n,e){Q(n).forEach(function(n){for(var r in e){var t=B(e[r],n),a=n.target,o=C(t),u=N(a,r,o,n),i=A(L(t,o||C(u)),u),c=D(a,r);G[c](a,r,i,n.transforms,!0)}})}function W(n,e){return m(y(n.map(function(n){return e.map(function(e){return function(n,e){var r=D(n.target,e.name);if(r){var t=H(e,n),a=t[t.length-1];return{type:r,property:e.name,animatable:n,tweens:t,duration:a.end,delay:t[0].delay,endDelay:a.endDelay}}}(n,e)})})),function(n){return!i.und(n)})}function J(n,e){var r=n.length,t=function(n){return n.timelineOffset?n.timelineOffset:0},a={};return a.duration=r?Math.max.apply(Math,n.map(function(n){return t(n)+n.duration})):e.duration,a.delay=r?Math.min.apply(Math,n.map(function(n){return t(n)+n.delay})):e.delay,a.endDelay=r?a.duration-Math.max.apply(Math,n.map(function(n){return t(n)+n.duration-n.endDelay})):e.endDelay,a}var K=0;var U,_=[],nn=[],en=function(){function n(){U=requestAnimationFrame(e)}function e(e){var r=_.length;if(r){for(var t=0;t<r;){var a=_[t];if(a.paused){var o=_.indexOf(a);o>-1&&(_.splice(o,1),r=_.length)}else a.tick(e);t++}n()}else U=cancelAnimationFrame(U)}return n}();function rn(r){void 0===r&&(r={});var t,o=0,u=0,i=0,c=0,s=null;function f(n){var e=window.Promise&&new Promise(function(n){return s=n});return n.finished=e,e}var l,d,p,h,v,g,y,b,x=(d=w(n,l=r),p=w(e,l),h=z(p,l),v=Q(l.targets),g=W(v,h),y=J(g,p),b=K,K++,k(d,{id:b,children:[],animatables:v,animations:g,duration:y.duration,delay:y.delay,endDelay:y.endDelay}));f(x);function M(){var n=x.direction;"alternate"!==n&&(x.direction="normal"!==n?"normal":"reverse"),x.reversed=!x.reversed,t.forEach(function(n){return n.reversed=x.reversed})}function O(n){return x.reversed?x.duration-n:n}function C(){o=0,u=O(x.currentTime)*(1/rn.speed)}function B(n,e){e&&e.seek(n-e.timelineOffset)}function P(n){for(var e=0,r=x.animations,t=r.length;e<t;){var o=r[e],u=o.animatable,i=o.tweens,c=i.length-1,s=i[c];c&&(s=m(i,function(e){return n<e.end})[0]||s);for(var f=a(n-s.start-s.delay,0,s.duration)/s.duration,l=isNaN(f)?1:s.easing(f),d=s.to.strings,p=s.round,h=[],v=s.to.numbers.length,g=void 0,y=0;y<v;y++){var b=void 0,M=s.to.numbers[y],w=s.from.numbers[y]||0;b=s.isPath?X(s.value,l*M):w+l*(M-w),p&&(s.isColor&&y>2||(b=Math.round(b*p)/p)),h.push(b)}var k=d.length;if(k){g=d[0];for(var O=0;O<k;O++){d[O];var C=d[O+1],B=h[O];isNaN(B)||(g+=C?B+C:B+" ")}}else g=h[0];G[o.type](u.target,o.property,g,u.transforms),o.currentValue=g,e++}}function I(n){x[n]&&!x.passThrough&&x[n](x)}function T(n){var e=x.duration,r=x.delay,l=e-x.endDelay,d=O(n);x.progress=a(d/e*100,0,100),x.reversePlayback=d<x.currentTime,t&&function(n){if(x.reversePlayback)for(var e=c;e--;)B(n,t[e]);else for(var r=0;r<c;r++)B(n,t[r])}(d),!x.began&&x.currentTime>0&&(x.began=!0,I("begin")),!x.loopBegan&&x.currentTime>0&&(x.loopBegan=!0,I("loopBegin")),d<=r&&0!==x.currentTime&&P(0),(d>=l&&x.currentTime!==e||!e)&&P(e),d>r&&d<l?(x.changeBegan||(x.changeBegan=!0,x.changeCompleted=!1,I("changeBegin")),I("change"),P(d)):x.changeBegan&&(x.changeCompleted=!0,x.changeBegan=!1,I("changeComplete")),x.currentTime=a(d,0,e),x.began&&I("update"),n>=e&&(u=0,x.remaining&&!0!==x.remaining&&x.remaining--,x.remaining?(o=i,I("loopComplete"),x.loopBegan=!1,"alternate"===x.direction&&M()):(x.paused=!0,x.completed||(x.completed=!0,I("loopComplete"),I("complete"),!x.passThrough&&"Promise"in window&&(s(),f(x)))))}return x.reset=function(){var n=x.direction;x.passThrough=!1,x.currentTime=0,x.progress=0,x.paused=!0,x.began=!1,x.loopBegan=!1,x.changeBegan=!1,x.completed=!1,x.changeCompleted=!1,x.reversePlayback=!1,x.reversed="reverse"===n,x.remaining=x.loop,t=x.children;for(var e=c=t.length;e--;)x.children[e].reset();(x.reversed&&!0!==x.loop||"alternate"===n&&1===x.loop)&&x.remaining++,P(x.reversed?x.duration:0)},x.set=function(n,e){return R(n,e),x},x.tick=function(n){i=n,o||(o=i),T((i+(u-o))*rn.speed)},x.seek=function(n){T(O(n))},x.pause=function(){x.paused=!0,C()},x.play=function(){x.paused&&(x.completed&&x.reset(),x.paused=!1,_.push(x),C(),U||en())},x.reverse=function(){M(),x.completed=!x.reversed,C()},x.restart=function(){x.reset(),x.play()},x.reset(),x.autoplay&&x.play(),x}function tn(n,e){for(var r=e.length;r--;)x(n,e[r].animatable.target)&&e.splice(r,1)}return"undefined"!=typeof document&&document.addEventListener("visibilitychange",function(){document.hidden?(_.forEach(function(n){return n.pause()}),nn=_.slice(0),rn.running=_=[]):nn.forEach(function(n){return n.play()})}),rn.version="3.2.0",rn.speed=1,rn.running=_,rn.remove=function(n){for(var e=Z(n),r=_.length;r--;){var t=_[r],a=t.animations,o=t.children;tn(e,a);for(var u=o.length;u--;){var i=o[u],c=i.animations;tn(e,c),c.length||i.children.length||o.splice(u,1)}a.length||o.length||t.pause()}},rn.get=N,rn.set=R,rn.convertPx=I,rn.path=function(n,e){var r=i.str(n)?g(n)[0]:n,t=e||100;return function(n){return{property:n,el:r,svg:$(r),totalLength:q(r)*(t/100)}}},rn.setDashoffset=function(n){var e=q(n);return n.setAttribute("stroke-dasharray",e),e},rn.stagger=function(n,e){void 0===e&&(e={});var r=e.direction||"normal",t=e.easing?v(e.easing):null,a=e.grid,o=e.axis,u=e.from||0,c="first"===u,s="center"===u,f="last"===u,l=i.arr(n),d=l?parseFloat(n[0]):parseFloat(n),p=l?parseFloat(n[1]):0,h=C(l?n[1]:n)||0,g=e.start||0+(l?d:0),m=[],y=0;return function(n,e,i){if(c&&(u=0),s&&(u=(i-1)/2),f&&(u=i-1),!m.length){for(var v=0;v<i;v++){if(a){var b=s?(a[0]-1)/2:u%a[0],x=s?(a[1]-1)/2:Math.floor(u/a[0]),M=b-v%a[0],w=x-Math.floor(v/a[0]),k=Math.sqrt(M*M+w*w);"x"===o&&(k=-M),"y"===o&&(k=-w),m.push(k)}else m.push(Math.abs(u-v));y=Math.max.apply(Math,m)}t&&(m=m.map(function(n){return t(n/y)*y})),"reverse"===r&&(m=m.map(function(n){return o?n<0?-1*n:-n:Math.abs(y-n)}))}return g+(l?(p-d)/y:d)*(Math.round(100*m[e])/100)+h}},rn.timeline=function(n){void 0===n&&(n={});var r=rn(n);return r.duration=0,r.add=function(t,a){var o=_.indexOf(r),u=r.children;function c(n){n.passThrough=!0}o>-1&&_.splice(o,1);for(var s=0;s<u.length;s++)c(u[s]);var f=k(t,w(e,n));f.targets=f.targets||n.targets;var l=r.duration;f.autoplay=!1,f.direction=r.direction,f.timelineOffset=i.und(a)?l:A(a,l),c(r),r.seek(f.timelineOffset);var d=rn(f);c(d),u.push(d);var p=J(u,n);return r.delay=p.delay,r.endDelay=p.endDelay,r.duration=p.duration,r.seek(0),r.reset(),r.autoplay&&r.play(),r},r},rn.easing=v,rn.penner=h,rn.random=function(n,e){return Math.floor(Math.random()*(e-n+1))+n},rn
+    });
+
+    const tl = anime.timeline({
+      autoplay: true,
+      loop: false,
+      duration: 500,
+      easing: 'easeInOutQuad'
+    })
+
+    tl
+      // introduce mobiles & pātaka
+      .add({ targets: '#mobile-a, #mobile-b, #mobile-c',
+        opacity: [0, 1],
+        delay: anime.stagger(100),
+        duration: 1000
+      }, 1000)
+      .add({ targets: '#pātaka_laptop, #imac-symbol',
+        opacity: [0, 1],
+        delay: anime.stagger(500),
+        duration: 1000
+      }, '+=500')
+
+      // pātaka sends invites to mobiles
+      .add({ targets: ['#arrow-invite-c', '#invite-to-laptop_c',
+                       '#arrow-invite-b', '#invite-to-laptop_b',
+                       '#arrow-invite-a', '#invite-to-laptop_a'],
+        scale: [0, 1],
+        delay: anime.stagger(150)
+      })
+      .add({ targets: '#arrow-invite-a, #arrow-invite-b, #arrow-invite-c',
+        opacity: [1, 0],
+        duration: 300
+      })
+      .add({ targets: '#invite-button',
+        opacity: [0, 1]
+      }, '+=200')
+
+      // focus on mobile-a
+      .add({ targets: '#mobile-a',
+        scale: [1, 2]
+      })
+      .add({ targets: '#mobile-b, #mobile-c',
+        translateX: [0, 100],
+        opacity: [1, 0.5]
+      }, '-=500')
+
+      // mobile-a user chooses to join laptop pātaka
+      .add({ targets: '#invite-button_hover-a',
+        opacity: [0, 1],
+        duration: 300
+      }, '+=500')
+      .add({ targets: '#invite-button_a',
+        keyframes: [
+          { scale: [1, 1.05], duration: 150 },
+          { scale: [1.05, 0.9], delay: 500, duration: 150 },
+          { scale: [0.9, 1], duration: 200 },
+        ],
+        easing: 'linear'
+      }, '-=300')
+      .add({ targets: '#invite-button_hover-a',
+        opacity: [1, 0],
+        duration: 200
+      }, '-=200')
+      .add({ targets: '#invite-button_a',
+        opacity: [1, 0]
+      }, '-=300')
+
+      // mutual follow is indicated (laptop <-> mobile-a)
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        scale: [0, 1],
+        duration: 1000
+      }, '+=10')
+      .add({ targets: '#pātaka-symbol_laptop',
+        opacity: [1, 0],
+        duration: 600
+      })
+      .add({ targets: '#follow-notification_a, #follow-notification_laptop_a, #mobile-icon_onscreen-laptop_a',
+        opacity: [0, 1]
+      }, '+=200')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        opacity: [1, 0],
+        duration: 600
+      }, '+=2000')
+      .add({ targets: '#follow-notification_laptop_a',
+        opacity: [1, 0]
+      }, '+=100')
+      .add({ targets: '#mobile-icon_onscreen-laptop_a',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=500')
+      .add({ targets: '#line_first-follow_laptop',
+        scale: [0, 1],
+        translateX: [10, 10],
+        rotate: [-41.5, -41.5]
+      }, '-=250')
+      .add({ targets: '#mobile-icon-a_follow_laptop',
+        opacity: [0, 1],
+        translateY: [45, 45],
+        translateX: [10, 0]
+      }, '-=300')
+      .add({ targets: '#follow-notification_a',
+        opacity: [1, 0]
+      }, '+=500')
+      .add({ targets: '#laptop-icon_invite-a',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=400')
+      .add({ targets: '#line_a-to-laptop',
+        scale: [0, 1]
+      }, '-=250')
+      .add({ targets: '#laptop-icon_follow_a',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+
+      // switch focus to mobile-b
+      .add({ targets: '#mobile-a',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [0, -100], opacity: [1, 0.5], duration: 500 }
+        ]
+      }, '+=800')
+      .add({ targets: '#mobile-b',
+        translateX: [100, 0],
+        scale: [1, 2],
+        opacity: [0.5, 1]
+      }, '-=500')
+
+      // mobile-b user chooses to join laptop pātaka
+      .add({ targets: '#invite-button_hover-b',
+        opacity: [0, 1],
+        duration: 300
+      }, '+=500')
+      .add({ targets: '#invite-button_b',
+        keyframes: [
+          { scale: [1, 1.05], duration: 150 },
+          { scale: [1.05, 0.9], delay: 500, duration: 150 },
+          { scale: [0.9, 1], duration: 200 },
+        ],
+        easing: 'linear'
+      }, '-=300')
+      .add({ targets: '#invite-button_hover-b',
+        opacity: [1, 0],
+        duration: 200
+      }, '-=200')
+      .add({ targets: '#invite-button_b',
+        opacity: [1, 0]
+      }, '-=300')
+
+      // mutual follow is indicated (laptop <-> mobile-b)
+      .add({ targets: '#line_mutual-follow_laptop_b',
+        scale: [0, 1],
+        duration: 1000
+      }, '+=10')
+      .add({ targets: '#follow-notification_b, #follow-notification_laptop_b, #mobile-icon_onscreen-laptop_b',
+        opacity: [0, 1]
+      }, '+=200')
+      .add({ targets: '#line_mutual-follow_laptop_b',
+        opacity: [1, 0],
+        duration: 600
+      }, '+=2000')
+      .add({ targets: '#follow-notification_laptop_b',
+        opacity: [1, 0]
+      }, '+=100')
+      .add({ targets: '#mobile-icon_onscreen-laptop_b',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=500')
+      .add({ targets: '#line_second-follow_laptop',
+        scale: [0, 1],
+        rotate: [-20, -20]
+      }, '-=250')
+      .add({ targets: '#line_first-follow_laptop',
+        translateX: [10, 5],
+        rotate: [-41.5, -12]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-a_follow_laptop',
+        translateY: [45, 25]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-b_follow_laptop',
+        opacity: [0,1],
+        translateY: [25, 25],
+        translateX: [10, 0]
+      }, '-=500')
+      .add({ targets: '#follow-notification_b',
+        opacity: [1, 0]
+      }, '+=500')
+      .add({ targets: '#laptop-icon_invite-b',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=400')
+      .add({ targets: '#line_b-to-laptop',
+        scale: [0, 1]
+      }, '-=250')
+      .add({ targets: '#laptop-icon_follow_b',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+      .add({ targets: '#line_first-fof_b',
+        rotate: [34, 34],
+        scale: [0, 1]
+      })
+      .add({ targets: '#mobile-icon-a_follow_b',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+
+      // include mobile-a in focus
+      .add({ targets: '#mobile-a',
+        translateX: [-100, -50],
+        scale: [1, 2],
+        opacity: [0.5, 1]
+      }, '+=500')
+
+      // show that mobile-b is now a FoF
+      .add({ targets: '#line_first-fof_a',
+        rotate: [33.8, 33.8],
+        scale: [0, 1]
+      })
+      .add({ targets: '#mobile-icon-b_follow_a',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+
+      // switch focus to mobile-c
+      .add({ targets: '#mobile-a',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [-50, -100], opacity: [1, 0.5], duration: 500 }
+        ]
+      }, '+=800')
+      .add({ targets: '#mobile-b',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [0, -100], opacity: [1, 0.5], duration: 500 }
+        ]
+      }, '-=900')
+      .add({ targets: '#mobile-c',
+        translateX: [100, 0],
+        scale: [1, 2],
+        opacity: [0.5, 1]
+      }, '-=500')
+
+    // ]]>
+  </script>
+</svg>
