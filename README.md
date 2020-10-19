@@ -19,7 +19,7 @@ or adapt these animations. These links will take you right where you want to go:
   - [changing fonts](./Editing-Animations.md#changing-fonts)
   - [editing CSS](./Editing-Animations.md#editing-css)
   - [editing anime.js](./Editing-Animations.md#editing-animejs)
-  - [**Converting an anime.js timeline to CSS**](./Editing-Animations.md#converting-an-animejs-timeline-to-css)
+  - [Converting an anime.js timeline to CSS](./Editing-Animations.md#converting-an-animejs-timeline-to-css)
   - [editing video](./Editing-Animations.md#editing-video)
 - [**How to make videos or GIFs**](Making-Video-or-GIF.md)
   - [recording your screen](./Making-Video-or-GIF.md#recording-your-screen)
