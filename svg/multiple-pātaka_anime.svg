@@ -3,7 +3,7 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 1000 1000"
      width="800px"
-     style="border: 1px solid hsl(0, 0%, 50%); margin: auto; overflow: visible;">
+     style="border: 1px solid hsl(0, 0%, 50%); margin: auto; overflow: hidden;">
 
   <title>Multiple Pātaka</title>
 
@@ -164,6 +164,34 @@
               fill="var(--white)" />
         <use xlink:href="#follow-symbol" y="-3"
              fill="var(--pātaka-color)" stroke="var(--pātaka-color)"/>
+      </g>
+
+      <g id="imac-icon_onscreen"
+         transform="scale(1.3)">
+
+        <defs>
+          <path id="stand-shape-icon"
+                d="M7 14.4 h-14.1 c1.6,-1.5 2.4,-2.3 2.4,-3.8 0,-2.4 -0.8,-2.4 -0.8,-2.4
+                  h11.1 s-0.8 0-0.8 2.4c0 1.6 0.8 2.4 2.3 3.8z"/>
+        </defs>
+
+        <use xlink:href="#stand-shape-icon"
+             fill="var(--devices-color)"/>
+        <path id="stand-lit"
+              fill="var(--mid-grey)"
+              d="M-6.8 14.4c1.4-1.4 1.6-1.7 2.1-2.9 3.2 2.3 6.2 2.3 9.3 0 0.5 1.4 0.6 1.4 2.1 2.9z"/>
+        <use xlink:href="#stand-shape-icon"
+             fill="none" stroke="var(--outline-color)"
+             stroke-linejoin="round" stroke-width=".5"/>
+        <rect x="-20" y="-14.5"
+              width="39.9" height="24.3" rx="1.6" ry="1.6"
+              fill="var(--devices-color)" stroke="var(--outline-color)"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
+        <rect id="imac-screen"
+              x="-19.2" y="-12.8"
+              width="38.3" height="20.4"
+              fill="var(--white)" />
+        <use xlink:href="#stroke-pātaka" y="-3" />
       </g>
 
       <g id="laptop"
@@ -820,15 +848,13 @@
 
   <!-- transform="scale(2) translate(0)" -->
 <!-- transform="scale(1) translate(-220)" -->
-  <g id="pātaka_laptop" opacity="1"
-     transform="scale(2) translate(0)"
+  <g id="pātaka_laptop"
+     transform="scale(1) translate(-280)"
      style="transform-origin: 500px 490px 0px;">
 
     <g id="follow-lines_laptop"
        stroke="var(--mid-grey)"
        stroke-dasharray="2,2">
-       <!-- transform="rotate(12)" -->
-       <!-- transform="rotate(-41) translate(10)" -->
       <line id="line_first-follow_laptop"
             x1="366" y1="360" x2="400" y2="390"
             style="transform-origin: 400px 390px 0px;"/>
@@ -836,46 +862,14 @@
             transform="rotate(24)"
             x1="366" y1="390" x2="400" y2="390"
             style="transform-origin: 400px 390px 0px;"/>
-      <line id="line_third-follow_laptop" opacity="0"
-            transform="rotate(12)"
+      <line id="line_third-follow_laptop"
             x1="368" y1="420" x2="400" y2="390"
             style="transform-origin: 400px 390px 0px;"/>
-      <line id="line_fourth-follow_laptop" opacity="0"
-            x1="366" y1="440" x2="400" y2="390"
+      <line id="line_fourth-follow_laptop"
+            x1="366" y1="436" x2="400" y2="394"
             style="transform-origin: 400px 390px 0px;"/>
     </g>
 
-    <use xlink:href="#laptop"
-         x="500" y="405"
-         fill="var(--devices-color)" stroke="var(--outline-color)"/>
-    <use id="pātaka-symbol_laptop"
-         xlink:href="#pātaka-symbol"
-         x="500" y="385"
-         fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
-
-    <use id="follow-notification_laptop_a"
-         xlink:href="#follow-notification"
-         transform="scale(0.6)"
-         style="transform-origin: 500px 427px 0px;"
-         fill="var(--group-a-outline)" stroke="var(--group-a-color)"
-         x="500" y="427" />
-    <use id="mobile-icon_onscreen-laptop_a"
-         style="transform-origin: 388px 390px 0px;"
-         xlink:href="#mobile-icon_onscreen" x="500" y="385"
-         fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-    <use id="follow-notification_laptop_b"
-         xlink:href="#follow-notification"
-         transform="scale(0.6)"
-         style="transform-origin: 500px 427px 0px;"
-         fill="var(--group-b-outline)" stroke="var(--group-b-color)"
-         x="500" y="427" />
-    <use id="mobile-icon_onscreen-laptop_b"
-         style="transform-origin: 388px 390px 0px;"
-         xlink:href="#mobile-icon_onscreen" x="500" y="385"
-         fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-
-
-   <!-- transform="translate(0,-15)" -->
     <g id="laptop-follow-icons">
       <use id="mobile-icon-a_follow_laptop"
            xlink:href="#mobile-icon" x="368" y="345"
@@ -883,53 +877,145 @@
       <use id="mobile-icon-b_follow_laptop"
            xlink:href="#mobile-icon" x="368" y="375"
            fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-      <use id="mobile-icon-c_follow_laptop" opacity="0"
+      <use id="mobile-icon-c_follow_laptop"
            xlink:href="#mobile-icon" x="368" y="405"
            fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-      <use xlink:href="#imac-icon" opacity="0"
+      <use id="imac-icon_follow_laptop"
+           xlink:href="#imac-icon"
            x="368" y="435" />
+    </g>
+
+    <use xlink:href="#laptop"
+         x="500" y="405"
+         fill="var(--devices-color)" stroke="var(--outline-color)"/>
+
+    <g id="onscreen_laptop">
+      <use id="pātaka-symbol_laptop"
+           xlink:href="#pātaka-symbol"
+           x="500" y="385"
+           fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
+      <use id="follow-notification_laptop_a"
+           xlink:href="#follow-notification"
+           transform="scale(0.6)"
+           style="transform-origin: 500px 427px 0px;"
+           fill="var(--group-a-outline)" stroke="var(--group-a-color)"
+           x="500" y="427" />
+      <use id="mobile-icon_onscreen-laptop_a"
+           style="transform-origin: 388px 390px 0px;"
+           xlink:href="#mobile-icon_onscreen" x="500" y="385"
+           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+      <use id="follow-notification_laptop_b"
+           xlink:href="#follow-notification"
+           transform="scale(0.6)"
+           style="transform-origin: 500px 427px 0px;"
+           fill="var(--group-b-outline)" stroke="var(--group-b-color)"
+           x="500" y="427" />
+      <use id="mobile-icon_onscreen-laptop_b"
+           style="transform-origin: 388px 390px 0px;"
+           xlink:href="#mobile-icon_onscreen" x="500" y="385"
+           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+      <use id="follow-notification_laptop_c"
+           xlink:href="#follow-notification"
+           transform="scale(0.6)"
+           style="transform-origin: 500px 427px 0px;"
+           fill="var(--group-c-outline)" stroke="var(--group-c-color)"
+           x="500" y="427" />
+      <use id="mobile-icon_onscreen-laptop_c"
+           style="transform-origin: 388px 390px 0px;"
+           xlink:href="#mobile-icon_onscreen" x="500" y="385"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+      <use id="follow-notification_laptop_imac"
+           xlink:href="#follow-notification"
+           transform="scale(0.6)"
+           style="transform-origin: 500px 427px 0px;"
+           fill="var(--group-c-outline)" stroke="var(--group-c-color)"
+           x="500" y="427" />
+      <use id="imac-icon_onscreen-laptop"
+           style="transform-origin: 388px 390px 0px;"
+           xlink:href="#imac-icon_onscreen" x="500" y="385"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
     </g>
 
   </g>
 
-  <g id="imac" opacity="0"
+  <g id="pātaka_imac"
+     style="transform-origin: 500px 500px 0px;"
      transform="translate(200)">
+
+    <g id="follow-lines_imac">
+      <use id="line_imac-to-laptop"
+           xlink:href="#mobile-to-first-icon-line"
+           x="700" y="300" style="transform-origin: 700px 300px 0px;"/>
+      <use id="line_first-fof_imac"
+           transform="rotate(-20)"
+           xlink:href="#first-follow-line" x="745" y="300"
+           style="transform-origin: 745px 300px 0px;"/>
+      <use id="line_second-fof_imac"
+           transform="rotate(-33.8)"
+           xlink:href="#second-follow-line" x="745" y="300"
+           style="transform-origin: 745px 300px 0px;"/>
+      <use id="line_third-fof_imac"
+           transform="rotate(0)"
+           xlink:href="#third-follow-line" x="745" y="300"
+           style="transform-origin: 745px 300px 0px;"/>
+    </g>
+
+    <g id="follow-icons_imac">
+      <use id="laptop-icon_follow_imac"
+           style="transform-origin: 296px 704px 0px;"
+           xlink:href="#laptop-icon_follow" x="730" y="300" />
+      <use id="mobile-icon-a_follow_imac"
+           xlink:href="#mobile-follow-mobile" x="775" y="260"
+           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+      <use id="mobile-icon-b_follow_imac"
+           xlink:href="#mobile-follow-mobile" x="775" y="300"
+           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+      <use id="mobile-icon-c_follow_imac"
+           xlink:href="#mobile-follow-mobile" x="775" y="340"
+           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+    </g>
+
     <use xlink:href="#imac"
          x="500" y="350" />
-    <use id="imac-symbol"
+    <use id="pātaka-symbol_imac"
          xlink:href="#pātaka-symbol-large"
          x="500" y="320"
          fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
-    <use id="line_first-fof_imac"
-         transform="rotate(-20)"
-         xlink:href="#first-follow-line" x="745" y="300"
-         style="transform-origin: 745px 300px 0px;"/>
-    <use id="line_second-fof_imac"
-         transform="rotate(-33.8)"
-         xlink:href="#second-follow-line" x="745" y="300"
-         style="transform-origin: 745px 300px 0px;"/>
-    <use id="line_third-fof_imac"
-         transform="rotate(0)"
-         xlink:href="#third-follow-line" x="745" y="300"
-         style="transform-origin: 745px 300px 0px;"/>
-    <use id="laptop-icon_follow_imac"
-         style="transform-origin: 296px 704px 0px;"
-         xlink:href="#laptop-icon_follow" x="730" y="300" />
-    <use id="pātaka-mobile-icon-a_follow_b"
-         xlink:href="#mobile-follow-mobile" x="775" y="260"
-         fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-    <use id="pātaka-mobile-icon-b_follow_b"
-         xlink:href="#mobile-follow-mobile" x="775" y="300"
-         fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-    <use id="pātaka-mobile-icon-c_follow_b"
-         xlink:href="#mobile-follow-mobile" x="775" y="340"
-         fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+
+    <g id="invite-to-pātaka-laptop_imac"
+       style="transform-origin: 250px 350px 0px;">
+
+      <g id="laptop-icon_transform-wrapper"
+         transform="scale(1.8)" style="transform-origin: 500px 310px 0px;">
+        <use id="laptop-icon_invite-imac"
+            transform="scale(1)"
+             xlink:href="#laptop-icon_pātaka" x="500" y="310"
+             style="transform-origin: 612px 306px 0px;"/>
+      </g>
+
+      <g id="invite-button_imac"
+         style="transform-origin: 500px 380px 0px;"
+         transform="scale(1.5)">
+        <use xlink:href="#invite-button" x="500" y="380"/>
+        <use id="invite-button_hover-a"
+             xlink:href="#button_hover" x="500" y="380"/>
+      </g>
+
+    </g>
+
+    <use id="follow-notification_imac"
+         xlink:href="#follow-notification"
+         transform="scale(1.5)"
+         style="transform-origin: 500px 380px 0px;"
+         fill="var(--group-c-outline)" stroke="var(--group-c-color)"
+         x="500" y="380" />
+
   </g>
 
   <g id="pātaka-server" opacity="0">
     <use xlink:href="#servers" x="900" y="350" />
     <use xlink:href="#server-monitor" x="640" y="385" />
-    <use id="imac-symbol"
+    <use id="pātaka-symbol_server"
          xlink:href="#pātaka-symbol-large"
          x="640" y="385"
          fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
@@ -943,7 +1029,7 @@
            x="250" y="750"
            fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
 
-      <g id="invite-to-laptop_a"
+      <g id="invite-to-pātaka-laptop_a"
          style="transform-origin: 295px 690px 0px;">
         <use id="laptop-icon_invite-a"
              xlink:href="#laptop-icon_pātaka" x="250" y="730"
@@ -968,8 +1054,7 @@
       <use id="line_first-fof_a"
            xlink:href="#first-follow-line" x="345" y="700"
            style="transform-origin: 345px 700px 0px;"/>
-      <use id="line_second-fof_a" opacity="0"
-           transform="rotate(-33.8)"
+      <use id="line_second-fof_a"
            xlink:href="#second-follow-line" x="345" y="700"
            style="transform-origin: 345px 700px 0px;"/>
       <use id="line_third-fof_a" opacity="0"
@@ -982,7 +1067,7 @@
       <use id="mobile-icon-b_follow_a"
            xlink:href="#mobile-follow-mobile" x="375" y="700"
            fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-      <use id="mobile-icon-c_follow_a" opacity="0"
+      <use id="mobile-icon-c_follow_a"
            xlink:href="#mobile-follow-mobile" x="375" y="720"
            fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
 
@@ -1006,7 +1091,7 @@
            x="500" y="750"
            fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
 
-      <g id="invite-to-laptop_b"
+      <g id="invite-to-pātaka-laptop_b"
         style="transform-origin: 500px 665px 0px;">
         <use id="laptop-icon_invite-b"
              style="transform-origin: 544px 700px 0px;"
@@ -1027,9 +1112,12 @@
       <use id="line_b-to-laptop"
            xlink:href="#mobile-to-first-icon-line"
            x="547" y="700" style="transform-origin: 547px 700px 0px;"/>
-<!-- transform="rotate(-20)" -->
+      <!-- transform="rotate(-20)" -->
       <use id="line_first-fof_b"
            xlink:href="#first-follow-line" x="595" y="700"
+           style="transform-origin: 595px 700px 0px;"/>
+      <use id="line_second-fof_b"
+           xlink:href="#second-follow-line" x="595" y="700"
            style="transform-origin: 595px 700px 0px;"/>
       <use id="follow-lines_b" opacity="0"
            xlink:href="#twin-follow-lines" x="595" y="700"
@@ -1046,25 +1134,40 @@
     </g>
 
     <!-- transform="scale(1) translate(50)" -->
-    <g id="mobile-c"
+    <g id="mobile-c" transform="scale(1)"
        style="transform-origin: 796px 704px 0px;">
       <use xlink:href="#mobile"
            x="750" y="750"
            fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
 
-      <g id="invite-to-laptop_c"
+      <g id="invite-to-pātaka-laptop_c"
          style="transform-origin: 705px 690px 0px;">
-        <use xlink:href="#laptop-icon_pātaka" x="750" y="730"/>
-        <use xlink:href="#invite-button" x="750" y="780"/>
+        <use id="laptop-icon_invite-c"
+             style="transform-origin: 795px 690px 0px;" xlink:href="#laptop-icon_pātaka" x="750" y="730"/>
+
+        <g id="invite-button_c"
+           style="transform-origin: 750px 780px 0px;">
+          <use xlink:href="#invite-button" x="750" y="780"/>
+          <use id="invite-button_hover-c"
+              xlink:href="#button_hover" x="750" y="780"/>
+        </g>
+
       </g>
 
+      <use id="follow-notification_c"
+           fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
+           style="transform-origin: 750px 780px 0px;"
+           xlink:href="#follow-notification" x="750" y="780"/>
       <use id="line_c-to-laptop"
            xlink:href="#mobile-to-first-icon-line"
            x="797" y="700" style="transform-origin: 797px 700px 0px;"/>
-      <use id="follow-lines_c"
-           xlink:href="#twin-follow-lines" x="845" y="700"
+      <use id="line_first-fof_c"
+           xlink:href="#first-follow-line" x="845" y="700"
            style="transform-origin: 845px 700px 0px;"/>
-      <use id="laptop_follow_c"
+      <use id="line_second-fof_c"
+           xlink:href="#second-follow-line" x="845" y="700"
+           style="transform-origin: 845px 700px 0px;"/>
+      <use id="laptop-icon_follow_c"
            style="transform-origin: 796px 704px 0px;"
            xlink:href="#laptop-icon_follow" x="830" y="700"/>
       <use id="mobile-icon-a_follow_c"
@@ -1135,22 +1238,22 @@
 
     <g id="arrows-invites"
        stroke="var(--mid-grey)">
-      <path id="arrow-invite-a"
+      <path id="arrow-invite_a"
             marker-end="url(#marker-d)"
             style="transform-origin:431px 500px 0px;"
             d="M 431,500 305,675"/>
-      <path id="arrow-invite-b"
+      <path id="arrow-invite_b"
             marker-end="url(#marker-d)"
             style="transform-origin:500px 500px 0px;"
             d="M 500,500 500,645"/>
-      <path id="arrow-invite-c"
+      <path id="arrow-invite_c"
             marker-end="url(#marker-d)"
             style="transform-origin:569px 500px 0px;"
             d="M 569,500 695,675"/>
-      <path id="arrow-accept-a" opacity="0"
-           style="transform-origin: 312px 640px 0px;"
-           marker-end="url(#marker-d)"
-           d="M 312,640 429,512"/>
+      <path id="arrow-invite_imac"
+            marker-end="url(#marker-d)"
+            style="transform-origin: 338px 380px 0px;"
+            d="M 338,380 490,355"/>
     </g>
 
     <g id="follow-lines"
@@ -1158,18 +1261,18 @@
        stroke-width="4" stroke-dasharray="8,8"
        marker-start="url(#marker-e)"
        marker-end="url(#marker-f)">
-       <path id="line_mutual-follow_laptop_a"
-             style="transform-origin: 375px 577.5px 0px;"
-             d="M 429,512 312,640"/>
-       <path id="line_mutual-follow_laptop_b"
-             style="transform-origin: 500px 556px 0px;"
-             d="M 500,516 500,586"/>
-       <line id="laptop-mobile-c-follow-line"
-             opacity="0"
-             x1="500" y1="405" x2="750" y2="750"/>
-       <line id="laptop-mobile-c-follow-line"
-             opacity="0"
-             x1="280" y1="405" x2="700" y2="350"/>
+      <path id="line_mutual-follow_laptop_a"
+            style="transform-origin: 346px 552px 0px;"
+            d="M 380,512 312,592"/>
+      <path id="line_mutual-follow_laptop_b"
+            style="transform-origin: 500px 556px 0px;"
+            d="M 500,516 500,586"/>
+      <path id="line_mutual-follow_laptop_c"
+            style="transform-origin: 609.5px 551px 0px;"
+            d="M 585,512 634,590"/>
+      <path id="line_mutual-follow_laptop_imac"
+            style="transform-origin: 415.5px 367.5px 0px;"
+            d="M 351,378 480,357"/>
     </g>
 
     <g id="refresh-android" opacity="0"
@@ -1299,7 +1402,7 @@
     });
 
     const tl = anime.timeline({
-      autoplay: true,
+      autoplay: false,
       loop: false,
       duration: 500,
       easing: 'easeInOutQuad'
@@ -1312,20 +1415,20 @@
         delay: anime.stagger(100),
         duration: 1000
       }, 1000)
-      .add({ targets: '#pātaka_laptop, #imac-symbol',
+      .add({ targets: '#pātaka_laptop, #pātaka-symbol_laptop',
         opacity: [0, 1],
         delay: anime.stagger(500),
         duration: 1000
       }, '+=500')
 
       // pātaka sends invites to mobiles
-      .add({ targets: ['#arrow-invite-c', '#invite-to-laptop_c',
-                       '#arrow-invite-b', '#invite-to-laptop_b',
-                       '#arrow-invite-a', '#invite-to-laptop_a'],
+      .add({ targets: ['#arrow-invite_c', '#invite-to-pātaka-laptop_c',
+                       '#arrow-invite_b', '#invite-to-pātaka-laptop_b',
+                       '#arrow-invite_a', '#invite-to-pātaka-laptop_a'],
         scale: [0, 1],
-        delay: anime.stagger(150)
+        delay: anime.stagger(250)
       })
-      .add({ targets: '#arrow-invite-a, #arrow-invite-b, #arrow-invite-c',
+      .add({ targets: '#arrow-invite_a, #arrow-invite_b, #arrow-invite_c',
         opacity: [1, 0],
         duration: 300
       })
@@ -1337,7 +1440,11 @@
       .add({ targets: '#mobile-a',
         scale: [1, 2]
       })
-      .add({ targets: '#mobile-b, #mobile-c',
+      .add({ targets: '#mobile-b',
+        translateX: [0, 75],
+        opacity: [1, 0.5]
+      }, '-=500')
+      .add({ targets: '#mobile-c',
         translateX: [0, 100],
         opacity: [1, 0.5]
       }, '-=500')
@@ -1419,7 +1526,7 @@
         ]
       }, '+=800')
       .add({ targets: '#mobile-b',
-        translateX: [100, 0],
+        translateX: [75, 0],
         scale: [1, 2],
         opacity: [0.5, 1]
       }, '-=500')
@@ -1477,7 +1584,7 @@
       }, '-=500')
       .add({ targets: '#mobile-icon-b_follow_laptop',
         opacity: [0,1],
-        translateY: [25, 25],
+        translateY: [21, 25],
         translateX: [10, 0]
       }, '-=500')
       .add({ targets: '#follow-notification_b',
@@ -1530,7 +1637,7 @@
       .add({ targets: '#mobile-b',
         keyframes: [
           { scale: [2, 1], duration: 400 },
-          { translateX: [0, -100], opacity: [1, 0.5], duration: 500 }
+          { translateX: [0, -75], opacity: [1, 0.5], duration: 500 }
         ]
       }, '-=900')
       .add({ targets: '#mobile-c',
@@ -1538,6 +1645,302 @@
         scale: [1, 2],
         opacity: [0.5, 1]
       }, '-=500')
+
+      // mobile-c user chooses to join laptop pātaka
+      .add({ targets: '#invite-button_hover-c',
+        opacity: [0, 1],
+        duration: 300
+      }, '+=500')
+      .add({ targets: '#invite-button_c',
+        keyframes: [
+          { scale: [1, 1.05], duration: 150 },
+          { scale: [1.05, 0.9], delay: 500, duration: 150 },
+          { scale: [0.9, 1], duration: 200 },
+        ],
+        easing: 'linear'
+      }, '-=300')
+      .add({ targets: '#invite-button_hover-c',
+        opacity: [1, 0],
+        duration: 200
+      }, '-=200')
+      .add({ targets: '#invite-button_c',
+        opacity: [1, 0]
+      }, '-=300')
+
+      // mutual follow is indicated (laptop <-> mobile-b)
+      .add({ targets: '#line_mutual-follow_laptop_c',
+        scale: [0, 1],
+        duration: 1000
+      }, '+=10')
+      .add({ targets: '#follow-notification_c, #follow-notification_laptop_c, #mobile-icon_onscreen-laptop_c',
+        opacity: [0, 1]
+      }, '+=200')
+      .add({ targets: '#line_mutual-follow_laptop_c',
+        opacity: [1, 0],
+        duration: 600
+      }, '+=2000')
+      .add({ targets: '#follow-notification_laptop_c',
+        opacity: [1, 0]
+      }, '+=100')
+      .add({ targets: '#mobile-icon_onscreen-laptop_c',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=500')
+      .add({ targets: '#line_third-follow_laptop',
+        scale: [0, 1]
+      }, '-=250')
+      .add({ targets: '#line_first-follow_laptop',
+        translateX: [5, 0],
+        rotate: [-12, 0]
+      }, '-=500')
+      .add({ targets: '#line_second-follow_laptop',
+        translateX: [5, 0],
+        rotate: [-20, 0]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-a_follow_laptop',
+        translateY: [25, 15]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-b_follow_laptop',
+        translateY: [25, 15]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-c_follow_laptop',
+        opacity: [0, 1],
+        translateY: [8, 15],
+        translateX: [10, 0]
+      }, '-=500')
+      .add({ targets: '#follow-notification_c',
+        opacity: [1, 0]
+      }, '+=500')
+      .add({ targets: '#laptop-icon_invite-c',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=400')
+      .add({ targets: '#line_c-to-laptop',
+        scale: [0, 1]
+      }, '-=250')
+      .add({ targets: '#laptop-icon_follow_c',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+      .add({ targets: '#line_first-fof_c, #line_second-fof_c',
+        scale: [0, 1]
+      })
+      .add({ targets: '#mobile-icon-a_follow_c',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        translateY: [5, 0]
+      }, '-=300')
+      .add({ targets: '#mobile-icon-b_follow_c',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        translateY: [-5, 0]
+      }, '-=500')
+
+      // switch focus to mobile-a
+      .add({ targets: '#mobile-c',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [0, 50], opacity: [1, 0.5], duration: 500 }
+        ]
+      }, '+=1800')
+      .add({ targets: '#mobile-b',
+        translateX: [-75, 0],
+      }, '-=500')
+      .add({ targets: '#mobile-a',
+        translateX: [-100, -50],
+        scale: [1, 2],
+        opacity: [0.5, 1]
+      }, '-=500')
+
+      // show that mobile-c is now a FoF
+      .add({ targets: '#line_first-fof_a',
+        rotate: [33.8, 0]
+      })
+      .add({ targets: '#line_second-fof_a',
+        scale: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-b_follow_a',
+        translateY: [0, -20]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-c_follow_a',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        translateY: [-5, 0]
+      }, '-=300')
+
+      // switch focus to mobile-b
+      .add({ targets: '#mobile-a',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [-50, -100], opacity: [1, 0.5], duration: 500 }
+        ]
+      }, '+=500')
+      .add({ targets: '#mobile-b',
+        translateX: [0, -25],
+        scale: [1, 2],
+        opacity: [0.5, 1]
+      }, '-=500')
+
+      // show that mobile-c is now a FoF
+      .add({ targets: '#line_first-fof_b',
+        rotate: [33.8, 0],
+      })
+      .add({ targets: '#line_second-fof_b',
+        scale: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-a_follow_b',
+        translateY: [0, -20]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-c_follow_b',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        translateY: [-5, 0]
+      }, '-=300')
+      .add({ targets: '#mobile-b',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { opacity: [1, 0.5], duration: 500 }
+        ]
+      }, '+=800')
+
+      // shift laptop, introduce imac
+      .add({ targets: '#pātaka-symbol_laptop',
+        opacity: [0, 1]
+      }, '+=200')
+      .add({ targets: '#pātaka_laptop',
+        scale: [2, 1],
+        translateX: [0, -280],
+        duration: 800
+      }, '+=600')
+      .add({ targets: '#pātaka_imac, #pātaka-symbol_imac',
+        opacity: [0, 1],
+        delay: anime.stagger(500),
+        duration: 1000
+      }, '-=400')
+
+      // pātaka_laptop sends invites to pātaka_imac
+      .add({ targets: ['#arrow-invite_imac', '#invite-to-pātaka-laptop_imac'],
+        scale: [0,1],
+        delay: anime.stagger(300)
+      }, '+=500')
+      .add({ targets: '#pātaka-symbol_imac',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=750')
+      .add({ targets: '#arrow-invite_imac',
+        opacity: [1, 0],
+        duration: 300
+      })
+      .add({ targets: '#invite-button_imac',
+        opacity: [0, 1]
+      }, '+=200')
+
+      // imac user chooses to join laptop pātaka
+      .add({ targets: '#invite-button_hover-imac',
+        opacity: [0, 1],
+        duration: 300
+      }, '+=500')
+      .add({ targets: '#invite-button_imac',
+        keyframes: [
+          { scale: [1.5, 1.55], duration: 150 },
+          { scale: [1.55, 1.35], delay: 500, duration: 150 },
+          { scale: [1.35, 1.5], duration: 200 },
+        ],
+        easing: 'linear'
+      }, '-=300')
+      .add({ targets: '#invite-button_hover-imac',
+        opacity: [1, 0],
+        duration: 200
+      }, '-=200')
+      .add({ targets: '#invite-button_imac',
+        opacity: [1, 0]
+      }, '-=300')
+
+      // mutual follow is indicated (laptop <-> imac)
+      .add({ targets: '#line_mutual-follow_laptop_imac',
+        scale: [0, 1],
+        duration: 1000
+      }, '+=10')
+      .add({ targets: '#follow-notification_imac, #follow-notification_laptop_imac, #imac-icon_onscreen-laptop',
+        opacity: [0, 1]
+      }, '+=200')
+      .add({ targets: '#pātaka-symbol_laptop',
+        opacity: [1, 0],
+        duration: 300
+      }, '-=600')
+      .add({ targets: '#line_mutual-follow_laptop_imac',
+        opacity: [1, 0],
+        duration: 600
+      }, '+=2000')
+      .add({ targets: '#follow-notification_laptop_imac',
+        opacity: [1, 0]
+      }, '+=100')
+      .add({ targets: '#imac-icon_onscreen-laptop',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=500')
+      .add({ targets: '#line_fourth-follow_laptop',
+        scale: [0, 1],
+      }, '-=250')
+      .add({ targets: '#line_first-follow_laptop',
+        rotate: [0, 12],
+        translateY: [0, -2]
+      }, '-=500')
+      .add({ targets: '#line_second-follow_laptop',
+        rotate: [0, 24]
+      }, '-=500')
+      .add({ targets: '#line_third-follow_laptop',
+        rotate: [0, 20],
+        translateX: [0, 5]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-a_follow_laptop, #mobile-icon-b_follow_laptop, #mobile-icon-c_follow_laptop',
+        translateY: [15, 0]
+      }, '-=500')
+      .add({ targets: '#imac-icon_follow_laptop',
+        opacity: [0,1],
+        translateY: [-8, 0],
+        translateX: [10, 0]
+      }, '-=500')
+      .add({ targets: '#follow-notification_imac',
+        opacity: [1, 0]
+      }, '+=500')
+      .add({ targets: '#laptop-icon_invite-imac',
+        scale: [1, 0],
+        opacity: [1, 0]
+      }, '-=400')
+      .add({ targets: '#line_imac-to-laptop',
+        scale: [0, 1]
+      }, '-=250')
+      .add({ targets: '#laptop-icon_follow_imac',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+      .add({ targets: '#line_first-fof_imac',
+        scale: [0, 1],
+        rotate: [-20, -20]
+      })
+      .add({ targets: '#line_second-fof_imac',
+        scale: [0, 1],
+        rotate: [-33.4, -33.4]
+      }, '-=500')
+      .add({ targets: '#line_third-fof_imac',
+        scale: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-a_follow_imac, #mobile-icon-b_follow_imac, #mobile-icon-c_follow_imac',
+        opacity: [0, 1],
+        translateX: [-10, 0]
+      }, '-=300')
+
+      // switch focus to mobiles
+      .add({ targets: '#pātaka_imac, #pātaka_laptop',
+        opacity: [1, 0.5]
+      }, '+=500')
+      .add({ targets: '#mobile-a, #mobile-b, #mobile-c',
+        opacity: [0.5, 1],
+        scale: [1, 1.25]
+      }, '-=250')
+    tl.seek(50000)
+    tl.play()
 
     // ]]>
   </script>
