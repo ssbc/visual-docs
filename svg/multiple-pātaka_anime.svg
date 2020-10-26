@@ -3,7 +3,7 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 1000 1000"
      width="800px"
-     style="border: 1px solid hsl(0, 0%, 50%); margin: auto; overflow: hidden;">
+     style="border: 1px solid hsl(0, 0%, 50%); margin: auto;">
 
   <title>Multiple Pātaka</title>
 
@@ -651,23 +651,19 @@
             d="m-26,2 h4v-4h4v-4h4v-4h4v-4h4v-4h4v-8h4v8h4v4h4v4h4v4h4v4h4v4h4v4h-8v8h4v4h-8v8h-4v-8h-20v8h-4v-8h-8v-4h4v-8h-8z
            m12,-4v16h28v-16h-4v-4h-4v-4h-4v-4h-4v4h-4v4h-4v4z"/>
       <polyline id="mobile-to-first-icon-line"
-                stroke="var(--mid-grey)" stroke-dasharray="2,2"
+                stroke="var(--encrypted-color)" stroke-width="1.5" stroke-dasharray="3,3"
                 points="0,0 14,0"/>
-      <polyline id="twin-follow-lines"
-                fill="none" stroke="var(--mid-grey)"
-                stroke-dasharray="2,2"
-                points="30,-20 0,0 30,20"/>
       <polyline id="first-follow-line"
-                fill="none" stroke="var(--mid-grey)"
-                stroke-dasharray="2,2"
+                fill="none" stroke="var(--encrypted-color)" stroke-width="1.5"
+                stroke-dasharray="3,3"
                 points="30,-20 0,0"/>
       <polyline id="second-follow-line"
-                fill="none" stroke="var(--mid-grey)"
-                stroke-dasharray="2,2"
+                fill="none" stroke="var(--encrypted-color)" stroke-width="1.5"
+                stroke-dasharray="3,3"
                 points="0,0 30,20"/>
       <polyline id="third-follow-line"
-                fill="none" stroke="var(--mid-grey)"
-                stroke-dasharray="2,2"
+                fill="none" stroke="var(--encrypted-color)" stroke-width="1.5"
+                stroke-dasharray="3,3"
                 points="0,0 28,38"/>
     </g>
 
@@ -836,6 +832,55 @@
 
   </defs>
 
+  <g id="follow-lines"
+     stroke="var(--mid-light-grey)"
+     stroke-width="4" stroke-dasharray="8,8"
+     marker-start="url(#marker-e)"
+     marker-end="url(#marker-f)">
+    <path id="line_mutual-follow_laptop_a"
+          style="transform-origin: 346px 552px 0px;"
+          d="M 420,460 250,720"/>
+    <path id="line_mutual-follow_laptop_b"
+          style="transform-origin: 500px 556px 0px;"
+          d="M 500,400 500,720"/>
+    <path id="line_mutual-follow_laptop_c"
+          style="transform-origin: 609.5px 551px 0px;"
+          d="M 420,220 810,720"/>
+    <path id="line_mutual-follow_laptop_imac"
+          style="transform-origin: 415.5px 367.5px 0px;"
+          d="M 256,400 554,340"/>
+  </g>
+
+  <g id="line-masks"
+     fill="#aaa" stroke="#aaa" >
+    <rect id="mask-copy_mobile-a"
+          width="92" height="188" x="204" y="656" ry="9.6"
+          stroke-width="2"
+          style="transform-origin: 296px 704px 0px;"/>
+    <rect id="mask-copy_mobile-b"
+          width="92" height="188" x="454" y="656" ry="9.6"
+          stroke-width="2"
+          style="transform-origin: 500px 704px 0px;"/>
+    <rect id="mask-copy_mobile-c"
+          width="92" height="188" x="704" y="656" ry="9.6"
+          stroke-width="2"
+          style="transform-origin: 796px 704px 0px;"/>
+    <path id="mask-copy_laptop"
+          stroke-width="3"
+          style="transform-origin: 500px 490px 0px;"
+          d="m 608,454 h -216 m -34.5,27.78 33,-26.28 v -132 c 0,-0.9 0.54,-1.5 1.5,-1.5 h 216 c 0.9,0 1.5,0.54 1.5,1.5 v 132 l 33,26.22 v 8.28 h -285 z"/>
+
+    <g id="mask-copy_imac"
+       style="transform-origin: 500px 500px 0px;"
+       transform="translate(200)">
+      <path d="M570 494.6 h-140.5 c15.7,-14.6 23.6,-22.5 23.6,-38.3 0,-23.6 -7.9,-23.6 -7.9,-23.6 h110.61 s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+      <rect x="300.5" y="205.4"
+            width="398.9" height="243.1" rx="15.7" ry="15.8"
+            stroke-width=".5" />
+    </g>
+
+  </g>
+
   <g id="pātaka-pi" opacity="0">
     <use xlink:href="#pi-screen"
          x="100" y="420" />
@@ -846,15 +891,13 @@
          x="100" y="420" />
   </g>
 
-  <!-- transform="scale(2) translate(0)" -->
-<!-- transform="scale(1) translate(-220)" -->
   <g id="pātaka_laptop"
-     transform="scale(1) translate(-280)"
+     transform="scale(2) translate(0)"
      style="transform-origin: 500px 490px 0px;">
 
     <g id="follow-lines_laptop"
-       stroke="var(--mid-grey)"
-       stroke-dasharray="2,2">
+       stroke="var(--encrypted-color)"
+       stroke-width="1.5" stroke-dasharray="3,3">
       <line id="line_first-follow_laptop"
             x1="366" y1="360" x2="400" y2="390"
             style="transform-origin: 400px 390px 0px;"/>
@@ -942,37 +985,41 @@
      style="transform-origin: 500px 500px 0px;"
      transform="translate(200)">
 
-    <g id="follow-lines_imac">
-      <use id="line_imac-to-laptop"
-           xlink:href="#mobile-to-first-icon-line"
-           x="700" y="300" style="transform-origin: 700px 300px 0px;"/>
-      <use id="line_first-fof_imac"
-           transform="rotate(-20)"
-           xlink:href="#first-follow-line" x="745" y="300"
-           style="transform-origin: 745px 300px 0px;"/>
-      <use id="line_second-fof_imac"
-           transform="rotate(-33.8)"
-           xlink:href="#second-follow-line" x="745" y="300"
-           style="transform-origin: 745px 300px 0px;"/>
-      <use id="line_third-fof_imac"
-           transform="rotate(0)"
-           xlink:href="#third-follow-line" x="745" y="300"
-           style="transform-origin: 745px 300px 0px;"/>
-    </g>
+    <g id="follow-map_imac">
 
-    <g id="follow-icons_imac">
-      <use id="laptop-icon_follow_imac"
-           style="transform-origin: 296px 704px 0px;"
-           xlink:href="#laptop-icon_follow" x="730" y="300" />
-      <use id="mobile-icon-a_follow_imac"
-           xlink:href="#mobile-follow-mobile" x="775" y="260"
-           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-      <use id="mobile-icon-b_follow_imac"
-           xlink:href="#mobile-follow-mobile" x="775" y="300"
-           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-      <use id="mobile-icon-c_follow_imac"
-           xlink:href="#mobile-follow-mobile" x="775" y="340"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+      <g id="follow-lines_imac">
+        <use id="line_imac-to-laptop"
+             xlink:href="#mobile-to-first-icon-line"
+             x="700" y="300" style="transform-origin: 700px 300px 0px;"/>
+        <use id="line_first-fof_imac"
+             transform="rotate(-20)"
+             xlink:href="#first-follow-line" x="745" y="300"
+             style="transform-origin: 745px 300px 0px;"/>
+        <use id="line_second-fof_imac"
+             transform="rotate(-33.8)"
+             xlink:href="#second-follow-line" x="745" y="300"
+             style="transform-origin: 745px 300px 0px;"/>
+        <use id="line_third-fof_imac"
+             transform="rotate(0)"
+             xlink:href="#third-follow-line" x="745" y="300"
+             style="transform-origin: 745px 300px 0px;"/>
+      </g>
+
+      <g id="follow-icons_imac">
+        <use id="laptop-icon_follow_imac"
+             style="transform-origin: 296px 704px 0px;"
+             xlink:href="#laptop-icon_follow" x="730" y="300" />
+        <use id="mobile-icon-a_follow_imac"
+             xlink:href="#mobile-follow-mobile" x="775" y="260"
+             fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+        <use id="mobile-icon-b_follow_imac"
+             xlink:href="#mobile-follow-mobile" x="775" y="300"
+             fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+        <use id="mobile-icon-c_follow_imac"
+             xlink:href="#mobile-follow-mobile" x="775" y="340"
+             fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+      </g>
+
     </g>
 
     <use xlink:href="#imac"
@@ -1048,28 +1095,34 @@
            fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
            style="transform-origin: 250px 780px 0px;"
            xlink:href="#follow-notification" x="250" y="780"/>
-      <use id="line_a-to-laptop"
-           xlink:href="#mobile-to-first-icon-line"
-           x="297" y="700" style="transform-origin: 297px 700px 0px;"/>
-      <use id="line_first-fof_a"
-           xlink:href="#first-follow-line" x="345" y="700"
-           style="transform-origin: 345px 700px 0px;"/>
-      <use id="line_second-fof_a"
-           xlink:href="#second-follow-line" x="345" y="700"
-           style="transform-origin: 345px 700px 0px;"/>
-      <use id="line_third-fof_a" opacity="0"
-           transform="rotate(0)"
-           xlink:href="#third-follow-line" x="345" y="700"
-           style="transform-origin: 345px 700px 0px;"/>
-      <use id="laptop-icon_follow_a"
-           style="transform-origin: 296px 704px 0px;"
-           xlink:href="#laptop-icon_follow" x="330" y="700" />
-      <use id="mobile-icon-b_follow_a"
-           xlink:href="#mobile-follow-mobile" x="375" y="700"
-           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-      <use id="mobile-icon-c_follow_a"
-           xlink:href="#mobile-follow-mobile" x="375" y="720"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+
+      <g id="follow-map_mobile-a">
+        <use id="line_a-to-laptop"
+             xlink:href="#mobile-to-first-icon-line"
+             x="297" y="700" style="transform-origin: 297px 700px 0px;"/>
+        <use id="line_first-fof_a"
+             xlink:href="#first-follow-line" x="345" y="700"
+             style="transform-origin: 345px 700px 0px;"/>
+        <use id="line_second-fof_a"
+             xlink:href="#second-follow-line" x="345" y="700"
+             style="transform-origin: 345px 700px 0px;"/>
+        <use id="line_third-fof_a"
+             xlink:href="#third-follow-line" x="345" y="698"
+             style="transform-origin: 345px 698px 0px;"/>
+        <use id="laptop-icon_follow_a"
+             style="transform-origin: 296px 704px 0px;"
+             xlink:href="#laptop-icon_follow" x="330" y="700" />
+        <use id="mobile-icon-b_follow_a"
+             xlink:href="#mobile-follow-mobile" x="375" y="700"
+             fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+        <use id="mobile-icon-c_follow_a"
+             xlink:href="#mobile-follow-mobile" x="375" y="720"
+             fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+        <use id="imac-icon_a"
+             xlink:href="#imac-icon" x="375" y="735"
+             style="transform-origin: 375px 735px 0px;"
+             transform="scale(1.3)"/>
+      </g>
 
       <g id="whakapapa-records-a" opacity="0">
         <circle id="copy_kuia-a"
@@ -1084,7 +1137,6 @@
 
     </g>
 
-    <!-- transform="scale(1) translate(100)" -->
     <g id="mobile-b"
        style="transform-origin: 500px 704px 0px;">
       <use xlink:href="#mobile"
@@ -1109,32 +1161,38 @@
            fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
            style="transform-origin: 500px 780px 0px;"
            xlink:href="#follow-notification" x="500" y="780"/>
-      <use id="line_b-to-laptop"
-           xlink:href="#mobile-to-first-icon-line"
-           x="547" y="700" style="transform-origin: 547px 700px 0px;"/>
-      <!-- transform="rotate(-20)" -->
-      <use id="line_first-fof_b"
-           xlink:href="#first-follow-line" x="595" y="700"
-           style="transform-origin: 595px 700px 0px;"/>
-      <use id="line_second-fof_b"
-           xlink:href="#second-follow-line" x="595" y="700"
-           style="transform-origin: 595px 700px 0px;"/>
-      <use id="follow-lines_b" opacity="0"
-           xlink:href="#twin-follow-lines" x="595" y="700"
-           style="transform-origin: 595px 700px 0px;"/>
-      <use id="laptop-icon_follow_b"
-           style="transform-origin: 546px 704px 0px;"
-           xlink:href="#laptop-icon_follow" x="580" y="700" />
-      <use id="mobile-icon-a_follow_b"
-           xlink:href="#mobile-follow-mobile" x="625" y="700"
-           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-      <use id="mobile-icon-c_follow_b" opacity="0"
-           xlink:href="#mobile-follow-mobile" x="625" y="720"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+
+      <g id="follow-map_mobile-b">
+        <use id="line_b-to-laptop"
+             xlink:href="#mobile-to-first-icon-line"
+             x="547" y="700" style="transform-origin: 547px 700px 0px;"/>
+        <use id="line_first-fof_b"
+             xlink:href="#first-follow-line" x="595" y="700"
+             style="transform-origin: 595px 700px 0px;"/>
+        <use id="line_second-fof_b"
+             xlink:href="#second-follow-line" x="595" y="700"
+             style="transform-origin: 595px 700px 0px;"/>
+        <use id="line_third-fof_b"
+             xlink:href="#third-follow-line" x="595" y="698"
+             style="transform-origin: 595px 698px 0px;"/>
+        <use id="laptop-icon_follow_b"
+             style="transform-origin: 546px 704px 0px;"
+             xlink:href="#laptop-icon_follow" x="580" y="700" />
+        <use id="mobile-icon-a_follow_b"
+             xlink:href="#mobile-follow-mobile" x="625" y="700"
+             fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+        <use id="mobile-icon-c_follow_b"
+             xlink:href="#mobile-follow-mobile" x="625" y="720"
+             fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+        <use id="imac-icon_b"
+             xlink:href="#imac-icon" x="625" y="735"
+             style="transform-origin: 625px 735px 0px;"
+             transform="scale(1.3)"/>
+      </g>
+
     </g>
 
-    <!-- transform="scale(1) translate(50)" -->
-    <g id="mobile-c" transform="scale(1)"
+    <g id="mobile-c"
        style="transform-origin: 796px 704px 0px;">
       <use xlink:href="#mobile"
            x="750" y="750"
@@ -1158,24 +1216,35 @@
            fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
            style="transform-origin: 750px 780px 0px;"
            xlink:href="#follow-notification" x="750" y="780"/>
-      <use id="line_c-to-laptop"
-           xlink:href="#mobile-to-first-icon-line"
-           x="797" y="700" style="transform-origin: 797px 700px 0px;"/>
-      <use id="line_first-fof_c"
-           xlink:href="#first-follow-line" x="845" y="700"
-           style="transform-origin: 845px 700px 0px;"/>
-      <use id="line_second-fof_c"
-           xlink:href="#second-follow-line" x="845" y="700"
-           style="transform-origin: 845px 700px 0px;"/>
-      <use id="laptop-icon_follow_c"
-           style="transform-origin: 796px 704px 0px;"
-           xlink:href="#laptop-icon_follow" x="830" y="700"/>
-      <use id="mobile-icon-a_follow_c"
-           xlink:href="#mobile-follow-mobile" x="875" y="680"
-           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-      <use id="mobile-icon-b_follow_c"
-           xlink:href="#mobile-follow-mobile" x="875" y="720"
-           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+
+      <g id="follow-map_mobile-c">
+        <use id="line_c-to-laptop"
+             xlink:href="#mobile-to-first-icon-line"
+             x="797" y="700" style="transform-origin: 797px 700px 0px;"/>
+        <use id="line_first-fof_c"
+             xlink:href="#first-follow-line" x="845" y="700"
+             style="transform-origin: 845px 700px 0px;"/>
+        <use id="line_second-fof_c"
+             xlink:href="#second-follow-line" x="845" y="700"
+             style="transform-origin: 845px 700px 0px;"/>
+        <use id="line_third-fof_c"
+             xlink:href="#third-follow-line" x="845" y="698"
+             style="transform-origin: 845px 698px 0px;"/>
+        <use id="laptop-icon_follow_c"
+             style="transform-origin: 796px 704px 0px;"
+             xlink:href="#laptop-icon_follow" x="830" y="700"/>
+        <use id="mobile-icon-a_follow_c"
+             xlink:href="#mobile-follow-mobile" x="875" y="700"
+             fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+        <use id="mobile-icon-b_follow_c"
+             xlink:href="#mobile-follow-mobile" x="875" y="720"
+             fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
+        <use id="imac-icon_c"
+             xlink:href="#imac-icon" x="875" y="735"
+             style="transform-origin: 875px 735px 0px;"
+             transform="scale(1.3)"/>
+      </g>
+
     </g>
 
   </g>
@@ -1224,13 +1293,13 @@
 
       <marker id="marker-e"
              orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="none" stroke="var(--mid-grey)"
+        <path fill="none" stroke="var(--mid-light-grey)"
               d="M2,-4 L-4,0 2,4"/>
       </marker>
 
       <marker id="marker-f"
              orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="none" stroke="var(--mid-grey)"
+        <path fill="none" stroke="var(--mid-light-grey)"
               d="M-2,-4 L4,0 -2,4"/>
       </marker>
 
@@ -1242,7 +1311,7 @@
             marker-end="url(#marker-d)"
             style="transform-origin:431px 500px 0px;"
             d="M 431,500 305,675"/>
-      <path id="arrow-invite_b"
+      <path id="arrow-invite_b" opacity="0"
             marker-end="url(#marker-d)"
             style="transform-origin:500px 500px 0px;"
             d="M 500,500 500,645"/>
@@ -1256,125 +1325,6 @@
             d="M 338,380 490,355"/>
     </g>
 
-    <g id="follow-lines"
-       stroke="var(--mid-grey)"
-       stroke-width="4" stroke-dasharray="8,8"
-       marker-start="url(#marker-e)"
-       marker-end="url(#marker-f)">
-      <path id="line_mutual-follow_laptop_a"
-            style="transform-origin: 346px 552px 0px;"
-            d="M 380,512 312,592"/>
-      <path id="line_mutual-follow_laptop_b"
-            style="transform-origin: 500px 556px 0px;"
-            d="M 500,516 500,586"/>
-      <path id="line_mutual-follow_laptop_c"
-            style="transform-origin: 609.5px 551px 0px;"
-            d="M 585,512 634,590"/>
-      <path id="line_mutual-follow_laptop_imac"
-            style="transform-origin: 415.5px 367.5px 0px;"
-            d="M 351,378 480,357"/>
-    </g>
-
-    <g id="refresh-android" opacity="0"
-       fill="none" stroke="var(--group-c-symbol-color)"
-       marker-start="url(#marker-curve-bottom)"
-       style="transform-origin:716px 710px 0px;">
-      <path d="m 744.3,738.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
-      <path d="m 687.7,681.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
-    </g>
-
-    <g id="refresh-iphone" opacity="0"
-       fill="none" stroke="var(--group-a-color)"
-       marker-start="url(#marker-curve-a)"
-       style="transform-origin:716px 290px 0px;">
-      <path d="m 744.3,318.3 c -7.2,7.2 -17.2,11.7 -28.3,11.7 -22.1,0 -40,-17.9 -40,-40"/>
-      <path d="m 687.7,261.7 c 7.2,-7.2 17.2,-11.7 28.3,-11.7 22.1,0 40,17.9 40,40"/>
-    </g>
-
-    <g id="uploads" opacity="0">
-      <path id="upload-a1"
-            stroke="var(--group-a-color)"
-            marker-end="url(#marker-a)"
-            style="transform-origin:100px 182px 0px;"
-            d="m 100,182 65,172"/>
-      <path id="upload-a2"
-            stroke="var(--group-a-color)"
-            marker-end="url(#marker-a)"
-            style="transform-origin:135px 182px 0px;"
-            d="m 135,182 87.5,172.176"/>
-      <path id="upload-b1"
-            stroke="var(--group-b-color)"
-            marker-end="url(#marker-b)"
-            style="transform-origin:-84px 365px 0px;"
-            d="m -87,365 110, 70"/>
-      <path id="upload-b2"
-            stroke="var(--group-b-color)"
-            marker-end="url(#marker-b)"
-            style="transform-origin:-110px 475px 0px;"
-            d="m -110,475 134, -25"/>
-      <path id="upload-b3"
-            stroke="var(--group-b-color)"
-            marker-end="url(#marker-b)"
-            style="transform-origin:-110px 475px 0px;"
-            d="m -110,475 h134"/>
-      <path id="upload-b4"
-            stroke="var(--group-b-color)"
-            marker-end="url(#marker-b)"
-            style="transform-origin:-88px 590px 0px;"
-            d="m -88,590 l112, -19"/>
-      <path id="upload-b5"
-            stroke="var(--group-b-color)"
-            marker-end="url(#marker-b)"
-            style="transform-origin:-84px 365px 0px;"
-            d="m -87,365 110, 30"/>
-      <path id="upload-a3"
-            stroke="var(--group-a-color)"
-            marker-end="url(#marker-a)"
-            style="transform-origin:340px 183px 0px;"
-            d="m 340,183 -10,170"/>
-      <path id="upload-c1"
-            stroke="var(--group-c-symbol-color)"
-            marker-end="url(#marker-c)"
-            style="transform-origin:110px 798px 0px;"
-            d="m 110,798 51,-195"/>
-      <path id="upload-c3"
-            stroke="var(--group-c-symbol-color)"
-            marker-end="url(#marker-c)"
-            style="transform-origin:385px 780px 0px;"
-            d="m 385,780 -85,-180"/>
-      <path id="upload-c2"
-            stroke="var(--group-c-symbol-color)"
-            marker-end="url(#marker-c)"
-            style="transform-origin:250px 798px 0px;"
-            d="m 250,798 5,-195"/>
-      <path id="upload-c4"
-            stroke="var(--group-c-symbol-color)"
-            marker-end="url(#marker-c)"
-            style="transform-origin:280px 798px 0px;"
-            d="m 280,798 16,-195"/>
-    </g>
-
-    <path id="sync-request-iphone" opacity="0"
-          stroke="var(--group-a-color)"
-          marker-end="url(#marker-a)"
-          style="transform-origin:632px 292px 0px;"
-          d="M632 292L425.5 402"/>
-    <path id="sync-request-android" opacity="0"
-          stroke="var(--group-c-symbol-color)"
-          stroke-width="4"
-          marker-end="url(#marker-c)"
-          style="transform-origin:630px 650px 0px;"
-          d="M630 650L425.1 561.8" />
-    <path id="response-files-iphone" opacity="0"
-          stroke="var(--group-a-color)"
-          marker-end="url(#marker-a)"
-          style="transform-origin:425px 372px 0px;"
-          d="M424 372L632 300" />
-    <path id="response-files-android" opacity="0"
-          fill="none" stroke="var(--group-c-symbol-color)"
-          marker-end="url(#marker-c)"
-          style="transform-origin:425px 555px 0px;"
-          d="M425 555L630 680" />
   </g>
 
   <g id="guides-horizontal" opacity="0" >
@@ -1410,12 +1360,12 @@
 
     tl
       // introduce mobiles & pātaka
-      .add({ targets: '#mobile-a, #mobile-b, #mobile-c',
+      .add({ targets: ['#mobile-a, #mask-copy_mobile-a', '#mobile-b, #mask-copy_mobile-b', '#mobile-c, #mask-copy_mobile-c'],
         opacity: [0, 1],
         delay: anime.stagger(100),
         duration: 1000
       }, 1000)
-      .add({ targets: '#pātaka_laptop, #pātaka-symbol_laptop',
+      .add({ targets: '#pātaka_laptop, #mask-copy_laptop, #pātaka-symbol_laptop',
         opacity: [0, 1],
         delay: anime.stagger(500),
         duration: 1000
@@ -1427,26 +1377,32 @@
                        '#arrow-invite_a', '#invite-to-pātaka-laptop_a'],
         scale: [0, 1],
         delay: anime.stagger(250)
-      })
+      }, '+=1000')
       .add({ targets: '#arrow-invite_a, #arrow-invite_b, #arrow-invite_c',
         opacity: [1, 0],
         duration: 300
       })
       .add({ targets: '#invite-button',
         opacity: [0, 1]
-      }, '+=200')
+      }, '-=250')
 
       // focus on mobile-a
-      .add({ targets: '#mobile-a',
+      .add({ targets: '#mobile-a, #mask-copy_mobile-a',
         scale: [1, 2]
       })
       .add({ targets: '#mobile-b',
         translateX: [0, 75],
         opacity: [1, 0.5]
       }, '-=500')
+      .add({ targets: '#mask-copy_mobile-b',
+        translateX: [0, 75]
+      }, '-=500')
       .add({ targets: '#mobile-c',
         translateX: [0, 100],
         opacity: [1, 0.5]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-c',
+        translateX: [0, 100]
       }, '-=500')
 
       // mobile-a user chooses to join laptop pātaka
@@ -1471,10 +1427,16 @@
       }, '-=300')
 
       // mutual follow is indicated (laptop <-> mobile-a)
+      .add({ targets: '#mask-copy_mobile-a',
+        scale: [2, 2],
+        duration: 16.7
+      }, '+=100')
       .add({ targets: '#line_mutual-follow_laptop_a',
         scale: [0, 1],
+        translateY: [-20, -20],
+        rotate: [6, 6],
         duration: 1000
-      }, '+=10')
+      })
       .add({ targets: '#pātaka-symbol_laptop',
         opacity: [1, 0],
         duration: 600
@@ -1482,16 +1444,13 @@
       .add({ targets: '#follow-notification_a, #follow-notification_laptop_a, #mobile-icon_onscreen-laptop_a',
         opacity: [0, 1]
       }, '+=200')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        opacity: [1, 0],
-        duration: 600
-      }, '+=2000')
       .add({ targets: '#follow-notification_laptop_a',
         opacity: [1, 0]
-      }, '+=100')
+      }, '+=1000')
       .add({ targets: '#mobile-icon_onscreen-laptop_a',
         scale: [1, 0],
-        opacity: [1, 0]
+        opacity: [1, 0],
+        duration: 800
       }, '-=500')
       .add({ targets: '#line_first-follow_laptop',
         scale: [0, 1],
@@ -1524,11 +1483,31 @@
           { scale: [2, 1], duration: 400 },
           { translateX: [0, -100], opacity: [1, 0.5], duration: 500 }
         ]
-      }, '+=800')
+      }, '+=1800')
+      .add({ targets: '#follow-map_mobile-a',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=900')
+      .add({ targets: '#mask-copy_mobile-a',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [0, -100], duration: 500 }
+        ]
+      }, '-=900')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        keyframes: [
+          { translateY: [-20, 0], rotate: [6, 0], duration: 400 },
+          { translateX: [0, -50], rotate: [0, 12], duration: 500 }
+        ]
+      }, '-=900')
       .add({ targets: '#mobile-b',
         translateX: [75, 0],
         scale: [1, 2],
         opacity: [0.5, 1]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-b',
+        translateX: [75, 0],
+        scale: [1, 2]
       }, '-=500')
 
       // mobile-b user chooses to join laptop pātaka
@@ -1556,20 +1535,17 @@
       .add({ targets: '#line_mutual-follow_laptop_b',
         scale: [0, 1],
         duration: 1000
-      }, '+=10')
+      }, '+=100')
       .add({ targets: '#follow-notification_b, #follow-notification_laptop_b, #mobile-icon_onscreen-laptop_b',
         opacity: [0, 1]
       }, '+=200')
-      .add({ targets: '#line_mutual-follow_laptop_b',
-        opacity: [1, 0],
-        duration: 600
-      }, '+=2000')
       .add({ targets: '#follow-notification_laptop_b',
         opacity: [1, 0]
-      }, '+=100')
+      }, '+=1000')
       .add({ targets: '#mobile-icon_onscreen-laptop_b',
         scale: [1, 0],
-        opacity: [1, 0]
+        opacity: [1, 0],
+        duration: 800
       }, '-=500')
       .add({ targets: '#line_second-follow_laptop',
         scale: [0, 1],
@@ -1604,7 +1580,7 @@
       .add({ targets: '#line_first-fof_b',
         rotate: [34, 34],
         scale: [0, 1]
-      })
+      }, '-=100')
       .add({ targets: '#mobile-icon-a_follow_b',
         opacity: [0, 1],
         translateX: [-10, 0]
@@ -1615,7 +1591,19 @@
         translateX: [-100, -50],
         scale: [1, 2],
         opacity: [0.5, 1]
-      }, '+=500')
+      }, '+=1500')
+      .add({ targets: '#follow-map_mobile-a',
+        opacity: [0, 1],
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-a',
+        translateX: [-100, -50],
+        scale: [1, 2]
+      }, '-=500')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        translateY: [0, -10],
+        translateX: [-50, -50],
+        rotate: [12, 16]
+      }, '-=500')
 
       // show that mobile-b is now a FoF
       .add({ targets: '#line_first-fof_a',
@@ -1633,17 +1621,53 @@
           { scale: [2, 1], duration: 400 },
           { translateX: [-50, -100], opacity: [1, 0.5], duration: 500 }
         ]
-      }, '+=800')
+      }, '+=1800')
+      .add({ targets: '#follow-map_mobile-a',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=900')
+      .add({ targets: '#mask-copy_mobile-a',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [-50, -100], duration: 500 }
+        ]
+      }, '-=900')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        keyframes: [
+          { translateX: [-50, -20], translateY: [-10, 0], rotate: [16, 10], duration: 400 },
+          { translateX: [-20, -50], rotate: [10, 12], duration: 500 }
+        ]
+      }, '-=900')
       .add({ targets: '#mobile-b',
         keyframes: [
           { scale: [2, 1], duration: 400 },
           { translateX: [0, -75], opacity: [1, 0.5], duration: 500 }
         ]
       }, '-=900')
+      .add({ targets: '#follow-map_mobile-b',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=900')
+      .add({ targets: '#mask-copy_mobile-b',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [0, -75], duration: 500 }
+        ]
+      }, '-=900')
+      .add({ targets: '#line_mutual-follow_laptop_b',
+        keyframes: [
+          { translateX: [0, 0],translateY: [0, 0], rotate: [0, 0], duration: 400 },
+          { translateX: [0, -37.5], rotate: [0, 12], duration: 500 }
+        ]
+      }, '-=900')
       .add({ targets: '#mobile-c',
         translateX: [100, 0],
         scale: [1, 2],
         opacity: [0.5, 1]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-c',
+        translateX: [100, 0],
+        scale: [1, 2]
       }, '-=500')
 
       // mobile-c user chooses to join laptop pātaka
@@ -1667,24 +1691,23 @@
         opacity: [1, 0]
       }, '-=300')
 
-      // mutual follow is indicated (laptop <-> mobile-b)
+      // mutual follow is indicated (laptop <-> mobile-c)
       .add({ targets: '#line_mutual-follow_laptop_c',
         scale: [0, 1],
+        translateX: [-64, -64],
+        rotate: [5.5, 5.5],
         duration: 1000
       }, '+=10')
       .add({ targets: '#follow-notification_c, #follow-notification_laptop_c, #mobile-icon_onscreen-laptop_c',
         opacity: [0, 1]
       }, '+=200')
-      .add({ targets: '#line_mutual-follow_laptop_c',
-        opacity: [1, 0],
-        duration: 600
-      }, '+=2000')
       .add({ targets: '#follow-notification_laptop_c',
         opacity: [1, 0]
-      }, '+=100')
+      }, '+=1000')
       .add({ targets: '#mobile-icon_onscreen-laptop_c',
         scale: [1, 0],
-        opacity: [1, 0]
+        opacity: [1, 0],
+        duration: 800
       }, '-=500')
       .add({ targets: '#line_third-follow_laptop',
         scale: [0, 1]
@@ -1724,11 +1747,11 @@
       }, '-=300')
       .add({ targets: '#line_first-fof_c, #line_second-fof_c',
         scale: [0, 1]
-      })
+      }, '-=100')
       .add({ targets: '#mobile-icon-a_follow_c',
         opacity: [0, 1],
         translateX: [-10, 0],
-        translateY: [5, 0]
+        translateY: [-15, -20]
       }, '-=300')
       .add({ targets: '#mobile-icon-b_follow_c',
         opacity: [0, 1],
@@ -1736,83 +1759,145 @@
         translateY: [-5, 0]
       }, '-=500')
 
-      // switch focus to mobile-a
+      // switch focus to mobile-a & mobile-b
       .add({ targets: '#mobile-c',
         keyframes: [
           { scale: [2, 1], duration: 400 },
-          { translateX: [0, 50], opacity: [1, 0.5], duration: 500 }
+          { translateX: [0, 75], opacity: [1, 0.5], duration: 500 }
         ]
       }, '+=1800')
+      .add({ targets: '#mask-copy_mobile-c',
+      keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [0, 75], duration: 500 }
+        ]
+      }, '-=900')
+      .add({ targets: '#follow-map_mobile-c',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=900')
+      .add({ targets: '#line_mutual-follow_laptop_c',
+        keyframes: [
+          { translateX: [-64, -44], rotate: [5.5, 1.5], duration: 400 },
+          { translateX: [-44, 0], rotate: [1.5, 0], duration: 500 }
+        ]
+      }, '-=900')
       .add({ targets: '#mobile-b',
         translateX: [-75, 0],
+        scale: [1, 2],
+        opacity: [0.5, 1]
+      }, '-=500')
+      .add({ targets: '#follow-map_mobile-b',
+        opacity: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-b',
+        translateX: [-75, 0],
+        scale: [1, 2]
+      }, '-=500')
+      .add({ targets: '#line_mutual-follow_laptop_b',
+        translateX: [-37.5, 0],
+        rotate: [12, 0]
       }, '-=500')
       .add({ targets: '#mobile-a',
         translateX: [-100, -50],
         scale: [1, 2],
         opacity: [0.5, 1]
       }, '-=500')
+      .add({ targets: '#follow-map_mobile-a',
+        opacity: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-a',
+        translateX: [-100, -50],
+        scale: [1, 2]
+      }, '-=500')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        translateY: [0, -10],
+        translateX: [-50, -50],
+        rotate: [12, 16]
+      }, '-=500')
 
       // show that mobile-c is now a FoF
-      .add({ targets: '#line_first-fof_a',
+      .add({ targets: '#line_first-fof_a, #line_first-fof_b',
         rotate: [33.8, 0]
-      })
-      .add({ targets: '#line_second-fof_a',
+      }, '+=500')
+      .add({ targets: '#line_second-fof_a, #line_second-fof_b',
         scale: [0, 1]
       }, '-=500')
-      .add({ targets: '#mobile-icon-b_follow_a',
+      .add({ targets: '#mobile-icon-b_follow_a, #mobile-icon-a_follow_b',
         translateY: [0, -20]
       }, '-=500')
-      .add({ targets: '#mobile-icon-c_follow_a',
+      .add({ targets: '#mobile-icon-c_follow_a, #mobile-icon-c_follow_b',
         opacity: [0, 1],
         translateX: [-10, 0],
         translateY: [-5, 0]
       }, '-=300')
 
-      // switch focus to mobile-b
+      // de-focus mobiles
       .add({ targets: '#mobile-a',
         keyframes: [
           { scale: [2, 1], duration: 400 },
           { translateX: [-50, -100], opacity: [1, 0.5], duration: 500 }
         ]
-      }, '+=500')
-      .add({ targets: '#mobile-b',
-        translateX: [0, -25],
-        scale: [1, 2],
-        opacity: [0.5, 1]
-      }, '-=500')
-
-      // show that mobile-c is now a FoF
-      .add({ targets: '#line_first-fof_b',
-        rotate: [33.8, 0],
-      })
-      .add({ targets: '#line_second-fof_b',
-        scale: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-a_follow_b',
-        translateY: [0, -20]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-c_follow_b',
-        opacity: [0, 1],
-        translateX: [-10, 0],
-        translateY: [-5, 0]
-      }, '-=300')
+      }, '+=1500')
+      .add({ targets: '#follow-map_mobile-a',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=900')
+      .add({ targets: '#mask-copy_mobile-a',
+        keyframes: [
+          { scale: [2, 1], duration: 400 },
+          { translateX: [-50, -100], duration: 500 }
+        ]
+      }, '-=900')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        keyframes: [
+          { translateX: [-50, -20],translateY: [-10, 0], rotate: [16, 10], duration: 400 },
+          { translateX: [-20, -50], rotate: [10, 12], duration: 500 }
+        ]
+      }, '-=900')
       .add({ targets: '#mobile-b',
         keyframes: [
           { scale: [2, 1], duration: 400 },
           { opacity: [1, 0.5], duration: 500 }
         ]
-      }, '+=800')
+      }, '-=900')
+      .add({ targets: '#follow-map_mobile-b',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=900')
+      .add({ targets: '#mask-copy_mobile-b',
+        scale: [2, 1],
+        duration: 400
+      }, '-=900')
 
       // shift laptop, introduce imac
       .add({ targets: '#pātaka-symbol_laptop',
         opacity: [0, 1]
       }, '+=200')
-      .add({ targets: '#pātaka_laptop',
+      .add({ targets: '#pātaka_laptop, #mask-copy_laptop, #mask-copy_laptop',
         scale: [2, 1],
         translateX: [0, -280],
         duration: 800
       }, '+=600')
-      .add({ targets: '#pātaka_imac, #pātaka-symbol_imac',
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        translateY: [0, -110],
+        translateX: [-50, -180],
+        rotate: [12, -21],
+        duration: 800
+      }, '-=800')
+      .add({ targets: '#line_mutual-follow_laptop_b',
+        translateY: [0, 30],
+        translateX: [0, -120],
+        rotate: [0, -42],
+        duration: 800
+      }, '-=800')
+      .add({ targets: '#line_mutual-follow_laptop_c',
+        translateY: [0, 90],
+        translateX: [0, -80],
+        rotate: [0, -28],
+        duration: 800
+      }, '-=800')
+      .add({ targets: '#pātaka_imac, #pātaka-symbol_imac, #mask-copy_imac',
         opacity: [0, 1],
         delay: anime.stagger(500),
         duration: 1000
@@ -1868,16 +1953,13 @@
         opacity: [1, 0],
         duration: 300
       }, '-=600')
-      .add({ targets: '#line_mutual-follow_laptop_imac',
-        opacity: [1, 0],
-        duration: 600
-      }, '+=2000')
       .add({ targets: '#follow-notification_laptop_imac',
         opacity: [1, 0]
-      }, '+=100')
+      }, '+=1000')
       .add({ targets: '#imac-icon_onscreen-laptop',
         scale: [1, 0],
-        opacity: [1, 0]
+        opacity: [1, 0],
+        duration: 800
       }, '-=500')
       .add({ targets: '#line_fourth-follow_laptop',
         scale: [0, 1],
@@ -1906,7 +1988,8 @@
       }, '+=500')
       .add({ targets: '#laptop-icon_invite-imac',
         scale: [1, 0],
-        opacity: [1, 0]
+        opacity: [1, 0],
+        duration: 800
       }, '-=400')
       .add({ targets: '#line_imac-to-laptop',
         scale: [0, 1]
@@ -1918,7 +2001,7 @@
       .add({ targets: '#line_first-fof_imac',
         scale: [0, 1],
         rotate: [-20, -20]
-      })
+      }, '-=100')
       .add({ targets: '#line_second-fof_imac',
         scale: [0, 1],
         rotate: [-33.4, -33.4]
@@ -1934,12 +2017,70 @@
       // switch focus to mobiles
       .add({ targets: '#pātaka_imac, #pātaka_laptop',
         opacity: [1, 0.5]
-      }, '+=500')
-      .add({ targets: '#mobile-a, #mobile-b, #mobile-c',
+      }, '+=1500')
+      .add({ targets: '#follow-map_imac',
+        opacity: [1, 0],
+        duration: 400
+      }, '-=500')
+      .add({ targets: '#mobile-a, #mobile-c',
         opacity: [0.5, 1],
         scale: [1, 1.25]
       }, '-=250')
-    tl.seek(50000)
+      .add({ targets: '#mobile-b',
+        opacity: [0.5, 1],
+        scale: [1, 1.25],
+        translateX: [0, -25]
+      }, '-=500')
+      .add({ targets: '#follow-map_mobile-a, #follow-map_mobile-b, #follow-map_mobile-c',
+        opacity: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-a, #mask-copy_mobile-c',
+        scale: [1, 1.25]
+      }, '-=500')
+      .add({ targets: '#mask-copy_mobile-b',
+        scale: [1, 1.25],
+        translateX: [0, -25]
+      }, '-=500')
+      .add({ targets: '#line_mutual-follow_laptop_a',
+        translateY: [-110, -110],
+        translateX: [-180, -180],
+        rotate: [-21, -17]
+      }, '-=500')
+      .add({ targets: '#line_mutual-follow_laptop_b',
+        rotate: [-42, -38],
+        translateX: [-120, -125]
+      }, '-=500')
+      .add({ targets: '#line_mutual-follow_laptop_c',
+        rotate: [-28, -25],
+        translateX: [-80, -80],
+        translateY: [90, 110]
+      }, '-=500')
+
+      // show that pātaka-imac is now a FoF
+      .add({ targets: '#line_first-fof_a, #line_first-fof_b, #line_first-fof_c',
+        rotate: [0, -30],
+        translateX: [0, 6],
+        translateY: [0, -2]
+      }, '+=500')
+      .add({ targets: '#line_second-fof_a, #line_second-fof_b, #line_second-fof_c',
+        rotate: [0, -33.8]
+      }, '-=500')
+      .add({ targets: '#line_third-fof_a, #line_third-fof_b, #line_third-fof_c',
+        scale: [0, 1]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-b_follow_a, #mobile-icon-a_follow_b, #mobile-icon-a_follow_c',
+        translateY: [-20, -40]
+      }, '-=500')
+      .add({ targets: '#mobile-icon-c_follow_a, #mobile-icon-c_follow_b, #mobile-icon-b_follow_c',
+        translateY: [0, -20]
+      }, '-=500')
+      .add({ targets: '#imac-icon_a, #imac-icon_b, #imac-icon_c',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        translateY: [-5, 0]
+      }, '-=500')
+
+    // tl.seek(38500)
     tl.play()
 
     // ]]>
