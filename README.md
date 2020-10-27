@@ -4,30 +4,45 @@
 Made as Scalable Vector Graphic (SVG) files. Animations primarily written with [anime.js](https://animejs.com), and converted to CSS animation.
 These are made to accompany and illustrate text explanations.
 
+## Repo
+- [📁️ **documentation**](documentation) ← how to use or adapt animations
+- [📁️ **font**](font) ← base64 encoding of Dosis typeface, for embedding
+- [📁️ **gif**](gif) ← gigantic, poor quality recordings of JS animations, seldom updated
+- [📁️ **js**](**js**) ← anime.js to css conversion script
+- [📁️ **mp4**](mp4) ← good quality recordings of JS animations, seldom updated
+- [📁️ **png**](png) ← static raster icons
+- [📁️ **svg**](svg) ← the good stuff, it's all in here
+- [ 📄️ **ROADMAP.md**](ROADMAP.md) ← overview of progress and planned animations
+- [ 📄️ **README.md**](README.md) ← YOU ARE HERE. 📍️ Read me!
+
 ## Table of Contents
+- [Documentation](#documentation)
 - [Animations](#animations)
 - [Icons](#icons)
 
+----
+
+### Documentation
 In this repository you'll also find other documents to help you understand, use
-or adapt these animations. These links will take you right where you want to go:
-- [**How to use animations**](./Using-Animations.md)
-  - [in a website](./Using-Animations.md#using-animations-in-a-website)
-  - [on social media / ssb / github](./Using-Animations.md#using-animations-on-social-media)
-  - [in a video](./Using-Animations.md#using-animations-in-a-video)
-- [**How to edit animations**](./Editing-Animations.md)
-  - [editing SVG](./Editing-Animations.md#editing-svg)
-  - [changing fonts](./Editing-Animations.md#changing-fonts)
-  - [editing CSS](./Editing-Animations.md#editing-css)
-  - [editing anime.js](./Editing-Animations.md#editing-animejs)
-  - [Converting an anime.js timeline to CSS](./Editing-Animations.md#converting-an-animejs-timeline-to-css)
-  - [editing video](./Editing-Animations.md#editing-video)
+or adapt these animations:
+- [**How to use animations**](documentation/Using-Animations.md)
+  - [in a website](documentation/Using-Animations.md#using-animations-in-a-website)
+  - [on social media / ssb / github](documentation/Using-Animations.md#using-animations-on-social-media)
+  - [in a video](documentation/Using-Animations.md#using-animations-in-a-video)
+- [**How to edit animations**](documentation/Editing-Animations.md)
+  - [editing SVG](documentation/Editing-Animations.md#editing-svg)
+  - [changing fonts](documentation/Editing-Animations.md#changing-fonts)
+  - [editing CSS](documentation/Editing-Animations.md#editing-css)
+  - [editing anime.js](documentation/Editing-Animations.md#editing-animejs)
+  - [converting an anime.js timeline to CSS](documentation/Editing-Animations.md#converting-an-animejs-timeline-to-css)
+  - [editing video](documentation/Editing-Animations.md#editing-video)
 - [**How to make videos or GIFs**](Making-Video-or-GIF.md)
-  - [recording your screen](./Making-Video-or-GIF.md#recording-your-screen)
-  - [converting to gif](./Making-Video-or-GIF.md#converting-to-gif)
-- [**How to make static images**](./Making-Static-Images.md)
-  - [making static SVG](./Making-Static-Images.md#making-static-svg)
-  - [making PNG](./Making-Static-Images.md#making-static-png)
-  - [making JPEG](./Making-Static-Images.md#making-static-jpeg)
+  - [recording your screen](documentation/Making-Video-or-GIF.md#recording-your-screen)
+  - [converting to gif](documentation/Making-Video-or-GIF.md#converting-to-gif)
+- [**How to make static images**](documentation/Making-Static-Images.md)
+  - [making static SVG](documentation/Making-Static-Images.md#making-static-svg)
+  - [making PNG](documentation/Making-Static-Images.md#making-static-png)
+  - [making JPEG](documentation/Making-Static-Images.md#making-static-jpeg)
 
 ----
 
@@ -41,14 +56,11 @@ or adapt these animations. These links will take you right where you want to go:
 
 ![](svg/replication-local_css.svg)
 
-----
 ### Data on a Pātaka
 
 ![](svg/data-on-a-pātaka_css.svg)
 
 _Three groups have their data backed up and synchronized on a Pātaka. Group members can only access files from their own groups - the Pātaka will update them with new data when they connect. Kaitiaki / sysadmin cannot access the files, they can only see which group created them. People can be members of more than one group._
-
-----
 
 ### Infrastructure Comparison
 
@@ -62,12 +74,10 @@ corporate data center overseas._
 _Example text: A Pātaka server can be a small, simple device or a large professional
 setup, depending on your needs and preferences._
 
-
 ### Port Forwarding
 ![](svg/port-forwarding_01_without-port-forwarding.svg)
 _1. Explanation of ports, and a request for a specific port_
 
-----
 ![](svg/port-forwarding_02_with-port-forwarding.svg)
 _2. Explanation of port forwarding_
 
@@ -83,14 +93,12 @@ Examples of the style and format of icons, in 48px and 96px:
 ![Router icon (48px)](svg/icons/router_48.svg) ![Static IP Address icon(48px)](svg/icons/static-ip_48.svg)
 ![WiFi icon(48px)](svg/icons/wifi_48.svg) ![Internet icon(48px)](svg/icons/internet_48.svg)
 
-----
 ![Ethernet icon (96px)](svg/icons/ethernet_96.svg) ![Laptop icon (96px)](svg/icons/laptop_96.svg)
 ![Mobile icon (96px)](svg/icons/mobile_96.svg)
 
 ![Router icon (96px)](svg/icons/router_96.svg) ![Static IP Address icon(96px)](svg/icons/static-ip_96.svg)
 ![WiFi icon(96px)](svg/icons/wifi_96.svg) ![Internet icon(96px)](svg/icons/internet_96.svg)
 
-----
 
 The animation in the WiFi, Internet and Router icons can be removed by deleting or
 commenting out the `<style>...</style>` section of the SVG.

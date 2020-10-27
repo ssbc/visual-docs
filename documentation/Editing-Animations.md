@@ -9,7 +9,7 @@ files, the animation syntax, the formats and what you can do with them.
 - [**changing fonts**](#changing-fonts)
 - [**editing CSS**](#editing-css)
 - [**editing anime.js**](#editing-animejs)
-- [**Converting an anime.js timeline to CSS**](#converting-an-animejs-timeline-to-css)
+- [**converting an anime.js timeline to CSS**](#converting-an-animejs-timeline-to-css)
 - [**editing video**](#editing-video)
 
 ## Editing SVG
@@ -27,7 +27,7 @@ More info and links to these editors & plugins can be found in the
 
 - using an IDE will also allow you to [fold](https://flight-manual.atom.io/using-atom/sections/folding/) nested content, and only unfold the
 specific parts you're interested in, allowing you to navigate through a 1588-line complex SVG and maintain an overview:
-![A complex SVG file, folded tidily](./png/documentation/folded-svg.png)
+![A complex SVG file, folded tidily](img/folded-svg.png)
 
 
 - Every element in every animation either has its own `id`, or is in a `<g>` (group)
@@ -293,11 +293,11 @@ Have a play around with the animations, and check out the [anime.js documentatio
 
 I would recommend using the [folding](https://flight-manual.atom.io/using-atom/sections/folding/) function in your IDE if you want to find your way around:
 
-![A complex anime.js timeline, folded tidily](./png/documentation/folded-js.png)
+![A complex anime.js timeline, folded tidily](img/folded-js.png)
 
 ## Converting an anime.js timeline to CSS
 If you're planning to make any changes to the _timing_ of these animations, rather than just changing colors or swapping out elements, I highly recommend that you do so with anime.js rather than CSS, whenever you have the choice. However, you may need the end product to be a CSS animation (eg. for sharing on SBB or Github).
-In this case you'll need to convert the anime.js timeline into CSS animations, which would be _extremely_ difficult to attempt by hand. So I've started writing a script to make it much easier - you can find it and its documentation in the [`📁️ js`](./js) folder.
+In this case you'll need to convert the anime.js timeline into CSS animations, which would be _extremely_ difficult to attempt by hand. So I've started writing a script to make it much easier - you can find it and its documentation in the [`📁️ js`](../js) folder.
 
 ## Editing video
-You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](./mp4) folder. You can import these into the video editing tool of your choice, mix them with footage as you like, and export new videos.
+You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](../mp4) folder. You can import these into the video editing tool of your choice, mix them with footage as you like, and export new videos.

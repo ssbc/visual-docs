@@ -16,18 +16,13 @@ Planned illustrations, animations and icons, and current progress made.
 | **Pātaka Setup:**        |                |              |           |           |                                |    **-**    |
 | Static IP address        |        ✔       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | Port Forwarding          |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/port-forwarding_02_with-port-forwarding.svg)| ✖️ |
-| **Āhau-specific icons:** |                |              |           |           |                                |    **-**    |
-| Whānau archive icon      |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
-| Pātaka connect code      |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
-| Encrypted message        |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
-| Support chat icon        |        ✖️       |       ✖️      |     ✖️     |     ✖️     |                                |             |
 | **Infrastructure:**      |                |              |           |           |                                |      ✖️      |
 | Compare: corporate server|        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/corporate-server.svg)  |             |
 | Compare: Āhau / SSB      |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/alternative-servers.svg) |           |
 | **Replication:**         |                |              |           |           |                                |    **-**    |
 | Compare: Facebook etc    |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
-| Sync via Internet/Pātaka |        ✔       |       ✔      |     ✔     |     ✔     | ![](gif/replication-via-internet.gif)|             |
-| Local sync over WiFi     |        ✔       |       ✔      |     ✔     |     ✔     | ![](gif/replication-local.gif)|             |
-| Pātaka-to-Pātaka         |        ✔       |       ✔      |     ✖️     |     ✖️     |                                |             |
+| Sync via Internet/Pātaka |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/replication-via-internet_css.svg)|             |
+| Local sync over WiFi     |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/replication-local_css.svg)|             |
+| Pātaka-to-Pātaka         |        ✔       |       ✔      |In progress|     ✔     | ![](svg/multiple-pātaka_anime.svg)|             |
 | **Encryption:**          |                |              |           |           |                                |    **-**    |
-| Data on a Pātaka         |        ✔       |       ✔      |     ✔     |     ✔     | ![](gif/data-on-a-pātaka.gif)  |             |
+| Data on a Pātaka         |        ✔       |       ✔      |     ✔     |     ✔     | ![](svg/data-on-a-pātaka_css.svg)  |             |

@@ -127,7 +127,7 @@ sharing, even if they can't see or load the GIF.
 [How to add alternative text to Facebook photos](https://www.lireo.com/how-to-add-alternative-text-to-facebook-photos/)
 
 ## Using animations in a video
-You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](./mp4)
+You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](../mp4)
 folder. You can import these into the video editing tool of your choice, mix them
 with footage as you like, and export new videos. If you're going to be uploading
 the resulting video to a service like YouTube or Vimeo (which will compress the
