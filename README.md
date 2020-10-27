@@ -23,8 +23,6 @@ These are made to accompany and illustrate text explanations.
 ----
 
 ### Documentation
-In this repository you'll also find other documents to help you understand, use
-or adapt these animations:
 - [**How to use animations**](documentation/Using-Animations.md)
   - [in a website](documentation/Using-Animations.md#using-animations-in-a-website)
   - [on social media / ssb / github](documentation/Using-Animations.md#using-animations-on-social-media)
