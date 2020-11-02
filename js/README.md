@@ -71,17 +71,6 @@ becomes:
   10% { transform: scale(0) translate(2px, 4px); }
 ```
 
-- Currently there's a bug where sometimes the last keyframe of a multi-keyframe section has a percentage value, but no information about the animated property or its value, like this:
-```css
-  0%, 17.17% { transform: scale(0); }
-  18.24% { transform: scale(1); }
-  34.12% { opacity: 1;
-           transform: scale(1); }
-  35.19%, 100% { }
-}
-```
-For now, search for "`{ }`" in your document, then check the anime.js timeline for each element where it occurs, and add update it with the correct information manually.
-
 - At the top of the CSS Animations text there's a declaration about the duration, easing and fill-mode of the animations, it looks like this:
 ```css
 #router, #light, #arrow-a, #arrow-b, #arrow-c, #internet-symbol {

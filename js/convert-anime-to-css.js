@@ -29,6 +29,8 @@ const logAnimations = (anim) => {
           value: fromValues[j],
           enumerable: true
         })
+      }
+      if (!targets[targetId][tweenEnd][animatedProperty]) {
         Object.defineProperty(targets[targetId][tweenEnd], animatedProperty, {
           value: toValues[j],
           enumerable: true
