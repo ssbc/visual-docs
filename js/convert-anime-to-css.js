@@ -68,6 +68,7 @@ const logAnimations = (anim) => {
   }
 }
 
+
 function timelineComplete () {
   console.log('total timeline duration:', cumulativeTimelineDuration)
 
@@ -86,6 +87,17 @@ function timelineComplete () {
     const percentageKeyframes = Object.keys(targets[id])
     // add a 0% & 100% keyframe to each animation so they start in the
     // correct initial position and hold at the end
+
+    // Keyframe -> Number
+    const firstKeyframeNumber = (kf) =>  {
+    // takes keyframe string (e.g. '0%, 19%')
+    // returns first number in this string as an integer (e.g. 0)
+      const first = kf
+        .split(',')[0]
+        .replace('%','')
+      return Number(first)
+    }
+
     const oldFirstKeyframe = percentageKeyframes[0]
     const oldLastKeyframe = percentageKeyframes[percentageKeyframes.length - 1]
     if (oldFirstKeyframe !== '0%') {
@@ -98,6 +110,20 @@ function timelineComplete () {
       targets[id][newLastKeyframe] = targets[id][oldLastKeyframe]
       delete targets[id][oldLastKeyframe]
     }
+    // build a new keyframes object where the keys are sorted by percentage
+    // 0% (or 0,n%) should be first, 100 (or n%, 100%) should be last.
+    const sortedKeyframes = Object.keys(targets[id])
+      .sort((a,b) => firstKeyframeNumber(a) - firstKeyframeNumber(b))
+      .reduce((keyframes, keyframe) => {
+        // starting with an empty object, run through each key, in our sorted lisst
+        // add it to the obj with the value being that same key in our targets[id]
+        // when we are done, we'll have a full sorted object
+        return {
+        ...keyframes,
+        [keyframe]: targets[id][keyframe]
+        }
+      }, {}) // here be the empty objec that starts the reduce loop
+      targets[id] = sortedKeyframes;
   })
 
   let animDetails = JSON.stringify(targets)
