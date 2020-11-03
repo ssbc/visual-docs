@@ -1,3 +1,10 @@
+// currently, all elements that are animated must have an id.
+// Add ids if they're missing.
+
+// to be set in const tl:
+// autoplay: false,
+// loop: false,
+
 // to be added to each timeline section:
 // changeBegin: function(anim) { logAnimations(anim) },
 
@@ -10,34 +17,52 @@ const logAnimations = (anim) => {
   for (i = 0; i < anim.animations.length; i++) {
     const currentAnimation = anim.animations[i]
     const targetId = currentAnimation.animatable.target.id
+    // Without an id, keyframes will be written for an empty target.
+    // This should probably throw an error, rather than log to the console:
+    if (!targetId) console.log('WARNING: missing id property for ' + currentAnimation.animatable.target.tagName + ' element in #' + currentAnimation.animatable.target.parentNode.id)
+
+    const animatedProperty = currentAnimation.property
     const fromValues = []
     const toValues = []
-    const animatedProperty = currentAnimation.property
 
     let j
     for (j = 0; j < currentAnimation.tweens.length; j++) {
       const currentTween = currentAnimation.tweens[j]
       const tweenStart = currentTween.start + currentTween.delay + sectionOffset
       const tweenEnd = currentTween.end + sectionOffset
-      fromValues.push(currentTween.from.original)
-      toValues.push(currentTween.to.original)
+
+      // anime adds 'px' to strokeDashoffset values for some reason
+      if (animatedProperty === 'strokeDashoffset') {
+        fromValues.push(currentTween.from.numbers[0])
+        toValues.push(currentTween.to.numbers[0])
+      } else { // otherwise anime's extra formatting (eg. +px, +deg) is quite useful
+        fromValues.push(currentTween.from.original)
+        toValues.push(currentTween.to.original)
+      }
+
+      // make a new ruleset for the current target, if there isn't one already
       if (!targets[targetId]) targets[targetId] = { }
+
+      // add an empty keyframe at the tweenStart time, if there isn't a keyframe there already
       if (!targets[targetId][tweenStart]) targets[targetId][tweenStart] = { }
+      // add an empty keyframe at the tweenEnd time, if there isn't a keyframe there already
       if (!targets[targetId][tweenEnd]) targets[targetId][tweenEnd] = { }
+
+      // if the current property name isn't found in the tweenStart keyframe, add it, and its starting value
       if (!targets[targetId][tweenStart][animatedProperty]) {
         Object.defineProperty(targets[targetId][tweenStart], animatedProperty, {
           value: fromValues[j],
           enumerable: true
         })
       }
+      // if the current property name isn't found in the tweenEnd keyframe, add it, and its starting value
       if (!targets[targetId][tweenEnd][animatedProperty]) {
         Object.defineProperty(targets[targetId][tweenEnd], animatedProperty, {
           value: toValues[j],
           enumerable: true
         })
       }
-      const duration = Math.round((currentAnimation.duration - currentAnimation.delay) * 100 + Number.EPSILON) / 100
-      cumulativeTimelineDuration = duration + sectionOffset
+      cumulativeTimelineDuration = Math.round((currentAnimation.duration + sectionOffset) * 100 + Number.EPSILON) / 100
       console.log('timeline duration:', cumulativeTimelineDuration)
     }
   }
