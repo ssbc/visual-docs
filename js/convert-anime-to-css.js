@@ -124,9 +124,8 @@ function timelineComplete () {
   animDetails = animDetails.replace(/}}/g, '}\n}')
   // separate keyframes with a newline
   animDetails = animDetails.replace(/}([0-9])/g, '}\n  $1')
-  // camelCase to kebab-case
-  animDetails = animDetails.replace(/(?<=[a-z]*)([A-Z])(?=[a-z]*)/g, '-$1')
-  animDetails = animDetails.replace(/(?<=[a-z]*-)([A-Z])(?=[a-z]*)/g, u => u.toLowerCase())
+  // camelCase to kebab-case TODO: exclude uppercase X or Y (translateX, scaleY etc)
+  animDetails = animDetails.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
   // remove enclosing curly braces
   animDetails = animDetails.substring(1, animDetails.length - 1)
 
