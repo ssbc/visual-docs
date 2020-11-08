@@ -45,29 +45,57 @@ const logAnimations = (anim) => {
 
       // add an empty keyframe at the tweenStart time, if there isn't a keyframe there already
       if (!targets[targetId][tweenStart]) targets[targetId][tweenStart] = { }
+
       // add an empty keyframe at the tweenEnd time, if there isn't a keyframe there already
       if (!targets[targetId][tweenEnd]) targets[targetId][tweenEnd] = { }
 
-      // if the current property name isn't found in the tweenStart keyframe, add it, and its starting value
-      if (!targets[targetId][tweenStart][animatedProperty]) {
-        Object.defineProperty(targets[targetId][tweenStart], animatedProperty, {
-          value: fromValues[j],
-          enumerable: true
-        })
+      const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
+      // check if animatedProperty is a transform
+      if (validTransforms.includes(animatedProperty)) {
+        // add a 'transform' object to the starting keyframe, if it doesn't exist yet
+        if (!targets[targetId][tweenStart].transform) targets[targetId][tweenStart].transform = { }
+
+        // add the animated property and its value to the transform object, if it doesn't exist yet
+        if (!targets[targetId][tweenStart].transform[animatedProperty]) {
+          Object.defineProperty(targets[targetId][tweenStart].transform, animatedProperty, {
+            value: fromValues[j],
+            enumerable: true
+          })
+        }
+        // if it does exist already, um, do nothing for now...
+        // TODO: find out what is happening if it does exist!
+
+        // add a 'transform' object to the ending keyframe, if it doesn't exist yet
+        if (!targets[targetId][tweenEnd].transform) targets[targetId][tweenEnd].transform = { }
+
+        // add the animated property and its value to the transform object, if it doesn't exist yet
+        if (!targets[targetId][tweenEnd].transform[animatedProperty]) {
+          Object.defineProperty(targets[targetId][tweenEnd].transform, animatedProperty, {
+            value: toValues[j],
+            enumerable: true
+          })
+        }
+      } else { // if animatedProperty is not a transform
+        // if the current property name isn't found in the starting keyframe, add it, and its starting value
+        if (!targets[targetId][tweenStart][animatedProperty]) {
+          Object.defineProperty(targets[targetId][tweenStart], animatedProperty, {
+            value: fromValues[j],
+            enumerable: true
+          })
+        }
+        // if the current property name isn't found in the ending keyframe, add it, and its starting value
+        if (!targets[targetId][tweenEnd][animatedProperty]) {
+          Object.defineProperty(targets[targetId][tweenEnd], animatedProperty, {
+            value: toValues[j],
+            enumerable: true
+          })
+        }
+        cumulativeTimelineDuration = Math.round((currentAnimation.duration + sectionOffset) * 100 + Number.EPSILON) / 100
+        console.log('timeline duration:', cumulativeTimelineDuration)
       }
-      // if the current property name isn't found in the tweenEnd keyframe, add it, and its starting value
-      if (!targets[targetId][tweenEnd][animatedProperty]) {
-        Object.defineProperty(targets[targetId][tweenEnd], animatedProperty, {
-          value: toValues[j],
-          enumerable: true
-        })
-      }
-      cumulativeTimelineDuration = Math.round((currentAnimation.duration + sectionOffset) * 100 + Number.EPSILON) / 100
-      console.log('timeline duration:', cumulativeTimelineDuration)
     }
   }
 }
-
 
 function timelineComplete () {
   console.log('total timeline duration:', cumulativeTimelineDuration)
@@ -89,12 +117,12 @@ function timelineComplete () {
     // correct initial position and hold at the end
 
     // Keyframe -> Number
-    const firstKeyframeNumber = (kf) =>  {
+    const firstKeyframeNumber = (kf) => {
     // takes keyframe string (e.g. '0%, 19%')
     // returns first number in this string as an integer (e.g. 0)
       const first = kf
         .split(',')[0]
-        .replace('%','')
+        .replace('%', '')
       return Number(first)
     }
 
@@ -113,17 +141,17 @@ function timelineComplete () {
     // build a new keyframes object where the keys are sorted by percentage
     // 0% (or 0,n%) should be first, 100 (or n%, 100%) should be last.
     const sortedKeyframes = Object.keys(targets[id])
-      .sort((a,b) => firstKeyframeNumber(a) - firstKeyframeNumber(b))
+      .sort((a, b) => firstKeyframeNumber(a) - firstKeyframeNumber(b))
       .reduce((keyframes, keyframe) => {
         // starting with an empty object, run through each key, in our sorted lisst
         // add it to the obj with the value being that same key in our targets[id]
         // when we are done, we'll have a full sorted object
         return {
-        ...keyframes,
-        [keyframe]: targets[id][keyframe]
+          ...keyframes,
+          [keyframe]: targets[id][keyframe]
         }
-      }, {}) // here be the empty objec that starts the reduce loop
-      targets[id] = sortedKeyframes;
+      }, {}) // here be the empty object that starts the reduce loop
+    targets[id] = sortedKeyframes
   })
 
   let animDetails = JSON.stringify(targets)
@@ -131,27 +159,36 @@ function timelineComplete () {
 
   // remove quotation marks
   animDetails = animDetails.replace(/['"]+/g, '')
-  // remove colons, except in css declaration
+  // wrap transform property values in brackets
+  animDetails = animDetails.replace(/(translateX|translateY|translateZ|rotateX|rotateY|rotateZ|rotate|scaleX|scaleY|scaleZ|scale|skewX|skewY|skew|perspective|matrix3d|matrix):(-*[0-9]*\.*[0-9]*[px|deg|%]*),*/g, '$1($2) ')
+  // swap transforms' curly brace to a colon
+  animDetails = animDetails.replace(/(transform:){/g, '$1 ')
+  // add a semicolon to the end of the transform value
+  animDetails = animDetails.replace(/\) }/g, ');')
+  // remove colons, except in css declarations
   animDetails = animDetails.replace(/:{+/g, '{')
   // find target names, add #, create an animation-name & keyframes declaration
   animDetails = animDetails.replace(/([^{%, .]{2,}){/g, '\n#$1 { animation-name: $1-anim; } \n@keyframes $1-anim {\n  ')
   // find commas in css declarations, replace them with a space
   animDetails = animDetails.replace(/(?<=[a-z0-9]),/g, ' ')
   // add a space to the end of css declarations
-  animDetails = animDetails.replace(/(?<=[a-z0-9])}/g, ' }')
+  animDetails = animDetails.replace(/(?<=[a-z0-9;])}/g, ' }')
   // separate css declarations with a semicolon
   animDetails = animDetails.replace(/([a-zA-ZĀā]*:[0-9][0-9]*\.*[0-9]*[px|deg|%]* *[0-9]*\.*[0-9]*[px|deg|%]* *[0-9]*\.*[0-9]*[px|deg|%]*)/g, '$1; ')
   animDetails = animDetails.replace(/ ;/g, ';')
-  // remove commas after closing curly braces
-  animDetails = animDetails.replace(/},/g, '}')
+  // remove commas after closing curly braces or semicolons
+  animDetails = animDetails.replace(/(}|;),/g, '$1')
   // add spaces to keyframe declarations
   animDetails = animDetails.replace(/%{/g, '% { ')
   // separate two closing braces with a newline
   animDetails = animDetails.replace(/}}/g, '}\n}')
   // separate keyframes with a newline
   animDetails = animDetails.replace(/}([0-9])/g, '}\n  $1')
-  // camelCase to kebab-case TODO: exclude uppercase X or Y (translateX, scaleY etc)
-  animDetails = animDetails.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+  // camelCase to kebab-case
+  // separate words with hyphen (don't include X/Y/Z transforms)
+  animDetails = animDetails.replace(/([a-z])([A-W])/g, '$1-$2')
+  // TODO: lowercase only the previous match, not the whole string
+  // animDetails.toLowerCase()
   // remove enclosing curly braces
   animDetails = animDetails.substring(1, animDetails.length - 1)
 
