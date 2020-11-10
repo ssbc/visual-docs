@@ -5,15 +5,25 @@ Made as Scalable Vector Graphic (SVG) files. Animations primarily written with [
 These are made to accompany and illustrate text explanations.
 
 ## Repo
-- [📁️ **documentation**](documentation) ← how to use or adapt animations
-- [📁️ **font**](font) ← base64 encoding of Dosis typeface, for embedding
-- [📁️ **gif**](gif) ← gigantic, poor quality recordings of JS animations, seldom updated
-- [📁️ **js**](**js**) ← anime.js to css conversion script
-- [📁️ **mp4**](mp4) ← good quality recordings of JS animations, seldom updated
-- [📁️ **png**](png) ← static raster icons
-- [📁️ **svg**](svg) ← the good stuff, it's all in here
-- [ 📄️ **ROADMAP.md**](ROADMAP.md) ← overview of progress and planned animations
-- [ 📄️ **README.md**](README.md) ← YOU ARE HERE. 📍️ Read me!
+
+
+- [📁️ **documentation**](documentation) ← _how to use or adapt animations_
+
+- [📁️ **font**](font) ← _base64 encoding of Dosis typeface, for embedding_
+
+- [📁️ **gif**](gif) ← _gigantic, poor quality recordings of JS animations, seldom updated_
+
+- [📁️ **js**](js) ← _anime.js to css conversion script_
+
+- [📁️ **mp4**](mp4) ← _good quality recordings of JS animations, seldom updated_
+
+- [📁️ **png**](png) ← _static raster icons_
+
+- [📁️ **svg**](svg) ← _the good stuff, it's all in here_
+
+- [ 📄️ **ROADMAP.md**](ROADMAP.md) ← _overview of progress and planned animations_
+
+- [ 📄️ **README.md**](README.md) ← _YOU ARE HERE. 📍️ Read me!_
 
 ## Table of Contents
 - [Documentation](#documentation)
