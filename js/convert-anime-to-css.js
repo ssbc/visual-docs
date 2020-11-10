@@ -13,31 +13,27 @@ const targets = {}
 
 const logAnimations = (anim) => {
   const sectionOffset = anim.timelineOffset
-  let i
-  for (i = 0; i < anim.animations.length; i++) {
-    const currentAnimation = anim.animations[i]
-    const targetId = currentAnimation.animatable.target.id
+  for (const animation of anim.animations) {
+    const targetId = animation.animatable.target.id
     // Without an id, keyframes will be written for an empty target.
     // This should probably throw an error, rather than log to the console:
-    if (!targetId) console.log('WARNING: missing id property for ' + currentAnimation.animatable.target.tagName + ' element in #' + currentAnimation.animatable.target.parentNode.id)
+    if (!targetId) console.log('WARNING: missing id property for ' + animation.animatable.target.tagName + ' element in #' + animation.animatable.target.parentNode.id)
 
-    const animatedProperty = currentAnimation.property
+    const animatedProperty = animation.property
     const fromValues = []
     const toValues = []
 
-    let j
-    for (j = 0; j < currentAnimation.tweens.length; j++) {
-      const currentTween = currentAnimation.tweens[j]
-      const tweenStart = currentTween.start + currentTween.delay + sectionOffset
-      const tweenEnd = currentTween.end + sectionOffset
+    for (const tween of animation.tweens) {
+      const tweenStart = tween.start + tween.delay + sectionOffset
+      const tweenEnd = tween.end + sectionOffset
 
       // anime adds 'px' to strokeDashoffset values for some reason
       if (animatedProperty === 'strokeDashoffset') {
-        fromValues.push(currentTween.from.numbers[0])
-        toValues.push(currentTween.to.numbers[0])
+        fromValues.push(tween.from.numbers[0])
+        toValues.push(tween.to.numbers[0])
       } else { // otherwise anime's extra formatting (eg. +px, +deg) is quite useful
-        fromValues.push(currentTween.from.original)
-        toValues.push(currentTween.to.original)
+        fromValues.push(tween.from.original)
+        toValues.push(tween.to.original)
       }
 
       // make a new ruleset for the current target, if there isn't one already
@@ -58,7 +54,7 @@ const logAnimations = (anim) => {
         // add the animated property and its value to the transform object, if it doesn't exist yet
         if (!targets[targetId][tweenStart].transform[animatedProperty]) {
           Object.defineProperty(targets[targetId][tweenStart].transform, animatedProperty, {
-            value: fromValues[j],
+            value: fromValues[fromValues.length - 1],
             enumerable: true
           })
         }
@@ -71,7 +67,7 @@ const logAnimations = (anim) => {
         // add the animated property and its value to the transform object, if it doesn't exist yet
         if (!targets[targetId][tweenEnd].transform[animatedProperty]) {
           Object.defineProperty(targets[targetId][tweenEnd].transform, animatedProperty, {
-            value: toValues[j],
+            value: toValues[toValues.length - 1],
             enumerable: true
           })
         }
@@ -79,18 +75,18 @@ const logAnimations = (anim) => {
         // if the current property name isn't found in the starting keyframe, add it, and its starting value
         if (!targets[targetId][tweenStart][animatedProperty]) {
           Object.defineProperty(targets[targetId][tweenStart], animatedProperty, {
-            value: fromValues[j],
+            value: fromValues[fromValues.length - 1],
             enumerable: true
           })
         }
         // if the current property name isn't found in the ending keyframe, add it, and its starting value
         if (!targets[targetId][tweenEnd][animatedProperty]) {
           Object.defineProperty(targets[targetId][tweenEnd], animatedProperty, {
-            value: toValues[j],
+            value: toValues[toValues.length - 1],
             enumerable: true
           })
         }
-        cumulativeTimelineDuration = Math.round((currentAnimation.duration + sectionOffset) * 100 + Number.EPSILON) / 100
+        cumulativeTimelineDuration = Math.round((animation.duration + sectionOffset) * 100 + Number.EPSILON) / 100
         console.log('timeline duration:', cumulativeTimelineDuration)
       }
     }
