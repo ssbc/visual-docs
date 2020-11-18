@@ -23,12 +23,12 @@ function getAnimations (anim) {
       const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
 
       writeFromAndToValues(tween, animatedProperty, fromValues, toValues)
-      createKeyframeObjects(targets, targetId, tweenStart, tweenEnd)
+      createKeyframeObjects(targetId, tweenStart, tweenEnd)
 
       if (validTransforms.includes(animatedProperty)) {
-        addValuesToTransformObject(targets, targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+        addValuesToTransformObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
       } else {
-        addValuesToPropertyObject(targets, targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+        addValuesToPropertyObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
       }
     }
   }
@@ -47,10 +47,10 @@ function timelineComplete () {
 
   targetIds.forEach(id => {
     convertToPercentageKeyframes(id)
-    addStartAndEndKeyframes(targets, id)
+    addStartAndEndKeyframes(id)
   })
 
-  convertObjectToCss(targets, targetIds)
+  convertObjectToCss(targetIds)
 }
 
 timelineComplete()
@@ -68,7 +68,7 @@ function writeFromAndToValues (tween, animatedProperty, fromValues, toValues) {
   }
 }
 
-function createKeyframeObjects (targets, targetId, tweenStart, tweenEnd) {
+function createKeyframeObjects (targetId, tweenStart, tweenEnd) {
   // make a new ruleset for the current target, if there isn't one already
   if (!targets[targetId]) targets[targetId] = { }
   // add an empty keyframe at the tweenStart time, if there isn't a keyframe there already
@@ -77,7 +77,7 @@ function createKeyframeObjects (targets, targetId, tweenStart, tweenEnd) {
   if (!targets[targetId][tweenEnd]) targets[targetId][tweenEnd] = { }
 }
 
-function addValuesToTransformObject (targets, targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
+function addValuesToTransformObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   // add a 'transform' object to the starting keyframe, if it doesn't exist yet
   if (!targets[targetId][tweenStart].transform) targets[targetId][tweenStart].transform = { }
 
@@ -103,7 +103,7 @@ function addValuesToTransformObject (targets, targetId, animatedProperty, tweenS
   }
 }
 
-function addValuesToPropertyObject (targets, targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
+function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   // if the current property name isn't found in the starting keyframe, add it, and its starting value
   if (!targets[targetId][tweenStart][animatedProperty]) {
     Object.defineProperty(targets[targetId][tweenStart], animatedProperty, {
@@ -134,7 +134,7 @@ function convertToPercentageKeyframes (id) {
   })
 }
 
-function sortKeyframes (targets, id) {
+function sortKeyframes (id) {
   // Keyframe -> Number
   const firstKeyframeNumber = (kf) => {
   // takes keyframe string (e.g. '0%, 19%')
@@ -160,7 +160,7 @@ function sortKeyframes (targets, id) {
   targets[id] = sortedKeyframes
 }
 
-function addStartAndEndKeyframes (targets, id) {
+function addStartAndEndKeyframes (id) {
   // add a 0% & 100% keyframe to each animation so they start in the
   // correct initial position and hold at the end
 
@@ -180,7 +180,7 @@ function addStartAndEndKeyframes (targets, id) {
   sortKeyframes(targets, id)
 }
 
-function convertObjectToCss (targets, targetIds) {
+function convertObjectToCss (targetIds) {
   let animDetails = JSON.stringify(targets)
 
   // remove quotation marks
