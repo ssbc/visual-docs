@@ -1,10 +1,12 @@
 // currently, all elements that are animated must have an id.
 // Add ids if they're missing.
 
+// This script currently assumes an anime timeline called 'tl'
+
 const timelineDuration = tl.duration
 const targets = {}
 
-function logAnimations (anim) {
+function getAnimations (anim) {
   const sectionOffset = anim.timelineOffset
   for (const animation of anim.animations) {
     const targetId = animation.animatable.target.id
@@ -32,6 +34,14 @@ function logAnimations (anim) {
   }
 }
 
+// Each section of the timeline has its own anim object with all its details
+
+for (const anim of tl.children) {
+  getAnimations(anim)
+}
+
+// Now that the 'targets' object has been completed, it can be converted to valid CSS
+
 function timelineComplete () {
   const targetIds = Object.keys(targets)
 
@@ -42,6 +52,10 @@ function timelineComplete () {
 
   convertObjectToCss(targets, targetIds)
 }
+
+timelineComplete()
+
+// component functions
 
 function writeFromAndToValues (tween, animatedProperty, fromValues, toValues) {
   // anime adds 'px' to strokeDashoffset values for some reason
@@ -212,9 +226,3 @@ function convertObjectToCss (targets, targetIds) {
 
   console.log('CSS animations: ', cssAnimations)
 }
-
-for (const anim of tl.children) {
-  logAnimations(anim)
-}
-
-timelineComplete()
