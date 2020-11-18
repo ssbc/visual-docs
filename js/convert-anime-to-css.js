@@ -1,14 +1,7 @@
 // currently, all elements that are animated must have an id.
 // Add ids if they're missing.
 
-// to be set in const tl:
-// autoplay: false,
-// loop: false,
-
-// to be added to each timeline section:
-// changeBegin: function(anim) { logAnimations(anim) },
-
-let cumulativeTimelineDuration = 0
+const timelineDuration = tl.duration
 const targets = {}
 
 function logAnimations (anim) {
@@ -35,20 +28,15 @@ function logAnimations (anim) {
       } else {
         addValuesToPropertyObject(targets, targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
       }
-
-      cumulativeTimelineDuration = Math.round((animation.duration + sectionOffset) * 100 + Number.EPSILON) / 100
-      console.log('timeline duration:', cumulativeTimelineDuration)
     }
   }
 }
 
 function timelineComplete () {
-  console.log('total timeline duration:', cumulativeTimelineDuration)
-
   const targetIds = Object.keys(targets)
 
   targetIds.forEach(id => {
-    convertToPercentageKeyframes(targets, id)
+    convertToPercentageKeyframes(id)
     addStartAndEndKeyframes(targets, id)
   })
 
@@ -118,13 +106,14 @@ function addValuesToPropertyObject (targets, targetId, animatedProperty, tweenSt
   }
 }
 
-function convertToPercentageKeyframes (targets, id) {
+function convertToPercentageKeyframes (id) {
   const absoluteKeyframes = Object.keys(targets[id])
+
   let percentageKeyframe = ''
 
   // convert absolute time keyframes to percentages
   absoluteKeyframes.forEach(keyframe => {
-    percentageKeyframe = Math.round(keyframe / cumulativeTimelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
+    percentageKeyframe = Math.round(keyframe / timelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
 
     targets[id][percentageKeyframe] = targets[id][keyframe]
     delete targets[id][keyframe]
@@ -217,11 +206,15 @@ function convertObjectToCss (targets, targetIds) {
 
   targetIds.forEach((id, index) => { targetIds[index] = '#' + id })
   const selectorList = targetIds.toString()
-  const durationTimingDeclaration = ' {\n\tanimation-duration:' + cumulativeTimelineDuration + 'ms;\n\tanimation-timing-function: ease-in-out;\n\tanimation-iteration-count: infinite;\n}\n'
+  const durationInSeconds = Math.round((timelineDuration) / 10 + Number.EPSILON) / 100
+  const durationTimingDeclaration = ' {\n\tanimation-duration:' + durationInSeconds + 's;\n\tanimation-timing-function: ease-in-out;\n\tanimation-iteration-count: infinite;\n}\n'
   const cssAnimations = selectorList + durationTimingDeclaration + animDetails
 
   console.log('CSS animations: ', cssAnimations)
 }
 
-tl.finished.then(timelineComplete)
-tl.play()
+for (const anim of tl.children) {
+  logAnimations(anim)
+}
+
+timelineComplete()
