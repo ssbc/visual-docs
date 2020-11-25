@@ -1,9 +1,6 @@
-# Rubber Ducky
-An explanation of what I'm trying to do with the script, in order to clarify things for myself and allow others to help me.
+# Rubber Ducky (How the script works)
 
-![](https://upload.wikimedia.org/wikipedia/commons/d/d5/Rubber_duck_assisting_with_debugging.jpg)
-
-[_'Rubber Duck debugging'_ on Wikipedia](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
+An explanation of what I'm trying to do with the script and how I'm going about it, in order to clarify things for myself and allow others to help me.
 
 To get a quick general overview of how anime.js timelines vs CSS animations work, I recommend reading the corresponding sections of the [Editing Animations](../documentation/Editing-Animations.md) documentation. But the core difference is that an anime.js timeline lists every change _chronologically_, eg:
 ```javascript
@@ -75,22 +72,9 @@ CSS gets _way harder_ to read as an animation gets complex, and can be a real sh
 
 ## How the script works
 
-Anime.js provides a few useful [Callbacks & Promises](https://animejs.com/documentation/#update) which are fired at different points in the animation and are all passed the `anim` object. For the following timeline section, I'm logging `anim`, called at `changeBegin`:
+You can log an anime.js `timeline` object to the console and see that it contains `children`, one for every one of its `.add({})` chronological sections, which seems to be referred to as an `anim` object in anime.js.
 
-```javascript
-.add({
-  targets: 'circle',
-  changeBegin: function(anim) {
-    logAnimations(anim)
-    console.log(anim);
-  },
-  duration: 300,
-  opacity: [0, 1]
-  translateX: [0, 10]
-}, 1000)  //this means the section starts 1000ms into the timeline
-```
-
-In this case, `anim` looks kinda like this:
+An `anim` looks kinda like this:
 
 ```javascript
 {
@@ -209,7 +193,7 @@ In this case, `anim` looks kinda like this:
 ```
 
 So my general approach for the script is:
-1. Grab the data that I need from the `anim` object
+1. Grab the data that I need from each `anim` object in the `timeline`
 2. Perform calculations on that data where necessary
 3. Put the data into an object with the same general shape as a CSS animation declaration
 4. RegEx the shit out of it to make it work

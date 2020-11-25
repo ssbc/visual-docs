@@ -5,6 +5,7 @@
 
 const timelineDuration = tl.duration
 const targets = {}
+const easings = {}
 
 function getAnimations (anim) {
   const sectionOffset = anim.timelineOffset
@@ -15,12 +16,15 @@ function getAnimations (anim) {
     const toValues = []
 
     // Without an id, keyframes will be written for an empty target.
-    if (!targetId) console.log('WARNING: missing id property for ' + animation.animatable.target.tagName + ' element in #' + animation.animatable.target.parentNode.id)
+    if (!targetId) console.log('⚠️ WARNING: missing id property for ' + animation.animatable.target.tagName + ' element in #' + animation.animatable.target.parentNode.id)
 
     for (const tween of animation.tweens) {
       const tweenStart = tween.start + tween.delay + sectionOffset
       const tweenEnd = tween.end + sectionOffset
       const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
+
+      if (!easings[targetId]) easings[targetId] = []
+      easings[targetId].push(getEasingName(tween))
 
       writeFromAndToValues(tween, animatedProperty, fromValues, toValues)
       createKeyframeObjects(targetId, tweenStart, tweenEnd)
@@ -46,6 +50,7 @@ function timelineComplete () {
   const targetIds = Object.keys(targets)
 
   targetIds.forEach(id => {
+    determineEasing(id)
     convertToPercentageKeyframes(id)
     addStartAndEndKeyframes(id)
   })
@@ -56,6 +61,55 @@ function timelineComplete () {
 timelineComplete()
 
 // component functions
+
+function getEasingName (tween) {
+  const fingerprint = [tween.easing(0.2), tween.easing(0.7)].join()
+  const easingLookup = {
+    '0.2,0.7': 'linear',
+    '0.04894348370484647,0.5460095002604531': 'easeInSine',
+    '0.30901699437494745,0.8910065241883679': 'easeOutSine',
+    '0.09549150281252627,0.7938926261462365': 'easeInOutSine',
+    '0.29389262614623657,0.5954915028125263': 'easeOutInSine',
+    '0.020204102886728803,0.285857157145715': 'easeInCirc',
+    '0.5999999999999999,0.9539392014169457': 'easeOutCirc',
+    '0.041742430504416006,0.8999999999999999': 'easeInOutCirc',
+    '0.4,0.541742430504416': 'easeOutInCirc',
+    '-0.05600000000000001,0.04899999999999982': 'easeInBack',
+    '0.7439999999999998,1.099': 'easeOutBack',
+    '-0.064,1.036': 'easeInOutBack',
+    '0.536,0.436': 'easeOutInBack',
+    '0.06,0.31937499999999985': 'easeInBounce',
+    '0.30249999999999977,0.9306249999999998': 'easeOutBounce',
+    '0.11375000000000002,0.9550000000000001': 'easeInOutBounce',
+    '0.45499999999999996,0.61375': 'easeOutInBounce',
+    '-0.0031602226342771393,-0.10112712429686835': 'easeInElastic',
+    '1.2022542485937366,1.0063204452685544': 'easeOutElastic',
+    '0.0024141952685542796,0.9903432189257829': 'easeInOutElastic',
+    '0.4903432189257829,0.5024141952685542': 'easeOutInElastic',
+    '0.04000000000000001,0.48999999999999994': 'easeInQuad',
+    '0.3599999999999999,0.9099999999999999': 'easeOutQuad',
+    '0.08000000000000002,0.82': 'easeInOutQuad',
+    '0.32,0.58': 'easeOutInQuad',
+    '0.008000000000000002,0.3429999999999999': 'easeInCubic',
+    '0.4879999999999999,0.973': 'easeOutCubic',
+    '0.03200000000000001,0.8919999999999999': 'easeInOutCubic',
+    '0.392,0.532': 'easeOutInCubic',
+    '0.0016000000000000007,0.24009999999999992': 'easeInQuart',
+    '0.5903999999999998,0.9919': 'easeOutQuart',
+    '0.012800000000000006,0.9351999999999999': 'easeInOutQuart',
+    '0.43520000000000003,0.5128': 'easeOutInQuart',
+    '0.0003200000000000002,0.16806999999999994': 'easeInQuint',
+    '0.6723199999999998,0.99757': 'easeOutQuint',
+    '0.005120000000000003,0.96112': 'easeInOutQuint',
+    '0.46112,0.50512': 'easeOutInQuint',
+    '0.00006400000000000004,0.11764899999999995': 'easeInExpo',
+    '0.7378559999999998,0.999271': 'easeOutExpo',
+    '0.002048000000000001,0.976672': 'easeInOutExpo',
+    '0.476672,0.502048': 'easeOutInExpo'
+  }
+
+  return easingLookup[fingerprint]
+}
 
 function writeFromAndToValues (tween, animatedProperty, fromValues, toValues) {
   // anime adds 'px' to strokeDashoffset values for some reason
@@ -120,6 +174,31 @@ function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, twee
   }
 }
 
+function determineEasing (id) {
+  const easingNames = new Set(easings[id])
+
+  if (easingNames.size > 1) {
+    console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingNames].join(', ')}'`)
+
+    const easingFrequency = {}
+
+    for (const name of easingNames) {
+      const occurrences = easings[id].filter(x => x === name).length
+      easingFrequency[name] = occurrences
+    }
+
+    const highestNoOfOccurrences = Object
+      .values(easingFrequency)
+      .sort((a, b) => (a > b) ? -1 : 1)[0]
+    const mostFrequentEasings = Object.keys(easingFrequency).filter(key => easingFrequency[key] === highestNoOfOccurrences)
+
+    console.log(`🔍️ most frequent easing: '${[...mostFrequentEasings].join(', ')}'`)
+    console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for #${id}'s animation.`)
+  } else {
+    console.log(`#${id} easing: '${[...easingNames].join(', ')}'`)
+  }
+}
+
 function convertToPercentageKeyframes (id) {
   const absoluteKeyframes = Object.keys(targets[id])
 
@@ -132,6 +211,26 @@ function convertToPercentageKeyframes (id) {
     targets[id][percentageKeyframe] = targets[id][keyframe]
     delete targets[id][keyframe]
   })
+}
+
+function addStartAndEndKeyframes (id) {
+  // add a 0% & 100% keyframe to each animation so they start in the
+  // correct initial position and hold at the end
+
+  const percentageKeyframes = Object.keys(targets[id])
+  const oldFirstKeyframe = percentageKeyframes[0]
+  const oldLastKeyframe = percentageKeyframes[percentageKeyframes.length - 1]
+  if (oldFirstKeyframe !== '0%') {
+    const newFirstKeyframe = '0%, ' + oldFirstKeyframe
+    targets[id][newFirstKeyframe] = targets[id][oldFirstKeyframe]
+    delete targets[id][oldFirstKeyframe]
+  }
+  if (oldLastKeyframe !== '100%') {
+    const newLastKeyframe = oldLastKeyframe + ', 100%'
+    targets[id][newLastKeyframe] = targets[id][oldLastKeyframe]
+    delete targets[id][oldLastKeyframe]
+  }
+  sortKeyframes(id)
 }
 
 function sortKeyframes (id) {
@@ -158,26 +257,6 @@ function sortKeyframes (id) {
       }
     }, {}) // here be the empty object that starts the reduce loop
   targets[id] = sortedKeyframes
-}
-
-function addStartAndEndKeyframes (id) {
-  // add a 0% & 100% keyframe to each animation so they start in the
-  // correct initial position and hold at the end
-
-  const percentageKeyframes = Object.keys(targets[id])
-  const oldFirstKeyframe = percentageKeyframes[0]
-  const oldLastKeyframe = percentageKeyframes[percentageKeyframes.length - 1]
-  if (oldFirstKeyframe !== '0%') {
-    const newFirstKeyframe = '0%, ' + oldFirstKeyframe
-    targets[id][newFirstKeyframe] = targets[id][oldFirstKeyframe]
-    delete targets[id][oldFirstKeyframe]
-  }
-  if (oldLastKeyframe !== '100%') {
-    const newLastKeyframe = oldLastKeyframe + ', 100%'
-    targets[id][newLastKeyframe] = targets[id][oldLastKeyframe]
-    delete targets[id][oldLastKeyframe]
-  }
-  sortKeyframes(targets, id)
 }
 
 function convertObjectToCss (targetIds) {

@@ -3,7 +3,7 @@
 This is a helper script to convert an anime.js timeline into CSS animation, currently in a very raw stage, which just logs data to the browser console.
 
 ## What does it do?
-- calculates the total duration of the timeline
+- gets the total duration of the timeline
 - gets the `id` of each target (animated element) - they'll all need ids for now.
 - converts relative time values to absolute values, then to percentages of total duration
 - lists all keyframes, animated property and value changes for each target
@@ -15,25 +15,7 @@ Here's what you need to do currently - I'm aiming to automate many of these step
 
 ## Prepare the SVG file
 - Paste the the contents of _'convert-anime-to-css.js'_ file at the bottom of the `<script>` section of the SVG.
-- Add a function that uses the `changeBegin` hook of each timeline section, calling `logAnimations` at the start of each section. (You can use find-and-replace to put it between all instances of `.add({` and `targets:`)
-```javascript
-.add({
-  changeBegin: function(anim) { logAnimations(anim) },
-  targets: '#light-a-on',
-  opacity: [0, 1],
-})
-```
-
-- in the timeline declaration, set `loop:` and `autoplay:` to `false`
-```javascript
-const tl = anime.timeline({
-  autoplay: false,
-  loop: false,
-  duration: 500,
-  easing: 'easeInOutQuad'
-})
-```
-
+- if your anime timeline is not called `tl`, rename it to `tl` (or replace the references to `tl` in the script to your timeline name)
 - Ensure that your animation target elements in the SVG always have an `id`.
 For example, `targets: '#lights > circle'` (all `circle` elements that are direct descendants of `#lights`) won't convert properly if the `circle` elements don't have ids.
 ```xml
@@ -57,19 +39,20 @@ Give each target an id, and then `targets: '#lights > circle'` will convert nice
 
 ## Log animations and create CSS code
 
-Now you can open the SVG in a browser - run the animation all the way through, and open the Console in your browser dev tools.
+Now you can open the SVG in a browser, and open the Console in your browser dev tools.
 Then you can copy the logged CSS animation and paste it into the `<style>` section of your SVG.
 
 ## Manual fixes
 
-- convert and combine any `translate`, `rotate`, `scale`, and `skew` properties into a single `transform` property, eg:
+- if there's anything funny happening with the animation, you may need to change the order of some `transform` properties (`translate`, `rotate`, `scale`, and `skew`), i.e.:
 ```css
-  10% { scale: 0; translate: 2px, 4px; }
+  10% { transform: scale(2) translate(20px, 40px); }
 ```
-becomes:
+is quite different to:
 ```css
-  10% { transform: scale(0) translate(2px, 4px); }
+  10% { transform: translate(20px, 40px) scale(2); }
 ```
+(CSS applies these transforms in order from right-to-left)
 
 - At the top of the CSS Animations text there's a declaration about the duration, easing and fill-mode of the animations, it looks like this:
 ```css
@@ -79,10 +62,11 @@ becomes:
   animation-iteration-count: infinite;
 }
 ```
-In your anime.js animated SVG, you can use the Find functionality of your text editor to check if different timing functions are being used, or if all sections are the same. Look for "easing" in your anime.js document to see where it is declared. Anytime an animation's easing deviates from your timeline's default, you can declare the `animation-timing-function` separately, eg:
+Currently the script determines easing/timing-function for each target and logs the easing name to the console. This will be automatically applied soon!
+Anytime an animation's easing deviates from your timeline's default, you can declare the `animation-timing-function` separately, eg:
 ```css
 #router, #light, #arrow-a, #arrow-b, #arrow-c, #internet-symbol {
-  animation-duration: 46.6s; /* You can convert the duration from milliseconds to seconds to make it more human-friendly */
+  animation-duration: 46.6s;
   animation-iteration-count: infinite;
 }
 #router, #light, #internet-symbol { animation-timing-function: ease-in-out; }
