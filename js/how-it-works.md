@@ -1,4 +1,4 @@
-# Rubber Ducky (How the script works)
+# How the script works
 
 An explanation of what I'm trying to do with the script and how I'm going about it, in order to clarify things for myself and allow others to help me.
 
@@ -196,4 +196,4 @@ So my general approach for the script is:
 1. Grab the data that I need from each `anim` object in the `timeline`
 2. Perform calculations on that data where necessary
 3. Put the data into an object with the same general shape as a CSS animation declaration
-4. RegEx the shit out of it to make it work
+4. Do a whole lot of nested looping and string manipulation to format ithe object as CSS

@@ -1,26 +1,30 @@
-// currently, all elements that are animated must have an id.
-// Add ids if they're missing.
-
-// This script currently assumes an anime timeline called 'tl'
+// This script assumes an anime timeline called 'tl'
 
 const timelineDuration = tl.duration
 const targets = {}
 const easings = {}
 
-function getAnimations (anim) {
-  const sectionOffset = anim.timelineOffset
+// Each section of the timeline has its own anim object with all its details
+for (const anim of tl.children) {
+  getAnimationData(anim)
+}
+// Now that the 'targets' and `easings` objects are populated, they are converted to valid CSS
+convertDataToCss()
+
+// core functions
+
+function getAnimationData (anim) {
+  assignMissingIds(anim)
+
   for (const animation of anim.animations) {
     const targetId = animation.animatable.target.id
     const animatedProperty = animation.property
     const fromValues = []
     const toValues = []
 
-    // Without an id, keyframes will be written for an empty target.
-    if (!targetId) console.log('⚠️ WARNING: missing id property for ' + animation.animatable.target.tagName + ' element in #' + animation.animatable.target.parentNode.id)
-
     for (const tween of animation.tweens) {
-      const tweenStart = tween.start + tween.delay + sectionOffset
-      const tweenEnd = tween.end + sectionOffset
+      const tweenStart = tween.start + tween.delay + anim.timelineOffset
+      const tweenEnd = tween.end + anim.timelineOffset
       const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
 
       if (!easings[targetId]) easings[targetId] = []
@@ -38,31 +42,55 @@ function getAnimations (anim) {
   }
 }
 
-// Each section of the timeline has its own anim object with all its details
-
-for (const anim of tl.children) {
-  getAnimations(anim)
-}
-
-// Now that the 'targets' object has been completed, it can be converted to valid CSS
-
-function timelineComplete () {
+function convertDataToCss () {
   const targetIds = Object.keys(targets)
 
   targetIds.forEach(id => {
-    determineEasing(id)
+    easings[id] = determineEasing(id)
+    easings[id] = convertEasingToBezier(id)
     convertToPercentageKeyframes(id)
     addStartAndEndKeyframes(id)
   })
+  const timingDeclaration = combineTargetsAndDuration(targetIds)
+  const easingDeclaration = listTargetsForEachEasing()
+  const keyframesDeclaration = formatKeyframesAsCss()
 
-  convertObjectToCss(targetIds)
+  console.log('CSS animations:', `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
 }
-
-timelineComplete()
 
 // component functions
 
+function assignMissingIds (anim) {
+  let uniqueIdLetter = 'a'
+
+  for (const animation of anim.animations) {
+    // Without an id, keyframes will be written for an empty target
+    if (!animation.animatable.target.id) {
+      const element = animation.animatable.target.tagName
+      const parent = animation.animatable.target.parentNode.id
+      let generatedId = `${parent}-${element}-${uniqueIdLetter}`
+
+      console.log('⚠️ WARNING: missing id property for ' + element + ' element in #' + parent)
+
+      // check if the proposed id already exists
+      while (document.getElementById(generatedId)) {
+        uniqueIdLetter = nextChar(uniqueIdLetter)
+        generatedId = `${parent}-${element}-${uniqueIdLetter}`
+      }
+
+      console.log(`giving target an id of '${generatedId}'`)
+      animation.animatable.target.setAttribute('id', generatedId)
+    }
+  }
+}
+
+function nextChar (letter) {
+  return String.fromCharCode(letter.charCodeAt(0) + 1)
+}
+
 function getEasingName (tween) {
+  // TODO: add cubicBezier easing
+  // TODO: add steps() easing
   const fingerprint = [tween.easing(0.2), tween.easing(0.7)].join()
   const easingLookup = {
     '0.2,0.7': 'linear',
@@ -142,8 +170,6 @@ function addValuesToTransformObject (targetId, animatedProperty, tweenStart, twe
       enumerable: true
     })
   }
-  // if it does exist already, um, do nothing for now...
-  // TODO: find out what is happening if it does exist!
 
   // add a 'transform' object to the ending keyframe, if it doesn't exist yet
   if (!targets[targetId][tweenEnd].transform) targets[targetId][tweenEnd].transform = { }
@@ -194,8 +220,60 @@ function determineEasing (id) {
 
     console.log(`🔍️ most frequent easing: '${[...mostFrequentEasings].join(', ')}'`)
     console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for #${id}'s animation.`)
+    return mostFrequentEasings[0]
   } else {
-    console.log(`#${id} easing: '${[...easingNames].join(', ')}'`)
+    return easingNames.values().next().value
+  }
+}
+
+function convertEasingToBezier (id) {
+  const easingName = easings[id]
+  const validEasings = {
+    linear: 'linear',
+    easeInSine: 'cubic-bezier(0.12, 0, 0.39, 0)',
+    easeOutSine: 'cubic-bezier(0.61, 1, 0.88, 1)',
+    easeInOutSine: 'cubic-bezier(0.37, 0, 0.63, 1)',
+    easeInQuad: 'cubic-bezier(0.11, 0, 0.5, 0)',
+    easeOutQuad: 'cubic-bezier(0.5, 1, 0.89, 1)',
+    easeInOutQuad: 'cubic-bezier(0.45, 0, 0.55, 1)',
+    easeInCubic: 'cubic-bezier(0.32, 0, 0.67, 0)',
+    easeOutCubic: 'cubic-bezier(0.33, 1, 0.68, 1)',
+    easeInOutCubic: 'cubic-bezier(0.65, 0, 0.35, 1)',
+    easeInQuart: 'cubic-bezier(0.5, 0, 0.75, 0)',
+    easeOutQuart: 'cubic-bezier(0.25, 1, 0.5, 1)',
+    easeInOutQuart: 'cubic-bezier(0.76, 0, 0.24, 1)',
+    easeInQuint: 'cubic-bezier(0.64, 0, 0.78, 0)',
+    easeOutQuint: 'cubic-bezier(0.22, 1, 0.36, 1)',
+    easeInOutQuint: 'cubic-bezier(0.83, 0, 0.17, 1)',
+    easeInExpo: 'cubic-bezier(0.7, 0, 0.84, 0)',
+    easeOutExpo: 'cubic-bezier(0.16, 1, 0.3, 1)',
+    easeInOutExpo: 'cubic-bezier(0.87, 0, 0.13, 1)',
+    easeInCirc: 'cubic-bezier(0.55, 0, 1, 0.45)',
+    easeOutCirc: 'cubic-bezier(0, 0.55, 0.45, 1)',
+    easeInOutCirc: 'cubic-bezier(0.85, 0, 0.15, 1)',
+    easeInBack: 'cubic-bezier(0.36, 0, 0.66, -0.56)',
+    easeOutBack: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+    easeInOutBack: 'cubic-bezier(0.68, -0.6, 0.32, 1.6)'
+  }
+  const invalidEasings = [
+    'easeInElastic',
+    'easeOutElastic',
+    'easeInOutElastic',
+    'easeInBounce',
+    'easeOutBounce',
+    'easeInOutBounce'
+  ]
+
+  if (validEasings[easingName]) {
+    return validEasings[easingName]
+  }
+  if (invalidEasings.includes(easingName)) {
+    console.log(`⚠️ WARNING! '${easingName}' cannot be implemented as a CSS timing function.
+See https://easings.net/#${easingName} for more details. Setting #${id}'s easing to 'linear'.`)
+    return 'linear'
+  } else {
+    console.log(`¯\\_(ツ)_/¯ Setting #${id}'s easing to 'linear'.`)
+    return 'linear'
   }
 }
 
@@ -259,49 +337,54 @@ function sortKeyframes (id) {
   targets[id] = sortedKeyframes
 }
 
-function convertObjectToCss (targetIds) {
-  let animDetails = JSON.stringify(targets)
+function listTargetsForEachEasing () {
+  const uniqueEasings = new Set(Object.values(easings))
+  const easingTargets = {}
+  let timingFunctions = ''
 
-  // remove quotation marks
-  animDetails = animDetails.replace(/['"]+/g, '')
-  // wrap transform property values in brackets
-  animDetails = animDetails.replace(/(translateX|translateY|translateZ|rotateX|rotateY|rotateZ|rotate|scaleX|scaleY|scaleZ|scale|skewX|skewY|skew|perspective|matrix3d|matrix):(-*[0-9]*\.*[0-9]*[px|deg|%]*),*/g, '$1($2) ')
-  // swap transforms' curly brace to a colon
-  animDetails = animDetails.replace(/(transform:){/g, '$1 ')
-  // add a semicolon to the end of the transform value
-  animDetails = animDetails.replace(/\) }/g, ');')
-  // remove colons, except in css declarations
-  animDetails = animDetails.replace(/:{+/g, '{')
-  // find target names, add #, create an animation-name & keyframes declaration
-  animDetails = animDetails.replace(/([^{%, .]{2,}){/g, '\n#$1 { animation-name: $1-anim; } \n@keyframes $1-anim {\n  ')
-  // find commas in css declarations, replace them with a space
-  animDetails = animDetails.replace(/(?<=[a-z0-9]),/g, ' ')
-  // add a space to the end of css declarations
-  animDetails = animDetails.replace(/(?<=[a-z0-9;])}/g, ' }')
-  // separate css declarations with a semicolon
-  animDetails = animDetails.replace(/([a-zA-ZĀā]*:[0-9][0-9]*\.*[0-9]*[px|deg|%]* *[0-9]*\.*[0-9]*[px|deg|%]* *[0-9]*\.*[0-9]*[px|deg|%]*)/g, '$1; ')
-  animDetails = animDetails.replace(/ ;/g, ';')
-  // remove commas after closing curly braces or semicolons
-  animDetails = animDetails.replace(/(}|;),/g, '$1')
-  // add spaces to keyframe declarations
-  animDetails = animDetails.replace(/%{/g, '% { ')
-  // separate two closing braces with a newline
-  animDetails = animDetails.replace(/}}/g, '}\n}')
-  // separate keyframes with a newline
-  animDetails = animDetails.replace(/}([0-9])/g, '}\n  $1')
-  // camelCase to kebab-case
-  // separate words with hyphen (don't include X/Y/Z transforms)
-  animDetails = animDetails.replace(/([a-z])([A-W])/g, '$1-$2')
-  // TODO: lowercase only the previous match, not the whole string
-  // animDetails.toLowerCase()
-  // remove enclosing curly braces
-  animDetails = animDetails.substring(1, animDetails.length - 1)
+  for (const easing of uniqueEasings) {
+    easingTargets[easing] = []
+    const getTargets = (obj, val) => Object.keys(obj).filter(key => obj[key] === val)
+    easingTargets[easing].push(getTargets(easings, easing))
+  }
+  for (const easing in easingTargets) {
+    const targetList = easingTargets[easing].join().replace(/,/g, ', #')
+    timingFunctions = timingFunctions + `\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`
+  }
+  return timingFunctions
+}
 
-  targetIds.forEach((id, index) => { targetIds[index] = '#' + id })
-  const selectorList = targetIds.toString()
+function formatKeyframesAsCss (targetIds, timingFunctions) {
+  let css = ''
+  for (const target in targets) {
+    css += `\n#${target} { animation-name: ${target}-anim; }\n@keyframes ${target}-anim {\n`
+    for (const keyframe in targets[target]) {
+      css += `  ${keyframe} {`
+      for (const property in targets[target][keyframe]) {
+        if (property === 'transform') {
+          css += ' transform:'
+          for (const transform in targets[target][keyframe][property]) {
+            css += ` ${transform}(${targets[target][keyframe][property][transform]})`
+          }
+          css += ';'
+        } else {
+          const kebabCaseProperty = `${property}`
+            .replace(/([a-z])([A-Z])/g, '$1-$2')
+            .toLowerCase()
+          css += ` ${kebabCaseProperty}: ${targets[target][keyframe][property]};`
+        }
+      }
+      css += ' }\n'
+    }
+    css += '}\n'
+  }
+  return css
+}
+
+function combineTargetsAndDuration (targetIds) {
+  const selectorList = '#' + targetIds.join(', #')
   const durationInSeconds = Math.round((timelineDuration) / 10 + Number.EPSILON) / 100
-  const durationTimingDeclaration = ' {\n\tanimation-duration:' + durationInSeconds + 's;\n\tanimation-timing-function: ease-in-out;\n\tanimation-iteration-count: infinite;\n}\n'
-  const cssAnimations = selectorList + durationTimingDeclaration + animDetails
+  const durationIterationDeclaration = ' {\n  animation-duration:' + durationInSeconds + 's;\n  animation-iteration-count: infinite;\n}\n'
 
-  console.log('CSS animations: ', cssAnimations)
+  return selectorList + durationIterationDeclaration
 }
