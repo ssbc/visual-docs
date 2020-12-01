@@ -1,58 +1,55 @@
-<svg id="multiple-pātaka"
+<svg id="multiple-pātaka-aotearoa"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 1000 1000"
-     width="800px"
-     style="border: 1px solid hsl(0, 0%, 50%); margin: auto;">
-
-  <title>Multiple Pātaka</title>
+     style="border:1px gray solid">
 
   <style>
     /* <![CDATA[ */
-    @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
-    text { font-family: 'Dosis', sans-serif; }
-    :root {
-      --group-b-outline: hsl(42, 80%, 20%);
-      --group-b-color: hsl(42, 74.9%, 56.3%);
-      --group-b-highlight: hsl(42, 90%, 75%);
-      --group-b-tint: hsl(42, 90%, 95%);
+      @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+      text { font-family: 'Dosis', sans-serif; }
+      :root {
+       --group-b-outline: hsl(42, 80%, 20%);
+       --group-b-color: hsl(42, 74.9%, 56.3%);
+       --group-b-highlight: hsl(42, 90%, 75%);
+       --group-b-tint: hsl(42, 90%, 95%);
 
-      --icon-bg-color: hsl(180, 25.4%, 40%);
-      --group-a-outline: hsl(180, 25.4%, 24.7%);
-      --group-a-color: hsl(182, 25.5%, 50%);
-      --group-a-highlight: hsl(182, 55%, 75%);
-      --group-a-tint: hsl(182, 95%, 95%);
-      --group-a-medium-tint: hsl(182, 30%, 65%);
+       --icon-bg-color: hsl(180, 25.4%, 40%);
+       --group-a-outline: hsl(180, 25.4%, 24.7%);
+       --group-a-shade: hsl(182, 20%, 30%);
+       --group-a-color: hsl(182, 25.5%, 50%);
+       --group-a-highlight: hsl(182, 55%, 75%);
+       --group-a-tint: hsl(182, 95%, 95%);
+       --group-a-medium-tint: hsl(182, 30%, 65%);
 
-      --group-c-outline: hsl(360, 85%, 22%);
-      --group-c-symbol-color: hsl(360, 65.4%, 42%);
-      --group-c-color: hsl(360, 70%, 60%);
-      --group-c-files: hsl(360, 65.4%, 52%);
-      --group-c-highlight: hsl(360, 85%, 75%);
-      --group-c-tint: hsl(0, 85%, 95%);
+       --group-c-outline: hsl(360, 85%, 22%);
+       --group-c-symbol-color: hsl(360, 65.4%, 42%);
+       --group-c-color: hsl(360, 70%, 60%);
+       --group-c-files: hsl(360, 65.4%, 52%);
+       --group-c-highlight: hsl(360, 85%, 75%);
+       --group-c-tint: hsl(0, 85%, 95%);
 
-      --pātaka-color: hsl(360, 65.4%, 42%);
-      --pātaka-label-color: hsl(360, 65.4%, 52%);
+       --pātaka-color: hsl(360, 65.4%, 42%);
+       --pātaka-label-color: hsl(360, 65.4%, 52%);
 
-      --icon-bg-color: hsl(180, 25.4%, 40%);
-      --outline-color: hsl(0, 0%, 22%);
-      --white: hsl(0, 0%, 100%);
-      --mid-grey: hsl(0, 0%, 41.2%);
-      --mid-light-grey: hsl(0, 0%, 60%);
-      --encrypted-color: hsl(0, 0%, 80%);
-      --light-grey: hsl(0, 0%, 90%);
-      --devices-color: hsl(0, 0%, 29.8%);
-      --pounamu: hsl(118, 100.0%, 9.4%);
-    }
+       --icon-bg-color: hsl(180, 25.4%, 40%);
+       --outline-color: hsl(0, 0%, 22%);
+       --white: hsl(0, 0%, 100%);
+       --mid-grey: hsl(0, 0%, 41.2%);
+       --mid-light-grey: hsl(0, 0%, 60%);
+       --encrypted-color: hsl(0, 0%, 80%);
+       --light-grey: hsl(0, 0%, 90%);
+       --devices-color: hsl(0, 0%, 29.8%);
+       --pounamu: hsl(118, 100.0%, 9.4%);
+      }
     /* ]]> */
   </style>
 
-  <defs id="referenced-elements">
-
+  <defs>
     <g id="devices">
 
       <g id="mobile"
-         stroke-linecap="butt" transform="scale(4)" stroke-width="0.5">
+         stroke-linecap="butt" transform="scale(2)" stroke-width="0.5">
 
         <rect id="mobile_inner-edge"
               width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
@@ -69,191 +66,6 @@
         <rect id="mobile_base"
               fill="none" stroke="var(--outline-color)" stroke-width="0.5"
               width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
-      </g>
-
-      <g id="mobile-icon"
-         transform="scale(0.5)" stroke-width="1">
-        <rect id="mobile-icon_inner-edge"
-              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
-        <rect id="mobile-icon_screen"
-              fill="var(--white)" fill-opacity="0.95" stroke="none"
-              width="20" height="38" x="-10" y="-20"/>
-        <rect id="mobile-icon_base"
-              fill="none" stroke-width="0.5"
-              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
-        <use xlink:href="#follow-symbol" y="-1"/>
-      </g>
-
-      <g id="mobile-icon_onscreen"
-         transform="scale(1.1)" stroke-width="1">
-        <rect id="mobile-icon_onscreen_inner-edge"
-              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
-        <rect id="mobile-icon_onscreen_screen"
-              fill="var(--white)" fill-opacity="0.95" stroke="none"
-              width="20" height="38" x="-10" y="-20"/>
-        <rect id="mobile-icon_onscreen_base"
-              fill="none" stroke-width="0.5"
-              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
-      </g>
-
-      <g id="mobile-follow-mobile"
-         transform="scale(0.75)" stroke-width="1">
-        <rect id="mobile-icon-inner-edge"
-              width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
-        <rect id="mobile-icon-screen"
-              fill="var(--white)" fill-opacity="0.95" stroke="none"
-              width="20" height="38" x="-10" y="-20"/>
-        <rect id="mobile-icon-base"
-              fill="none" stroke-width="0.5"
-              width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
-        <use xlink:href="#follow-symbol" y="-1"/>
-      </g>
-
-      <g id="imac">
-
-        <defs>
-          <path id="stand-shape"
-                d="M70 144.6 h-140.5 c15.7,-14.6 23.6,-22.5 23.6,-38.3 0,-23.6 -7.9,-23.6 -7.9,-23.6
-                  h110.61 s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
-        </defs>
-
-        <use xlink:href="#stand-shape"
-             fill="var(--devices-color)"/>
-        <path id="stand-lit"
-              fill="var(--mid-grey)"
-              d="M-67.5 143.5c13.5-13.5 15.7-16.9 20.8-29.3 31.5 23 61.8 23 93.3 0 4.5 13.5 6.2 14 21.3 29.3z"/>
-        <use xlink:href="#stand-shape"
-             fill="none" stroke="var(--outline-color)"
-             stroke-linejoin="round" stroke-width=".5"/>
-        <rect x="-199.5" y="-144.6"
-              width="398.9" height="243.1" rx="15.7" ry="15.8"
-              fill="var(--devices-color)" stroke="var(--outline-color)"
-              stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
-        <circle cx="0" cy="-136.7" r="3.9"
-                fill="var(--mid-grey)"/>
-        <rect id="imac-screen"
-              x="-191.6" y="-128.1"
-              width="383.2" height="203.7"
-              fill="var(--white)" />
-      </g>
-
-      <g id="imac-icon"
-         transform="scale(0.75)">
-
-        <defs>
-          <path id="stand-shape-icon"
-                d="M7 14.4 h-14.1 c1.6,-1.5 2.4,-2.3 2.4,-3.8 0,-2.4 -0.8,-2.4 -0.8,-2.4
-                  h11.1 s-0.8 0-0.8 2.4c0 1.6 0.8 2.4 2.3 3.8z"/>
-        </defs>
-
-        <use xlink:href="#stand-shape-icon"
-             fill="var(--devices-color)"/>
-        <path id="stand-lit"
-              fill="var(--mid-grey)"
-              d="M-6.8 14.4c1.4-1.4 1.6-1.7 2.1-2.9 3.2 2.3 6.2 2.3 9.3 0 0.5 1.4 0.6 1.4 2.1 2.9z"/>
-        <use xlink:href="#stand-shape-icon"
-             fill="none" stroke="var(--outline-color)"
-             stroke-linejoin="round" stroke-width=".5"/>
-        <rect x="-20" y="-14.5"
-              width="39.9" height="24.3" rx="1.6" ry="1.6"
-              fill="var(--devices-color)" stroke="var(--outline-color)"
-              stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
-        <rect id="imac-screen"
-              x="-19.2" y="-12.8"
-              width="38.3" height="20.4"
-              fill="var(--white)" />
-        <use xlink:href="#follow-symbol" y="-3"
-             fill="var(--pātaka-color)" stroke="var(--pātaka-color)"/>
-      </g>
-
-      <g id="imac-icon_onscreen"
-         transform="scale(1.3)">
-
-        <defs>
-          <path id="stand-shape-icon"
-                d="M7 14.4 h-14.1 c1.6,-1.5 2.4,-2.3 2.4,-3.8 0,-2.4 -0.8,-2.4 -0.8,-2.4
-                  h11.1 s-0.8 0-0.8 2.4c0 1.6 0.8 2.4 2.3 3.8z"/>
-        </defs>
-
-        <use xlink:href="#stand-shape-icon"
-             fill="var(--devices-color)"/>
-        <path id="stand-lit"
-              fill="var(--mid-grey)"
-              d="M-6.8 14.4c1.4-1.4 1.6-1.7 2.1-2.9 3.2 2.3 6.2 2.3 9.3 0 0.5 1.4 0.6 1.4 2.1 2.9z"/>
-        <use xlink:href="#stand-shape-icon"
-             fill="none" stroke="var(--outline-color)"
-             stroke-linejoin="round" stroke-width=".5"/>
-        <rect x="-20" y="-14.5"
-              width="39.9" height="24.3" rx="1.6" ry="1.6"
-              fill="var(--devices-color)" stroke="var(--outline-color)"
-              stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" />
-        <rect id="imac-screen"
-              x="-19.2" y="-12.8"
-              width="38.3" height="20.4"
-              fill="var(--white)" />
-        <use xlink:href="#stroke-pātaka" y="-3" />
-      </g>
-
-      <g id="laptop"
-         transform="scale(6)"
-         stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt" >
-        <path id="laptop-screen-bg"
-               stroke="none"
-               d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
-        <path id="laptop-screen-bg-overlay"
-              stroke="none" fill="var(--outline-color)" fill-opacity=".2"
-              d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v 21.84z"/>
-        <path id="laptop-keyboard-bg"
-              stroke="none"
-              d="m -18.32,8.2 -5.61,4.7 v 1.2 h 47.53 v -1.2 l -5.36,-4.7 z"/>
-        <rect id="laptop-screen"
-              fill="var(--white)" fill-opacity="0.95" stroke="none"
-              x="-18" y="-11"
-              width="36" height="17.67" />
-        <circle id="laptop-camera"
-                fill="var(--mid-light-grey)"
-                cx="0" cy="-12.5" r=".25" />
-        <path id="laptop-keyboard"
-              fill="none" stroke-width=".25"
-              d="m -18,10.13 h 36 m -35,-1 h 33.99 m -35.99,2 h 12 m 14.04,0 h 11.96 m -25.24,0 h 12.5 l 1.24,2 h -15 z"/>
-        <path id="laptop-edge-shadow"
-              fill="none" stroke-width="1.5" opacity=".2"
-              d="m -23.5,13.75 h 47"/>
-        <path id="laptop-front-edge"
-              fill="none" stroke-width=".5"
-              d="m -23.5,13.25 h 47"/>
-        <path id="laptop-outline"
-              fill="none" stroke="var(--outline-color)"
-              d="m 18,8.25 h -36 m -5.75,4.63 5.5,-4.38 v -22 c 0,-0.15 0.09,-0.25 0.25,-0.25 h 36 c 0.15,0 0.25,0.09 0.25,0.25 v 22 l 5.5,4.37 v 1.38 h -47.5 z"/>
-      </g>
-
-      <g id="laptop-icon">
-        <path id="laptop-icon-screen-bg"
-               fill="var(--devices-color)" stroke="none"
-               d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
-        <path id="laptop-icon-keyboard-bg"
-              fill="var(--devices-color)" stroke="none"
-              d="m -18.32,8.2 -5.61,4.7 v 1.1 h 47.53 v -1.1 l -5.36,-4.7 z"/>
-        <rect id="laptop-icon-screen"
-              fill="var(--white)" fill-opacity="0.95" stroke="none"
-              x="-17" y="-11"
-              width="34" height="17.67" />
-        <path id="laptop-icon-outline"
-              fill="none" stroke="var(--outline-color)"
-              d="m 18,8.25 h -36 m -5.75,4.63 5.5,-4.38 v -22 c 0,-0.15 0.09,-0.25 0.25,-0.25 h 36 c 0.15,0 0.25,0.09 0.25,0.25 v 22 l 5.5,4.37 v 1.38 h -47.5 z
-              M -23.75,13.3 h47.5"/>
-      </g>
-
-      <g id="laptop-icon_pātaka"
-         transform="scale(1.56)">
-        <use xlink:href="#laptop-icon"/>
-        <use xlink:href="#stroke-pātaka" y="-2" />
-      </g>
-
-      <g id="laptop-icon_follow">
-        <use xlink:href="#laptop-icon"/>
-        <use xlink:href="#follow-symbol" y="-2.5"
-             fill="var(--pātaka-color)" stroke="var(--pātaka-color)"/>
       </g>
 
       <g id="raspberry-pi"
@@ -421,14 +233,76 @@
       </g>
 
       <g id="pi-screen">
-        <rect x="-46" y="-33"
-              width="92" height="66" rx="2"
+        <rect x="-42" y="-28"
+              width="84" height="58" rx="2"
               fill="var(--white)" stroke="var(--devices-color)"
               stroke-width="4"/>
       </g>
 
+      <g id="laptop"
+         transform="scale(3.2)"
+         stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt" >
+        <path id="laptop-screen-bg"
+               stroke="none"
+               d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
+        <path id="laptop-screen-bg-overlay"
+              stroke="none" fill="var(--outline-color)" fill-opacity=".2"
+              d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v 21.84z"/>
+        <path id="laptop-keyboard-bg"
+              stroke="none"
+              d="m -18.32,8.2 -5.61,4.7 v 1.2 h 47.53 v -1.2 l -5.36,-4.7 z"/>
+        <rect id="laptop-screen"
+              fill="var(--white)" fill-opacity="0.95" stroke="none"
+              x="-18" y="-11"
+              width="36" height="17.67" />
+        <circle id="laptop-camera"
+                fill="var(--mid-light-grey)"
+                cx="0" cy="-12.5" r=".25" />
+        <path id="laptop-keyboard"
+              fill="none" stroke-width=".25"
+              d="m -18,10.13 h 36 m -35,-1 h 33.99 m -35.99,2 h 12 m 14.04,0 h 11.96 m -25.24,0 h 12.5 l 1.24,2 h -15 z"/>
+        <path id="laptop-edge-shadow"
+              fill="none" stroke-width="1.5" opacity=".2"
+              d="m -23.5,13.75 h 47"/>
+        <path id="laptop-front-edge"
+              fill="none" stroke-width=".5"
+              d="m -23.5,13.25 h 47"/>
+        <path id="laptop-outline"
+              fill="none" stroke="var(--outline-color)"
+              d="m 18,8.25 h -36 m -5.75,4.63 5.5,-4.38 v -22 c 0,-0.15 0.09,-0.25 0.25,-0.25 h 36 c 0.15,0 0.25,0.09 0.25,0.25 v 22 l 5.5,4.37 v 1.38 h -47.5 z"/>
+      </g>
+
+      <g id="imac"
+         transform="scale(0.45)">
+
+        <defs>
+          <path id="stand-shape"
+                d="M70 144.6 h-140.5 c15.7,-14.6 23.6,-22.5 23.6,-38.3 0,-23.6 -7.9,-23.6 -7.9,-23.6
+                  h110.61 s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
+        </defs>
+
+        <use xlink:href="#stand-shape"
+             fill="var(--devices-color)"/>
+        <path id="stand-lit"
+              fill="var(--mid-grey)"
+              d="M-67.5 143.5c13.5-13.5 15.7-16.9 20.8-29.3 31.5 23 61.8 23 93.3 0 4.5 13.5 6.2 14 21.3 29.3z"/>
+        <use xlink:href="#stand-shape"
+             fill="none" stroke="var(--outline-color)"
+             stroke-linejoin="round" stroke-width="2"/>
+        <rect x="-199.5" y="-144.6"
+              width="398.9" height="243.1" rx="15.7" ry="15.8"
+              fill="var(--devices-color)" stroke="var(--outline-color)"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        <circle cx="0" cy="-136.7" r="3.9"
+                fill="var(--mid-grey)"/>
+        <rect id="imac-screen"
+              x="-191.6" y="-128.1"
+              width="383.2" height="203.7"
+              fill="var(--white)" />
+      </g>
+
       <g id="servers"
-         style="transform-origin:880px 500px 0px;">
+         transform="scale(-1,1) translate(500)">
 
         <g id="server-frame-back"
           fill="var(--mid-grey)" stroke="var(--devices-color)"
@@ -556,7 +430,7 @@
                fill="var(--pātaka-color)" />
 
           <g id="focused-server-lights"
-             stroke="var(--contrast-highlight-color)" stroke-opacity="0.5" fill="var(--contrast-tint)"
+             stroke="var(--white)" stroke-opacity="0.5" fill="var(--light-grey)"
              stroke-width="1.5">
             <circle id="light-a"
                     cx="-47.6" cy="12.1" r="2.5"/>
@@ -574,9 +448,10 @@
          stroke-linejoin="round">
 
         <g id="stand"
+           transform="scale(-1,1)"
            stroke="var(--outline-color)" stroke-linecap="round"  stroke-width="1">
           <rect id="baseplate"
-                x="-38" y="95.1"
+                x="-39" y="95.1"
                 width="80" height="15" rx="1" ry="1"
                 style="transform-origin: 0px 93.8px 0px;" transform="skewX(50) translate(-12)"
                 fill="var(--mid-grey)" />
@@ -591,6 +466,7 @@
         </g>
 
         <g id="screen-frame"
+           transform="scale(-1,1)"
            stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
           <rect x="-147.6" y="-74.4"
                  width="288" height="142.2" rx="2" ry="2"
@@ -623,7 +499,7 @@
 
     </g>
 
-    <g id="lines-and-symbols">
+    <g id="symbols">
 
       <g id="pātaka-symbol"
          stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" >
@@ -631,89 +507,28 @@
         <path d="M-13.4 25.9v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
       </g>
 
-      <g id="stroke-pātaka"
-         fill="none" stroke="var(--pātaka-color)">
-        <path stroke-width="1.5" d="M-6,1.5L0,-4.5L6,1.5 M-4,-0.5V4 M4,-0.5V4"/>
-        <path d="M0,-6.5V-4 M-5.5,4H5.5 M-3,4V6.5 M3,4V6.5"/>
-      </g>
-
-      <g id="follow-symbol"
-         stroke-linecap="round" stroke-width="1.5">
-        <circle cx="-4" cy="4" r="0.5"/>
-        <path fill="none" d="M-4.25,-0.25 A 4.5,4.5 0 0 1 0.25,4.25"/>
-        <path fill="none" d="M-4.25,-4.25 A 8.5,8.5 0 0 1 4.25,4.25"/>
-      </g>
-
+      <use id="pātaka-symbol-medium"
+           xlink:href="#pātaka-symbol" transform="scale(1.6)"/>
       <use id="pātaka-symbol-large"
-           xlink:href="#pātaka-symbol" transform="scale(2)"/>
-      <path id="pixel-pātaka"
+           xlink:href="#pātaka-symbol" transform="scale(2.2)"/>
+      <path id="pixel-pātaka" transform="scale(0.8)"
             fill="var(--pātaka-color)" stroke="none"
             d="m-26,2 h4v-4h4v-4h4v-4h4v-4h4v-4h4v-8h4v8h4v4h4v4h4v4h4v4h4v4h4v4h-8v8h4v4h-8v8h-4v-8h-20v8h-4v-8h-8v-4h4v-8h-8z
            m12,-4v16h28v-16h-4v-4h-4v-4h-4v-4h-4v4h-4v4h-4v4z"/>
-      <polyline id="mobile-to-first-icon-line"
-                stroke="var(--encrypted-color)" stroke-width="1.5" stroke-dasharray="3,3"
-                points="0,0 14,0"/>
-      <polyline id="first-follow-line"
-                fill="none" stroke="var(--encrypted-color)" stroke-width="1.5"
-                stroke-dasharray="3,3"
-                points="30,-20 0,0"/>
-      <polyline id="second-follow-line"
-                fill="none" stroke="var(--encrypted-color)" stroke-width="1.5"
-                stroke-dasharray="3,3"
-                points="0,0 30,20"/>
-      <polyline id="third-follow-line"
-                fill="none" stroke="var(--encrypted-color)" stroke-width="1.5"
-                stroke-dasharray="3,3"
-                points="0,0 28,38"/>
-    </g>
 
-    <g id="files-and-buttons">
-
-      <g id="file-copy">
-        <path fill="var(--mid-light-grey)"
-              d="M21.4 21.4h-42.8v-42.8h42.8z"/>
-        <path d="M21.4 21.4h-42.8v-42.8h42.8z
-              m6.1-42.8c0-3.4-2.7-6.1-6-6.1h-42.8a6.1 6.1 0 00-6 6v42.8c0 3.3 2.7 6 6 6h42.8c3.4 0 6.1-2.7 6.1-6z"/>
-      </g>
-
-      <g id="image-file"
-         stroke-width="4">
-        <path d="M-14 -16h28c1,0 2,1 2,2
-              v28c0 1-1 2-2 2
-              h-28c-1,0 -2,-1 -2-2
-              v-28c0-1 1-2 2-2z"/>
-        <path fill="none"
-              d="M-8 8l2-2.5 2.1 2.5z
-              M0.4 8l3.8-5 3.8 5z"/>
-      </g>
-
-      <g id="encrypted-file"
-         stroke-width="4"
-         fill="var(--encrypted-color)">
-        <path d="M-14 -16h28c1,0 2,1 2,2
-              v28c0 1-1 2-2 2
-              h-28c-1,0 -2,-1 -2-2
-              v-28c0-1 1-2 2-2z"/>
-      </g>
-
-      <g id="text-file"
-         stroke-width="4">
-        <path d="M-14 -16h18c.5 0 1.3.3 1.5.5l10 10c.4.4.5.9.5 1.5v18c0 1-1 2-2 2h-28c-1,0 -2,-1 -2-2v-28c0-1.2.8-2 2-2z"/>
-        <path d="M-10 -8h14
-                 m-14 8h20
-                 m-20 8h20"/>
-      </g>
-
-      <g id="kuia"
-         transform="scale(.085)">
-
+      <g id="icon_whakapapa-record">
         <clipPath id="outline-circle">
           <circle cx="242.4" cy="242.5" r="242.1"/>
         </clipPath>
 
-        <circle id="kuia-bg"
+        <circle id="whakapapa-bg"
                 cx="242.4" cy="242.5" r="242.1"
                 fill="var(--icon-bg-color)"/>
+      </g>
+
+      <g id="kuia"
+         transform="scale(0.08)">
+        <use xlink:href="#whakapapa-bg"/>
 
         <g clip-path="url(#outline-circle)">
           <path id="skin"
@@ -722,12 +537,9 @@
 
           <g id="kākahu">
             <path d="M62.9 422.3l130.5-32 188.5-60.5 44 67v24l-139.5 86.5s-137.5-4.5-139-5.5-84.5-79.5-84.5-79.5z"/>
-            <path fill="var(--white)"
-                  d="M312 396.8c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
-                  m-43.1-5.7c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
-                  m-14 31.3c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9c1 2.1 0 4.6-2 5.5-.5.3-1.1.4-1.7.4z
-                  M382.1 401.4c-1.6 0-3.1-.9-3.8-2.4L354 346.1a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.8 5.9z
-                  M362 433.3c-1.6 0-3.1-.9-3.8-2.4L333.8 378a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z"/>
+            <path fill="none" stroke="var(--white)"
+                  stroke-width="9" stroke-linecap="round"
+                  d="M232,369 l23 50 m3-55 l12 26 m24-35 l18 38 m25-17 l25 54 m-4-85 l25 54"/>
             <path d="M110.3 419.3l-18.5-58.4 293.4-92.7 18.5 58.4-293.4 92.7zm-8-53l13.4 42.5 277.5-87.6-13.4-42.5-277.5 87.6z"/>
 
             <clipPath id="c">
@@ -782,14 +594,142 @@
         </g>
 
         <path id="chin-outline"
-              fill="var(--mid-grey)"
-              d="M260.8 248.2c-4 2.9-10.4 4.5-17.5 4.5-7.4 0-12.9-1.4-17.2-4.5l-.8-.5c-1.6-1-5.5-3.5-11.2-10.8l-1.7-2.2-1.4-1.8a30 30 0 013.2 12c4.1 4.4 7 6.2 8.4 7.1l.5.4a33.2 33.2 0 0020.1 5.4 36 36 0 0020.4-5.4c1.1-.8 3.7-2.6 7.8-7.2.1-1.2.8-7.8 2.8-11.5a56.7 56.7 0 01-13.4 14.5z"/>
+              fill="none" stroke="var(--mid-grey)" stroke-width="6"
+              d="M 275.6 235.8 c -3.6 5.6 -8.7 11.1 -14.1 15 c -4 3 -10.4 4.5 -17.5 4.5 c -7.4 0 -12.9 -1.4 -17.2 -4.5 c -5.8 -4.2 -10.6 -9.3 -16 -14.4"/>
       </g>
 
-      <g id="add-icon"
-         stroke-width="2" stroke="var(--white)">
-         <circle cx="0" cy="0" r="18"/>
-         <path d="M-12,0 h24 m-12 -12 v24"/>
+      <g id="koro"
+         transform="scale(0.08)">
+        <use xlink:href="#whakapapa-bg"/>
+
+        <g clip-path="url(#outline-circle)">
+          <path fill="var(--white)"
+                d="M205.6 263.4l-3.3-23.3-24-49.3-1.3-27.4 1.3-44 24-44.7 42-2 38 2S295.6 97.4 299 100s2.7 46.7 2.7 46.7l3.4 19.8-.2 17.4-13.2 29.5-17.3 30-13.4 31.3-32.7 1.3-22.7-12.6z"/>
+          <polygon fill="var(--white)"
+                   points="260 490 315 480 295 450 275 450"/>
+          <polygon points="64.1 431.5 77.6 387.9 275.6 453 252.6 518 87.1 496.5 47.1 474.5"/>
+          <polygon points="311.1 430 349.6 512.5 432.1 425.5 403.5 385.5"/>
+          <polygon fill="var(--mid-grey)"
+                   points="271.7 452.9 294.9 383.4 315.3 430 405.8 382.4 374.5 318.7 283.4 389.2 100.1 321.6 78.6 387.3 271.6 452.9"/>
+          <path d="M81.3 388.7a4.4 4.4 0 01-4.1-6L98.5 325a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.6 4.6 0 01-4.2 2.9z"/>
+          <path d="M71.5 413.9a4 4 0 01-1.5-.3 4.3 4.3 0 01-2.6-5.6l31.1-85.1a4.3 4.3 0 015.6-2.6c2.3.8 3.5 3.4 2.6 5.6L75.6 411a4.3 4.3 0 01-4.1 2.9z"/>
+          <path fill="var(--white)"
+                d="M372 325.5s-.5-9.8-19.1-18.6-55.4-9.8-60.3-12.7c-4.9-2.9-11.8-22-11.8-22V235l-3.5.8c-5.9 8.1-11.7 18.2-13.2 20.8-2.2 3.7-24.5 4.6-24.5 4.6s-23-1-25.2-4.6c-1.6-2.6-7.5-12.9-13.4-21.1l-2-.5v37.2s-6.9 19.1-11.8 22-41.7 3.9-60.3 12.7-18.9 18.6-18.9 18.6l186.2 65-3.9-1 81.7-64z"/>
+          <path d="M293.3 394.1l-11.2-2.8 1-.8-178.9-62.4.1-2.8c.1-1.2 1.2-12.3 21.2-21.8 12.2-5.8 31.2-8.3 45.1-10.1 6.3-.8 13.5-1.8 14.9-2.5a61.7 61.7 0 009.9-19.5v-41.2l7.8 1.8.8 1.1c5.3 7.4 10.6 16.3 12.9 20.1l.5.9a79 79 0 0043.8 0l.6-1.1c2.2-3.7 7.4-12.5 12.6-19.6l.8-1.1 9.3-2.1v41.2c3.4 9.3 8 18.4 10 19.5 1.4.7 8.6 1.7 14.9 2.5 13.9 1.8 32.9 4.3 45 10.1 20 9.5 21.1 20.5 21.2 21.8l.1 1.9-81.7 63.9-.7 3zm-180.7-70.8l177.3 61.9 78-61c-1.2-2.7-4.9-8.4-16.5-13.9-11.1-5.3-29.5-7.7-42.9-9.4a63.8 63.8 0 01-17.7-3.5c-5.6-3.4-11.6-19.2-13.3-24l-.2-.6v-30.4c-3.8 5.7-7.3 11.6-9 14.5l-.9 1.4c-3.2 5.4-21.5 6.2-27.5 6.4h-.4c-25-1.1-27.4-5.1-28.2-6.4l-.8-1.3c-1.5-2.6-4.5-7.6-7.8-12.7v28.5l-.2.6c-1.7 4.8-7.7 20.6-13.3 24a63.8 63.8 0 01-17.7 3.5c-13.4 1.8-31.7 4.1-42.9 9.4-10.4 4.9-14.5 10-16 13z"/>
+          <path d="M199.1 238.8c-.2-.4-22.3-35.8-24.3-48.7l-1.1-6.3c-1.2-6.1-2.1-11-.2-17.4 2.1-6.9 3.8-22.1 3.8-22.3l7.3.8c-.1.6-1.8 16-4.1 23.6-1.4 4.7-.7 8.3.4 13.9l1.2 6.5c1.2 8 14.3 31.6 23.3 45.9l-6.3 4zM279.5 238.8l-6.2-3.9c8.9-14.3 22-37.9 23.3-45.9l1.2-6.5c1.1-5.6 1.8-9.2.4-13.9-2.3-7.6-4-22.9-4-23.6l7.3-.8c0 .1 1.7 15.3 3.8 22.3 1.9 6.4 1 11.3-.2 17.4-.4 1.9-.8 3.9-1.1 6.3-2.2 12.8-24.3 48.2-24.5 48.6zM257.5 497.1a4 4 0 01-1.5-.3 4.4 4.4 0 01-2.6-5.7l31.1-85.1c.8-2.3 3.4-3.5 5.6-2.6s3.5 3.4 2.6 5.6l-31.1 85.1c-.6 1.9-2.3 3-4.1 3z"/>
+          <path d="M268.9 455.9l-1.4-.2-187.2-62.3a4.4 4.4 0 01-2.8-5.6 4.4 4.4 0 015.6-2.8l187.2 62.2c2.3.8 3.6 3.3 2.8 5.6a4.4 4.4 0 01-4.2 3.1zM313.4 435.9l-22.9-45.2a4.4 4.4 0 011.9-5.9 4.4 4.4 0 015.9 1.9l18.9 37.3 84.4-44.1c2.2-1.1 4.8-.3 6 1.9s.3 4.8-1.9 6l-92.3 48.1z"/>
+          <path d="M108.9 401.2a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
+          <path fill="var(--white)"
+                d="M118.7 424.7a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM56.7 426.7a4.4 4.4 0 01-4.1-6L73.9 363a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
+          <path d="M157.9 417.9a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7L162.1 415a4.5 4.5 0 01-4.2 2.9z"/>
+          <path fill="var(--white)"
+                d="M167.7 453.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM178.7 511.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM395.1 419.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM440.1 448.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM367.1 490.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.8-.7.4-1.3.5-1.9.5z"/>
+          <path d="M366.6 414.7c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9a4 4 0 01-1.9.4z"/>
+
+          <g fill="none" stroke="var(--outline-color)"
+             stroke-linecap="round" stroke-width="4">
+            <path d="M238.8 189.7c-2.5-8.7 5.8-19.3 22.4-13.4 16.6 5.9 27 30.8 24.2 48"/>
+            <path d="M239.6 192.4c-2.4-8.3 9.4-18.1 22.5-10.1 14.5 8.8 22 30.9 17.2 52.5"/>
+            <path d="M240.2 193.9c-1.9-8 11-13.5 22.3-5.2 13 9.5 19 54.5 2.7 63.9"/>
+          </g>
+
+          <g fill="none" stroke="var(--outline-color)"
+             stroke-linecap="round"  stroke-width="4">
+            <path d="M241 189.9c2.5-8.8-5.8-19.6-22.4-13.6s-27 31.3-24.2 48.6"/>
+            <path d="M240.2 192.6c2.4-8.4-9.4-18.3-22.5-10.3-14.5 8.9-21.9 31.3-17.2 53.2"/>
+            <path d="M239.6 194.1c1.9-8.1-11-13.7-22.3-5.3-13 9.6-19 55.2-2.7 64.7"/>
+          </g>
+
+          <path fill="var(--pounamu)"
+            d="M301.7 191.9s-3.3 6.3-1.3 10.4 3 8.7 3 8.7 5.4 47.9 6.9 52.9c1.5 4.9 4.1 17.3 6.4 17.3s3-5.3 0-25.2-8.2-45.8-8.2-45.8 1.9-19.4-6.8-18.3z"/>
+
+          <g stroke="var(--outline-color)">
+            <path d="M242.1 158.5c-1 0-1.9-.6-2.3-1.6-.1-.3-2.8-7.1-2.6-21.9.1-5.6 3.8-15.2 11.9-23.3 7.2-7.3 20.6-15.9 43.4-15.9 1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5c-21.1 0-33.3 7.8-39.9 14.4a33.4 33.4 0 00-10.4 19.8c-.2 13.6 2.2 19.9 2.2 20 .5 1.3-.1 2.7-1.4 3.2-.3.3-.6.3-.9.3z"/>
+            <path d="M240.9 152.5c-.6-.5-3.6-3.5-2.6-12.5.3-2.7 2-6.6 4.4-10.3 2.1-3.2 5.8-8 11.6-12.3 8-5.9 21.6-12.1 41.5-8.3 1.4.3 2.3 1.6 2 2.9-.3 1.4-1.6 2.3-2.9 2a46.6 46.6 0 00-37.6 7.4c-9.2 6.8-13.7 15.8-14 19.1-.7 6.3.9 8.2.9 8.2l-.1-.1-3.2 3.9z"/>
+            <path d="M242 156.5c-.9 0-1.7-.4-2.2-1.3-.3-.5-2.7-5.2.1-13a38.3 38.3 0 0117.6-17.2 50 50 0 0141.5-1.7c1.3.5 2 1.9 1.5 3.2s-1.9 2-3.2 1.5a45 45 0 00-37.4 1.5 34.3 34.3 0 00-15.2 14.4c-2 5.6-.5 8.8-.4 8.8.7 1.2.3 2.7-.9 3.4-.5.2-.9.4-1.4.4z"/>
+            <path d="M242.3 158.7c-1.1 0-2.1-.7-2.4-1.8-.2-.6-1.5-5.6 2.6-12.4 2.1-3.4 9-9.8 19.7-12.9 8.9-2.7 23-3.8 39.3 6a2.5 2.5 0 01-2.5 4.3c-27-16.2-48.7-.4-52.1 5.2-2.9 4.9-2.1 8.3-2.1 8.4.4 1.3-.4 2.7-1.7 3.1l-.8.1zM230.6 210.5c-1.5.2-2.7-.1-3.5-.4-2-.9-3.4-2.7-3.8-4.9-.4-2.2.5-4.6 2.3-6 1.4-1.1 3.1-1.5 4.6-.8.7.3 1 1.1.8 1.8-.3.7-1.1 1.1-1.8.8-.8-.3-1.5.1-1.9.4-1 .8-1.5 2.2-1.3 3.4.2 1.2 1 2.2 2.1 2.7 1.4.6 3 .2 4.7-1 4.1-3.1 6.5-13.8 5.1-23-.1-.8.4-1.5 1.1-1.6s1.4.4 1.6 1.2c1.6 10.4-1.1 21.9-6.1 25.7a8 8 0 01-3.9 1.7z"/>
+            <path d="M248.9 210.5c1.5.2 2.7-.1 3.5-.4 2-.9 3.4-2.7 3.8-4.9.4-2.2-.5-4.6-2.3-6-1.4-1.1-3.1-1.5-4.6-.8-.7.3-1 1.1-.8 1.8.3.7 1.1 1.1 1.8.8.8-.3 1.5.1 1.9.4 1 .8 1.5 2.2 1.3 3.4-.2 1.2-1 2.2-2.1 2.7-1.4.6-3 .2-4.7-1-4.1-3.1-6.5-13.8-5.1-23 .1-.8-.4-1.5-1.1-1.6s-1.4.4-1.6 1.2c-1.6 10.4 1.1 21.9 6.1 25.7a8 8 0 003.9 1.7zM237.9 158.5l-.9-.2c-1.3-.5-1.9-2-1.4-3.2 0-.1 2.4-6.4 2.2-20 0-3.7-2.9-12.3-10.4-19.8-6.6-6.6-18.8-14.4-39.9-14.4-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5c22.8 0 36.2 8.6 43.4 15.9a38.2 38.2 0 0111.9 23.3c.2 14.8-2.5 21.6-2.6 21.9-.4.9-1.3 1.5-2.3 1.5z"/>
+            <path d="M239.1 152.5l-3.2-3.9-.1.1s1.6-1.9.9-8.2a36 36 0 00-14-19.1 46.6 46.6 0 00-37.6-7.4c-1.4.3-2.7-.6-2.9-2-.3-1.4.6-2.7 2-2.9a51.1 51.1 0 0141.5 8.3c5.8 4.3 9.5 9 11.6 12.3 2.5 3.8 4.1 7.6 4.4 10.3 1 9-2 12-2.6 12.5z"/>
+            <path d="M238 156.5l-1.2-.3a2.6 2.6 0 01-1-3.4c.1-.2 1.6-3.3-.4-8.9-2.4-6.5-21.5-27.1-52.6-15.9-1.3.5-2.7-.2-3.2-1.5s.2-2.7 1.5-3.2a50 50 0 0141.5 1.7 37.8 37.8 0 0117.6 17.2c2.8 7.8.4 12.5.1 13a3 3 0 01-2.3 1.3z"/>
+            <path d="M237.7 158.7l-.7-.1c-1.3-.4-2-1.8-1.7-3.1 0-.2.9-3.5-2.1-8.4-3.4-5.7-25.1-21.4-52.1-5.2-1.2.7-2.7.3-3.4-.9s-.3-2.7.9-3.4a48 48 0 0139.3-6 37 37 0 0119.7 12.9c4.1 6.8 2.7 11.8 2.6 12.4a2.7 2.7 0 01-2.5 1.8z"/>
+          </g>
+
+          <line x1="239.8" x2="239.8" y1="108.2" y2="213.5" fill="none" stroke="var(--white)" stroke-width="5"/>
+          <path fill="var(--pounamu)" stroke="var(--outline-color)"  stroke-width="9"
+            d="M346.9 482.6s-8.5 9-17.1 2.6c-8.7-6.5-21.7-31-41.5-34.3-19.7-3.3-22.6-21.3-22.6-21.3s-15.4.1-18-7.3.2-19.6.2-19.6-6-20.7-29.7-17.4c-11.5 1.6-14.9 3.1-14.9 3.1s-36.1-38 .4-67.3 73.6 22.9 80.6 32.2c22 28.9 24.2 71.5 37.2 92.6 12.5 20.4 15.3 19.1 19.7 20.5 4.5 1.4 14.4 8 5.7 16.2z"/>
+          <path fill="var(--mid-grey)"
+            d="M241.4 50.2c8.1 0 25.9 6.5 37.2 10.3 11.3 3.8 30.2 39.3 35.1 64.7 4.4 22.8-5.2 32.1-8 50.6l-6.9-2.1c-1.3-5.2-6.6-23.1-6.6-25.4 0-3.2 3.7-4.8 3.7-17.6s-13.5-36.2-16.3-41.1c-2.7-4.9-14.6-2.7-28.1-1.1-13.5 1.6-17.3-2.6-17.3-2.6l-1.1-35.7h8.3z"/>
+          <path fill="var(--mid-grey)"
+            d="M237.3 50.2c-8.1 0-25.9 6.5-37.2 10.3s-30.2 39.3-35.1 64.7c-4.4 22.8 5.2 32.1 8 50.6l6.3-1.3c1.3-5.2 6.6-23.1 6.6-25.4 0-3.2-3.1-5.6-3.1-18.5s13.6-36.2 16.3-41.1 14.6-2.7 28.1-1.1 17.3-2.6 17.3-2.6l1.1-35.7-8.3.1z"/>
+          <path d="M414.3 411.8c-1.7 0-3.3-1-4-2.6l-40.2-86.8a4.4 4.4 0 018-3.6l40.2 86.8a4.4 4.4 0 01-4 6.2z"/>
+        </g>
+
+      </g>
+
+      <g id="follow-symbol"
+         stroke-linecap="round" stroke-width="1.5">
+        <circle cx="-4" cy="4" r="0.5"/>
+        <path fill="none" d="M-4.25,-0.25 A 4.5,4.5 0 0 1 0.25,4.25"/>
+        <path fill="none" d="M-4.25,-4.25 A 8.5,8.5 0 0 1 4.25,4.25"/>
+      </g>
+
+    </g>
+
+    <g id="guides-horizontal" opacity="0.5">
+      <line x1="0%" y1="66.67%" x2="100%" y2="66.67%" stroke="hsla(210,50%,70%, 0.6)" id="line911"/>
+      <line x1="0%" y1="50%" x2="1000" y2="50%" stroke="hsla(210,50%,50%, 0.5)" id="line913"/>
+      <line x1="0%" y1="33.33%" x2="100%" y2="33.33%" stroke="hsla(210,50%,70%, 0.6)" id="line915"/>
+    </g>
+
+    <g id="guides-vertical" opacity="0.5">
+      <line x1="33.33%" y1="0%" x2="33.33%" y2="100%" stroke="hsla(210,50%,70%, 0.6)" id="line918"/>
+      <line x1="50%" y1="0%" x2="50%" y2="100%" stroke="hsla(210,50%,50%, 0.5)" id="line920"/>
+      <line x1="66.67%" y1="0%" x2="66.67%" y2="100%" stroke="hsla(210,50%,70%, 0.6)" id="line922"/>
+    </g>
+
+    <g id="masks">
+
+      <mask id="mask_all-pātaka">
+        <rect width="100%" height="100%" fill="#fff" />
+        <use xlink:href="#pātaka-server_filled"/>
+        <use xlink:href="#pātaka_laptop_filled"/>
+        <rect id="monitor-mask"
+              x="330" y="770"
+              width="280" height="145"/>
+      </mask>
+
+      <mask id="mask_pātaka-server">
+        <rect width="100%" height="100%" fill="#fff" />
+        <path id="pātaka-server_filled"
+              transform="translate(468,845) scale(2.33)"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M-17.3 15v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6zM-13.4 25.9v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+      </mask>
+
+      <mask id="mask_pātaka_laptop">
+        <rect width="100%" height="100%" fill="#fff" />
+        <path id="pātaka_laptop_filled"
+              transform="translate(370,176)"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M-17.3 15v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6zM-13.4 25.9v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+      </mask>
+
+      <mask id="mask_pātaka-pi">
+        <rect width="100%" height="100%" fill="#fff" />
+        <path id="pātaka-pi_filled"
+              transform="translate(370, 174) scale(0.86)"
+              d="m-26,2 h4v-4h4v-4h4v-4h4v-4h4v-4h4v-8h4v8h4v4h4v4h4v4h4v4h4v4h4v4h-8v8h4v4h-8v8h-4v-8h-20v8h-4v-8h-8v-4h4v-8h-8z"/>
+      </mask>
+
+    </g>
+
+    <g id="files-and-buttons">
+
+      <g id="encrypted-file"
+         stroke-width="4"
+         fill="var(--encrypted-color)">
+        <path d="M-14 -16h28c1,0 2,1 2,2
+              v28c0 1-1 2-2 2
+              h-28c-1,0 -2,-1 -2-2
+              v-28c0-1 1-2 2-2z"/>
       </g>
 
       <g id="invite-button">
@@ -799,7 +739,7 @@
         </defs>
         <use id="button-standard"
              xlink:href="#button-shape"
-             fill="var(--pātaka-color)"/>
+             />
         <use xlink:href="#follow-symbol" x="-26" fill="var(--white)" stroke="var(--white)" />
 
         <g id="join-pātaka-text"
@@ -808,1281 +748,537 @@
         </g>
 
       </g>
-
-      <g id="follow-notification" >
-        <use xlink:href="#button-shape" fill="none" />
-        <use xlink:href="#follow-symbol" x="-26"/>
-
-        <g id="following-text"
-           stroke="none" font-size="10">
-          <text x="6" y="4" text-anchor="middle">Following</text>
-        </g>
-
-      </g>
-
-      <use id="button_hover"
-           xlink:href="#button-shape"
-           fill="hsla(0,0%,100%,0.4)"/>
     </g>
-
-    <filter id="highlight-blur"
-            x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
-    </filter>
 
   </defs>
 
-  <g id="follow-lines"
-     stroke="var(--mid-light-grey)"
-     stroke-width="4" stroke-dasharray="8,8"
-     marker-start="url(#marker-e)"
-     marker-end="url(#marker-f)">
-    <path id="line_mutual-follow_laptop_a"
-          style="transform-origin: 346px 552px 0px;"
-          d="M 420,460 250,720"/>
-    <path id="line_mutual-follow_laptop_b"
-          style="transform-origin: 500px 556px 0px;"
-          d="M 500,400 500,720"/>
-    <path id="line_mutual-follow_laptop_c"
-          style="transform-origin: 609.5px 551px 0px;"
-          d="M 420,220 810,720"/>
-    <path id="line_mutual-follow_laptop_imac"
-          style="transform-origin: 415.5px 367.5px 0px;"
-          d="M 256,400 554,340"/>
+  <use xlink:href="#guides-horizontal" opacity="0"/>
+  <use xlink:href="#guides-vertical" opacity="0"/>
+
+  <g id="map"
+     stroke="var(--mid-light-grey)" fill="var(--light-grey)">
+    <path id="te-ika-a-māui" d="M186.48 17.64C216.44 42.84 238.84 78.4 238 96.6c-.56 13.44-8.4 6.72-12.04 7.56-4.2 1.12 1.12 6.44 1.96 7.56 7.56 9.8 16.8 22.96 26.6 36.4 5.6 7.56 6.44-11.48 22.4-18.76 5.32-1.96 3.64 1.4-1.12 4.2-13.16 8.96-15.68 23.52-15.4 24.08 28.84 40.32 67.2 84.84 68.88 104.44.84 8.12 15.96 11.2 18.48 2.8 2.8-9.24-9.24-16.24-21.28-33.04-3.36-4.76 14.56 6.72 26.32 19.32 1.4 1.68 2.24-6.44 12.6-7.28 3.64-.56-12.32 13.72-10.08 22.4 1.96 7 18.2-1.12 19.6 5.88.28 1.96-2.8 5.32-2.24 9.8.84 6.72 4.48 14.84 2.8 16.24-9.52 6.16-21.56-40.32-29.68-17.08-2.24 5.88 14.56 14 28 43.96 7.56 18.2 4.48 29.4 9.24 30.8 7.84 2.8 10.36-9.52 22.4-14.84 4.2-2.24 2.8-1.12 7-.28 11.2 1.68-7 1.4-.84 12.88 1.4 2.52 17.36 2.8 17.92 5.32 1.12 3.92-13.72-.84-22.4 8.4-5.6 5.32 7.84 15.96 1.4 15.96-11.2 0-1.68-35.56-19.04-24.64-2.8 1.68.84 10.36 5.6 21.56 2.8 5.6 5.6 17.36 7.84 18.48 5.88 2.24 9.8-4.2 10.92-2.24.84 1.96-7.84 7.84-8.96 14.28-.56 2.8 3.92 9.52 7.28 22.4 2.24 8.68 3.36 2.8 7.56 24.92.84 4.48 8.12-6.72 12.04-4.48 2.52 1.4 1.96 6.16 0 8.12-2.8 2.52-10.08.84-13.72 1.96-11.2 3.36-6.16 18.48-3.92 22.96 1.68 3.64 1.96-1.96 4.2-4.76 2.52-3.08 4.48-2.8 6.72.84 2.8 3.36-7.56 6.44-9.8 10.08-1.4 2.8-3.64 4.48-1.68 6.72 3.08 3.64 14-5.6 14.56-.84 0 2.24-6.16 3.08-8.4 4.76-1.96 1.96 0 4.48-2.52 5.04-1.68.28-3.92-4.2-7-6.16-2.8-1.68-.84 3.92-4.76 1.68-6.44-3.92 1.12 4.2 1.12 15.12 0 17.08-7.84 17.36-9.24 22.4-4.2 17.36.28 38.36-5.32 55.44-3.64 11.48-7.56 16.8-16.24 24.64-3.92 3.64-18.2 2.8-23.8 3.36-5.32.56-12.6 8.4-19.04 9.24-6.16.56-2.8 7.56-10.64 8.68-9.8 1.4-21 12.88-21.56 23.24-.56 17.92 7 19.88 12.6 26.04 4.2 4.48 6.72 10.36 13.16 12.32 7.28 2.8 18.48 2.8 25.2 5.6 18.76 7.84 23.52 24.36 37.24 31.64 8.4 4.2 17.36 4.76 26.32 5.6 21 2.52 53.76 42 45.64 88.2-4.48 24.64-11.2 45.92-22.96 55.72-3.92 3.36-1.68 14.28-7.28 19.6-2.8 2.8-9.24 4.2-10.36 8.4-1.12 3.64 8.12 5.6 0 10.36-1.96 1.12-.28-4.76-1.96-3.64-5.32 3.64-7.28 10.36-12.32 16.52-2.24 2.8-15.12 3.64-8.4 14 7 11.2 14.84-.28 17.92 1.68 2.8 1.96 4.76-2.8 3.92-4.76-.84-1.96-5.88 1.68-6.16-1.12-.56-5.04 11.2-13.44 14.28-4.2 1.4 3.36-6.44 9.52-5.88 15.12 0 4.48.56 6.44 4.76 8.12 5.04 1.68 9.24-7.56 15.4-6.72 6.16 1.12 10.64-2.8 11.2.84.28 3.36-.56-.56 5.88 6.72 3.92 4.2-1.68 22.68 4.2 25.2 11.48 4.48 11.2-3.92 17.92-3.92 5.6 0 25.48-20.44 29.96-22.96 15.96-8.96 25.2-18.2 30.8-25.2 4.76-6.44 10.08-17.92 12.32-21 4.76-6.72 1.68-11.76 7.84-19.6 2.8-2.8 4.48-3.64 7.28-6.72 8.4-9.24 1.12-20.16 14.56-31.64 3.36-3.08 5.6-10.36 10.08-14 3.64-3.08 5.6-7.56 8.68-10.36 4.48-4.2 8.96-1.96 10.64-5.04 1.68-2.8-.28-5.6 1.12-8.4 8.4-15.68 3.36-19.88 6.44-22.96 14-14 8.4-1.68 13.44-9.24 14.28-19.88 5.04-15.4 10.08-26.6 3.36-7 6.44-14.56 10.36-21.28 3.64-5.6-.84-10.64 1.4-16.24 1.96-4.76 13.16-13.44 10.08-14.84-8.96-4.48-15.96 5.6-19.04-21-.56-3.36-5.04 1.96-5.32-6.16-.56-14.84 11.2-18.76 15.96-26.32 3.64-5.88 1.4-9.24 7.56-13.16 22.12-14.56 58.52-21.56 79.52-13.44 1.68.56 1.4-2.8 2.8-1.96 7.28 4.48-5.6 19.6 2.24 29.12 3.92 4.76 3.64-5.88 7-14 1.68-4.2 7.28-5.6 8.4-8.4 1.96-4.76-11.76 3.36-12.88-12.6-.28-5.6 1.12-15.12 2.8-26.6.84-7.28 8.68-10.36 6.44-10.08-9.8 1.12-.84-10.08 1.68-12.04 4.2-2.8 7.28 9.24 8.96 5.6 3.64-9.8 14.56-15.4 21.84-23.24 4.48-4.76-3.36-10.64 4.48-15.12 6.44-3.64-1.12-21.28 4.76-35.56 1.4-3.08-7.28-3.36-1.12-8.4 9.52-8.4-4.2-11.2-.84-14.56 10.08-10.36 1.96-10.64 7.28-17.36 5.6-7.84 19.32-24.64 13.16-30.52-7-6.44-14.84-.84-24.36-9.52-3.64-3.08 5.04-4.48 1.96-5.32-9.52-1.96-27.16-6.16-36.4-2.8-3.92 1.68 6.16 7.28-3.64 11.2-7.56 2.8-21.28 5.88-26.6 12.6-9.52 12.32-9.8 29.96-24.08 33.6-11.2 2.8-23.52 7.56-34.72 5.6-1.68-.56 2.8 6.44-5.6 3.64-8.4-3.08-1.12-4.48-2.8-5.6-11.2-5.32-8.68-6.72-37.8-12.32-12.04-2.52-23.52-13.44-28-18.2-4.2-4.2-4.48 1.96-8.4 0-11.2-6.44-17.64-12.6-25.2-16.24-4.2-1.96 4.2 7 .56 9.52-2.52 1.4-3.36-5.32-7.28-5.04-4.76.56-16.8 1.68-20.72-24.08-1.68-11.2 9.24-.28 6.72-4.2-8.12-12.32-3.64-13.16-6.72-19.32-3.36-6.44-6.72-12.04-7.84-17.92-1.4-8.4 4.48 2.8 3.64.28-2.8-7.84.56-16.8-.28-21.28-1.68-7.84-6.16 3.64-6.44 0 0-3.08 2.8-6.44 2.8-9.8.28-9.24-2.52-17.36-10.36-19.32-3.64-.84-4.48 10.36-7.28 7.84-2.24-1.96-1.68-7.56.84-10.08 4.2-5.04 12.88-7.84 10.36-12.32-2.24-4.2-7.28 1.96-14.28 1.12-3.64 0 .84 5.04-6.16 3.92-2.24-.28.84-3.92.56-8.12 0-2.52-5.6 0-6.16-1.12-2.8-3.92 3.92-3.92 2.24-8.96-.56-2.24-5.88-1.96-7.28-3.64-1.12-1.68 4.76-5.88-.28-9.8-2.24-1.68-9.24 0-9.8-3.36-.84-5.6-8.96-5.6-9.8-1.96-2.8 8.96 4.76 7.84 11.76 17.92 2.52 3.36-.56 10.64-.56 14-.28 3.92 8.68 1.12 8.12 9.8-.28 2.8-2.24 2.24-5.6 2.52-2.24 0-5.32 4.48-5.32 6.44-.28 5.32 5.04 9.24 10.08 16.52 3.64 4.76 3.36 8.96 2.24 14-1.4 7.84 5.6 10.36 2.24 12.6-5.04 3.36-20.16 8.68-23.8.28-4.48-10.36 1.96-25.76-14-33.32-2.8-1.12-7 3.64-9.8 2.24-3.64-1.96-4.48-10.92-9.24-9.8-3.36.84-4.48 7.84-9.8 1.68-1.68-1.96-3.36 1.4-5.6 1.12-2.8-.28 4.76-4.76-3.36-6.44-1.12 0-3.92 3.36-6.16 2.8-2.52 0-2.8-4.48-6.16-3.64-2.8.84-3.92 6.44-4.76 5.6-4.2-4.48-7.84-14-2.8-17.08 1.96-1.12.84 7 3.64 7.28 4.48.84 3.92-1.12 8.96 1.4 5.88 2.8-5.32-6.44-2.8-15.96.84-3.08-2.8-2.8-1.96-5.04 2.24-5.6 9.24-3.36 10.64-8.4.56-2.8-7.28 1.4-10.64 1.68-3.08.28-5.32-5.88-3.64-8.4 2.8-5.6-2.52-10.08-.56-13.72 1.96-2.8 3.08 6.72 8.4-1.12 1.12-1.68-9.8-5.6-2.24-7l8.12-1.96c4.48-1.96-7-2.8-5.6-7.84 1.12-4.2 11.2-5.04.28-8.12-12.88-3.36-15.12-11.76-19.04-24.08-4.2-12.04-6.72 4.48-14.84-15.68-2.24-5.6 7-17.36-1.12-18.2-7-.84-12.88 1.68-13.72-6.16-.56-4.76 6.72-1.96 12.04-1.4 6.44.84 10.08 12.04 14.84 11.2 5.6-.56-7-5.6-1.68-14.84 2.8-5.04-10.64-3.92-2.8-14 6.44-8.4-7-11.2-7.84-12.04-3.36-2.24 2.52-7.28-1.4-11.2-5.32-4.76-14.84-8.68-12.32-13.44.56-1.4 3.64.56 4.48-.56 5.04-7-15.4-2.24-7-21 1.68-4.2 2.24-12.04-4.76 2.8-2.24 4.76-6.44 7.84-15.12 2.8-2.24-1.12 2.8 12.6-3.64 7.84-2.8-2.24-.84-9.24-3.64-11.2-2.52-1.96-12.88 0-10.36-1.68 7.84-3.92.28-6.16 3.36-7.56 3.92-1.68 7 9.24 12.88 2.8 4.2-4.48-5.6-7.84-13.44-7-9.24 1.12-3.92-8.96-15.96-15.4-9.8-5.6-10.08 12.6-14.56 9.52-4.2-3.08 5.04-5.04-.84-13.72-1.68-2.52-3.64 0-7.56-.56-2.8-.56-6.72-5.04-9.52-3.92-5.6 2.52.56 11.2-13.44 6.44-9.24-3.08-6.16-14.56 3.92-18.2 3.92-1.4-8.68-11.2-8.4-6.16 0 5.6-3.36 7-7.84 7-7.84-.56 8.4 16.24-4.2 18.2-10.08 1.68-4.76-5.6-1.12-10.92 4.76-6.72-22.4-2.8-18.48-18.76.84-3.08 4.2 8.12 7 6.16 4.2-2.52-5.32-10.08-9.8-12.88-9.24-5.6-4.48-21.28-9.52-23.8-1.96-.84-3.08 0-3.08 2.52 0 1.68-8.4.56-8.12-3.08 1.4-12.88 7.84 0 11.76-3.64 1.96-1.68-.84-5.6.28-8.4.84-1.68 7-2.24 5.6-3.64-3.92-5.6-5.6.28-10.64 1.4-3.08.56-7.56-1.96-10.36-1.4-2.52.56-3.64 7.28-9.24 3.92-10.92-6.72-19.04-.56-7.56 8.96zM455 411.32c-4.2-1.12 2.52-7 5.6-2.8 3.64 5.04 1.96 6.44-.28 6.72-4.48.56-1.4-2.8-5.6-3.92zm124.88 83.72c6.16.28 1.4 7.84-.56 9.8-4.48 4.76-3.08.56-5.88-2.8-4.76-6.16 1.4-7.28 6.44-7zm12.32-1.68c6.72.56 15.96 6.72-.84 3.92-10.92-1.68-4.48-4.48.84-3.92zm1.4 10.36c2.8-3.64 3.92-2.52 2.8 1.12-1.12 5.6-9.24 6.72-2.8-1.12zm3.36 8.68c5.04-.56 3.64 3.08 2.8 5.32-3.92 8.96-3.36 1.96-8.12 1.4-7.84-.84-3.08-5.6 5.32-6.72zm75.6 80.64c-5.6 3.36 2.8 9.8-1.12 7.28-12.6-8.4-15.4 6.44-14.28-2.8 1.12-10.64 9.24-1.12 7.56-5.88-2.52-8.12 8.96.56 7.84 1.4zm-133-9.52c3.92 8.12 9.8-3.36 13.44 3.08 4.2 7.84-3.36 16.52-11.76 22.68a53.192 53.192 0 01-18.2 10.08c-12.6 2.8-3.08-9.24-1.12-14 7.84-18.48-5.04-1.96-7.28-10.36-2.24-10.36 8.12-13.72 10.92-14.84 3.64-1.4 11.76-1.4 14 3.36zM462.84 933.8c-8.12.84-13.16 13.44-10.64 3.64 1.96-7.28 4.2-4.76 7.28-8.68 7.28-8.96 11.76 3.92 3.36 5.04z"/>
+    <path id="aotea"
+          d="M474.6 227.64c0 1.96 1.96 5.88 1.4 9.8-.56 3.08-4.76 2.24-4.76 5.88 0 5.04 12.88 5.32 14 6.44 2.24 1.96-2.24 7.84 6.44 10.64 10.08 3.36 6.16-9.24-.56-10.08-4.2-.56.84-4.2.28-10.08-.28-3.92-7.56-3.08-7.84-12.32 0-6.72-8.96-7.56-8.96-.28z"/>
+    <path id="hauturu"
+          d="M442.96 242.2c-.84 3.92 7.56 5.04 6.44-.84-1.4-7.84-5.88-1.68-6.44.84z"/>
+    <path id="kawau"
+          d="M418.32 270.48c-1.4 3.64 3.92 7 5.6 3.08 2.52-6.72-5.04-4.48-5.6-3.08z"/>
+    <path id="rangitoto-motutapu"
+          d="M419.72 320.88c-1.4 3.64 8.4 5.6 9.8-1.68 1.4-7-1.96-5.6-3.36-2.24-1.4 2.8-4.76 0-6.44 3.92z"/>
+    <path id="waiheke"
+          d="M436.8 321.16c-1.68 3.64 1.4-1.4 13.16 8.12 8.4 6.44 11.76-17.64.56-11.2-7.28 5.32-13.16-1.68-14 2.8z"/>
+    <path id="matakana"
+          d="M546.28 418.04c-.56 3.36 4.48 8.96 5.04 10.36.56 2.24-2.52 1.4-.84 3.64 2.8 3.92 2.8-.84 4.48.56 1.68 1.96 4.2 4.76 7 4.48.84-.28 1.4-2.24 0-3.08a42.84 42.84 90 01-12.6-16.24c-.56-1.12-2.8-.84-2.8.28z"/>
+    <path id="kāpiti"
+          d="M426.16 888.16c-5.04 10.08.28 6.72 3.64 1.96 4.2-6.72-.56-7.84-3.64-1.96z"/>
   </g>
 
-  <g id="line-masks"
-     fill="#aaa" stroke="#aaa" >
-    <rect id="mask-copy_mobile-a"
-          width="92" height="188" x="204" y="656" ry="9.6"
-          stroke-width="2"
-          style="transform-origin: 296px 704px 0px;"/>
-    <rect id="mask-copy_mobile-b"
-          width="92" height="188" x="454" y="656" ry="9.6"
-          stroke-width="2"
-          style="transform-origin: 500px 704px 0px;"/>
-    <rect id="mask-copy_mobile-c"
-          width="92" height="188" x="704" y="656" ry="9.6"
-          stroke-width="2"
-          style="transform-origin: 796px 704px 0px;"/>
-    <path id="mask-copy_laptop"
-          stroke-width="3"
-          style="transform-origin: 500px 490px 0px;"
-          d="m 608,454 h -216 m -34.5,27.78 33,-26.28 v -132 c 0,-0.9 0.54,-1.5 1.5,-1.5 h 216 c 0.9,0 1.5,0.54 1.5,1.5 v 132 l 33,26.22 v 8.28 h -285 z"/>
+  <g id="pātaka_laptop" opacity="1">
 
-    <g id="mask-copy_imac"
-       style="transform-origin: 500px 500px 0px;"
-       transform="translate(200)">
-      <path d="M570 494.6 h-140.5 c15.7,-14.6 23.6,-22.5 23.6,-38.3 0,-23.6 -7.9,-23.6 -7.9,-23.6 h110.61 s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
-      <rect x="300.5" y="205.4"
-            width="398.9" height="243.1" rx="15.7" ry="15.8"
-            stroke-width=".5" />
-    </g>
-
-  </g>
-
-  <g id="pātaka-pi" opacity="0">
-    <use xlink:href="#pi-screen"
-         x="100" y="420" />
-    <use xlink:href="#pi-drive" x="80" y="476" />
-    <use xlink:href="#raspberry-pi"
-         x="80" y="470" />
-    <use xlink:href="#pixel-pātaka"
-         x="100" y="420" />
-  </g>
-
-  <g id="pātaka_laptop"
-     transform="scale(2) translate(0)"
-     style="transform-origin: 500px 490px 0px;">
-
-    <g id="follow-lines_laptop"
-       stroke="var(--encrypted-color)"
-       stroke-width="1.5" stroke-dasharray="3,3">
-      <line id="line_first-follow_laptop"
-            x1="366" y1="360" x2="400" y2="390"
-            style="transform-origin: 400px 390px 0px;"/>
-      <line id="line_second-follow_laptop"
-            transform="rotate(24)"
-            x1="366" y1="390" x2="400" y2="390"
-            style="transform-origin: 400px 390px 0px;"/>
-      <line id="line_third-follow_laptop"
-            x1="368" y1="420" x2="400" y2="390"
-            style="transform-origin: 400px 390px 0px;"/>
-      <line id="line_fourth-follow_laptop"
-            x1="366" y1="436" x2="400" y2="394"
-            style="transform-origin: 400px 390px 0px;"/>
-    </g>
-
-    <g id="laptop-follow-icons">
-      <use id="mobile-icon-a_follow_laptop"
-           xlink:href="#mobile-icon" x="368" y="345"
-           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-      <use id="mobile-icon-b_follow_laptop"
-           xlink:href="#mobile-icon" x="368" y="375"
-           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-      <use id="mobile-icon-c_follow_laptop"
-           xlink:href="#mobile-icon" x="368" y="405"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-      <use id="imac-icon_follow_laptop"
-           xlink:href="#imac-icon"
-           x="368" y="435" />
-    </g>
-
-    <use xlink:href="#laptop"
-         x="500" y="405"
+    <use id="device_laptop"
+         xlink:href="#laptop" opacity="1"
+         x="370" y="183"
          fill="var(--devices-color)" stroke="var(--outline-color)"/>
 
     <g id="onscreen_laptop">
       <use id="pātaka-symbol_laptop"
            xlink:href="#pātaka-symbol"
-           x="500" y="385"
+           x="370" y="176"
            fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
-      <use id="follow-notification_laptop_a"
-           xlink:href="#follow-notification"
-           transform="scale(0.6)"
-           style="transform-origin: 500px 427px 0px;"
-           fill="var(--group-a-outline)" stroke="var(--group-a-color)"
-           x="500" y="427" />
-      <use id="mobile-icon_onscreen-laptop_a"
-           style="transform-origin: 388px 390px 0px;"
-           xlink:href="#mobile-icon_onscreen" x="500" y="385"
-           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-      <use id="follow-notification_laptop_b"
-           xlink:href="#follow-notification"
-           transform="scale(0.6)"
-           style="transform-origin: 500px 427px 0px;"
-           fill="var(--group-b-outline)" stroke="var(--group-b-color)"
-           x="500" y="427" />
-      <use id="mobile-icon_onscreen-laptop_b"
-           style="transform-origin: 388px 390px 0px;"
-           xlink:href="#mobile-icon_onscreen" x="500" y="385"
-           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-      <use id="follow-notification_laptop_c"
-           xlink:href="#follow-notification"
-           transform="scale(0.6)"
-           style="transform-origin: 500px 427px 0px;"
-           fill="var(--group-c-outline)" stroke="var(--group-c-color)"
-           x="500" y="427" />
-      <use id="mobile-icon_onscreen-laptop_c"
-           style="transform-origin: 388px 390px 0px;"
-           xlink:href="#mobile-icon_onscreen" x="500" y="385"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-      <use id="follow-notification_laptop_imac"
-           xlink:href="#follow-notification"
-           transform="scale(0.6)"
-           style="transform-origin: 500px 427px 0px;"
-           fill="var(--group-c-outline)" stroke="var(--group-c-color)"
-           x="500" y="427" />
-      <use id="imac-icon_onscreen-laptop"
-           style="transform-origin: 388px 390px 0px;"
-           xlink:href="#imac-icon_onscreen" x="500" y="385"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
+    </g>
+
+    <g id="storage_laptop" opacity="0">
+      <path id="storage-bubble_laptop" opacity="0.7"
+            fill="var(--white)" stroke="var(--pātaka-color)"
+            d="M365,176 l-30,-20 v-96 h-315 v160 h315 v-24 z"/>
+      <use id="file_laptop_a-copy" opacity="0.5"
+           style="transform-origin: 365px 176px 0px;"
+           xlink:href="#encrypted-file" x="60" y="100" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_b-copy" opacity="0.5"
+           style="transform-origin: 365px 176px 0px;"
+           xlink:href="#encrypted-file" x="100" y="100" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_c-copy" opacity="0"
+           style="transform-origin: 365px 176px 0px;"
+           xlink:href="#encrypted-file" x="140" y="100" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_a"
+           style="transform-origin: 365px 176px 0px;"
+           xlink:href="#encrypted-file" x="60" y="100" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_b"
+           style="transform-origin: 365px 176px 0px;"
+           xlink:href="#encrypted-file" x="100" y="100" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_c" opacity="0"
+           style="transform-origin: 365px 176px 0px;"
+           xlink:href="#encrypted-file" x="140" y="100" stroke="var(--group-a-color)"/>
     </g>
 
   </g>
 
-  <g id="pātaka_imac"
-     style="transform-origin: 500px 500px 0px;"
-     transform="translate(200)">
+  <g id="pātaka_imac" opacity="0">
 
-    <g id="follow-map_imac">
-
-      <g id="follow-lines_imac">
-        <use id="line_imac-to-laptop"
-             xlink:href="#mobile-to-first-icon-line"
-             x="700" y="300" style="transform-origin: 700px 300px 0px;"/>
-        <use id="line_first-fof_imac"
-             transform="rotate(-20)"
-             xlink:href="#first-follow-line" x="745" y="300"
-             style="transform-origin: 745px 300px 0px;"/>
-        <use id="line_second-fof_imac"
-             transform="rotate(-33.8)"
-             xlink:href="#second-follow-line" x="745" y="300"
-             style="transform-origin: 745px 300px 0px;"/>
-        <use id="line_third-fof_imac"
-             transform="rotate(0)"
-             xlink:href="#third-follow-line" x="745" y="300"
-             style="transform-origin: 745px 300px 0px;"/>
-      </g>
-
-      <g id="follow-icons_imac">
-        <use id="laptop-icon_follow_imac"
-             style="transform-origin: 296px 704px 0px;"
-             xlink:href="#laptop-icon_follow" x="730" y="300" />
-        <use id="mobile-icon-a_follow_imac"
-             xlink:href="#mobile-follow-mobile" x="775" y="260"
-             fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-        <use id="mobile-icon-b_follow_imac"
-             xlink:href="#mobile-follow-mobile" x="775" y="300"
-             fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-        <use id="mobile-icon-c_follow_imac"
-             xlink:href="#mobile-follow-mobile" x="775" y="340"
-             fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-      </g>
-
-    </g>
-
-    <use xlink:href="#imac"
-         x="500" y="350" />
+    <use xlink:href="#imac" opacity="1"
+         x="520" y="387" />
     <use id="pātaka-symbol_imac"
-         xlink:href="#pātaka-symbol-large"
-         x="500" y="320"
+         xlink:href="#pātaka-symbol-medium"
+         x="520" y="375"
          fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
+  </g>
 
-    <g id="invite-to-pātaka-laptop_imac"
-       style="transform-origin: 250px 350px 0px;">
+  <g id="pātaka-pi" opacity="0">
 
-      <g id="laptop-icon_transform-wrapper"
-         transform="scale(1.8)" style="transform-origin: 500px 310px 0px;">
-        <use id="laptop-icon_invite-imac"
-            transform="scale(1)"
-             xlink:href="#laptop-icon_pātaka" x="500" y="310"
-             style="transform-origin: 612px 306px 0px;"/>
-      </g>
-
-      <g id="invite-button_imac"
-         style="transform-origin: 500px 380px 0px;"
-         transform="scale(1.5)">
-        <use xlink:href="#invite-button" x="500" y="380"/>
-        <use id="invite-button_hover-a"
-             xlink:href="#button_hover" x="500" y="380"/>
-      </g>
-
+    <g id="device_pi" opacity="1">
+      <use xlink:href="#pi-screen"
+           x="370" y="174" />
+      <use xlink:href="#pi-drive"
+           x="350" y="226" />
+      <use xlink:href="#raspberry-pi"
+           x="350" y="220" />
     </g>
 
-    <use id="follow-notification_imac"
-         xlink:href="#follow-notification"
-         transform="scale(1.5)"
-         style="transform-origin: 500px 380px 0px;"
-         fill="var(--group-c-outline)" stroke="var(--group-c-color)"
-         x="500" y="380" />
+    <use xlink:href="#pixel-pātaka"
+         x="370" y="174" />
+    <rect opacity="0"
+          x="20" y="60"
+          width="315" height="160"
+          fill="var(--white)" stroke="var(--pātaka-color)" />
 
   </g>
 
-  <g id="pātaka-server" opacity="0">
-    <use xlink:href="#servers" x="900" y="350" />
-    <use xlink:href="#server-monitor" x="640" y="385" />
+  <g id="pātaka_imac" opacity="0">
+
+    <use xlink:href="#imac" opacity="1"
+         x="520" y="387" />
+    <use id="pātaka-symbol_imac"
+         xlink:href="#pātaka-symbol-medium"
+         x="520" y="375"
+         fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
+    </g
+    >
+
+  <g id="pātaka-server">
+
+    <g id="device_server">
+      <use xlink:href="#servers" x="730" y="810" />
+      <use xlink:href="#server-monitor" x="470" y="845" />
+    </g>
+
     <use id="pātaka-symbol_server"
          xlink:href="#pātaka-symbol-large"
-         x="640" y="385"
+         x="468" y="845"
          fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
-  </g>
 
-  <g id="mobiles">
-
-    <g id="mobile-a"
-       style="transform-origin: 296px 704px 0px;" transform="scale(1)">
-      <use xlink:href="#mobile"
-           x="250" y="750"
-           fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-
-      <g id="invite-to-pātaka-laptop_a"
-         style="transform-origin: 295px 690px 0px;">
-        <use id="laptop-icon_invite-a"
-             xlink:href="#laptop-icon_pātaka" x="250" y="730"
-             style="transform-origin: 295px 700px 0px;"/>
-
-        <g id="invite-button_a"
-           style="transform-origin: 250px 780px 0px;">
-          <use xlink:href="#invite-button" x="250" y="780"/>
-          <use id="invite-button_hover-a"
-               xlink:href="#button_hover" x="250" y="780"/>
-        </g>
-
-      </g>
-
-      <use id="follow-notification_a"
-           fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
-           style="transform-origin: 250px 780px 0px;"
-           xlink:href="#follow-notification" x="250" y="780"/>
-
-      <g id="follow-map_mobile-a">
-        <use id="line_a-to-laptop"
-             xlink:href="#mobile-to-first-icon-line"
-             x="297" y="700" style="transform-origin: 297px 700px 0px;"/>
-        <use id="line_first-fof_a"
-             xlink:href="#first-follow-line" x="345" y="700"
-             style="transform-origin: 345px 700px 0px;"/>
-        <use id="line_second-fof_a"
-             xlink:href="#second-follow-line" x="345" y="700"
-             style="transform-origin: 345px 700px 0px;"/>
-        <use id="line_third-fof_a"
-             xlink:href="#third-follow-line" x="345" y="698"
-             style="transform-origin: 345px 698px 0px;"/>
-        <use id="laptop-icon_follow_a"
-             style="transform-origin: 296px 704px 0px;"
-             xlink:href="#laptop-icon_follow" x="330" y="700" />
-        <use id="mobile-icon-b_follow_a"
-             xlink:href="#mobile-follow-mobile" x="375" y="700"
-             fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-        <use id="mobile-icon-c_follow_a"
-             xlink:href="#mobile-follow-mobile" x="375" y="720"
-             fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-        <use id="imac-icon_a"
-             xlink:href="#imac-icon" x="375" y="735"
-             style="transform-origin: 375px 735px 0px;"
-             transform="scale(1.3)"/>
-      </g>
-
-      <g id="whakapapa-records-a" opacity="0">
-        <circle id="copy_kuia-a"
-                cx="250" cy="720" r="22"
-                fill="var(--group-a-tint)" stroke="var(--group-a-color)"
-                stroke-width="5"/>
-        <use id="add-icon_a"
-             xlink:href="#add-icon" x="250" y="720" />
-        <use id="kuia_a"
-             xlink:href="#kuia" x="229.2" y="699" opacity="0.5"/>
-      </g>
-
+    <g id="invite_server">
+      <use xlink:href="#laptop" fill="var(--devices-color)" x="470" y="825" style="transform-origin: 470px 825px 0px;" transform="scale(0.8)"/>
+      <use id="invite-symbol_server"
+           xlink:href="#pātaka-symbol" style="transform-origin: 470px 820px 0px;" transform="scale(0.8)" x="470" y="820" fill="var(--pātaka-color)"/>
+      <use id="invite-button_server"
+           fill="var(--pātaka-color)"
+           xlink:href="#invite-button" style="transform-origin: 470px 885px 0px;" transform="scale(1.2)" x="470" y="885" />
     </g>
 
-    <g id="mobile-b"
-       style="transform-origin: 500px 704px 0px;">
-      <use xlink:href="#mobile"
-           x="500" y="750"
-           fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-
-      <g id="invite-to-pātaka-laptop_b"
-        style="transform-origin: 500px 665px 0px;">
-        <use id="laptop-icon_invite-b"
-             style="transform-origin: 544px 700px 0px;"
-             xlink:href="#laptop-icon_pātaka" x="500" y="730"/>
-
-        <g id="invite-button_b"
-           style="transform-origin: 500px 780px 0px;">
-          <use xlink:href="#invite-button" x="500" y="780"/>
-          <use id="invite-button_hover-b"
-               xlink:href="#button_hover" x="500" y="780"/>
-        </g>
-      </g>
-
-      <use id="follow-notification_b"
-           fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
-           style="transform-origin: 500px 780px 0px;"
-           xlink:href="#follow-notification" x="500" y="780"/>
-
-      <g id="follow-map_mobile-b">
-        <use id="line_b-to-laptop"
-             xlink:href="#mobile-to-first-icon-line"
-             x="547" y="700" style="transform-origin: 547px 700px 0px;"/>
-        <use id="line_first-fof_b"
-             xlink:href="#first-follow-line" x="595" y="700"
-             style="transform-origin: 595px 700px 0px;"/>
-        <use id="line_second-fof_b"
-             xlink:href="#second-follow-line" x="595" y="700"
-             style="transform-origin: 595px 700px 0px;"/>
-        <use id="line_third-fof_b"
-             xlink:href="#third-follow-line" x="595" y="698"
-             style="transform-origin: 595px 698px 0px;"/>
-        <use id="laptop-icon_follow_b"
-             style="transform-origin: 546px 704px 0px;"
-             xlink:href="#laptop-icon_follow" x="580" y="700" />
-        <use id="mobile-icon-a_follow_b"
-             xlink:href="#mobile-follow-mobile" x="625" y="700"
-             fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-        <use id="mobile-icon-c_follow_b"
-             xlink:href="#mobile-follow-mobile" x="625" y="720"
-             fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-        <use id="imac-icon_b"
-             xlink:href="#imac-icon" x="625" y="735"
-             style="transform-origin: 625px 735px 0px;"
-             transform="scale(1.3)"/>
-      </g>
-
-    </g>
-
-    <g id="mobile-c"
-       style="transform-origin: 796px 704px 0px;">
-      <use xlink:href="#mobile"
-           x="750" y="750"
-           fill="var(--group-c-color)" stroke="var(--group-c-outline)"/>
-
-      <g id="invite-to-pātaka-laptop_c"
-         style="transform-origin: 705px 690px 0px;">
-        <use id="laptop-icon_invite-c"
-             style="transform-origin: 795px 690px 0px;" xlink:href="#laptop-icon_pātaka" x="750" y="730"/>
-
-        <g id="invite-button_c"
-           style="transform-origin: 750px 780px 0px;">
-          <use xlink:href="#invite-button" x="750" y="780"/>
-          <use id="invite-button_hover-c"
-              xlink:href="#button_hover" x="750" y="780"/>
-        </g>
-
-      </g>
-
-      <use id="follow-notification_c"
-           fill="var(--group-c-outline)" stroke="var(--pātaka-color)"
-           style="transform-origin: 750px 780px 0px;"
-           xlink:href="#follow-notification" x="750" y="780"/>
-
-      <g id="follow-map_mobile-c">
-        <use id="line_c-to-laptop"
-             xlink:href="#mobile-to-first-icon-line"
-             x="797" y="700" style="transform-origin: 797px 700px 0px;"/>
-        <use id="line_first-fof_c"
-             xlink:href="#first-follow-line" x="845" y="700"
-             style="transform-origin: 845px 700px 0px;"/>
-        <use id="line_second-fof_c"
-             xlink:href="#second-follow-line" x="845" y="700"
-             style="transform-origin: 845px 700px 0px;"/>
-        <use id="line_third-fof_c"
-             xlink:href="#third-follow-line" x="845" y="698"
-             style="transform-origin: 845px 698px 0px;"/>
-        <use id="laptop-icon_follow_c"
-             style="transform-origin: 796px 704px 0px;"
-             xlink:href="#laptop-icon_follow" x="830" y="700"/>
-        <use id="mobile-icon-a_follow_c"
-             xlink:href="#mobile-follow-mobile" x="875" y="700"
-             fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-        <use id="mobile-icon-b_follow_c"
-             xlink:href="#mobile-follow-mobile" x="875" y="720"
-             fill="var(--group-b-color)" stroke="var(--group-b-outline)"/>
-        <use id="imac-icon_c"
-             xlink:href="#imac-icon" x="875" y="735"
-             style="transform-origin: 875px 735px 0px;"
-             transform="scale(1.3)"/>
-      </g>
-
+    <g id="storage_server" opacity="0">
+      <rect opacity="0"
+            x="20" y="580"
+            width="370" height="400"
+            fill="var(--white)" stroke="var(--pātaka-color)" />
+      <path id="storage-bubble_server" opacity="0.7"
+            fill="var(--white)" stroke="var(--pātaka-color)"
+            d="M440,855 l-30,-20 v-255 h-390 v400 h390 v-105 z"/>
+      <use id="file_server_a-copy" opacity="0"
+           style="transform-origin: 440px 855px 0px;"
+           xlink:href="#encrypted-file" x="60" y="620" stroke="var(--group-a-color)"/>
+      <use id="file_server_b-copy" opacity="0"
+           style="transform-origin: 440px 855px 0px;"
+           xlink:href="#encrypted-file" x="100" y="620" stroke="var(--group-a-color)"/>
+      <use id="file_server_c-copy" opacity="0"
+           style="transform-origin: 440px 855px 0px;"
+           xlink:href="#encrypted-file" x="140" y="620" stroke="var(--group-a-color)"/>
+      <use id="file_server_a"
+           style="transform-origin: 440px 855px 0px;"
+           xlink:href="#encrypted-file" x="60" y="620" stroke="var(--group-a-color)"/>
+      <use id="file_server_b"
+           style="transform-origin: 440px 855px 0px;"
+           xlink:href="#encrypted-file" x="100" y="620" stroke="var(--group-a-color)"/>
+      <use id="file_server_c" opacity="0"
+           style="transform-origin: 440px 855px 0px;"
+           xlink:href="#encrypted-file" x="140" y="620" stroke="var(--group-a-color)"/>
     </g>
 
   </g>
 
-  <g id="arrows" opacity="1"
-       stroke-width="4" stroke-linecap="round">
+  <g id="lines" opacity="1"
+     stroke="var(--mid-grey)" stroke-width="4">
 
-    <defs id="markers"
-          stroke-linejoin="round" stroke-width="1">
+    <g id="follow-lines_pātaka-pātaka" opacity="1"
+        mask="url(#mask_all-pātaka)">
+        <line id="follow-line_laptop-server"
+              stroke-dasharray="8,8"
+              x1="468" y1="845" x2="370" y2="174"/>
+        <line id="follow-line_laptop-server_connected" opacity="0"
+              stroke="var(--pātaka-color)"
+              stroke-dasharray="8,8"
+              x1="468" y1="845" x2="370" y2="174"/>
+        <circle id="file_in-transit_pātaka" opacity="1"
+                cx="0" cy="0" r="5"
+                fill="var(--encrypted-color)" stroke="var(--group-a-color)" stroke-width="2"/>
+     </g>
 
-      <marker id="marker-curve-a"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="none" stroke="var(--group-a-color)"
-              d="M2.4 2.1l-3-2 3-2"/>
-      </marker>
+    <g id="follow-lines_server"
+       stroke="var(--group-b-highlight)"
+       mask="url(#mask_pātaka-server)">
+      <line id="a-to-server_connected"
+            stroke-dasharray="8,8"
+            x1="750" y1="590" x2="468" y2="845"/>
+      <line id="b-to-server_connected"
+            stroke-dasharray="8,8"
+            x1="570" y1="480" x2="468" y2="845"/>
+      <line id="c-to-server_connected"
+            stroke-dasharray="8,8"
+            x1="490" y1="610" x2="468" y2="845"/>
+    </g>
 
-      <marker id="marker-curve-bottom"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="none" stroke="var(--group-c-symbol-color)"
-              d="M2.4 2.1l-3-2 3-2"/>
-      </marker>
+    <g id="follow-lines_laptop" opacity="0"
+       stroke-dasharray="8,8"
+       mask="url(#mask_pātaka_laptop)">
+      <line id="a-to-laptop"
+            x1="750" y1="590" x2="370" y2="174"/>
+      <line id="b-to-laptop"
+            x1="570" y1="480" x2="370" y2="174"/>
+      <line id="c-to-laptop"
+            x1="490" y1="610" x2="370" y2="174"/>
+    </g>
 
-      <marker id="marker-a"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="var(--group-a-color)" stroke="var(--group-a-color)"
-              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
-                 </marker>
+    <g id="follow-lines_laptop_connected" opacity="1"
+       stroke="var(--group-b-highlight)"
+       mask="url(#mask_pātaka_laptop)">
+      <line id="follow-line_a-laptop_connected"
+            stroke-dasharray="8,8"
+            x1="750" y1="590" x2="370" y2="174"/>
+      <line id="follow-line_b-laptop_connected"
+            stroke-dasharray="8,8"
+            x1="570" y1="480" x2="370" y2="174"/>
+      <line id="follow-line_c-laptop_connected"
+            stroke-dasharray="8,8"
+            x1="490" y1="610" x2="370" y2="174"/>
 
-      <marker id="marker-b"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="var(--group-b-color)" stroke="var(--group-b-color)"
-              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
-      </marker>
-
-      <marker id="marker-c"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="var(--group-c-symbol-color)" stroke="var(--group-c-symbol-color)"
-              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
-      </marker>
-
-      <marker id="marker-d"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="var(--mid-grey)" stroke="var(--mid-grey)"
-              d="M-7,-4 L1.33,0 -7,4 -5,0z"/>
-      </marker>
-
-      <marker id="marker-e"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="none" stroke="var(--mid-light-grey)"
-              d="M2,-4 L-4,0 2,4"/>
-      </marker>
-
-      <marker id="marker-f"
-             orient="auto" overflow="visible" refX="0" refY="0">
-        <path fill="none" stroke="var(--mid-light-grey)"
-              d="M-2,-4 L4,0 -2,4"/>
-      </marker>
-
-    </defs>
-
-    <g id="arrows-invites"
-       stroke="var(--mid-grey)">
-      <path id="arrow-invite_a"
-            marker-end="url(#marker-d)"
-            style="transform-origin:431px 500px 0px;"
-            d="M 431,500 305,675"/>
-      <path id="arrow-invite_b" opacity="0"
-            marker-end="url(#marker-d)"
-            style="transform-origin:500px 500px 0px;"
-            d="M 500,500 500,645"/>
-      <path id="arrow-invite_c"
-            marker-end="url(#marker-d)"
-            style="transform-origin:569px 500px 0px;"
-            d="M 569,500 695,675"/>
-      <path id="arrow-invite_imac"
-            marker-end="url(#marker-d)"
-            style="transform-origin: 338px 380px 0px;"
-            d="M 338,380 490,355"/>
+      <circle id="file_in-transit_b" opacity="1"
+              cx="0" cy="0" r="5"
+              fill="var(--encrypted-color)" stroke="var(--group-a-color)" stroke-width="2"/>
+      <circle id="file_in-transit_c" opacity="1"
+              cx="0" cy="0" r="5"
+              fill="var(--encrypted-color)" stroke="var(--group-a-color)" stroke-width="2"/>
     </g>
 
   </g>
 
-  <g id="guides-horizontal" opacity="0" >
-    <line x1="0%" y1="66.67%" x2="100%" y2="66.67%" stroke="hsla(210,50%,70%, 0.6)"/>
-    <line x1="0%" y1="50%" x2="1000" y2="50%" stroke="hsla(210,50%,50%, 0.5)"/>
-    <line x1="0%" y1="33.33%" x2="100%" y2="33.33%" stroke="hsla(210,50%,70%, 0.6)"/>
+  <g id="mobile-a" opacity="0"
+     style="transform-origin: 730px 590px 0px;" transform="scale(4)">
+    <use id="device_mobile-a"
+         xlink:href="#mobile"
+         x="750" y="590"
+         fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+    <rect id="align" opacity="0"
+          x="706" y="506"
+          width="88" height="160"
+          fill="#CC0F16" stroke="none"/>
+
+    <g id="on-screen_mobile-a"
+       style="transform-origin: 750px 590px 0px;" transform="scale(0.5)">
+      <line id="horizontal-connection" opacity="0"
+            x1="730" y1="560" x2="772" y2="560" stroke="var(--mid-light-grey)"/>
+      <line id="vertical-connection" opacity="0"
+            x1="750" y1="560" x2="750" y2="610" stroke="var(--mid-light-grey)"/>
+      <circle id="kuia-a_copy" opacity="0"
+              style="transform-origin: 706px 571px 0px;"
+              cx="728.5" cy="559.5" r="20"
+              stroke-width="4"
+              fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
+      <use id="kuia-a" opacity="0"
+           xlink:href="#kuia" x="709" y="540"/>
+      <use id="koro-a" opacity="0"
+           xlink:href="#koro" x="752" y="540"/>
+      <use id="kuia-b" opacity="0"
+           xlink:href="#kuia" x="730" y="590"/>
+
+      <use id="invite-symbol_mobile" opacity="0"
+           xlink:href="#pātaka-symbol" transform="scale(1)" x="750" y="565" fill="var(--pātaka-color)"/>
+      <use id="invite-button_mobile" opacity="0"
+           fill="var(--group-b-color)"
+           xlink:href="#invite-button" x="750" y="610" />
+    </g>
+
   </g>
-  <g id="guides-vertical" opacity="0" >
-    <line x1="33.33%" y1="0%" x2="33.33%" y2="100%" stroke="hsla(210,50%,70%, 0.6)"/>
-    <line x1="50%" y1="0%" x2="50%" y2="100%" stroke="hsla(210,50%,50%, 0.5)"/>
-    <line x1="66.67%" y1="0%" x2="66.67%" y2="100%" stroke="hsla(210,50%,70%, 0.6)"/>
+
+  <g id="mobile-b" opacity="0"
+     style="transform-origin: 570px 480px 0px;" transform="scale(1)">
+    <use xlink:href="#mobile"
+         x="570" y="480"
+         fill="var(--group-a-shade)" stroke="var(--outline-color)"/>
+    <circle id="koro_copy" opacity="1"
+           style="transform-origin: 548px 446px 0px;"
+           cx="580.75" cy="471.75" r="10"
+           stroke-width="2"
+           fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
+    <use id="kuia-copy_b"
+         xlink:href="#kuia" x="550" y="462" style="transform-origin: 550px 462px 0px;" transform="scale(0.5)"/>
+    <use id="koro-copy_b"
+         xlink:href="#koro" x="571" y="462" style="transform-origin: 571px 462px 0px;" transform="scale(0.5)"/>
+  </g>
+
+  <g id="mobile-c" opacity="0"
+     style="transform-origin: 490px 610px 0px;" transform="scale(1)">
+    <use xlink:href="#mobile"
+         x="490" y="610"
+         fill="var(--group-a-shade)" stroke="var(--outline-color)"/>
+    <use id="kuia-copy_c"
+         xlink:href="#kuia" x="470" y="592" style="transform-origin: 470px 592px 0px;" transform="scale(0.5)"/>
+    <use id="koro-copy_c"
+         xlink:href="#koro" x="491" y="592" style="transform-origin: 491px 592px 0px;" transform="scale(0.5)"/>
   </g>
 
   <script>
     // <![CDATA[
 
-     /* anime.js v3.2.0
-     * (c) 2020 Julian Garnier
-     * Released under the MIT license
-     * animejs.com
-     */
+    /* anime.js v3.2.0
+    * (c) 2020 Julian Garnier
+    * Released under the MIT license
+    * animejs.com
+    */
 
     !function(n,e){
-      "object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):n.anime=e()}(this,function(){"use strict";var n={update:null,begin:null,loopBegin:null,changeBegin:null,change:null,changeComplete:null,loopComplete:null,complete:null,loop:1,direction:"normal",autoplay:!0,timelineOffset:0},e={duration:1e3,delay:0,endDelay:0,easing:"easeOutElastic(1, .5)",round:0},r=["translateX","translateY","translateZ","rotate","rotateX","rotateY","rotateZ","scale","scaleX","scaleY","scaleZ","skew","skewX","skewY","perspective","matrix","matrix3d"],t={CSS:{},springs:{}};function a(n,e,r){return Math.min(Math.max(n,e),r)}function o(n,e){return n.indexOf(e)>-1}function u(n,e){return n.apply(null,e)}var i={arr:function(n){return Array.isArray(n)},obj:function(n){return o(Object.prototype.toString.call(n),"Object")},pth:function(n){return i.obj(n)&&n.hasOwnProperty("totalLength")},svg:function(n){return n instanceof SVGElement},inp:function(n){return n instanceof HTMLInputElement},dom:function(n){return n.nodeType||i.svg(n)},str:function(n){return"string"==typeof n},fnc:function(n){return"function"==typeof n},und:function(n){return void 0===n},hex:function(n){return/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(n)},rgb:function(n){return/^rgb/.test(n)},hsl:function(n){return/^hsl/.test(n)},col:function(n){return i.hex(n)||i.rgb(n)||i.hsl(n)},key:function(r){return!n.hasOwnProperty(r)&&!e.hasOwnProperty(r)&&"targets"!==r&&"keyframes"!==r}};function c(n){var e=/\(([^)]+)\)/.exec(n);return e?e[1].split(",").map(function(n){return parseFloat(n)}):[]}function s(n,e){var r=c(n),o=a(i.und(r[0])?1:r[0],.1,100),u=a(i.und(r[1])?100:r[1],.1,100),s=a(i.und(r[2])?10:r[2],.1,100),f=a(i.und(r[3])?0:r[3],.1,100),l=Math.sqrt(u/o),d=s/(2*Math.sqrt(u*o)),p=d<1?l*Math.sqrt(1-d*d):0,h=1,v=d<1?(d*l-f)/p:-f+l;function g(n){var r=e?e*n/1e3:n;return r=d<1?Math.exp(-r*d*l)*(h*Math.cos(p*r)+v*Math.sin(p*r)):(h+v*r)*Math.exp(-r*l),0===n||1===n?n:1-r}return e?g:function(){var e=t.springs[n];if(e)return e;for(var r=0,a=0;;)if(1===g(r+=1/6)){if(++a>=16)break}else a=0;var o=r*(1/6)*1e3;return t.springs[n]=o,o}}function f(n){return void 0===n&&(n=10),function(e){return Math.ceil(a(e,1e-6,1)*n)*(1/n)}}var l,d,p=function(){var n=11,e=1/(n-1);function r(n,e){return 1-3*e+3*n}function t(n,e){return 3*e-6*n}function a(n){return 3*n}function o(n,e,o){return((r(e,o)*n+t(e,o))*n+a(e))*n}function u(n,e,o){return 3*r(e,o)*n*n+2*t(e,o)*n+a(e)}return function(r,t,a,i){if(0<=r&&r<=1&&0<=a&&a<=1){var c=new Float32Array(n);if(r!==t||a!==i)for(var s=0;s<n;++s)c[s]=o(s*e,r,a);return function(n){return r===t&&a===i?n:0===n||1===n?n:o(f(n),t,i)}}function f(t){for(var i=0,s=1,f=n-1;s!==f&&c[s]<=t;++s)i+=e;var l=i+(t-c[--s])/(c[s+1]-c[s])*e,d=u(l,r,a);return d>=.001?function(n,e,r,t){for(var a=0;a<4;++a){var i=u(e,r,t);if(0===i)return e;e-=(o(e,r,t)-n)/i}return e}(t,l,r,a):0===d?l:function(n,e,r,t,a){for(var u,i,c=0;(u=o(i=e+(r-e)/2,t,a)-n)>0?r=i:e=i,Math.abs(u)>1e-7&&++c<10;);return i}(t,i,i+e,r,a)}}}(),h=(l={linear:function(){return function(n){return n}}},d={Sine:function(){return function(n){return 1-Math.cos(n*Math.PI/2)}},Circ:function(){return function(n){return 1-Math.sqrt(1-n*n)}},Back:function(){return function(n){return n*n*(3*n-2)}},Bounce:function(){return function(n){for(var e,r=4;n<((e=Math.pow(2,--r))-1)/11;);return 1/Math.pow(4,3-r)-7.5625*Math.pow((3*e-2)/22-n,2)}},Elastic:function(n,e){void 0===n&&(n=1),void 0===e&&(e=.5);var r=a(n,1,10),t=a(e,.1,2);return function(n){return 0===n||1===n?n:-r*Math.pow(2,10*(n-1))*Math.sin((n-1-t/(2*Math.PI)*Math.asin(1/r))*(2*Math.PI)/t)}}},["Quad","Cubic","Quart","Quint","Expo"].forEach(function(n,e){d[n]=function(){return function(n){return Math.pow(n,e+2)}}}),Object.keys(d).forEach(function(n){var e=d[n];l["easeIn"+n]=e,l["easeOut"+n]=function(n,r){return function(t){return 1-e(n,r)(1-t)}},l["easeInOut"+n]=function(n,r){return function(t){return t<.5?e(n,r)(2*t)/2:1-e(n,r)(-2*t+2)/2}}}),l);function v(n,e){if(i.fnc(n))return n;var r=n.split("(")[0],t=h[r],a=c(n);switch(r){case"spring":return s(n,e);case"cubicBezier":return u(p,a);case"steps":return u(f,a);default:return u(t,a)}}function g(n){try{return document.querySelectorAll(n)}catch(n){return}}function m(n,e){for(var r=n.length,t=arguments.length>=2?arguments[1]:void 0,a=[],o=0;o<r;o++)if(o in n){var u=n[o];e.call(t,u,o,n)&&a.push(u)}return a}function y(n){return n.reduce(function(n,e){return n.concat(i.arr(e)?y(e):e)},[])}function b(n){return i.arr(n)?n:(i.str(n)&&(n=g(n)||n),n instanceof NodeList||n instanceof HTMLCollection?[].slice.call(n):[n])}function x(n,e){return n.some(function(n){return n===e})}function M(n){var e={};for(var r in n)e[r]=n[r];return e}function w(n,e){var r=M(n);for(var t in n)r[t]=e.hasOwnProperty(t)?e[t]:n[t];return r}function k(n,e){var r=M(n);for(var t in e)r[t]=i.und(n[t])?e[t]:n[t];return r}function O(n){return i.rgb(n)?(r=/rgb\((\d+,\s*[\d]+,\s*[\d]+)\)/g.exec(e=n))?"rgba("+r[1]+",1)":e:i.hex(n)?(t=n.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(n,e,r,t){return e+e+r+r+t+t}),a=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(t),"rgba("+parseInt(a[1],16)+","+parseInt(a[2],16)+","+parseInt(a[3],16)+",1)"):i.hsl(n)?function(n){var e,r,t,a=/hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(n)||/hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%,\s*([\d.]+)\)/g.exec(n),o=parseInt(a[1],10)/360,u=parseInt(a[2],10)/100,i=parseInt(a[3],10)/100,c=a[4]||1;function s(n,e,r){return r<0&&(r+=1),r>1&&(r-=1),r<1/6?n+6*(e-n)*r:r<.5?e:r<2/3?n+(e-n)*(2/3-r)*6:n}if(0==u)e=r=t=i;else{var f=i<.5?i*(1+u):i+u-i*u,l=2*i-f;e=s(l,f,o+1/3),r=s(l,f,o),t=s(l,f,o-1/3)}return"rgba("+255*e+","+255*r+","+255*t+","+c+")"}(n):void 0;var e,r,t,a}function C(n){var e=/[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?(%|px|pt|em|rem|in|cm|mm|ex|ch|pc|vw|vh|vmin|vmax|deg|rad|turn)?$/.exec(n);if(e)return e[1]}function B(n,e){return i.fnc(n)?n(e.target,e.id,e.total):n}function P(n,e){return n.getAttribute(e)}function I(n,e,r){if(x([r,"deg","rad","turn"],C(e)))return e;var a=t.CSS[e+r];if(!i.und(a))return a;var o=document.createElement(n.tagName),u=n.parentNode&&n.parentNode!==document?n.parentNode:document.body;u.appendChild(o),o.style.position="absolute",o.style.width=100+r;var c=100/o.offsetWidth;u.removeChild(o);var s=c*parseFloat(e);return t.CSS[e+r]=s,s}function T(n,e,r){if(e in n.style){var t=e.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase(),a=n.style[e]||getComputedStyle(n).getPropertyValue(t)||"0";return r?I(n,a,r):a}}function D(n,e){return i.dom(n)&&!i.inp(n)&&(P(n,e)||i.svg(n)&&n[e])?"attribute":i.dom(n)&&x(r,e)?"transform":i.dom(n)&&"transform"!==e&&T(n,e)?"css":null!=n[e]?"object":void 0}function E(n){if(i.dom(n)){for(var e,r=n.style.transform||"",t=/(\w+)\(([^)]*)\)/g,a=new Map;e=t.exec(r);)a.set(e[1],e[2]);return a}}function F(n,e,r,t){var a,u=o(e,"scale")?1:0+(o(a=e,"translate")||"perspective"===a?"px":o(a,"rotate")||o(a,"skew")?"deg":void 0),i=E(n).get(e)||u;return r&&(r.transforms.list.set(e,i),r.transforms.last=e),t?I(n,i,t):i}function N(n,e,r,t){switch(D(n,e)){case"transform":return F(n,e,t,r);case"css":return T(n,e,r);case"attribute":return P(n,e);default:return n[e]||0}}function A(n,e){var r=/^(\*=|\+=|-=)/.exec(n);if(!r)return n;var t=C(n)||0,a=parseFloat(e),o=parseFloat(n.replace(r[0],""));switch(r[0][0]){case"+":return a+o+t;case"-":return a-o+t;case"*":return a*o+t}}function L(n,e){if(i.col(n))return O(n);if(/\s/g.test(n))return n;var r=C(n),t=r?n.substr(0,n.length-r.length):n;return e?t+e:t}function j(n,e){return Math.sqrt(Math.pow(e.x-n.x,2)+Math.pow(e.y-n.y,2))}function S(n){for(var e,r=n.points,t=0,a=0;a<r.numberOfItems;a++){var o=r.getItem(a);a>0&&(t+=j(e,o)),e=o}return t}function q(n){if(n.getTotalLength)return n.getTotalLength();switch(n.tagName.toLowerCase()){case"circle":return o=n,2*Math.PI*P(o,"r");case"rect":return 2*P(a=n,"width")+2*P(a,"height");case"line":return j({x:P(t=n,"x1"),y:P(t,"y1")},{x:P(t,"x2"),y:P(t,"y2")});case"polyline":return S(n);case"polygon":return r=(e=n).points,S(e)+j(r.getItem(r.numberOfItems-1),r.getItem(0))}var e,r,t,a,o}function $(n,e){var r=e||{},t=r.el||function(n){for(var e=n.parentNode;i.svg(e)&&i.svg(e.parentNode);)e=e.parentNode;return e}(n),a=t.getBoundingClientRect(),o=P(t,"viewBox"),u=a.width,c=a.height,s=r.viewBox||(o?o.split(" "):[0,0,u,c]);return{el:t,viewBox:s,x:s[0]/1,y:s[1]/1,w:u/s[2],h:c/s[3]}}function X(n,e){function r(r){void 0===r&&(r=0);var t=e+r>=1?e+r:0;return n.el.getPointAtLength(t)}var t=$(n.el,n.svg),a=r(),o=r(-1),u=r(1);switch(n.property){case"x":return(a.x-t.x)*t.w;case"y":return(a.y-t.y)*t.h;case"angle":return 180*Math.atan2(u.y-o.y,u.x-o.x)/Math.PI}}function Y(n,e){var r=/[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g,t=L(i.pth(n)?n.totalLength:n,e)+"";return{original:t,numbers:t.match(r)?t.match(r).map(Number):[0],strings:i.str(n)||e?t.split(r):[]}}function Z(n){return m(n?y(i.arr(n)?n.map(b):b(n)):[],function(n,e,r){return r.indexOf(n)===e})}function Q(n){var e=Z(n);return e.map(function(n,r){return{target:n,id:r,total:e.length,transforms:{list:E(n)}}})}function V(n,e){var r=M(e);if(/^spring/.test(r.easing)&&(r.duration=s(r.easing)),i.arr(n)){var t=n.length;2===t&&!i.obj(n[0])?n={value:n}:i.fnc(e.duration)||(r.duration=e.duration/t)}var a=i.arr(n)?n:[n];return a.map(function(n,r){var t=i.obj(n)&&!i.pth(n)?n:{value:n};return i.und(t.delay)&&(t.delay=r?0:e.delay),i.und(t.endDelay)&&(t.endDelay=r===a.length-1?e.endDelay:0),t}).map(function(n){return k(n,r)})}function z(n,e){var r=[],t=e.keyframes;for(var a in t&&(e=k(function(n){for(var e=m(y(n.map(function(n){return Object.keys(n)})),function(n){return i.key(n)}).reduce(function(n,e){return n.indexOf(e)<0&&n.push(e),n},[]),r={},t=function(t){var a=e[t];r[a]=n.map(function(n){var e={};for(var r in n)i.key(r)?r==a&&(e.value=n[r]):e[r]=n[r];return e})},a=0;a<e.length;a++)t(a);return r}(t),e)),e)i.key(a)&&r.push({name:a,tweens:V(e[a],n)});return r}function H(n,e){var r;return n.tweens.map(function(t){var a=function(n,e){var r={};for(var t in n){var a=B(n[t],e);i.arr(a)&&1===(a=a.map(function(n){return B(n,e)})).length&&(a=a[0]),r[t]=a}return r.duration=parseFloat(r.duration),r.delay=parseFloat(r.delay),r}(t,e),o=a.value,u=i.arr(o)?o[1]:o,c=C(u),s=N(e.target,n.name,c,e),f=r?r.to.original:s,l=i.arr(o)?o[0]:f,d=C(l)||C(s),p=c||d;return i.und(u)&&(u=f),a.from=Y(l,p),a.to=Y(A(u,l),p),a.start=r?r.end:0,a.end=a.start+a.delay+a.duration+a.endDelay,a.easing=v(a.easing,a.duration),a.isPath=i.pth(o),a.isColor=i.col(a.from.original),a.isColor&&(a.round=1),r=a,a})}var G={css:function(n,e,r){return n.style[e]=r},attribute:function(n,e,r){return n.setAttribute(e,r)},object:function(n,e,r){return n[e]=r},transform:function(n,e,r,t,a){if(t.list.set(e,r),e===t.last||a){var o="";t.list.forEach(function(n,e){o+=e+"("+n+") "}),n.style.transform=o}}};function R(n,e){Q(n).forEach(function(n){for(var r in e){var t=B(e[r],n),a=n.target,o=C(t),u=N(a,r,o,n),i=A(L(t,o||C(u)),u),c=D(a,r);G[c](a,r,i,n.transforms,!0)}})}function W(n,e){return m(y(n.map(function(n){return e.map(function(e){return function(n,e){var r=D(n.target,e.name);if(r){var t=H(e,n),a=t[t.length-1];return{type:r,property:e.name,animatable:n,tweens:t,duration:a.end,delay:t[0].delay,endDelay:a.endDelay}}}(n,e)})})),function(n){return!i.und(n)})}function J(n,e){var r=n.length,t=function(n){return n.timelineOffset?n.timelineOffset:0},a={};return a.duration=r?Math.max.apply(Math,n.map(function(n){return t(n)+n.duration})):e.duration,a.delay=r?Math.min.apply(Math,n.map(function(n){return t(n)+n.delay})):e.delay,a.endDelay=r?a.duration-Math.max.apply(Math,n.map(function(n){return t(n)+n.duration-n.endDelay})):e.endDelay,a}var K=0;var U,_=[],nn=[],en=function(){function n(){U=requestAnimationFrame(e)}function e(e){var r=_.length;if(r){for(var t=0;t<r;){var a=_[t];if(a.paused){var o=_.indexOf(a);o>-1&&(_.splice(o,1),r=_.length)}else a.tick(e);t++}n()}else U=cancelAnimationFrame(U)}return n}();function rn(r){void 0===r&&(r={});var t,o=0,u=0,i=0,c=0,s=null;function f(n){var e=window.Promise&&new Promise(function(n){return s=n});return n.finished=e,e}var l,d,p,h,v,g,y,b,x=(d=w(n,l=r),p=w(e,l),h=z(p,l),v=Q(l.targets),g=W(v,h),y=J(g,p),b=K,K++,k(d,{id:b,children:[],animatables:v,animations:g,duration:y.duration,delay:y.delay,endDelay:y.endDelay}));f(x);function M(){var n=x.direction;"alternate"!==n&&(x.direction="normal"!==n?"normal":"reverse"),x.reversed=!x.reversed,t.forEach(function(n){return n.reversed=x.reversed})}function O(n){return x.reversed?x.duration-n:n}function C(){o=0,u=O(x.currentTime)*(1/rn.speed)}function B(n,e){e&&e.seek(n-e.timelineOffset)}function P(n){for(var e=0,r=x.animations,t=r.length;e<t;){var o=r[e],u=o.animatable,i=o.tweens,c=i.length-1,s=i[c];c&&(s=m(i,function(e){return n<e.end})[0]||s);for(var f=a(n-s.start-s.delay,0,s.duration)/s.duration,l=isNaN(f)?1:s.easing(f),d=s.to.strings,p=s.round,h=[],v=s.to.numbers.length,g=void 0,y=0;y<v;y++){var b=void 0,M=s.to.numbers[y],w=s.from.numbers[y]||0;b=s.isPath?X(s.value,l*M):w+l*(M-w),p&&(s.isColor&&y>2||(b=Math.round(b*p)/p)),h.push(b)}var k=d.length;if(k){g=d[0];for(var O=0;O<k;O++){d[O];var C=d[O+1],B=h[O];isNaN(B)||(g+=C?B+C:B+" ")}}else g=h[0];G[o.type](u.target,o.property,g,u.transforms),o.currentValue=g,e++}}function I(n){x[n]&&!x.passThrough&&x[n](x)}function T(n){var e=x.duration,r=x.delay,l=e-x.endDelay,d=O(n);x.progress=a(d/e*100,0,100),x.reversePlayback=d<x.currentTime,t&&function(n){if(x.reversePlayback)for(var e=c;e--;)B(n,t[e]);else for(var r=0;r<c;r++)B(n,t[r])}(d),!x.began&&x.currentTime>0&&(x.began=!0,I("begin")),!x.loopBegan&&x.currentTime>0&&(x.loopBegan=!0,I("loopBegin")),d<=r&&0!==x.currentTime&&P(0),(d>=l&&x.currentTime!==e||!e)&&P(e),d>r&&d<l?(x.changeBegan||(x.changeBegan=!0,x.changeCompleted=!1,I("changeBegin")),I("change"),P(d)):x.changeBegan&&(x.changeCompleted=!0,x.changeBegan=!1,I("changeComplete")),x.currentTime=a(d,0,e),x.began&&I("update"),n>=e&&(u=0,x.remaining&&!0!==x.remaining&&x.remaining--,x.remaining?(o=i,I("loopComplete"),x.loopBegan=!1,"alternate"===x.direction&&M()):(x.paused=!0,x.completed||(x.completed=!0,I("loopComplete"),I("complete"),!x.passThrough&&"Promise"in window&&(s(),f(x)))))}return x.reset=function(){var n=x.direction;x.passThrough=!1,x.currentTime=0,x.progress=0,x.paused=!0,x.began=!1,x.loopBegan=!1,x.changeBegan=!1,x.completed=!1,x.changeCompleted=!1,x.reversePlayback=!1,x.reversed="reverse"===n,x.remaining=x.loop,t=x.children;for(var e=c=t.length;e--;)x.children[e].reset();(x.reversed&&!0!==x.loop||"alternate"===n&&1===x.loop)&&x.remaining++,P(x.reversed?x.duration:0)},x.set=function(n,e){return R(n,e),x},x.tick=function(n){i=n,o||(o=i),T((i+(u-o))*rn.speed)},x.seek=function(n){T(O(n))},x.pause=function(){x.paused=!0,C()},x.play=function(){x.paused&&(x.completed&&x.reset(),x.paused=!1,_.push(x),C(),U||en())},x.reverse=function(){M(),x.completed=!x.reversed,C()},x.restart=function(){x.reset(),x.play()},x.reset(),x.autoplay&&x.play(),x}function tn(n,e){for(var r=e.length;r--;)x(n,e[r].animatable.target)&&e.splice(r,1)}return"undefined"!=typeof document&&document.addEventListener("visibilitychange",function(){document.hidden?(_.forEach(function(n){return n.pause()}),nn=_.slice(0),rn.running=_=[]):nn.forEach(function(n){return n.play()})}),rn.version="3.2.0",rn.speed=1,rn.running=_,rn.remove=function(n){for(var e=Z(n),r=_.length;r--;){var t=_[r],a=t.animations,o=t.children;tn(e,a);for(var u=o.length;u--;){var i=o[u],c=i.animations;tn(e,c),c.length||i.children.length||o.splice(u,1)}a.length||o.length||t.pause()}},rn.get=N,rn.set=R,rn.convertPx=I,rn.path=function(n,e){var r=i.str(n)?g(n)[0]:n,t=e||100;return function(n){return{property:n,el:r,svg:$(r),totalLength:q(r)*(t/100)}}},rn.setDashoffset=function(n){var e=q(n);return n.setAttribute("stroke-dasharray",e),e},rn.stagger=function(n,e){void 0===e&&(e={});var r=e.direction||"normal",t=e.easing?v(e.easing):null,a=e.grid,o=e.axis,u=e.from||0,c="first"===u,s="center"===u,f="last"===u,l=i.arr(n),d=l?parseFloat(n[0]):parseFloat(n),p=l?parseFloat(n[1]):0,h=C(l?n[1]:n)||0,g=e.start||0+(l?d:0),m=[],y=0;return function(n,e,i){if(c&&(u=0),s&&(u=(i-1)/2),f&&(u=i-1),!m.length){for(var v=0;v<i;v++){if(a){var b=s?(a[0]-1)/2:u%a[0],x=s?(a[1]-1)/2:Math.floor(u/a[0]),M=b-v%a[0],w=x-Math.floor(v/a[0]),k=Math.sqrt(M*M+w*w);"x"===o&&(k=-M),"y"===o&&(k=-w),m.push(k)}else m.push(Math.abs(u-v));y=Math.max.apply(Math,m)}t&&(m=m.map(function(n){return t(n/y)*y})),"reverse"===r&&(m=m.map(function(n){return o?n<0?-1*n:-n:Math.abs(y-n)}))}return g+(l?(p-d)/y:d)*(Math.round(100*m[e])/100)+h}},rn.timeline=function(n){void 0===n&&(n={});var r=rn(n);return r.duration=0,r.add=function(t,a){var o=_.indexOf(r),u=r.children;function c(n){n.passThrough=!0}o>-1&&_.splice(o,1);for(var s=0;s<u.length;s++)c(u[s]);var f=k(t,w(e,n));f.targets=f.targets||n.targets;var l=r.duration;f.autoplay=!1,f.direction=r.direction,f.timelineOffset=i.und(a)?l:A(a,l),c(r),r.seek(f.timelineOffset);var d=rn(f);c(d),u.push(d);var p=J(u,n);return r.delay=p.delay,r.endDelay=p.endDelay,r.duration=p.duration,r.seek(0),r.reset(),r.autoplay&&r.play(),r},r},rn.easing=v,rn.penner=h,rn.random=function(n,e){return Math.floor(Math.random()*(e-n+1))+n},rn
+     "object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):n.anime=e()}(this,function(){"use strict";var n={update:null,begin:null,loopBegin:null,changeBegin:null,change:null,changeComplete:null,loopComplete:null,complete:null,loop:1,direction:"normal",autoplay:!0,timelineOffset:0},e={duration:1e3,delay:0,endDelay:0,easing:"easeOutElastic(1, .5)",round:0},r=["translateX","translateY","translateZ","rotate","rotateX","rotateY","rotateZ","scale","scaleX","scaleY","scaleZ","skew","skewX","skewY","perspective","matrix","matrix3d"],t={CSS:{},springs:{}};function a(n,e,r){return Math.min(Math.max(n,e),r)}function o(n,e){return n.indexOf(e)>-1}function u(n,e){return n.apply(null,e)}var i={arr:function(n){return Array.isArray(n)},obj:function(n){return o(Object.prototype.toString.call(n),"Object")},pth:function(n){return i.obj(n)&&n.hasOwnProperty("totalLength")},svg:function(n){return n instanceof SVGElement},inp:function(n){return n instanceof HTMLInputElement},dom:function(n){return n.nodeType||i.svg(n)},str:function(n){return"string"==typeof n},fnc:function(n){return"function"==typeof n},und:function(n){return void 0===n},hex:function(n){return/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(n)},rgb:function(n){return/^rgb/.test(n)},hsl:function(n){return/^hsl/.test(n)},col:function(n){return i.hex(n)||i.rgb(n)||i.hsl(n)},key:function(r){return!n.hasOwnProperty(r)&&!e.hasOwnProperty(r)&&"targets"!==r&&"keyframes"!==r}};function c(n){var e=/\(([^)]+)\)/.exec(n);return e?e[1].split(",").map(function(n){return parseFloat(n)}):[]}function s(n,e){var r=c(n),o=a(i.und(r[0])?1:r[0],.1,100),u=a(i.und(r[1])?100:r[1],.1,100),s=a(i.und(r[2])?10:r[2],.1,100),f=a(i.und(r[3])?0:r[3],.1,100),l=Math.sqrt(u/o),d=s/(2*Math.sqrt(u*o)),p=d<1?l*Math.sqrt(1-d*d):0,h=1,v=d<1?(d*l-f)/p:-f+l;function g(n){var r=e?e*n/1e3:n;return r=d<1?Math.exp(-r*d*l)*(h*Math.cos(p*r)+v*Math.sin(p*r)):(h+v*r)*Math.exp(-r*l),0===n||1===n?n:1-r}return e?g:function(){var e=t.springs[n];if(e)return e;for(var r=0,a=0;;)if(1===g(r+=1/6)){if(++a>=16)break}else a=0;var o=r*(1/6)*1e3;return t.springs[n]=o,o}}function f(n){return void 0===n&&(n=10),function(e){return Math.ceil(a(e,1e-6,1)*n)*(1/n)}}var l,d,p=function(){var n=11,e=1/(n-1);function r(n,e){return 1-3*e+3*n}function t(n,e){return 3*e-6*n}function a(n){return 3*n}function o(n,e,o){return((r(e,o)*n+t(e,o))*n+a(e))*n}function u(n,e,o){return 3*r(e,o)*n*n+2*t(e,o)*n+a(e)}return function(r,t,a,i){if(0<=r&&r<=1&&0<=a&&a<=1){var c=new Float32Array(n);if(r!==t||a!==i)for(var s=0;s<n;++s)c[s]=o(s*e,r,a);return function(n){return r===t&&a===i?n:0===n||1===n?n:o(f(n),t,i)}}function f(t){for(var i=0,s=1,f=n-1;s!==f&&c[s]<=t;++s)i+=e;var l=i+(t-c[--s])/(c[s+1]-c[s])*e,d=u(l,r,a);return d>=.001?function(n,e,r,t){for(var a=0;a<4;++a){var i=u(e,r,t);if(0===i)return e;e-=(o(e,r,t)-n)/i}return e}(t,l,r,a):0===d?l:function(n,e,r,t,a){for(var u,i,c=0;(u=o(i=e+(r-e)/2,t,a)-n)>0?r=i:e=i,Math.abs(u)>1e-7&&++c<10;);return i}(t,i,i+e,r,a)}}}(),h=(l={linear:function(){return function(n){return n}}},d={Sine:function(){return function(n){return 1-Math.cos(n*Math.PI/2)}},Circ:function(){return function(n){return 1-Math.sqrt(1-n*n)}},Back:function(){return function(n){return n*n*(3*n-2)}},Bounce:function(){return function(n){for(var e,r=4;n<((e=Math.pow(2,--r))-1)/11;);return 1/Math.pow(4,3-r)-7.5625*Math.pow((3*e-2)/22-n,2)}},Elastic:function(n,e){void 0===n&&(n=1),void 0===e&&(e=.5);var r=a(n,1,10),t=a(e,.1,2);return function(n){return 0===n||1===n?n:-r*Math.pow(2,10*(n-1))*Math.sin((n-1-t/(2*Math.PI)*Math.asin(1/r))*(2*Math.PI)/t)}}},["Quad","Cubic","Quart","Quint","Expo"].forEach(function(n,e){d[n]=function(){return function(n){return Math.pow(n,e+2)}}}),Object.keys(d).forEach(function(n){var e=d[n];l["easeIn"+n]=e,l["easeOut"+n]=function(n,r){return function(t){return 1-e(n,r)(1-t)}},l["easeInOut"+n]=function(n,r){return function(t){return t<.5?e(n,r)(2*t)/2:1-e(n,r)(-2*t+2)/2}}}),l);function v(n,e){if(i.fnc(n))return n;var r=n.split("(")[0],t=h[r],a=c(n);switch(r){case"spring":return s(n,e);case"cubicBezier":return u(p,a);case"steps":return u(f,a);default:return u(t,a)}}function g(n){try{return document.querySelectorAll(n)}catch(n){return}}function m(n,e){for(var r=n.length,t=arguments.length>=2?arguments[1]:void 0,a=[],o=0;o<r;o++)if(o in n){var u=n[o];e.call(t,u,o,n)&&a.push(u)}return a}function y(n){return n.reduce(function(n,e){return n.concat(i.arr(e)?y(e):e)},[])}function b(n){return i.arr(n)?n:(i.str(n)&&(n=g(n)||n),n instanceof NodeList||n instanceof HTMLCollection?[].slice.call(n):[n])}function x(n,e){return n.some(function(n){return n===e})}function M(n){var e={};for(var r in n)e[r]=n[r];return e}function w(n,e){var r=M(n);for(var t in n)r[t]=e.hasOwnProperty(t)?e[t]:n[t];return r}function k(n,e){var r=M(n);for(var t in e)r[t]=i.und(n[t])?e[t]:n[t];return r}function O(n){return i.rgb(n)?(r=/rgb\((\d+,\s*[\d]+,\s*[\d]+)\)/g.exec(e=n))?"rgba("+r[1]+",1)":e:i.hex(n)?(t=n.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(n,e,r,t){return e+e+r+r+t+t}),a=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(t),"rgba("+parseInt(a[1],16)+","+parseInt(a[2],16)+","+parseInt(a[3],16)+",1)"):i.hsl(n)?function(n){var e,r,t,a=/hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(n)||/hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%,\s*([\d.]+)\)/g.exec(n),o=parseInt(a[1],10)/360,u=parseInt(a[2],10)/100,i=parseInt(a[3],10)/100,c=a[4]||1;function s(n,e,r){return r<0&&(r+=1),r>1&&(r-=1),r<1/6?n+6*(e-n)*r:r<.5?e:r<2/3?n+(e-n)*(2/3-r)*6:n}if(0==u)e=r=t=i;else{var f=i<.5?i*(1+u):i+u-i*u,l=2*i-f;e=s(l,f,o+1/3),r=s(l,f,o),t=s(l,f,o-1/3)}return"rgba("+255*e+","+255*r+","+255*t+","+c+")"}(n):void 0;var e,r,t,a}function C(n){var e=/[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?(%|px|pt|em|rem|in|cm|mm|ex|ch|pc|vw|vh|vmin|vmax|deg|rad|turn)?$/.exec(n);if(e)return e[1]}function B(n,e){return i.fnc(n)?n(e.target,e.id,e.total):n}function P(n,e){return n.getAttribute(e)}function I(n,e,r){if(x([r,"deg","rad","turn"],C(e)))return e;var a=t.CSS[e+r];if(!i.und(a))return a;var o=document.createElement(n.tagName),u=n.parentNode&&n.parentNode!==document?n.parentNode:document.body;u.appendChild(o),o.style.position="absolute",o.style.width=100+r;var c=100/o.offsetWidth;u.removeChild(o);var s=c*parseFloat(e);return t.CSS[e+r]=s,s}function T(n,e,r){if(e in n.style){var t=e.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase(),a=n.style[e]||getComputedStyle(n).getPropertyValue(t)||"0";return r?I(n,a,r):a}}function D(n,e){return i.dom(n)&&!i.inp(n)&&(P(n,e)||i.svg(n)&&n[e])?"attribute":i.dom(n)&&x(r,e)?"transform":i.dom(n)&&"transform"!==e&&T(n,e)?"css":null!=n[e]?"object":void 0}function E(n){if(i.dom(n)){for(var e,r=n.style.transform||"",t=/(\w+)\(([^)]*)\)/g,a=new Map;e=t.exec(r);)a.set(e[1],e[2]);return a}}function F(n,e,r,t){var a,u=o(e,"scale")?1:0+(o(a=e,"translate")||"perspective"===a?"px":o(a,"rotate")||o(a,"skew")?"deg":void 0),i=E(n).get(e)||u;return r&&(r.transforms.list.set(e,i),r.transforms.last=e),t?I(n,i,t):i}function N(n,e,r,t){switch(D(n,e)){case"transform":return F(n,e,t,r);case"css":return T(n,e,r);case"attribute":return P(n,e);default:return n[e]||0}}function A(n,e){var r=/^(\*=|\+=|-=)/.exec(n);if(!r)return n;var t=C(n)||0,a=parseFloat(e),o=parseFloat(n.replace(r[0],""));switch(r[0][0]){case"+":return a+o+t;case"-":return a-o+t;case"*":return a*o+t}}function L(n,e){if(i.col(n))return O(n);if(/\s/g.test(n))return n;var r=C(n),t=r?n.substr(0,n.length-r.length):n;return e?t+e:t}function j(n,e){return Math.sqrt(Math.pow(e.x-n.x,2)+Math.pow(e.y-n.y,2))}function S(n){for(var e,r=n.points,t=0,a=0;a<r.numberOfItems;a++){var o=r.getItem(a);a>0&&(t+=j(e,o)),e=o}return t}function q(n){if(n.getTotalLength)return n.getTotalLength();switch(n.tagName.toLowerCase()){case"circle":return o=n,2*Math.PI*P(o,"r");case"rect":return 2*P(a=n,"width")+2*P(a,"height");case"line":return j({x:P(t=n,"x1"),y:P(t,"y1")},{x:P(t,"x2"),y:P(t,"y2")});case"polyline":return S(n);case"polygon":return r=(e=n).points,S(e)+j(r.getItem(r.numberOfItems-1),r.getItem(0))}var e,r,t,a,o}function $(n,e){var r=e||{},t=r.el||function(n){for(var e=n.parentNode;i.svg(e)&&i.svg(e.parentNode);)e=e.parentNode;return e}(n),a=t.getBoundingClientRect(),o=P(t,"viewBox"),u=a.width,c=a.height,s=r.viewBox||(o?o.split(" "):[0,0,u,c]);return{el:t,viewBox:s,x:s[0]/1,y:s[1]/1,w:u/s[2],h:c/s[3]}}function X(n,e){function r(r){void 0===r&&(r=0);var t=e+r>=1?e+r:0;return n.el.getPointAtLength(t)}var t=$(n.el,n.svg),a=r(),o=r(-1),u=r(1);switch(n.property){case"x":return(a.x-t.x)*t.w;case"y":return(a.y-t.y)*t.h;case"angle":return 180*Math.atan2(u.y-o.y,u.x-o.x)/Math.PI}}function Y(n,e){var r=/[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g,t=L(i.pth(n)?n.totalLength:n,e)+"";return{original:t,numbers:t.match(r)?t.match(r).map(Number):[0],strings:i.str(n)||e?t.split(r):[]}}function Z(n){return m(n?y(i.arr(n)?n.map(b):b(n)):[],function(n,e,r){return r.indexOf(n)===e})}function Q(n){var e=Z(n);return e.map(function(n,r){return{target:n,id:r,total:e.length,transforms:{list:E(n)}}})}function V(n,e){var r=M(e);if(/^spring/.test(r.easing)&&(r.duration=s(r.easing)),i.arr(n)){var t=n.length;2===t&&!i.obj(n[0])?n={value:n}:i.fnc(e.duration)||(r.duration=e.duration/t)}var a=i.arr(n)?n:[n];return a.map(function(n,r){var t=i.obj(n)&&!i.pth(n)?n:{value:n};return i.und(t.delay)&&(t.delay=r?0:e.delay),i.und(t.endDelay)&&(t.endDelay=r===a.length-1?e.endDelay:0),t}).map(function(n){return k(n,r)})}function z(n,e){var r=[],t=e.keyframes;for(var a in t&&(e=k(function(n){for(var e=m(y(n.map(function(n){return Object.keys(n)})),function(n){return i.key(n)}).reduce(function(n,e){return n.indexOf(e)<0&&n.push(e),n},[]),r={},t=function(t){var a=e[t];r[a]=n.map(function(n){var e={};for(var r in n)i.key(r)?r==a&&(e.value=n[r]):e[r]=n[r];return e})},a=0;a<e.length;a++)t(a);return r}(t),e)),e)i.key(a)&&r.push({name:a,tweens:V(e[a],n)});return r}function H(n,e){var r;return n.tweens.map(function(t){var a=function(n,e){var r={};for(var t in n){var a=B(n[t],e);i.arr(a)&&1===(a=a.map(function(n){return B(n,e)})).length&&(a=a[0]),r[t]=a}return r.duration=parseFloat(r.duration),r.delay=parseFloat(r.delay),r}(t,e),o=a.value,u=i.arr(o)?o[1]:o,c=C(u),s=N(e.target,n.name,c,e),f=r?r.to.original:s,l=i.arr(o)?o[0]:f,d=C(l)||C(s),p=c||d;return i.und(u)&&(u=f),a.from=Y(l,p),a.to=Y(A(u,l),p),a.start=r?r.end:0,a.end=a.start+a.delay+a.duration+a.endDelay,a.easing=v(a.easing,a.duration),a.isPath=i.pth(o),a.isColor=i.col(a.from.original),a.isColor&&(a.round=1),r=a,a})}var G={css:function(n,e,r){return n.style[e]=r},attribute:function(n,e,r){return n.setAttribute(e,r)},object:function(n,e,r){return n[e]=r},transform:function(n,e,r,t,a){if(t.list.set(e,r),e===t.last||a){var o="";t.list.forEach(function(n,e){o+=e+"("+n+") "}),n.style.transform=o}}};function R(n,e){Q(n).forEach(function(n){for(var r in e){var t=B(e[r],n),a=n.target,o=C(t),u=N(a,r,o,n),i=A(L(t,o||C(u)),u),c=D(a,r);G[c](a,r,i,n.transforms,!0)}})}function W(n,e){return m(y(n.map(function(n){return e.map(function(e){return function(n,e){var r=D(n.target,e.name);if(r){var t=H(e,n),a=t[t.length-1];return{type:r,property:e.name,animatable:n,tweens:t,duration:a.end,delay:t[0].delay,endDelay:a.endDelay}}}(n,e)})})),function(n){return!i.und(n)})}function J(n,e){var r=n.length,t=function(n){return n.timelineOffset?n.timelineOffset:0},a={};return a.duration=r?Math.max.apply(Math,n.map(function(n){return t(n)+n.duration})):e.duration,a.delay=r?Math.min.apply(Math,n.map(function(n){return t(n)+n.delay})):e.delay,a.endDelay=r?a.duration-Math.max.apply(Math,n.map(function(n){return t(n)+n.duration-n.endDelay})):e.endDelay,a}var K=0;var U,_=[],nn=[],en=function(){function n(){U=requestAnimationFrame(e)}function e(e){var r=_.length;if(r){for(var t=0;t<r;){var a=_[t];if(a.paused){var o=_.indexOf(a);o>-1&&(_.splice(o,1),r=_.length)}else a.tick(e);t++}n()}else U=cancelAnimationFrame(U)}return n}();function rn(r){void 0===r&&(r={});var t,o=0,u=0,i=0,c=0,s=null;function f(n){var e=window.Promise&&new Promise(function(n){return s=n});return n.finished=e,e}var l,d,p,h,v,g,y,b,x=(d=w(n,l=r),p=w(e,l),h=z(p,l),v=Q(l.targets),g=W(v,h),y=J(g,p),b=K,K++,k(d,{id:b,children:[],animatables:v,animations:g,duration:y.duration,delay:y.delay,endDelay:y.endDelay}));f(x);function M(){var n=x.direction;"alternate"!==n&&(x.direction="normal"!==n?"normal":"reverse"),x.reversed=!x.reversed,t.forEach(function(n){return n.reversed=x.reversed})}function O(n){return x.reversed?x.duration-n:n}function C(){o=0,u=O(x.currentTime)*(1/rn.speed)}function B(n,e){e&&e.seek(n-e.timelineOffset)}function P(n){for(var e=0,r=x.animations,t=r.length;e<t;){var o=r[e],u=o.animatable,i=o.tweens,c=i.length-1,s=i[c];c&&(s=m(i,function(e){return n<e.end})[0]||s);for(var f=a(n-s.start-s.delay,0,s.duration)/s.duration,l=isNaN(f)?1:s.easing(f),d=s.to.strings,p=s.round,h=[],v=s.to.numbers.length,g=void 0,y=0;y<v;y++){var b=void 0,M=s.to.numbers[y],w=s.from.numbers[y]||0;b=s.isPath?X(s.value,l*M):w+l*(M-w),p&&(s.isColor&&y>2||(b=Math.round(b*p)/p)),h.push(b)}var k=d.length;if(k){g=d[0];for(var O=0;O<k;O++){d[O];var C=d[O+1],B=h[O];isNaN(B)||(g+=C?B+C:B+" ")}}else g=h[0];G[o.type](u.target,o.property,g,u.transforms),o.currentValue=g,e++}}function I(n){x[n]&&!x.passThrough&&x[n](x)}function T(n){var e=x.duration,r=x.delay,l=e-x.endDelay,d=O(n);x.progress=a(d/e*100,0,100),x.reversePlayback=d<x.currentTime,t&&function(n){if(x.reversePlayback)for(var e=c;e--;)B(n,t[e]);else for(var r=0;r<c;r++)B(n,t[r])}(d),!x.began&&x.currentTime>0&&(x.began=!0,I("begin")),!x.loopBegan&&x.currentTime>0&&(x.loopBegan=!0,I("loopBegin")),d<=r&&0!==x.currentTime&&P(0),(d>=l&&x.currentTime!==e||!e)&&P(e),d>r&&d<l?(x.changeBegan||(x.changeBegan=!0,x.changeCompleted=!1,I("changeBegin")),I("change"),P(d)):x.changeBegan&&(x.changeCompleted=!0,x.changeBegan=!1,I("changeComplete")),x.currentTime=a(d,0,e),x.began&&I("update"),n>=e&&(u=0,x.remaining&&!0!==x.remaining&&x.remaining--,x.remaining?(o=i,I("loopComplete"),x.loopBegan=!1,"alternate"===x.direction&&M()):(x.paused=!0,x.completed||(x.completed=!0,I("loopComplete"),I("complete"),!x.passThrough&&"Promise"in window&&(s(),f(x)))))}return x.reset=function(){var n=x.direction;x.passThrough=!1,x.currentTime=0,x.progress=0,x.paused=!0,x.began=!1,x.loopBegan=!1,x.changeBegan=!1,x.completed=!1,x.changeCompleted=!1,x.reversePlayback=!1,x.reversed="reverse"===n,x.remaining=x.loop,t=x.children;for(var e=c=t.length;e--;)x.children[e].reset();(x.reversed&&!0!==x.loop||"alternate"===n&&1===x.loop)&&x.remaining++,P(x.reversed?x.duration:0)},x.set=function(n,e){return R(n,e),x},x.tick=function(n){i=n,o||(o=i),T((i+(u-o))*rn.speed)},x.seek=function(n){T(O(n))},x.pause=function(){x.paused=!0,C()},x.play=function(){x.paused&&(x.completed&&x.reset(),x.paused=!1,_.push(x),C(),U||en())},x.reverse=function(){M(),x.completed=!x.reversed,C()},x.restart=function(){x.reset(),x.play()},x.reset(),x.autoplay&&x.play(),x}function tn(n,e){for(var r=e.length;r--;)x(n,e[r].animatable.target)&&e.splice(r,1)}return"undefined"!=typeof document&&document.addEventListener("visibilitychange",function(){document.hidden?(_.forEach(function(n){return n.pause()}),nn=_.slice(0),rn.running=_=[]):nn.forEach(function(n){return n.play()})}),rn.version="3.2.0",rn.speed=1,rn.running=_,rn.remove=function(n){for(var e=Z(n),r=_.length;r--;){var t=_[r],a=t.animations,o=t.children;tn(e,a);for(var u=o.length;u--;){var i=o[u],c=i.animations;tn(e,c),c.length||i.children.length||o.splice(u,1)}a.length||o.length||t.pause()}},rn.get=N,rn.set=R,rn.convertPx=I,rn.path=function(n,e){var r=i.str(n)?g(n)[0]:n,t=e||100;return function(n){return{property:n,el:r,svg:$(r),totalLength:q(r)*(t/100)}}},rn.setDashoffset=function(n){var e=q(n);return n.setAttribute("stroke-dasharray",e),e},rn.stagger=function(n,e){void 0===e&&(e={});var r=e.direction||"normal",t=e.easing?v(e.easing):null,a=e.grid,o=e.axis,u=e.from||0,c="first"===u,s="center"===u,f="last"===u,l=i.arr(n),d=l?parseFloat(n[0]):parseFloat(n),p=l?parseFloat(n[1]):0,h=C(l?n[1]:n)||0,g=e.start||0+(l?d:0),m=[],y=0;return function(n,e,i){if(c&&(u=0),s&&(u=(i-1)/2),f&&(u=i-1),!m.length){for(var v=0;v<i;v++){if(a){var b=s?(a[0]-1)/2:u%a[0],x=s?(a[1]-1)/2:Math.floor(u/a[0]),M=b-v%a[0],w=x-Math.floor(v/a[0]),k=Math.sqrt(M*M+w*w);"x"===o&&(k=-M),"y"===o&&(k=-w),m.push(k)}else m.push(Math.abs(u-v));y=Math.max.apply(Math,m)}t&&(m=m.map(function(n){return t(n/y)*y})),"reverse"===r&&(m=m.map(function(n){return o?n<0?-1*n:-n:Math.abs(y-n)}))}return g+(l?(p-d)/y:d)*(Math.round(100*m[e])/100)+h}},rn.timeline=function(n){void 0===n&&(n={});var r=rn(n);return r.duration=0,r.add=function(t,a){var o=_.indexOf(r),u=r.children;function c(n){n.passThrough=!0}o>-1&&_.splice(o,1);for(var s=0;s<u.length;s++)c(u[s]);var f=k(t,w(e,n));f.targets=f.targets||n.targets;var l=r.duration;f.autoplay=!1,f.direction=r.direction,f.timelineOffset=i.und(a)?l:A(a,l),c(r),r.seek(f.timelineOffset);var d=rn(f);c(d),u.push(d);var p=J(u,n);return r.delay=p.delay,r.endDelay=p.endDelay,r.duration=p.duration,r.seek(0),r.reset(),r.autoplay&&r.play(),r},r},rn.easing=v,rn.penner=h,rn.random=function(n,e){return Math.floor(Math.random()*(e-n+1))+n},rn
     });
 
     const tl = anime.timeline({
-      autoplay: false,
-      loop: false,
-      duration: 500,
-      easing: 'easeInOutQuad'
+     autoplay: false,
+     loop: false,
+     duration: 500,
+     easing: 'easeInOutQuad'
     })
 
     tl
-      // introduce mobiles & pātaka
-      .add({ targets: ['#mobile-a, #mask-copy_mobile-a', '#mobile-b, #mask-copy_mobile-b', '#mobile-c, #mask-copy_mobile-c'],
-        opacity: [0, 1],
-        delay: anime.stagger(100),
-        duration: 1000
+      // introduce elements
+      .add({ targets: '#mobile-a, #mobile-b, #mobile-c',
+        opacity: [0, 1]
       }, 1000)
-      .add({ targets: '#pātaka_laptop, #mask-copy_laptop, #pātaka-symbol_laptop',
-        opacity: [0, 1],
-        delay: anime.stagger(500),
-        duration: 1000
-      }, '+=500')
-
-      // pātaka sends invites to mobiles
-      .add({ targets: ['#arrow-invite_c', '#invite-to-pātaka-laptop_c',
-                       '#arrow-invite_b', '#invite-to-pātaka-laptop_b',
-                       '#arrow-invite_a', '#invite-to-pātaka-laptop_a'],
-        scale: [0, 1],
-        delay: anime.stagger(250)
-      }, '+=1000')
-      .add({ targets: '#arrow-invite_a, #arrow-invite_b, #arrow-invite_c',
-        opacity: [1, 0],
-        duration: 300
-      })
-      .add({ targets: '#invite-button',
+      .add({ targets: '#pātaka_laptop',
         opacity: [0, 1]
-      }, '-=250')
-
-      // focus on mobile-a
-      .add({ targets: '#mobile-a, #mask-copy_mobile-a',
-        scale: [1, 2]
-      })
-      .add({ targets: '#mobile-b',
-        translateX: [0, 75],
-        opacity: [1, 0.5]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-b',
-        translateX: [0, 75]
-      }, '-=500')
-      .add({ targets: '#mobile-c',
-        translateX: [0, 100],
-        opacity: [1, 0.5]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-c',
-        translateX: [0, 100]
-      }, '-=500')
-
-      // mobile-a user chooses to join laptop pātaka
-      .add({ targets: '#invite-button_hover-a',
-        opacity: [0, 1],
-        duration: 300
-      }, '+=500')
-      .add({ targets: '#invite-button_a',
-        keyframes: [
-          { scale: [1, 1.05], duration: 150 },
-          { scale: [1.05, 0.9], delay: 500, duration: 150 },
-          { scale: [0.9, 1], duration: 200 },
-        ],
-        easing: 'linear'
-      }, '-=300')
-      .add({ targets: '#invite-button_hover-a',
-        opacity: [1, 0],
-        duration: 200
-      }, '-=200')
-      .add({ targets: '#invite-button_a',
+      }, '+=1000')
+      .add({ targets: '#device_laptop',
         opacity: [1, 0]
-      }, '-=300')
-
-      // mutual follow is indicated (laptop <-> mobile-a)
-      .add({ targets: '#mask-copy_mobile-a',
-        scale: [2, 2],
+      }, '+=1000')
+      .add({ targets: '#mobile-a',
+        scale: [1, 4]
+      }, '+=1000')
+      // mobiles connect to pātaka_laptop
+      .add({ targets: '#follow-lines_laptop, #invite-symbol_mobile, #invite-button_mobile',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#follow-line_a-laptop_connected',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#invite-symbol_mobile, #invite-button_mobile',
+        opacity: [1, 0]
+      }, '-=500')
+      .add({ targets: '#follow-line_b-laptop_connected, #follow-line_c-laptop_connected',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#follow-lines_laptop',
+        opacity: [1, 0]
+      }, '-=500')
+      // kuia-a whakapapa record created & replicated
+      .add({ targets: '#kuia-a',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#kuia-a_copy',
+        keyframes: [
+           { opacity: [0, 1], duration: 250 },
+           { opacity: [1, 1], duration: 500 },
+           { scale: [1, 0], duration: 250 }
+        ]
+      }, '+=1000')
+      .add({ targets: '#file_in-transit_b, #file_in-transit_c',
+        opacity: [0, 1],
         duration: 16.7
-      }, '+=100')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        scale: [0, 1],
-        translateY: [-20, -20],
-        rotate: [6, 6],
+      }, '-=16.7')
+      .add({ targets: '#follow-line_a-laptop_connected',
+        strokeDasharray: ['8,8', '0,0'],
+        duration: 250
+      })
+      .add({ targets: '#file_in-transit_b, #file_in-transit_c',
+        translateX: [750, 370],
+        translateY: [590, 174],
         duration: 1000
       })
-      .add({ targets: '#pātaka-symbol_laptop',
-        opacity: [1, 0],
-        duration: 600
+      .add({ targets: '#follow-line_a-laptop_connected',
+        strokeDasharray: ['0,0', '8,8'],
+        duration: 250
       })
-      .add({ targets: '#follow-notification_a, #follow-notification_laptop_a, #mobile-icon_onscreen-laptop_a',
+      .add({ targets: '#storage_laptop',
         opacity: [0, 1]
-      }, '+=200')
-      .add({ targets: '#follow-notification_laptop_a',
-        opacity: [1, 0]
-      }, '+=1000')
-      .add({ targets: '#mobile-icon_onscreen-laptop_a',
-        scale: [1, 0],
-        opacity: [1, 0],
-        duration: 800
       }, '-=500')
-      .add({ targets: '#line_first-follow_laptop',
-        scale: [0, 1],
-        translateX: [10, 10],
-        rotate: [-41.5, -41.5]
-      }, '-=250')
-      .add({ targets: '#mobile-icon-a_follow_laptop',
-        opacity: [0, 1],
-        translateY: [45, 45],
-        translateX: [10, 0]
-      }, '-=300')
-      .add({ targets: '#follow-notification_a',
-        opacity: [1, 0]
+      .add({ targets: '#file_laptop_a',
+        scale: [0, 1]
       }, '+=500')
-      .add({ targets: '#laptop-icon_invite-a',
-        scale: [1, 0],
-        opacity: [1, 0]
-      }, '-=400')
-      .add({ targets: '#line_a-to-laptop',
-        scale: [0, 1]
-      }, '-=250')
-      .add({ targets: '#laptop-icon_follow_a',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-
-      // switch focus to mobile-b
-      .add({ targets: '#mobile-a',
+      .add({ targets: '#file_laptop_a-copy',
         keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [0, -100], opacity: [1, 0.5], duration: 500 }
+          { opacity: [0, 1], duration: 16.7 },
+          { scale: [1, 0], duration: 483.3 }
         ]
-      }, '+=1800')
-      .add({ targets: '#follow-map_mobile-a',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=900')
-      .add({ targets: '#mask-copy_mobile-a',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [0, -100], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        keyframes: [
-          { translateY: [-20, 0], rotate: [6, 0], duration: 400 },
-          { translateX: [0, -50], rotate: [0, 12], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#mobile-b',
-        translateX: [75, 0],
-        scale: [1, 2],
-        opacity: [0.5, 1]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-b',
-        translateX: [75, 0],
-        scale: [1, 2]
-      }, '-=500')
-
-      // mobile-b user chooses to join laptop pātaka
-      .add({ targets: '#invite-button_hover-b',
-        opacity: [0, 1],
-        duration: 300
       }, '+=500')
-      .add({ targets: '#invite-button_b',
-        keyframes: [
-          { scale: [1, 1.05], duration: 150 },
-          { scale: [1.05, 0.9], delay: 500, duration: 150 },
-          { scale: [0.9, 1], duration: 200 },
-        ],
-        easing: 'linear'
-      }, '-=300')
-      .add({ targets: '#invite-button_hover-b',
-        opacity: [1, 0],
-        duration: 200
-      }, '-=200')
-      .add({ targets: '#invite-button_b',
-        opacity: [1, 0]
-      }, '-=300')
-
-      // mutual follow is indicated (laptop <-> mobile-b)
-      .add({ targets: '#line_mutual-follow_laptop_b',
-        scale: [0, 1],
-        duration: 1000
-      }, '+=100')
-      .add({ targets: '#follow-notification_b, #follow-notification_laptop_b, #mobile-icon_onscreen-laptop_b',
-        opacity: [0, 1]
-      }, '+=200')
-      .add({ targets: '#follow-notification_laptop_b',
-        opacity: [1, 0]
-      }, '+=1000')
-      .add({ targets: '#mobile-icon_onscreen-laptop_b',
-        scale: [1, 0],
-        opacity: [1, 0],
-        duration: 800
-      }, '-=500')
-      .add({ targets: '#line_second-follow_laptop',
-        scale: [0, 1],
-        rotate: [-20, -20]
-      }, '-=250')
-      .add({ targets: '#line_first-follow_laptop',
-        translateX: [10, 5],
-        rotate: [-41.5, -12]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-a_follow_laptop',
-        translateY: [45, 25]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-b_follow_laptop',
-        opacity: [0,1],
-        translateY: [21, 25],
-        translateX: [10, 0]
-      }, '-=500')
-      .add({ targets: '#follow-notification_b',
-        opacity: [1, 0]
-      }, '+=500')
-      .add({ targets: '#laptop-icon_invite-b',
-        scale: [1, 0],
-        opacity: [1, 0]
-      }, '-=400')
-      .add({ targets: '#line_b-to-laptop',
-        scale: [0, 1]
-      }, '-=250')
-      .add({ targets: '#laptop-icon_follow_b',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-      .add({ targets: '#line_first-fof_b',
-        rotate: [34, 34],
-        scale: [0, 1]
-      }, '-=100')
-      .add({ targets: '#mobile-icon-a_follow_b',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-
-      // include mobile-a in focus
-      .add({ targets: '#mobile-a',
-        translateX: [-100, -50],
-        scale: [1, 2],
-        opacity: [0.5, 1]
-      }, '+=1500')
-      .add({ targets: '#follow-map_mobile-a',
-        opacity: [0, 1],
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-a',
-        translateX: [-100, -50],
-        scale: [1, 2]
-      }, '-=500')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        translateY: [0, -10],
-        translateX: [-50, -50],
-        rotate: [12, 16]
-      }, '-=500')
-
-      // show that mobile-b is now a FoF
-      .add({ targets: '#line_first-fof_a',
-        rotate: [33.8, 33.8],
-        scale: [0, 1]
+      .add({ targets: '#follow-line_b-laptop_connected, #follow-line_c-laptop_connected',
+        strokeDasharray: ['8,8', '0,0'],
+        duration: 250
       })
-      .add({ targets: '#mobile-icon-b_follow_a',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-
-      // switch focus to mobile-c
-      .add({ targets: '#mobile-a',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [-50, -100], opacity: [1, 0.5], duration: 500 }
-        ]
-      }, '+=1800')
-      .add({ targets: '#follow-map_mobile-a',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=900')
-      .add({ targets: '#mask-copy_mobile-a',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [-50, -100], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        keyframes: [
-          { translateX: [-50, -20], translateY: [-10, 0], rotate: [16, 10], duration: 400 },
-          { translateX: [-20, -50], rotate: [10, 12], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#mobile-b',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [0, -75], opacity: [1, 0.5], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#follow-map_mobile-b',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=900')
-      .add({ targets: '#mask-copy_mobile-b',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [0, -75], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#line_mutual-follow_laptop_b',
-        keyframes: [
-          { translateX: [0, 0],translateY: [0, 0], rotate: [0, 0], duration: 400 },
-          { translateX: [0, -37.5], rotate: [0, 12], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#mobile-c',
-        translateX: [100, 0],
-        scale: [1, 2],
-        opacity: [0.5, 1]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-c',
-        translateX: [100, 0],
-        scale: [1, 2]
-      }, '-=500')
-
-      // mobile-c user chooses to join laptop pātaka
-      .add({ targets: '#invite-button_hover-c',
-        opacity: [0, 1],
-        duration: 300
-      }, '+=500')
-      .add({ targets: '#invite-button_c',
-        keyframes: [
-          { scale: [1, 1.05], duration: 150 },
-          { scale: [1.05, 0.9], delay: 500, duration: 150 },
-          { scale: [0.9, 1], duration: 200 },
-        ],
-        easing: 'linear'
-      }, '-=300')
-      .add({ targets: '#invite-button_hover-c',
-        opacity: [1, 0],
-        duration: 200
-      }, '-=200')
-      .add({ targets: '#invite-button_c',
-        opacity: [1, 0]
-      }, '-=300')
-
-      // mutual follow is indicated (laptop <-> mobile-c)
-      .add({ targets: '#line_mutual-follow_laptop_c',
-        scale: [0, 1],
-        translateX: [-64, -64],
-        rotate: [5.5, 5.5],
+      .add({ targets: '#file_in-transit_b',
+        translateX: [370, 570],
+        translateY: [174, 480],
         duration: 1000
-      }, '+=10')
-      .add({ targets: '#follow-notification_c, #follow-notification_laptop_c, #mobile-icon_onscreen-laptop_c',
-        opacity: [0, 1]
-      }, '+=200')
-      .add({ targets: '#follow-notification_laptop_c',
-        opacity: [1, 0]
-      }, '+=1000')
-      .add({ targets: '#mobile-icon_onscreen-laptop_c',
-        scale: [1, 0],
-        opacity: [1, 0],
-        duration: 800
-      }, '-=500')
-      .add({ targets: '#line_third-follow_laptop',
-        scale: [0, 1]
-      }, '-=250')
-      .add({ targets: '#line_first-follow_laptop',
-        translateX: [5, 0],
-        rotate: [-12, 0]
-      }, '-=500')
-      .add({ targets: '#line_second-follow_laptop',
-        translateX: [5, 0],
-        rotate: [-20, 0]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-a_follow_laptop',
-        translateY: [25, 15]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-b_follow_laptop',
-        translateY: [25, 15]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-c_follow_laptop',
-        opacity: [0, 1],
-        translateY: [8, 15],
-        translateX: [10, 0]
-      }, '-=500')
-      .add({ targets: '#follow-notification_c',
-        opacity: [1, 0]
-      }, '+=500')
-      .add({ targets: '#laptop-icon_invite-c',
-        scale: [1, 0],
-        opacity: [1, 0]
-      }, '-=400')
-      .add({ targets: '#line_c-to-laptop',
-        scale: [0, 1]
-      }, '-=250')
-      .add({ targets: '#laptop-icon_follow_c',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-      .add({ targets: '#line_first-fof_c, #line_second-fof_c',
-        scale: [0, 1]
-      }, '-=100')
-      .add({ targets: '#mobile-icon-a_follow_c',
-        opacity: [0, 1],
-        translateX: [-10, 0],
-        translateY: [-15, -20]
-      }, '-=300')
-      .add({ targets: '#mobile-icon-b_follow_c',
-        opacity: [0, 1],
-        translateX: [-10, 0],
-        translateY: [-5, 0]
-      }, '-=500')
-
-      // switch focus to mobile-a & mobile-b
-      .add({ targets: '#mobile-c',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [0, 75], opacity: [1, 0.5], duration: 500 }
-        ]
-      }, '+=1800')
-      .add({ targets: '#mask-copy_mobile-c',
-      keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [0, 75], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#follow-map_mobile-c',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=900')
-      .add({ targets: '#line_mutual-follow_laptop_c',
-        keyframes: [
-          { translateX: [-64, -44], rotate: [5.5, 1.5], duration: 400 },
-          { translateX: [-44, 0], rotate: [1.5, 0], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#mobile-b',
-        translateX: [-75, 0],
-        scale: [1, 2],
-        opacity: [0.5, 1]
-      }, '-=500')
-      .add({ targets: '#follow-map_mobile-b',
-        opacity: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-b',
-        translateX: [-75, 0],
-        scale: [1, 2]
-      }, '-=500')
-      .add({ targets: '#line_mutual-follow_laptop_b',
-        translateX: [-37.5, 0],
-        rotate: [12, 0]
-      }, '-=500')
-      .add({ targets: '#mobile-a',
-        translateX: [-100, -50],
-        scale: [1, 2],
-        opacity: [0.5, 1]
-      }, '-=500')
-      .add({ targets: '#follow-map_mobile-a',
-        opacity: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-a',
-        translateX: [-100, -50],
-        scale: [1, 2]
-      }, '-=500')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        translateY: [0, -10],
-        translateX: [-50, -50],
-        rotate: [12, 16]
-      }, '-=500')
-
-      // show that mobile-c is now a FoF
-      .add({ targets: '#line_first-fof_a, #line_first-fof_b',
-        rotate: [33.8, 0]
-      }, '+=500')
-      .add({ targets: '#line_second-fof_a, #line_second-fof_b',
-        scale: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-b_follow_a, #mobile-icon-a_follow_b',
-        translateY: [0, -20]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-c_follow_a, #mobile-icon-c_follow_b',
-        opacity: [0, 1],
-        translateX: [-10, 0],
-        translateY: [-5, 0]
-      }, '-=300')
-
-      // de-focus mobiles
-      .add({ targets: '#mobile-a',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [-50, -100], opacity: [1, 0.5], duration: 500 }
-        ]
-      }, '+=1500')
-      .add({ targets: '#follow-map_mobile-a',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=900')
-      .add({ targets: '#mask-copy_mobile-a',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { translateX: [-50, -100], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        keyframes: [
-          { translateX: [-50, -20],translateY: [-10, 0], rotate: [16, 10], duration: 400 },
-          { translateX: [-20, -50], rotate: [10, 12], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#mobile-b',
-        keyframes: [
-          { scale: [2, 1], duration: 400 },
-          { opacity: [1, 0.5], duration: 500 }
-        ]
-      }, '-=900')
-      .add({ targets: '#follow-map_mobile-b',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=900')
-      .add({ targets: '#mask-copy_mobile-b',
-        scale: [2, 1],
-        duration: 400
-      }, '-=900')
-
-      // shift laptop, introduce imac
-      .add({ targets: '#pātaka-symbol_laptop',
-        opacity: [0, 1]
-      }, '+=200')
-      .add({ targets: '#pātaka_laptop, #mask-copy_laptop, #mask-copy_laptop',
-        scale: [2, 1],
-        translateX: [0, -280],
-        duration: 800
-      }, '+=600')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        translateY: [0, -110],
-        translateX: [-50, -180],
-        rotate: [12, -21],
-        duration: 800
-      }, '-=800')
-      .add({ targets: '#line_mutual-follow_laptop_b',
-        translateY: [0, 30],
-        translateX: [0, -120],
-        rotate: [0, -42],
-        duration: 800
-      }, '-=800')
-      .add({ targets: '#line_mutual-follow_laptop_c',
-        translateY: [0, 90],
-        translateX: [0, -80],
-        rotate: [0, -28],
-        duration: 800
-      }, '-=800')
-      .add({ targets: '#pātaka_imac, #pātaka-symbol_imac, #mask-copy_imac',
-        opacity: [0, 1],
-        delay: anime.stagger(500),
-        duration: 1000
-      }, '-=400')
-
-      // pātaka_laptop sends invites to pātaka_imac
-      .add({ targets: ['#arrow-invite_imac', '#invite-to-pātaka-laptop_imac'],
-        scale: [0,1],
-        delay: anime.stagger(300)
-      }, '+=500')
-      .add({ targets: '#pātaka-symbol_imac',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=750')
-      .add({ targets: '#arrow-invite_imac',
-        opacity: [1, 0],
-        duration: 300
       })
-      .add({ targets: '#invite-button_imac',
-        opacity: [0, 1]
-      }, '+=200')
-
-      // imac user chooses to join laptop pātaka
-      .add({ targets: '#invite-button_hover-imac',
-        opacity: [0, 1],
-        duration: 300
-      }, '+=500')
-      .add({ targets: '#invite-button_imac',
-        keyframes: [
-          { scale: [1.5, 1.55], duration: 150 },
-          { scale: [1.55, 1.35], delay: 500, duration: 150 },
-          { scale: [1.35, 1.5], duration: 200 },
-        ],
-        easing: 'linear'
-      }, '-=300')
-      .add({ targets: '#invite-button_hover-imac',
-        opacity: [1, 0],
-        duration: 200
-      }, '-=200')
-      .add({ targets: '#invite-button_imac',
-        opacity: [1, 0]
-      }, '-=300')
-
-      // mutual follow is indicated (laptop <-> imac)
-      .add({ targets: '#line_mutual-follow_laptop_imac',
-        scale: [0, 1],
+      .add({ targets: '#file_in-transit_c',
+        translateX: [370, 490],
+        translateY: [174, 610],
         duration: 1000
-      }, '+=10')
-      .add({ targets: '#follow-notification_imac, #follow-notification_laptop_imac, #imac-icon_onscreen-laptop',
+      }, '-=1000')
+      .add({ targets: '#kuia-copy_b, #kuia-copy_c',
         opacity: [0, 1]
-      }, '+=200')
-      .add({ targets: '#pātaka-symbol_laptop',
-        opacity: [1, 0],
-        duration: 300
-      }, '-=600')
-      .add({ targets: '#follow-notification_laptop_imac',
+      })
+      .add({ targets: '#follow-line_b-laptop_connected, #follow-line_c-laptop_connected',
+        strokeDasharray: ['0,0', '8,8'],
+        duration: 250
+      })
+      // koro whakapapa record created & replicated
+      .add({ targets: '#koro-copy_b',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#koro_copy',
+        keyframes: [
+           { opacity: [0, 1], duration: 250 },
+           { opacity: [1, 1], duration: 500 },
+           { scale: [1, 0], duration: 250 }
+        ]
+      }, '+=1000')
+      .add({ targets: '#follow-line_b-laptop_connected',
+        strokeDasharray: ['8,8', '0,0'],
+        duration: 250
+      })
+      .add({ targets: '#file_in-transit_b',
+        translateX: [570, 370],
+        translateY: [480, 174],
+        duration: 1000
+      })
+      .add({ targets: '#follow-line_b-laptop_connected',
+        strokeDasharray: ['0,0', '8,8'],
+        duration: 250
+      })
+      .add({ targets: '#file_laptop_b',
+        scale: [0, 1]
+      }, '+=500')
+      .add({ targets: '#file_laptop_b-copy',
+        keyframes: [
+          { opacity: [0, 1], duration: 16.7 },
+          { scale: [1, 0], duration: 483.3 }
+        ]
+      }, '+=500')
+      .add({ targets: '#follow-line_a-laptop_connected, #follow-line_c-laptop_connected',
+        strokeDasharray: ['8,8', '0,0'],
+        duration: 250
+      })
+      .add({ targets: '#file_in-transit_b',
+        translateX: [370, 750],
+        translateY: [174, 590],
+        duration: 1000
+      })
+      .add({ targets: '#file_in-transit_c',
+        translateX: [370, 490],
+        translateY: [174, 610],
+        duration: 1000
+      }, '-=1000')
+      .add({ targets: '#koro-a, #koro-copy_c',
+        opacity: [0, 1]
+      })
+      .add({ targets: '#follow-line_a-laptop_connected, #follow-line_c-laptop_connected',
+        strokeDasharray: ['0,0', '8,8'],
+        duration: 250
+      })
+      .add({ targets: '#horizontal-connection',
+        opacity: [0, 1],
+        duration: 250
+      }, '-=250')
+      .add({ targets: '#mobile-a',
+        scale: [4, 1]
+      }, '+=1000')
+      .add({ targets: '#pātaka-server',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#pātaka-symbol_server',
         opacity: [1, 0]
       }, '+=1000')
-      .add({ targets: '#imac-icon_onscreen-laptop',
-        scale: [1, 0],
-        opacity: [1, 0],
-        duration: 800
-      }, '-=500')
-      .add({ targets: '#line_fourth-follow_laptop',
-        scale: [0, 1],
-      }, '-=250')
-      .add({ targets: '#line_first-follow_laptop',
-        rotate: [0, 12],
-        translateY: [0, -2]
-      }, '-=500')
-      .add({ targets: '#line_second-follow_laptop',
-        rotate: [0, 24]
-      }, '-=500')
-      .add({ targets: '#line_third-follow_laptop',
-        rotate: [0, 20],
-        translateX: [0, 5]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-a_follow_laptop, #mobile-icon-b_follow_laptop, #mobile-icon-c_follow_laptop',
-        translateY: [15, 0]
-      }, '-=500')
-      .add({ targets: '#imac-icon_follow_laptop',
-        opacity: [0,1],
-        translateY: [-8, 0],
-        translateX: [10, 0]
-      }, '-=500')
-      .add({ targets: '#follow-notification_imac',
-        opacity: [1, 0]
-      }, '+=500')
-      .add({ targets: '#laptop-icon_invite-imac',
-        scale: [1, 0],
-        opacity: [1, 0],
-        duration: 800
-      }, '-=400')
-      .add({ targets: '#line_imac-to-laptop',
-        scale: [0, 1]
-      }, '-=250')
-      .add({ targets: '#laptop-icon_follow_imac',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-      .add({ targets: '#line_first-fof_imac',
-        scale: [0, 1],
-        rotate: [-20, -20]
-      }, '-=100')
-      .add({ targets: '#line_second-fof_imac',
-        scale: [0, 1],
-        rotate: [-33.4, -33.4]
-      }, '-=500')
-      .add({ targets: '#line_third-fof_imac',
-        scale: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-a_follow_imac, #mobile-icon-b_follow_imac, #mobile-icon-c_follow_imac',
-        opacity: [0, 1],
-        translateX: [-10, 0]
-      }, '-=300')
-
-      // switch focus to mobiles
-      .add({ targets: '#pātaka_imac, #pātaka_laptop',
-        opacity: [1, 0.5]
-      }, '+=1500')
-      .add({ targets: '#follow-map_imac',
-        opacity: [1, 0],
-        duration: 400
-      }, '-=500')
-      .add({ targets: '#mobile-a, #mobile-c',
-        opacity: [0.5, 1],
-        scale: [1, 1.25]
-      }, '-=250')
-      .add({ targets: '#mobile-b',
-        opacity: [0.5, 1],
-        scale: [1, 1.25],
-        translateX: [0, -25]
-      }, '-=500')
-      .add({ targets: '#follow-map_mobile-a, #follow-map_mobile-b, #follow-map_mobile-c',
+      .add({ targets: '#follow-line_laptop-server, #invite_server',
         opacity: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-a, #mask-copy_mobile-c',
-        scale: [1, 1.25]
-      }, '-=500')
-      .add({ targets: '#mask-copy_mobile-b',
-        scale: [1, 1.25],
-        translateX: [0, -25]
-      }, '-=500')
-      .add({ targets: '#line_mutual-follow_laptop_a',
-        translateY: [-110, -110],
-        translateX: [-180, -180],
-        rotate: [-21, -17]
-      }, '-=500')
-      .add({ targets: '#line_mutual-follow_laptop_b',
-        rotate: [-42, -38],
-        translateX: [-120, -125]
-      }, '-=500')
-      .add({ targets: '#line_mutual-follow_laptop_c',
-        rotate: [-28, -25],
-        translateX: [-80, -80],
-        translateY: [90, 110]
-      }, '-=500')
-
-      // show that pātaka-imac is now a FoF
-      .add({ targets: '#line_first-fof_a, #line_first-fof_b, #line_first-fof_c',
-        rotate: [0, -30],
-        translateX: [0, 6],
-        translateY: [0, -2]
-      }, '+=500')
-      .add({ targets: '#line_second-fof_a, #line_second-fof_b, #line_second-fof_c',
-        rotate: [0, -33.8]
-      }, '-=500')
-      .add({ targets: '#line_third-fof_a, #line_third-fof_b, #line_third-fof_c',
-        scale: [0, 1]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-b_follow_a, #mobile-icon-a_follow_b, #mobile-icon-a_follow_c',
-        translateY: [-20, -40]
-      }, '-=500')
-      .add({ targets: '#mobile-icon-c_follow_a, #mobile-icon-c_follow_b, #mobile-icon-b_follow_c',
-        translateY: [0, -20]
-      }, '-=500')
-      .add({ targets: '#imac-icon_a, #imac-icon_b, #imac-icon_c',
+      }, '+=1000')
+      .add({ targets: '#follow-line_laptop-server_connected',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#follow-line_laptop-server, #invite_server',
+        opacity: [1, 0]
+      }, '+=1000')
+      .add({ targets: '#pātaka-symbol_server',
+        opacity: [0, 1]
+      }, '+=1000')
+      .add({ targets: '#device_server, #monitor-mask',
+        opacity: [1, 0]
+      }, '+=1000')
+      .add({ targets: '#file_laptop_a-copy, #file_laptop_b-copy',
+        scale: [1, 0]
+      }, '+=1000')
+      .add({ targets: '#follow-line_laptop-server_connected',
+        strokeDasharray: ['8,8', '0,0']
+      })
+      .add({ targets: '#file_in-transit_pātaka',
+        translateX: [370, 468],
+        translateY: [174, 845],
+        duration: 1000
+      })
+      .add({ targets: '#storage_server',
+        opacity: [0, 1]
+      }, '-=250')
+      .add({ targets: '#file_server_a, #file_server_b',
+        scale: [0, 1],
+        delay: anime.stagger(150)
+      })
+      .add({ targets: '#follow-line_laptop-server_connected',
+        strokeDasharray: ['0,0', '8,8']
+      })
+      .add({ targets: ['#a-to-server_connected', '#b-to-server_connected', '#c-to-server_connected'],
         opacity: [0, 1],
-        translateX: [-10, 0],
-        translateY: [-5, 0]
-      }, '-=500')
+        delay: anime.stagger(350)
+      }, '+=250')
+      // original pātaka is shut down
+      .add({ targets: '#storage_laptop',
+        opacity: [1, 0]
+      }, '+=1000')
+      .add({ targets: '#pātaka_laptop',
+        keyframes: [
+          { opacity: [1, 0], duration: 100 },
+          { opacity: [0, 0], duration: 200 },
+          { opacity: [0, 1], duration: 250 },
+          { opacity: [1, 1], duration: 100 },
+          { opacity: [1, 0], duration: 200 },
+          { opacity: [0, 0], duration: 100 },
+          { opacity: [0, 1], duration: 150 },
+          { opacity: [1, 1], duration: 100 },
+          { opacity: [1, 0], duration: 100 }
+        ]
+      }, '+=500')
+      .add({ targets: ['#follow-line_laptop-server_connected, #follow-line_a-laptop_connected', '#follow-line_b-laptop_connected', '#follow-line_c-laptop_connected'],
+        opacity: [1, 0],
+        delay: anime.stagger(150)
+      }, '+=250')
 
-    // tl.seek(38500)
-    tl.play()
+      tl.play()
 
     // ]]>
   </script>
+
 </svg>
