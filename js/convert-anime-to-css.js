@@ -1,5 +1,4 @@
 // This script assumes an anime timeline called 'tl'
-
 const timelineDuration = tl.duration
 const targets = {}
 const easings = {}
@@ -49,7 +48,6 @@ function convertDataToCss () {
     easings[id] = determineEasing(id)
     easings[id] = convertEasingToBezier(id)
     convertToPercentageKeyframes(id)
-    addStartAndEndKeyframes(id)
   })
   const timingDeclaration = combineTargetsAndDuration(targetIds)
   const easingDeclaration = listTargetsForEachEasing()
@@ -278,63 +276,27 @@ See https://easings.net/#${easingName} for more details. Setting #${id}'s easing
 }
 
 function convertToPercentageKeyframes (id) {
-  const absoluteKeyframes = Object.keys(targets[id])
-
+  const absoluteKeyframes = Object.keys(targets[id]).sort((a, b) => { return a - b })
   let percentageKeyframe = ''
 
-  // convert absolute time keyframes to percentages
-  absoluteKeyframes.forEach(keyframe => {
+  for (let i = 0; i < absoluteKeyframes.length; i++) {
+    const keyframe = absoluteKeyframes[i]
     percentageKeyframe = Math.round(keyframe / timelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
+
+    // add a 0% & 100% keyframe to each animation so they start in the
+    // correct initial position and hold at the end
+    const first = Boolean(i === 0)
+    const last = Boolean(i === absoluteKeyframes.length - 1)
+    if (first && percentageKeyframe !== '0%') {
+      percentageKeyframe = '0%, ' + percentageKeyframe
+    }
+    if (last && percentageKeyframe !== '100%') {
+      percentageKeyframe = percentageKeyframe + ', 100%'
+    }
 
     targets[id][percentageKeyframe] = targets[id][keyframe]
     delete targets[id][keyframe]
-  })
-}
-
-function addStartAndEndKeyframes (id) {
-  // add a 0% & 100% keyframe to each animation so they start in the
-  // correct initial position and hold at the end
-
-  const percentageKeyframes = Object.keys(targets[id])
-  const oldFirstKeyframe = percentageKeyframes[0]
-  const oldLastKeyframe = percentageKeyframes[percentageKeyframes.length - 1]
-  if (oldFirstKeyframe !== '0%') {
-    const newFirstKeyframe = '0%, ' + oldFirstKeyframe
-    targets[id][newFirstKeyframe] = targets[id][oldFirstKeyframe]
-    delete targets[id][oldFirstKeyframe]
   }
-  if (oldLastKeyframe !== '100%') {
-    const newLastKeyframe = oldLastKeyframe + ', 100%'
-    targets[id][newLastKeyframe] = targets[id][oldLastKeyframe]
-    delete targets[id][oldLastKeyframe]
-  }
-  sortKeyframes(id)
-}
-
-function sortKeyframes (id) {
-  // Keyframe -> Number
-  const firstKeyframeNumber = (kf) => {
-  // takes keyframe string (e.g. '0%, 19%')
-  // returns first number in this string as an integer (e.g. 0)
-    const first = kf
-      .split(',')[0]
-      .replace('%', '')
-    return Number(first)
-  }
-  // build a new keyframes object where the keys are sorted by percentage
-  // 0% (or 0,n%) should be first, 100 (or n%, 100%) should be last.
-  const sortedKeyframes = Object.keys(targets[id])
-    .sort((a, b) => firstKeyframeNumber(a) - firstKeyframeNumber(b))
-    .reduce((keyframes, keyframe) => {
-      // starting with an empty object, run through each key, in our sorted lisst
-      // add it to the obj with the value being that same key in our targets[id]
-      // when we are done, we'll have a full sorted object
-      return {
-        ...keyframes,
-        [keyframe]: targets[id][keyframe]
-      }
-    }, {}) // here be the empty object that starts the reduce loop
-  targets[id] = sortedKeyframes
 }
 
 function listTargetsForEachEasing () {
