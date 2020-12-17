@@ -61,8 +61,11 @@ These are made to accompany and illustrate text explanations.
 
 ### Replication: connecting locally
 
-
 ![](svg/replication-local_css.svg)
+
+### Replication: Multiple pātaka
+
+![](svg/multiple-pātaka_css.svg)
 
 ### Data on a Pātaka
 
