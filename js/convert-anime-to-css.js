@@ -167,10 +167,7 @@ function addValuesToTransformObject (targetId, animatedProperty, tweenStart, twe
 
   // add the animated property and its value to the transform object, if it doesn't exist yet
   if (!animationData[targetId][tweenStart].transform[animatedProperty]) {
-    Object.defineProperty(animationData[targetId][tweenStart].transform, animatedProperty, {
-      value: fromValues[fromValues.length - 1],
-      enumerable: true
-    })
+    animationData[targetId][tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
   }
 
   // add a 'transform' object to the ending keyframe, if it doesn't exist yet
@@ -178,10 +175,7 @@ function addValuesToTransformObject (targetId, animatedProperty, tweenStart, twe
 
   // add the animated property and its value to the transform object, if it doesn't exist yet
   if (!animationData[targetId][tweenEnd].transform[animatedProperty]) {
-    Object.defineProperty(animationData[targetId][tweenEnd].transform, animatedProperty, {
-      value: toValues[toValues.length - 1],
-      enumerable: true
-    })
+    animationData[targetId][tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
   }
   return animationData[targetId]
 }
@@ -189,17 +183,11 @@ function addValuesToTransformObject (targetId, animatedProperty, tweenStart, twe
 function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   // if the current property name isn't found in the starting keyframe, add it, and its starting value
   if (!animationData[targetId][tweenStart][animatedProperty]) {
-    Object.defineProperty(animationData[targetId][tweenStart], animatedProperty, {
-      value: fromValues[fromValues.length - 1],
-      enumerable: true
-    })
+    animationData[targetId][tweenStart][animatedProperty] = fromValues[fromValues.length - 1]
   }
   // if the current property name isn't found in the ending keyframe, add it, and its starting value
   if (!animationData[targetId][tweenEnd][animatedProperty]) {
-    Object.defineProperty(animationData[targetId][tweenEnd], animatedProperty, {
-      value: toValues[toValues.length - 1],
-      enumerable: true
-    })
+    animationData[targetId][tweenEnd][animatedProperty] = toValues[toValues.length - 1]
   }
   return animationData[targetId]
 }
@@ -309,17 +297,17 @@ function convertToPercentageKeyframes (id) {
 // TODO: rename variables & parameters (eg. obj, val) to make this function more clear
 function listTargetsForEachEasing () {
   const easingsUsed = new Set(Object.values(easings))
-  const targets = {}
+  const targetIds = {}
   let timingFunctions = ''
 
   easingsUsed.forEach(easing => {
-    // create an array of all targets whose animations use that easing
-    targets[easing] = []
+    // create an array of all targetIds whose animations use that easing
+    targetIds[easing] = []
     const getTargets = (easingsObject, specificEasing) => Object.keys(easingsObject).filter(key => easingsObject[key] === specificEasing)
-    targets[easing].push(getTargets(easings, easing))
+    targetIds[easing].push(getTargets(easings, easing))
   })
-  for (const easing in targets) {
-    const targetList = targets[easing].join().replace(/,/g, ', #')
+  for (const easing in targetIds) {
+    const targetList = targetIds[easing].join().replace(/,/g, ', #')
     timingFunctions = timingFunctions + `\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`
   }
   return timingFunctions
