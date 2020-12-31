@@ -1,48 +1,43 @@
 // This script assumes an anime timeline called 'tl'
 const timelineDuration = tl.duration
-const targets = {}
+const animationData = {}
 const easings = {}
 
 // Each section of the timeline has its own anim object with all its details
-for (const anim of tl.children) {
-  getAnimationData(anim)
-}
-// Now that the 'targets' and `easings` objects are populated, they are converted to valid CSS
-convertDataToCss()
+function getAnimationData (timeline) {
+  timeline.children.forEach(anim => {
+    assignMissingIds(anim)
 
-// core functions
+    anim.animations.forEach(animation => {
+      const targetId = animation.animatable.target.id
+      const animatedProperty = animation.property
+      const fromValues = []
+      const toValues = []
 
-function getAnimationData (anim) {
-  assignMissingIds(anim)
+      animation.tweens.forEach(tween => {
+        const tweenStart = tween.start + tween.delay + anim.timelineOffset
+        const tweenEnd = tween.end + anim.timelineOffset
+        const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
 
-  for (const animation of anim.animations) {
-    const targetId = animation.animatable.target.id
-    const animatedProperty = animation.property
-    const fromValues = []
-    const toValues = []
+        if (!easings[targetId]) easings[targetId] = []
+        easings[targetId].push(getEasingName(tween))
 
-    for (const tween of animation.tweens) {
-      const tweenStart = tween.start + tween.delay + anim.timelineOffset
-      const tweenEnd = tween.end + anim.timelineOffset
-      const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
+        writeFromAndToValues(tween, animatedProperty, fromValues, toValues)
+        createKeyframeObjects(targetId, tweenStart, tweenEnd)
 
-      if (!easings[targetId]) easings[targetId] = []
-      easings[targetId].push(getEasingName(tween))
-
-      writeFromAndToValues(tween, animatedProperty, fromValues, toValues)
-      createKeyframeObjects(targetId, tweenStart, tweenEnd)
-
-      if (validTransforms.includes(animatedProperty)) {
-        addValuesToTransformObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
-      } else {
-        addValuesToPropertyObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
-      }
-    }
-  }
+        if (validTransforms.includes(animatedProperty)) {
+          addValuesToTransformObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+        } else {
+          addValuesToPropertyObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+        }
+      })
+    })
+  })
+  return animationData
 }
 
 function convertDataToCss () {
-  const targetIds = Object.keys(targets)
+  const targetIds = Object.keys(animationData)
 
   targetIds.forEach(id => {
     easings[id] = determineEasing(id)
@@ -54,14 +49,19 @@ function convertDataToCss () {
   const keyframesDeclaration = formatKeyframesAsCss()
 
   console.log('CSS animations:', `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
+  return [timingDeclaration, easingDeclaration, keyframesDeclaration]
 }
+
+getAnimationData(tl)
+// Now that the 'animationData' and `easings` objects are populated, they are converted to valid CSS
+convertDataToCss()
 
 // component functions
 
 function assignMissingIds (anim) {
   let uniqueIdLetter = 'a'
 
-  for (const animation of anim.animations) {
+  anim.animations.forEach(animation => {
     // Without an id, keyframes will be written for an empty target
     if (!animation.animatable.target.id) {
       const element = animation.animatable.target.tagName
@@ -78,8 +78,9 @@ function assignMissingIds (anim) {
 
       console.log(`giving target an id of '${generatedId}'`)
       animation.animatable.target.setAttribute('id', generatedId)
+      return animation.animatable.target.id
     }
-  }
+  })
 }
 
 function nextChar (letter) {
@@ -146,56 +147,61 @@ function writeFromAndToValues (tween, animatedProperty, fromValues, toValues) {
     fromValues.push(tween.from.original)
     toValues.push(tween.to.original)
   }
+
+  return [fromValues, toValues]
 }
 
 function createKeyframeObjects (targetId, tweenStart, tweenEnd) {
   // make a new ruleset for the current target, if there isn't one already
-  if (!targets[targetId]) targets[targetId] = { }
+  if (!animationData[targetId]) animationData[targetId] = { }
   // add an empty keyframe at the tweenStart time, if there isn't a keyframe there already
-  if (!targets[targetId][tweenStart]) targets[targetId][tweenStart] = { }
+  if (!animationData[targetId][tweenStart]) animationData[targetId][tweenStart] = { }
   // add an empty keyframe at the tweenEnd time, if there isn't a keyframe there already
-  if (!targets[targetId][tweenEnd]) targets[targetId][tweenEnd] = { }
+  if (!animationData[targetId][tweenEnd]) animationData[targetId][tweenEnd] = { }
+  return animationData[targetId]
 }
 
 function addValuesToTransformObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   // add a 'transform' object to the starting keyframe, if it doesn't exist yet
-  if (!targets[targetId][tweenStart].transform) targets[targetId][tweenStart].transform = { }
+  if (!animationData[targetId][tweenStart].transform) animationData[targetId][tweenStart].transform = { }
 
   // add the animated property and its value to the transform object, if it doesn't exist yet
-  if (!targets[targetId][tweenStart].transform[animatedProperty]) {
-    Object.defineProperty(targets[targetId][tweenStart].transform, animatedProperty, {
+  if (!animationData[targetId][tweenStart].transform[animatedProperty]) {
+    Object.defineProperty(animationData[targetId][tweenStart].transform, animatedProperty, {
       value: fromValues[fromValues.length - 1],
       enumerable: true
     })
   }
 
   // add a 'transform' object to the ending keyframe, if it doesn't exist yet
-  if (!targets[targetId][tweenEnd].transform) targets[targetId][tweenEnd].transform = { }
+  if (!animationData[targetId][tweenEnd].transform) animationData[targetId][tweenEnd].transform = { }
 
   // add the animated property and its value to the transform object, if it doesn't exist yet
-  if (!targets[targetId][tweenEnd].transform[animatedProperty]) {
-    Object.defineProperty(targets[targetId][tweenEnd].transform, animatedProperty, {
+  if (!animationData[targetId][tweenEnd].transform[animatedProperty]) {
+    Object.defineProperty(animationData[targetId][tweenEnd].transform, animatedProperty, {
       value: toValues[toValues.length - 1],
       enumerable: true
     })
   }
+  return animationData[targetId]
 }
 
 function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   // if the current property name isn't found in the starting keyframe, add it, and its starting value
-  if (!targets[targetId][tweenStart][animatedProperty]) {
-    Object.defineProperty(targets[targetId][tweenStart], animatedProperty, {
+  if (!animationData[targetId][tweenStart][animatedProperty]) {
+    Object.defineProperty(animationData[targetId][tweenStart], animatedProperty, {
       value: fromValues[fromValues.length - 1],
       enumerable: true
     })
   }
   // if the current property name isn't found in the ending keyframe, add it, and its starting value
-  if (!targets[targetId][tweenEnd][animatedProperty]) {
-    Object.defineProperty(targets[targetId][tweenEnd], animatedProperty, {
+  if (!animationData[targetId][tweenEnd][animatedProperty]) {
+    Object.defineProperty(animationData[targetId][tweenEnd], animatedProperty, {
       value: toValues[toValues.length - 1],
       enumerable: true
     })
   }
+  return animationData[targetId]
 }
 
 function determineEasing (id) {
@@ -206,10 +212,10 @@ function determineEasing (id) {
 
     const easingFrequency = {}
 
-    for (const name of easingNames) {
+    easingNames.forEach(name => {
       const occurrences = easings[id].filter(x => x === name).length
       easingFrequency[name] = occurrences
-    }
+    })
 
     const highestNoOfOccurrences = Object
       .values(easingFrequency)
@@ -276,7 +282,7 @@ See https://easings.net/#${easingName} for more details. Setting #${id}'s easing
 }
 
 function convertToPercentageKeyframes (id) {
-  const absoluteKeyframes = Object.keys(targets[id]).sort((a, b) => { return a - b })
+  const absoluteKeyframes = Object.keys(animationData[id]).sort((a, b) => { return a - b })
   let percentageKeyframe = ''
 
   for (let index = 0; index < absoluteKeyframes.length; index++) {
@@ -294,23 +300,26 @@ function convertToPercentageKeyframes (id) {
       percentageKeyframe = percentageKeyframe + ', 100%'
     }
 
-    targets[id][percentageKeyframe] = targets[id][absoluteKeyframe]
-    delete targets[id][absoluteKeyframe]
+    animationData[id][percentageKeyframe] = animationData[id][absoluteKeyframe]
+    delete animationData[id][absoluteKeyframe]
   }
+  return animationData[id]
 }
 
+// TODO: rename variables & parameters (eg. obj, val) to make this function more clear
 function listTargetsForEachEasing () {
-  const uniqueEasings = new Set(Object.values(easings))
-  const easingTargets = {}
+  const easingsUsed = new Set(Object.values(easings))
+  const targets = {}
   let timingFunctions = ''
 
-  for (const easing of uniqueEasings) {
-    easingTargets[easing] = []
-    const getTargets = (obj, val) => Object.keys(obj).filter(key => obj[key] === val)
-    easingTargets[easing].push(getTargets(easings, easing))
-  }
-  for (const easing in easingTargets) {
-    const targetList = easingTargets[easing].join().replace(/,/g, ', #')
+  easingsUsed.forEach(easing => {
+    // create an array of all targets whose animations use that easing
+    targets[easing] = []
+    const getTargets = (easingsObject, specificEasing) => Object.keys(easingsObject).filter(key => easingsObject[key] === specificEasing)
+    targets[easing].push(getTargets(easings, easing))
+  })
+  for (const easing in targets) {
+    const targetList = targets[easing].join().replace(/,/g, ', #')
     timingFunctions = timingFunctions + `\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`
   }
   return timingFunctions
@@ -318,22 +327,22 @@ function listTargetsForEachEasing () {
 
 function formatKeyframesAsCss (targetIds, timingFunctions) {
   let css = ''
-  for (const target in targets) {
+  for (const target in animationData) {
     css += `\n#${target} { animation-name: ${target}-anim; }\n@keyframes ${target}-anim {\n`
-    for (const keyframe in targets[target]) {
+    for (const keyframe in animationData[target]) {
       css += `  ${keyframe} {`
-      for (const property in targets[target][keyframe]) {
+      for (const property in animationData[target][keyframe]) {
         if (property === 'transform') {
           css += ' transform:'
-          for (const transform in targets[target][keyframe][property]) {
-            css += ` ${transform}(${targets[target][keyframe][property][transform]})`
+          for (const transform in animationData[target][keyframe][property]) {
+            css += ` ${transform}(${animationData[target][keyframe][property][transform]})`
           }
           css += ';'
         } else {
           const kebabCaseProperty = `${property}`
             .replace(/([a-z])([A-Z])/g, '$1-$2')
             .toLowerCase()
-          css += ` ${kebabCaseProperty}: ${targets[target][keyframe][property]};`
+          css += ` ${kebabCaseProperty}: ${animationData[target][keyframe][property]};`
         }
       }
       css += ' }\n'
