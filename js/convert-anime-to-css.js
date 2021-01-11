@@ -70,7 +70,12 @@ function assignMissingIds (anim) {
     // Without an id, keyframes will be written for an empty target
     if (!animation.animatable.target.id) {
       const element = animation.animatable.target.tagName
-      const parent = animation.animatable.target.parentNode.id
+      let parent = ''
+      if (!animation.animatable.target.parentNode.id) {
+        parent = animation.animatable.target.parentNode.tagName
+      } else {
+        parent = animation.animatable.target.parentNode.id
+      }
       let generatedId = `${parent}-${element}-${uniqueIdLetter}`
 
       console.log('⚠️ WARNING: missing id property for ' + element + ' element in #' + parent)
