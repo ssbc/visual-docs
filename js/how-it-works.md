@@ -113,7 +113,7 @@ An `anim` looks kinda like this:
           "value": [0, 1],
           "delay": 0,
           "endDelay": 0,
-          // "easing": function (r) - this goes to some incomprehensible part of the minified anime.js library
+          // "easing": function (r) - this is a private function that anime.js runs, so I'm using a lookup table of different easings' fingerprints to work out which one it is
           "duration": 300,
           "round": 0,
           "from": {
@@ -196,4 +196,6 @@ So my general approach for the script is:
 1. Grab the data that I need from each `anim` object in the `timeline`
 2. Perform calculations on that data where necessary
 3. Put the data into an object with the same general shape as a CSS animation declaration
-4. Do a whole lot of nested looping and string manipulation to format ithe object as CSS
+4. Do a whole lot of nested looping and string manipulation to format the object as CSS
+5. Insert the CSS animations into a new `<style>` section of the document
+6. Delete all `<script>` elements
