@@ -367,12 +367,9 @@ function combineTargetsAndDuration (targetIds) {
 }
 
 function appendCssToDocument (css) {
-  if (!document.getElementsByTagName('style')) {
-    document.documentElement.append(document.createElement('style'))
-  }
-
-  const styleElement = document.getElementsByTagName('style')[0]
+  const styleElement = document.createElement('style')
   styleElement.append(document.createCDATASection(css))
+  document.documentElement.append(styleElement)
 }
 
 function deleteScripts () {
