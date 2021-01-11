@@ -48,16 +48,21 @@ function convertDataToCss () {
   const easingDeclaration = listTargetsForEachEasing()
   const keyframesDeclaration = formatKeyframesAsCss()
 
-  console.log('CSS animations:', `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
-  return [timingDeclaration, easingDeclaration, keyframesDeclaration]
+  const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
+  appendCssToDocument(css)
+
+  console.log('CSS animations:', css)
+  // console.log('CSS animations:', `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
+  return css
 }
 
 getAnimationData(tl)
 // Now that the 'animationData' and `easings` objects are populated, they are converted to valid CSS
 convertDataToCss()
+// delete all scripts (including this one)
+deleteScripts()
 
 // component functions
-
 function assignMissingIds (anim) {
   let uniqueIdLetter = 'a'
 
@@ -294,14 +299,22 @@ function convertToPercentageKeyframes (id) {
   return animationData[id]
 }
 
-// TODO: rename variables & parameters (eg. obj, val) to make this function more clear
 function listTargetsForEachEasing () {
   const easingsUsed = new Set(Object.values(easings))
   const targetIds = {}
   let timingFunctions = ''
 
+  // the easings object lists the CSS animation-timing-function to use
+  // for each targeted element, eg:
+  //
+  // easings = {
+  //   targetA: 'linear',
+  //   targetB: 'cubic-bezier(0.45, 0, 0.55, 1)'
+  //   targetC: 'cubic-bezier(0.45, 0, 0.55, 1)'
+  // }
+
   easingsUsed.forEach(easing => {
-    // create an array of all targetIds whose animations use that easing
+    // create an array of all targetIds using that easing
     targetIds[easing] = []
     const getTargets = (easingsObject, specificEasing) => Object.keys(easingsObject).filter(key => easingsObject[key] === specificEasing)
     targetIds[easing].push(getTargets(easings, easing))
@@ -341,9 +354,23 @@ function formatKeyframesAsCss (targetIds, timingFunctions) {
 }
 
 function combineTargetsAndDuration (targetIds) {
-  const selectorList = '#' + targetIds.join(', #')
+  const selectorList = '\n  #' + targetIds.join(', #')
   const durationInSeconds = Math.round((timelineDuration) / 10 + Number.EPSILON) / 100
   const durationIterationDeclaration = ' {\n  animation-duration:' + durationInSeconds + 's;\n  animation-iteration-count: infinite;\n}\n'
 
   return selectorList + durationIterationDeclaration
+}
+
+function appendCssToDocument (css) {
+  if (!document.getElementsByTagName('style')) {
+    document.documentElement.append(document.createElement('style'))
+  }
+
+  const styleElement = document.getElementsByTagName('style')[0]
+  styleElement.append(document.createCDATASection(css))
+}
+
+function deleteScripts () {
+  const scripts = document.getElementsByTagName('script')
+  while (scripts.length) scripts[0].remove()
 }
