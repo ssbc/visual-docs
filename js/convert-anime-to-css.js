@@ -1,17 +1,18 @@
 // This script assumes an anime timeline called 'tl'
 const timelineDuration = tl.duration
 const animationData = {}
-const easings = {}
 
-// populate 'animationData' and `easings` objects
-getAnimationData(tl)
+// populate 'animationData' and `allEasingsPerTarget` objects
+const animeData = getAnimeJsData(tl)
 // convert to valid CSS and insert in document
-convertDataToCss()
+const cssData = convertDataToCss(animeData)
 // delete all scripts (including this one)
 deleteScripts()
 
 // Each section of the timeline has its own anim object with all its details
-function getAnimationData (timeline) {
+function getAnimeJsData (timeline) {
+  const allEasingsPerTarget = {}
+
   timeline.children.forEach(anim => {
     assignMissingIds(anim)
 
@@ -26,8 +27,8 @@ function getAnimationData (timeline) {
         const tweenEnd = tween.end + anim.timelineOffset
         const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
 
-        if (!easings[targetId]) easings[targetId] = []
-        easings[targetId].push(getEasingName(tween))
+        if (!allEasingsPerTarget[targetId]) allEasingsPerTarget[targetId] = []
+        allEasingsPerTarget[targetId].push(getEasingName(tween))
 
         writeFromAndToValues(tween, animatedProperty, fromValues, toValues)
         createKeyframeObjects(targetId, tweenStart, tweenEnd)
@@ -40,26 +41,30 @@ function getAnimationData (timeline) {
       })
     })
   })
-  return animationData
+  return [animationData, allEasingsPerTarget]
 }
 
-function convertDataToCss () {
-  const targetIds = Object.keys(animationData)
+function convertDataToCss (animeData) {
+  [keyframeData, easingData] = animeData
+  const targetIds = Object.keys(keyframeData)
+  const oneEasingPerTarget = {}
+  const oneCssEasingPerTarget = {}
 
   targetIds.forEach(id => {
-    easings[id] = determineEasing(id)
-    easings[id] = convertEasingToBezier(id)
+    oneEasingPerTarget[id] = determineEasing(id, easingData)
+    oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
     convertToPercentageKeyframes(id)
   })
   const timingDeclaration = combineTargetsAndDuration(targetIds)
-  const easingDeclaration = listTargetsForEachEasing()
+  const easingDeclaration = listTargetsForEachEasing(oneCssEasingPerTarget)
   const keyframesDeclaration = formatKeyframesAsCss()
+  const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 
-  appendCssToDocument(`${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
-  return `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
+  appendCssToDocument(css)
+  return css
 }
 
-// getAnimationData component functions
+// getAnimeJsData component functions
 function assignMissingIds (anim) {
   let uniqueIdLetter = 'a'
 
@@ -196,16 +201,16 @@ function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, twee
 }
 
 // convertDataToCss component functions
-function determineEasing (id) {
-  const easingNames = new Set(easings[id])
+function determineEasing (id, allEasingsPerTarget) {
+  const easingsUsed = new Set(allEasingsPerTarget[id])
 
-  if (easingNames.size > 1) {
-    console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingNames].join(', ')}'`)
+  if (easingsUsed.size > 1) {
+    console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingsUsed].join(', ')}'`)
 
     const easingFrequency = {}
 
-    easingNames.forEach(name => {
-      const occurrences = easings[id].filter(x => x === name).length
+    easingsUsed.forEach(name => {
+      const occurrences = allEasingsPerTarget[id].filter(x => x === name).length
       easingFrequency[name] = occurrences
     })
 
@@ -218,12 +223,12 @@ function determineEasing (id) {
     console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for #${id}'s animation.`)
     return mostFrequentEasings[0]
   } else {
-    return easingNames.values().next().value
+    return easingsUsed.values().next().value
   }
 }
 
-function convertEasingToBezier (id) {
-  const easingName = easings[id]
+function convertEasingToBezier (id, oneEasingPerTarget) {
+  const easingName = oneEasingPerTarget[id]
   const validEasings = {
     linear: 'linear',
     easeInSine: 'cubic-bezier(0.12, 0, 0.39, 0)',
@@ -306,15 +311,15 @@ function combineTargetsAndDuration (targetIds) {
   return selectorList + durationIterationDeclaration
 }
 
-function listTargetsForEachEasing () {
-  const easingsUsed = new Set(Object.values(easings))
+function listTargetsForEachEasing (oneCssEasingPerTarget) {
+  const easingsUsed = new Set(Object.values(oneCssEasingPerTarget))
   const targetIds = {}
   let timingFunctions = ''
 
-  // the easings object lists the CSS animation-timing-function to use
+  // 'oneCssEasingPerTarget' lists the CSS animation-timing-function to use
   // for each targeted element, eg:
   //
-  // easings = {
+  // oneCssEasingPerTarget = {
   //   targetA: 'linear',
   //   targetB: 'cubic-bezier(0.45, 0, 0.55, 1)'
   //   targetC: 'cubic-bezier(0.45, 0, 0.55, 1)'
@@ -323,9 +328,9 @@ function listTargetsForEachEasing () {
   easingsUsed.forEach(easing => {
     // create an array of all targetIds using that easing
     targetIds[easing] = []
-    const getTargets = (easingsObject, specificEasing) => Object.keys(easingsObject).filter(key => easingsObject[key] === specificEasing)
+    const getTargets = (oneCssEasingPerTarget, specificEasing) => Object.keys(oneCssEasingPerTarget).filter(key => oneCssEasingPerTarget[key] === specificEasing)
 
-    targetIds[easing].push(getTargets(easings, easing))
+    targetIds[easing].push(getTargets(oneCssEasingPerTarget, easing))
   })
   for (const easing in targetIds) {
     const targetList = targetIds[easing].join().replace(/,/g, ', #')
