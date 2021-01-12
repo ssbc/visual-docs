@@ -3,6 +3,13 @@ const timelineDuration = tl.duration
 const animationData = {}
 const easings = {}
 
+// populate 'animationData' and `easings` objects
+getAnimationData(tl)
+// convert to valid CSS and insert in document
+convertDataToCss()
+// delete all scripts (including this one)
+deleteScripts()
+
 // Each section of the timeline has its own anim object with all its details
 function getAnimationData (timeline) {
   timeline.children.forEach(anim => {
@@ -48,21 +55,11 @@ function convertDataToCss () {
   const easingDeclaration = listTargetsForEachEasing()
   const keyframesDeclaration = formatKeyframesAsCss()
 
-  const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
-  appendCssToDocument(css)
-
-  console.log('CSS animations:', css)
-  // console.log('CSS animations:', `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
-  return css
+  appendCssToDocument(`${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`)
+  return `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 }
 
-getAnimationData(tl)
-// Now that the 'animationData' and `easings` objects are populated, they are converted to valid CSS
-convertDataToCss()
-// delete all scripts (including this one)
-deleteScripts()
-
-// component functions
+// getAnimationData component functions
 function assignMissingIds (anim) {
   let uniqueIdLetter = 'a'
 
@@ -71,13 +68,14 @@ function assignMissingIds (anim) {
     if (!animation.animatable.target.id) {
       const element = animation.animatable.target.tagName
       let parent = ''
+
       if (!animation.animatable.target.parentNode.id) {
         parent = animation.animatable.target.parentNode.tagName
       } else {
         parent = animation.animatable.target.parentNode.id
       }
-      let generatedId = `${parent}-${element}-${uniqueIdLetter}`
 
+      let generatedId = `${parent}-${element}-${uniqueIdLetter}`
       console.log('⚠️ WARNING: missing id property for ' + element + ' element in #' + parent)
 
       // check if the proposed id already exists
@@ -202,6 +200,7 @@ function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, twee
   return animationData[targetId]
 }
 
+// convertDataToCss component functions
 function determineEasing (id) {
   const easingNames = new Set(easings[id])
 
@@ -304,6 +303,14 @@ function convertToPercentageKeyframes (id) {
   return animationData[id]
 }
 
+function combineTargetsAndDuration (targetIds) {
+  const selectorList = '\n  #' + targetIds.join(', #')
+  const durationInSeconds = Math.round((timelineDuration) / 10 + Number.EPSILON) / 100
+  const durationIterationDeclaration = ' {\n  animation-duration:' + durationInSeconds + 's;\n  animation-iteration-count: infinite;\n}\n'
+
+  return selectorList + durationIterationDeclaration
+}
+
 function listTargetsForEachEasing () {
   const easingsUsed = new Set(Object.values(easings))
   const targetIds = {}
@@ -322,6 +329,7 @@ function listTargetsForEachEasing () {
     // create an array of all targetIds using that easing
     targetIds[easing] = []
     const getTargets = (easingsObject, specificEasing) => Object.keys(easingsObject).filter(key => easingsObject[key] === specificEasing)
+
     targetIds[easing].push(getTargets(easings, easing))
   })
   for (const easing in targetIds) {
@@ -356,14 +364,6 @@ function formatKeyframesAsCss (targetIds, timingFunctions) {
     css += '}\n'
   }
   return css
-}
-
-function combineTargetsAndDuration (targetIds) {
-  const selectorList = '\n  #' + targetIds.join(', #')
-  const durationInSeconds = Math.round((timelineDuration) / 10 + Number.EPSILON) / 100
-  const durationIterationDeclaration = ' {\n  animation-duration:' + durationInSeconds + 's;\n  animation-iteration-count: infinite;\n}\n'
-
-  return selectorList + durationIterationDeclaration
 }
 
 function appendCssToDocument (css) {
