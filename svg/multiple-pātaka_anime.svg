@@ -769,7 +769,6 @@
           d="M426.16 888.16c-5.04 10.08.28 6.72 3.64 1.96 4.2-6.72-.56-7.84-3.64-1.96z"/>
   </g>
 
-
   <g id="connections">
 
     <g id="lines" opacity="1"
@@ -789,13 +788,13 @@
       <g id="follow-lines_server"
          stroke="var(--group-b-color)"
          mask="url(#mask_pātaka-server)">
-        <line id="b-to-server_connected"
+        <line id="follow-line_b-server_connected"
               stroke-dasharray="8,12"
               x1="570" y1="430" x2="430" y2="900"/>
-        <line id="a-to-server_connected"
+        <line id="follow-line_a-server_connected"
               stroke-dasharray="8,12"
               x1="380" y1="190" x2="430" y2="900"/>
-        <line id="c-to-server_connected"
+        <line id="follow-line_c-server_connected"
               stroke-dasharray="8,12"
               x1="690" y1="610" x2="430" y2="900"/>
       </g>
@@ -846,7 +845,6 @@
     </g>
 
   </g>
-
 
   <g id="pātaka_laptop" opacity="1">
 
@@ -1138,7 +1136,7 @@
 
     tl
       // introduce elements
-      .add({ targets: '#mobile-b, #mobile-a, #mobile-c',
+      .add({ targets: '#connections, #mobile-a, #mobile-b, #mobile-c',
         opacity: [0, 1]
       }, 1000)
       .add({ targets: '#pātaka_laptop',
@@ -1444,7 +1442,7 @@
         opacity: [0, 1],
         endDelay: 1500
       })
-      .add({ targets: ['#b-to-server_connected', '#a-to-server_connected', '#c-to-server_connected'],
+      .add({ targets: ['#follow-line_b-server_connected', '#follow-line_a-server_connected', '#follow-line_c-server_connected'],
         opacity: [0, 1],
         delay: anime.stagger(350)
       }, '+=250')
@@ -1558,11 +1556,14 @@
       .add({ targets: '#wahine-a, #wahine-b',
         opacity: [0, 1]
       })
-      .add({ targets: '#follow-line_a-laptop_connected, #follow-line_c-laptop_connected',
+      .add({ targets: '#follow-line_a-server_connected, #follow-line_b-server_connected',
         strokeDasharray: ['0,0', '8,12'],
         duration: 250
       })
-
+      .add({ targets: '#connections, #pātaka-server, #mobile-a, #mobile-b, #mobile-c',
+        opacity: [1, 0],
+        duration: 1000
+      }, '+=5000')
 
       // tl.seek(19000)
       tl.play()
