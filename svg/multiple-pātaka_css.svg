@@ -1271,7 +1271,7 @@
     <use id="defocus-mobile-c" opacity="0.3" xlink:href="#mobile" x="690" y="610" fill="var(--mid-light-grey)" stroke="var(--mid-light-grey)"/>
   </g>
 
-  <g id="text" font-size="2.4em" fill="var(--outline-color)" text-anchor="middle">
+  <g id="text" font-size="2em" fill="var(--outline-color)" text-anchor="middle">
     <text id="text_connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau members receive connect codes from a Pātaka</text>
     <text id="text_accept-connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau members accept invitation and connect to the Pātaka</text>
     <text id="text_user-b-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member B creates a new whakapapa record, it is backed up to the Pātaka</text>
