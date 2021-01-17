@@ -10,7 +10,6 @@ files, the animation syntax, the formats and what you can do with them.
 - [**editing CSS**](#editing-css)
 - [**editing anime.js**](#editing-animejs)
 - [**converting an anime.js timeline to CSS**](#converting-an-animejs-timeline-to-css)
-- [**editing video**](#editing-video)
 
 ## Editing SVG
 I have tried to keep the SVG code as readable as possible, so you should be able
