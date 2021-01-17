@@ -3,6 +3,30 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="000 0 1000 1000">
 
+  <metadata>
+    <rdf:RDF>
+       <cc:Work>
+          <dc:format>image/svg+xml</dc:format>
+          <dc:type rdf:resource="http://purl.org/dc/dcmitype/MovingImage" />
+          <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+          <dc:creator>
+             <cc:Agent>
+                <dc:title>Sam Muirhead</dc:title>
+             </cc:Agent>
+          </dc:creator>
+          <dc:source>https://github.com/ssbc/visual-docs/</dc:source>
+       </cc:Work>
+       <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+          <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+          <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+          <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+          <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+          <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+          <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+       </cc:License>
+    </rdf:RDF>
+  </metadata>
+
   <title>Replication via WiFi router</title>
 
   <style>
