@@ -11,11 +11,7 @@ These are made to accompany and illustrate text explanations.
 
 - [📁️ **font**](font) ← _base64 encoding of Dosis typeface, for embedding_
 
-- [📁️ **gif**](gif) ← _gigantic, poor quality recordings of JS animations, seldom updated_
-
 - [📁️ **js**](js) ← _anime.js to css conversion script_
-
-- [📁️ **mp4**](mp4) ← _good quality recordings of JS animations, seldom updated_
 
 - [📁️ **png**](png) ← _static raster icons_
 
@@ -36,14 +32,12 @@ These are made to accompany and illustrate text explanations.
 - [**How to use animations**](documentation/Using-Animations.md)
   - [in a website](documentation/Using-Animations.md#using-animations-in-a-website)
   - [on social media / ssb / github](documentation/Using-Animations.md#using-animations-on-social-media)
-  - [in a video](documentation/Using-Animations.md#using-animations-in-a-video)
 - [**How to edit animations**](documentation/Editing-Animations.md)
   - [editing SVG](documentation/Editing-Animations.md#editing-svg)
   - [changing fonts](documentation/Editing-Animations.md#changing-fonts)
   - [editing CSS](documentation/Editing-Animations.md#editing-css)
   - [editing anime.js](documentation/Editing-Animations.md#editing-animejs)
   - [converting an anime.js timeline to CSS](documentation/Editing-Animations.md#converting-an-animejs-timeline-to-css)
-  - [editing video](documentation/Editing-Animations.md#editing-video)
 - [**How to make videos or GIFs**](Making-Video-or-GIF.md)
   - [recording your screen](documentation/Making-Video-or-GIF.md#recording-your-screen)
   - [converting to gif](documentation/Making-Video-or-GIF.md#converting-to-gif)

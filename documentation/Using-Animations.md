@@ -3,7 +3,6 @@ How to use these depends on _where_ you will be using them:
 
 - [**in a website**](#using-animations-in-a-website)
 - [**on social media / forums / github**](#using-animations-on-social-media)
-- [**in a video**](#video)
 
 ## Using animations in a website
 Good choice! :thumbsup:
@@ -118,24 +117,10 @@ resources (like fonts) in those situations. In these cases you can only upload
 the animations I've made with (or converted to) CSS.
 
 In all other situations (eg. sharing an animation on Facebook or Twitter) you
-will need to share the MP4 or GIF versions. If possible, please add an `alt` text
+will need to make MP4 or GIF versions. If possible, please add an `alt` text
 to your GIF so that everybody can at least get a description of what you're
 sharing, even if they can't see or load the GIF.
 
 [Twitter - How to make images accessible for people](https://help.twitter.com/en/using-twitter/picture-descriptions)
 
 [How to add alternative text to Facebook photos](https://www.lireo.com/how-to-add-alternative-text-to-facebook-photos/)
-
-## Using animations in a video
-You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](../mp4)
-folder. You can import these into the video editing tool of your choice, mix them
-with footage as you like, and export new videos. If you're going to be uploading
-the resulting video to a service like YouTube or Vimeo (which will compress the
-video) make sure that you're exporting your new video at a high quality setting.
-If you're going to be sharing the video on a peer-to-peer network, please export
-your video at a low-or-medium quality setting, to reduce file size.
-These settings will be different with different editing software (I recommend
-[Kdenlive](kdenlive.org)!) so I can't give you exact settings, but you should
-experiment with settings until you find a balance that you're happy with.
-
-_**TODO:** clarify licensing and add attribution requirement?_

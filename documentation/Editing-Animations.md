@@ -301,6 +301,3 @@ I would recommend using the [folding](https://flight-manual.atom.io/using-atom/s
 ## Converting an anime.js timeline to CSS
 If you're planning to make any changes to the _timing_ of these animations, rather than just changing colors or swapping out elements, I highly recommend that you do so with anime.js rather than CSS, whenever you have the choice. However, you may need the end product to be a CSS animation (eg. for sharing on SBB or Github).
 In this case you'll need to convert the anime.js timeline into CSS animations, which would be _extremely_ difficult to attempt by hand. So I've written a script to make it much easier - you can find it and its documentation in the [`📁️ js`](../js) folder.
-
-## Editing video
-You'll find the high-quality screen recordings of these animations in the [`📁️ mp4`](../mp4) folder, though they may not be up-to-date. You can import these into the video editing tool of your choice, mix them with footage as you like, and export new videos.
