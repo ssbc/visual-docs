@@ -4,23 +4,6 @@
 Made as Scalable Vector Graphic (SVG) files. Animations primarily written with [anime.js](https://animejs.com), and converted to CSS animation.
 These are made to accompany and illustrate text explanations.
 
-## Repo
-
-
-- [📁️ **documentation**](documentation) ← _how to use or adapt animations_
-
-- [📁️ **font**](font) ← _base64 encoding of Dosis typeface, for embedding_
-
-- [📁️ **js**](js) ← _anime.js to css conversion script_
-
-- [📁️ **png**](png) ← _static raster icons_
-
-- [📁️ **svg**](svg) ← _the good stuff, it's all in here_
-
-- [ 📄️ **ROADMAP.md**](ROADMAP.md) ← _overview of progress and planned animations_
-
-- [ 📄️ **README.md**](README.md) ← _YOU ARE HERE. 📍️ Read me!_
-
 ## Table of Contents
 - [Documentation](#documentation)
 - [Animations](#animations)
