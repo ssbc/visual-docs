@@ -5,7 +5,7 @@ const animationData = {}
 // populate 'animationData' and `allEasingsPerTarget` objects
 const animeData = getAnimeJsData(tl)
 // convert to valid CSS and insert in document
-const cssData = convertDataToCss(animeData)
+convertDataToCss(animeData)
 // delete all scripts (including this one)
 deleteScripts()
 
@@ -21,7 +21,6 @@ function getAnimeJsData (timeline) {
       const animatedProperty = animation.property
       const fromValues = []
       const toValues = []
-
       animation.tweens.forEach(tween => {
         const tweenStart = tween.start + tween.delay + anim.timelineOffset
         const tweenEnd = tween.end + anim.timelineOffset
@@ -173,30 +172,25 @@ function addValuesToTransformObject (targetId, animatedProperty, tweenStart, twe
   // add a 'transform' object to the starting keyframe, if it doesn't exist yet
   if (!animationData[targetId][tweenStart].transform) animationData[targetId][tweenStart].transform = { }
 
-  // add the animated property and its value to the transform object, if it doesn't exist yet
-  if (!animationData[targetId][tweenStart].transform[animatedProperty]) {
-    animationData[targetId][tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
-  }
+  // add the animated property and its value to the transform object
+  animationData[targetId][tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
 
   // add a 'transform' object to the ending keyframe, if it doesn't exist yet
   if (!animationData[targetId][tweenEnd].transform) animationData[targetId][tweenEnd].transform = { }
 
-  // add the animated property and its value to the transform object, if it doesn't exist yet
-  if (!animationData[targetId][tweenEnd].transform[animatedProperty]) {
-    animationData[targetId][tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
-  }
+  // add the animated property and its value to the transform object
+  animationData[targetId][tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
+
   return animationData[targetId]
 }
 
 function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
-  // if the current property name isn't found in the starting keyframe, add it, and its starting value
-  if (!animationData[targetId][tweenStart][animatedProperty]) {
-    animationData[targetId][tweenStart][animatedProperty] = fromValues[fromValues.length - 1]
-  }
-  // if the current property name isn't found in the ending keyframe, add it, and its starting value
-  if (!animationData[targetId][tweenEnd][animatedProperty]) {
-    animationData[targetId][tweenEnd][animatedProperty] = toValues[toValues.length - 1]
-  }
+  // add the current property name to the starting keyframe, with its starting value
+  animationData[targetId][tweenStart][animatedProperty] = fromValues[fromValues.length - 1]
+
+  // add the current property name to the ending keyframe, with its ending value
+  animationData[targetId][tweenEnd][animatedProperty] = toValues[toValues.length - 1]
+
   return animationData[targetId]
 }
 
