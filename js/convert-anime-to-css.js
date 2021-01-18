@@ -276,7 +276,7 @@ function convertToPercentageKeyframes (id) {
   const percentageKeyframesAndValues = {}
   const absoluteKeyframes = Object.keys(animationData[id]).sort((a, b) => { return a - b })
 
-  absoluteKeyframes.map(absoluteKeyframe => {
+  absoluteKeyframes.forEach(absoluteKeyframe => {
     let percentageKeyframe = Math.round(absoluteKeyframe / timelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
     // add a 0% & 100% keyframe to each animation so they start in the
     // correct initial position and hold at the end
