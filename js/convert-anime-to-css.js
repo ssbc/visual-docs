@@ -44,7 +44,7 @@ function getAnimeJsData (timeline) {
 }
 
 function convertDataToCss (animeData) {
-  [keyframeData, easingData] = animeData
+  const [keyframeData, easingData] = animeData
   const targetIds = Object.keys(keyframeData)
   const oneEasingPerTarget = {}
   const oneCssEasingPerTarget = {}
@@ -52,7 +52,7 @@ function convertDataToCss (animeData) {
   targetIds.forEach(id => {
     oneEasingPerTarget[id] = determineEasing(id, easingData)
     oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
-    convertToPercentageKeyframes(id)
+    keyframeData[id] = convertToPercentageKeyframes(id)
   })
   const timingDeclaration = combineTargetsAndDuration(targetIds)
   const easingDeclaration = listTargetsForEachEasing(oneCssEasingPerTarget)
@@ -204,8 +204,8 @@ function determineEasing (id, allEasingsPerTarget) {
     const easingFrequency = {}
 
     easingsUsed.forEach(name => {
-      const occurrences = allEasingsPerTarget[id].filter(x => x === name).length
-      easingFrequency[name] = occurrences
+      const occurrencesOfEachEasing = allEasingsPerTarget[id].filter(x => x === name).length
+      easingFrequency[name] = occurrencesOfEachEasing
     })
 
     const highestNoOfOccurrences = Object
@@ -273,28 +273,23 @@ See https://easings.net/#${easingName} for more details. Setting #${id}'s easing
 }
 
 function convertToPercentageKeyframes (id) {
+  const percentageKeyframesAndValues = {}
   const absoluteKeyframes = Object.keys(animationData[id]).sort((a, b) => { return a - b })
-  let percentageKeyframe = ''
 
-  for (let index = 0; index < absoluteKeyframes.length; index++) {
-    const absoluteKeyframe = absoluteKeyframes[index]
-    percentageKeyframe = Math.round(absoluteKeyframe / timelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
-
+  absoluteKeyframes.map(absoluteKeyframe => {
+    let percentageKeyframe = Math.round(absoluteKeyframe / timelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
     // add a 0% & 100% keyframe to each animation so they start in the
     // correct initial position and hold at the end
-    const first = Boolean(index === 0)
-    const last = Boolean(index === absoluteKeyframes.length - 1)
-    if (first && percentageKeyframe !== '0%') {
-      percentageKeyframe = '0%, ' + percentageKeyframe
-    }
-    if (last && percentageKeyframe !== '100%') {
-      percentageKeyframe = percentageKeyframe + ', 100%'
-    }
+    const first = Boolean(absoluteKeyframe === absoluteKeyframes[0])
+    const last = Boolean(absoluteKeyframe === absoluteKeyframes.slice(-1)[0])
 
-    animationData[id][percentageKeyframe] = animationData[id][absoluteKeyframe]
-    delete animationData[id][absoluteKeyframe]
-  }
-  return animationData[id]
+    if (first && percentageKeyframe !== '0%') percentageKeyframe = '0%, ' + percentageKeyframe
+    if (last && percentageKeyframe !== '100%') percentageKeyframe += ', 100%'
+
+    percentageKeyframesAndValues[percentageKeyframe] = animationData[id][absoluteKeyframe]
+  })
+
+  return percentageKeyframesAndValues
 }
 
 function combineTargetsAndDuration (targetIds) {
@@ -362,7 +357,7 @@ function formatKeyframesAsCss (targetIds, timingFunctions) {
 
 function appendCssToDocument (css) {
   const styleElement = document.createElement('style')
-  styleElement.append(document.createCDATASection(css))
+  styleElement.append(css)
   document.documentElement.append(styleElement)
 }
 
