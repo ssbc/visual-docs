@@ -196,28 +196,24 @@ function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, twee
 
 // convertDataToCss component functions
 function determineEasing (id, allEasingsPerTarget) {
-  const easingsUsed = new Set(allEasingsPerTarget[id])
+  const easingFrequencies = allEasingsPerTarget[id].reduce((acc, easing) => ({
+    ...acc,
+    [easing]: acc[easing] ? acc[easing] + 1 : 1
+  }), {})
+  const easingsUsed = Object.keys(easingFrequencies)
 
-  if (easingsUsed.size > 1) {
+  if (easingsUsed.length > 1) {
     console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingsUsed].join(', ')}'`)
 
-    const easingFrequency = {}
-
-    easingsUsed.forEach(name => {
-      const occurrencesOfEachEasing = allEasingsPerTarget[id].filter(x => x === name).length
-      easingFrequency[name] = occurrencesOfEachEasing
-    })
-
-    const highestNoOfOccurrences = Object
-      .values(easingFrequency)
-      .sort((a, b) => (a > b) ? -1 : 1)[0]
-    const mostFrequentEasings = Object.keys(easingFrequency).filter(key => easingFrequency[key] === highestNoOfOccurrences)
+    const descendingByValues = (a, b) => (a[1] > b[1]) ? -1 : 1
+    const highestNoOfOccurrences = Object.entries(easingFrequencies).sort(descendingByValues)[0][1]
+    const mostFrequentEasings = easingsUsed.filter(key => easingFrequencies[key] === highestNoOfOccurrences)
 
     console.log(`🔍️ most frequent easing: '${[...mostFrequentEasings].join(', ')}'`)
-    console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for #${id}'s animation.`)
+    console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for  #${id}'s animation.`)
     return mostFrequentEasings[0]
   } else {
-    return easingsUsed.values().next().value
+    return easingsUsed[0]
   }
 }
 
