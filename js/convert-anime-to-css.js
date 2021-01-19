@@ -55,7 +55,7 @@ function convertDataToCss (animeData) {
     keyframeData[id] = convertToPercentageKeyframes(id)
   })
   const timingDeclaration = combineTargetsAndDuration(targetIds)
-  const easingDeclaration = listTargetsForEachEasing(oneCssEasingPerTarget)
+  const easingDeclaration = makeTargetListForEachEasing(oneCssEasingPerTarget)
   const keyframesDeclaration = formatKeyframesAsCss()
   const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 
@@ -274,7 +274,6 @@ function convertToPercentageKeyframes (id) {
   absoluteKeyframes.forEach(absoluteKeyframe => {
     const percentageKeyframe = getPercentageString(absoluteKeyframe, timelineDuration)
     const bookendedKeyframe = addZeroAndHundredPercentStrings(absoluteKeyframe, absoluteKeyframes, percentageKeyframe)
-
     percentageKeyframesAndValues[bookendedKeyframe] = animationData[id][absoluteKeyframe]
   })
   return percentageKeyframesAndValues
@@ -303,32 +302,29 @@ function combineTargetsAndDuration (targetIds) {
   return selectorList + durationIterationDeclaration
 }
 
-function listTargetsForEachEasing (oneCssEasingPerTarget) {
-  const easingsUsed = new Set(Object.values(oneCssEasingPerTarget))
-  const targetIds = {}
-  let timingFunctions = ''
+function makeTargetListForEachEasing (oneCssEasingPerTarget) {
+  const timingFunctions = []
+  const targetIdsUsingEasing = listTargetIdsUsingEasing(oneCssEasingPerTarget)
 
-  // 'oneCssEasingPerTarget' lists the CSS animation-timing-function to use
-  // for each targeted element, eg:
-  //
-  // oneCssEasingPerTarget = {
-  //   targetA: 'linear',
-  //   targetB: 'cubic-bezier(0.45, 0, 0.55, 1)'
-  //   targetC: 'cubic-bezier(0.45, 0, 0.55, 1)'
-  // }
+  for (const easing in targetIdsUsingEasing) {
+    const targetList = targetIdsUsingEasing[easing].join().replace(/,/g, ', #')
+    timingFunctions.push(`\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`)
+  }
+
+  return timingFunctions.join('')
+}
+
+function listTargetIdsUsingEasing (oneCssEasingPerTarget) {
+  const easingsUsed = new Set(Object.values(oneCssEasingPerTarget))
+  const targetIdsUsingEasing = {}
 
   easingsUsed.forEach(easing => {
-    // create an array of all targetIds using that easing
-    targetIds[easing] = []
+    targetIdsUsingEasing[easing] = []
     const getTargets = (oneCssEasingPerTarget, specificEasing) => Object.keys(oneCssEasingPerTarget).filter(key => oneCssEasingPerTarget[key] === specificEasing)
-
-    targetIds[easing].push(getTargets(oneCssEasingPerTarget, easing))
+    targetIdsUsingEasing[easing].push(getTargets(oneCssEasingPerTarget, easing))
   })
-  for (const easing in targetIds) {
-    const targetList = targetIds[easing].join().replace(/,/g, ', #')
-    timingFunctions = timingFunctions + `\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`
-  }
-  return timingFunctions
+
+  return targetIdsUsingEasing
 }
 
 function formatKeyframesAsCss (targetIds, timingFunctions) {
