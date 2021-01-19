@@ -292,6 +292,7 @@ function addZeroAndHundredPercentStrings (absoluteKeyframe, absoluteKeyframes, p
 
   if (first && percentageKeyframe !== '0%') return '0%, ' + percentageKeyframe
   if (last && percentageKeyframe !== '100%') return percentageKeyframe + ', 100%'
+  return percentageKeyframe
 }
 
 function combineTargetsAndDuration (targetIds) {
