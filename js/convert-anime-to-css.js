@@ -202,19 +202,21 @@ function determineEasing (id, allEasingsPerTarget) {
   }), {})
   const easingsUsed = Object.keys(easingFrequencies)
 
-  if (easingsUsed.length > 1) {
-    console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingsUsed].join(', ')}'`)
+  return (easingsUsed.length > 1)
+    ? calculateMostFrequentEasings(easingsUsed, easingFrequencies, id)
+    : easingsUsed[0]
+}
 
-    const descendingByValues = (a, b) => (a[1] > b[1]) ? -1 : 1
-    const highestNoOfOccurrences = Object.entries(easingFrequencies).sort(descendingByValues)[0][1]
-    const mostFrequentEasings = easingsUsed.filter(key => easingFrequencies[key] === highestNoOfOccurrences)
+function calculateMostFrequentEasings (easingsUsed, easingFrequencies, id) {
+  console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingsUsed].join(', ')}'`)
 
-    console.log(`🔍️ most frequent easing: '${[...mostFrequentEasings].join(', ')}'`)
-    console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for  #${id}'s animation.`)
-    return mostFrequentEasings[0]
-  } else {
-    return easingsUsed[0]
-  }
+  const descendingByValues = (a, b) => (a[1] > b[1]) ? -1 : 1
+  const highestNoOfOccurrences = Object.entries(easingFrequencies).sort(descendingByValues)[0][1]
+  const mostFrequentEasings = easingsUsed.filter(key => easingFrequencies[key] === highestNoOfOccurrences)
+
+  console.log(`🔍️ most frequent easing: '${[...mostFrequentEasings].join(', ')}'`)
+  console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for  #${id}'s animation.`)
+  return mostFrequentEasings[0]
 }
 
 function convertEasingToBezier (id, oneEasingPerTarget) {
@@ -255,17 +257,14 @@ function convertEasingToBezier (id, oneEasingPerTarget) {
     'easeInOutBounce'
   ]
 
-  if (validEasings[easingName]) {
-    return validEasings[easingName]
-  }
+  if (validEasings[easingName]) return validEasings[easingName]
   if (invalidEasings.includes(easingName)) {
     console.log(`⚠️ WARNING! '${easingName}' cannot be implemented as a CSS timing function.
 See https://easings.net/#${easingName} for more details. Setting #${id}'s easing to 'linear'.`)
-    return 'linear'
   } else {
     console.log(`¯\\_(ツ)_/¯ Setting #${id}'s easing to 'linear'.`)
-    return 'linear'
   }
+  return 'linear'
 }
 
 function convertToPercentageKeyframes (id) {
@@ -273,19 +272,26 @@ function convertToPercentageKeyframes (id) {
   const absoluteKeyframes = Object.keys(animationData[id]).sort((a, b) => { return a - b })
 
   absoluteKeyframes.forEach(absoluteKeyframe => {
-    let percentageKeyframe = Math.round(absoluteKeyframe / timelineDuration * 100 * 100 + Number.EPSILON) / 100 + '%'
-    // add a 0% & 100% keyframe to each animation so they start in the
-    // correct initial position and hold at the end
-    const first = Boolean(absoluteKeyframe === absoluteKeyframes[0])
-    const last = Boolean(absoluteKeyframe === absoluteKeyframes.slice(-1)[0])
+    const percentageKeyframe = getPercentageString(absoluteKeyframe, timelineDuration)
+    const bookendedKeyframe = addZeroAndHundredPercentStrings(absoluteKeyframe, absoluteKeyframes, percentageKeyframe)
 
-    if (first && percentageKeyframe !== '0%') percentageKeyframe = '0%, ' + percentageKeyframe
-    if (last && percentageKeyframe !== '100%') percentageKeyframe += ', 100%'
-
-    percentageKeyframesAndValues[percentageKeyframe] = animationData[id][absoluteKeyframe]
+    percentageKeyframesAndValues[bookendedKeyframe] = animationData[id][absoluteKeyframe]
   })
-
   return percentageKeyframesAndValues
+}
+
+function getPercentageString (partial, total) {
+  return Math.round(partial / total * 10000 + Number.EPSILON) / 100 + '%'
+}
+
+function addZeroAndHundredPercentStrings (absoluteKeyframe, absoluteKeyframes, percentageKeyframe) {
+  // add a 0% & 100% keyframe to each animation so they start in the
+  // correct initial position and hold at the end
+  const first = Boolean(absoluteKeyframe === absoluteKeyframes[0])
+  const last = Boolean(absoluteKeyframe === absoluteKeyframes.slice(-1)[0])
+
+  if (first && percentageKeyframe !== '0%') return '0%, ' + percentageKeyframe
+  if (last && percentageKeyframe !== '100%') return percentageKeyframe + ', 100%'
 }
 
 function combineTargetsAndDuration (targetIds) {
