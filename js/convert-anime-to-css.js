@@ -303,15 +303,10 @@ function combineTargetsAndDuration (targetIds) {
 }
 
 function makeTargetListForEachEasing (oneCssEasingPerTarget) {
-  const timingFunctions = []
   const targetIdsUsingEasing = listTargetIdsUsingEasing(oneCssEasingPerTarget)
+  const timingFunctionDeclaration = formatAsTimingFunctionDeclaration(targetIdsUsingEasing)
 
-  for (const easing in targetIdsUsingEasing) {
-    const targetList = targetIdsUsingEasing[easing].join().replace(/,/g, ', #')
-    timingFunctions.push(`\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`)
-  }
-
-  return timingFunctions.join('')
+  return timingFunctionDeclaration
 }
 
 function listTargetIdsUsingEasing (oneCssEasingPerTarget) {
@@ -325,6 +320,16 @@ function listTargetIdsUsingEasing (oneCssEasingPerTarget) {
   })
 
   return targetIdsUsingEasing
+}
+
+function formatAsTimingFunctionDeclaration (targetIdsUsingEasing) {
+  const timingFunctionDeclaration = []
+  for (const easing in targetIdsUsingEasing) {
+    const targetList = targetIdsUsingEasing[easing].join().replace(/,/g, ', #')
+    timingFunctionDeclaration.push(`\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`)
+  }
+
+  return timingFunctionDeclaration.join('')
 }
 
 function formatKeyframesAsCss (targetIds, timingFunctions) {
