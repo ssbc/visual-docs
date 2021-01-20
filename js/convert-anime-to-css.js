@@ -142,7 +142,9 @@ function getEasingName (tween) {
     '0.476672,0.502048': 'easeOutInExpo'
   }
 
-  return easingLookup[fingerprint]
+  return (easingLookup[fingerprint])
+    ? easingLookup[fingerprint]
+    : 'invalid'
 }
 
 function writeFromAndToValues (tween, animatedProperty, fromValues, toValues) {
@@ -200,14 +202,63 @@ function determineEasing (id, allEasingsPerTarget) {
     ...acc,
     [easing]: acc[easing] ? acc[easing] + 1 : 1
   }), {})
-  const easingsUsed = Object.keys(easingFrequencies)
+  const validEasingsUsed = checkForInvalidEasing(easingFrequencies, id)
 
-  return (easingsUsed.length > 1)
-    ? calculateMostFrequentEasings(easingsUsed, easingFrequencies, id)
-    : easingsUsed[0]
+  return (validEasingsUsed.length > 1)
+    ? calculateMostFrequentEasings(validEasingsUsed, easingFrequencies, id)
+    : validEasingsUsed[0]
+}
+
+function checkForInvalidEasing (easingFrequencies, id) {
+  const easingsUsed = Object.keys(easingFrequencies)
+  const checkedForKnownInvalids = checkForKnownInvalids(easingsUsed, id)
+  const checkedForUnknownInvalids = checkForUnknownInvalids(checkedForKnownInvalids, id)
+  return checkedForUnknownInvalids
+}
+
+function checkForKnownInvalids (easingsUsed, id) {
+  const knownInvalidEasings = [
+    'easeInElastic',
+    'easeOutElastic',
+    'easeInOutElastic',
+    'easeInBounce',
+    'easeOutBounce',
+    'easeInOutBounce'
+  ]
+  const isInvalid = (easing) => knownInvalidEasings.includes(easing)
+  const isValid = (easing) => !knownInvalidEasings.includes(easing)
+  const invalidEasings = easingsUsed.filter(isInvalid)
+  const remainingEasings = easingsUsed.filter(isValid)
+
+  invalidEasings.forEach(easingName => {
+    console.log(`⚠️ WARNING! '${easingName}' cannot be implemented as a CSS timing function.
+  See https://easings.net/#${easingName} for more details.`)
+  })
+
+  if (!remainingEasings.length) {
+    console.log(`🤖️ Setting #${id}'s easing to 'linear'.`)
+    return ['linear']
+  } else {
+    return remainingEasings
+  }
+}
+
+function checkForUnknownInvalids (easingsUsed, id) {
+  if (easingsUsed.includes('invalid')) {
+    const validEasingsUsed = easingsUsed.filter(easing => !'invalid')
+    console.log(`⚠️ WARNING: #${id}'s animation uses an easing this script can't convert yet.`)
+
+    if (validEasingsUsed.length === 0) {
+      console.log(`🤖️ choosing 'linear' for #${id}'s animation.`)
+      return ['linear']
+    } else {
+      return validEasingsUsed
+    }
+  } else return easingsUsed
 }
 
 function calculateMostFrequentEasings (easingsUsed, easingFrequencies, id) {
+  // TODO: check easingFrequencies and remove anything that isn't in easingsUsed!
   console.log(`⚠️ WARNING: #${id}'s animation has more than one easing: '${[...easingsUsed].join(', ')}'`)
 
   const descendingByValues = (a, b) => (a[1] > b[1]) ? -1 : 1
@@ -248,23 +299,7 @@ function convertEasingToBezier (id, oneEasingPerTarget) {
     easeOutBack: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
     easeInOutBack: 'cubic-bezier(0.68, -0.6, 0.32, 1.6)'
   }
-  const invalidEasings = [
-    'easeInElastic',
-    'easeOutElastic',
-    'easeInOutElastic',
-    'easeInBounce',
-    'easeOutBounce',
-    'easeInOutBounce'
-  ]
-
-  if (validEasings[easingName]) return validEasings[easingName]
-  if (invalidEasings.includes(easingName)) {
-    console.log(`⚠️ WARNING! '${easingName}' cannot be implemented as a CSS timing function.
-See https://easings.net/#${easingName} for more details. Setting #${id}'s easing to 'linear'.`)
-  } else {
-    console.log(`¯\\_(ツ)_/¯ Setting #${id}'s easing to 'linear'.`)
-  }
-  return 'linear'
+  return validEasings[easingName]
 }
 
 function convertToPercentageKeyframes (id) {
