@@ -2,7 +2,7 @@
 const timelineDuration = tl.duration
 const animationData = {}
 
-// populate 'animationData' and `allEasingsPerTarget` objects
+// populate 'animationData' and `everyEasingInstance` objects
 const animeData = getAnimeJsData(tl)
 // convert to valid CSS and insert in document
 convertDataToCss(animeData)
@@ -11,7 +11,7 @@ deleteScripts()
 
 // Each section of the timeline has its own anim object with all its details
 function getAnimeJsData (timeline) {
-  const allEasingsPerTarget = {}
+  const everyEasingInstance = {}
 
   timeline.children.forEach(anim => {
     assignMissingIds(anim)
@@ -21,15 +21,16 @@ function getAnimeJsData (timeline) {
       const animatedProperty = animation.property
       const fromValues = []
       const toValues = []
+      if (!everyEasingInstance[targetId]) everyEasingInstance[targetId] = []
+
       animation.tweens.forEach(tween => {
         const tweenStart = tween.start + tween.delay + anim.timelineOffset
         const tweenEnd = tween.end + anim.timelineOffset
         const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
 
-        if (!allEasingsPerTarget[targetId]) allEasingsPerTarget[targetId] = []
-        allEasingsPerTarget[targetId].push(getEasingName(tween))
-
-        writeFromAndToValues(tween, animatedProperty, fromValues, toValues)
+        everyEasingInstance[targetId].push(getEasingName(tween))
+        fromValues.push(getFromAndToValues(tween, animatedProperty)[0])
+        toValues.push(getFromAndToValues(tween, animatedProperty)[1])
         createKeyframeObjects(targetId, tweenStart, tweenEnd)
 
         if (validTransforms.includes(animatedProperty)) {
@@ -40,7 +41,7 @@ function getAnimeJsData (timeline) {
       })
     })
   })
-  return [animationData, allEasingsPerTarget]
+  return [animationData, everyEasingInstance]
 }
 
 function convertDataToCss (animeData) {
@@ -147,17 +148,11 @@ function getEasingName (tween) {
     : 'invalid'
 }
 
-function writeFromAndToValues (tween, animatedProperty, fromValues, toValues) {
+function getFromAndToValues (tween, animatedProperty) {
   // anime adds 'px' to strokeDashoffset values for some reason
-  if (animatedProperty === 'strokeDashoffset') {
-    fromValues.push(tween.from.numbers[0])
-    toValues.push(tween.to.numbers[0])
-  } else { // otherwise anime's extra formatting (eg. +px, +deg) is quite useful
-    fromValues.push(tween.from.original)
-    toValues.push(tween.to.original)
-  }
-
-  return [fromValues, toValues]
+  return (animatedProperty === 'strokeDashoffset')
+    ? [tween.from.numbers[0], tween.to.numbers[0]]
+    : [tween.from.original, tween.to.original]
 }
 
 function createKeyframeObjects (targetId, tweenStart, tweenEnd) {
@@ -197,8 +192,8 @@ function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, twee
 }
 
 // convertDataToCss component functions
-function determineEasing (id, allEasingsPerTarget) {
-  const easingFrequencies = allEasingsPerTarget[id].reduce((acc, easing) => ({
+function determineEasing (id, everyEasingInstance) {
+  const easingFrequencies = everyEasingInstance[id].reduce((acc, easing) => ({
     ...acc,
     [easing]: acc[easing] ? acc[easing] + 1 : 1
   }), {})
