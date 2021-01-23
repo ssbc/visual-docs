@@ -8,7 +8,7 @@ deleteScripts()
 
 // Each section of the timeline has its own anim object with all its details
 function getAnimeJsData (timeline) {
-  const timelineDuration = tl.duration
+  const timelineDuration = timeline.duration
   const keyframeData = {}
   const everyEasingInstance = {}
   const targetIds = getTargetIds(timeline)
