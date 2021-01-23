@@ -29,14 +29,13 @@ function getAnimeJsData (timeline) {
       animation.tweens.forEach(tween => {
         const tweenStart = tween.start + tween.delay + anim.timelineOffset
         const tweenEnd = tween.end + anim.timelineOffset
-        const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
 
         everyEasingInstance[targetId].push(getEasingName(tween))
         fromValues.push(getFromAndToValues(tween, animatedProperty)[0])
         toValues.push(getFromAndToValues(tween, animatedProperty)[1])
         keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
 
-        keyframeData[targetId] = (validTransforms.includes(animatedProperty))
+        keyframeData[targetId] = (isTransform(animatedProperty))
           ? addValuesToTransformObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
           : addValuesToPropertyObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
       })
@@ -173,6 +172,11 @@ function getKeyframeTimings (keyframesForTarget, tweenStart, tweenEnd) {
   // add an empty keyframe at the tweenEnd time, if there isn't a keyframe there already
   if (!keyframeTimings[tweenEnd]) keyframeTimings[tweenEnd] = { }
   return keyframeTimings
+}
+
+function isTransform (property) {
+  const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d']
+  return validTransforms.includes(property)
 }
 
 function addValuesToTransformObject (keyframesForTarget, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
