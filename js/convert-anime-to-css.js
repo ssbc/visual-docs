@@ -1,11 +1,7 @@
-// This script assumes an anime timeline called 'tl'
-// populate 'keyframeData' and `everyEasingInstance` objects, get timeline duration
-const animeData = getAnimeJsData(tl)
-// convert to valid CSS and insert in document
+const animeData = getAnimeJsData(tl) // change 'tl' to name of your timeline
 const css = convertDataToCss(animeData)
 appendCssToDocument(css)
-// delete all scripts (including this one)
-deleteScripts()
+deleteAllScripts() // (including this one)
 
 // Each section of the timeline has its own anim object with all its details
 function getAnimeJsData (timeline) {
@@ -411,7 +407,7 @@ function appendCssToDocument (css) {
   document.documentElement.append(styleElement)
 }
 
-function deleteScripts () {
+function deleteAllScripts () {
   const scripts = document.getElementsByTagName('script')
   while (scripts.length) scripts[0].remove()
 }
