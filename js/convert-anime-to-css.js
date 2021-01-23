@@ -35,11 +35,9 @@ function getAnimeJsData (timeline) {
         toValues.push(getFromAndToValues(tween, animatedProperty)[1])
         keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
 
-        if (validTransforms.includes(animatedProperty)) {
-          keyframeData[targetId] = addValuesToTransformObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
-        } else {
-          keyframeData[targetId] = addValuesToPropertyObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
-        }
+        keyframeData[targetId] = (validTransforms.includes(animatedProperty))
+          ? addValuesToTransformObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+          : addValuesToPropertyObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
       })
     })
   })
