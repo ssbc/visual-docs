@@ -2,7 +2,8 @@
 // populate 'keyframeData' and `everyEasingInstance` objects, get timeline duration
 const animeData = getAnimeJsData(tl)
 // convert to valid CSS and insert in document
-convertDataToCss(animeData)
+const css = convertDataToCss(animeData)
+appendCssToDocument(css)
 // delete all scripts (including this one)
 deleteScripts()
 
@@ -60,7 +61,6 @@ function convertDataToCss (animeData) {
   const keyframesDeclaration = formatKeyframesAsCss(keyframeData)
   const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 
-  appendCssToDocument(css)
   return css
 }
 
