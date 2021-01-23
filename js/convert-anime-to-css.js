@@ -1,8 +1,5 @@
 // This script assumes an anime timeline called 'tl'
-const timelineDuration = tl.duration
-const keyframeData = {}
-
-// populate 'keyframeData' and `everyEasingInstance` objects
+// populate 'keyframeData' and `everyEasingInstance` objects, get timeline duration
 const animeData = getAnimeJsData(tl)
 // convert to valid CSS and insert in document
 convertDataToCss(animeData)
@@ -11,12 +8,14 @@ deleteScripts()
 
 // Each section of the timeline has its own anim object with all its details
 function getAnimeJsData (timeline) {
+  const timelineDuration = tl.duration
+  const keyframeData = {}
   const everyEasingInstance = {}
   const targetIds = getTargetIds(timeline)
 
   targetIds.forEach(id => {
-    everyEasingInstance[id] = []
     keyframeData[id] = []
+    everyEasingInstance[id] = []
   })
 
   timeline.children.forEach(anim => {
@@ -34,21 +33,21 @@ function getAnimeJsData (timeline) {
         everyEasingInstance[targetId].push(getEasingName(tween))
         fromValues.push(getFromAndToValues(tween, animatedProperty)[0])
         toValues.push(getFromAndToValues(tween, animatedProperty)[1])
-        createKeyframeObjects(targetId, tweenStart, tweenEnd)
+        keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
 
         if (validTransforms.includes(animatedProperty)) {
-          addValuesToTransformObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+          keyframeData[targetId] = addValuesToTransformObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
         } else {
-          addValuesToPropertyObject(targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+          keyframeData[targetId] = addValuesToPropertyObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
         }
       })
     })
   })
-  return [keyframeData, everyEasingInstance]
+  return [keyframeData, everyEasingInstance, timelineDuration]
 }
 
 function convertDataToCss (animeData) {
-  const [keyframeData, easingData] = animeData
+  const [keyframeData, easingData, timelineDuration] = animeData
   const targetIds = Object.keys(keyframeData)
   const oneEasingPerTarget = {}
   const oneCssEasingPerTarget = {}
@@ -56,11 +55,11 @@ function convertDataToCss (animeData) {
   targetIds.forEach(id => {
     oneEasingPerTarget[id] = determineEasing(id, easingData)
     oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
-    keyframeData[id] = convertToPercentageKeyframes(id)
+    keyframeData[id] = convertToPercentageKeyframes(keyframeData[id], timelineDuration)
   })
-  const timingDeclaration = combineTargetsAndDuration(targetIds)
+  const timingDeclaration = combineTargetsAndDuration(targetIds, timelineDuration)
   const easingDeclaration = makeTargetListForEachEasing(oneCssEasingPerTarget)
-  const keyframesDeclaration = formatKeyframesAsCss()
+  const keyframesDeclaration = formatKeyframesAsCss(keyframeData)
   const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 
   appendCssToDocument(css)
@@ -98,12 +97,12 @@ function nextChar (letter) {
   return String.fromCharCode(letter.charCodeAt(0) + 1)
 }
 
-function getTargetIds(timeline) {
+function getTargetIds (timeline) {
   const ids = new Set()
   timeline.children.forEach(anim => {
     assignMissingIds(anim)
     anim.animations.forEach(animation => {
-        ids.add(animation.animatable.target.id)
+      ids.add(animation.animatable.target.id)
     })
   })
   return ids
@@ -169,38 +168,41 @@ function getFromAndToValues (tween, animatedProperty) {
     : [tween.from.original, tween.to.original]
 }
 
-function createKeyframeObjects (targetId, tweenStart, tweenEnd) {
+function getKeyframeTimings (keyframesForTarget, tweenStart, tweenEnd) {
+  const keyframeTimings = { ...keyframesForTarget }
   // add an empty keyframe at the tweenStart time, if there isn't a keyframe there already
-  if (!keyframeData[targetId][tweenStart]) keyframeData[targetId][tweenStart] = { }
+  if (!keyframeTimings[tweenStart]) keyframeTimings[tweenStart] = { }
   // add an empty keyframe at the tweenEnd time, if there isn't a keyframe there already
-  if (!keyframeData[targetId][tweenEnd]) keyframeData[targetId][tweenEnd] = { }
-  return keyframeData[targetId]
+  if (!keyframeTimings[tweenEnd]) keyframeTimings[tweenEnd] = { }
+  return keyframeTimings
 }
 
-function addValuesToTransformObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
+function addValuesToTransformObject (keyframesForTarget, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
+  const keyframeValues = { ...keyframesForTarget }
   // add a 'transform' object to the starting keyframe, if it doesn't exist yet
-  if (!keyframeData[targetId][tweenStart].transform) keyframeData[targetId][tweenStart].transform = { }
+  if (!keyframeValues[tweenStart].transform) keyframeValues[tweenStart].transform = { }
 
   // add the animated property and its value to the transform object
-  keyframeData[targetId][tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
+  keyframeValues[tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
 
   // add a 'transform' object to the ending keyframe, if it doesn't exist yet
-  if (!keyframeData[targetId][tweenEnd].transform) keyframeData[targetId][tweenEnd].transform = { }
+  if (!keyframeValues[tweenEnd].transform) keyframeValues[tweenEnd].transform = { }
 
   // add the animated property and its value to the transform object
-  keyframeData[targetId][tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
+  keyframeValues[tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
 
-  return keyframeData[targetId]
+  return keyframeValues
 }
 
-function addValuesToPropertyObject (targetId, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
+function addValuesToPropertyObject (keyframesForTarget, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
+  const keyframeValues = { ...keyframesForTarget }
   // add the current property name to the starting keyframe, with its starting value
-  keyframeData[targetId][tweenStart][animatedProperty] = fromValues[fromValues.length - 1]
+  keyframeValues[tweenStart][animatedProperty] = fromValues[fromValues.length - 1]
 
   // add the current property name to the ending keyframe, with its ending value
-  keyframeData[targetId][tweenEnd][animatedProperty] = toValues[toValues.length - 1]
+  keyframeValues[tweenEnd][animatedProperty] = toValues[toValues.length - 1]
 
-  return keyframeData[targetId]
+  return keyframeValues
 }
 
 // convertDataToCss component functions
@@ -309,14 +311,14 @@ function convertEasingToBezier (id, oneEasingPerTarget) {
   return validEasings[easingName]
 }
 
-function convertToPercentageKeyframes (id) {
+function convertToPercentageKeyframes (keyframesForTarget, timelineDuration) {
   const percentageKeyframesAndValues = {}
-  const absoluteKeyframes = Object.keys(keyframeData[id]).sort((a, b) => { return a - b })
+  const absoluteKeyframes = Object.keys(keyframesForTarget).sort((a, b) => { return a - b })
 
   absoluteKeyframes.forEach(absoluteKeyframe => {
     const percentageKeyframe = getPercentageString(absoluteKeyframe, timelineDuration)
     const bookendedKeyframe = addZeroAndHundredPercentStrings(absoluteKeyframe, absoluteKeyframes, percentageKeyframe)
-    percentageKeyframesAndValues[bookendedKeyframe] = keyframeData[id][absoluteKeyframe]
+    percentageKeyframesAndValues[bookendedKeyframe] = keyframesForTarget[absoluteKeyframe]
   })
   return percentageKeyframesAndValues
 }
@@ -336,7 +338,7 @@ function addZeroAndHundredPercentStrings (absoluteKeyframe, absoluteKeyframes, p
   return percentageKeyframe
 }
 
-function combineTargetsAndDuration (targetIds) {
+function combineTargetsAndDuration (targetIds, timelineDuration) {
   const selectorList = '\n  #' + targetIds.join(', #')
   const durationInSeconds = Math.round((timelineDuration) / 10 + Number.EPSILON) / 100
   const durationIterationDeclaration = ' {\n  animation-duration:' + durationInSeconds + 's;\n  animation-iteration-count: infinite;\n}\n'
@@ -374,7 +376,7 @@ function formatAsTimingFunctionDeclaration (targetIdsUsingEasing) {
   return timingFunctionDeclaration.join('')
 }
 
-function formatKeyframesAsCss (targetIds, timingFunctions) {
+function formatKeyframesAsCss (keyframeData) {
   let css = ''
   for (const target in keyframeData) {
     css += `\n#${target} { animation-name: ${target}-anim; }\n@keyframes ${target}-anim {\n`
