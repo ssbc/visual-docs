@@ -2,6 +2,7 @@ const animeData = getAnimeJsData(tl) // change 'tl' to name of your timeline
 const css = convertDataToCss(animeData)
 appendCssToDocument(css)
 deleteAllScripts() // (including this one)
+
 function getAnimeJsData (timeline) {
   const timelineDuration = timeline.duration
   const keyframeData = {}
@@ -50,6 +51,7 @@ function convertDataToCss (animeData) {
     oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
     keyframeData[id] = convertToPercentageKeyframes(keyframeData[id], timelineDuration)
   })
+
   const timingDeclaration = combineTargetsAndDuration(targetIds, timelineDuration)
   const easingDeclaration = makeTargetListForEachEasing(oneCssEasingPerTarget)
   const keyframesDeclaration = formatKeyframesAsCss(keyframeData)
@@ -59,11 +61,22 @@ function convertDataToCss (animeData) {
 }
 
 // getAnimeJsData component functions
+function getTargetIds (timeline) {
+  const ids = new Set()
+  timeline.children.forEach(anim => {
+    assignMissingIds(anim)
+    anim.animations.forEach(animation => {
+      ids.add(animation.animatable.target.id)
+    })
+  })
+  return ids
+}
+
 function assignMissingIds (anim) {
   let uniqueIdLetter = 'a'
 
   anim.animations.forEach(animation => {
-    // Without an id, keyframes will be written for an empty target
+    // Without an id, keyframes would be written for an empty target
     if (!animation.animatable.target.id) {
       const element = animation.animatable.target.tagName
       const parentNode = animation.animatable.target.parentNode
@@ -87,17 +100,6 @@ function assignMissingIds (anim) {
 
 function nextChar (letter) {
   return String.fromCharCode(letter.charCodeAt(0) + 1)
-}
-
-function getTargetIds (timeline) {
-  const ids = new Set()
-  timeline.children.forEach(anim => {
-    assignMissingIds(anim)
-    anim.animations.forEach(animation => {
-      ids.add(animation.animatable.target.id)
-    })
-  })
-  return ids
 }
 
 function getEasingName (tween) {
