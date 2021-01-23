@@ -2,8 +2,6 @@ const animeData = getAnimeJsData(tl) // change 'tl' to name of your timeline
 const css = convertDataToCss(animeData)
 appendCssToDocument(css)
 deleteAllScripts() // (including this one)
-
-// Each section of the timeline has its own anim object with all its details
 function getAnimeJsData (timeline) {
   const timelineDuration = timeline.duration
   const keyframeData = {}
@@ -15,6 +13,7 @@ function getAnimeJsData (timeline) {
     everyEasingInstance[id] = []
   })
 
+  // Each section of the timeline has its own anim object with all its details
   timeline.children.forEach(anim => {
     anim.animations.forEach(animation => {
       const targetId = animation.animatable.target.id
