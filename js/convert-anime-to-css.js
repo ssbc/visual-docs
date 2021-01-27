@@ -30,8 +30,8 @@ function getAnimeJsData (timeline) {
         const tweenEnd = tween.end + anim.timelineOffset
 
         easings[targetId].push(getEasingName(tween))
-        fromValues.push(getFromAndToValues(tween, animatedProperty)[0])
-        toValues.push(getFromAndToValues(tween, animatedProperty)[1])
+        fromValues.push(getFromAndToValues(tween, animatedProperty).from)
+        toValues.push(getFromAndToValues(tween, animatedProperty).to)
         keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
 
         keyframeData[targetId] = (isTransform(animatedProperty))
@@ -161,8 +161,8 @@ function getEasingName (tween) {
 function getFromAndToValues (tween, animatedProperty) {
   // anime adds 'px' to strokeDashoffset values for some reason
   return (animatedProperty === 'strokeDashoffset')
-    ? [tween.from.numbers[0], tween.to.numbers[0]]
-    : [tween.from.original, tween.to.original]
+    ? { from: tween.from.numbers[0], to: tween.to.numbers[0] }
+    : { from: tween.from.original, to: tween.to.original }
 }
 
 function getKeyframeTimings (keyframesForTarget, tweenStart, tweenEnd) {
