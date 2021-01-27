@@ -167,9 +167,8 @@ function getFromAndToValues (tween, animatedProperty) {
 
 function getKeyframeTimings (keyframesForTarget, tweenStart, tweenEnd) {
   const keyframeTimings = { ...keyframesForTarget }
-  // add an empty keyframe at the tweenStart time, if there isn't a keyframe there already
+  // add an empty keyframe at the tweenStart/tweenEnd times, if there aren't keyframes there already
   if (!keyframeTimings[tweenStart]) keyframeTimings[tweenStart] = { }
-  // add an empty keyframe at the tweenEnd time, if there isn't a keyframe there already
   if (!keyframeTimings[tweenEnd]) keyframeTimings[tweenEnd] = { }
   return keyframeTimings
 }
@@ -183,14 +182,10 @@ function addValuesToTransformObject (keyframesForTarget, animatedProperty, tween
   const keyframeValues = { ...keyframesForTarget }
   // add a 'transform' object to the starting keyframe, if it doesn't exist yet
   if (!keyframeValues[tweenStart].transform) keyframeValues[tweenStart].transform = { }
-
   // add the animated property and its value to the transform object
   keyframeValues[tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
-
-  // add a 'transform' object to the ending keyframe, if it doesn't exist yet
+  // do the same for the ending keyframe
   if (!keyframeValues[tweenEnd].transform) keyframeValues[tweenEnd].transform = { }
-
-  // add the animated property and its value to the transform object
   keyframeValues[tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
 
   return keyframeValues
@@ -198,10 +193,8 @@ function addValuesToTransformObject (keyframesForTarget, animatedProperty, tween
 
 function addValuesToPropertyObject (keyframesForTarget, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   const keyframeValues = { ...keyframesForTarget }
-  // add the current property name to the starting keyframe, with its starting value
+  // add the current property name to the starting/ending keyframe, with its value
   keyframeValues[tweenStart][animatedProperty] = fromValues[fromValues.length - 1]
-
-  // add the current property name to the ending keyframe, with its ending value
   keyframeValues[tweenEnd][animatedProperty] = toValues[toValues.length - 1]
 
   return keyframeValues
