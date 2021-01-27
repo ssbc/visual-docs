@@ -1,3 +1,6 @@
+// paste this script after the anime timeline in your SVG document (within the same `<script>`, so that it can access the timeline).
+// Open the SVG in a browser and it will be converted to CSS animation.
+
 const animeData = getAnimeJsData(tl) // change 'tl' to name of your timeline
 const css = convertDataToCss(animeData)
 appendCssToDocument(css)
@@ -6,12 +9,12 @@ deleteAllScripts() // (including this one)
 function getAnimeJsData (timeline) {
   const timelineDuration = timeline.duration
   const keyframeData = {}
-  const everyEasingInstance = {}
+  const easings = {}
   const targetIds = getTargetIds(timeline)
 
   targetIds.forEach(id => {
     keyframeData[id] = []
-    everyEasingInstance[id] = []
+    easings[id] = []
   })
 
   // Each section of the timeline has its own anim object with all its details
@@ -26,7 +29,7 @@ function getAnimeJsData (timeline) {
         const tweenStart = tween.start + tween.delay + anim.timelineOffset
         const tweenEnd = tween.end + anim.timelineOffset
 
-        everyEasingInstance[targetId].push(getEasingName(tween))
+        easings[targetId].push(getEasingName(tween))
         fromValues.push(getFromAndToValues(tween, animatedProperty)[0])
         toValues.push(getFromAndToValues(tween, animatedProperty)[1])
         keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
@@ -37,17 +40,17 @@ function getAnimeJsData (timeline) {
       })
     })
   })
-  return [keyframeData, everyEasingInstance, timelineDuration]
+  return { keyframeData, easings, timelineDuration }
 }
 
 function convertDataToCss (animeData) {
-  const [keyframeData, easingData, timelineDuration] = animeData
+  const { keyframeData, easings, timelineDuration } = animeData
   const targetIds = Object.keys(keyframeData)
   const oneEasingPerTarget = {}
   const oneCssEasingPerTarget = {}
 
   targetIds.forEach(id => {
-    oneEasingPerTarget[id] = determineEasing(id, easingData)
+    oneEasingPerTarget[id] = determineEasing(id, easings)
     oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
     keyframeData[id] = convertToPercentageKeyframes(keyframeData[id], timelineDuration)
   })
@@ -205,8 +208,8 @@ function addValuesToPropertyObject (keyframesForTarget, animatedProperty, tweenS
 }
 
 // convertDataToCss component functions
-function determineEasing (id, everyEasingInstance) {
-  const easingFrequencies = everyEasingInstance[id].reduce((acc, easing) => ({
+function determineEasing (id, easings) {
+  const easingFrequencies = easings[id].reduce((acc, easing) => ({
     ...acc,
     [easing]: acc[easing] ? acc[easing] + 1 : 1
   }), {})
@@ -389,10 +392,7 @@ function formatKeyframesAsCss (keyframeData) {
           }
           css += ';'
         } else {
-          const kebabCaseProperty = `${property}`
-            .replace(/([a-z])([A-Z])/g, '$1-$2')
-            .toLowerCase()
-          css += ` ${kebabCaseProperty}: ${keyframeData[target][keyframe][property]};`
+          css += ` ${toKebabCase(property)}: ${keyframeData[target][keyframe][property]};`
         }
       }
       css += ' }\n'
@@ -400,6 +400,10 @@ function formatKeyframesAsCss (keyframeData) {
     css += '}\n'
   }
   return css
+}
+
+function toKebabCase (string) {
+  return string.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
 }
 
 function appendCssToDocument (css) {
