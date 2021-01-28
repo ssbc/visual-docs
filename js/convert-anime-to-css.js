@@ -96,6 +96,7 @@ function assignMissingIds (anim) {
 
       console.log(`giving target an id of '${generatedId}'`)
       animation.animatable.target.setAttribute('id', generatedId)
+
       return animation.animatable.target.id
     }
   })
@@ -170,6 +171,7 @@ function getKeyframeTimings (keyframesForTarget, tweenStart, tweenEnd) {
   // add an empty keyframe at the tweenStart/tweenEnd times, if there aren't keyframes there already
   if (!keyframeTimings[tweenStart]) keyframeTimings[tweenStart] = { }
   if (!keyframeTimings[tweenEnd]) keyframeTimings[tweenEnd] = { }
+
   return keyframeTimings
 }
 
@@ -180,12 +182,11 @@ function isTransform (property) {
 
 function addValuesToTransformObject (keyframesForTarget, animatedProperty, tweenStart, tweenEnd, fromValues, toValues) {
   const keyframeValues = { ...keyframesForTarget }
-  // add a 'transform' object to the starting keyframe, if it doesn't exist yet
-  if (!keyframeValues[tweenStart].transform) keyframeValues[tweenStart].transform = { }
+  if (!('transform' in keyframeValues[tweenStart])) keyframeValues[tweenStart].transform = { }
   // add the animated property and its value to the transform object
   keyframeValues[tweenStart].transform[animatedProperty] = fromValues[fromValues.length - 1]
   // do the same for the ending keyframe
-  if (!keyframeValues[tweenEnd].transform) keyframeValues[tweenEnd].transform = { }
+  if (!('transform' in keyframeValues[tweenEnd])) keyframeValues[tweenEnd].transform = { }
   keyframeValues[tweenEnd].transform[animatedProperty] = toValues[toValues.length - 1]
 
   return keyframeValues
@@ -217,6 +218,7 @@ function checkForInvalidEasing (easingFrequencies, id) {
   const easingsUsed = Object.keys(easingFrequencies)
   const checkedForKnownInvalids = checkForKnownInvalids(easingsUsed, id)
   const checkedForUnknownInvalids = checkForUnknownInvalids(checkedForKnownInvalids, id)
+
   return checkedForUnknownInvalids
 }
 
@@ -271,6 +273,7 @@ function calculateMostFrequentEasings (easingsUsed, easingFrequencies, id) {
 
   console.log(`🔍️ most frequent easing: '${[...mostFrequentEasings].join(', ')}'`)
   console.log(`🤖️ choosing '${mostFrequentEasings[0]}' for  #${id}'s animation.`)
+
   return mostFrequentEasings[0]
 }
 
@@ -330,6 +333,7 @@ function addZeroAndHundredPercentStrings (absoluteKeyframe, absoluteKeyframes, p
 
   if (first && percentageKeyframe !== '0%') return '0%, ' + percentageKeyframe
   if (last && percentageKeyframe !== '100%') return percentageKeyframe + ', 100%'
+
   return percentageKeyframe
 }
 
@@ -357,7 +361,6 @@ function listTargetIdsUsingEasing (oneCssEasingPerTarget) {
     const getTargets = (oneCssEasingPerTarget, specificEasing) => Object.keys(oneCssEasingPerTarget).filter(key => oneCssEasingPerTarget[key] === specificEasing)
     targetIdsUsingEasing[easing].push(getTargets(oneCssEasingPerTarget, easing))
   })
-
   return targetIdsUsingEasing
 }
 
@@ -367,7 +370,6 @@ function formatAsTimingFunctionDeclaration (targetIdsUsingEasing) {
     const targetList = targetIdsUsingEasing[easing].join().replace(/,/g, ', #')
     timingFunctionDeclaration.push(`\n#${targetList} {\n animation-timing-function: ${easing};\n}\n`)
   }
-
   return timingFunctionDeclaration.join('')
 }
 
