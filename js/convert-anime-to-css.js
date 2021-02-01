@@ -10,7 +10,7 @@ function getAnimeJsData (timeline) {
   const timelineDuration = timeline.duration
   const keyframeData = {}
   const easings = {}
-  
+
   getTargetIds(timeline).forEach(id => {
     keyframeData[id] = []
     easings[id] = []
@@ -21,16 +21,13 @@ function getAnimeJsData (timeline) {
     anim.animations.forEach(animation => {
       const targetId = animation.animatable.target.id
       const animatedProperty = animation.property
-      const fromValues = []
-      const toValues = []
 
       animation.tweens.forEach(tween => {
         const tweenStart = tween.start + tween.delay + anim.timelineOffset
         const tweenEnd = tween.end + anim.timelineOffset
 
         easings[targetId].push(getEasingName(tween))
-        fromValues.push(getFromAndToValues(tween, animatedProperty).from)
-        toValues.push(getFromAndToValues(tween, animatedProperty).to)
+        const { fromValues, toValues } = getFromAndToValues(tween, animatedProperty)
         keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
 
         keyframeData[targetId] = (isTransform(animatedProperty))
@@ -162,8 +159,8 @@ function getEasingName (tween) {
 function getFromAndToValues (tween, animatedProperty) {
   // anime adds 'px' to strokeDashoffset values for some reason
   return (animatedProperty === 'strokeDashoffset')
-    ? { from: tween.from.numbers[0], to: tween.to.numbers[0] }
-    : { from: tween.from.original, to: tween.to.original }
+    ? { fromValues: [tween.from.numbers[0]], toValues: [tween.to.numbers[0]] }
+    : { fromValues: [tween.from.original], toValues: [tween.to.original] }
 }
 
 function getKeyframeTimings (keyframesForTarget, tweenStart, tweenEnd) {
