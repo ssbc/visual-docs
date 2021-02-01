@@ -1035,7 +1035,7 @@
           x="500" y="50">Whānau member B creates a new whakapapa record</text>
     <text id="text_it-is-backed-up"
           filter="url(#caption-bg)"
-          x="500" y="80">it is backed up to the Pātaka</text>
+          x="500" y="90">it is backed up to the Pātaka</text>
     <text id="text_record-replicated-ac"
           filter="url(#caption-bg)"
           x="500" y="50">The Pātaka replicates the whakapapa record to whānau members A and C</text>
