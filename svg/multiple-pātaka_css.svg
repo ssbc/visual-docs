@@ -1,18 +1,17 @@
-<svg id="multiple-pātaka-aotearoa"
+<svg id="multiple-pātaka"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     viewBox="0 0 1000 1020"
-     style="background-color: hsl(240, 15%, 40%);">
+     viewBox="0 0 1000 1020">
 
   <metadata>
     <rdf:RDF>
        <cc:Work>
           <dc:format>image/svg+xml</dc:format>
-          <dc:type rdf:resource="http://purl.org/dc/dcmitype/MovingImage" />
-          <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+          <dc:type rdf:resource="http://purl.org/dc/dcmitype/MovingImage"/>
+          <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
           <dc:creator>
              <cc:Agent>
                 <dc:title>Sam Muirhead</dc:title>
@@ -30,6 +29,8 @@
        </cc:License>
     </rdf:RDF>
   </metadata>
+
+  <title>Multiple Pātaka</title>
 
   <style>
     /* <![CDATA[ */
@@ -69,590 +70,771 @@
       }
 
       /* animations */
-      #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text, #text_connect-codes-laptop, #defocus-mobile-b, #follow-lines_laptop, #invite-symbol_mobile, #invite-button_mobile, #text_accept-connect-codes-laptop, #follow-line_b-laptop_connected, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #kuia-b, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #koro-copy_a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-b, #koro-copy_c, #horizontal-connection, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #invite_server, #follow-line_laptop-server_connected, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
-        animation-duration:99.6s;
+      #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text_connect-codes-laptop, #follow-lines_laptop, #connect-code_in-transit_laptop-b, #connect-code_in-transit_laptop-a, #connect-code_in-transit_laptop-c, #defocus-mobile-b, #invite-symbol_mobile-a, #invite-button_mobile-a, #invite-symbol_mobile, #invite-button_mobile, #invite-symbol_mobile-c, #invite-button_mobile-c, #text_accept-connect-codes-laptop, #connected-button_mobile, #follow-symbol_mobile, #follow-line_b-laptop_connected, #connected-button_mobile-a, #connected-button_mobile-c, #follow-symbol_mobile-a, #follow-symbol_mobile-c, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #add-button_mobile-b, #kuia-b, #text_it-is-backed-up, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #add-button_mobile-a, #koro_a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-copy_b, #koro-copy_c, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #connect-code_in-transit_laptop-server, #invite-symbol_server, #invite-button_server, #connected-button_server, #follow-symbol_server, #follow-line_laptop-server_connected, #invite_server, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #add-button_mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
+        animation-duration:121.07s;
         animation-iteration-count: infinite;
       }
 
-      #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text, #text_connect-codes-laptop, #defocus-mobile-b, #follow-lines_laptop, #invite-symbol_mobile, #invite-button_mobile, #text_accept-connect-codes-laptop, #follow-line_b-laptop_connected, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #kuia-b, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #koro-copy_a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-b, #koro-copy_c, #horizontal-connection, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #invite_server, #follow-line_laptop-server_connected, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
+      #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text_connect-codes-laptop, #follow-lines_laptop, #connect-code_in-transit_laptop-b, #connect-code_in-transit_laptop-a, #connect-code_in-transit_laptop-c, #defocus-mobile-b, #invite-symbol_mobile-a, #invite-button_mobile-a, #invite-symbol_mobile, #invite-button_mobile, #invite-symbol_mobile-c, #invite-button_mobile-c, #text_accept-connect-codes-laptop, #connected-button_mobile, #follow-symbol_mobile, #follow-line_b-laptop_connected, #connected-button_mobile-a, #connected-button_mobile-c, #follow-symbol_mobile-a, #follow-symbol_mobile-c, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #add-button_mobile-b, #text_it-is-backed-up, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #add-button_mobile-a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-copy_b, #koro-copy_c, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #connect-code_in-transit_laptop-server, #invite-symbol_server, #invite-button_server, #connected-button_server, #follow-symbol_server, #follow-line_laptop-server_connected, #invite_server, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #add-button_mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
        animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+      }
+
+      #kuia-b, #koro_a {
+       animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       #connections { animation-name: connections-anim; }
       @keyframes connections-anim {
-        0%, 1% { opacity: 0; }
-        1.51% { opacity: 1; }
-        99% { opacity: 1; }
+        0% { opacity: 0; }
+        0.41% { opacity: 1; }
+        99.17% { opacity: 1; }
         100% { opacity: 0; }
       }
 
       #mobile-a { animation-name: mobile-a-anim; }
       @keyframes mobile-a-anim {
-        0%, 1% { opacity: 0; }
-        1.51% { opacity: 1; }
-        29.12% { transform: scale(1.5); }
-        29.62% { transform: scale(3); }
-        36.9% { transform: scale(3); }
-        37.4% { transform: scale(1.5); }
-        99% { opacity: 1; }
-        100% { opacity: 0; }
+        0%, 0.83% { opacity: 0; transform: scale(0); }
+        1.24% { opacity: 1; transform: scale(1.5); }
+        33.16% { transform: scale(1.5); }
+        33.58% { transform: scale(3); }
+        43.2% { transform: scale(3); }
+        43.45% { transform: scale(1.5); }
+        99.17% { opacity: 1; }
+        100% { opacity: 0; transform: scale(1.5); }
       }
 
       #mobile-b { animation-name: mobile-b-anim; }
       @keyframes mobile-b-anim {
-        0%, 1% { opacity: 0; }
-        1.51% { opacity: 1; }
-        7.53% { transform: scale(1.5); }
-        8.03% { transform: scale(3); }
-        22.34% { transform: scale(3); }
-        22.59% { transform: scale(1.5); }
-        99% { opacity: 1; }
-        100% { opacity: 0; }
+        0%, 0.95% { opacity: 0; transform: scale(0); }
+        1.36% { opacity: 1; transform: scale(1.5); }
+        9.37% { transform: scale(1.5); }
+        9.79% { transform: scale(3); }
+        27.45% { transform: scale(3); }
+        27.7% { transform: scale(1.5); }
+        99.17% { opacity: 1; }
+        100% { opacity: 0; transform: scale(1.5); }
       }
 
       #mobile-c { animation-name: mobile-c-anim; }
       @keyframes mobile-c-anim {
-        0%, 1% { opacity: 0; }
-        1.51% { opacity: 1; }
-        84.19% { transform: scale(1.5); }
-        84.69% { transform: scale(3); }
-        89.46% { transform: scale(3); }
-        89.96% { transform: scale(1.5); }
-        99% { opacity: 1; }
-        100% { opacity: 0; }
+        0%, 1.07% { opacity: 0; transform: scale(0); }
+        1.49% { opacity: 1; transform: scale(1.5); }
+        84.84% { transform: scale(1.5); }
+        85.26% { transform: scale(3); }
+        91.37% { transform: scale(3); }
+        91.62% { transform: scale(1.5); }
+        99.17% { opacity: 1; }
+        100% { opacity: 0; transform: scale(1.5); }
       }
 
       #pātaka_laptop { animation-name: pātaka_laptop-anim; }
       @keyframes pātaka_laptop-anim {
-        0%, 2.51% { opacity: 0; }
-        3.01% { opacity: 1; }
-        76.41% { opacity: 1; }
-        76.51% { opacity: 0; }
-        76.71% { opacity: 0; }
-        76.96% { opacity: 1; }
-        77.06% { opacity: 1; }
-        77.26% { opacity: 0; }
-        77.36% { opacity: 0; }
-        77.51% { opacity: 1; }
-        77.61% { opacity: 1; }
-        77.71%, 100% { opacity: 0; }
+        0%, 2.31% { opacity: 0; transform: scale(0); }
+        2.73% { opacity: 1; transform: scale(1); }
+        78.44% { opacity: 1; }
+        78.52% { opacity: 0; }
+        78.69% { opacity: 0; }
+        78.9% { opacity: 1; }
+        78.98% { opacity: 1; }
+        79.14% { opacity: 0; }
+        79.23% { opacity: 0; }
+        79.35% { opacity: 1; }
+        79.43% { opacity: 1; }
+        79.52%, 100% { opacity: 0; transform: scale(1); }
       }
 
       #device_laptop { animation-name: device_laptop-anim; }
       @keyframes device_laptop-anim {
-        0%, 4.02% { opacity: 1; }
-        4.52%, 100% { opacity: 0; }
-      }
-      #text { animation-name: text-anim; }
-      @keyframes text-anim {
-        0%, 4.52% { opacity: 0; }
-        6.53% { opacity: 1; }
-        83.43% { opacity: 1; }
-        83.94%, 100% { opacity: 0; }
+        0%, 5.2% { opacity: 1; }
+        5.62%, 100% { opacity: 0; }
       }
 
       #text_connect-codes-laptop { animation-name: text_connect-codes-laptop-anim; }
       @keyframes text_connect-codes-laptop-anim {
-        0%, 4.52% { opacity: 0; }
-        6.53% { opacity: 1; }
-        9.54% { opacity: 1; }
-        10.04%, 100% { opacity: 0; }
-      }
-
-      #defocus-mobile-b { animation-name: defocus-mobile-b-anim; }
-      @keyframes defocus-mobile-b-anim {
-        0%, 7.43% { opacity: 0.3; }
-        8.03% { opacity: 0; }
-        22.24% { opacity: 0; }
-        22.59%, 100% { opacity: 0.3; }
+        0%, 5.62% { opacity: 0; }
+        7.27% { opacity: 1; }
+        9.79% { opacity: 1; }
+        10.2%, 100% { opacity: 0; }
       }
 
       #follow-lines_laptop { animation-name: follow-lines_laptop-anim; }
       @keyframes follow-lines_laptop-anim {
-        0%, 9.04% { opacity: 0; }
-        9.54% { opacity: 1; }
-        14.56% { opacity: 1; }
-        15.06%, 100% { opacity: 0; }
+        0%, 8.09% { opacity: 0; }
+        8.51% { opacity: 1; }
+        16.18% { opacity: 1; }
+        16.59%, 100% { opacity: 0; }
+      }
+
+      #connect-code_in-transit_laptop-b { animation-name: connect-code_in-transit_laptop-b-anim; }
+      @keyframes connect-code_in-transit_laptop-b-anim {
+        0%, 8.48% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        8.49% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        9.32% { opacity: 1; transform: translateX(570px) translateY(430px); }
+        9.33%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
+      }
+
+      #connect-code_in-transit_laptop-a { animation-name: connect-code_in-transit_laptop-a-anim; }
+      @keyframes connect-code_in-transit_laptop-a-anim {
+        0%, 8.65% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        8.66% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        9.57% { opacity: 1; transform: translateX(380px) translateY(190px); }
+        9.58%, 100% { opacity: 0; transform: translateX(380px) translateY(190px); }
+      }
+
+      #connect-code_in-transit_laptop-c { animation-name: connect-code_in-transit_laptop-c-anim; }
+      @keyframes connect-code_in-transit_laptop-c-anim {
+        0%, 8.77% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        8.78% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        9.61% { opacity: 1; transform: translateX(690px) translateY(610px); }
+        9.62%, 100% { opacity: 0; transform: translateX(690px) translateY(610px); }
+      }
+
+      #defocus-mobile-b { animation-name: defocus-mobile-b-anim; }
+      @keyframes defocus-mobile-b-anim {
+        0%, 9.29% { opacity: 0.3; }
+        9.79% { opacity: 0; }
+        27.41% { opacity: 0; }
+        27.74%, 100% { opacity: 0.3; }
+      }
+
+      #invite-symbol_mobile-a { animation-name: invite-symbol_mobile-a-anim; }
+      @keyframes invite-symbol_mobile-a-anim {
+        0%, 8.84% { opacity: 0; transform: scale(0); }
+        9.25% { opacity: 1; transform: scale(1); }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1); }
+      }
+
+      #invite-button_mobile-a { animation-name: invite-button_mobile-a-anim; }
+      @keyframes invite-button_mobile-a-anim {
+        0%, 8.84% { opacity: 0; transform: scale(0); }
+        9.25% { opacity: 1; transform: scale(1); }
+        15.54% { opacity: 0.7; }
+        15.56%, 100% { opacity: 0; transform: scale(1); }
       }
 
       #invite-symbol_mobile { animation-name: invite-symbol_mobile-anim; }
       @keyframes invite-symbol_mobile-anim {
-        0%, 9.04% { opacity: 0; }
-        9.54% { opacity: 1; }
-        13.05% { opacity: 1; }
-        13.55%, 100% { opacity: 0; }
+        0%, 8.84% { opacity: 0; transform: scale(0); }
+        9.25% { opacity: 1; transform: scale(1); }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1); }
       }
 
       #invite-button_mobile { animation-name: invite-button_mobile-anim; }
       @keyframes invite-button_mobile-anim {
-        0%, 9.04% { opacity: 0; }
-        9.54% { opacity: 1; }
-        13.05% { opacity: 1; }
-        13.55%, 100% { opacity: 0; }
+        0%, 8.84% { opacity: 0; transform: scale(0); }
+        9.25% { opacity: 1; transform: scale(1); }
+        12.68% { transform: scale(1); opacity: 1; }
+        12.89% { transform: scale(1.05); opacity: 1; }
+        13.5% { transform: scale(1.05); opacity: 1; }
+        13.79% { transform: scale(0.95); opacity: 0.7; }
+        14% { transform: scale(0.95); opacity: 0.7; }
+        14.01%, 100% { transform: scale(0.95); opacity: 0; }
+      }
+
+      #invite-symbol_mobile-c { animation-name: invite-symbol_mobile-c-anim; }
+      @keyframes invite-symbol_mobile-c-anim {
+        0%, 8.84% { opacity: 0; transform: scale(0); }
+        9.25% { opacity: 1; transform: scale(1); }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1); }
+      }
+
+      #invite-button_mobile-c { animation-name: invite-button_mobile-c-anim; }
+      @keyframes invite-button_mobile-c-anim {
+        0%, 8.84% { opacity: 0; transform: scale(0); }
+        9.25% { opacity: 1; transform: scale(1); }
+        16.37% { opacity: 0.7; }
+        16.38%, 100% { opacity: 0; transform: scale(1); }
       }
 
       #text_accept-connect-codes-laptop { animation-name: text_accept-connect-codes-laptop-anim; }
       @keyframes text_accept-connect-codes-laptop-anim {
-        0%, 10.04% { opacity: 0; }
-        12.05% { opacity: 1; }
-        15.06% { opacity: 1; }
-        15.56%, 100% { opacity: 0; }
+        0%, 10.2% { opacity: 0; }
+        11.85% { opacity: 1; }
+        17.83% { opacity: 1; }
+        18.24%, 100% { opacity: 0; }
+      }
+
+      #connected-button_mobile { animation-name: connected-button_mobile-anim; }
+      @keyframes connected-button_mobile-anim {
+        0%, 14% { transform: scale(0.95); opacity: 0; }
+        14.01% { transform: scale(0.95); opacity: 1; }
+        14.3% { transform: scale(1); opacity: 1; }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1); }
+      }
+
+      #follow-symbol_mobile { animation-name: follow-symbol_mobile-anim; }
+      @keyframes follow-symbol_mobile-anim {
+        0%, 14.01% { opacity: 0; transform: scale(0); }
+        14.3% { opacity: 1; transform: scale(1.3); }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1.3); }
       }
 
       #follow-line_b-laptop_connected { animation-name: follow-line_b-laptop_connected-anim; }
       @keyframes follow-line_b-laptop_connected-anim {
-        0%, 13.05% { opacity: 0; }
-        13.55% { opacity: 1; }
-        21.08% { stroke-dasharray: 8,12px; }
-        21.34% { stroke-dasharray: 0,0px; }
-        22.34% { stroke-dasharray: 0,0px; }
-        22.59% { stroke-dasharray: 8,12px; }
-        43.42% { stroke-dasharray: 8,12px; }
-        43.67% { stroke-dasharray: 0,0px; }
-        45.18% { stroke-dasharray: 0,0px; }
-        45.43% { stroke-dasharray: 8,12px; }
-        78.11% { opacity: 1; }
-        78.61%, 100% { opacity: 0; }
+        0%, 14.1% { opacity: 0; }
+        14.51% { opacity: 1; }
+        26.42% { stroke-dasharray: 8,12px; }
+        26.71% { stroke-dasharray: 0,0px; }
+        27.53% { stroke-dasharray: 0,0px; }
+        27.74% { stroke-dasharray: 8,12px; }
+        48.46% { stroke-dasharray: 8,12px; }
+        48.75% { stroke-dasharray: 0,0px; }
+        49.99% { stroke-dasharray: 0,0px; }
+        50.19% { stroke-dasharray: 8,12px; }
+        79.85% { opacity: 1; }
+        80.26%, 100% { opacity: 0; }
+      }
+
+      #connected-button_mobile-a { animation-name: connected-button_mobile-a-anim; }
+      @keyframes connected-button_mobile-a-anim {
+        0%, 15.54% { opacity: 0; }
+        15.56% { opacity: 1; }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; }
+      }
+
+      #connected-button_mobile-c { animation-name: connected-button_mobile-c-anim; }
+      @keyframes connected-button_mobile-c-anim {
+        0%, 16.37% { opacity: 0; }
+        16.38% { opacity: 1; }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; }
+      }
+
+      #follow-symbol_mobile-a { animation-name: follow-symbol_mobile-a-anim; }
+      @keyframes follow-symbol_mobile-a-anim {
+        0%, 15.27% { opacity: 0; transform: scale(0); }
+        15.56% { opacity: 1; transform: scale(1.3); }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1.3); }
+      }
+
+      #follow-symbol_mobile-c { animation-name: follow-symbol_mobile-c-anim; }
+      @keyframes follow-symbol_mobile-c-anim {
+        0%, 16.09% { opacity: 0; transform: scale(0); }
+        16.38% { opacity: 1; transform: scale(1.3); }
+        17.41% { opacity: 1; }
+        17.83%, 100% { opacity: 0; transform: scale(1.3); }
       }
 
       #follow-line_a-laptop_connected { animation-name: follow-line_a-laptop_connected-anim; }
       @keyframes follow-line_a-laptop_connected-anim {
-        0%, 14.56% { opacity: 0; }
-        15.06% { opacity: 1; }
-        26.86% { stroke-dasharray: 8,12px; }
-        27.11% { stroke-dasharray: 0,0px; }
-        28.61% { stroke-dasharray: 0,0px; }
-        28.87% { stroke-dasharray: 8,12px; }
-        35.64% { stroke-dasharray: 8,12px; }
-        35.89% { stroke-dasharray: 0,0px; }
-        36.9% { stroke-dasharray: 0,0px; }
-        37.15% { stroke-dasharray: 8,12px; }
-        78.26% { opacity: 1; }
-        78.77%, 100% { opacity: 0; }
+        0%, 15.35% { opacity: 0; }
+        15.76% { opacity: 1; }
+        31.22% { stroke-dasharray: 8,12px; }
+        31.51% { stroke-dasharray: 0,0px; }
+        32.75% { stroke-dasharray: 0,0px; }
+        32.96% { stroke-dasharray: 8,12px; }
+        42.17% { stroke-dasharray: 8,12px; }
+        42.46% { stroke-dasharray: 0,0px; }
+        43.28% { stroke-dasharray: 0,0px; }
+        43.49% { stroke-dasharray: 8,12px; }
+        79.97% { opacity: 1; }
+        80.38%, 100% { opacity: 0; }
       }
 
       #follow-line_c-laptop_connected { animation-name: follow-line_c-laptop_connected-anim; }
       @keyframes follow-line_c-laptop_connected-anim {
-        0%, 14.56% { opacity: 0; }
-        15.06% { opacity: 1; }
-        26.86% { stroke-dasharray: 8,12px; }
-        27.11% { stroke-dasharray: 0,0px; }
-        28.61% { stroke-dasharray: 0,0px; }
-        28.87% { stroke-dasharray: 8,12px; }
-        43.42% { stroke-dasharray: 8,12px; }
-        43.67% { stroke-dasharray: 0,0px; }
-        45.18% { stroke-dasharray: 0,0px; }
-        45.43% { stroke-dasharray: 8,12px; }
-        78.41% { opacity: 1; }
-        78.92%, 100% { opacity: 0; }
+        0%, 16.18% { opacity: 0; }
+        16.59% { opacity: 1; }
+        31.22% { stroke-dasharray: 8,12px; }
+        31.51% { stroke-dasharray: 0,0px; }
+        32.75% { stroke-dasharray: 0,0px; }
+        32.96% { stroke-dasharray: 8,12px; }
+        48.46% { stroke-dasharray: 8,12px; }
+        48.75% { stroke-dasharray: 0,0px; }
+        49.99% { stroke-dasharray: 0,0px; }
+        50.19% { stroke-dasharray: 8,12px; }
+        80.09% { opacity: 1; }
+        80.51%, 100% { opacity: 0; }
       }
 
       #text_user-b-creates-record { animation-name: text_user-b-creates-record-anim; }
       @keyframes text_user-b-creates-record-anim {
-        0%, 15.56% { opacity: 0; }
-        17.57% { opacity: 1; }
-        23.34% { opacity: 1; }
-        23.85%, 100% { opacity: 0; }
+        0%, 18.24% { opacity: 0; }
+        19.89% { opacity: 1; }
+        28.32% { opacity: 1; }
+        28.73%, 100% { opacity: 0; }
+      }
+
+      #add-button_mobile-b { animation-name: add-button_mobile-b-anim; }
+      @keyframes add-button_mobile-b-anim {
+        0%, 20.72% { transform: scale(0); opacity: 0; }
+        21.34% { transform: scale(1); opacity: 1; }
+        22.16% { transform: scale(1.05); opacity: 1; }
+        22.66% { transform: scale(0.95); opacity: 0.7; }
+        22.95% { transform: scale(1); opacity: 0.7; }
+        23.16%, 100% { transform: scale(1); opacity: 0; }
       }
 
       #kuia-b { animation-name: kuia-b-anim; }
       @keyframes kuia-b-anim {
-        0%, 18.57% { opacity: 0; }
-        19.08%, 100% { opacity: 1; }
+        0%, 23.07% { transform: scale(0); opacity: 0; }
+        23.28%, 100% { transform: scale(1); opacity: 1; }
+      }
+
+      #text_it-is-backed-up { animation-name: text_it-is-backed-up-anim; }
+      @keyframes text_it-is-backed-up-anim {
+        0%, 23.28% { opacity: 0; }
+        24.93% { opacity: 1; }
+        28.32% { opacity: 1; }
+        28.73% { opacity: 0; }
+        39.03% { opacity: 0; }
+        40.68% { opacity: 1; }
+        44.31% { opacity: 1; }
+        45.97%, 100% { opacity: 0; }
       }
 
       #kuia-b_copy { animation-name: kuia-b_copy-anim; }
       @keyframes kuia-b_copy-anim {
-        0%, 20.08% { opacity: 0; transform: scale(1); }
-        20.33% { opacity: 1; transform: scale(1); }
-        20.83% { opacity: 1; transform: scale(1); }
-        21.08%, 100% { opacity: 1; transform: scale(0); }
+        0%, 25.76% { opacity: 0; transform: scale(1); }
+        25.96% { opacity: 1; transform: scale(1); }
+        26.38% { opacity: 1; transform: scale(1); }
+        26.58%, 100% { opacity: 1; transform: scale(0); }
       }
 
       #file_in-transit_b-laptop { animation-name: file_in-transit_b-laptop-anim; }
       @keyframes file_in-transit_b-laptop-anim {
-        0%, 21.3% { opacity: 0; transform: translateX(570px) translateY(430px); }
-        21.32% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        22.32% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        22.34% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        43.64% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        43.66% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        44.66% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        44.68%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
+        0%, 26.68% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        26.69% { opacity: 1; transform: translateX(570px) translateY(430px); }
+        27.52% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        27.53% { opacity: 0; transform: translateX(350px) translateY(630px); }
+        48.72% { opacity: 0; transform: translateX(350px) translateY(630px); }
+        48.73% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        49.56% { opacity: 1; transform: translateX(570px) translateY(430px); }
+        49.57%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
       }
 
       #storage_laptop { animation-name: storage_laptop-anim; }
       @keyframes storage_laptop-anim {
-        0%, 22.09% { opacity: 0; }
-        22.59% { opacity: 1; }
-        75.4% { opacity: 1; }
-        75.9%, 100% { opacity: 0; }
+        0%, 27.33% { transform: scale(0); opacity: 0; }
+        27.74% { transform: scale(1); opacity: 1; }
+        77.62% { opacity: 1; }
+        78.03%, 100% { opacity: 0; transform: scale(1); }
       }
 
       #file_laptop_b { animation-name: file_laptop_b-anim; }
       @keyframes file_laptop_b-anim {
-        0%, 22.84% { transform: scale(0); }
-        23.34%, 100% { transform: scale(1); }
+        0%, 27.9% { transform: scale(0); }
+        28.32%, 100% { transform: scale(1); }
       }
 
       #text_record-replicated-ac { animation-name: text_record-replicated-ac-anim; }
       @keyframes text_record-replicated-ac-anim {
-        0%, 23.85% { opacity: 0; }
-        25.85% { opacity: 1; }
-        29.62% { opacity: 1; }
-        30.12%, 100% { opacity: 0; }
+        0%, 28.73% { opacity: 0; }
+        30.38% { opacity: 1; }
+        33.58% { opacity: 1; }
+        33.99%, 100% { opacity: 0; }
       }
 
       #file_laptop_b-copy { animation-name: file_laptop_b-copy-anim; }
       @keyframes file_laptop_b-copy-anim {
-        0%, 26.36% { opacity: 0; transform: scale(1); }
-        26.37% { opacity: 1; transform: scale(1); }
-        26.86% { opacity: 1; transform: scale(0); }
-        26.88% { opacity: 0; transform: scale(0); }
-        64.49% { opacity: 0; transform: scale(1); }
-        64.51% { opacity: 1; transform: scale(1); }
-        65.01%, 100% { transform: scale(0); }
+        0%, 30.8% { opacity: 0; transform: scale(1); }
+        30.81% { opacity: 1; transform: scale(1); }
+        31.21% { opacity: 1; transform: scale(0); }
+        31.22% { opacity: 0; transform: scale(0); }
+        68.72% { opacity: 0; transform: scale(0); }
+        68.74% { opacity: 1; transform: scale(1); }
+        69.14% { opacity: 1; transform: scale(0); }
+        69.15%, 100% { opacity: 0; transform: scale(0); }
       }
 
       #file_in-transit_a-laptop { animation-name: file_in-transit_a-laptop-anim; }
       @keyframes file_in-transit_a-laptop-anim {
-        0%, 27.07% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        27.09% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        28.1% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        28.11% { opacity: 0; transform: translateX(380px) translateY(190px); }
-        35.86% { opacity: 0; transform: translateX(380px) translateY(190px); }
-        35.88% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        36.88% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        36.9%, 100% { opacity: 0; transform: translateX(350px) translateY(630px); }
+        0%, 31.48% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        31.5% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        32.32% { opacity: 1; transform: translateX(380px) translateY(190px); }
+        32.34% { opacity: 0; transform: translateX(380px) translateY(190px); }
+        42.43% { opacity: 0; transform: translateX(380px) translateY(190px); }
+        42.44% { opacity: 1; transform: translateX(380px) translateY(190px); }
+        43.27% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        43.28%, 100% { opacity: 0; transform: translateX(350px) translateY(630px); }
       }
 
       #file_in-transit_c-laptop { animation-name: file_in-transit_c-laptop-anim; }
       @keyframes file_in-transit_c-laptop-anim {
-        0%, 27.07% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        27.09% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        28.1% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        28.11% { opacity: 0; transform: translateX(690px) translateY(610px); }
-        43.64% { opacity: 0; transform: translateX(690px) translateY(610px); }
-        43.66% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        44.66% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        44.68%, 100% { opacity: 0; transform: translateX(690px) translateY(610px); }
+        0%, 31.48% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        31.5% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        32.32% { opacity: 1; transform: translateX(690px) translateY(610px); }
+        32.34% { opacity: 0; transform: translateX(690px) translateY(610px); }
+        48.72% { opacity: 0; transform: translateX(690px) translateY(610px); }
+        48.73% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        49.56% { opacity: 1; transform: translateX(690px) translateY(610px); }
+        49.57%, 100% { opacity: 0; transform: translateX(690px) translateY(610px); }
       }
 
       #kuia-copy_a { animation-name: kuia-copy_a-anim; }
       @keyframes kuia-copy_a-anim {
-        0%, 28.11% { opacity: 0; }
-        28.61%, 100% { opacity: 1; }
+        0%, 32.34% { opacity: 0; }
+        32.75%, 100% { opacity: 1; }
       }
 
       #kuia-copy_c { animation-name: kuia-copy_c-anim; }
       @keyframes kuia-copy_c-anim {
-        0%, 28.11% { opacity: 0; }
-        28.61%, 100% { opacity: 1; }
+        0%, 32.34% { opacity: 0; }
+        32.75%, 100% { opacity: 1; }
       }
 
       #defocus-mobile-a { animation-name: defocus-mobile-a-anim; }
       @keyframes defocus-mobile-a-anim {
-        0%, 29.27% { opacity: 0.3; }
-        29.62% { opacity: 0; }
-        37.05% { opacity: 0; }
-        37.4%, 100% { opacity: 0.3; }
+        0%, 33.29% { opacity: 0.3; }
+        33.58% { opacity: 0; }
+        43.2% { opacity: 0; }
+        43.49%, 100% { opacity: 0.3; }
       }
 
       #text_user-a-creates-record { animation-name: text_user-a-creates-record-anim; }
       @keyframes text_user-a-creates-record-anim {
-        0%, 30.12% { opacity: 0; }
-        32.13% { opacity: 1; }
-        38.4% { opacity: 1; }
-        40.41%, 100% { opacity: 0; }
+        0%, 33.99% { opacity: 0; }
+        35.64% { opacity: 1; }
+        44.31% { opacity: 1; }
+        45.97%, 100% { opacity: 0; }
       }
 
-      #koro-copy_a { animation-name: koro-copy_a-anim; }
-      @keyframes koro-copy_a-anim {
-        0%, 33.13% { opacity: 0; }
-        33.63%, 100% { opacity: 1; }
+      #add-button_mobile-a { animation-name: add-button_mobile-a-anim; }
+      @keyframes add-button_mobile-a-anim {
+        0%, 36.47% { transform: scale(0); opacity: 0; }
+        37.09% { transform: scale(0.5); opacity: 1; }
+        37.91% { transform: scale(0.55); opacity: 1; }
+        38.41% { transform: scale(0.45); opacity: 0.7; }
+        38.7% { transform: scale(0.5); opacity: 0.7; }
+        38.9%, 100% { transform: scale(0.5); opacity: 0; }
+      }
+
+      #koro_a { animation-name: koro_a-anim; }
+      @keyframes koro_a-anim {
+        0%, 38.82% { transform: scale(0); opacity: 0; }
+        39.03%, 100% { transform: scale(0.5); opacity: 1; }
       }
 
       #koro_copy { animation-name: koro_copy-anim; }
       @keyframes koro_copy-anim {
-        0%, 34.64% { opacity: 0; transform: scale(1); }
-        34.89% { opacity: 1; transform: scale(1); }
-        35.39% { opacity: 1; transform: scale(1); }
-        35.64%, 100% { opacity: 1; transform: scale(0); }
+        0%, 41.51% { opacity: 0; transform: scale(1); }
+        41.71% { opacity: 1; transform: scale(1); }
+        42.13% { opacity: 1; transform: scale(0.5); }
+        42.33%, 100% { opacity: 1; transform: scale(0); }
       }
 
       #file_laptop_a { animation-name: file_laptop_a-anim; }
       @keyframes file_laptop_a-anim {
-        0%, 37.9% { transform: scale(0); }
-        38.4%, 100% { transform: scale(1); }
+        0%, 43.9% { transform: scale(0); }
+        44.31%, 100% { transform: scale(1); }
       }
 
       #text_record-replicated-bc { animation-name: text_record-replicated-bc-anim; }
       @keyframes text_record-replicated-bc-anim {
-        0%, 40.41% { opacity: 0; }
-        42.42% { opacity: 1; }
-        45.43% { opacity: 1; }
-        45.93%, 100% { opacity: 0; }
+        0%, 45.97% { opacity: 0; }
+        47.62% { opacity: 1; }
+        50.19% { opacity: 1; }
+        50.61%, 100% { opacity: 0; }
       }
 
       #file_laptop_a-copy { animation-name: file_laptop_a-copy-anim; }
       @keyframes file_laptop_a-copy-anim {
-        0%, 42.92% { opacity: 0; transform: scale(1); }
-        42.94% { opacity: 1; transform: scale(1); }
-        43.42% { opacity: 1; transform: scale(0); }
-        43.44% { opacity: 0; transform: scale(0); }
-        64.49% { opacity: 0; transform: scale(1); }
-        64.51% { opacity: 1; transform: scale(1); }
-        65.01%, 100% { transform: scale(0); }
+        0%, 48.03% { opacity: 0; transform: scale(1); }
+        48.05% { opacity: 1; transform: scale(1); }
+        48.44% { opacity: 1; transform: scale(0); }
+        48.46% { opacity: 0; transform: scale(0); }
+        68.76% { opacity: 0; transform: scale(0); }
+        68.78% { opacity: 1; transform: scale(1); }
+        69.18% { opacity: 1; transform: scale(0); }
+        69.19%, 100% { opacity: 0; transform: scale(0); }
       }
 
-      #koro-b { animation-name: koro-b-anim; }
-      @keyframes koro-b-anim {
-        0%, 44.68% { opacity: 0; }
-        45.18%, 100% { opacity: 1; }
+      #koro-copy_b { animation-name: koro-copy_b-anim; }
+      @keyframes koro-copy_b-anim {
+        0%, 49.57% { opacity: 0; }
+        49.99%, 100% { opacity: 1; }
       }
 
       #koro-copy_c { animation-name: koro-copy_c-anim; }
       @keyframes koro-copy_c-anim {
-        0%, 44.68% { opacity: 0; }
-        45.18%, 100% { opacity: 1; }
-      }
-
-      #horizontal-connection { animation-name: horizontal-connection-anim; }
-      @keyframes horizontal-connection-anim {
-        0%, 45.18% { opacity: 0; }
-        45.43%, 100% { opacity: 1; }
+        0%, 49.57% { opacity: 0; }
+        49.99%, 100% { opacity: 1; }
       }
 
       #text_new-pātaka-set-up { animation-name: text_new-pātaka-set-up-anim; }
       @keyframes text_new-pātaka-set-up-anim {
-        0%, 45.93% { opacity: 0; }
-        47.94% { opacity: 1; }
-        50.95% { opacity: 1; }
-        51.46%, 100% { opacity: 0; }
+        0%, 50.61% { opacity: 0; }
+        52.26% { opacity: 1; }
+        54.74% { opacity: 1; }
+        55.15%, 100% { opacity: 0; }
       }
 
       #pātaka-server { animation-name: pātaka-server-anim; }
       @keyframes pātaka-server-anim {
-        0%, 48.95% { opacity: 0; }
-        49.45% { opacity: 1; }
-        99% { opacity: 1; }
+        0%, 53.08% { opacity: 0; }
+        53.5% { opacity: 1; }
+        99.17% { opacity: 1; }
         100% { opacity: 0; }
       }
 
       #pātaka-symbol_server { animation-name: pātaka-symbol_server-anim; }
       @keyframes pātaka-symbol_server-anim {
-        0%, 50.45% { opacity: 1; }
-        50.95% { opacity: 0; }
-        58.99% { opacity: 0; }
-        59.49%, 100% { opacity: 1; }
+        0%, 54.32% { opacity: 1; }
+        54.74% { opacity: 0; }
+        64.17% { opacity: 0; }
+        64.58%, 100% { opacity: 1; }
       }
 
       #text_new-pātaka-connect-code { animation-name: text_new-pātaka-connect-code-anim; }
       @keyframes text_new-pātaka-connect-code-anim {
-        0%, 51.46% { opacity: 0; }
-        53.46% { opacity: 1; }
-        60.99% { opacity: 1; }
-        61.5%, 100% { opacity: 0; }
+        0%, 55.15% { opacity: 0; }
+        56.8% { opacity: 1; }
+        65.82% { opacity: 1; }
+        66.23%, 100% { opacity: 0; }
       }
 
       #follow-line_laptop-server { animation-name: follow-line_laptop-server-anim; }
       @keyframes follow-line_laptop-server-anim {
-        0%, 54.47% { opacity: 0; }
-        54.97% { opacity: 1; }
-        57.48% { opacity: 1; }
-        57.98%, 100% { opacity: 0; }
+        0%, 57.63% { opacity: 0; }
+        58.04% { opacity: 1; }
+        62.93% { opacity: 1; }
+        63.34%, 100% { opacity: 0; }
       }
 
-      #invite_server { animation-name: invite_server-anim; }
-      @keyframes invite_server-anim {
-        0%, 54.47% { opacity: 0; }
-        54.97% { opacity: 1; }
-        57.48% { opacity: 1; }
-        57.98%, 100% { opacity: 0; }
+      #connect-code_in-transit_laptop-server { animation-name: connect-code_in-transit_laptop-server-anim; }
+      @keyframes connect-code_in-transit_laptop-server-anim {
+        0%, 58.01% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        58.03% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        58.85% { opacity: 1; transform: translateX(430px) translateY(900px); }
+        58.87%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
+      }
+
+      #invite-symbol_server { animation-name: invite-symbol_server-anim; }
+      @keyframes invite-symbol_server-anim {
+        0%, 58.82% { opacity: 0; transform: scale(0); }
+        59.24%, 100% { opacity: 1; transform: scale(1); }
+      }
+
+      #invite-button_server { animation-name: invite-button_server-anim; }
+      @keyframes invite-button_server-anim {
+        0%, 58.82% { opacity: 0; transform: scale(0); }
+        60.06% { opacity: 1; transform: scale(1.6); }
+        60.27% { opacity: 1; transform: scale(1.65); }
+        60.89% { opacity: 1; transform: scale(1.65); }
+        61.18% { opacity: 0.7; transform: scale(1.55); }
+        61.38% { opacity: 0.7; transform: scale(1.55); }
+        61.4%, 100% { opacity: 0; transform: scale(1.55); }
+      }
+
+      #connected-button_server { animation-name: connected-button_server-anim; }
+      @keyframes connected-button_server-anim {
+        0%, 61.38% { transform: scale(1.55); opacity: 0; }
+        61.4% { transform: scale(1.55); opacity: 1; }
+        61.69%, 100% { transform: scale(1.6); opacity: 1; }
+      }
+
+      #follow-symbol_server { animation-name: follow-symbol_server-anim; }
+      @keyframes follow-symbol_server-anim {
+        0%, 61.4% { opacity: 0; transform: scale(0); }
+        61.69%, 100% { opacity: 1; transform: scale(1.3); }
       }
 
       #follow-line_laptop-server_connected { animation-name: follow-line_laptop-server_connected-anim; }
       @keyframes follow-line_laptop-server_connected-anim {
-        0%, 55.97% { opacity: 0; }
-        56.48% { opacity: 1; }
-        65.01% { stroke-dasharray: 8,12px; }
-        65.51% { stroke-dasharray: 0,0px; }
-        67.42% { stroke-dasharray: 0,0px; }
-        67.92% { stroke-dasharray: 8,12px; }
-        77.96% { opacity: 1; }
-        78.46%, 100% { opacity: 0; }
+        0%, 61.69% { opacity: 0; }
+        62.1% { opacity: 1; }
+        69.19% { stroke-dasharray: 8,12px; }
+        69.48% { stroke-dasharray: 0,0px; }
+        71.05% { stroke-dasharray: 0,0px; }
+        71.46% { stroke-dasharray: 8,12px; }
+        79.72% { opacity: 1; }
+        80.13%, 100% { opacity: 0; }
+      }
+
+      #invite_server { animation-name: invite_server-anim; }
+      @keyframes invite_server-anim {
+        0%, 62.93% { opacity: 1; }
+        63.34%, 100% { opacity: 0; }
       }
 
       #monitor-mask { animation-name: monitor-mask-anim; }
       @keyframes monitor-mask-anim {
-        0%, 60.49% { opacity: 1; }
-        60.99%, 100% { opacity: 0; }
+        0%, 65.4% { opacity: 1; }
+        65.82%, 100% { opacity: 0; }
       }
 
       #device_server { animation-name: device_server-anim; }
       @keyframes device_server-anim {
-        0%, 60.49% { opacity: 1; }
-        60.99%, 100% { opacity: 0; }
+        0%, 65.4% { opacity: 1; }
+        65.82%, 100% { opacity: 0; }
       }
 
       #text_laptop-content-replicated-to-server { animation-name: text_laptop-content-replicated-to-server-anim; }
       @keyframes text_laptop-content-replicated-to-server-anim {
-        0%, 61.5% { opacity: 0; }
-        63.5% { opacity: 1; }
-        67.92% { opacity: 1; }
-        68.42%, 100% { opacity: 0; }
+        0%, 66.23% { opacity: 0; }
+        67.88% { opacity: 1; }
+        71.46% { opacity: 1; }
+        71.88%, 100% { opacity: 0; }
       }
 
       #file_in-transit_laptop-server { animation-name: file_in-transit_laptop-server-anim; }
       @keyframes file_in-transit_laptop-server-anim {
-        0%, 65.48% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        65.5% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        66.5% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        66.52%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
+        0%, 69.45% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        69.47% { opacity: 1; transform: translateX(350px) translateY(630px); }
+        70.29% { opacity: 1; transform: translateX(430px) translateY(900px); }
+        70.31%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
       }
 
       #storage_server { animation-name: storage_server-anim; }
       @keyframes storage_server-anim {
-        0%, 66.27% { opacity: 0; }
-        66.77%, 100% { opacity: 1; }
+        0%, 70.1% { transform: scale(0); opacity: 0; }
+        70.51%, 100% { transform: scale(1); opacity: 1; }
       }
 
       #file_server_b { animation-name: file_server_b-anim; }
       @keyframes file_server_b-anim {
-        0%, 66.77% { transform: scale(0); }
-        67.27%, 100% { transform: scale(1); }
+        0%, 70.51% { transform: scale(0); }
+        70.93%, 100% { transform: scale(1); }
       }
 
       #file_server_a { animation-name: file_server_a-anim; }
       @keyframes file_server_a-anim {
-        0%, 66.92% { transform: scale(0); }
-        67.42%, 100% { transform: scale(1); }
+        0%, 70.64% { transform: scale(0); }
+        71.05%, 100% { transform: scale(1); }
       }
 
       #text_server-connected-to-abc { animation-name: text_server-connected-to-abc-anim; }
       @keyframes text_server-connected-to-abc-anim {
-        0%, 68.42% { opacity: 0; }
-        70.43% { opacity: 1; }
-        71.89% { opacity: 1; }
-        72.39%, 100% { opacity: 0; }
+        0%, 71.88% { opacity: 0; }
+        73.53% { opacity: 1; }
+        74.72% { opacity: 1; }
+        75.14%, 100% { opacity: 0; }
       }
 
       #follow-line_b-server_connected { animation-name: follow-line_b-server_connected-anim; }
       @keyframes follow-line_b-server_connected-anim {
-        0%, 70.68% { opacity: 0; }
-        71.18% { opacity: 1; }
-        91.97% { stroke-dasharray: 8,12px; }
-        92.22% { stroke-dasharray: 0,0px; }
-        93.72% { stroke-dasharray: 0,0px; }
-        93.98%, 100% { stroke-dasharray: 8,12px; }
+        0%, 73.73% { opacity: 0; }
+        74.15% { opacity: 1; }
+        93.31% { stroke-dasharray: 8,12px; }
+        93.6% { stroke-dasharray: 0,0px; }
+        94.84% { stroke-dasharray: 0,0px; }
+        95.04%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
       }
 
       #follow-line_a-server_connected { animation-name: follow-line_a-server_connected-anim; }
       @keyframes follow-line_a-server_connected-anim {
-        0%, 71.03% { opacity: 0; }
-        71.54% { opacity: 1; }
-        91.97% { stroke-dasharray: 8,12px; }
-        92.22% { stroke-dasharray: 0,0px; }
-        93.72% { stroke-dasharray: 0,0px; }
-        93.98%, 100% { stroke-dasharray: 8,12px; }
+        0%, 74.02% { opacity: 0; }
+        74.44% { opacity: 1; }
+        93.31% { stroke-dasharray: 8,12px; }
+        93.6% { stroke-dasharray: 0,0px; }
+        94.84% { stroke-dasharray: 0,0px; }
+        95.04%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
       }
 
       #follow-line_c-server_connected { animation-name: follow-line_c-server_connected-anim; }
       @keyframes follow-line_c-server_connected-anim {
-        0%, 71.39% { opacity: 0; }
-        71.89% { opacity: 1; }
-        88.2% { stroke-dasharray: 8,12px; }
-        88.45% { stroke-dasharray: 0,0px; }
-        89.46% { stroke-dasharray: 0,0px; }
-        89.71%, 100% { stroke-dasharray: 8,12px; }
+        0%, 74.31% { opacity: 0; }
+        74.72% { opacity: 1; }
+        90.34% { stroke-dasharray: 8,12px; }
+        90.63% { stroke-dasharray: 0,0px; }
+        91.45% { stroke-dasharray: 0,0px; }
+        91.66%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
       }
 
       #text_if-offline { animation-name: text_if-offline-anim; }
       @keyframes text_if-offline-anim {
-        0%, 72.39% { opacity: 0; }
-        74.4% { opacity: 1; }
-        78.92% { opacity: 1; }
-        79.42%, 100% { opacity: 0; }
+        0%, 75.14% { opacity: 0; }
+        76.79% { opacity: 1; }
+        80.51% { opacity: 1; }
+        80.92%, 100% { opacity: 0; }
       }
 
       #text_still-connected { animation-name: text_still-connected-anim; }
       @keyframes text_still-connected-anim {
-        0%, 79.42% { opacity: 0; }
-        81.43% { opacity: 1; }
-        83.43% { opacity: 1; }
-        83.94%, 100% { opacity: 0; }
+        0%, 80.92% { opacity: 0; }
+        82.57% { opacity: 1; }
+        84.22% { opacity: 1; }
+        84.64%, 100% { opacity: 0; }
       }
 
       #defocus-mobile-c { animation-name: defocus-mobile-c-anim; }
       @keyframes defocus-mobile-c-anim {
-        0%, 84.34% { opacity: 0.3; }
-        84.69% { opacity: 0; }
-        89.61% { opacity: 0; }
-        89.96%, 100% { opacity: 0.3; }
+        0%, 84.97% { opacity: 0.3; }
+        85.26% { opacity: 0; }
+        91.37% { opacity: 0; }
+        91.66%, 100% { opacity: 0.3; }
+      }
+
+      #add-button_mobile-c { animation-name: add-button_mobile-c-anim; }
+      @keyframes add-button_mobile-c-anim {
+        0%, 86.08% { transform: scale(0); opacity: 0; }
+        86.7% { transform: scale(0.5); opacity: 1; }
+        87.53% { transform: scale(0.55); opacity: 1; }
+        88.02% { transform: scale(0.45); opacity: 0.7; }
+        88.31% { transform: scale(0.5); opacity: 0.7; }
+        88.52%, 100% { transform: scale(0.5); opacity: 0; }
       }
 
       #wahine-c { animation-name: wahine-c-anim; }
       @keyframes wahine-c-anim {
-        0%, 85.69% { opacity: 0; }
-        86.19%, 100% { opacity: 1; }
+        0%, 88.44% { opacity: 0; }
+        88.85%, 100% { opacity: 1; }
       }
 
       #wahine-c_copy { animation-name: wahine-c_copy-anim; }
       @keyframes wahine-c_copy-anim {
-        0%, 87.2% { opacity: 0; transform: scale(1); }
-        87.45% { opacity: 1; transform: scale(1); }
-        87.95% { opacity: 1; transform: scale(1); }
-        88.2%, 100% { opacity: 1; transform: scale(0); }
+        0%, 89.68% { opacity: 0; transform: scale(1); }
+        89.88% { opacity: 1; transform: scale(1); }
+        90.29% { opacity: 1; transform: scale(1); }
+        90.5%, 100% { opacity: 1; transform: scale(0); }
       }
 
       #file_in-transit_c-server { animation-name: file_in-transit_c-server-anim; }
       @keyframes file_in-transit_c-server-anim {
-        0%, 88.42% { opacity: 0; transform: translateX(690px) translateY(610px); }
-        88.44% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        89.44% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        89.46%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
+        0%, 90.6% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        90.61% { opacity: 1; transform: translateX(690px) translateY(610px); }
+        91.44% { opacity: 1; transform: translateX(430px) translateY(900px); }
+        91.45%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
       }
 
       #file_server_c { animation-name: file_server_c-anim; }
       @keyframes file_server_c-anim {
-        0%, 90.46% { transform: scale(0); }
-        90.96%, 100% { transform: scale(1); }
+        0%, 92.07% { transform: scale(0); }
+        92.48%, 100% { transform: scale(1); }
       }
 
       #file_server_c-copy { animation-name: file_server_c-copy-anim; }
       @keyframes file_server_c-copy-anim {
-        0%, 91.47% { opacity: 0; transform: scale(1); }
-        91.48% { opacity: 1; transform: scale(1); }
-        91.97%, 100% { opacity: 1; transform: scale(0); }
+        0%, 92.9% { opacity: 0; transform: scale(1); }
+        92.91% { opacity: 1; transform: scale(1); }
+        93.31%, 100% { opacity: 1; transform: scale(0); }
       }
 
       #file_in-transit_a-server { animation-name: file_in-transit_a-server-anim; }
       @keyframes file_in-transit_a-server-anim {
-        0%, 92.19% { opacity: 0; transform: translateX(430px) translateY(900px); }
-        92.2% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        93.21% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        93.22%, 100% { opacity: 0; transform: translateX(380px) translateY(190px); }
+        0%, 93.57% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        93.58% { opacity: 1; transform: translateX(430px) translateY(900px); }
+        94.41% { opacity: 1; transform: translateX(380px) translateY(190px); }
+        94.42%, 100% { opacity: 0; transform: translateX(380px) translateY(190px); }
       }
 
       #file_in-transit_b-server { animation-name: file_in-transit_b-server-anim; }
       @keyframes file_in-transit_b-server-anim {
-        0%, 92.19% { opacity: 0; transform: translateX(430px) translateY(900px); }
-        92.2% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        93.21% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        93.22%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
+        0%, 93.57% { opacity: 0; transform: translateX(0px) translateY(0px); }
+        93.58% { opacity: 1; transform: translateX(430px) translateY(900px); }
+        94.41% { opacity: 1; transform: translateX(570px) translateY(430px); }
+        94.42%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
       }
 
       #wahine-a { animation-name: wahine-a-anim; }
       @keyframes wahine-a-anim {
-        0%, 93.22% { opacity: 0; }
-        93.72%, 100% { opacity: 1; }
+        0%, 94.42% { opacity: 0; }
+        94.84%, 100% { opacity: 1; }
       }
 
       #wahine-b { animation-name: wahine-b-anim; }
       @keyframes wahine-b-anim {
-        0%, 93.22% { opacity: 0; }
-        93.72%, 100% { opacity: 1; }
+        0%, 94.42% { opacity: 0; }
+        94.84%, 100% { opacity: 1; }
       }
+
 
       /* embedded font */
       text { font-family: 'Dosis', sans-serif; }
@@ -661,7 +843,6 @@
         src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
         font-weight: normal;
         font-style: normal;
-
       }
     /* ]]> */
   </style>
@@ -671,103 +852,13 @@
     <g id="devices">
 
       <g id="mobile" stroke-linecap="butt" transform="scale(2)" stroke-width="0.5">
-
-        <rect id="mobile_inner-edge" width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
+        <rect id="mobile_base" stroke-width="0.25" width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
+        <rect id="mobile_inner-edge" stroke-width="0.25" width="22.5" height="46.5" x="-11.25" y="-23.25" ry="2.2"/>
         <rect id="mobile_screen" fill="var(--white)" fill-opacity="0.95" stroke="none" width="22" height="40" x="-11" y="-21"/>
-        <circle id="mobile_camera" fill="var(--white)" fill-opacity="0.95" stroke="none" cx="9" cy="-22.5" r=".5"/>
+        <circle id="mobile_camera" fill="var(--light-grey)" fill-opacity="0.95" stroke="none" cx="9" cy="-22.5" r=".5"/>
         <path id="mobile_speaker" d="M-1 -22h2"/>
         <path id="mobile_microphone" d="M-3 21h6"/>
-        <rect id="mobile_base" fill="none" stroke="var(--outline-color)" stroke-width="0.5" width="23" height="47" x="-11.5" y="-23.5" ry="2.4"/>
-      </g>
 
-      <g id="raspberry-pi" style="transform-origin: -5px 1.6px 0px;" stroke-linejoin="round" stroke-opacity="1">
-        <path id="base" fill="var(--mid-grey)" d="M-39 0h74.5l8.4-6.6H-30.4z"/>
-        <path id="base-side" fill="var(--devices-color)" d="M35.5 1.6v-1.8l8.4-6.4v1.8z"/>
-        <path id="base-outline" fill="none" stroke="var(--outline-color)" d="M-39,-0.2 v1.8h74.5 l8.4-6.4v-1.8h-74.5z"/>
-
-        <g id="pi-backrow-sides" fill="var(--devices-color)" stroke="none">
-          <path id="backbox-side" d="M-10.2 -4.8v-2.7l1.8-1.4v2.7z"/>
-          <path id="l-foot-fill" d="M-35.4 1.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
-          <path id="r-foot-fill" d="M28.4 1.6c0 1.4 1 2.3 1.8 2.3s1.8-1 1.8-2.3"/>
-          <path id="pinboard-side" d="M36.1 -4.3v-1.9l2.4-1.8v1.8z"/>
-          <path id="ethernet-side" d="M-21 -2v-9.2l2.4-1.8v9.1z"/>
-        </g>
-
-        <g id="pi-foot-outlines" fill="none" stroke="var(--outline-color)" stroke-linecap="round">
-          <path id="l-foot" d="M-35.4 2.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
-          <path id="r-foot" d="M28.4 2.6c0 1.4 1 1.3 1.8 1.3s1.8 0 1.8-1.3"/>
-        </g>
-
-        <g id="pi-backrow-tops" fill="var(--light-grey)" stroke="none">
-          <path id="backbox-top" d="M-18.6 -7.5h8.4l1.8-1.4h-8.4z"/>
-          <path id="ethernet-top" d="M-39 -11.2h18l2.4-1.8-18-.1z"/>
-          <path id="pinboard-top" d="M1.3 -6.2H36l2.4-1.8-35 .1z"/>
-        </g>
-
-        <path id="pi-pin-gaps" fill="none" stroke="var(--mid-light-grey)" stroke-linecap="butt" d="M13.15 -8 h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2 m1.3,0h1.2"/>
-        <path id="pi-pins" fill="none" stroke="var(--mid-grey)" stroke-linecap="round" d="M35 -7v-4.7                 m-2.5,0v4.7 m-2.5,0v-4.7                 m-2.5,0v4.7 m-2.5,0v-4.7                 m-2.5,0v4.7 m-2.5,0v-4.7                 m-2.5,0v4.7 m-2.5,0v-4.7                 m-2.5,0v4.7 m-2.5,0v-4.7                 m-2.5,0v4.7 m-2.5,0v-4.7"/>
-
-        <g id="pi-backrow-outlines" fill="none" stroke="var(--mid-light-grey)">
-          <path id="pinboard-outline" d="M5.2 -8l-2.4 1.8v1.8l33.3.1 2.4-1.8v-1.8h-3"/>
-          <path id="backbox-outline" d="M-16.8 -9l-1.8 1.5v2.7h8.4l1.8-1.4v-2.7z"/>
-          <path id="ethernet-outline" d="M-36.6 -13.1l-2.4 1.9v9.2h18l2.4-1.9V-13z"/>
-        </g>
-
-        <g id="pi-backrow-fronts" fill="var(--light-grey)" stroke="var(--mid-light-grey)">
-          <path id="backbox-front" d="M-18.6 -7.5v2.7h8.4v-2.7z"/>
-          <path id="pinboard-front" d="M-3.9 -6.2h39.9v1.9h-39.9z"/>
-
-          <path id="ethernet-front" d="M-39 -11.2v9.2h18v-9.2z"/>
-        </g>
-
-        <rect id="base-front" width="74.5" height="1.8" x="-39" y="0" fill="var(--mid-light-grey)" stroke="var(--outline-color)"/>
-
-        <g id="pi-frontrow-sides" fill="var(--devices-color)">
-          <path id="dc-side" d="M-16.8 0.3v-5.5l1.8-1.4v5.5z"/>
-          <path id="usb-side" d="M29 0.2v-3.6l3-2.3v3.7z"/>
-          <path id="hdmi-side" d="M10.9 0.3v-7.4l2.4-1.8v7.3z"/>
-        </g>
-
-        <g id="pi-frontrow-tops" fill="var(--light-grey)">
-          <path id="dc-top" d="M-25.2 -5.2h8.4l1.8-1.4h-8.4z"/>
-          <path id="usb-top" d="M21 -3.4h8l3-2.3h-7.3z"/>
-          <path id="hdmi-top" d="M-7.2 -7h18l2.5-2h-18z"/>
-        </g>
-
-        <g id="pi-frontrow-outlines" fill="none" stroke="var(--mid-light-grey)">
-          <path id="usb-outline" d="M24.7 -5.7l-3.6 2.3v3.6h7.8l3-2.2v-3.7z"/>
-          <path id="dc-outline" d="M-23.4 -6.6l-1.8 1.4v5.5h8.4l1.8-1.4v-5.5z"/>
-          <path id="hdmi-outline" d="M-4.8 -9l-2.4 2v7.3h18l2.5-1.9v-7.3z"/>
-        </g>
-
-        <g id="pi-frontrow-fronts" fill="var(--light-grey)" stroke="var(--mid-light-grey)">
-          <rect id="dc-front" fill="var(--light-grey)" stroke="var(--mid-light-grey)" width="8.4" height="5.5" x="-25.2" y="-5.2"/>
-          <rect id="usb-front" fill="var(--light-grey)" stroke="var(--mid-light-grey)" width="7.8" height="3.7" x="21.1" y="-3.4" rx="0" ry="0"/>
-          <rect id="hdmi-front" width="18" height="7.3" x="-7.1" y="-7.1"/>
-        </g>
-
-        <g id="pi-frontrow-ports" fill="var(--devices-color)" stroke="none" stroke-linecap="round">
-          <circle id="dc-plug" fill="var(--devices-color)" cx="-21" cy="-2.5" r="2"/>
-          <path id="usb" d="M22.9 -0.8h4s1-.7 1-1.5h-6c0 .7.8 1.5 1 1.5z"/>
-          <path id="hdmi" d="M-5.6 -5.3v1.3c0 1.4 3 0 3 1.4 0 .7.4.6 1.4.6h6c1.2 0 1.4.2 1.4-.6 0-1.4 3 0 3-1.4v-1.3H-5.6z"/>
-        </g>
-
-        <g id="leds" style="transform-origin: 40px -6.5px 0px;" transform="scale(1.5)">
-          <path id="green-led" fill="var(--contrast-tint)" stroke="var(--contrast-highlight-color)" stroke-width=".3" d="M41.5 -6.5c0-1-2.5-.9-2.4 0-.6.5 1.8.5 2.4 0z"/>
-          <path id="red-led" fill="var(--pātaka-light)" stroke="var(--pātaka-tint)" stroke-width=".3" d="M39.7 -4c0-1.2-2.5-1-2.5 0-.6.4 1.9.4 2.5 0z"/>
-        </g>
-
-      </g>
-
-      <g id="pi-drive" style="transform-origin: -5px 1.6px 0px;" stroke-linejoin="round" stroke-opacity="1">
-        <path id="drive" fill="var(--mid-grey)" d="M-39,-0.2 v6h74.5 l8.4-6.4v-6h-74.5z"/>
-        <path id="drive-side" fill="var(--devices-color)" d="M35.5 6v-6l8.4-6.4v6z"/>
-        <path id="drive-outline" fill="none" stroke="var(--outline-color)" d="M-39,-0.2 v6h74.5 l8.4-6.4v-6h-74.5z"/>
-        <rect id="drive-front" width="74.5" height="6" x="-39" y="0" fill="var(--mid-light-grey)" stroke="var(--outline-color)"/>
-      </g>
-
-      <g id="pi-screen">
-        <rect x="-42" y="-28" width="84" height="58" rx="2" fill="var(--white)" stroke="var(--devices-color)" stroke-width="4"/>
       </g>
 
       <g id="laptop" transform="scale(3.2)" stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt">
@@ -777,38 +868,15 @@
         <circle id="laptop-camera" fill="var(--mid-light-grey)" cx="0" cy="-12.5" r=".25"/>
 
 
-        <rect id="laptop-keyboard" x="-24" y="8" width="48" height="2" fill="var(--devices-color)" stroke="none" filter="url(#dropshadow)"/>
+        <rect id="laptop-keyboard" x="-24" y="8" width="48" height="2" stroke="none"/>
 
-      </g>
-
-      <g id="imac" transform="scale(0.45)">
-
-        <defs>
-          <path id="stand-shape" d="M70 144.6 h-140.5 c15.7,-14.6 23.6,-22.5 23.6,-38.3 0,-23.6 -7.9,-23.6 -7.9,-23.6                   h110.61 s-7.9 0-7.9 23.6c0 15.8 7.9 23.7 22.5 38.3z"/>
-        </defs>
-
-        <use xlink:href="#stand-shape" fill="var(--devices-color)"/>
-        <path id="stand-lit" fill="var(--mid-grey)" d="M-67.5 143.5c13.5-13.5 15.7-16.9 20.8-29.3 31.5 23 61.8 23 93.3 0 4.5 13.5 6.2 14 21.3 29.3z"/>
-        <use xlink:href="#stand-shape" fill="none" stroke="var(--outline-color)" stroke-linejoin="round" stroke-width="2"/>
-        <rect x="-199.5" y="-144.6" width="398.9" height="243.1" rx="15.7" ry="15.8" fill="var(--devices-color)" stroke="var(--outline-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <circle cx="0" cy="-136.7" r="3.9" fill="var(--mid-grey)"/>
-        <rect id="imac-screen" x="-191.6" y="-128.1" width="383.2" height="203.7" fill="var(--white)"/>
       </g>
 
       <g id="servers">
         <rect id="cabinet" x="-85" y="-70" width="170" height="220" fill="var(--devices-color)" stroke="none"/>
 
-        <g id="template-server-face" stroke="none" filter="url(#detail-dropshadow)">
+        <g id="template-server-face" stroke="none">
           <path id="template-server-faceplate" stroke-width="1" d="M79 121.7v20.8h-157.2v-20.8z"/>
-
-          <g id="server-screw" fill="var(--white)" stroke-width=".3" stroke-linecap="round">
-            <circle cx="-75.5" cy="140" r="1.2"/>
-            <path fill="none" d="M-75 140.5 l-1-1"/>
-          </g>
-
-          <use xlink:href="#server-screw" x="0" y="-15.7"/>
-          <use xlink:href="#server-screw" x="151.8" y="-15.7"/>
-          <use xlink:href="#server-screw" x="151.8" y="0"/>
 
           <g id="server-lights" fill="var(--light-grey)" fill-opacity="0.8" stroke-width=".5">
             <circle cx="-47.6" cy="132.1" r="2.6"/>
@@ -847,9 +915,9 @@
       <g id="server-monitor" stroke="none" stroke-linecap="round" stroke-width="1">
 
         <rect id="stand-front" fill="var(--devices-color)" x="-14" y="60" width="30" height="40"/>
-        <rect id="baseplate" x="-39" y="95.1" width="80" height="5" rx="1" ry="1" style="transform-origin: 0px 93.8px 0px;" fill="var(--mid-grey)" filter="url(#detail-dropshadow)"/>
-        <rect id="screen-frame" fill="var(--devices-color)" x="-144" y="-72" width="288" height="142.2" rx="2" ry="2" filter="url(#detail-dropshadow)"/>
-        <rect id="pc-screen" fill="var(--white)" x="-139" y="-66" width="278" height="131"/>
+        <rect id="baseplate" x="-39" y="95.1" width="80" height="5" rx="1" ry="1" style="transform-origin: 0px 93.8px 0px;" fill="var(--mid-grey)"/>
+        <rect id="screen-frame" fill="var(--devices-color)" x="-144" y="-72" width="288" height="142.2" rx="2" ry="2"/>
+        <rect id="pc-screen" fill="var(--white)" opacity="0.93" x="-139" y="-66" width="278" height="131"/>
       </g>
 
     </g>
@@ -861,6 +929,7 @@
         <path d="M-13.4 25.9v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
       </g>
 
+      <use id="pātaka-symbol-small" xlink:href="#pātaka-symbol" transform="scale(0.6)"/>
       <use id="pātaka-symbol-medium" xlink:href="#pātaka-symbol" transform="scale(1.6)"/>
       <use id="pātaka-symbol-large" xlink:href="#pātaka-symbol" transform="scale(2.2)"/>
       <path id="pixel-pātaka" transform="scale(0.8)" fill="var(--pātaka-color)" stroke="none" d="m-26,2 h4v-4h4v-4h4v-4h4v-4h4v-4h4v-8h4v8h4v4h4v4h4v4h4v4h4v4h4v4h-8v8h4v4h-8v8h-4v-8h-20v8h-4v-8h-8v-4h4v-8h-8z            m12,-4v16h28v-16h-4v-4h-4v-4h-4v-4h-4v4h-4v4h-4v4z"/>
@@ -874,6 +943,7 @@
       </g>
 
       <circle id="file_in-transit" cx="0" cy="0" r="5" fill="var(--encrypted-color)" stroke="var(--group-a-color)" stroke-width="2"/>
+      <circle id="connect-code_in-transit" cx="0" cy="0" r="5" stroke-width="2"/>
 
       <g id="kuia" transform="scale(0.08)">
         <use xlink:href="#whakapapa-bg"/>
@@ -1040,7 +1110,17 @@
       	</g>
       </g>
 
+      <g id="plus-symbol" fill="var(--white)" stroke="none">
+        <rect x="-8" y="-2" width="16" height="4"/>
+        <rect x="-2" y="-8" width="4" height="16"/>
+      </g>
+
       <g id="follow-symbol" stroke-linecap="round" stroke-width="1.5">
+        <circle cx="-4" cy="4" r="0.5"/>
+        <path fill="none" d="M-4.25,-0.25 A 4.5,4.5 0 0 1 0.25,4.25"/>
+        <path fill="none" d="M-4.25,-4.25 A 8.5,8.5 0 0 1 4.25,4.25"/>
+      </g>
+      <g id="follow-symbol_small" transform="scale(0.7) translate(-0.5, -1.25)" stroke-linecap="round" stroke-width="1.5">
         <circle cx="-4" cy="4" r="0.5"/>
         <path fill="none" d="M-4.25,-0.25 A 4.5,4.5 0 0 1 0.25,4.25"/>
         <path fill="none" d="M-4.25,-4.25 A 8.5,8.5 0 0 1 4.25,4.25"/>
@@ -1054,7 +1134,7 @@
         <rect width="100%" height="100%" fill="#fff"/>
         <use xlink:href="#pātaka-server_filled"/>
         <use xlink:href="#pātaka_laptop_filled"/>
-        <rect id="monitor-mask" x="290" y="827.5" width="280" height="145" style="opacity: 0;"/>
+        <rect id="monitor-mask" x="290" y="827.5" width="280" height="145" style="opacity: 1;"/>
       </mask>
 
       <mask id="mask_pātaka-server">
@@ -1072,41 +1152,64 @@
         <path id="pātaka-pi_filled" transform="translate(370, 176) scale(0.86)" d="m-26,2 h4v-4h4v-4h4v-4h4v-4h4v-4h4v-8h4v8h4v4h4v4h4v4h4v4h4v4h4v4h-8v8h4v4h-8v8h-4v-8h-20v8h-4v-8h-8v-4h4v-8h-8z"/>
       </mask>
 
-      <filter id="dropshadow" height="130%">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/> <!-- stdDeviation is how much to blur -->
-        <feOffset dx="1.5" dy="2" result="offsetblur"/> <!-- how much to offset -->
-
-        <feComponentTransfer>
-          <feFuncA type="linear" slope="0.3"/> <!-- slope is the opacity of the shadow -->
-        </feComponentTransfer>
-
-        <feMerge>
-          <feMergeNode/> <!-- this contains the offset blurred image -->
-          <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-        </feMerge>
-
-      </filter>
-
-      <filter id="detail-dropshadow" height="130%">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> <!-- stdDeviation is how much to blur -->
-        <feOffset dx=".15" dy=".2" result="offsetblur"/> <!-- how much to offset -->
-
-        <feComponentTransfer>
-          <feFuncA type="linear" slope="0.3"/> <!-- slope is the opacity of the shadow -->
-        </feComponentTransfer>
-
-        <feMerge>
-          <feMergeNode/> <!-- this contains the offset blurred image -->
-          <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-        </feMerge>
-
-      </filter>
-
       <filter id="caption-bg" x="-0.02" y="0" width="1.04" height="1">
         <feFlood flood-color="hsla(0, 0%, 100%, 0.8)" result="bg"/>
 
         <feMerge>
           <feMergeNode in="bg"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+
+      </filter>
+
+      <filter id="storage-shadow" x="-35%" y="-35%" height="170%" width="170%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+        <feOffset dx="0.5" dy="1" result="offsetblur"/>
+
+        <feComponentTransfer in="offsetblur" result="first">
+          <feFuncA type="linear" slope="0.5"/>
+        </feComponentTransfer>
+
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+        <feOffset dx="0.25" dy="0.75" result="offsetblurtwo"/>
+
+        <feComponentTransfer in="offsetblurtwo" result="second">
+          <feFuncA type="linear" slope="0.3"/>
+        </feComponentTransfer>
+
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+        <feOffset dx="2" dy="3" result="offsetblurthree"/>
+
+        <feComponentTransfer in="offsetblurthree" result="third">
+          <feFuncA type="linear" slope="0.2"/>
+        </feComponentTransfer>
+
+        <feMerge>
+          <feMergeNode in="third"/>
+          <feMergeNode in="second"/>
+          <feMergeNode in="first"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+
+      </filter>
+      <filter id="map-shadow" x="-35%" y="-35%" height="170%" width="170%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+        <feOffset dx="1" dy="2" result="offsetblur"/>
+
+        <feComponentTransfer in="offsetblur" result="first">
+          <feFuncA type="linear" slope="0.4"/>
+        </feComponentTransfer>
+
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+        <feOffset dx="0.25" dy="0.75" result="offsetblurtwo"/>
+
+        <feComponentTransfer in="offsetblurtwo" result="second">
+          <feFuncA type="linear" slope="0.3"/>
+        </feComponentTransfer>
+
+        <feMerge>
+          <feMergeNode in="second"/>
+          <feMergeNode in="first"/>
           <feMergeNode in="SourceGraphic"/>
         </feMerge>
 
@@ -1122,9 +1225,9 @@
 
       <g id="invite-button">
         <defs>
-          <rect id="button-shape" x="-38" y="-12" width="76" height="24" rx="1" ry="1"/>
+          <rect id="button-shape" x="-38" y="-12" width="76" height="24" rx="0" ry="1"/>
         </defs>
-        <use id="button-standard" xlink:href="#button-shape"/>
+        <use xlink:href="#button-shape"/>
         <use xlink:href="#follow-symbol" x="-26" fill="var(--white)" stroke="var(--white)"/>
 
         <g id="join-pātaka-text" fill="var(--white)" font-size="10">
@@ -1133,11 +1236,32 @@
 
       </g>
 
+      <g id="invite-button_icon">
+        <rect x="-14" y="-8" width="28" height="16" rx="0" ry="1"/>
+        <use xlink:href="#follow-symbol" fill="var(--white)" stroke="var(--white)"/>
+
+      </g>
+
+      <g id="connected-button">
+        <use xlink:href="#button-shape"/>
+        <use xlink:href="#follow-symbol" x="-26" fill="var(--white)" stroke="var(--white)"/>
+
+        <g id="connected-pātaka-text" fill="var(--white)" font-size="10">
+          <text x="6" y="4" text-anchor="middle">Connected</text>
+        </g>
+
+      </g>
+
+      <g id="add-button">
+        <use xlink:href="#button-shape"/>
+        <use xlink:href="#plus-symbol"/>
+      </g>
+
     </g>
 
   </defs>
 
-  <g id="map" stroke="none" fill="var(--light-grey)" filter="url(#dropshadow)">
+  <g id="map" stroke="none" fill="var(--light-grey)" filter="url(#map-shadow)">
     <path id="te-ika-a-māui" d="m 186.48 17.64 c 29.96 25.2 52.36 60.76 51.52 78.96 c -0.56 13.44 -8.4 6.72 -12.04 7.56 c -4.2 1.12 1.12 6.44 1.96 7.56 c 7.56 9.8 16.8 22.96 26.6 36.4 c 5.6 7.56 6.44 -11.48 22.4 -18.76 c 5.32 -1.96 3.64 1.4 -1.12 4.2 c -13.16 8.96 -15.68 23.52 -15.4 24.08 c 28.84 40.32 67.2 84.84 68.88 104.44 c 0.84 8.12 15.96 11.2 18.48 2.8 c 2.8 -9.24 -9.24 -16.24 -21.28 -33.04 c -3.36 -4.76 14.56 6.72 26.32 19.32 c 1.4 1.68 2.24 -6.44 12.6 -7.28 c 3.64 -0.56 -12.32 13.72 -10.08 22.4 c 1.96 7 18.2 -1.12 19.6 5.88 c 0.28 1.96 -2.8 5.32 -2.24 9.8 c 0.84 6.72 4.48 14.84 2.8 16.24 c -9.52 6.16 -21.56 -40.32 -29.68 -17.08 c -2.24 5.88 14.56 14 28 43.96 c 7.56 18.2 4.48 29.4 9.24 30.8 c 7.84 2.8 10.36 -9.52 22.4 -14.84 c 4.2 -2.24 2.8 -1.12 7 -0.28 c 11.2 1.68 -7 1.4 -0.84 12.88 c 1.4 2.52 17.36 2.8 17.92 5.32 c 1.12 3.92 -13.72 -0.84 -22.4 8.4 c -5.6 5.32 7.84 15.96 1.4 15.96 c -11.2 0 -1.68 -35.56 -19.04 -24.64 c -2.8 1.68 0.84 10.36 5.6 21.56 c 2.8 5.6 5.6 17.36 7.84 18.48 c 5.88 2.24 9.8 -4.2 10.92 -2.24 c 0.84 1.96 -7.84 7.84 -8.96 14.28 c -0.56 2.8 3.92 9.52 7.28 22.4 c 2.24 8.68 3.36 2.8 7.56 24.92 c 0.84 4.48 8.12 -6.72 12.04 -4.48 c 2.52 1.4 1.96 6.16 0 8.12 c -2.8 2.52 -10.08 0.84 -13.72 1.96 c -11.2 3.36 -6.16 18.48 -3.92 22.96 c 1.68 3.64 1.96 -1.96 4.2 -4.76 c 2.52 -3.08 4.48 -2.8 6.72 0.84 c 2.8 3.36 -7.56 6.44 -9.8 10.08 c -1.4 2.8 -3.64 4.48 -1.68 6.72 c 3.08 3.64 14 -5.6 14.56 -0.84 c 0 2.24 -6.16 3.08 -8.4 4.76 c -1.96 1.96 0 4.48 -2.52 5.04 c -1.68 0.28 -3.92 -4.2 -7 -6.16 c -2.8 -1.68 -0.84 3.92 -4.76 1.68 c -6.44 -3.92 1.12 4.2 1.12 15.12 c 0 17.08 -7.84 17.36 -9.24 22.4 c -4.2 17.36 0.28 38.36 -5.32 55.44 c -3.64 11.48 -7.56 16.8 -16.24 24.64 c -3.92 3.64 -18.2 2.8 -23.8 3.36 c -5.32 0.56 -12.6 8.4 -19.04 9.24 c -6.16 0.56 -2.8 7.56 -10.64 8.68 c -9.8 1.4 -21 12.88 -21.56 23.24 c -0.56 17.92 7 19.88 12.6 26.04 c 4.2 4.48 6.72 10.36 13.16 12.32 c 7.28 2.8 18.48 2.8 25.2 5.6 c 18.76 7.84 23.52 24.36 37.24 31.64 c 8.4 4.2 17.36 4.76 26.32 5.6 c 21 2.52 53.76 42 45.64 88.2 c -4.48 24.64 -11.2 45.92 -22.96 55.72 c -3.92 3.36 -1.68 14.28 -7.28 19.6 c -2.8 2.8 -9.24 4.2 -10.36 8.4 c -1.12 3.64 8.12 5.6 0 10.36 c -1.96 1.12 -0.28 -4.76 -1.96 -3.64 c -5.32 3.64 -7.28 10.36 -12.32 16.52 c -2.24 2.8 -15.12 3.64 -8.4 14 c 7 11.2 14.84 -0.28 17.92 1.68 c 2.8 1.96 4.76 -2.8 3.92 -4.76 c -0.84 -1.96 -5.88 1.68 -6.16 -1.12 c -0.56 -5.04 11.2 -13.44 14.28 -4.2 c 1.4 3.36 -6.44 9.52 -5.88 15.12 c 0 4.48 0.56 6.44 4.76 8.12 c 5.04 1.68 9.24 -7.56 15.4 -6.72 c 6.16 1.12 10.64 -2.8 11.2 0.84 c 0.28 3.36 -0.56 -0.56 5.88 6.72 c 3.92 4.2 -1.68 22.68 4.2 25.2 c 11.48 4.48 11.2 -3.92 17.92 -3.92 c 5.6 0 25.48 -20.44 29.96 -22.96 c 15.96 -8.96 25.2 -18.2 30.8 -25.2 c 4.76 -6.44 10.08 -17.92 12.32 -21 c 4.76 -6.72 1.68 -11.76 7.84 -19.6 c 2.8 -2.8 4.48 -3.64 7.28 -6.72 c 8.4 -9.24 1.12 -20.16 14.56 -31.64 c 3.36 -3.08 5.6 -10.36 10.08 -14 c 3.64 -3.08 5.6 -7.56 8.68 -10.36 c 4.48 -4.2 8.96 -1.96 10.64 -5.04 c 1.68 -2.8 -0.28 -5.6 1.12 -8.4 c 8.4 -15.68 3.36 -19.88 6.44 -22.96 c 14 -14 8.4 -1.68 13.44 -9.24 c 14.28 -19.88 5.04 -15.4 10.08 -26.6 c 3.36 -7 6.44 -14.56 10.36 -21.28 c 3.64 -5.6 -0.84 -10.64 1.4 -16.24 c 1.96 -4.76 13.16 -13.44 10.08 -14.84 c -8.96 -4.48 -15.96 5.6 -19.04 -21 c -0.56 -3.36 -5.04 1.96 -5.32 -6.16 c -0.56 -14.84 11.2 -18.76 15.96 -26.32 c 3.64 -5.88 1.4 -9.24 7.56 -13.16 c 22.12 -14.56 58.52 -21.56 79.52 -13.44 c 1.68 0.56 1.4 -2.8 2.8 -1.96 c 7.28 4.48 -5.6 19.6 2.24 29.12 c 3.92 4.76 3.64 -5.88 7 -14 c 1.68 -4.2 7.28 -5.6 8.4 -8.4 c 1.96 -4.76 -11.76 3.36 -12.88 -12.6 c -0.28 -5.6 1.12 -15.12 2.8 -26.6 c 0.84 -7.28 8.68 -10.36 6.44 -10.08 c -9.8 1.12 -0.84 -10.08 1.68 -12.04 c 4.2 -2.8 7.28 9.24 8.96 5.6 c 3.64 -9.8 14.56 -15.4 21.84 -23.24 c 4.48 -4.76 -3.36 -10.64 4.48 -15.12 c 6.44 -3.64 -1.12 -21.28 4.76 -35.56 c 1.4 -3.08 -7.28 -3.36 -1.12 -8.4 c 9.52 -8.4 -4.2 -11.2 -0.84 -14.56 c 10.08 -10.36 1.96 -10.64 7.28 -17.36 c 5.6 -7.84 19.32 -24.64 13.16 -30.52 c -7 -6.44 -14.84 -0.84 -24.36 -9.52 c -3.64 -3.08 5.04 -4.48 1.96 -5.32 c -9.52 -1.96 -27.16 -6.16 -36.4 -2.8 c -3.92 1.68 6.16 7.28 -3.64 11.2 c -7.56 2.8 -21.28 5.88 -26.6 12.6 c -9.52 12.32 -9.8 29.96 -24.08 33.6 c -11.2 2.8 -23.52 7.56 -34.72 5.6 c -1.68 -0.56 2.8 6.44 -5.6 3.64 c -8.4 -3.08 -1.12 -4.48 -2.8 -5.6 c -11.2 -5.32 -8.68 -6.72 -37.8 -12.32 c -12.04 -2.52 -23.52 -13.44 -28 -18.2 c -4.2 -4.2 -4.48 1.96 -8.4 0 c -11.2 -6.44 -17.64 -12.6 -25.2 -16.24 c -4.2 -1.96 4.2 7 0.56 9.52 c -2.52 1.4 -3.36 -5.32 -7.28 -5.04 c -4.76 0.56 -16.8 1.68 -20.72 -24.08 c -1.68 -11.2 9.24 -0.28 6.72 -4.2 c -8.12 -12.32 -3.64 -13.16 -6.72 -19.32 c -3.36 -6.44 -6.72 -12.04 -7.84 -17.92 c -1.4 -8.4 4.48 2.8 3.64 0.28 c -2.8 -7.84 0.56 -16.8 -0.28 -21.28 c -1.68 -7.84 -6.16 3.64 -6.44 0 c 0 -3.08 2.8 -6.44 2.8 -9.8 c 0.28 -9.24 -2.52 -17.36 -10.36 -19.32 c -3.64 -0.84 -4.48 10.36 -7.28 7.84 c -2.24 -1.96 -1.68 -7.56 0.84 -10.08 c 4.2 -5.04 12.88 -7.84 10.36 -12.32 c -2.24 -4.2 -7.28 1.96 -14.28 1.12 c -3.64 0 0.84 5.04 -6.16 3.92 c -2.24 -0.28 0.84 -3.92 0.56 -8.12 c 0 -2.52 -5.6 0 -6.16 -1.12 c -2.8 -3.92 3.92 -3.92 2.24 -8.96 c -0.56 -2.24 -5.88 -1.96 -7.28 -3.64 c -1.12 -1.68 4.76 -5.88 -0.28 -9.8 c -2.24 -1.68 -9.24 0 -9.8 -3.36 c -0.84 -5.6 -8.96 -5.6 -9.8 -1.96 c -2.8 8.96 4.76 7.84 11.76 17.92 c 2.52 3.36 -0.56 10.64 -0.56 14 c -0.28 3.92 8.68 1.12 8.12 9.8 c -0.28 2.8 -2.24 2.24 -5.6 2.52 c -2.24 0 -5.32 4.48 -5.32 6.44 c -0.28 5.32 5.04 9.24 10.08 16.52 c 3.64 4.76 3.36 8.96 2.24 14 c -1.4 7.84 5.6 10.36 2.24 12.6 c -5.04 3.36 -20.16 8.68 -23.8 0.28 c -4.48 -10.36 1.96 -25.76 -14 -33.32 c -2.8 -1.12 -7 3.64 -9.8 2.24 c -3.64 -1.96 -4.48 -10.92 -9.24 -9.8 c -3.36 0.84 -4.48 7.84 -9.8 1.68 c -1.68 -1.96 -3.36 1.4 -5.6 1.12 c -2.8 -0.28 4.76 -4.76 -3.36 -6.44 c -1.12 0 -3.92 3.36 -6.16 2.8 c -2.52 0 -2.8 -4.48 -6.16 -3.64 c -2.8 0.84 -3.92 6.44 -4.76 5.6 c -4.2 -4.48 -7.84 -14 -2.8 -17.08 c 1.96 -1.12 0.84 7 3.64 7.28 c 4.48 0.84 3.92 -1.12 8.96 1.4 c 5.88 2.8 -5.32 -6.44 -2.8 -15.96 c 0.84 -3.08 -2.8 -2.8 -1.96 -5.04 c 2.24 -5.6 9.24 -3.36 10.64 -8.4 c 0.56 -2.8 -7.28 1.4 -10.64 1.68 c -3.08 0.28 -5.32 -5.88 -3.64 -8.4 c 2.8 -5.6 -2.52 -10.08 -0.56 -13.72 c 1.96 -2.8 3.08 6.72 8.4 -1.12 c 1.12 -1.68 -9.8 -5.6 -2.24 -7 l 8.12 -1.96 c 4.48 -1.96 -7 -2.8 -5.6 -7.84 c 1.12 -4.2 11.2 -5.04 0.28 -8.12 c -12.88 -3.36 -15.12 -11.76 -19.04 -24.08 c -4.2 -12.04 -6.72 4.48 -14.84 -15.68 c -2.24 -5.6 7 -17.36 -1.12 -18.2 c -7 -0.84 -12.88 1.68 -13.72 -6.16 c -0.56 -4.76 6.72 -1.96 12.04 -1.4 c 6.44 0.84 10.08 12.04 14.84 11.2 c 5.6 -0.56 -7 -5.6 -1.68 -14.84 c 2.8 -5.04 -10.64 -3.92 -2.8 -14 c 6.44 -8.4 -7 -11.2 -7.84 -12.04 c -3.36 -2.24 2.52 -7.28 -1.4 -11.2 c -5.32 -4.76 -14.84 -8.68 -12.32 -13.44 c 0.56 -1.4 3.64 0.56 4.48 -0.56 c 5.04 -7 -15.4 -2.24 -7 -21 c 1.68 -4.2 2.24 -12.04 -4.76 2.8 c -2.24 4.76 -6.44 7.84 -15.12 2.8 c -2.24 -1.12 2.8 12.6 -3.64 7.84 c -2.8 -2.24 -0.84 -9.24 -3.64 -11.2 c -2.52 -1.96 -12.88 0 -10.36 -1.68 c 7.84 -3.92 0.28 -6.16 3.36 -7.56 c 3.92 -1.68 7 9.24 12.88 2.8 c 4.2 -4.48 -5.6 -7.84 -13.44 -7 c -9.24 1.12 -3.92 -8.96 -15.96 -15.4 c -9.8 -5.6 -10.08 12.6 -14.56 9.52 c -4.2 -3.08 5.04 -5.04 -0.84 -13.72 c -1.68 -2.52 -3.64 0 -7.56 -0.56 c -2.8 -0.56 -6.72 -5.04 -9.52 -3.92 c -5.6 2.52 0.56 11.2 -13.44 6.44 c -9.24 -3.08 -6.16 -14.56 3.92 -18.2 c 3.92 -1.4 -8.68 -11.2 -8.4 -6.16 c 0 5.6 -3.36 7 -7.84 7 c -7.84 -0.56 8.4 16.24 -4.2 18.2 c -10.08 1.68 -4.76 -5.6 -1.12 -10.92 c 4.76 -6.72 -22.4 -2.8 -18.48 -18.76 c 0.84 -3.08 4.2 8.12 7 6.16 c 4.2 -2.52 -5.32 -10.08 -9.8 -12.88 c -9.24 -5.6 -4.48 -21.28 -9.52 -23.8 c -1.96 -0.84 -3.08 0 -3.08 2.52 c 0 1.68 -8.4 0.56 -8.12 -3.08 c 1.4 -12.88 7.84 0 11.76 -3.64 c 1.96 -1.68 -0.84 -5.6 0.28 -8.4 c 0.84 -1.68 7 -2.24 5.6 -3.64 c -3.92 -5.6 -5.6 0.28 -10.64 1.4 c -3.08 0.56 -7.56 -1.96 -10.36 -1.4 c -2.52 0.56 -3.64 7.28 -9.24 3.92 c -10.92 -6.72 -19.04 -0.56 -7.56 8.96 z m 268.52 393.68 c -4.2 -1.12 2.52 -7 5.6 -2.8 c 3.64 5.04 1.96 6.44 -0.28 6.72 c -4.48 0.56 -1.4 -2.8 -5.6 -3.92 z m 124.88 83.72 c 6.16 0.28 1.4 7.84 -0.56 9.8 c -4.48 4.76 -3.08 0.56 -5.88 -2.8 c -4.76 -6.16 1.4 -7.28 6.44 -7 z m 12.32 -1.68 c 6.72 0.56 15.96 6.72 -0.84 3.92 c -10.92 -1.68 -4.48 -4.48 0.84 -3.92 z m 1.4 10.36 c 2.8 -3.64 3.92 -2.52 2.8 1.12 c -1.12 5.6 -9.24 6.72 -2.8 -1.12 z m 3.36 8.68 c 5.04 -0.56 3.64 3.08 2.8 5.32 c -3.92 8.96 -3.36 1.96 -8.12 1.4 c -7.84 -0.84 -3.08 -5.6 5.32 -6.72 z m 75.6 80.64 c -5.6 3.36 2.8 9.8 -1.12 7.28 c -12.6 -8.4 -15.4 6.44 -14.28 -2.8 c 1.12 -10.64 9.24 -1.12 7.56 -5.88 c -2.52 -8.12 8.96 0.56 7.84 1.4 z m -133 -9.52 c 3.92 8.12 9.8 -3.36 13.44 3.08 c 4.2 7.84 -3.36 16.52 -11.76 22.68 a 53.192 53.192 0 0 1 -18.2 10.08 c -12.6 2.8 -3.08 -9.24 -1.12 -14 c 7.84 -18.48 -5.04 -1.96 -7.28 -10.36 c -2.24 -10.36 8.12 -13.72 10.92 -14.84 c 3.64 -1.4 11.76 -1.4 14 3.36 z m -76.72 350.28 c -8.12 0.84 -13.16 13.44 -10.64 3.64 c 1.96 -7.28 4.2 -4.76 7.28 -8.68 c 7.28 -8.96 11.76 3.92 3.36 5.04 z"/>
     <path id="aotea" d="M474.6 227.64c0 1.96 1.96 5.88 1.4 9.8-.56 3.08-4.76 2.24-4.76 5.88 0 5.04 12.88 5.32 14 6.44 2.24 1.96-2.24 7.84 6.44 10.64 10.08 3.36 6.16-9.24-.56-10.08-4.2-.56.84-4.2.28-10.08-.28-3.92-7.56-3.08-7.84-12.32 0-6.72-8.96-7.56-8.96-.28z"/>
     <path id="hauturu" d="M442.96 242.2c-.84 3.92 7.56 5.04 6.44-.84-1.4-7.84-5.88-1.68-6.44.84z"/>
@@ -1148,22 +1272,22 @@
     <path id="kāpiti" d="M426.16 888.16c-5.04 10.08.28 6.72 3.64 1.96 4.2-6.72-.56-7.84-3.64-1.96z"/>
   </g>
 
-  <g id="connections" style="opacity: 0;">
+  <g id="connections" style="opacity: 1;">
 
     <g id="lines" opacity="1" stroke="var(--mid-grey)" stroke-width="4">
 
       <g id="follow-lines_pātaka-laptop" opacity="1" mask="url(#mask_all-pātaka)">
-          <line id="follow-line_laptop-server" stroke-dasharray="8,12" x1="430" y1="900" x2="350" y2="630" style="opacity: 0;"/>
+          <line id="follow-line_laptop-server" stroke-width="2" stroke-dasharray="8,12" x1="430" y1="900" x2="350" y2="630" style="opacity: 0;"/>
           <line id="follow-line_laptop-server_connected" opacity="0" stroke="var(--pātaka-color)" stroke-dasharray="8,12" x1="430" y1="900" x2="350" y2="630" style="stroke-dasharray: 8px, 12px;"/>
       </g>
 
       <g id="follow-lines_server" stroke="var(--group-b-color)" mask="url(#mask_pātaka-server)">
-        <line id="follow-line_b-server_connected" stroke-dasharray="8,12" x1="570" y1="430" x2="430" y2="900" style="opacity: 1;"/>
-        <line id="follow-line_a-server_connected" stroke-dasharray="8,12" x1="380" y1="190" x2="430" y2="900" style="opacity: 1;"/>
-        <line id="follow-line_c-server_connected" stroke-dasharray="8,12" x1="690" y1="610" x2="430" y2="900" style="opacity: 1;"/>
+        <line id="follow-line_b-server_connected" stroke-dasharray="8,12" x1="570" y1="430" x2="430" y2="900" style="opacity: 0; stroke-dasharray: 8px, 12px;"/>
+        <line id="follow-line_a-server_connected" stroke-dasharray="8,12" x1="380" y1="190" x2="430" y2="900" style="opacity: 0; stroke-dasharray: 8px, 12px;"/>
+        <line id="follow-line_c-server_connected" stroke-dasharray="8,12" x1="690" y1="610" x2="430" y2="900" style="opacity: 0; stroke-dasharray: 8px, 12px;"/>
       </g>
 
-      <g id="follow-lines_laptop" opacity="0" stroke-dasharray="8,12" mask="url(#mask_pātaka_laptop)">
+      <g id="follow-lines_laptop" opacity="0" stroke-width="2" stroke-dasharray="8,12" mask="url(#mask_pātaka_laptop)">
         <line id="b-to-laptop" x1="570" y1="430" x2="350" y2="630"/>
         <line id="a-to-laptop" x1="380" y1="190" x2="350" y2="630"/>
         <line id="c-to-laptop" x1="690" y1="610" x2="350" y2="630"/>
@@ -1178,139 +1302,145 @@
     </g>
 
     <g id="files_in-transit" mask="url(#mask_all-pātaka)">
-      <use id="file_in-transit_b-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(570px) translateY(430px);"/>
-      <use id="file_in-transit_a-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(350px) translateY(630px);"/>
-      <use id="file_in-transit_c-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(690px) translateY(610px);"/>
-      <use id="file_in-transit_laptop-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(430px) translateY(900px);"/>
-      <use id="file_in-transit_b-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(570px) translateY(430px);"/>
-      <use id="file_in-transit_a-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(380px) translateY(190px);"/>
-      <use id="file_in-transit_c-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(430px) translateY(900px);"/>
+      <use id="file_in-transit_b-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_a-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_c-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_laptop-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_b-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_a-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_c-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+    </g>
+
+    <g id="connect-codes_in-transit" mask="url(#mask_all-pātaka)">
+      <use id="connect-code_in-transit_laptop-a" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="connect-code_in-transit_laptop-b" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="connect-code_in-transit_laptop-c" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="connect-code_in-transit_laptop-server" fill="var(--pātaka-label-color)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+
     </g>
 
   </g>
 
-  <g id="pātaka_laptop" opacity="0">
+  <g id="pātaka_laptop" opacity="1" style="transform-origin: 350px 636px 0px; transform: scale(1);">
 
-    <use id="device_laptop" xlink:href="#laptop" opacity="0" x="350" y="636" fill="var(--devices-color)" stroke="var(--outline-color)" filter="url(#dropshadow)"/>
+    <use id="device_laptop" xlink:href="#laptop" opacity="0" x="350" y="636" fill="var(--devices-color)" stroke="var(--outline-color)"/>
 
     <g id="onscreen_laptop">
       <use id="pātaka-symbol_laptop" xlink:href="#pātaka-symbol" x="350" y="630" fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
     </g>
 
-    <g id="storage_laptop" opacity="0">
-      <path id="storage-bubble_laptop" opacity="0.7" fill="var(--white)" stroke="none" style="filter:url(#dropshadow)" d="M345,630 l-30,-20 v-96 h-295 v160 h295 v-24 z"/>
-      <use id="file_laptop_b-copy" opacity="1 " style="transform-origin: 345px 630px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="60" y="554" stroke="var(--group-a-color)"/>
-      <use id="file_laptop_a-copy" opacity="1 " style="transform-origin: 345px 630px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="100" y="554" stroke="var(--group-a-color)"/>
+    <g id="storage_laptop" opacity="0" style="transform-origin: 345px 630px 0px; transform: scale(0);">
+      <path id="storage-bubble_laptop" opacity="0.7" filter="url(#storage-shadow)" fill="var(--white)" stroke="none" d="M345,630 l-30,-20 v-96 h-295 v160 h295 v-24 z"/>
+      <use id="file_laptop_b-copy" opacity="0" style="transform-origin: 345px 630px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="60" y="554" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_a-copy" opacity="0" style="transform-origin: 345px 630px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="100" y="554" stroke="var(--group-a-color)"/>
       <use id="file_laptop_c-copy" opacity="0" style="transform-origin: 345px 630px 0px;" xlink:href="#encrypted-file" x="140" y="554" stroke="var(--group-a-color)"/>
-      <use id="file_laptop_b" style="transform-origin: 345px 630px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="60" y="554" stroke="var(--group-a-color)"/>
-      <use id="file_laptop_a" style="transform-origin: 345px 630px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="100" y="554" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_b" style="transform-origin: 345px 630px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="60" y="554" stroke="var(--group-a-color)"/>
+      <use id="file_laptop_a" style="transform-origin: 345px 630px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="100" y="554" stroke="var(--group-a-color)"/>
       <use id="file_laptop_c" opacity="0" style="transform-origin: 345px 630px 0px;" xlink:href="#encrypted-file" x="140" y="554" stroke="var(--group-a-color)"/>
     </g>
 
   </g>
 
-  <g id="pātaka_imac" opacity="0">
-
-    <use xlink:href="#imac" opacity="1" x="520" y="387"/>
-    <use id="pātaka-symbol_imac" xlink:href="#pātaka-symbol-medium" x="520" y="375" fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
-  </g>
-
-  <g id="pātaka-pi" opacity="0">
-
-    <g id="device_pi" opacity="1">
-      <use xlink:href="#pi-screen" x="370" y="174"/>
-      <use xlink:href="#pi-drive" x="350" y="226"/>
-      <use xlink:href="#raspberry-pi" x="350" y="220"/>
-    </g>
-
-    <use xlink:href="#pixel-pātaka" x="370" y="174"/>
-    <rect opacity="0" x="20" y="60" width="315" height="160" fill="var(--white)" stroke="var(--pātaka-color)"/>
-
-  </g>
-
-  <g id="pātaka_imac" opacity="0">
-
-    <use xlink:href="#imac" opacity="1" x="520" y="387"/>
-    <use id="pātaka-symbol_imac" xlink:href="#pātaka-symbol-medium" x="520" y="375" fill="var(--pātaka-color)" stroke="var(--outline-color)"/>
-    </g>
-
   <g id="pātaka-server" style="opacity: 0;">
 
-    <g id="device_server" filter="url(#dropshadow)" style="opacity: 0;">
+    <g id="device_server" style="opacity: 1;">
       <use xlink:href="#servers" x="670" y="852"/>
       <use xlink:href="#server-monitor" x="430" y="900"/>
     </g>
 
     <use id="pātaka-symbol_server" xlink:href="#pātaka-symbol-large" x="430" y="900" fill="var(--pātaka-color)" stroke="var(--outline-color)" style="opacity: 1;"/>
 
-    <g id="invite_server" style="opacity: 0;">
-      <use xlink:href="#laptop" fill="var(--devices-color)" x="430" y="879" style="transform-origin: 430px 879px 0px;" transform="scale(0.8)"/>
-      <use id="invite-symbol_server" xlink:href="#pātaka-symbol" style="transform-origin: 430px 874px 0px;" transform="scale(0.8)" x="430" y="874" fill="var(--pātaka-color)"/>
-      <use id="invite-button_server" fill="var(--pātaka-color)" xlink:href="#invite-button" style="transform-origin: 430px 935px 0px;" transform="scale(1.6)" x="430" y="935" filter="url(#dropshadow)"/>
+    <g id="invite_server" style="opacity: 1;">
+      <g id="invite-symbol_server" style="transform-origin: 430px 879px 0px; opacity: 0; transform: scale(0);">
+        <use xlink:href="#laptop" fill="var(--mid-grey)" x="430" y="879" style="transform-origin: 430px 879px 0px;" transform="scale(0.8)"/>
+        <use xlink:href="#pātaka-symbol" style="transform-origin: 430px 874px 0px;" transform="scale(0.8)" x="430" y="874" fill="var(--pātaka-color)"/>
+      </g>
+      <use id="invite-button_server" fill="var(--devices-color)" xlink:href="#invite-button" style="transform-origin: 430px 935px 0px; opacity: 0; transform: scale(0);" transform="scale(1.6)" x="430" y="935"/>
+      <use id="connected-button_server" fill="var(--pātaka-color)" xlink:href="#connected-button" style="transform-origin: 430px 935px 0px; transform: scale(1.55); opacity: 0;" transform="scale(1.6)" x="430" y="935"/>
+      <use id="follow-symbol_server" opacity="0" style="transform-origin: 430px 879px 0px; transform: scale(0);" xlink:href="#follow-symbol_small" x="430" y="879" fill="var(--pātaka-color)" stroke="var(--pātaka-color)"/>
     </g>
 
-    <g id="storage_server" opacity="1">
+    <g id="storage_server" opacity="0" style="transform-origin: 464px 920px 0px; transform: scale(0);">
       <rect opacity="0" x="20" y="580" width="370" height="400" fill="var(--white)" stroke="var(--pātaka-color)"/>
-      <path id="storage-bubble_server" opacity="0.7" fill="var(--white)" stroke="none" style="filter:url(#dropshadow)" d="M464,920 l30,-20 v-160 h486 v260 h-486 v-60 z"/>
+      <path id="storage-bubble_server" opacity="0.7" filter="url(#storage-shadow)" fill="var(--white)" stroke="none" d="M464,920 l30,-20 v-160 h486 v260 h-486 v-60 z"/>
       <use id="file_server_b-copy" opacity="0" style="transform-origin: 490px 920px 0px;" xlink:href="#encrypted-file" x="534" y="780" stroke="var(--group-a-color)"/>
       <use id="file_server_a-copy" opacity="0" style="transform-origin: 490px 920px 0px;" xlink:href="#encrypted-file" x="574" y="780" stroke="var(--group-a-color)"/>
-      <use id="file_server_c-copy" opacity="1 " style="transform-origin: 490px 920px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="614" y="780" stroke="var(--group-a-color)"/>
-      <use id="file_server_b" style="transform-origin: 490px 920px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="534" y="780" stroke="var(--group-a-color)"/>
-      <use id="file_server_a" style="transform-origin: 490px 920px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="574" y="780" stroke="var(--group-a-color)"/>
-      <use id="file_server_c" style="transform-origin: 490px 920px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="614" y="780" stroke="var(--group-a-color)"/>
+      <use id="file_server_c-copy" opacity="0" style="transform-origin: 490px 920px 0px; transform: scale(1);" xlink:href="#encrypted-file" x="614" y="780" stroke="var(--group-a-color)"/>
+      <use id="file_server_b" style="transform-origin: 490px 920px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="534" y="780" stroke="var(--group-a-color)"/>
+      <use id="file_server_a" style="transform-origin: 490px 920px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="574" y="780" stroke="var(--group-a-color)"/>
+      <use id="file_server_c" style="transform-origin: 490px 920px 0px; transform: scale(0);" xlink:href="#encrypted-file" x="614" y="780" stroke="var(--group-a-color)"/>
     </g>
 
   </g>
 
-  <g id="mobile-a" opacity="0" style="transform-origin: 380px 190px 0px; transform: scale(1.5);" transform="scale(1)">
-    <use xlink:href="#mobile" x="380" y="190" fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+  <g id="mobile-a" opacity="1" style="transform-origin: 380px 180px 0px; transform: scale(1.5);" transform="scale(1)">
+    <use xlink:href="#mobile" x="380" y="190" fill="var(--devices-color)" stroke="var(--outline-color)"/>
 
-    <circle id="koro_copy" opacity="1 " style="transform-origin: 380px 190px 0px; transform: scale(0);" cx="390.75" cy="181.75" r="10" stroke-width="2" fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
-    <use id="kuia-copy_a" xlink:href="#kuia" x="360" y="172" style="transform-origin: 360px 172px 0px; opacity: 1;" transform="scale(0.5)"/>
-    <use id="koro-copy_a" xlink:href="#koro" x="381" y="172" style="transform-origin: 381px 172px 0px; opacity: 1;" transform="scale(0.5)"/>
-    <use id="wahine-a" opacity="1" xlink:href="#wahine" x="380" y="205" style="transform-origin: 380px 205px 0px;" transform="scale(0.5)"/>
+    <circle id="koro_copy" opacity="0" style="transform-origin: 377px 228px 0px; transform: scale(1);" cx="390.75" cy="181.75" r="10" stroke-width="2" fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
+    <use id="kuia-copy_a" xlink:href="#kuia" x="360" y="172" style="transform-origin: 360px 172px 0px; opacity: 0;" transform="scale(0.5)"/>
+    <use id="koro_a" opacity="0" xlink:href="#koro" x="371" y="162.8" style="transform-origin: 390.75px 181.75px 0px; transform: scale(0);" transform="scale(0.5)"/>
+    <use id="wahine-a" opacity="0" xlink:href="#wahine" x="380" y="205" style="transform-origin: 380px 205px 0px;" transform="scale(0.5)"/>
+
+    <use id="invite-symbol_mobile-a" opacity="0" style="transform-origin: 380px 185px 0px; transform: scale(0);" xlink:href="#pātaka-symbol-small" x="380" y="185" fill="var(--pātaka-color)"/>
+    <use id="follow-symbol_mobile-a" opacity="0" style="transform-origin: 381px 189px 0px; transform: scale(0);" xlink:href="#follow-symbol_small" x="381" y="189" fill="var(--group-b-color)" stroke="var(--group-b-color)"/>
+    <use id="invite-button_mobile-a" opacity="0" style="transform-origin: 380px 214px 0px; transform: scale(0);" fill="var(--devices-color)" xlink:href="#invite-button_icon" x="380" y="214"/>
+    <use id="connected-button_mobile-a" opacity="0" style="transform-origin: 380px 214px 0px;" fill="var(--group-b-color)" xlink:href="#invite-button_icon" x="380" y="214"/>
+    <use id="add-button_mobile-a" opacity="0" style="transform-origin: 380px 214px 0px; transform: scale(0);" fill="var(--group-a-color)" xlink:href="#add-button" x="380" y="214"/>
     <use id="defocus-mobile-a" opacity="0.3" xlink:href="#mobile" x="380" y="190" fill="var(--mid-light-grey)" stroke="var(--mid-light-grey)"/>
   </g>
 
-  <g id="mobile-b" opacity="0" style="transform-origin: 550px 460px 0px; transform: scale(1.5);">
-    <use id="device_mobile-b" xlink:href="#mobile" x="570" y="430" fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
+  <g id="mobile-b" opacity="1" style="transform-origin: 550px 460px 0px; transform: scale(1.5);">
+    <use id="device_mobile-b" xlink:href="#mobile" x="570" y="430" fill="var(--devices-color)" stroke="var(--outline-color)"/>
 
     <g id="on-screen_mobile-b" style="transform-origin: 570px 460px 0px;" transform="scale(0.5)">
-      <line id="horizontal-connection" opacity="1" x1="550" y1="400" x2="592" y2="400" stroke="var(--mid-light-grey)"/>
-      <line id="vertical-connection" opacity="0" x1="570" y1="400" x2="570" y2="450" stroke="var(--mid-light-grey)"/>
-      <circle id="kuia-b_copy" opacity="1 " style="transform-origin: 526px 450px 0px; transform: scale(0);" cx="548.5" cy="389.5" r="20" stroke-width="4" fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
-      <use id="kuia-b" opacity="1" xlink:href="#kuia" x="529" y="370"/>
-      <use id="koro-b" opacity="1" xlink:href="#koro" x="572" y="370"/>
-      <use id="wahine-b" opacity="1" xlink:href="#wahine" x="570" y="430"/>
+      <circle id="kuia-b_copy" opacity="0" style="transform-origin: 526px 450px 0px; transform: scale(1);" cx="548.5" cy="389.5" r="20" stroke-width="4" fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
+      <use id="kuia-b" opacity="0" style="transform-origin: 548.5px 389.5px 0px; transform: scale(0);" xlink:href="#kuia" x="529" y="370"/>
+      <use id="koro-copy_b" opacity="0" xlink:href="#koro" x="572" y="370"/>
+      <use id="wahine-b" opacity="0" xlink:href="#wahine" x="570" y="430"/>
 
-      <use id="invite-symbol_mobile" opacity="0" xlink:href="#pātaka-symbol" transform="scale(1)" x="570" y="395" fill="var(--pātaka-color)"/>
-      <use id="invite-button_mobile" opacity="0" fill="var(--group-b-color)" xlink:href="#invite-button" x="570" y="450" filter="url(#detail-dropshadow)"/>
+      <use id="invite-symbol_mobile" opacity="0" style="transform-origin: 570px 395px 0px; transform: scale(0);" xlink:href="#pātaka-symbol" transform="scale(1)" x="570" y="395" fill="var(--pātaka-color)"/>
+      <use id="follow-symbol_mobile" opacity="0" style="transform-origin: 571px 399px 0px; transform: scale(0);" xlink:href="#follow-symbol" x="571" y="399" fill="var(--group-b-color)" stroke="var(--group-b-color)"/>
+      <use id="invite-button_mobile" opacity="0" style="transform-origin: 570px 450px 0px; transform: scale(0);" fill="var(--devices-color)" xlink:href="#invite-button" x="570" y="450"/>
+      <use id="connected-button_mobile" opacity="0" style="transform-origin: 570px 450px 0px; transform: scale(0.95);" fill="var(--group-b-color)" xlink:href="#connected-button" x="570" y="450"/>
+      <use id="add-button_mobile-b" opacity="0" style="transform-origin: 570px 450px 0px; transform: scale(0);" fill="var(--group-a-color)" xlink:href="#add-button" x="570" y="450"/>
     </g>
+
     <use id="defocus-mobile-b" opacity="0.3" xlink:href="#mobile" x="570" y="430" fill="var(--mid-light-grey)" stroke="var(--mid-light-grey)"/>
   </g>
 
-  <g id="mobile-c" opacity="0" style="transform-origin: 690px 610px 0px; transform: scale(1.5);" transform="scale(1)">
-    <use xlink:href="#mobile" x="690" y="610" fill="var(--group-a-color)" stroke="var(--group-a-outline)"/>
-    <use id="kuia-copy_c" xlink:href="#kuia" x="670" y="592" style="transform-origin: 670px 592px 0px; opacity: 1;" transform="scale(0.5)"/>
-    <use id="koro-copy_c" xlink:href="#koro" x="691" y="592" style="transform-origin: 691px 592px 0px; opacity: 1;" transform="scale(0.5)"/>
-    <circle id="wahine-c_copy" opacity="1 " style="transform-origin: 670px 630px 0px; transform: scale(0);" cx="690" cy="625" r="10" stroke-width="4" fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
-    <use id="wahine-c" opacity="1" xlink:href="#wahine" x="690" y="625" style="transform-origin: 690px 625px 0px;" transform="scale(0.5)"/>
+  <g id="mobile-c" opacity="1" style="transform-origin: 690px 620px 0px; transform: scale(1.5);" transform="scale(1)">
+    <use xlink:href="#mobile" x="690" y="610" fill="var(--devices-color)" stroke="var(--outline-color)"/>
+    <use id="kuia-copy_c" xlink:href="#kuia" x="670" y="592" style="transform-origin: 670px 592px 0px; opacity: 0;" transform="scale(0.5)"/>
+    <use id="koro-copy_c" xlink:href="#koro" x="691" y="592" style="transform-origin: 691px 592px 0px; opacity: 0;" transform="scale(0.5)"/>
+    <circle id="wahine-c_copy" opacity="0" style="transform-origin: 670px 639px 0px; transform: scale(1);" cx="690" cy="625" r="10" stroke-width="4" fill="var(--encrypted-color)" stroke="var(--group-a-highlight)"/>
+    <use id="wahine-c" opacity="0" xlink:href="#wahine" x="690" y="625" style="transform-origin: 690px 625px 0px;" transform="scale(0.5)"/>
+
+    <use id="invite-symbol_mobile-c" opacity="0" style="transform-origin: 690px 605px 0px; transform: scale(0);" xlink:href="#pātaka-symbol-small" x="690" y="605" fill="var(--pātaka-color)"/>
+    <use id="follow-symbol_mobile-c" opacity="0" style="transform-origin: 691px 609px 0px; transform: scale(0);" xlink:href="#follow-symbol_small" x="691" y="609" fill="var(--group-b-color)" stroke="var(--group-b-color)"/>
+    <use id="invite-button_mobile-c" opacity="0" style="transform-origin: 690px 634px 0px; transform: scale(0);" fill="var(--devices-color)" xlink:href="#invite-button_icon" x="690" y="634"/>
+    <use id="connected-button_mobile-c" opacity="0" style="transform-origin: 690px 634px 0px;" fill="var(--group-b-color)" xlink:href="#invite-button_icon" x="690" y="634"/>
+    <use id="add-button_mobile-c" style="transform-origin: 690px 634px 0px; transform: scale(0); opacity: 0;" fill="var(--group-a-color)" xlink:href="#add-button" x="690" y="634"/>
     <use id="defocus-mobile-c" opacity="0.3" xlink:href="#mobile" x="690" y="610" fill="var(--mid-light-grey)" stroke="var(--mid-light-grey)"/>
   </g>
 
-  <g id="text" font-size="2em" fill="var(--outline-color)" text-anchor="middle">
-    <text id="text_connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau members receive connect codes from a Pātaka</text>
+  <g id="text" font-size="2.4em" fill="var(--outline-color)" text-anchor="middle">
+    <text id="text_connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 1;">Whānau members receive connect codes from a Pātaka</text>
     <text id="text_accept-connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau members accept invitation and connect to the Pātaka</text>
-    <text id="text_user-b-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member B creates a new whakapapa record, it is backed up to the Pātaka</text>
-    <text id="text_record-replicated-ac" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The Pātaka replicates the whakapapa record to whānau members A and C</text>
-    <text id="text_user-a-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member A creates a new whakapapa record, it is backed up to the Pātaka</text>
-    <text id="text_record-replicated-bc" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The Pātaka replicates the whakapapa record to whānau members B and C</text>
+    <text id="text_user-b-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member B creates a new whakapapa record</text>
+    <text id="text_it-is-backed-up" filter="url(#caption-bg)" x="500" y="90" style="opacity: 0;">it is backed up to the Pātaka</text>
+    <text id="text_record-replicated-ac" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The Pātaka replicates the whakapapa record to A and C</text>
+    <text id="text_user-a-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member A creates a new whakapapa record</text>
+    <text id="text_record-replicated-bc" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The Pātaka replicates the whakapapa record to B and C</text>
     <text id="text_new-pātaka-set-up" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">A second Pātaka is set up</text>
     <text id="text_new-pātaka-connect-code" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The new Pātaka receives a connect code from the existing Pātaka</text>
     <text id="text_laptop-content-replicated-to-server" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The existing Pātaka's content is replicated to the new Pātaka</text>
     <text id="text_server-connected-to-abc" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The new Pātaka is now connected to whānau members A, B, and C</text>
-    <text id="text_if-offline" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">If the original Pātaka goes offline:</text>
+    <text id="text_if-offline" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">If the original Pātaka goes offline</text>
     <text id="text_still-connected" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The whānau members are still connected via the new Pātaka</text>
   </g>
+
+  <style>
+
+</style>
 
 </svg>
