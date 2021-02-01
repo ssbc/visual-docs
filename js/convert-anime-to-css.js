@@ -10,9 +10,8 @@ function getAnimeJsData (timeline) {
   const timelineDuration = timeline.duration
   const keyframeData = {}
   const easings = {}
-  const targetIds = getTargetIds(timeline)
-
-  targetIds.forEach(id => {
+  
+  getTargetIds(timeline).forEach(id => {
     keyframeData[id] = []
     easings[id] = []
   })
