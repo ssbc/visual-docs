@@ -58,7 +58,7 @@ function convertDataToCss (animeData) {
 
   const timingDeclaration = combineTargetsAndDuration(targetIds, timelineDuration)
   const easingDeclaration = makeTargetListForEachEasing(cssEasings)
-  const keyframesDeclaration = formatKeyframesAsCss(keyframeData)
+  const keyframesDeclaration = formatKeyframesAsCss(percentageKeyframes)
   const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 
   return css
@@ -313,8 +313,8 @@ function makeLoopSafe (keyframesForTarget) {
   // repeat a property's last stated value if it isn't mentioned in the final keyframe
   // this stops CSS automatically tweening towards the starting value as it nears the end
   const orderedTimings = Object.keys(keyframesForTarget).sort((a, b) => { return a - b })
-  const finalKeyframeTiming = orderedTimings.slice(-1)[0]
-  const isNotInFinalKeyframe = (property) => !(Object.keys(keyframesForTarget[finalKeyframeTiming]).includes(property))
+  const finalKeyframe = orderedTimings.slice(-1)[0]
+  const isNotInFinalKeyframe = (property) => !(Object.keys(keyframesForTarget[finalKeyframe]).includes(property))
   const allAnimatedProperties = new Set()
 
   orderedTimings.forEach(keyframe => {
@@ -325,14 +325,13 @@ function makeLoopSafe (keyframesForTarget) {
 
   if (missingProperties.length) {
     missingProperties.forEach(property => {
-      const propertyKeyframes = []
-
-      orderedTimings.forEach(keyframe => {
-        if (keyframesForTarget[keyframe][property]) propertyKeyframes.push(keyframesForTarget[keyframe][property])
-      })
+      const propertyKeyframes = orderedTimings.reduce((acc, keyframe) => {
+        if (keyframesForTarget[keyframe][property]) acc.push(keyframesForTarget[keyframe][property])
+        return acc
+      }, [])
 
       if (propertyKeyframes[0] !== propertyKeyframes.slice(-1)[0]) {
-        keyframesForTarget[orderedTimings.slice(-1)[0]][property] = propertyKeyframes.slice(-1)[0]
+        keyframesForTarget[finalKeyframe][property] = propertyKeyframes.slice(-1)[0]
       }
     })
   }
