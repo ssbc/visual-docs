@@ -46,18 +46,18 @@ function getAnimeJsData (timeline) {
 function convertDataToCss (animeData) {
   const { keyframeData, easings, timelineDuration } = animeData
   const targetIds = Object.keys(keyframeData)
-  const oneEasingPerTarget = {}
-  const oneCssEasingPerTarget = {}
+  const cssEasings = {}
+  const percentageKeyframes = {}
 
   targetIds.forEach(id => {
-    oneEasingPerTarget[id] = determineEasing(id, easings)
-    oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
-    keyframeData[id] = repeatValuesInFinalKeyframe(keyframeData[id])
-    keyframeData[id] = convertToPercentageKeyframes(keyframeData[id], timelineDuration)
+    const easing = determineEasing(id, easings)
+    cssEasings[id] = convertEasingToBezier(easing)
+    const loopSafeKeyframes = makeLoopSafe(keyframeData[id])
+    percentageKeyframes[id] = convertToPercentageKeyframes(loopSafeKeyframes, timelineDuration)
   })
 
   const timingDeclaration = combineTargetsAndDuration(targetIds, timelineDuration)
-  const easingDeclaration = makeTargetListForEachEasing(oneCssEasingPerTarget)
+  const easingDeclaration = makeTargetListForEachEasing(cssEasings)
   const keyframesDeclaration = formatKeyframesAsCss(keyframeData)
   const css = `${timingDeclaration}${easingDeclaration}${keyframesDeclaration}`
 
@@ -278,8 +278,7 @@ function calculateMostFrequentEasings (easingsUsed, easingFrequencies, id) {
   return mostFrequentEasings[0]
 }
 
-function convertEasingToBezier (id, oneEasingPerTarget) {
-  const easingName = oneEasingPerTarget[id]
+function convertEasingToBezier (easingName) {
   const validEasings = {
     linear: 'linear',
     easeInSine: 'cubic-bezier(0.12, 0, 0.39, 0)',
@@ -310,7 +309,9 @@ function convertEasingToBezier (id, oneEasingPerTarget) {
   return validEasings[easingName]
 }
 
-function repeatValuesInFinalKeyframe (keyframesForTarget) {
+function makeLoopSafe (keyframesForTarget) {
+  // repeat a property's last stated value if it isn't mentioned in the final keyframe
+  // this stops CSS automatically tweening towards the starting value as it nears the end
   const orderedTimings = Object.keys(keyframesForTarget).sort((a, b) => { return a - b })
   const finalKeyframeTiming = orderedTimings.slice(-1)[0]
   const isNotInFinalKeyframe = (property) => !(Object.keys(keyframesForTarget[finalKeyframeTiming]).includes(property))
