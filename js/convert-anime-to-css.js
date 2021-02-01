@@ -52,6 +52,7 @@ function convertDataToCss (animeData) {
   targetIds.forEach(id => {
     oneEasingPerTarget[id] = determineEasing(id, easings)
     oneCssEasingPerTarget[id] = convertEasingToBezier(id, oneEasingPerTarget)
+    keyframeData[id] = repeatValuesInFinalKeyframe(keyframeData[id])
     keyframeData[id] = convertToPercentageKeyframes(keyframeData[id], timelineDuration)
   })
 
@@ -307,6 +308,34 @@ function convertEasingToBezier (id, oneEasingPerTarget) {
     easeInOutBack: 'cubic-bezier(0.68, -0.6, 0.32, 1.6)'
   }
   return validEasings[easingName]
+}
+
+function repeatValuesInFinalKeyframe (keyframesForTarget) {
+  const orderedTimings = Object.keys(keyframesForTarget).sort((a, b) => { return a - b })
+  const finalKeyframeTiming = orderedTimings.slice(-1)[0]
+  const isNotInFinalKeyframe = (property) => !(Object.keys(keyframesForTarget[finalKeyframeTiming]).includes(property))
+  const allAnimatedProperties = new Set()
+
+  orderedTimings.forEach(keyframe => {
+    Object.keys(keyframesForTarget[keyframe]).forEach(property => allAnimatedProperties.add(property))
+  })
+
+  const missingProperties = [...allAnimatedProperties].filter(isNotInFinalKeyframe)
+
+  if (missingProperties.length) {
+    missingProperties.forEach(property => {
+      const propertyKeyframes = []
+
+      orderedTimings.forEach(keyframe => {
+        if (keyframesForTarget[keyframe][property]) propertyKeyframes.push(keyframesForTarget[keyframe][property])
+      })
+
+      if (propertyKeyframes[0] !== propertyKeyframes.slice(-1)[0]) {
+        keyframesForTarget[orderedTimings.slice(-1)[0]][property] = propertyKeyframes.slice(-1)[0]
+      }
+    })
+  }
+  return keyframesForTarget
 }
 
 function convertToPercentageKeyframes (keyframesForTarget, timelineDuration) {
