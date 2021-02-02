@@ -25,14 +25,13 @@ function getAnimeJsData (timeline) {
       animation.tweens.forEach(tween => {
         const tweenStart = tween.start + tween.delay + anim.timelineOffset
         const tweenEnd = tween.end + anim.timelineOffset
-
-        easings[targetId].push(getEasingName(tween))
         const { fromValues, toValues } = getFromAndToValues(tween, animatedProperty)
         keyframeData[targetId] = getKeyframeTimings(keyframeData[targetId], tweenStart, tweenEnd)
-
         keyframeData[targetId] = (isTransform(animatedProperty))
           ? addValuesToTransformObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
           : addValuesToPropertyObject(keyframeData[targetId], animatedProperty, tweenStart, tweenEnd, fromValues, toValues)
+
+        easings[targetId].push(getEasingName(tween))
       })
     })
   })
