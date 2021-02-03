@@ -336,17 +336,27 @@ function makeLoopSafe (keyframesForTarget) {
 function convertToPercentageKeyframes (keyframesForTarget, timelineDuration) {
   const percentageKeyframesAndValues = {}
   const absoluteKeyframes = Object.keys(keyframesForTarget).sort((a, b) => { return a - b })
+  const precision = calculatePrecisionRequired(absoluteKeyframes, timelineDuration)
 
   absoluteKeyframes.forEach(absoluteKeyframe => {
-    const percentageKeyframe = getPercentageString(absoluteKeyframe, timelineDuration)
+    const percentageKeyframe = getPercentageString(absoluteKeyframe, timelineDuration, precision)
     const bookendedKeyframe = addZeroAndHundredPercentStrings(absoluteKeyframe, absoluteKeyframes, percentageKeyframe)
     percentageKeyframesAndValues[bookendedKeyframe] = keyframesForTarget[absoluteKeyframe]
   })
   return percentageKeyframesAndValues
 }
 
-function getPercentageString (partial, total) {
-  return Math.round(partial / total * 10000 + Number.EPSILON) / 100 + '%'
+function calculatePrecisionRequired (keyframeArray, duration) {
+  const smallestDifference = keyframeArray.reduce((acc, keyframe, index, arr) =>
+    (keyframe - arr[index - 1] < acc || acc === '0') ? keyframe - arr[index - 1] : acc)
+  const precision = duration / smallestDifference
+  const precisionLevelRequired = (n) => Math.max(100, Math.pow(10, Math.floor(Math.log(n) / Math.LN10 + 0.000000001)) / 10)
+
+  return precisionLevelRequired(precision)
+}
+
+function getPercentageString (partial, total, precisionLevel) {
+  return Math.round(partial / total * 100 * precisionLevel + Number.EPSILON) / precisionLevel + '%'
 }
 
 function addZeroAndHundredPercentStrings (absoluteKeyframe, absoluteKeyframes, percentageKeyframe) {
