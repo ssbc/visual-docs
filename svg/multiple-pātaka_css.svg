@@ -34,811 +34,795 @@
 
   <style>
     /* <![CDATA[ */
-      :root {
-       --group-b-outline: hsl(42, 80%, 20%);
-       --group-b-color: hsl(42, 74.9%, 56.3%);
-       --group-b-highlight: hsl(42, 90%, 75%);
-       --group-b-tint: hsl(42, 90%, 95%);
-
-       --icon-bg-color: hsl(180, 25.4%, 40%);
-       --group-a-outline: hsl(180, 25.4%, 24.7%);
-       --group-a-shade: hsl(182, 20%, 30%);
-       --group-a-color: hsl(182, 25.5%, 50%);
-       --group-a-highlight: hsl(182, 55%, 75%);
-       --group-a-tint: hsl(182, 95%, 95%);
-       --group-a-medium-tint: hsl(182, 30%, 65%);
-
-       --group-c-outline: hsl(360, 85%, 22%);
-       --group-c-symbol-color: hsl(360, 65.4%, 42%);
-       --group-c-color: hsl(360, 70%, 60%);
-       --group-c-files: hsl(360, 65.4%, 52%);
-       --group-c-highlight: hsl(360, 85%, 75%);
-       --group-c-tint: hsl(0, 85%, 95%);
-
-       --pātaka-color: hsl(360, 65.4%, 42%);
-       --pātaka-label-color: hsl(360, 65.4%, 52%);
-
-       --icon-bg-color: hsl(180, 25.4%, 40%);
-       --outline-color: hsl(0, 0%, 22%);
-       --white: hsl(0, 0%, 100%);
-       --mid-grey: hsl(0, 0%, 41.2%);
-       --mid-light-grey: hsl(0, 0%, 60%);
-       --encrypted-color: hsl(0, 0%, 80%);
-       --light-grey: hsl(0, 0%, 90%);
-       --devices-color: hsl(0, 0%, 29.8%);
-       --pounamu: hsl(118, 100.0%, 9.4%);
-      }
-
-      /* animations */
-      #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text_connect-codes-laptop, #follow-lines_laptop, #connect-code_in-transit_laptop-b, #connect-code_in-transit_laptop-a, #connect-code_in-transit_laptop-c, #defocus-mobile-b, #invite-symbol_mobile-a, #invite-button_mobile-a, #invite-symbol_mobile, #invite-button_mobile, #invite-symbol_mobile-c, #invite-button_mobile-c, #text_accept-connect-codes-laptop, #connected-button_mobile, #follow-symbol_mobile, #follow-line_b-laptop_connected, #connected-button_mobile-a, #connected-button_mobile-c, #follow-symbol_mobile-a, #follow-symbol_mobile-c, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #add-button_mobile-b, #kuia-b, #text_it-is-backed-up, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #add-button_mobile-a, #koro_a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-copy_b, #koro-copy_c, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #connect-code_in-transit_laptop-server, #invite-symbol_server, #invite-button_server, #connected-button_server, #follow-symbol_server, #follow-line_laptop-server_connected, #invite_server, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #add-button_mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
-        animation-duration:121.07s;
-        animation-iteration-count: infinite;
-      }
-
-      #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text_connect-codes-laptop, #follow-lines_laptop, #connect-code_in-transit_laptop-b, #connect-code_in-transit_laptop-a, #connect-code_in-transit_laptop-c, #defocus-mobile-b, #invite-symbol_mobile-a, #invite-button_mobile-a, #invite-symbol_mobile, #invite-button_mobile, #invite-symbol_mobile-c, #invite-button_mobile-c, #text_accept-connect-codes-laptop, #connected-button_mobile, #follow-symbol_mobile, #follow-line_b-laptop_connected, #connected-button_mobile-a, #connected-button_mobile-c, #follow-symbol_mobile-a, #follow-symbol_mobile-c, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #add-button_mobile-b, #text_it-is-backed-up, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #add-button_mobile-a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-copy_b, #koro-copy_c, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #connect-code_in-transit_laptop-server, #invite-symbol_server, #invite-button_server, #connected-button_server, #follow-symbol_server, #follow-line_laptop-server_connected, #invite_server, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #add-button_mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
-       animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
-      }
-
-      #kuia-b, #koro_a {
-       animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-      }
-
-      #connections { animation-name: connections-anim; }
-      @keyframes connections-anim {
-        0% { opacity: 0; }
-        0.41% { opacity: 1; }
-        99.17% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      #mobile-a { animation-name: mobile-a-anim; }
-      @keyframes mobile-a-anim {
-        0%, 0.83% { opacity: 0; transform: scale(0); }
-        1.24% { opacity: 1; transform: scale(1.5); }
-        33.16% { transform: scale(1.5); }
-        33.58% { transform: scale(3); }
-        43.2% { transform: scale(3); }
-        43.45% { transform: scale(1.5); }
-        99.17% { opacity: 1; }
-        100% { opacity: 0; transform: scale(1.5); }
-      }
-
-      #mobile-b { animation-name: mobile-b-anim; }
-      @keyframes mobile-b-anim {
-        0%, 0.95% { opacity: 0; transform: scale(0); }
-        1.36% { opacity: 1; transform: scale(1.5); }
-        9.37% { transform: scale(1.5); }
-        9.79% { transform: scale(3); }
-        27.45% { transform: scale(3); }
-        27.7% { transform: scale(1.5); }
-        99.17% { opacity: 1; }
-        100% { opacity: 0; transform: scale(1.5); }
-      }
-
-      #mobile-c { animation-name: mobile-c-anim; }
-      @keyframes mobile-c-anim {
-        0%, 1.07% { opacity: 0; transform: scale(0); }
-        1.49% { opacity: 1; transform: scale(1.5); }
-        84.84% { transform: scale(1.5); }
-        85.26% { transform: scale(3); }
-        91.37% { transform: scale(3); }
-        91.62% { transform: scale(1.5); }
-        99.17% { opacity: 1; }
-        100% { opacity: 0; transform: scale(1.5); }
-      }
-
-      #pātaka_laptop { animation-name: pātaka_laptop-anim; }
-      @keyframes pātaka_laptop-anim {
-        0%, 2.31% { opacity: 0; transform: scale(0); }
-        2.73% { opacity: 1; transform: scale(1); }
-        78.44% { opacity: 1; }
-        78.52% { opacity: 0; }
-        78.69% { opacity: 0; }
-        78.9% { opacity: 1; }
-        78.98% { opacity: 1; }
-        79.14% { opacity: 0; }
-        79.23% { opacity: 0; }
-        79.35% { opacity: 1; }
-        79.43% { opacity: 1; }
-        79.52%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #device_laptop { animation-name: device_laptop-anim; }
-      @keyframes device_laptop-anim {
-        0%, 5.2% { opacity: 1; }
-        5.62%, 100% { opacity: 0; }
-      }
-
-      #text_connect-codes-laptop { animation-name: text_connect-codes-laptop-anim; }
-      @keyframes text_connect-codes-laptop-anim {
-        0%, 5.62% { opacity: 0; }
-        7.27% { opacity: 1; }
-        9.79% { opacity: 1; }
-        10.2%, 100% { opacity: 0; }
-      }
-
-      #follow-lines_laptop { animation-name: follow-lines_laptop-anim; }
-      @keyframes follow-lines_laptop-anim {
-        0%, 8.09% { opacity: 0; }
-        8.51% { opacity: 1; }
-        16.18% { opacity: 1; }
-        16.59%, 100% { opacity: 0; }
-      }
-
-      #connect-code_in-transit_laptop-b { animation-name: connect-code_in-transit_laptop-b-anim; }
-      @keyframes connect-code_in-transit_laptop-b-anim {
-        0%, 8.48% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        8.49% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        9.32% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        9.33%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
-      }
-
-      #connect-code_in-transit_laptop-a { animation-name: connect-code_in-transit_laptop-a-anim; }
-      @keyframes connect-code_in-transit_laptop-a-anim {
-        0%, 8.65% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        8.66% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        9.57% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        9.58%, 100% { opacity: 0; transform: translateX(380px) translateY(190px); }
-      }
-
-      #connect-code_in-transit_laptop-c { animation-name: connect-code_in-transit_laptop-c-anim; }
-      @keyframes connect-code_in-transit_laptop-c-anim {
-        0%, 8.77% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        8.78% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        9.61% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        9.62%, 100% { opacity: 0; transform: translateX(690px) translateY(610px); }
-      }
-
-      #defocus-mobile-b { animation-name: defocus-mobile-b-anim; }
-      @keyframes defocus-mobile-b-anim {
-        0%, 9.29% { opacity: 0.3; }
-        9.79% { opacity: 0; }
-        27.41% { opacity: 0; }
-        27.74%, 100% { opacity: 0.3; }
-      }
-
-      #invite-symbol_mobile-a { animation-name: invite-symbol_mobile-a-anim; }
-      @keyframes invite-symbol_mobile-a-anim {
-        0%, 8.84% { opacity: 0; transform: scale(0); }
-        9.25% { opacity: 1; transform: scale(1); }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #invite-button_mobile-a { animation-name: invite-button_mobile-a-anim; }
-      @keyframes invite-button_mobile-a-anim {
-        0%, 8.84% { opacity: 0; transform: scale(0); }
-        9.25% { opacity: 1; transform: scale(1); }
-        15.54% { opacity: 0.7; }
-        15.56%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #invite-symbol_mobile { animation-name: invite-symbol_mobile-anim; }
-      @keyframes invite-symbol_mobile-anim {
-        0%, 8.84% { opacity: 0; transform: scale(0); }
-        9.25% { opacity: 1; transform: scale(1); }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #invite-button_mobile { animation-name: invite-button_mobile-anim; }
-      @keyframes invite-button_mobile-anim {
-        0%, 8.84% { opacity: 0; transform: scale(0); }
-        9.25% { opacity: 1; transform: scale(1); }
-        12.68% { transform: scale(1); opacity: 1; }
-        12.89% { transform: scale(1.05); opacity: 1; }
-        13.5% { transform: scale(1.05); opacity: 1; }
-        13.79% { transform: scale(0.95); opacity: 0.7; }
-        14% { transform: scale(0.95); opacity: 0.7; }
-        14.01%, 100% { transform: scale(0.95); opacity: 0; }
-      }
-
-      #invite-symbol_mobile-c { animation-name: invite-symbol_mobile-c-anim; }
-      @keyframes invite-symbol_mobile-c-anim {
-        0%, 8.84% { opacity: 0; transform: scale(0); }
-        9.25% { opacity: 1; transform: scale(1); }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #invite-button_mobile-c { animation-name: invite-button_mobile-c-anim; }
-      @keyframes invite-button_mobile-c-anim {
-        0%, 8.84% { opacity: 0; transform: scale(0); }
-        9.25% { opacity: 1; transform: scale(1); }
-        16.37% { opacity: 0.7; }
-        16.38%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #text_accept-connect-codes-laptop { animation-name: text_accept-connect-codes-laptop-anim; }
-      @keyframes text_accept-connect-codes-laptop-anim {
-        0%, 10.2% { opacity: 0; }
-        11.85% { opacity: 1; }
-        17.83% { opacity: 1; }
-        18.24%, 100% { opacity: 0; }
-      }
-
-      #connected-button_mobile { animation-name: connected-button_mobile-anim; }
-      @keyframes connected-button_mobile-anim {
-        0%, 14% { transform: scale(0.95); opacity: 0; }
-        14.01% { transform: scale(0.95); opacity: 1; }
-        14.3% { transform: scale(1); opacity: 1; }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #follow-symbol_mobile { animation-name: follow-symbol_mobile-anim; }
-      @keyframes follow-symbol_mobile-anim {
-        0%, 14.01% { opacity: 0; transform: scale(0); }
-        14.3% { opacity: 1; transform: scale(1.3); }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1.3); }
-      }
-
-      #follow-line_b-laptop_connected { animation-name: follow-line_b-laptop_connected-anim; }
-      @keyframes follow-line_b-laptop_connected-anim {
-        0%, 14.1% { opacity: 0; }
-        14.51% { opacity: 1; }
-        26.42% { stroke-dasharray: 8,12px; }
-        26.71% { stroke-dasharray: 0,0px; }
-        27.53% { stroke-dasharray: 0,0px; }
-        27.74% { stroke-dasharray: 8,12px; }
-        48.46% { stroke-dasharray: 8,12px; }
-        48.75% { stroke-dasharray: 0,0px; }
-        49.99% { stroke-dasharray: 0,0px; }
-        50.19% { stroke-dasharray: 8,12px; }
-        79.85% { opacity: 1; }
-        80.26%, 100% { opacity: 0; }
-      }
-
-      #connected-button_mobile-a { animation-name: connected-button_mobile-a-anim; }
-      @keyframes connected-button_mobile-a-anim {
-        0%, 15.54% { opacity: 0; }
-        15.56% { opacity: 1; }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; }
-      }
-
-      #connected-button_mobile-c { animation-name: connected-button_mobile-c-anim; }
-      @keyframes connected-button_mobile-c-anim {
-        0%, 16.37% { opacity: 0; }
-        16.38% { opacity: 1; }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; }
-      }
-
-      #follow-symbol_mobile-a { animation-name: follow-symbol_mobile-a-anim; }
-      @keyframes follow-symbol_mobile-a-anim {
-        0%, 15.27% { opacity: 0; transform: scale(0); }
-        15.56% { opacity: 1; transform: scale(1.3); }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1.3); }
-      }
-
-      #follow-symbol_mobile-c { animation-name: follow-symbol_mobile-c-anim; }
-      @keyframes follow-symbol_mobile-c-anim {
-        0%, 16.09% { opacity: 0; transform: scale(0); }
-        16.38% { opacity: 1; transform: scale(1.3); }
-        17.41% { opacity: 1; }
-        17.83%, 100% { opacity: 0; transform: scale(1.3); }
-      }
-
-      #follow-line_a-laptop_connected { animation-name: follow-line_a-laptop_connected-anim; }
-      @keyframes follow-line_a-laptop_connected-anim {
-        0%, 15.35% { opacity: 0; }
-        15.76% { opacity: 1; }
-        31.22% { stroke-dasharray: 8,12px; }
-        31.51% { stroke-dasharray: 0,0px; }
-        32.75% { stroke-dasharray: 0,0px; }
-        32.96% { stroke-dasharray: 8,12px; }
-        42.17% { stroke-dasharray: 8,12px; }
-        42.46% { stroke-dasharray: 0,0px; }
-        43.28% { stroke-dasharray: 0,0px; }
-        43.49% { stroke-dasharray: 8,12px; }
-        79.97% { opacity: 1; }
-        80.38%, 100% { opacity: 0; }
-      }
-
-      #follow-line_c-laptop_connected { animation-name: follow-line_c-laptop_connected-anim; }
-      @keyframes follow-line_c-laptop_connected-anim {
-        0%, 16.18% { opacity: 0; }
-        16.59% { opacity: 1; }
-        31.22% { stroke-dasharray: 8,12px; }
-        31.51% { stroke-dasharray: 0,0px; }
-        32.75% { stroke-dasharray: 0,0px; }
-        32.96% { stroke-dasharray: 8,12px; }
-        48.46% { stroke-dasharray: 8,12px; }
-        48.75% { stroke-dasharray: 0,0px; }
-        49.99% { stroke-dasharray: 0,0px; }
-        50.19% { stroke-dasharray: 8,12px; }
-        80.09% { opacity: 1; }
-        80.51%, 100% { opacity: 0; }
-      }
-
-      #text_user-b-creates-record { animation-name: text_user-b-creates-record-anim; }
-      @keyframes text_user-b-creates-record-anim {
-        0%, 18.24% { opacity: 0; }
-        19.89% { opacity: 1; }
-        28.32% { opacity: 1; }
-        28.73%, 100% { opacity: 0; }
-      }
-
-      #add-button_mobile-b { animation-name: add-button_mobile-b-anim; }
-      @keyframes add-button_mobile-b-anim {
-        0%, 20.72% { transform: scale(0); opacity: 0; }
-        21.34% { transform: scale(1); opacity: 1; }
-        22.16% { transform: scale(1.05); opacity: 1; }
-        22.66% { transform: scale(0.95); opacity: 0.7; }
-        22.95% { transform: scale(1); opacity: 0.7; }
-        23.16%, 100% { transform: scale(1); opacity: 0; }
-      }
-
-      #kuia-b { animation-name: kuia-b-anim; }
-      @keyframes kuia-b-anim {
-        0%, 23.07% { transform: scale(0); opacity: 0; }
-        23.28%, 100% { transform: scale(1); opacity: 1; }
-      }
-
-      #text_it-is-backed-up { animation-name: text_it-is-backed-up-anim; }
-      @keyframes text_it-is-backed-up-anim {
-        0%, 23.28% { opacity: 0; }
-        24.93% { opacity: 1; }
-        28.32% { opacity: 1; }
-        28.73% { opacity: 0; }
-        39.03% { opacity: 0; }
-        40.68% { opacity: 1; }
-        44.31% { opacity: 1; }
-        45.97%, 100% { opacity: 0; }
-      }
-
-      #kuia-b_copy { animation-name: kuia-b_copy-anim; }
-      @keyframes kuia-b_copy-anim {
-        0%, 25.76% { opacity: 0; transform: scale(1); }
-        25.96% { opacity: 1; transform: scale(1); }
-        26.38% { opacity: 1; transform: scale(1); }
-        26.58%, 100% { opacity: 1; transform: scale(0); }
-      }
-
-      #file_in-transit_b-laptop { animation-name: file_in-transit_b-laptop-anim; }
-      @keyframes file_in-transit_b-laptop-anim {
-        0%, 26.68% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        26.69% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        27.52% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        27.53% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        48.72% { opacity: 0; transform: translateX(350px) translateY(630px); }
-        48.73% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        49.56% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        49.57%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
-      }
-
-      #storage_laptop { animation-name: storage_laptop-anim; }
-      @keyframes storage_laptop-anim {
-        0%, 27.33% { transform: scale(0); opacity: 0; }
-        27.74% { transform: scale(1); opacity: 1; }
-        77.62% { opacity: 1; }
-        78.03%, 100% { opacity: 0; transform: scale(1); }
-      }
-
-      #file_laptop_b { animation-name: file_laptop_b-anim; }
-      @keyframes file_laptop_b-anim {
-        0%, 27.9% { transform: scale(0); }
-        28.32%, 100% { transform: scale(1); }
-      }
-
-      #text_record-replicated-ac { animation-name: text_record-replicated-ac-anim; }
-      @keyframes text_record-replicated-ac-anim {
-        0%, 28.73% { opacity: 0; }
-        30.38% { opacity: 1; }
-        33.58% { opacity: 1; }
-        33.99%, 100% { opacity: 0; }
-      }
-
-      #file_laptop_b-copy { animation-name: file_laptop_b-copy-anim; }
-      @keyframes file_laptop_b-copy-anim {
-        0%, 30.8% { opacity: 0; transform: scale(1); }
-        30.81% { opacity: 1; transform: scale(1); }
-        31.21% { opacity: 1; transform: scale(0); }
-        31.22% { opacity: 0; transform: scale(0); }
-        68.72% { opacity: 0; transform: scale(0); }
-        68.74% { opacity: 1; transform: scale(1); }
-        69.14% { opacity: 1; transform: scale(0); }
-        69.15%, 100% { opacity: 0; transform: scale(0); }
-      }
-
-      #file_in-transit_a-laptop { animation-name: file_in-transit_a-laptop-anim; }
-      @keyframes file_in-transit_a-laptop-anim {
-        0%, 31.48% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        31.5% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        32.32% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        32.34% { opacity: 0; transform: translateX(380px) translateY(190px); }
-        42.43% { opacity: 0; transform: translateX(380px) translateY(190px); }
-        42.44% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        43.27% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        43.28%, 100% { opacity: 0; transform: translateX(350px) translateY(630px); }
-      }
-
-      #file_in-transit_c-laptop { animation-name: file_in-transit_c-laptop-anim; }
-      @keyframes file_in-transit_c-laptop-anim {
-        0%, 31.48% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        31.5% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        32.32% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        32.34% { opacity: 0; transform: translateX(690px) translateY(610px); }
-        48.72% { opacity: 0; transform: translateX(690px) translateY(610px); }
-        48.73% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        49.56% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        49.57%, 100% { opacity: 0; transform: translateX(690px) translateY(610px); }
-      }
-
-      #kuia-copy_a { animation-name: kuia-copy_a-anim; }
-      @keyframes kuia-copy_a-anim {
-        0%, 32.34% { opacity: 0; }
-        32.75%, 100% { opacity: 1; }
-      }
-
-      #kuia-copy_c { animation-name: kuia-copy_c-anim; }
-      @keyframes kuia-copy_c-anim {
-        0%, 32.34% { opacity: 0; }
-        32.75%, 100% { opacity: 1; }
-      }
-
-      #defocus-mobile-a { animation-name: defocus-mobile-a-anim; }
-      @keyframes defocus-mobile-a-anim {
-        0%, 33.29% { opacity: 0.3; }
-        33.58% { opacity: 0; }
-        43.2% { opacity: 0; }
-        43.49%, 100% { opacity: 0.3; }
-      }
-
-      #text_user-a-creates-record { animation-name: text_user-a-creates-record-anim; }
-      @keyframes text_user-a-creates-record-anim {
-        0%, 33.99% { opacity: 0; }
-        35.64% { opacity: 1; }
-        44.31% { opacity: 1; }
-        45.97%, 100% { opacity: 0; }
-      }
-
-      #add-button_mobile-a { animation-name: add-button_mobile-a-anim; }
-      @keyframes add-button_mobile-a-anim {
-        0%, 36.47% { transform: scale(0); opacity: 0; }
-        37.09% { transform: scale(0.5); opacity: 1; }
-        37.91% { transform: scale(0.55); opacity: 1; }
-        38.41% { transform: scale(0.45); opacity: 0.7; }
-        38.7% { transform: scale(0.5); opacity: 0.7; }
-        38.9%, 100% { transform: scale(0.5); opacity: 0; }
-      }
-
-      #koro_a { animation-name: koro_a-anim; }
-      @keyframes koro_a-anim {
-        0%, 38.82% { transform: scale(0); opacity: 0; }
-        39.03%, 100% { transform: scale(0.5); opacity: 1; }
-      }
-
-      #koro_copy { animation-name: koro_copy-anim; }
-      @keyframes koro_copy-anim {
-        0%, 41.51% { opacity: 0; transform: scale(1); }
-        41.71% { opacity: 1; transform: scale(1); }
-        42.13% { opacity: 1; transform: scale(0.5); }
-        42.33%, 100% { opacity: 1; transform: scale(0); }
-      }
-
-      #file_laptop_a { animation-name: file_laptop_a-anim; }
-      @keyframes file_laptop_a-anim {
-        0%, 43.9% { transform: scale(0); }
-        44.31%, 100% { transform: scale(1); }
-      }
-
-      #text_record-replicated-bc { animation-name: text_record-replicated-bc-anim; }
-      @keyframes text_record-replicated-bc-anim {
-        0%, 45.97% { opacity: 0; }
-        47.62% { opacity: 1; }
-        50.19% { opacity: 1; }
-        50.61%, 100% { opacity: 0; }
-      }
-
-      #file_laptop_a-copy { animation-name: file_laptop_a-copy-anim; }
-      @keyframes file_laptop_a-copy-anim {
-        0%, 48.03% { opacity: 0; transform: scale(1); }
-        48.05% { opacity: 1; transform: scale(1); }
-        48.44% { opacity: 1; transform: scale(0); }
-        48.46% { opacity: 0; transform: scale(0); }
-        68.76% { opacity: 0; transform: scale(0); }
-        68.78% { opacity: 1; transform: scale(1); }
-        69.18% { opacity: 1; transform: scale(0); }
-        69.19%, 100% { opacity: 0; transform: scale(0); }
-      }
-
-      #koro-copy_b { animation-name: koro-copy_b-anim; }
-      @keyframes koro-copy_b-anim {
-        0%, 49.57% { opacity: 0; }
-        49.99%, 100% { opacity: 1; }
-      }
-
-      #koro-copy_c { animation-name: koro-copy_c-anim; }
-      @keyframes koro-copy_c-anim {
-        0%, 49.57% { opacity: 0; }
-        49.99%, 100% { opacity: 1; }
-      }
-
-      #text_new-pātaka-set-up { animation-name: text_new-pātaka-set-up-anim; }
-      @keyframes text_new-pātaka-set-up-anim {
-        0%, 50.61% { opacity: 0; }
-        52.26% { opacity: 1; }
-        54.74% { opacity: 1; }
-        55.15%, 100% { opacity: 0; }
-      }
-
-      #pātaka-server { animation-name: pātaka-server-anim; }
-      @keyframes pātaka-server-anim {
-        0%, 53.08% { opacity: 0; }
-        53.5% { opacity: 1; }
-        99.17% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      #pātaka-symbol_server { animation-name: pātaka-symbol_server-anim; }
-      @keyframes pātaka-symbol_server-anim {
-        0%, 54.32% { opacity: 1; }
-        54.74% { opacity: 0; }
-        64.17% { opacity: 0; }
-        64.58%, 100% { opacity: 1; }
-      }
-
-      #text_new-pātaka-connect-code { animation-name: text_new-pātaka-connect-code-anim; }
-      @keyframes text_new-pātaka-connect-code-anim {
-        0%, 55.15% { opacity: 0; }
-        56.8% { opacity: 1; }
-        65.82% { opacity: 1; }
-        66.23%, 100% { opacity: 0; }
-      }
-
-      #follow-line_laptop-server { animation-name: follow-line_laptop-server-anim; }
-      @keyframes follow-line_laptop-server-anim {
-        0%, 57.63% { opacity: 0; }
-        58.04% { opacity: 1; }
-        62.93% { opacity: 1; }
-        63.34%, 100% { opacity: 0; }
-      }
-
-      #connect-code_in-transit_laptop-server { animation-name: connect-code_in-transit_laptop-server-anim; }
-      @keyframes connect-code_in-transit_laptop-server-anim {
-        0%, 58.01% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        58.03% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        58.85% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        58.87%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
-      }
-
-      #invite-symbol_server { animation-name: invite-symbol_server-anim; }
-      @keyframes invite-symbol_server-anim {
-        0%, 58.82% { opacity: 0; transform: scale(0); }
-        59.24%, 100% { opacity: 1; transform: scale(1); }
-      }
-
-      #invite-button_server { animation-name: invite-button_server-anim; }
-      @keyframes invite-button_server-anim {
-        0%, 58.82% { opacity: 0; transform: scale(0); }
-        60.06% { opacity: 1; transform: scale(1.6); }
-        60.27% { opacity: 1; transform: scale(1.65); }
-        60.89% { opacity: 1; transform: scale(1.65); }
-        61.18% { opacity: 0.7; transform: scale(1.55); }
-        61.38% { opacity: 0.7; transform: scale(1.55); }
-        61.4%, 100% { opacity: 0; transform: scale(1.55); }
-      }
-
-      #connected-button_server { animation-name: connected-button_server-anim; }
-      @keyframes connected-button_server-anim {
-        0%, 61.38% { transform: scale(1.55); opacity: 0; }
-        61.4% { transform: scale(1.55); opacity: 1; }
-        61.69%, 100% { transform: scale(1.6); opacity: 1; }
-      }
-
-      #follow-symbol_server { animation-name: follow-symbol_server-anim; }
-      @keyframes follow-symbol_server-anim {
-        0%, 61.4% { opacity: 0; transform: scale(0); }
-        61.69%, 100% { opacity: 1; transform: scale(1.3); }
-      }
-
-      #follow-line_laptop-server_connected { animation-name: follow-line_laptop-server_connected-anim; }
-      @keyframes follow-line_laptop-server_connected-anim {
-        0%, 61.69% { opacity: 0; }
-        62.1% { opacity: 1; }
-        69.19% { stroke-dasharray: 8,12px; }
-        69.48% { stroke-dasharray: 0,0px; }
-        71.05% { stroke-dasharray: 0,0px; }
-        71.46% { stroke-dasharray: 8,12px; }
-        79.72% { opacity: 1; }
-        80.13%, 100% { opacity: 0; }
-      }
-
-      #invite_server { animation-name: invite_server-anim; }
-      @keyframes invite_server-anim {
-        0%, 62.93% { opacity: 1; }
-        63.34%, 100% { opacity: 0; }
-      }
-
-      #monitor-mask { animation-name: monitor-mask-anim; }
-      @keyframes monitor-mask-anim {
-        0%, 65.4% { opacity: 1; }
-        65.82%, 100% { opacity: 0; }
-      }
-
-      #device_server { animation-name: device_server-anim; }
-      @keyframes device_server-anim {
-        0%, 65.4% { opacity: 1; }
-        65.82%, 100% { opacity: 0; }
-      }
-
-      #text_laptop-content-replicated-to-server { animation-name: text_laptop-content-replicated-to-server-anim; }
-      @keyframes text_laptop-content-replicated-to-server-anim {
-        0%, 66.23% { opacity: 0; }
-        67.88% { opacity: 1; }
-        71.46% { opacity: 1; }
-        71.88%, 100% { opacity: 0; }
-      }
-
-      #file_in-transit_laptop-server { animation-name: file_in-transit_laptop-server-anim; }
-      @keyframes file_in-transit_laptop-server-anim {
-        0%, 69.45% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        69.47% { opacity: 1; transform: translateX(350px) translateY(630px); }
-        70.29% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        70.31%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
-      }
-
-      #storage_server { animation-name: storage_server-anim; }
-      @keyframes storage_server-anim {
-        0%, 70.1% { transform: scale(0); opacity: 0; }
-        70.51%, 100% { transform: scale(1); opacity: 1; }
-      }
-
-      #file_server_b { animation-name: file_server_b-anim; }
-      @keyframes file_server_b-anim {
-        0%, 70.51% { transform: scale(0); }
-        70.93%, 100% { transform: scale(1); }
-      }
-
-      #file_server_a { animation-name: file_server_a-anim; }
-      @keyframes file_server_a-anim {
-        0%, 70.64% { transform: scale(0); }
-        71.05%, 100% { transform: scale(1); }
-      }
-
-      #text_server-connected-to-abc { animation-name: text_server-connected-to-abc-anim; }
-      @keyframes text_server-connected-to-abc-anim {
-        0%, 71.88% { opacity: 0; }
-        73.53% { opacity: 1; }
-        74.72% { opacity: 1; }
-        75.14%, 100% { opacity: 0; }
-      }
-
-      #follow-line_b-server_connected { animation-name: follow-line_b-server_connected-anim; }
-      @keyframes follow-line_b-server_connected-anim {
-        0%, 73.73% { opacity: 0; }
-        74.15% { opacity: 1; }
-        93.31% { stroke-dasharray: 8,12px; }
-        93.6% { stroke-dasharray: 0,0px; }
-        94.84% { stroke-dasharray: 0,0px; }
-        95.04%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
-      }
-
-      #follow-line_a-server_connected { animation-name: follow-line_a-server_connected-anim; }
-      @keyframes follow-line_a-server_connected-anim {
-        0%, 74.02% { opacity: 0; }
-        74.44% { opacity: 1; }
-        93.31% { stroke-dasharray: 8,12px; }
-        93.6% { stroke-dasharray: 0,0px; }
-        94.84% { stroke-dasharray: 0,0px; }
-        95.04%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
-      }
-
-      #follow-line_c-server_connected { animation-name: follow-line_c-server_connected-anim; }
-      @keyframes follow-line_c-server_connected-anim {
-        0%, 74.31% { opacity: 0; }
-        74.72% { opacity: 1; }
-        90.34% { stroke-dasharray: 8,12px; }
-        90.63% { stroke-dasharray: 0,0px; }
-        91.45% { stroke-dasharray: 0,0px; }
-        91.66%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
-      }
-
-      #text_if-offline { animation-name: text_if-offline-anim; }
-      @keyframes text_if-offline-anim {
-        0%, 75.14% { opacity: 0; }
-        76.79% { opacity: 1; }
-        80.51% { opacity: 1; }
-        80.92%, 100% { opacity: 0; }
-      }
-
-      #text_still-connected { animation-name: text_still-connected-anim; }
-      @keyframes text_still-connected-anim {
-        0%, 80.92% { opacity: 0; }
-        82.57% { opacity: 1; }
-        84.22% { opacity: 1; }
-        84.64%, 100% { opacity: 0; }
-      }
-
-      #defocus-mobile-c { animation-name: defocus-mobile-c-anim; }
-      @keyframes defocus-mobile-c-anim {
-        0%, 84.97% { opacity: 0.3; }
-        85.26% { opacity: 0; }
-        91.37% { opacity: 0; }
-        91.66%, 100% { opacity: 0.3; }
-      }
-
-      #add-button_mobile-c { animation-name: add-button_mobile-c-anim; }
-      @keyframes add-button_mobile-c-anim {
-        0%, 86.08% { transform: scale(0); opacity: 0; }
-        86.7% { transform: scale(0.5); opacity: 1; }
-        87.53% { transform: scale(0.55); opacity: 1; }
-        88.02% { transform: scale(0.45); opacity: 0.7; }
-        88.31% { transform: scale(0.5); opacity: 0.7; }
-        88.52%, 100% { transform: scale(0.5); opacity: 0; }
-      }
-
-      #wahine-c { animation-name: wahine-c-anim; }
-      @keyframes wahine-c-anim {
-        0%, 88.44% { opacity: 0; }
-        88.85%, 100% { opacity: 1; }
-      }
-
-      #wahine-c_copy { animation-name: wahine-c_copy-anim; }
-      @keyframes wahine-c_copy-anim {
-        0%, 89.68% { opacity: 0; transform: scale(1); }
-        89.88% { opacity: 1; transform: scale(1); }
-        90.29% { opacity: 1; transform: scale(1); }
-        90.5%, 100% { opacity: 1; transform: scale(0); }
-      }
-
-      #file_in-transit_c-server { animation-name: file_in-transit_c-server-anim; }
-      @keyframes file_in-transit_c-server-anim {
-        0%, 90.6% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        90.61% { opacity: 1; transform: translateX(690px) translateY(610px); }
-        91.44% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        91.45%, 100% { opacity: 0; transform: translateX(430px) translateY(900px); }
-      }
-
-      #file_server_c { animation-name: file_server_c-anim; }
-      @keyframes file_server_c-anim {
-        0%, 92.07% { transform: scale(0); }
-        92.48%, 100% { transform: scale(1); }
-      }
-
-      #file_server_c-copy { animation-name: file_server_c-copy-anim; }
-      @keyframes file_server_c-copy-anim {
-        0%, 92.9% { opacity: 0; transform: scale(1); }
-        92.91% { opacity: 1; transform: scale(1); }
-        93.31%, 100% { opacity: 1; transform: scale(0); }
-      }
-
-      #file_in-transit_a-server { animation-name: file_in-transit_a-server-anim; }
-      @keyframes file_in-transit_a-server-anim {
-        0%, 93.57% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        93.58% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        94.41% { opacity: 1; transform: translateX(380px) translateY(190px); }
-        94.42%, 100% { opacity: 0; transform: translateX(380px) translateY(190px); }
-      }
-
-      #file_in-transit_b-server { animation-name: file_in-transit_b-server-anim; }
-      @keyframes file_in-transit_b-server-anim {
-        0%, 93.57% { opacity: 0; transform: translateX(0px) translateY(0px); }
-        93.58% { opacity: 1; transform: translateX(430px) translateY(900px); }
-        94.41% { opacity: 1; transform: translateX(570px) translateY(430px); }
-        94.42%, 100% { opacity: 0; transform: translateX(570px) translateY(430px); }
-      }
-
-      #wahine-a { animation-name: wahine-a-anim; }
-      @keyframes wahine-a-anim {
-        0%, 94.42% { opacity: 0; }
-        94.84%, 100% { opacity: 1; }
-      }
-
-      #wahine-b { animation-name: wahine-b-anim; }
-      @keyframes wahine-b-anim {
-        0%, 94.42% { opacity: 0; }
-        94.84%, 100% { opacity: 1; }
-      }
-
-
-      /* embedded font */
-      text { font-family: 'Dosis', sans-serif; }
-      @font-face {
+    :root {
+     --group-b-color: hsl(42, 74.9%, 56.3%);
+
+     --icon-bg-color: hsl(180, 25.4%, 40%);
+     --group-a-color: hsl(182, 25.5%, 50%);
+     --group-a-highlight: hsl(182, 55%, 75%);
+
+     --pātaka-color: hsl(360, 65.4%, 42%);
+     --pātaka-label-color: hsl(360, 65.4%, 52%);
+
+     --outline-color: hsl(0, 0%, 22%);
+     --white: hsl(0, 0%, 100%);
+     --mid-grey: hsl(0, 0%, 41.2%);
+     --mid-light-grey: hsl(0, 0%, 60%);
+     --encrypted-color: hsl(0, 0%, 80%);
+     --light-grey: hsl(0, 0%, 90%);
+     --devices-color: hsl(0, 0%, 29.8%);
+     --pounamu: hsl(118, 100.0%, 9.4%);
+    }
+
+    /* animations */
+    #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text_connect-codes-laptop, #follow-lines_laptop, #connect-code_in-transit_laptop-b, #connect-code_in-transit_laptop-a, #connect-code_in-transit_laptop-c, #defocus-mobile-b, #invite-symbol_mobile-a, #invite-button_mobile-a, #invite-symbol_mobile, #invite-button_mobile, #invite-symbol_mobile-c, #invite-button_mobile-c, #text_accept-connect-codes-laptop, #connected-button_mobile, #follow-symbol_mobile, #follow-line_b-laptop_connected, #connected-button_mobile-a, #connected-button_mobile-c, #follow-symbol_mobile-a, #follow-symbol_mobile-c, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #add-button_mobile-b, #kuia-b, #text_it-is-backed-up, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #add-button_mobile-a, #koro_a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-copy_b, #koro-copy_c, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #connect-code_in-transit_laptop-server, #invite-symbol_server, #invite-button_server, #connected-button_server, #follow-symbol_server, #follow-line_laptop-server_connected, #invite_server, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #add-button_mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
+      animation-duration:119.4s;
+      animation-iteration-count: infinite;
+    }
+
+    #connections, #mobile-a, #mobile-b, #mobile-c, #pātaka_laptop, #device_laptop, #text_connect-codes-laptop, #follow-lines_laptop, #connect-code_in-transit_laptop-b, #connect-code_in-transit_laptop-a, #connect-code_in-transit_laptop-c, #defocus-mobile-b, #invite-symbol_mobile-a, #invite-button_mobile-a, #invite-symbol_mobile, #invite-button_mobile, #invite-symbol_mobile-c, #invite-button_mobile-c, #text_accept-connect-codes-laptop, #connected-button_mobile, #follow-symbol_mobile, #follow-line_b-laptop_connected, #connected-button_mobile-a, #connected-button_mobile-c, #follow-symbol_mobile-a, #follow-symbol_mobile-c, #follow-line_a-laptop_connected, #follow-line_c-laptop_connected, #text_user-b-creates-record, #add-button_mobile-b, #text_it-is-backed-up, #kuia-b_copy, #file_in-transit_b-laptop, #storage_laptop, #file_laptop_b, #text_record-replicated-ac, #file_laptop_b-copy, #file_in-transit_a-laptop, #file_in-transit_c-laptop, #kuia-copy_a, #kuia-copy_c, #defocus-mobile-a, #text_user-a-creates-record, #add-button_mobile-a, #koro_copy, #file_laptop_a, #text_record-replicated-bc, #file_laptop_a-copy, #koro-copy_b, #koro-copy_c, #text_new-pātaka-set-up, #pātaka-server, #pātaka-symbol_server, #text_new-pātaka-connect-code, #follow-line_laptop-server, #connect-code_in-transit_laptop-server, #invite-symbol_server, #invite-button_server, #connected-button_server, #follow-symbol_server, #follow-line_laptop-server_connected, #invite_server, #monitor-mask, #device_server, #text_laptop-content-replicated-to-server, #file_in-transit_laptop-server, #storage_server, #file_server_b, #file_server_a, #text_server-connected-to-abc, #follow-line_b-server_connected, #follow-line_a-server_connected, #follow-line_c-server_connected, #text_if-offline, #text_still-connected, #defocus-mobile-c, #add-button_mobile-c, #wahine-c, #wahine-c_copy, #file_in-transit_c-server, #file_server_c, #file_server_c-copy, #file_in-transit_a-server, #file_in-transit_b-server, #wahine-a, #wahine-b {
+     animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    #kuia-b, #koro_a {
+     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    #connections { animation-name: connections-anim; }
+    @keyframes connections-anim {
+      0% { opacity: 0; }
+      0.42% { opacity: 1; }
+      99.16% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #mobile-a { animation-name: mobile-a-anim; }
+    @keyframes mobile-a-anim {
+      0%, 0.84% { opacity: 0; transform: scale(0); }
+      1.26% { opacity: 1; transform: scale(1.5); }
+      33.17% { transform: scale(1.5); }
+      33.58% { transform: scale(3); }
+      42.92% { transform: scale(3); }
+      43.17% { transform: scale(1.5); }
+      99.16% { opacity: 1; }
+      100% { opacity: 0; transform: scale(1.5); }
+    }
+
+    #mobile-b { animation-name: mobile-b-anim; }
+    @keyframes mobile-b-anim {
+      0%, 0.96% { opacity: 0; transform: scale(0); }
+      1.38% { opacity: 1; transform: scale(1.5); }
+      9.51% { transform: scale(1.5); }
+      9.92% { transform: scale(3); }
+      27.39% { transform: scale(3); }
+      27.64% { transform: scale(1.5); }
+      99.16% { opacity: 1; }
+      100% { opacity: 0; transform: scale(1.5); }
+    }
+
+    #mobile-c { animation-name: mobile-c-anim; }
+    @keyframes mobile-c-anim {
+      0%, 1.09% { opacity: 0; transform: scale(0); }
+      1.51% { opacity: 1; transform: scale(1.5); }
+      85.05% { transform: scale(1.5); }
+      85.47% { transform: scale(3); }
+      91.25% { transform: scale(3); }
+      91.5% { transform: scale(1.5); }
+      99.16% { opacity: 1; }
+      100% { opacity: 0; transform: scale(1.5); }
+    }
+
+    #pātaka_laptop { animation-name: pātaka_laptop-anim; }
+    @keyframes pātaka_laptop-anim {
+      0%, 2.35% { opacity: 0; transform: scale(0); }
+      2.76% { opacity: 1; transform: scale(1); }
+      78.56% { opacity: 1; }
+      78.64% { opacity: 0; }
+      78.81% { opacity: 0; }
+      79.02% { opacity: 1; }
+      79.1% { opacity: 1; }
+      79.27% { opacity: 0; }
+      79.36% { opacity: 0; }
+      79.48% { opacity: 1; }
+      79.56% { opacity: 1; }
+      79.65%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #device_laptop { animation-name: device_laptop-anim; }
+    @keyframes device_laptop-anim {
+      0%, 5.28% { opacity: 1; }
+      5.7%, 100% { opacity: 0; }
+    }
+
+    #text_connect-codes-laptop { animation-name: text_connect-codes-laptop-anim; }
+    @keyframes text_connect-codes-laptop-anim {
+      0%, 5.7% { opacity: 0; }
+      7.37% { opacity: 1; }
+      9.92% { opacity: 1; }
+      10.34%, 100% { opacity: 0; }
+    }
+
+    #follow-lines_laptop { animation-name: follow-lines_laptop-anim; }
+    @keyframes follow-lines_laptop-anim {
+      0%, 8.21% { opacity: 0; }
+      8.63% { opacity: 1; }
+      16.37% { opacity: 1; }
+      16.79%, 100% { opacity: 0; }
+    }
+
+    #connect-code_in-transit_laptop-b { animation-name: connect-code_in-transit_laptop-b-anim; }
+    @keyframes connect-code_in-transit_laptop-b-anim {
+      0%, 8.6246% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      8.6255% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      9.463% { opacity: 1; transform: translateX(220px) translateY(-200px); }
+      9.4638%, 100% { opacity: 0; transform: translateX(220px) translateY(-200px); }
+    }
+
+    #connect-code_in-transit_laptop-a { animation-name: connect-code_in-transit_laptop-a-anim; }
+    @keyframes connect-code_in-transit_laptop-a-anim {
+      0%, 8.7921% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      8.793% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      9.7142% { opacity: 1; transform: translateX(30px) translateY(-440px); }
+      9.7151%, 100% { opacity: 0; transform: translateX(30px) translateY(-440px); }
+    }
+
+    #connect-code_in-transit_laptop-c { animation-name: connect-code_in-transit_laptop-c-anim; }
+    @keyframes connect-code_in-transit_laptop-c-anim {
+      0%, 8.9178% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      8.9186% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      9.7561% { opacity: 1; transform: translateX(340px) translateY(-20px); }
+      9.757%, 100% { opacity: 0; transform: translateX(340px) translateY(-20px); }
+    }
+
+    #defocus-mobile-b { animation-name: defocus-mobile-b-anim; }
+    @keyframes defocus-mobile-b-anim {
+      0%, 9.42% { opacity: 0.3; }
+      9.92% { opacity: 0; }
+      27.35% { opacity: 0; }
+      27.68%, 100% { opacity: 0.3; }
+    }
+
+    #invite-symbol_mobile-a { animation-name: invite-symbol_mobile-a-anim; }
+    @keyframes invite-symbol_mobile-a-anim {
+      0%, 8.96% { opacity: 0; transform: scale(0); }
+      9.38% { opacity: 1; transform: scale(1); }
+      17.63% { opacity: 1; }
+      18.05%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #invite-button_mobile-a { animation-name: invite-button_mobile-a-anim; }
+    @keyframes invite-button_mobile-a-anim {
+      0%, 8.9613% { opacity: 0; transform: scale(0); }
+      9.3801% { opacity: 1; transform: scale(1); }
+      15.2435% { opacity: 1; }
+      15.5366% { opacity: 0.7; }
+      15.7451% { opacity: 0.7; }
+      15.746%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #invite-symbol_mobile { animation-name: invite-symbol_mobile-anim; }
+    @keyframes invite-symbol_mobile-anim {
+      0%, 8.96% { opacity: 0; transform: scale(0); }
+      9.38% { opacity: 1; transform: scale(1); }
+      17.63% { opacity: 1; }
+      18.05%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #invite-button_mobile { animation-name: invite-button_mobile-anim; }
+    @keyframes invite-button_mobile-anim {
+      0%, 8.9613% { opacity: 0; transform: scale(0); }
+      9.3801% { opacity: 1; transform: scale(1); }
+      12.8557% { transform: scale(1); opacity: 1; }
+      13.0651% { transform: scale(1.05); opacity: 1; }
+      13.6932% { transform: scale(1.05); opacity: 1; }
+      13.9864% { transform: scale(0.95); opacity: 0.7; }
+      14.1957% { transform: scale(0.95); opacity: 0.7; }
+      14.1966%, 100% { transform: scale(0.95); opacity: 0; }
+    }
+
+    #invite-symbol_mobile-c { animation-name: invite-symbol_mobile-c-anim; }
+    @keyframes invite-symbol_mobile-c-anim {
+      0%, 8.96% { opacity: 0; transform: scale(0); }
+      9.38% { opacity: 1; transform: scale(1); }
+      17.63% { opacity: 1; }
+      18.05%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #invite-button_mobile-c { animation-name: invite-button_mobile-c-anim; }
+    @keyframes invite-button_mobile-c-anim {
+      0%, 8.9613% { opacity: 0; transform: scale(0); }
+      9.3801% { opacity: 1; transform: scale(1); }
+      16.081% { opacity: 1; }
+      16.3741% { opacity: 0.7; }
+      16.5826% { opacity: 0.7; }
+      16.5835%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #text_accept-connect-codes-laptop { animation-name: text_accept-connect-codes-laptop-anim; }
+    @keyframes text_accept-connect-codes-laptop-anim {
+      0%, 10.34% { opacity: 0; }
+      12.02% { opacity: 1; }
+      18.05% { opacity: 1; }
+      18.47%, 100% { opacity: 0; }
+    }
+
+    #connected-button_mobile { animation-name: connected-button_mobile-anim; }
+    @keyframes connected-button_mobile-anim {
+      0%, 14.1957% { transform: scale(0.95); opacity: 0; }
+      14.1966% { transform: scale(0.95); opacity: 1; }
+      14.4897% { transform: scale(1); opacity: 1; }
+      17.6304% { opacity: 1; }
+      18.0491%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #follow-symbol_mobile { animation-name: follow-symbol_mobile-anim; }
+    @keyframes follow-symbol_mobile-anim {
+      0%, 14.2% { opacity: 0; transform: scale(0); }
+      14.49% { opacity: 1; transform: scale(1.3); }
+      17.63% { opacity: 1; }
+      18.05%, 100% { opacity: 0; transform: scale(1.3); }
+    }
+
+    #follow-line_b-laptop_connected { animation-name: follow-line_b-laptop_connected-anim; }
+    @keyframes follow-line_b-laptop_connected-anim {
+      0%, 14.28% { opacity: 0; }
+      14.7% { opacity: 1; }
+      26.34% { stroke-dasharray: 8,12px; }
+      26.63% { stroke-dasharray: 0,0px; }
+      27.47% { stroke-dasharray: 0,0px; }
+      27.68% { stroke-dasharray: 8,12px; }
+      48.24% { stroke-dasharray: 8,12px; }
+      48.53% { stroke-dasharray: 0,0px; }
+      49.79% { stroke-dasharray: 0,0px; }
+      50% { stroke-dasharray: 8,12px; }
+      79.98% { opacity: 1; }
+      80.4%, 100% { opacity: 0; }
+    }
+
+    #connected-button_mobile-a { animation-name: connected-button_mobile-a-anim; }
+    @keyframes connected-button_mobile-a-anim {
+      0%, 15.7451% { opacity: 0; }
+      15.746% { opacity: 1; }
+      17.6304% { opacity: 1; }
+      18.0491%, 100% { opacity: 0; }
+    }
+
+    #connected-button_mobile-c { animation-name: connected-button_mobile-c-anim; }
+    @keyframes connected-button_mobile-c-anim {
+      0%, 16.5826% { opacity: 0; }
+      16.5835% { opacity: 1; }
+      17.6304% { opacity: 1; }
+      18.0491%, 100% { opacity: 0; }
+    }
+
+    #follow-symbol_mobile-a { animation-name: follow-symbol_mobile-a-anim; }
+    @keyframes follow-symbol_mobile-a-anim {
+      0%, 15.45% { opacity: 0; transform: scale(0); }
+      15.75% { opacity: 1; transform: scale(1.3); }
+      17.63% { opacity: 1; }
+      18.05%, 100% { opacity: 0; transform: scale(1.3); }
+    }
+
+    #follow-symbol_mobile-c { animation-name: follow-symbol_mobile-c-anim; }
+    @keyframes follow-symbol_mobile-c-anim {
+      0%, 16.29% { opacity: 0; transform: scale(0); }
+      16.58% { opacity: 1; transform: scale(1.3); }
+      17.63% { opacity: 1; }
+      18.05%, 100% { opacity: 0; transform: scale(1.3); }
+    }
+
+    #follow-line_a-laptop_connected { animation-name: follow-line_a-laptop_connected-anim; }
+    @keyframes follow-line_a-laptop_connected-anim {
+      0%, 15.54% { opacity: 0; }
+      15.96% { opacity: 1; }
+      31.2% { stroke-dasharray: 8,12px; }
+      31.49% { stroke-dasharray: 0,0px; }
+      32.75% { stroke-dasharray: 0,0px; }
+      32.96% { stroke-dasharray: 8,12px; }
+      41.88% { stroke-dasharray: 8,12px; }
+      42.17% { stroke-dasharray: 0,0px; }
+      43.01% { stroke-dasharray: 0,0px; }
+      43.22% { stroke-dasharray: 8,12px; }
+      80.11% { opacity: 1; }
+      80.53%, 100% { opacity: 0; }
+    }
+
+    #follow-line_c-laptop_connected { animation-name: follow-line_c-laptop_connected-anim; }
+    @keyframes follow-line_c-laptop_connected-anim {
+      0%, 16.37% { opacity: 0; }
+      16.79% { opacity: 1; }
+      31.2% { stroke-dasharray: 8,12px; }
+      31.49% { stroke-dasharray: 0,0px; }
+      32.75% { stroke-dasharray: 0,0px; }
+      32.96% { stroke-dasharray: 8,12px; }
+      48.24% { stroke-dasharray: 8,12px; }
+      48.53% { stroke-dasharray: 0,0px; }
+      49.79% { stroke-dasharray: 0,0px; }
+      50% { stroke-dasharray: 8,12px; }
+      80.23% { opacity: 1; }
+      80.65%, 100% { opacity: 0; }
+    }
+
+    #text_user-b-creates-record { animation-name: text_user-b-creates-record-anim; }
+    @keyframes text_user-b-creates-record-anim {
+      0%, 18.47% { opacity: 0; }
+      20.14% { opacity: 1; }
+      28.27% { opacity: 1; }
+      28.69%, 100% { opacity: 0; }
+    }
+
+    #add-button_mobile-b { animation-name: add-button_mobile-b-anim; }
+    @keyframes add-button_mobile-b-anim {
+      0%, 20.56% { transform: scale(0); opacity: 0; }
+      21.19% { transform: scale(1); opacity: 1; }
+      22.03% { transform: scale(1.05); opacity: 1; }
+      22.53% { transform: scale(0.95); opacity: 0.7; }
+      22.82% { transform: scale(1); opacity: 0.7; }
+      23.03%, 100% { transform: scale(1); opacity: 0; }
+    }
+
+    #kuia-b { animation-name: kuia-b-anim; }
+    @keyframes kuia-b-anim {
+      0%, 22.95% { transform: scale(0); opacity: 0; }
+      23.16%, 100% { transform: scale(1); opacity: 1; }
+    }
+
+    #text_it-is-backed-up { animation-name: text_it-is-backed-up-anim; }
+    @keyframes text_it-is-backed-up-anim {
+      0%, 23.16% { opacity: 0; }
+      24.83% { opacity: 1; }
+      28.27% { opacity: 1; }
+      28.69% { opacity: 0; }
+      38.69% { opacity: 0; }
+      40.37% { opacity: 1; }
+      44.05% { opacity: 1; }
+      45.73%, 100% { opacity: 0; }
+    }
+
+    #kuia-b_copy { animation-name: kuia-b_copy-anim; }
+    @keyframes kuia-b_copy-anim {
+      0%, 25.67% { opacity: 0; transform: scale(1); }
+      25.88% { opacity: 1; transform: scale(1); }
+      26.3% { opacity: 1; transform: scale(1); }
+      26.51%, 100% { opacity: 1; transform: scale(0); }
+    }
+
+    #file_in-transit_b-laptop { animation-name: file_in-transit_b-laptop-anim; }
+    @keyframes file_in-transit_b-laptop-anim {
+      0%, 26.6319% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      26.6327% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      27.4702% { opacity: 1; transform: translateX(-220px) translateY(200px); }
+      27.4711% { opacity: 0; transform: translateX(-220px) translateY(200px); }
+      48.5327% { opacity: 0; transform: translateX(-220px) translateY(200px); }
+      48.5335% { opacity: 1; transform: translateX(-220px) translateY(200px); }
+      49.371% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      49.3719%, 100% { opacity: 0; transform: translateX(0px) translateY(0px); }
+    }
+
+    #storage_laptop { animation-name: storage_laptop-anim; }
+    @keyframes storage_laptop-anim {
+      0%, 27.26% { transform: scale(0); opacity: 0; }
+      27.68% { transform: scale(1); opacity: 1; }
+      77.72% { opacity: 1; }
+      78.14%, 100% { opacity: 0; transform: scale(1); }
+    }
+
+    #file_laptop_b { animation-name: file_laptop_b-anim; }
+    @keyframes file_laptop_b-anim {
+      0%, 27.85% { transform: scale(0); }
+      28.27%, 100% { transform: scale(1); }
+    }
+
+    #text_record-replicated-ac { animation-name: text_record-replicated-ac-anim; }
+    @keyframes text_record-replicated-ac-anim {
+      0%, 28.69% { opacity: 0; }
+      30.36% { opacity: 1; }
+      33.58% { opacity: 1; }
+      34%, 100% { opacity: 0; }
+    }
+
+    #file_laptop_b-copy { animation-name: file_laptop_b-copy-anim; }
+    @keyframes file_laptop_b-copy-anim {
+      0%, 30.7792% { opacity: 0; transform: scale(1); }
+      30.7801% { opacity: 1; transform: scale(1); }
+      31.1971% { opacity: 1; transform: scale(0); }
+      31.198% { opacity: 0; transform: scale(0); }
+      68.761% { transform: scale(1); }
+      69.1797%, 100% { transform: scale(0); }
+    }
+
+    #file_in-transit_a-laptop { animation-name: file_in-transit_a-laptop-anim; }
+    @keyframes file_in-transit_a-laptop-anim {
+      0%, 31.4894% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      31.4903% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      32.3278% { opacity: 1; transform: translateX(30px) translateY(-440px); }
+      32.3286% { opacity: 0; transform: translateX(30px) translateY(-440px); }
+      42.1676% { opacity: 0; transform: translateX(30px) translateY(-440px); }
+      42.1685% { opacity: 1; transform: translateX(30px) translateY(-440px); }
+      43.006% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      43.0068%, 100% { opacity: 0; transform: translateX(0px) translateY(0px); }
+    }
+
+    #file_in-transit_c-laptop { animation-name: file_in-transit_c-laptop-anim; }
+    @keyframes file_in-transit_c-laptop-anim {
+      0%, 31.4894% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      31.4903% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      32.3278% { opacity: 1; transform: translateX(340px) translateY(-20px); }
+      32.3286% { opacity: 0; transform: translateX(340px) translateY(-20px); }
+      48.5327% { opacity: 0; transform: translateX(340px) translateY(-20px); }
+      48.5335% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      49.371% { opacity: 1; transform: translateX(340px) translateY(-20px); }
+      49.3719%, 100% { opacity: 0; transform: translateX(340px) translateY(-20px); }
+    }
+
+    #kuia-copy_a { animation-name: kuia-copy_a-anim; }
+    @keyframes kuia-copy_a-anim {
+      0%, 32.33% { opacity: 0; }
+      32.75%, 100% { opacity: 1; }
+    }
+
+    #kuia-copy_c { animation-name: kuia-copy_c-anim; }
+    @keyframes kuia-copy_c-anim {
+      0%, 32.33% { opacity: 0; }
+      32.75%, 100% { opacity: 1; }
+    }
+
+    #defocus-mobile-a { animation-name: defocus-mobile-a-anim; }
+    @keyframes defocus-mobile-a-anim {
+      0%, 33.29% { opacity: 0.3; }
+      33.58% { opacity: 0; }
+      42.92% { opacity: 0; }
+      43.22%, 100% { opacity: 0.3; }
+    }
+
+    #text_user-a-creates-record { animation-name: text_user-a-creates-record-anim; }
+    @keyframes text_user-a-creates-record-anim {
+      0%, 34% { opacity: 0; }
+      35.68% { opacity: 1; }
+      44.05% { opacity: 1; }
+      45.73%, 100% { opacity: 0; }
+    }
+
+    #add-button_mobile-a { animation-name: add-button_mobile-a-anim; }
+    @keyframes add-button_mobile-a-anim {
+      0%, 36.1% { transform: scale(0); opacity: 0; }
+      36.73% { transform: scale(0.5); opacity: 1; }
+      37.56% { transform: scale(0.55); opacity: 1; }
+      38.07% { transform: scale(0.45); opacity: 0.7; }
+      38.36% { transform: scale(0.5); opacity: 0.7; }
+      38.57%, 100% { transform: scale(0.5); opacity: 0; }
+    }
+
+    #koro_a { animation-name: koro_a-anim; }
+    @keyframes koro_a-anim {
+      0%, 38.48% { transform: scale(0); opacity: 0; }
+      38.69%, 100% { transform: scale(0.5); opacity: 1; }
+    }
+
+    #koro_copy { animation-name: koro_copy-anim; }
+    @keyframes koro_copy-anim {
+      0%, 41.21% { opacity: 0; transform: scale(1); }
+      41.42% { opacity: 1; transform: scale(1); }
+      41.83% { opacity: 1; transform: scale(0.5); }
+      42.04%, 100% { opacity: 1; transform: scale(0); }
+    }
+
+    #file_laptop_a { animation-name: file_laptop_a-anim; }
+    @keyframes file_laptop_a-anim {
+      0%, 43.63% { transform: scale(0); }
+      44.05%, 100% { transform: scale(1); }
+    }
+
+    #text_record-replicated-bc { animation-name: text_record-replicated-bc-anim; }
+    @keyframes text_record-replicated-bc-anim {
+      0%, 45.73% { opacity: 0; }
+      47.4% { opacity: 1; }
+      50% { opacity: 1; }
+      50.42%, 100% { opacity: 0; }
+    }
+
+    #file_laptop_a-copy { animation-name: file_laptop_a-copy-anim; }
+    @keyframes file_laptop_a-copy-anim {
+      0%, 47.8225% { opacity: 0; transform: scale(1); }
+      47.8233% { opacity: 1; transform: scale(1); }
+      48.2404% { opacity: 1; transform: scale(0); }
+      48.2412% { opacity: 0; transform: scale(0); }
+      68.761% { transform: scale(1); }
+      69.1797%, 100% { transform: scale(0); }
+    }
+
+    #koro-copy_b { animation-name: koro-copy_b-anim; }
+    @keyframes koro-copy_b-anim {
+      0%, 49.37% { opacity: 0; }
+      49.79%, 100% { opacity: 1; }
+    }
+
+    #koro-copy_c { animation-name: koro-copy_c-anim; }
+    @keyframes koro-copy_c-anim {
+      0%, 49.37% { opacity: 0; }
+      49.79%, 100% { opacity: 1; }
+    }
+
+    #text_new-pātaka-set-up { animation-name: text_new-pātaka-set-up-anim; }
+    @keyframes text_new-pātaka-set-up-anim {
+      0%, 50.42% { opacity: 0; }
+      52.09% { opacity: 1; }
+      54.61% { opacity: 1; }
+      55.03%, 100% { opacity: 0; }
+    }
+
+    #pātaka-server { animation-name: pātaka-server-anim; }
+    @keyframes pātaka-server-anim {
+      0%, 52.93% { opacity: 0; }
+      53.35% { opacity: 1; }
+      99.16% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #pātaka-symbol_server { animation-name: pātaka-symbol_server-anim; }
+    @keyframes pātaka-symbol_server-anim {
+      0%, 54.19% { opacity: 1; }
+      54.61% { opacity: 0; }
+      64.15% { opacity: 0; }
+      64.57%, 100% { opacity: 1; }
+    }
+
+    #text_new-pātaka-connect-code { animation-name: text_new-pātaka-connect-code-anim; }
+    @keyframes text_new-pātaka-connect-code-anim {
+      0%, 55.03% { opacity: 0; }
+      56.7% { opacity: 1; }
+      65.83% { opacity: 1; }
+      66.25%, 100% { opacity: 0; }
+    }
+
+    #follow-line_laptop-server { animation-name: follow-line_laptop-server-anim; }
+    @keyframes follow-line_laptop-server-anim {
+      0%, 57.54% { opacity: 0; }
+      57.96% { opacity: 1; }
+      62.9% { opacity: 1; }
+      63.32%, 100% { opacity: 0; }
+    }
+
+    #connect-code_in-transit_laptop-server { animation-name: connect-code_in-transit_laptop-server-anim; }
+    @keyframes connect-code_in-transit_laptop-server-anim {
+      0%, 57.9546% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      57.9555% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      58.793% { opacity: 1; transform: translateX(80px) translateY(270px); }
+      58.7938%, 100% { opacity: 0; transform: translateX(80px) translateY(270px); }
+    }
+
+    #invite-symbol_server { animation-name: invite-symbol_server-anim; }
+    @keyframes invite-symbol_server-anim {
+      0%, 58.75% { opacity: 0; transform: scale(0); }
+      59.17%, 100% { opacity: 1; transform: scale(1); }
+    }
+
+    #invite-button_server { animation-name: invite-button_server-anim; }
+    @keyframes invite-button_server-anim {
+      0%, 58.7519% { opacity: 0; transform: scale(0); }
+      60.0082% { opacity: 1; transform: scale(1.6); }
+      60.2176% { opacity: 1; transform: scale(1.65); }
+      60.8457% { opacity: 1; transform: scale(1.65); }
+      61.1388% { opacity: 0.7; transform: scale(1.55); }
+      61.3482% { opacity: 0.7; transform: scale(1.55); }
+      61.3491%, 100% { opacity: 0; transform: scale(1.55); }
+    }
+
+    #connected-button_server { animation-name: connected-button_server-anim; }
+    @keyframes connected-button_server-anim {
+      0%, 61.3482% { transform: scale(1.55); opacity: 0; }
+      61.3491% { transform: scale(1.55); opacity: 1; }
+      61.6422%, 100% { transform: scale(1.6); opacity: 1; }
+    }
+
+    #follow-symbol_server { animation-name: follow-symbol_server-anim; }
+    @keyframes follow-symbol_server-anim {
+      0%, 61.35% { opacity: 0; transform: scale(0); }
+      61.64%, 100% { opacity: 1; transform: scale(1.3); }
+    }
+
+    #follow-line_laptop-server_connected { animation-name: follow-line_laptop-server_connected-anim; }
+    @keyframes follow-line_laptop-server_connected-anim {
+      0%, 61.64% { opacity: 0; }
+      62.06% { opacity: 1; }
+      69.18% { stroke-dasharray: 8,12px; }
+      69.47% { stroke-dasharray: 0,0px; }
+      71.06% { stroke-dasharray: 0,0px; }
+      71.48% { stroke-dasharray: 8,12px; }
+      79.86% { opacity: 1; }
+      80.28%, 100% { opacity: 0; }
+    }
+
+    #invite_server { animation-name: invite_server-anim; }
+    @keyframes invite_server-anim {
+      0%, 62.9% { opacity: 1; }
+      63.32%, 100% { opacity: 0; }
+    }
+
+    #monitor-mask { animation-name: monitor-mask-anim; }
+    @keyframes monitor-mask-anim {
+      0%, 65.41% { opacity: 1; }
+      65.83%, 100% { opacity: 0; }
+    }
+
+    #device_server { animation-name: device_server-anim; }
+    @keyframes device_server-anim {
+      0%, 65.41% { opacity: 1; }
+      65.83%, 100% { opacity: 0; }
+    }
+
+    #text_laptop-content-replicated-to-server { animation-name: text_laptop-content-replicated-to-server-anim; }
+    @keyframes text_laptop-content-replicated-to-server-anim {
+      0%, 66.25% { opacity: 0; }
+      67.92% { opacity: 1; }
+      71.48% { opacity: 1; }
+      71.9%, 100% { opacity: 0; }
+    }
+
+    #file_in-transit_laptop-server { animation-name: file_in-transit_laptop-server-anim; }
+    @keyframes file_in-transit_laptop-server-anim {
+      0%, 69.4712% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      69.472% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      70.3095% { opacity: 1; transform: translateX(80px) translateY(270px); }
+      70.3104%, 100% { opacity: 0; transform: translateX(80px) translateY(270px); }
+    }
+
+    #storage_server { animation-name: storage_server-anim; }
+    @keyframes storage_server-anim {
+      0%, 70.1% { transform: scale(0); opacity: 0; }
+      70.52%, 100% { transform: scale(1); opacity: 1; }
+    }
+
+    #file_server_b { animation-name: file_server_b-anim; }
+    @keyframes file_server_b-anim {
+      0%, 70.52% { transform: scale(0); }
+      70.94%, 100% { transform: scale(1); }
+    }
+
+    #file_server_a { animation-name: file_server_a-anim; }
+    @keyframes file_server_a-anim {
+      0%, 70.65% { transform: scale(0); }
+      71.06%, 100% { transform: scale(1); }
+    }
+
+    #text_server-connected-to-abc { animation-name: text_server-connected-to-abc-anim; }
+    @keyframes text_server-connected-to-abc-anim {
+      0%, 71.9% { opacity: 0; }
+      73.58% { opacity: 1; }
+      74.79% { opacity: 1; }
+      75.21%, 100% { opacity: 0; }
+    }
+
+    #follow-line_b-server_connected { animation-name: follow-line_b-server_connected-anim; }
+    @keyframes follow-line_b-server_connected-anim {
+      0%, 73.79% { opacity: 0; }
+      74.2% { opacity: 1; }
+      93.22% { stroke-dasharray: 8,12px; }
+      93.51% { stroke-dasharray: 0,0px; }
+      94.77% { stroke-dasharray: 0,0px; }
+      94.97%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
+    }
+
+    #follow-line_a-server_connected { animation-name: follow-line_a-server_connected-anim; }
+    @keyframes follow-line_a-server_connected-anim {
+      0%, 74.08% { opacity: 0; }
+      74.5% { opacity: 1; }
+      93.22% { stroke-dasharray: 8,12px; }
+      93.51% { stroke-dasharray: 0,0px; }
+      94.77% { stroke-dasharray: 0,0px; }
+      94.97%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
+    }
+
+    #follow-line_c-server_connected { animation-name: follow-line_c-server_connected-anim; }
+    @keyframes follow-line_c-server_connected-anim {
+      0%, 74.37% { opacity: 0; }
+      74.79% { opacity: 1; }
+      90.2% { stroke-dasharray: 8,12px; }
+      90.49% { stroke-dasharray: 0,0px; }
+      91.33% { stroke-dasharray: 0,0px; }
+      91.54%, 100% { stroke-dasharray: 8,12px; opacity: 1; }
+    }
+
+    #text_if-offline { animation-name: text_if-offline-anim; }
+    @keyframes text_if-offline-anim {
+      0%, 75.21% { opacity: 0; }
+      76.88% { opacity: 1; }
+      80.65% { opacity: 1; }
+      81.07%, 100% { opacity: 0; }
+    }
+
+    #text_still-connected { animation-name: text_still-connected-anim; }
+    @keyframes text_still-connected-anim {
+      0%, 81.07% { opacity: 0; }
+      82.75% { opacity: 1; }
+      84.42% { opacity: 1; }
+      84.84%, 100% { opacity: 0; }
+    }
+
+    #defocus-mobile-c { animation-name: defocus-mobile-c-anim; }
+    @keyframes defocus-mobile-c-anim {
+      0%, 85.18% { opacity: 0.3; }
+      85.47% { opacity: 0; }
+      91.25% { opacity: 0; }
+      91.54%, 100% { opacity: 0.3; }
+    }
+
+    #add-button_mobile-c { animation-name: add-button_mobile-c-anim; }
+    @keyframes add-button_mobile-c-anim {
+      0%, 85.89% { transform: scale(0); opacity: 0; }
+      86.52% { transform: scale(0.5); opacity: 1; }
+      87.35% { transform: scale(0.55); opacity: 1; }
+      87.86% { transform: scale(0.45); opacity: 0.7; }
+      88.15% { transform: scale(0.5); opacity: 0.7; }
+      88.36%, 100% { transform: scale(0.5); opacity: 0; }
+    }
+
+    #wahine-c { animation-name: wahine-c-anim; }
+    @keyframes wahine-c-anim {
+      0%, 88.27% { opacity: 0; }
+      88.69%, 100% { opacity: 1; }
+    }
+
+    #wahine-c_copy { animation-name: wahine-c_copy-anim; }
+    @keyframes wahine-c_copy-anim {
+      0%, 89.53% { opacity: 0; transform: scale(1); }
+      89.74% { opacity: 1; transform: scale(1); }
+      90.16% { opacity: 1; transform: scale(1); }
+      90.37%, 100% { opacity: 1; transform: scale(0); }
+    }
+
+    #file_in-transit_c-server { animation-name: file_in-transit_c-server-anim; }
+    @keyframes file_in-transit_c-server-anim {
+      0%, 90.4926% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      90.4935% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      91.331% { opacity: 1; transform: translateX(-260px) translateY(290px); }
+      91.3318%, 100% { opacity: 0; transform: translateX(-260px) translateY(290px); }
+    }
+
+    #file_server_c { animation-name: file_server_c-anim; }
+    @keyframes file_server_c-anim {
+      0%, 91.96% { transform: scale(0); }
+      92.38%, 100% { transform: scale(1); }
+    }
+
+    #file_server_c-copy { animation-name: file_server_c-copy-anim; }
+    @keyframes file_server_c-copy-anim {
+      0%, 92.7974% { opacity: 0; transform: scale(1); }
+      92.7983% { opacity: 1; transform: scale(1); }
+      93.2162%, 100% { opacity: 1; transform: scale(0); }
+    }
+
+    #file_in-transit_a-server { animation-name: file_in-transit_a-server-anim; }
+    @keyframes file_in-transit_a-server-anim {
+      0%, 93.5076% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      93.5085% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      94.346% { opacity: 1; transform: translateX(-50px) translateY(-710px); }
+      94.3468%, 100% { opacity: 0; transform: translateX(-50px) translateY(-710px); }
+    }
+
+    #file_in-transit_b-server { animation-name: file_in-transit_b-server-anim; }
+    @keyframes file_in-transit_b-server-anim {
+      0%, 93.5076% { opacity: 0; transform: translateX(0px) translateY(0px); }
+      93.5085% { opacity: 1; transform: translateX(0px) translateY(0px); }
+      94.346% { opacity: 1; transform: translateX(140px) translateY(-470px); }
+      94.3468%, 100% { opacity: 0; transform: translateX(140px) translateY(-470px); }
+    }
+
+    #wahine-a { animation-name: wahine-a-anim; }
+    @keyframes wahine-a-anim {
+      0%, 94.35% { opacity: 0; }
+      94.77%, 100% { opacity: 1; }
+    }
+
+    #wahine-b { animation-name: wahine-b-anim; }
+    @keyframes wahine-b-anim {
+      0%, 94.35% { opacity: 0; }
+      94.77%, 100% { opacity: 1; }
+    }
+
+    /* embedded font */
+    text { font-family: 'Dosis', sans-serif; }
+    @font-face {
         font-family: 'Dosis';
         src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
         font-weight: normal;
@@ -861,7 +845,7 @@
 
       </g>
 
-      <g id="laptop" transform="scale(3.2)" stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt">
+      <g id="laptop" transform="scale(5)" stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt">
         <path id="laptop-screen-bg" stroke="none" d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
         <path id="laptop-screen-bg-overlay" stroke="none" fill="var(--outline-color)" fill-opacity=".2" d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v 21.84z"/>
         <rect id="laptop-screen" fill="var(--white)" fill-opacity="0.95" stroke="none" x="-18" y="-11" width="36" height="17.67"/>
@@ -1294,28 +1278,28 @@
       </g>
 
       <g id="follow-lines_laptop_connected" opacity="1" stroke="var(--group-b-color)" mask="url(#mask_pātaka_laptop)">
-        <line id="follow-line_b-laptop_connected" stroke-dasharray="8,12" x1="570" y1="430" x2="350" y2="630" style="opacity: 0; stroke-dasharray: 8px, 12px;"/>
-        <line id="follow-line_a-laptop_connected" stroke-dasharray="8,12" x1="380" y1="190" x2="350" y2="630" style="opacity: 0; stroke-dasharray: 8px, 12px;"/>
-        <line id="follow-line_c-laptop_connected" stroke-dasharray="8,12" x1="690" y1="610" x2="350" y2="630" style="opacity: 0; stroke-dasharray: 8px, 12px;"/>
+        <line id="follow-line_b-laptop_connected" stroke-dasharray="8,12" x1="570" y1="430" x2="350" y2="630" style="opacity: 1; stroke-dasharray: 8px, 12px;"/>
+        <line id="follow-line_a-laptop_connected" stroke-dasharray="8,12" x1="380" y1="190" x2="350" y2="630" style="opacity: 1; stroke-dasharray: 8px, 12px;"/>
+        <line id="follow-line_c-laptop_connected" stroke-dasharray="8,12" x1="690" y1="610" x2="350" y2="630" style="opacity: 1; stroke-dasharray: 8px, 12px;"/>
       </g>
 
     </g>
 
     <g id="files_in-transit" mask="url(#mask_all-pātaka)">
-      <use id="file_in-transit_b-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="file_in-transit_a-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="file_in-transit_c-laptop" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="file_in-transit_laptop-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="file_in-transit_b-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="file_in-transit_a-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="file_in-transit_c-server" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_b-laptop" x="570" y="430" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_a-laptop" x="350" y="630" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_c-laptop" x="350" y="630" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_laptop-server" x="350" y="630" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_b-server" x="430" y="900" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_a-server" x="430" y="900" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="file_in-transit_c-server" x="690" y="610" xlink:href="#file_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
     </g>
 
     <g id="connect-codes_in-transit" mask="url(#mask_all-pātaka)">
-      <use id="connect-code_in-transit_laptop-a" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="connect-code_in-transit_laptop-b" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="connect-code_in-transit_laptop-c" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
-      <use id="connect-code_in-transit_laptop-server" fill="var(--pātaka-label-color)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
+      <use id="connect-code_in-transit_laptop-a" x="350" y="630" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(30px) translateY(-440px);"/>
+      <use id="connect-code_in-transit_laptop-b" x="350" y="630" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(220px) translateY(-200px);"/>
+      <use id="connect-code_in-transit_laptop-c" x="350" y="630" fill="var(--mid-light-grey)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(340px) translateY(-20px);"/>
+      <use id="connect-code_in-transit_laptop-server" x="350" y="630" fill="var(--pātaka-label-color)" stroke="var(--group-b-color)" xlink:href="#connect-code_in-transit" style="opacity: 0; transform: translateX(0px) translateY(0px);"/>
 
     </g>
 
@@ -1352,7 +1336,7 @@
 
     <g id="invite_server" style="opacity: 1;">
       <g id="invite-symbol_server" style="transform-origin: 430px 879px 0px; opacity: 0; transform: scale(0);">
-        <use xlink:href="#laptop" fill="var(--mid-grey)" x="430" y="879" style="transform-origin: 430px 879px 0px;" transform="scale(0.8)"/>
+        <use xlink:href="#laptop" fill="var(--mid-grey)" x="430" y="879" style="transform-origin: 430px 879px 0px;" transform="scale(0.5)"/>
         <use xlink:href="#pātaka-symbol" style="transform-origin: 430px 874px 0px;" transform="scale(0.8)" x="430" y="874" fill="var(--pātaka-color)"/>
       </g>
       <use id="invite-button_server" fill="var(--devices-color)" xlink:href="#invite-button" style="transform-origin: 430px 935px 0px; opacity: 0; transform: scale(0);" transform="scale(1.6)" x="430" y="935"/>
@@ -1423,24 +1407,50 @@
     <use id="defocus-mobile-c" opacity="0.3" xlink:href="#mobile" x="690" y="610" fill="var(--mid-light-grey)" stroke="var(--mid-light-grey)"/>
   </g>
 
-  <g id="text" font-size="2.4em" fill="var(--outline-color)" text-anchor="middle">
-    <text id="text_connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 1;">Whānau members receive connect codes from a Pātaka</text>
-    <text id="text_accept-connect-codes-laptop" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau members accept invitation and connect to the Pātaka</text>
-    <text id="text_user-b-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member B creates a new whakapapa record</text>
-    <text id="text_it-is-backed-up" filter="url(#caption-bg)" x="500" y="90" style="opacity: 0;">it is backed up to the Pātaka</text>
-    <text id="text_record-replicated-ac" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The Pātaka replicates the whakapapa record to A and C</text>
-    <text id="text_user-a-creates-record" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">Whānau member A creates a new whakapapa record</text>
-    <text id="text_record-replicated-bc" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The Pātaka replicates the whakapapa record to B and C</text>
-    <text id="text_new-pātaka-set-up" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">A second Pātaka is set up</text>
-    <text id="text_new-pātaka-connect-code" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The new Pātaka receives a connect code from the existing Pātaka</text>
-    <text id="text_laptop-content-replicated-to-server" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The existing Pātaka's content is replicated to the new Pātaka</text>
-    <text id="text_server-connected-to-abc" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The new Pātaka is now connected to whānau members A, B, and C</text>
-    <text id="text_if-offline" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">If the original Pātaka goes offline</text>
-    <text id="text_still-connected" filter="url(#caption-bg)" x="500" y="50" style="opacity: 0;">The whānau members are still connected via the new Pātaka</text>
+  <g id="text"
+     font-size="2em"
+     fill="var(--outline-color)"
+     text-anchor="middle"
+     style="transform: translate(0, 1em);">
+    <text id="text_connect-codes-laptop"
+          filter="url(#caption-bg)"
+          x="500" y="0" >Whānau members receive connect codes from a Pātaka</text>
+    <text id="text_accept-connect-codes-laptop"
+          filter="url(#caption-bg)"
+          x="500" y="0">Whānau members accept invitation and connect to the Pātaka</text>
+    <text id="text_it-is-backed-up"
+          filter="url(#caption-bg)"
+          x="500" y="0" style="transform: translate(0, 1.3em);">it is backed up to the Pātaka</text>
+    <text id="text_user-b-creates-record"
+          filter="url(#caption-bg)"
+          x="500" y="0">Whānau member B creates a new whakapapa record</text>
+    <text id="text_record-replicated-ac"
+          filter="url(#caption-bg)"
+          x="500" y="0">The Pātaka replicates the whakapapa record to A and C</text>
+    <text id="text_user-a-creates-record"
+          filter="url(#caption-bg)"
+          x="500" y="0">Whānau member A creates a new whakapapa record</text>
+    <text id="text_record-replicated-bc"
+          filter="url(#caption-bg)"
+          x="500" y="0">The Pātaka replicates the whakapapa record to B and C</text>
+    <text id="text_new-pātaka-set-up"
+          filter="url(#caption-bg)"
+          x="500" y="0">A second Pātaka is set up</text>
+    <text id="text_new-pātaka-connect-code"
+          filter="url(#caption-bg)"
+          x="500" y="0">The new Pātaka receives a connect code from the existing Pātaka</text>
+    <text id="text_laptop-content-replicated-to-server"
+          filter="url(#caption-bg)"
+          x="500" y="0">The existing Pātaka's content is replicated to the new Pātaka</text>
+    <text id="text_server-connected-to-abc"
+          filter="url(#caption-bg)"
+          x="500" y="0">The new Pātaka is now connected to whānau members A, B, and C</text>
+    <text id="text_if-offline"
+          filter="url(#caption-bg)"
+          x="500" y="0">If the original Pātaka goes offline</text>
+    <text id="text_still-connected"
+          filter="url(#caption-bg)"
+          x="500" y="0">The whānau members are still connected via the new Pātaka</text>
   </g>
-
-  <style>
-
-</style>
 
 </svg>

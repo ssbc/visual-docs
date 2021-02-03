@@ -5,7 +5,6 @@
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      viewBox="0 0 1000 1020"
-
      >
 
   <metadata>
@@ -39,30 +38,15 @@
       @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
       text { font-family: 'Dosis', sans-serif; }
       :root {
-       --group-b-outline: hsl(42, 80%, 20%);
        --group-b-color: hsl(42, 74.9%, 56.3%);
-       --group-b-highlight: hsl(42, 90%, 75%);
-       --group-b-tint: hsl(42, 90%, 95%);
 
        --icon-bg-color: hsl(180, 25.4%, 40%);
-       --group-a-outline: hsl(180, 25.4%, 24.7%);
-       --group-a-shade: hsl(182, 20%, 30%);
        --group-a-color: hsl(182, 25.5%, 50%);
        --group-a-highlight: hsl(182, 55%, 75%);
-       --group-a-tint: hsl(182, 95%, 95%);
-       --group-a-medium-tint: hsl(182, 30%, 65%);
-
-       --group-c-outline: hsl(360, 85%, 22%);
-       --group-c-symbol-color: hsl(360, 65.4%, 42%);
-       --group-c-color: hsl(360, 70%, 60%);
-       --group-c-files: hsl(360, 65.4%, 52%);
-       --group-c-highlight: hsl(360, 85%, 75%);
-       --group-c-tint: hsl(0, 85%, 95%);
 
        --pātaka-color: hsl(360, 65.4%, 42%);
        --pātaka-label-color: hsl(360, 65.4%, 52%);
 
-       --icon-bg-color: hsl(180, 25.4%, 40%);
        --outline-color: hsl(0, 0%, 22%);
        --white: hsl(0, 0%, 100%);
        --mid-grey: hsl(0, 0%, 41.2%);
@@ -102,7 +86,7 @@
       </g>
 
       <g id="laptop"
-         transform="scale(3.2)"
+         transform="scale(5)"
          stroke-width=".5" stroke-linejoin="round" stroke-linecap="butt">
         <path id="laptop-screen-bg"
                stroke="none"
@@ -716,33 +700,44 @@
     <g id="files_in-transit"
        mask="url(#mask_all-pātaka)">
       <use id="file_in-transit_b-laptop"
+           x="570" y="430"
            xlink:href="#file_in-transit"/>
       <use id="file_in-transit_a-laptop"
+           x="350" y="630"
            xlink:href="#file_in-transit"/>
       <use id="file_in-transit_c-laptop"
+           x="350" y="630"
            xlink:href="#file_in-transit"/>
       <use id="file_in-transit_laptop-server"
+           x="350" y="630"
            xlink:href="#file_in-transit"/>
       <use id="file_in-transit_b-server"
+           x="430" y="900"
            xlink:href="#file_in-transit"/>
       <use id="file_in-transit_a-server"
+           x="430" y="900"
            xlink:href="#file_in-transit"/>
       <use id="file_in-transit_c-server"
+           x="690" y="610"
            xlink:href="#file_in-transit"/>
     </g>
 
     <g id="connect-codes_in-transit"
        mask="url(#mask_all-pātaka)">
       <use id="connect-code_in-transit_laptop-a"
+           x="350" y="630"
            fill="var(--mid-light-grey)" stroke="var(--group-b-color)"
            xlink:href="#connect-code_in-transit"/>
       <use id="connect-code_in-transit_laptop-b"
+           x="350" y="630"
            fill="var(--mid-light-grey)" stroke="var(--group-b-color)"
            xlink:href="#connect-code_in-transit"/>
       <use id="connect-code_in-transit_laptop-c"
+           x="350" y="630"
            fill="var(--mid-light-grey)" stroke="var(--group-b-color)"
            xlink:href="#connect-code_in-transit"/>
       <use id="connect-code_in-transit_laptop-server"
+           x="350" y="630"
            fill="var(--pātaka-label-color)" stroke="var(--group-b-color)"
            xlink:href="#connect-code_in-transit"/>
 
@@ -812,7 +807,7 @@
          style="transform-origin: 430px 879px 0px;">
         <use xlink:href="#laptop" fill="var(--mid-grey)"
              x="430" y="879"
-             style="transform-origin: 430px 879px 0px;" transform="scale(0.8)"/>
+             style="transform-origin: 430px 879px 0px;" transform="scale(0.5)"/>
         <use xlink:href="#pātaka-symbol"
              style="transform-origin: 430px 874px 0px;" transform="scale(0.8)"
              x="430" y="874" fill="var(--pātaka-color)"/>
@@ -1021,50 +1016,51 @@
   </g>
 
   <g id="text"
-     font-size="2.4em"
+     font-size="2em"
      fill="var(--outline-color)"
-     text-anchor="middle">
+     text-anchor="middle"
+     style="transform: translate(0, 1em);">
     <text id="text_connect-codes-laptop"
           filter="url(#caption-bg)"
-          x="500" y="50" >Whānau members receive connect codes from a Pātaka</text>
+          x="500" y="0" >Whānau members receive connect codes from a Pātaka</text>
     <text id="text_accept-connect-codes-laptop"
           filter="url(#caption-bg)"
-          x="500" y="50">Whānau members accept invitation and connect to the Pātaka</text>
-    <text id="text_user-b-creates-record"
-          filter="url(#caption-bg)"
-          x="500" y="50">Whānau member B creates a new whakapapa record</text>
+          x="500" y="0">Whānau members accept invitation and connect to the Pātaka</text>
     <text id="text_it-is-backed-up"
           filter="url(#caption-bg)"
-          x="500" y="90">it is backed up to the Pātaka</text>
+          x="500" y="0" style="transform: translate(0, 1.3em);">it is backed up to the Pātaka</text>
+    <text id="text_user-b-creates-record"
+          filter="url(#caption-bg)"
+          x="500" y="0">Whānau member B creates a new whakapapa record</text>
     <text id="text_record-replicated-ac"
           filter="url(#caption-bg)"
-          x="500" y="50">The Pātaka replicates the whakapapa record to whānau members A and C</text>
+          x="500" y="0">The Pātaka replicates the whakapapa record to A and C</text>
     <text id="text_user-a-creates-record"
           filter="url(#caption-bg)"
-          x="500" y="50">Whānau member A creates a new whakapapa record</text>
+          x="500" y="0">Whānau member A creates a new whakapapa record</text>
     <text id="text_record-replicated-bc"
           filter="url(#caption-bg)"
-          x="500" y="50">The Pātaka replicates the whakapapa record to whānau members B and C</text>
+          x="500" y="0">The Pātaka replicates the whakapapa record to B and C</text>
     <text id="text_new-pātaka-set-up"
           filter="url(#caption-bg)"
-          x="500" y="50">A second Pātaka is set up</text>
+          x="500" y="0">A second Pātaka is set up</text>
     <text id="text_new-pātaka-connect-code"
           filter="url(#caption-bg)"
-          x="500" y="50">The new Pātaka receives a connect code from the existing Pātaka</text>
+          x="500" y="0">The new Pātaka receives a connect code from the existing Pātaka</text>
     <text id="text_laptop-content-replicated-to-server"
           filter="url(#caption-bg)"
-          x="500" y="50">The existing Pātaka's content is replicated to the new Pātaka</text>
+          x="500" y="0">The existing Pātaka's content is replicated to the new Pātaka</text>
     <text id="text_server-connected-to-abc"
           filter="url(#caption-bg)"
-          x="500" y="50">The new Pātaka is now connected to whānau members A, B, and C</text>
+          x="500" y="0">The new Pātaka is now connected to whānau members A, B, and C</text>
     <text id="text_if-offline"
           filter="url(#caption-bg)"
-          x="500" y="50">If the original Pātaka goes offline</text>
+          x="500" y="0">If the original Pātaka goes offline</text>
     <text id="text_still-connected"
           filter="url(#caption-bg)"
-          x="500" y="50">The whānau members are still connected via the new Pātaka</text>
+          x="500" y="0">The whānau members are still connected via the new Pātaka</text>
   </g>
-
+<!-- <circle cx="570" cy="430" r="5" fill="#CC0F16" /> -->
   <script>
     // <![CDATA[
 
@@ -1113,25 +1109,25 @@
       }, '+=1000')
       .add({ targets: '#connect-code_in-transit_laptop-b',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 570], translateY: [630, 430], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 220], translateY: [0, -200], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#connect-code_in-transit_laptop-a',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 380], translateY: [630, 190], duration: 1100 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 30], translateY: [0, -440], duration: 1100 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=833.4')
+      }, '-=802')
       .add({ targets: '#connect-code_in-transit_laptop-c',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 690], translateY: [630, 610], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 340], translateY: [0, -20], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=983.4')
+      }, '-=952')
       .add({ targets: '#mobile-b',
         scale: [1.5, 3]
       }, '-=300')
@@ -1157,15 +1153,15 @@
           { scale: [1.05, 1.05], duration: 750 },
           { scale: [1.05, 0.95], opacity: [1, 0.7], duration: 350 },
           { scale: [0.95, 0.95], duration: 250 },
-          { opacity: [0.7, 0], duration: 16.7 }
+          { opacity: [0.7, 0], duration: 1 }
         ]
       }, '+=1000')
       .add({ targets: '#connected-button_mobile',
         keyframes: [
-          { scale: [0.95, 0.95], opacity: [0, 1], duration: 16.7 },
+          { scale: [0.95, 0.95], opacity: [0, 1], duration: 1 },
           { scale: [0.95, 1], duration: 350, easing: 'easeOutQuad' }
         ]
-      }, '-=16.7')
+      }, '-=1')
       .add({ targets: '#follow-symbol_mobile',
         opacity: [0, 1],
         scale: [0, 1.3],
@@ -1175,15 +1171,18 @@
         opacity: [0, 1]
       }, '-=250')
       .add({ targets: '#invite-button_mobile-a, #invite-button_mobile-c',
-        opacity: [0.7, 0],
-        duration: 16.7,
+        keyframes: [
+          { opacity: [1, 0.7], duration: 350 },
+          { opacity: [0.7, 0.7], duration: 249 },
+          { opacity: [0.7, 0], duration: 1 }
+        ],
         delay: anime.stagger(1000)
-      }, '+=1250')
+      }, '+=650')
       .add({ targets: '#connected-button_mobile-a, #connected-button_mobile-c',
         opacity: [0, 1],
-        duration: 16.7,
+        duration: 1,
         delay: anime.stagger(1000)
-      }, '-=1016.7')
+      }, '-=1001')
       .add({ targets: '#follow-symbol_mobile-a, #follow-symbol_mobile-c',
         opacity: [0, 1],
         scale: [0, 1.3],
@@ -1218,7 +1217,7 @@
           { scale: [0.95, 1], duration: 350, easing: 'easeOutQuad' },
           { opacity: [0.7, 0], duration: 250 }
         ]
-      }, '+=1000')
+      }, '+=500')
       .add({ targets: '#kuia-b',
         scale: [0, 1],
         opacity: [0, 1],
@@ -1243,11 +1242,11 @@
       }, '-=200')
       .add({ targets: '#file_in-transit_b-laptop',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [570, 350], translateY: [430, 630], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, -220], translateY: [0, 200], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#follow-line_b-laptop_connected',
         easing: 'easeOutExpo',
         strokeDasharray: ['0,0', '8,12'],
@@ -1279,8 +1278,9 @@
       })
       .add({ targets: '#file_laptop_b-copy',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { scale: [1, 0], duration: 483.3 }
+          { opacity: [0, 1], duration: 1 },
+          { scale: [1, 0], duration: 498 },
+          { opacity: [1, 0], duration: 1 }
         ]
       }, '+=500')
       .add({ targets: '#follow-line_a-laptop_connected, #follow-line_c-laptop_connected',
@@ -1290,18 +1290,18 @@
       })
       .add({ targets: '#file_in-transit_a-laptop',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 380], translateY: [630, 190], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 30], translateY: [0, -440], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#file_in-transit_c-laptop',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 690], translateY: [630, 610], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 340], translateY: [0, -20], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=1033.4')
+      }, '-=1002')
       .add({ targets: '#kuia-copy_a, #kuia-copy_c',
         opacity: [0, 1]
       })
@@ -1335,7 +1335,7 @@
           { scale: [0.45, 0.5], duration: 350, easing: 'easeOutQuad' },
           { opacity: [0.7, 0], duration: 250 }
         ]
-      }, '+=1000')
+      }, '+=500')
       .add({ targets: '#koro_a',
         scale: [0, 0.5],
         opacity: [0, 1],
@@ -1360,11 +1360,11 @@
       }, '-=200')
       .add({ targets: '#file_in-transit_a-laptop',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [380, 350], translateY: [190, 630], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [30, 0], translateY: [-440, 0], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#follow-line_a-laptop_connected',
         easing: 'easeOutExpo',
         strokeDasharray: ['0,0', '8,12'],
@@ -1393,8 +1393,9 @@
       })
       .add({ targets: '#file_laptop_a-copy',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { scale: [1, 0], duration: 483.3 }
+          { opacity: [0, 1], duration: 1 },
+          { scale: [1, 0], duration: 498 },
+          { opacity: [1, 0], duration: 1 }
         ]
       }, '+=500')
       .add({ targets: '#follow-line_b-laptop_connected, #follow-line_c-laptop_connected',
@@ -1404,18 +1405,18 @@
       })
       .add({ targets: '#file_in-transit_b-laptop',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 570], translateY: [630, 430], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [-220, 0], translateY: [200, 0], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#file_in-transit_c-laptop',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 690], translateY: [630, 610], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 340], translateY: [0, -20], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=1033.4')
+      }, '-=1002')
       .add({ targets: '#koro-copy_b, #koro-copy_c',
         opacity: [0, 1]
       })
@@ -1455,11 +1456,11 @@
       }, '+=1000')
       .add({ targets: '#connect-code_in-transit_laptop-server',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 430], translateY: [630, 900], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 80], translateY: [0, 270], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#invite-symbol_server',
         opacity: [0, 1],
         scale: [0, 1]
@@ -1471,15 +1472,15 @@
           { scale: [1.65, 1.65], duration: 750 },
           { scale: [1.65, 1.55], opacity: [1, 0.7], duration: 350 },
           { scale: [1.55, 1.55], duration: 250 },
-          { opacity: [0.7, 0], duration: 16.7 }
+          { opacity: [0.7, 0], duration: 1 }
         ]
       }, '-=500')
       .add({ targets: '#connected-button_server',
         keyframes: [
-          { scale: [1.55, 1.55], opacity: [0, 1], duration: 16.7 },
+          { scale: [1.55, 1.55], opacity: [0, 1], duration: 1 },
           { scale: [1.55, 1.6], duration: 350, easing: 'easeOutQuad' }
         ]
-      }, '-=16.7')
+      }, '-=1')
       .add({ targets: '#follow-symbol_server',
         opacity: [0, 1],
         scale: [0, 1.3],
@@ -1516,11 +1517,11 @@
       })
       .add({ targets: '#file_in-transit_laptop-server',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [350, 430], translateY: [630, 900], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 80], translateY: [0, 270], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#storage_server',
         scale: [0, 1],
         opacity: [0, 1]
@@ -1602,7 +1603,7 @@
           { scale: [0.45, 0.5], duration: 350, easing: 'easeOutQuad' },
           { opacity: [0.7, 0], duration: 250 }
         ]
-      }, '+=1000')
+      }, '+=500')
       .add({ targets: '#wahine-c',
         opacity: [0, 1]
       }, '-=100')
@@ -1620,11 +1621,11 @@
       }, '-=200')
       .add({ targets: '#file_in-transit_c-server',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [690, 430], translateY: [610, 900], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, -260], translateY: [0, 290], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#follow-line_c-server_connected',
         easing: 'easeOutExpo',
         strokeDasharray: ['0,0', '8,12'],
@@ -1643,8 +1644,8 @@
       }, '+=500')
       .add({ targets: '#file_server_c-copy',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { scale: [1, 0], duration: 483.3 }
+          { opacity: [0, 1], duration: 1 },
+          { scale: [1, 0], duration: 499 }
         ]
       }, '+=500')
       .add({ targets: '#follow-line_a-server_connected, #follow-line_b-server_connected',
@@ -1654,18 +1655,18 @@
       })
       .add({ targets: '#file_in-transit_a-server',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [430, 380], translateY: [900, 190], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, -50], translateY: [0, -710], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=33.4')
+      }, '-=2')
       .add({ targets: '#file_in-transit_b-server',
         keyframes: [
-          { opacity: [0, 1], duration: 16.7 },
-          { translateX: [430, 570], translateY: [900, 430], duration: 1000 },
-          { opacity: [1, 0], duration: 16.7 }
+          { opacity: [0, 1], duration: 1 },
+          { translateX: [0, 140], translateY: [0, -470], duration: 1000 },
+          { opacity: [1, 0], duration: 1 }
         ]
-      }, '-=1033.4')
+      }, '-=1002')
       .add({ targets: '#wahine-a, #wahine-b',
         opacity: [0, 1]
       })
@@ -1679,7 +1680,7 @@
         duration: 1000
       }, '+=5000')
 
-      // tl.seek(35000)
+      // tl.seek(105000)
       tl.play()
 
     // ]]>
