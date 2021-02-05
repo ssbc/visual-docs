@@ -436,12 +436,17 @@ function toKebabCase (string) {
 }
 
 function appendCssToDocument (css) {
-  const styleElement = document.createElement('style')
-  styleElement.append(css)
-  document.documentElement.append(styleElement)
+  const originalStyle = document.getElementsByTagName('style')[0]
+  const newStyle = document.createElement('style')
+  newStyle.append(css)
+
+  originalStyle
+    ? originalStyle.parentNode.insertBefore(newStyle, originalStyle.nextSibling)
+    : document.documentElement.append(newStyle)
 }
 
 function deleteAllScripts () {
+  console.log('🎉️ Converted! You can now save your CSS animated SVG.\n(Right-click -> "Save Page As")')
   const scripts = document.getElementsByTagName('script')
   while (scripts.length) scripts[0].remove()
 }
