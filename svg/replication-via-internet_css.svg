@@ -31,7 +31,6 @@
   </metadata>
 
   <title>Replication via Pātaka</title>
-
   <style>
     /* <![CDATA[ */
     :root {
@@ -54,6 +53,7 @@
       --icon-bg-color: hsl(180, 25.4%, 40%);
       --outline-color: hsl(0, 0%, 22%);
       --white: hsl(0, 0%, 100%);
+      --light-grey: hsl(0, 0%, 90%);
       --mid-grey: hsl(0, 0%, 41.2%);
       --devices-color: hsl(0, 0%, 29.8%);
       --pounamu: hsl(118, 100.0%, 9.4%);
@@ -66,15 +66,44 @@
       stroke-dashoffset: 1.148;
     }
 
-    #pc, #pātaka-label, #house-top, #house-left, #house-right, #internet, #internet-label, #imac, #laptop, #whānau-member-left, #whānau-member-right, #house-outline-top, #router-top, #house-outline-left, #router-l, #house-outline-right, #router-r, #labels, #add-icon-right, #kuia-laptop, #copy-kuia-right, #laptop-to-router-r, #router-r-to-internet, #right-to-top-packet, #internet-to-router-top-right, #router-top-right-to-pātaka, #pātaka-symbol, #file-a, #copy-a, #pātaka-to-router-top-left, #router-top-to-internet-left, #top-to-left-packet, #internet-to-router-left, #router-left-to-imac, #copy-kuia-left, #kuia-imac, #add-icon-left, #koro-imac, #link-left, #copy-koro-left, #imac-to-router-left, #router-left-to-internet, #left-to-top-packet, #internet-left-to-router-top, #router-top-left-to-pātaka, #file-b, #pātaka-files, #copy-b, #pātaka-to-router-top-right, #router-top-to-internet-right, #top-to-right-packet, #internet-to-router-right, #router-right-to-laptop, #copy-koro-right, #koro-laptop, #link-right {
-    	animation-duration:44.867s;
-    	animation-timing-function: ease-in-out;
-    	animation-iteration-count: infinite;
+    /* animations */
+    #house-top, #house-left, #house-right, #pc, #pātaka-label, #internet, #internet-label, #imac, #laptop, #whānau-member-left, #whānau-member-right, #house-outline-top, #router-top, #house-outline-left, #router-l, #house-outline-right, #router-r, #labels, #add-icon-right, #kuia-laptop, #copy-kuia-right, #laptop-to-router-r, #router-r-to-internet, #right-to-top-packet, #internet-to-router-top-right, #router-top-right-to-pātaka, #pātaka-symbol, #file-a, #copy-a, #pātaka-to-router-top-left, #router-top-to-internet-left, #top-to-left-packet, #internet-to-router-left, #router-left-to-imac, #copy-kuia-left, #kuia-imac, #add-icon-left, #koro-imac, #link-left, #copy-koro-left, #imac-to-router-left, #router-left-to-internet, #left-to-top-packet, #internet-left-to-router-top, #router-top-left-to-pātaka, #file-b, #pātaka-files, #copy-b, #pātaka-to-router-top-right, #router-top-to-internet-right, #top-to-right-packet, #internet-to-router-right, #router-right-to-laptop, #copy-koro-right, #koro-laptop, #link-right {
+      animation-duration:44.87s;
+      animation-iteration-count: infinite;
+    }
+
+    #house-top, #house-left, #house-right, #pc, #pātaka-label, #internet, #internet-label, #imac, #laptop, #whānau-member-left, #whānau-member-right, #house-outline-top, #router-top, #house-outline-left, #router-l, #house-outline-right, #router-r, #labels, #add-icon-right, #kuia-laptop, #copy-kuia-right, #laptop-to-router-r, #router-r-to-internet, #right-to-top-packet, #internet-to-router-top-right, #router-top-right-to-pātaka, #pātaka-symbol, #file-a, #copy-a, #pātaka-to-router-top-left, #router-top-to-internet-left, #top-to-left-packet, #internet-to-router-left, #router-left-to-imac, #copy-kuia-left, #kuia-imac, #add-icon-left, #koro-imac, #link-left, #copy-koro-left, #imac-to-router-left, #router-left-to-internet, #left-to-top-packet, #internet-left-to-router-top, #router-top-left-to-pātaka, #file-b, #pātaka-files, #copy-b, #pātaka-to-router-top-right, #router-top-to-internet-right, #top-to-right-packet, #internet-to-router-right, #router-right-to-laptop, #copy-koro-right, #koro-laptop, #link-right {
+     animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    #house-top { animation-name: house-top-anim; }
+    @keyframes house-top-anim {
+      0%, 2.23% { opacity: 0; }
+      2.45% { opacity: 1; }
+      97.77% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #house-left { animation-name: house-left-anim; }
+    @keyframes house-left-anim {
+      0%, 2.23% { opacity: 0; }
+      2.45% { opacity: 1; }
+      97.77% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #house-right { animation-name: house-right-anim; }
+    @keyframes house-right-anim {
+      0%, 2.23% { opacity: 0; }
+      2.45% { opacity: 1; }
+      97.77% { opacity: 1; }
+      100% { opacity: 0; }
     }
 
     #pc { animation-name: pc-anim; }
     @keyframes pc-anim {
-      4.12% { opacity:1; }
+      0%, 1.89% { opacity: 0; }
+      4.12% { opacity: 1; }
       31.65% { transform: scale(1); }
       32.77% { transform: scale(1.4); }
       38.67% { transform: scale(1.4); }
@@ -82,404 +111,431 @@
       62.55% { transform: scale(1); }
       63.67% { transform: scale(1.4); }
       69.57% { transform: scale(1.4); }
-      0%, 1.89% { opacity:0; }
-      70.69%, 100% { transform: scale(1); }
+      70.69%, 100% { transform: scale(1); opacity: 1; }
     }
+
     #pātaka-label { animation-name: pātaka-label-anim; }
     @keyframes pātaka-label-anim {
-      0%, 1.89% { opacity:0; }
-      4.12%, 100% { opacity:1; }
+      0%, 1.89% { opacity: 0; }
+      4.12%, 100% { opacity: 1; }
     }
-    #house-top { animation-name: house-top-anim; }
-    @keyframes house-top-anim {
-      0%, 2.23% { opacity:0; }
-      2.45% { opacity:1; }
-      97.77% { opacity:1; }
-      100% { opacity:0; }
-    }
-    #house-left { animation-name: house-left-anim; }
-    @keyframes house-left-anim {
-      0%, 2.23% { opacity:0; }
-      2.45% { opacity:1; }
-      97.77% { opacity:1; }
-      100% { opacity:0; }
-    }
-    #house-right { animation-name: house-right-anim; }
-    @keyframes house-right-anim {
-      0%, 2.23% { opacity:0; }
-      2.45% { opacity:1; }
-      97.77% { opacity:1; }
-      100% { opacity:0; }
-    }
+
     #internet { animation-name: internet-anim; }
     @keyframes internet-anim {
-      0%, 3.57% { opacity:0; }
-      5.79% { opacity:1; }
-      97.77% { opacity:1; }
-      100% { opacity:0; }
+      0%, 3.57% { opacity: 0; }
+      5.79% { opacity: 1; }
+      97.77% { opacity: 1; }
+      100% { opacity: 0; }
     }
+
     #internet-label { animation-name: internet-label-anim; }
     @keyframes internet-label-anim {
-      0%, 3.57% { opacity:0; }
-      5.79%, 100% { opacity:1; }
+      0%, 3.57% { opacity: 0; }
+      5.79%, 100% { opacity: 1; }
     }
+
     #imac { animation-name: imac-anim; }
     @keyframes imac-anim {
-      0%, 5.24% { opacity:0; }
-      7.47% { opacity:1; }
+      0%, 5.24% { opacity: 0; }
+      7.47% { opacity: 1; }
       43.58% { transform: scale(1); }
       44.69% { transform: scale(1.7); }
       57.2% { transform: scale(1.7); }
-      58.99%, 100% { transform: scale(1); }
+      58.99%, 100% { transform: scale(1); opacity: 1; }
     }
+
     #laptop { animation-name: laptop-anim; }
     @keyframes laptop-anim {
-      0%, 5.24% { opacity:0; }
-      7.47% { opacity:1; }
+      0%, 5.24% { opacity: 0; }
+      7.47% { opacity: 1; }
       18.16% { transform: scale(1); }
-      19.28% { transform: scale(2); }
-      26.3% { transform: scale(2); }
+      19.28% { transform: scale(1.7); }
+      26.3% { transform: scale(1.7); }
       28.08% { transform: scale(1); }
       74.48% { transform: scale(1); }
       75.59% { transform: scale(1.7); }
       84.84% { transform: scale(1.7); }
-      86.63%, 100% { transform: scale(1); }
+      86.63%, 100% { transform: scale(1); opacity: 1; }
     }
+
     #whānau-member-left { animation-name: whānau-member-left-anim; }
     @keyframes whānau-member-left-anim {
-      0%, 5.24% { opacity:0; }
-      7.47%, 100% { opacity:1; }
+      0%, 5.24% { opacity: 0; }
+      7.47%, 100% { opacity: 1; }
     }
+
     #whānau-member-right { animation-name: whānau-member-right-anim; }
     @keyframes whānau-member-right-anim {
-      0%, 5.24% { opacity:0; }
-      7.47%, 100% { opacity:1; }
+      0%, 5.24% { opacity: 0; }
+      7.47%, 100% { opacity: 1; }
     }
+
     #house-outline-top { animation-name: house-outline-top-anim; }
     @keyframes house-outline-top-anim {
-      0%, 8.8% { opacity:0; }
-      11.03%, 100% { opacity:1; }
+      0%, 8.8% { opacity: 0; }
+      11.03%, 100% { opacity: 1; }
     }
+
     #router-top { animation-name: router-top-anim; }
     @keyframes router-top-anim {
-      0%, 8.8% { opacity:0; }
-      11.03%, 100% { opacity:1; }
+      0%, 8.8% { opacity: 0; }
+      11.03%, 100% { opacity: 1; }
     }
+
     #house-outline-left { animation-name: house-outline-left-anim; }
     @keyframes house-outline-left-anim {
-      0%, 8.8% { opacity:0; }
-      11.03%, 100% { opacity:1; }
+      0%, 8.8% { opacity: 0; }
+      11.03%, 100% { opacity: 1; }
     }
+
     #router-l { animation-name: router-l-anim; }
     @keyframes router-l-anim {
-      0%, 8.8% { opacity:0; }
-      11.03%, 100% { opacity:1; }
+      0%, 8.8% { opacity: 0; }
+      11.03%, 100% { opacity: 1; }
     }
+
     #house-outline-right { animation-name: house-outline-right-anim; }
     @keyframes house-outline-right-anim {
-      0%, 8.8% { opacity:0; }
-      11.03%, 100% { opacity:1; }
+      0%, 8.8% { opacity: 0; }
+      11.03%, 100% { opacity: 1; }
     }
+
     #router-r { animation-name: router-r-anim; }
     @keyframes router-r-anim {
-      0%, 8.8% { opacity:0; }
-      11.03%, 100% { opacity:1; }
+      0%, 8.8% { opacity: 0; }
+      11.03%, 100% { opacity: 1; }
     }
+
     #labels { animation-name: labels-anim; }
     @keyframes labels-anim {
-      0%, 13.26% { opacity:1; }
-      15.49%, 100% { opacity:0; }
+      0%, 13.26% { opacity: 1; }
+      15.49%, 100% { opacity: 0; }
     }
+
     #add-icon-right { animation-name: add-icon-right-anim; }
     @keyframes add-icon-right-anim {
-      19.95% { opacity:0; transform: scale(0); }
-      20.5% { opacity:1; transform: scale(1.05); }
-      21.62% { opacity:1; transform: scale(1); }
-      22.07% { opacity:1; transform: scale(0.8); }
-      0%, 19.72% { opacity:0; transform: scale(1); }
-      22.51%, 100% { opacity:1; transform: scale(1); }
+      0%, 19.72% { opacity: 0; transform: scale(1); }
+      19.95% { opacity: 0; transform: scale(0); }
+      20.5% { opacity: 1; transform: scale(1.05); }
+      21.62% { opacity: 1; transform: scale(1); }
+      22.07% { opacity: 1; transform: scale(0.8); }
+      22.51%, 100% { opacity: 1; transform: scale(1); }
     }
+
     #kuia-laptop { animation-name: kuia-laptop-anim; }
     @keyframes kuia-laptop-anim {
-      0%, 22.51% { opacity:0; }
-      23.18%, 100% { opacity:1; }
+      0%, 22.51% { opacity: 0; }
+      23.18%, 100% { opacity: 1; }
     }
+
     #copy-kuia-right { animation-name: copy-kuia-right-anim; }
     @keyframes copy-kuia-right-anim {
-      24.63% { transform: scale(0); transform-origin:752.5px 457.5px 0px; }
-      25.63% { transform: scale(1); transform-origin:752.5px 457.5px 0px; }
-      26.63% { transform: scale(1); transform-origin:752.5px 457.5px 0px; }
-      0%, 23.63% { transform: scale(0); transform-origin:752.5px 457.5px 0px; }
-      27.64%, 100% { transform: scale(0); transform-origin:706px 416.24px 0px; }
+      0%, 23.63% { transform: scale(0); transform-origin: 752.5px 457.5px 0px; }
+      24.63% { transform: scale(0); transform-origin: 752.5px 457.5px 0px; }
+      25.63% { transform: scale(1); transform-origin: 752.5px 457.5px 0px; }
+      26.63% { transform: scale(1); transform-origin: 752.5px 457.5px 0px; }
+      27.64%, 100% { transform: scale(0); transform-origin: 706px 416.24px 0px; }
     }
+
     #laptop-to-router-r { animation-name: laptop-to-router-r-anim; }
     @keyframes laptop-to-router-r-anim {
-      28.42% { transform: scale(0.9); }
-      33.99% { opacity:1; }
       0%, 27.3% { transform: scale(0); }
-      35.11%, 100% { opacity:0; }
+      28.42% { transform: scale(0.9); }
+      33.99% { opacity: 1; }
+      35.11%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-r-to-internet { animation-name: router-r-to-internet-anim; }
     @keyframes router-r-to-internet-anim {
-      29.2% { transform: scale(0.9); }
-      33.99% { opacity:1; }
       0%, 28.08% { transform: scale(0); }
-      35.11%, 100% { opacity:0; }
+      29.2% { transform: scale(0.9); }
+      33.99% { opacity: 1; }
+      35.11%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #right-to-top-packet { animation-name: right-to-top-packet-anim; }
     @keyframes right-to-top-packet-anim {
-      0%, 28.97% { stroke-dashoffset:0.148; opacity:0; }
-      28.98% { stroke-dashoffset:0.148; opacity:0; }
-      29.2% { stroke-dashoffset:0.188; opacity:1; }
-      30.98% { stroke-dashoffset:1.104; opacity:1; }
-      31.21%, 100% { stroke-dashoffset:1.148; opacity:0; }
+      0%, 28.974% { stroke-dashoffset: 0.148; opacity: 0; }
+      28.977% { stroke-dashoffset: 0.148; opacity: 0; }
+      29.199% { stroke-dashoffset: 0.188; opacity: 1; }
+      30.982% { stroke-dashoffset: 1.104; opacity: 1; }
+      31.205%, 100% { stroke-dashoffset: 1.148; opacity: 0; }
     }
+
     #internet-to-router-top-right { animation-name: internet-to-router-top-right-anim; }
     @keyframes internet-to-router-top-right-anim {
-      31.76% { transform: scale(0.9); }
-      33.99% { opacity:1; }
       0%, 30.65% { transform: scale(0); }
-      35.11%, 100% { opacity:0; }
+      31.76% { transform: scale(0.9); }
+      33.99% { opacity: 1; }
+      35.11%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-top-right-to-pātaka { animation-name: router-top-right-to-pātaka-anim; }
     @keyframes router-top-right-to-pātaka-anim {
-      32.54% { transform: scale(0.9); }
-      33.99% { opacity:1; }
       0%, 31.43% { transform: scale(0); }
-      35.11%, 100% { opacity:0; }
+      32.54% { transform: scale(0.9); }
+      33.99% { opacity: 1; }
+      35.11%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #pātaka-symbol { animation-name: pātaka-symbol-anim; }
     @keyframes pātaka-symbol-anim {
-      0%, 32.32% { opacity:1; }
-      33.43%, 100% { opacity:0; }
+      0%, 32.32% { opacity: 1; }
+      33.43%, 100% { opacity: 0; }
     }
+
     #file-a { animation-name: file-a-anim; }
     @keyframes file-a-anim {
-      0%, 33.43% { opacity:0; transform: scale(0.5); }
-      34.55%, 100% { opacity:1; transform: scale(1); }
+      0%, 33.43% { opacity: 0; transform: scale(0.5); }
+      34.55%, 100% { opacity: 1; transform: scale(1); }
     }
+
     #copy-a { animation-name: copy-a-anim; }
     @keyframes copy-a-anim {
-      37.33% { opacity:0; transform: scale(1); }
-      38.45% { opacity:1; transform: scale(1); }
-      0%, 36.22% { opacity:0; transform: scale(1); }
-      39.56%, 100% { opacity:0; transform: scale(0); }
+      0%, 36.22% { opacity: 0; transform: scale(1); }
+      37.33% { opacity: 0; transform: scale(1); }
+      38.45% { opacity: 1; transform: scale(1); }
+      39.56%, 100% { opacity: 0; transform: scale(0); }
     }
+
     #pātaka-to-router-top-left { animation-name: pātaka-to-router-top-left-anim; }
     @keyframes pātaka-to-router-top-left-anim {
-      40.34% { transform: scale(0.9); }
-      47.03% { opacity:1; }
       0%, 39.23% { transform: scale(0); }
-      48.15%, 100% { opacity:0; }
+      40.34% { transform: scale(0.9); }
+      47.03% { opacity: 1; }
+      48.15%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-top-to-internet-left { animation-name: router-top-to-internet-left-anim; }
     @keyframes router-top-to-internet-left-anim {
-      41.12% { transform: scale(0.9); }
-      47.03% { opacity:1; }
       0%, 40.01% { transform: scale(0); }
-      48.15%, 100% { opacity:0; }
+      41.12% { transform: scale(0.9); }
+      47.03% { opacity: 1; }
+      48.15%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #top-to-left-packet { animation-name: top-to-left-packet-anim; }
     @keyframes top-to-left-packet-anim {
-      41.13% { stroke-dashoffset:0.188; opacity:1; }
-      42.91% { stroke-dashoffset:1.104; opacity:1; }
-      0%, 40.9% { stroke-dashoffset:0.148; opacity:0; }
-      43.13%, 100% { stroke-dashoffset:1.148; opacity:0; }
+      0%, 40.901% { stroke-dashoffset: 0.148; opacity: 0; }
+      40.903% { stroke-dashoffset: 0.148; opacity: 0; }
+      41.126% { stroke-dashoffset: 0.188; opacity: 1; }
+      42.909% { stroke-dashoffset: 1.104; opacity: 1; }
+      43.132%, 100% { stroke-dashoffset: 1.148; opacity: 0; }
     }
+
     #internet-to-router-left { animation-name: internet-to-router-left-anim; }
     @keyframes internet-to-router-left-anim {
-      43.69% { transform: scale(0.9); }
-      47.03% { opacity:1; }
       0%, 42.57% { transform: scale(0); }
-      48.15%, 100% { opacity:0; }
+      43.69% { transform: scale(0.9); }
+      47.03% { opacity: 1; }
+      48.15%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-left-to-imac { animation-name: router-left-to-imac-anim; }
     @keyframes router-left-to-imac-anim {
-      44.47% { transform: scale(0.9); }
-      47.03% { opacity:1; }
       0%, 43.35% { transform: scale(0); }
-      48.15%, 100% { opacity:0; }
+      44.47% { transform: scale(0.9); }
+      47.03% { opacity: 1; }
+      48.15%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #copy-kuia-left { animation-name: copy-kuia-left-anim; }
     @keyframes copy-kuia-left-anim {
-      0%, 43.58% { transform: scale(0); opacity:1; }
-      44.58% { transform: scale(0); opacity:1; }
-      45.58% { transform: scale(1); opacity:1; }
-      46.59% { transform: scale(1); opacity:1; }
-      47.59%, 100% { transform: scale(1); opacity:0; }
+      0%, 43.58% { transform: scale(0); opacity: 1; }
+      44.58% { transform: scale(0); opacity: 1; }
+      45.58% { transform: scale(1); opacity: 1; }
+      46.59% { transform: scale(1); opacity: 1; }
+      47.59%, 100% { transform: scale(1); opacity: 0; }
     }
+
     #kuia-imac { animation-name: kuia-imac-anim; }
     @keyframes kuia-imac-anim {
-      0%, 46.7% { opacity:0; }
-      47.37%, 100% { opacity:1; }
+      0%, 46.7% { opacity: 0; }
+      47.37%, 100% { opacity: 1; }
     }
+
     #add-icon-left { animation-name: add-icon-left-anim; }
     @keyframes add-icon-left-anim {
-      0%, 50.38% { opacity:0; transform: scale(1); }
-      50.56% { opacity:0; transform: scale(0); }
-      51.12% { opacity:1; transform: scale(1.05); }
-      52.23% { opacity:1; transform: scale(1); }
-      52.68% { opacity:1; transform: scale(0.8); }
-      53.12% { opacity:1; transform: scale(1); }
-      53.57%, 100% { opacity:0; transform: scale(1); }
+      0%, 50.38% { opacity: 0; transform: scale(1); }
+      50.56% { opacity: 0; transform: scale(0); }
+      51.12% { opacity: 1; transform: scale(1.05); }
+      52.23% { opacity: 1; transform: scale(1); }
+      52.68% { opacity: 1; transform: scale(0.8); }
+      53.12% { opacity: 1; transform: scale(1); }
+      53.57%, 100% { opacity: 0; transform: scale(1); }
     }
+
     #koro-imac { animation-name: koro-imac-anim; }
     @keyframes koro-imac-anim {
-      0%, 53.12% { opacity:0; }
-      53.79%, 100% { opacity:1; }
+      0%, 53.12% { opacity: 0; }
+      53.79%, 100% { opacity: 1; }
     }
+
     #link-left { animation-name: link-left-anim; }
     @keyframes link-left-anim {
       0%, 53.46% { transform: scale(0); }
       54.57%, 100% { transform: scale(1); }
     }
+
     #copy-koro-left { animation-name: copy-koro-left-anim; }
     @keyframes copy-koro-left-anim {
-      0%, 54.53% { opacity:0; transform: scale(1); transform-origin:226.89px 400px 0px; }
-      55.53% { opacity:0; transform: scale(0); transform-origin:261px 443px 0px; }
-      56.53% { opacity:1; transform: scale(1); transform-origin:261px 443px 0px; }
-      57.54% { opacity:1; transform: scale(1); transform-origin:300px 400px 0px; }
-      58.54%, 100% { opacity:0; transform: scale(0); transform-origin:300px 400px 0px; }
+      0%, 54.53% { opacity: 0; transform: scale(1); transform-origin: 226.89px 400px 0px; }
+      55.53% { opacity: 0; transform: scale(0); transform-origin: 261px 443px 0px; }
+      56.53% { opacity: 1; transform: scale(1); transform-origin: 261px 443px 0px; }
+      57.54% { opacity: 1; transform: scale(1); transform-origin: 300px 400px 0px; }
+      58.54%, 100% { opacity: 0; transform: scale(0); transform-origin: 300px 400px 0px; }
     }
+
     #imac-to-router-left { animation-name: imac-to-router-left-anim; }
     @keyframes imac-to-router-left-anim {
       0%, 58.21% { transform: scale(0); }
       59.32% { transform: scale(0.9); }
-      64.23% { opacity:1; }
-      65.34%, 100% { opacity:0; }
+      64.23% { opacity: 1; }
+      65.34%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-left-to-internet { animation-name: router-left-to-internet-anim; }
     @keyframes router-left-to-internet-anim {
-      60.1% { transform: scale(0.9); }
-      64.23% { opacity:1; }
       0%, 58.99% { transform: scale(0); }
-      65.34%, 100% { opacity:0; }
+      60.1% { transform: scale(0.9); }
+      64.23% { opacity: 1; }
+      65.34%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #left-to-top-packet { animation-name: left-to-top-packet-anim; }
     @keyframes left-to-top-packet-anim {
-      60.1% { stroke-dashoffset:0.188; opacity:1; }
-      61.89% { stroke-dashoffset:1.104; opacity:1; }
-      0%, 59.88% { stroke-dashoffset:0.148; opacity:0; }
-      62.11%, 100% { stroke-dashoffset:1.148; opacity:0; }
+      0%, 59.877% { stroke-dashoffset: 0.148; opacity: 0; }
+      59.879% { stroke-dashoffset: 0.148; opacity: 0; }
+      60.102% { stroke-dashoffset: 0.188; opacity: 1; }
+      61.885% { stroke-dashoffset: 1.104; opacity: 1; }
+      62.108%, 100% { stroke-dashoffset: 1.148; opacity: 0; }
     }
+
     #internet-left-to-router-top { animation-name: internet-left-to-router-top-anim; }
     @keyframes internet-left-to-router-top-anim {
-      62.67% { transform: scale(0.9); }
-      64.23% { opacity:1; }
       0%, 61.55% { transform: scale(0); }
-      65.34%, 100% { opacity:0; }
+      62.67% { transform: scale(0.9); }
+      64.23% { opacity: 1; }
+      65.34%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-top-left-to-pātaka { animation-name: router-top-left-to-pātaka-anim; }
     @keyframes router-top-left-to-pātaka-anim {
-      63.45% { transform: scale(0.9); }
-      64.23% { opacity:1; }
       0%, 62.33% { transform: scale(0); }
-      65.34%, 100% { opacity:0; }
+      63.45% { transform: scale(0.9); }
+      64.23% { opacity: 1; }
+      65.34%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #file-b { animation-name: file-b-anim; }
     @keyframes file-b-anim {
-      0%, 63.67% { opacity:0; transform: scale(0.5); }
-      64.78%, 100% { opacity:1; transform: scale(1); }
+      0%, 63.67% { opacity: 0; transform: scale(0.5); }
+      64.78%, 100% { opacity: 1; transform: scale(1); }
     }
+
     #pātaka-files { animation-name: pātaka-files-anim; }
     @keyframes pātaka-files-anim {
       0%, 63.67% { transform: translateX(0px); }
       64.78%, 100% { transform: translateX(-25px); }
     }
+
     #copy-b { animation-name: copy-b-anim; }
     @keyframes copy-b-anim {
-      68.68% { opacity:0; transform: scale(1); }
-      69.8% { opacity:1; transform: scale(1); }
-      0%, 67.57% { opacity:0; transform: scale(1); }
-      70.91%, 100% { opacity:0; transform: scale(0); }
+      0%, 67.57% { opacity: 0; transform: scale(1); }
+      68.68% { opacity: 0; transform: scale(1); }
+      69.8% { opacity: 1; transform: scale(1); }
+      70.91%, 100% { opacity: 0; transform: scale(0); }
     }
+
     #pātaka-to-router-top-right { animation-name: pātaka-to-router-top-right-anim; }
     @keyframes pātaka-to-router-top-right-anim {
-      71.25% { transform: scale(0.9); }
-      81.5% { opacity:1; }
       0%, 70.13% { transform: scale(0); }
-      82.62%, 100% { opacity:0; }
+      71.25% { transform: scale(0.9); }
+      81.5% { opacity: 1; }
+      82.62%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-top-to-internet-right { animation-name: router-top-to-internet-right-anim; }
     @keyframes router-top-to-internet-right-anim {
-      72.03% { transform: scale(0.9); }
-      81.5% { opacity:1; }
       0%, 70.91% { transform: scale(0); }
-      82.62%, 100% { opacity:0; }
+      72.03% { transform: scale(0.9); }
+      81.5% { opacity: 1; }
+      82.62%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #top-to-right-packet { animation-name: top-to-right-packet-anim; }
     @keyframes top-to-right-packet-anim {
-      71.81% { stroke-dashoffset:0.148; opacity:0; }
-      72.03% { stroke-dashoffset:0.188; opacity:1; }
-      73.81% { stroke-dashoffset:1.104; opacity:1; }
-      0%, 71.8% { stroke-dashoffset:0.148; opacity:0; }
-      74.03%, 100% { stroke-dashoffset:1.148; opacity:0; }
+      0%, 71.804% { stroke-dashoffset: 0.148; opacity: 0; }
+      71.806% { stroke-dashoffset: 0.148; opacity: 0; }
+      72.029% { stroke-dashoffset: 0.188; opacity: 1; }
+      73.812% { stroke-dashoffset: 1.104; opacity: 1; }
+      74.035%, 100% { stroke-dashoffset: 1.148; opacity: 0; }
     }
+
     #internet-to-router-right { animation-name: internet-to-router-right-anim; }
     @keyframes internet-to-router-right-anim {
-      74.59% { transform: scale(0.9); }
-      81.5% { opacity:1; }
       0%, 73.48% { transform: scale(0); }
-      82.62%, 100% { opacity:0; }
+      74.59% { transform: scale(0.9); }
+      81.5% { opacity: 1; }
+      82.62%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #router-right-to-laptop { animation-name: router-right-to-laptop-anim; }
     @keyframes router-right-to-laptop-anim {
-      75.37% { transform: scale(0.9); }
-      81.5% { opacity:1; }
       0%, 74.26% { transform: scale(0); }
-      82.62%, 100% { opacity:0; }
+      75.37% { transform: scale(0.9); }
+      81.5% { opacity: 1; }
+      82.62%, 100% { opacity: 0; transform: scale(0.9); }
     }
+
     #copy-koro-right { animation-name: copy-koro-right-anim; }
     @keyframes copy-koro-right-anim {
-      0%, 74.48% { transform: scale(0); opacity:1; }
-      75.48% { transform: scale(0); opacity:1; }
-      76.49% { transform: scale(1); opacity:1; }
-      77.49% { transform: scale(1); opacity:1; }
-      78.49%, 100% { transform: scale(1); opacity:0; }
+      0%, 74.48% { transform: scale(0); opacity: 1; }
+      75.48% { transform: scale(0); opacity: 1; }
+      76.49% { transform: scale(1); opacity: 1; }
+      77.49% { transform: scale(1); opacity: 1; }
+      78.49%, 100% { transform: scale(1); opacity: 0; }
     }
+
     #koro-laptop { animation-name: koro-laptop-anim; }
     @keyframes koro-laptop-anim {
-      0%, 77.6% { opacity:0; }
-      78.27%, 100% { opacity:1; }
+      0%, 77.6% { opacity: 0; }
+      78.27%, 100% { opacity: 1; }
     }
+
     #link-right { animation-name: link-right-anim; }
     @keyframes link-right-anim {
       0%, 78.16% { transform: scale(0); }
       79.27%, 100% { transform: scale(1); }
     }
+
+    /* embedded font */
+    text { font-family: 'Dosis', sans-serif; }
+    @font-face {
+      font-family: 'Dosis';
+      src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
     /* ]]> */
   </style>
-
   <defs>
-    <marker id="marker-curve-left"
-            refX="0" refY="0" orient="auto" overflow="visible">
-      <path stroke="var(--imac-user-color)" fill="none"
-            stroke-width="1" stroke-linejoin="round" stroke-linecap="round"
-            d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
+    <marker id="marker-curve-left" refX="0" refY="0" orient="auto" overflow="visible">
+      <path stroke="var(--imac-user-color)" fill="none" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
     </marker>
-    <marker id="marker-curve-right"
-            refX="0" refY="0" orient="auto" overflow="visible">
-      <path stroke="var(--laptop-user-color)" fill="none"
-            stroke-width="1" stroke-linejoin="round" stroke-linecap="round"
-            d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
+    <marker id="marker-curve-right" refX="0" refY="0" orient="auto" overflow="visible">
+      <path stroke="var(--laptop-user-color)" fill="none" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" d="m 2.35,2.125 l -2.95,-2 l 2.95,-2"/>
     </marker>
-    <marker id="marker-top"
-			      orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="var(--pātaka-color)"
-            d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
+    <marker id="marker-top" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--pātaka-color)" d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
     </marker>
-    <marker id="marker-left"
-			      orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="var(--imac-user-color)"
-            d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
+    <marker id="marker-left" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--imac-user-color)" d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
     </marker>
-    <marker id="marker-right"
-			      orient="auto" overflow="visible" refX="0" refY="0">
-      <path fill="var(--laptop-user-color)"
-            d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
+    <marker id="marker-right" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--laptop-user-color)" d="M-10.69-4.44L1.33-.02-10.7 4.4a7.52 7.52 0 000-8.84z"/>
     </marker>
-    <g id="kuia"
-       transform="scale(.085)">
+    <g id="kuia" transform="scale(.085)">
       <defs>
         <clipPath id="outline-circle">
           <circle cx="242.4" cy="242.5" r="242.1"/>
@@ -487,67 +543,50 @@
       </defs>
       <circle id="bg" cx="242.4" cy="242.5" r="242.1" fill="var(--icon-bg-color)"/>
       <g clip-path="url(#outline-circle)">
-        <path id="kahu"
-              d="M62.9 422.3l130.5-32 188.5-60.5 44 67v24l-139.5 86.5s-137.5-4.5-139-5.5-84.5-79.5-84.5-79.5z"/>
-        <path id="skin"
-              fill="var(--white)"
-              d="M178.4 397.3l202-65s21.5 19.5 22.5 28.5c.9 8.4 10.9 46 12.3 51.4 4.4-4.5 8.7-9.2 12.7-14l-19.7-66.4-76.5-70s-3.2-86.2-3.2-92.6c0-6.5-30.2-70-30.2-70s-30.2-33.4-44.2-37.7c-14-4.3-34.5 5.4-34.5 5.4l-34.5 47.4L132.5 253 112 340.3l-40.6 64 107-7z"/>
-        <path fill="var(--white)"
-              d="M312 396.8c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
-              m-43.1-5.7c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z
-              m-14 31.3c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9c1 2.1 0 4.6-2 5.5-.5.3-1.1.4-1.7.4z
-              M382.1 401.4c-1.6 0-3.1-.9-3.8-2.4L354 346.1a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.8 5.9z
-              M362 433.3c-1.6 0-3.1-.9-3.8-2.4L333.8 378a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z"/>
+        <path id="kahu" d="M62.9 422.3l130.5-32 188.5-60.5 44 67v24l-139.5 86.5s-137.5-4.5-139-5.5-84.5-79.5-84.5-79.5z"/>
+        <path id="skin" fill="var(--white)" d="M178.4 397.3l202-65s21.5 19.5 22.5 28.5c.9 8.4 10.9 46 12.3 51.4 4.4-4.5 8.7-9.2 12.7-14l-19.7-66.4-76.5-70s-3.2-86.2-3.2-92.6c0-6.5-30.2-70-30.2-70s-30.2-33.4-44.2-37.7c-14-4.3-34.5 5.4-34.5 5.4l-34.5 47.4L132.5 253 112 340.3l-40.6 64 107-7z"/>
+        <path fill="var(--white)" d="M312 396.8c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z               m-43.1-5.7c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z               m-14 31.3c-1.6 0-3.1-.9-3.8-2.4l-24.4-52.9a4.1 4.1 0 017.5-3.5l24.4 52.9c1 2.1 0 4.6-2 5.5-.5.3-1.1.4-1.7.4z               M382.1 401.4c-1.6 0-3.1-.9-3.8-2.4L354 346.1a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.8 5.9z               M362 433.3c-1.6 0-3.1-.9-3.8-2.4L333.8 378a4.1 4.1 0 017.5-3.5l24.4 52.9a4.1 4.1 0 01-3.7 5.9z"/>
         <path d="M110.3 419.3l-18.5-58.4 293.4-92.7 18.5 58.4-293.4 92.7zm-8-53l13.4 42.5 277.5-87.6-13.4-42.5-277.5 87.6z"/>
         <defs>
           <clipPath id="c">
-            <path id="b"
-        d="M142.4 348.5l178.6-56 23.4.8 23.4 9.2 12 16 5.2 10.8-220.6 67.2-22.7-31.2z"/>
+            <path id="b" d="M142.4 348.5l178.6-56 23.4.8 23.4 9.2 12 16 5.2 10.8-220.6 67.2-22.7-31.2z"/>
           </clipPath>
         </defs>
         <g clip-path="url(#c)">
-          <path id="d"
-                d="M154.1 412.6l-7.4-3.8 21-40.4-38.8-20.1 3.9-7.4 46.1 23.9z"/>
+          <path id="d" d="M154.1 412.6l-7.4-3.8 21-40.4-38.8-20.1 3.9-7.4 46.1 23.9z"/>
           <g fill="var(--pātaka-color)">
-            <use xlink:href="#d" x="0" y="0" />
-            <use xlink:href="#d" x="35" y="-11" />
-            <use xlink:href="#d" x="70" y="-22" />
-            <use xlink:href="#d" x="105" y="-33" />
-            <use xlink:href="#d" x="140" y="-44" />
-            <use xlink:href="#d" x="175" y="-55" />
-            <use xlink:href="#d" x="210" y="-66" />
+            <use xlink:href="#d" x="0" y="0"/>
+            <use xlink:href="#d" x="35" y="-11"/>
+            <use xlink:href="#d" x="70" y="-22"/>
+            <use xlink:href="#d" x="105" y="-33"/>
+            <use xlink:href="#d" x="140" y="-44"/>
+            <use xlink:href="#d" x="175" y="-55"/>
+            <use xlink:href="#d" x="210" y="-66"/>
           </g>
           <g>
-            <use xlink:href="#d" x="-17.5" y="5.5" />
-            <use xlink:href="#d" x="17.5" y="-5.5" />
-            <use xlink:href="#d" x="52.5" y="-16.5" />
-            <use xlink:href="#d" x="87.5" y="-27.5" />
-            <use xlink:href="#d" x="122.5" y="-38.5" />
-            <use xlink:href="#d" x="157.5" y="-49.5" />
-            <use xlink:href="#d" x="192.5" y="-60.5" />
+            <use xlink:href="#d" x="-17.5" y="5.5"/>
+            <use xlink:href="#d" x="17.5" y="-5.5"/>
+            <use xlink:href="#d" x="52.5" y="-16.5"/>
+            <use xlink:href="#d" x="87.5" y="-27.5"/>
+            <use xlink:href="#d" x="122.5" y="-38.5"/>
+            <use xlink:href="#d" x="157.5" y="-49.5"/>
+            <use xlink:href="#d" x="192.5" y="-60.5"/>
           </g>
         </g>
-        <g id="hair"
-           fill="var(--mid-grey)">
+        <g id="hair" fill="var(--mid-grey)">
           <path d="M190.9 149c13-15.1-3-34.1 9.4-44.9 8-7 34.4-11.5 37.9-16 1.8-2.3 2.8-.4 2.5-17.7-.1-6.5.2-7.2-1.2-9.5s-13.7-7.9-40.1 4.2-46.4 68.6-51 82.6-14.8 30.6-26 37.6c-11.1 7-32 11.6-33.4 29.2s.5 26.4-10.2 34.3-23.5 9.9-20.4 29.2c4.4 27.4-6.1 40.3-11.6 48.7-36.4 55.6 30.4 90.9 30.4 90.9S33 366.1 159.4 298.8c24.1-12.8 36.7-8.8 51.5-25.7 6.5-7.4 5.6-28.8 2.8-36.6-2.4-6.9-12.1-9.3-19.9-39.9-5.2-20-9.9-39.4-2.9-47.6z"/>
           <path d="M294.8 149c-13-15.1 3-34.1-9.4-44.9-8-7-34.4-11.5-37.9-16-1.8-2.3-2.8-.4-2.5-17.7.1-6.5-.2-7.2 1.2-9.5s13.7-7.9 40.1 4.2 46.4 68.6 51 82.6c4.6 13.9 14.8 30.6 26 37.6 11.1 7 32 11.6 33.4 29.2s-.5 26.4 10.2 34.3 23.5 9.9 20.4 29.2c-4.4 27.4 6.1 40.3 11.6 48.7 36.4 55.6-26 86.5-26 86.5S389.7 295.5 326.2 296c-27.3.2-36.4-5.8-51.2-22.7-6.5-7.4-5.6-28.8-2.8-36.6 2.5-6.9 12.1-9.3 19.9-39.9 4.9-20.2 9.7-39.6 2.7-47.8zm-108 138.5s-48.2 10.1-37.6 61.2 55 56.1 55 56.1-98.4 69.8-159.1-16.6c-34.3-49.1 141.7-100.7 141.7-100.7z"/>
         </g>
-        <path id="lips"
-              d="M242.1 211.9 l3-1.8 s7.7-.8 12 .3 5.9 2.6 5.9 2.6-5 6-6.1 6.7 c-3 1.7-8.1 3.8-12.4 3.4L242.1 222.9 m0 -11l-3-1.8s-7.7-.8-12 .3-5.9 2.6-5.9 2.6 5 6 6.1 6.7c3 1.7 8.1 3.8 12.4 3.4L242.1 222.9"/>
+        <path id="lips" d="M242.1 211.9 l3-1.8 s7.7-.8 12 .3 5.9 2.6 5.9 2.6-5 6-6.1 6.7 c-3 1.7-8.1 3.8-12.4 3.4L242.1 222.9 m0 -11l-3-1.8s-7.7-.8-12 .3-5.9 2.6-5.9 2.6 5 6 6.1 6.7c3 1.7 8.1 3.8 12.4 3.4L242.1 222.9"/>
       </g>
-      <g id="moko-kauae"
-         fill="none" stroke="var(--outline-color)"
-         stroke-linecap="round" stroke-width="3">
+      <g id="moko-kauae" fill="none" stroke="var(--outline-color)" stroke-linecap="round" stroke-width="3">
         <path d="M245.5 221.5v22.3m4.4-22.3V237m-9-15.5v22.3m-4.4-22.3V237"/>
         <path d="m 249.9,236.6 c -0.014,1.39 -0.33,4.05 1.16,5.86 1.58,1.92 4.17,1.58 5.23,0.12 1.63,-2.23 0.28,-4.58 -1.33,-4.62"/>
         <path d="m 236.5,236.6 c 0.014,1.39 0.33,4.05 -1.16,5.86 -1.58,1.92 -4.17,1.58 -5.23,0.12 -1.63,-2.23 -0.28,-4.58 1.33,-4.62"/>
       </g>
-      <path id="chin-outline"
-            fill="var(--mid-grey)"
-            d="M260.8 248.2c-4 2.9-10.4 4.5-17.5 4.5-7.4 0-12.9-1.4-17.2-4.5l-.8-.5c-1.6-1-5.5-3.5-11.2-10.8l-1.7-2.2-1.4-1.8a30 30 0 013.2 12c4.1 4.4 7 6.2 8.4 7.1l.5.4a33.2 33.2 0 0020.1 5.4 36 36 0 0020.4-5.4c1.1-.8 3.7-2.6 7.8-7.2.1-1.2.8-7.8 2.8-11.5a56.7 56.7 0 01-13.4 14.5z"/>
+      <path id="chin-outline" fill="var(--mid-grey)" d="M260.8 248.2c-4 2.9-10.4 4.5-17.5 4.5-7.4 0-12.9-1.4-17.2-4.5l-.8-.5c-1.6-1-5.5-3.5-11.2-10.8l-1.7-2.2-1.4-1.8a30 30 0 013.2 12c4.1 4.4 7 6.2 8.4 7.1l.5.4a33.2 33.2 0 0020.1 5.4 36 36 0 0020.4-5.4c1.1-.8 3.7-2.6 7.8-7.2.1-1.2.8-7.8 2.8-11.5a56.7 56.7 0 01-13.4 14.5z"/>
     </g>
-    <g id="koro"
-     transform="scale(.085)">
+    <g id="koro" transform="scale(.085)">
       <circle cx="242.5" cy="243.5" r="242.1" fill="var(--icon-bg-color)"/>
       <defs>
         <clipPath id="bg-circle">
@@ -555,42 +594,33 @@
         </clipPath>
       </defs>
       <g clip-path="url(#bg-circle)">
-        <path fill="var(--white)"
-              d="M205.6 263.4l-3.3-23.3-24-49.3-1.3-27.4 1.3-44 24-44.7 42-2 38 2S295.6 97.4 299 100s2.7 46.7 2.7 46.7l3.4 19.8-.2 17.4-13.2 29.5-17.3 30-13.4 31.3-32.7 1.3-22.7-12.6z"/>
-        <polygon fill="var(--white)"
-                 points="260 490 315 480 295 450 275 450"/>
+        <path fill="var(--white)" d="M205.6 263.4l-3.3-23.3-24-49.3-1.3-27.4 1.3-44 24-44.7 42-2 38 2S295.6 97.4 299 100s2.7 46.7 2.7 46.7l3.4 19.8-.2 17.4-13.2 29.5-17.3 30-13.4 31.3-32.7 1.3-22.7-12.6z"/>
+        <polygon fill="var(--white)" points="260 490 315 480 295 450 275 450"/>
         <polygon points="64.1 431.5 77.6 387.9 275.6 453 252.6 518 87.1 496.5 47.1 474.5"/>
         <polygon points="311.1 430 349.6 512.5 432.1 425.5 403.5 385.5"/>
-        <polygon fill="var(--mid-grey)"
-                 points="271.7 452.9 294.9 383.4 315.3 430 405.8 382.4 374.5 318.7 283.4 389.2 100.1 321.6 78.6 387.3 271.6 452.9"/>
+        <polygon fill="var(--mid-grey)" points="271.7 452.9 294.9 383.4 315.3 430 405.8 382.4 374.5 318.7 283.4 389.2 100.1 321.6 78.6 387.3 271.6 452.9"/>
         <path d="M81.3 388.7a4.4 4.4 0 01-4.1-6L98.5 325a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.6 4.6 0 01-4.2 2.9z"/>
         <path d="M71.5 413.9a4 4 0 01-1.5-.3 4.3 4.3 0 01-2.6-5.6l31.1-85.1a4.3 4.3 0 015.6-2.6c2.3.8 3.5 3.4 2.6 5.6L75.6 411a4.3 4.3 0 01-4.1 2.9z"/>
-        <path fill="var(--white)"
-              d="M372 325.5s-.5-9.8-19.1-18.6-55.4-9.8-60.3-12.7c-4.9-2.9-11.8-22-11.8-22V235l-3.5.8c-5.9 8.1-11.7 18.2-13.2 20.8-2.2 3.7-24.5 4.6-24.5 4.6s-23-1-25.2-4.6c-1.6-2.6-7.5-12.9-13.4-21.1l-2-.5v37.2s-6.9 19.1-11.8 22-41.7 3.9-60.3 12.7-18.9 18.6-18.9 18.6l186.2 65-3.9-1 81.7-64z"/>
+        <path fill="var(--white)" d="M372 325.5s-.5-9.8-19.1-18.6-55.4-9.8-60.3-12.7c-4.9-2.9-11.8-22-11.8-22V235l-3.5.8c-5.9 8.1-11.7 18.2-13.2 20.8-2.2 3.7-24.5 4.6-24.5 4.6s-23-1-25.2-4.6c-1.6-2.6-7.5-12.9-13.4-21.1l-2-.5v37.2s-6.9 19.1-11.8 22-41.7 3.9-60.3 12.7-18.9 18.6-18.9 18.6l186.2 65-3.9-1 81.7-64z"/>
         <path d="M293.3 394.1l-11.2-2.8 1-.8-178.9-62.4.1-2.8c.1-1.2 1.2-12.3 21.2-21.8 12.2-5.8 31.2-8.3 45.1-10.1 6.3-.8 13.5-1.8 14.9-2.5a61.7 61.7 0 009.9-19.5v-41.2l7.8 1.8.8 1.1c5.3 7.4 10.6 16.3 12.9 20.1l.5.9a79 79 0 0043.8 0l.6-1.1c2.2-3.7 7.4-12.5 12.6-19.6l.8-1.1 9.3-2.1v41.2c3.4 9.3 8 18.4 10 19.5 1.4.7 8.6 1.7 14.9 2.5 13.9 1.8 32.9 4.3 45 10.1 20 9.5 21.1 20.5 21.2 21.8l.1 1.9-81.7 63.9-.7 3zm-180.7-70.8l177.3 61.9 78-61c-1.2-2.7-4.9-8.4-16.5-13.9-11.1-5.3-29.5-7.7-42.9-9.4a63.8 63.8 0 01-17.7-3.5c-5.6-3.4-11.6-19.2-13.3-24l-.2-.6v-30.4c-3.8 5.7-7.3 11.6-9 14.5l-.9 1.4c-3.2 5.4-21.5 6.2-27.5 6.4h-.4c-25-1.1-27.4-5.1-28.2-6.4l-.8-1.3c-1.5-2.6-4.5-7.6-7.8-12.7v28.5l-.2.6c-1.7 4.8-7.7 20.6-13.3 24a63.8 63.8 0 01-17.7 3.5c-13.4 1.8-31.7 4.1-42.9 9.4-10.4 4.9-14.5 10-16 13z"/>
         <path d="M199.1 238.8c-.2-.4-22.3-35.8-24.3-48.7l-1.1-6.3c-1.2-6.1-2.1-11-.2-17.4 2.1-6.9 3.8-22.1 3.8-22.3l7.3.8c-.1.6-1.8 16-4.1 23.6-1.4 4.7-.7 8.3.4 13.9l1.2 6.5c1.2 8 14.3 31.6 23.3 45.9l-6.3 4zM279.5 238.8l-6.2-3.9c8.9-14.3 22-37.9 23.3-45.9l1.2-6.5c1.1-5.6 1.8-9.2.4-13.9-2.3-7.6-4-22.9-4-23.6l7.3-.8c0 .1 1.7 15.3 3.8 22.3 1.9 6.4 1 11.3-.2 17.4-.4 1.9-.8 3.9-1.1 6.3-2.2 12.8-24.3 48.2-24.5 48.6zM257.5 497.1a4 4 0 01-1.5-.3 4.4 4.4 0 01-2.6-5.7l31.1-85.1c.8-2.3 3.4-3.5 5.6-2.6s3.5 3.4 2.6 5.6l-31.1 85.1c-.6 1.9-2.3 3-4.1 3z"/>
         <path d="M268.9 455.9l-1.4-.2-187.2-62.3a4.4 4.4 0 01-2.8-5.6 4.4 4.4 0 015.6-2.8l187.2 62.2c2.3.8 3.6 3.3 2.8 5.6a4.4 4.4 0 01-4.2 3.1zM313.4 435.9l-22.9-45.2a4.4 4.4 0 011.9-5.9 4.4 4.4 0 015.9 1.9l18.9 37.3 84.4-44.1c2.2-1.1 4.8-.3 6 1.9s.3 4.8-1.9 6l-92.3 48.1z"/>
         <path d="M108.9 401.2a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
-        <path fill="var(--white)"
-              d="M118.7 424.7a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM56.7 426.7a4.4 4.4 0 01-4.1-6L73.9 363a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
+        <path fill="var(--white)" d="M118.7 424.7a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM56.7 426.7a4.4 4.4 0 01-4.1-6L73.9 363a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9z"/>
         <path d="M157.9 417.9a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7L162.1 415a4.5 4.5 0 01-4.2 2.9z"/>
-        <path fill="var(--white)"
-              d="M167.7 453.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM178.7 511.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM395.1 419.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM440.1 448.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM367.1 490.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.8-.7.4-1.3.5-1.9.5z"/>
+        <path fill="var(--white)" d="M167.7 453.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM178.7 511.8a4.4 4.4 0 01-4.1-6l21.3-57.7a4.4 4.4 0 015.7-2.6c2.3.8 3.4 3.4 2.6 5.7l-21.3 57.7a4.5 4.5 0 01-4.2 2.9zM395.1 419.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM440.1 448.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9-.7.3-1.3.4-1.9.4zM367.1 490.1c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.8-.7.4-1.3.5-1.9.5z"/>
         <path d="M366.6 414.7c-1.7 0-3.3-1-4-2.6l-25.7-55.9c-1-2.2 0-4.8 2.2-5.9 2.2-1 4.8 0 5.9 2.2l25.7 55.9c1 2.2 0 4.8-2.2 5.9a4 4 0 01-1.9.4z"/>
-        <g fill="none" stroke="var(--outline-color)"
-           stroke-linecap="round" stroke-width="4">
+        <g fill="none" stroke="var(--outline-color)" stroke-linecap="round" stroke-width="4">
           <path d="M238.8 189.7c-2.5-8.7 5.8-19.3 22.4-13.4 16.6 5.9 27 30.8 24.2 48"/>
           <path d="M239.6 192.4c-2.4-8.3 9.4-18.1 22.5-10.1 14.5 8.8 22 30.9 17.2 52.5"/>
           <path d="M240.2 193.9c-1.9-8 11-13.5 22.3-5.2 13 9.5 19 54.5 2.7 63.9"/>
         </g>
-        <g fill="none" stroke="var(--outline-color)"
-           stroke-linecap="round"  stroke-width="4">
+        <g fill="none" stroke="var(--outline-color)" stroke-linecap="round" stroke-width="4">
           <path d="M241 189.9c2.5-8.8-5.8-19.6-22.4-13.6s-27 31.3-24.2 48.6"/>
           <path d="M240.2 192.6c2.4-8.4-9.4-18.3-22.5-10.3-14.5 8.9-21.9 31.3-17.2 53.2"/>
           <path d="M239.6 194.1c1.9-8.1-11-13.7-22.3-5.3-13 9.6-19 55.2-2.7 64.7"/>
         </g>
-        <path fill="var(--pounamu)"
-          d="M301.7 191.9s-3.3 6.3-1.3 10.4 3 8.7 3 8.7 5.4 47.9 6.9 52.9c1.5 4.9 4.1 17.3 6.4 17.3s3-5.3 0-25.2-8.2-45.8-8.2-45.8 1.9-19.4-6.8-18.3z"/>
+        <path fill="var(--pounamu)" d="M301.7 191.9s-3.3 6.3-1.3 10.4 3 8.7 3 8.7 5.4 47.9 6.9 52.9c1.5 4.9 4.1 17.3 6.4 17.3s3-5.3 0-25.2-8.2-45.8-8.2-45.8 1.9-19.4-6.8-18.3z"/>
         <g stroke="var(--outline-color)">
           <path d="M242.1 158.5c-1 0-1.9-.6-2.3-1.6-.1-.3-2.8-7.1-2.6-21.9.1-5.6 3.8-15.2 11.9-23.3 7.2-7.3 20.6-15.9 43.4-15.9 1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5c-21.1 0-33.3 7.8-39.9 14.4a33.4 33.4 0 00-10.4 19.8c-.2 13.6 2.2 19.9 2.2 20 .5 1.3-.1 2.7-1.4 3.2-.3.3-.6.3-.9.3z"/>
           <path d="M240.9 152.5c-.6-.5-3.6-3.5-2.6-12.5.3-2.7 2-6.6 4.4-10.3 2.1-3.2 5.8-8 11.6-12.3 8-5.9 21.6-12.1 41.5-8.3 1.4.3 2.3 1.6 2 2.9-.3 1.4-1.6 2.3-2.9 2a46.6 46.6 0 00-37.6 7.4c-9.2 6.8-13.7 15.8-14 19.1-.7 6.3.9 8.2.9 8.2l-.1-.1-3.2 3.9z"/>
@@ -602,114 +632,98 @@
           <path d="M237.7 158.7l-.7-.1c-1.3-.4-2-1.8-1.7-3.1 0-.2.9-3.5-2.1-8.4-3.4-5.7-25.1-21.4-52.1-5.2-1.2.7-2.7.3-3.4-.9s-.3-2.7.9-3.4a48 48 0 0139.3-6 37 37 0 0119.7 12.9c4.1 6.8 2.7 11.8 2.6 12.4a2.7 2.7 0 01-2.5 1.8z"/>
         </g>
         <line x1="239.8" x2="239.8" y1="108.2" y2="213.5" fill="none" stroke="var(--white)" stroke-width="5"/>
-        <path fill="var(--pounamu)" stroke="var(--outline-color)"  stroke-width="9"
-          d="M346.9 482.6s-8.5 9-17.1 2.6c-8.7-6.5-21.7-31-41.5-34.3-19.7-3.3-22.6-21.3-22.6-21.3s-15.4.1-18-7.3.2-19.6.2-19.6-6-20.7-29.7-17.4c-11.5 1.6-14.9 3.1-14.9 3.1s-36.1-38 .4-67.3 73.6 22.9 80.6 32.2c22 28.9 24.2 71.5 37.2 92.6 12.5 20.4 15.3 19.1 19.7 20.5 4.5 1.4 14.4 8 5.7 16.2z"/>
-        <path fill="var(--mid-grey)"
-          d="M241.4 50.2c8.1 0 25.9 6.5 37.2 10.3 11.3 3.8 30.2 39.3 35.1 64.7 4.4 22.8-5.2 32.1-8 50.6l-6.9-2.1c-1.3-5.2-6.6-23.1-6.6-25.4 0-3.2 3.7-4.8 3.7-17.6s-13.5-36.2-16.3-41.1c-2.7-4.9-14.6-2.7-28.1-1.1-13.5 1.6-17.3-2.6-17.3-2.6l-1.1-35.7h8.3z"/>
-        <path fill="var(--mid-grey)"
-          d="M237.3 50.2c-8.1 0-25.9 6.5-37.2 10.3s-30.2 39.3-35.1 64.7c-4.4 22.8 5.2 32.1 8 50.6l6.3-1.3c1.3-5.2 6.6-23.1 6.6-25.4 0-3.2-3.1-5.6-3.1-18.5s13.6-36.2 16.3-41.1 14.6-2.7 28.1-1.1 17.3-2.6 17.3-2.6l1.1-35.7-8.3.1z"/>
+        <path fill="var(--pounamu)" stroke="var(--outline-color)" stroke-width="9" d="M346.9 482.6s-8.5 9-17.1 2.6c-8.7-6.5-21.7-31-41.5-34.3-19.7-3.3-22.6-21.3-22.6-21.3s-15.4.1-18-7.3.2-19.6.2-19.6-6-20.7-29.7-17.4c-11.5 1.6-14.9 3.1-14.9 3.1s-36.1-38 .4-67.3 73.6 22.9 80.6 32.2c22 28.9 24.2 71.5 37.2 92.6 12.5 20.4 15.3 19.1 19.7 20.5 4.5 1.4 14.4 8 5.7 16.2z"/>
+        <path fill="var(--mid-grey)" d="M241.4 50.2c8.1 0 25.9 6.5 37.2 10.3 11.3 3.8 30.2 39.3 35.1 64.7 4.4 22.8-5.2 32.1-8 50.6l-6.9-2.1c-1.3-5.2-6.6-23.1-6.6-25.4 0-3.2 3.7-4.8 3.7-17.6s-13.5-36.2-16.3-41.1c-2.7-4.9-14.6-2.7-28.1-1.1-13.5 1.6-17.3-2.6-17.3-2.6l-1.1-35.7h8.3z"/>
+        <path fill="var(--mid-grey)" d="M237.3 50.2c-8.1 0-25.9 6.5-37.2 10.3s-30.2 39.3-35.1 64.7c-4.4 22.8 5.2 32.1 8 50.6l6.3-1.3c1.3-5.2 6.6-23.1 6.6-25.4 0-3.2-3.1-5.6-3.1-18.5s13.6-36.2 16.3-41.1 14.6-2.7 28.1-1.1 17.3-2.6 17.3-2.6l1.1-35.7-8.3.1z"/>
         <path d="M414.3 411.8c-1.7 0-3.3-1-4-2.6l-40.2-86.8a4.4 4.4 0 018-3.6l40.2 86.8a4.4 4.4 0 01-4 6.2z"/>
       </g>
     </g>
+
+    <path id="house-shape" fill="var(--light-grey)" stroke="none" filter="url(#shadow)" d="M195 -110 l-195-113 l-195 113           l12.3,0 v297 h365.4 v-297z"/>
+
+    <g id="monitor" stroke="none" stroke-linecap="round" stroke-width="1">
+
+      <rect id="stand-front" fill="var(--devices-color)" x="-14" y="60" width="30" height="40"/>
+      <rect id="baseplate" x="-39" y="95.1" width="80" height="5" rx="1" ry="1" style="transform-origin: 0px 93.8px 0px;" fill="var(--mid-grey)"/>
+      <rect id="screen-frame" fill="var(--devices-color)" x="-109" y="-62" width="218" height="132.2" rx="2" ry="2"/>
+      <rect id="pc-screen" fill="var(--white)" opacity="0.93" x="-104" y="-56" width="208" height="121"/>
+    </g>
+
+    <g id="laptop-flat" transform="scale(5)" stroke-width=".5">
+      <path id="laptop-screen-bg" stroke="none" d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
+      <path id="laptop-screen-bg-overlay" stroke="none" fill="var(--outline-color)" fill-opacity=".2" d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v 21.84z"/>
+      <rect id="laptop-screen" fill="var(--white)" fill-opacity="0.95" stroke="none" x="-18" y="-12" width="36" height="18.67"/>
+      <circle id="laptop-camera" fill="var(--mid-light-grey)" cx="0" cy="-12.5" r=".25"/>
+      <path id="laptop-keyboard" d="M-24,8 h48 q0,2-0.5,2 h-47 q -0.5, 0 -0.5, -2" width="48" height="2" stroke="none"/>
+      <path id="touchpad" d="M-24,8 h48 v0.4 h-20 l-0.5,0.75 h-7 l-0.5,-0.75 h-20z" stroke="none" fill="var(--mid-grey)"/>
+
+    </g>
+
+    <filter id="shadow" x="-35%" y="-35%" height="170%" width="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="1" dy="2" result="offsetblur"/>
+
+      <feComponentTransfer in="offsetblur" result="first">
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0.25" dy="0.75" result="offsetblurtwo"/>
+
+      <feComponentTransfer in="offsetblurtwo" result="second">
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+
+      <feMerge>
+        <feMergeNode in="second"/>
+        <feMergeNode in="first"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
   </defs>
 
-  <g id="house-top">
-    <path id="house-outline-top"
-          class="secondary"
-          style="transform-origin:500px 0px 0px;"
-          transform="scale(1)"
-          fill="var(--pātaka-tint)" stroke="var(--pātaka-color)"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-          d="M695 155 l-195-113 l-195 113
-          l12.3-7 v297 h365.4 v-297z"/>
+  <g id="house-top" style="opacity: 1;">
+    <use id="house-outline-top" xlink:href="#house-shape" x="500" y="260" style="opacity: 1;"/>
 
-    <g id="pc"
-       class="pātaka"
-       stroke-linejoin="round" stroke-miterlimit="4"
-       style="transform-origin:500px 200px 0px;">
+    <g id="pc" stroke-linejoin="round" stroke-miterlimit="4" style="transform-origin: 500px 200px 0px; opacity: 1; transform: scale(1);">
+       <use xlink:href="#monitor" x="455" y="239"/>
       <g transform="translate(60, -30) scale(.85)">
-        <g stroke-linecap="butt" stroke-width="1" transform="translate(0, 5)">
-          <path fill="var(--devices-color)" stroke="var(--devices-color)"
-  				d="M609.5 282.9l-51.4-40.2v145.4l51.4 40.1z"/>
-          <rect width="80.8" height="145.4" x="609.5" y="282.9" fill="var(--mid-grey)" stroke="var(--outline-color)" ry="0"/>
-          <path fill="var(--mid-grey)" stroke="var(--outline-color)"
-  				d="M609.5 282.9l-51.4-40.2H639l51.4 40.2z"/>
+        <g stroke-linecap="butt" stroke-width="1.5" transform="translate(0, 5)">
+
+          <rect width="80.8" height="165.4" x="609.5" y="262.9" fill="var(--mid-grey)" stroke="var(--outline-color)" ry="0"/>
+
           <circle cx="650.3" cy="385.6" r="10.6" fill="var(--mid-grey)" stroke="var(--outline-color)"/>
           <rect width="56.9" height="16.3" x="622" y="304.1" fill="var(--mid-grey)" stroke="var(--devices-color)" ry="0.5"/>
           <rect width="56.9" height="16.3" x="622" y="330.1" fill="var(--mid-grey)" stroke="var(--devices-color)" ry="0.5"/>
         </g>
 
         <g id="screen">
-          <g stroke="var(--outline-color)" stroke-linecap="round" stroke-width="1">
-            <path fill="var(--mid-grey)"
-          				d="M424 420h80l14 10h-108z"/>
-            <path fill="var(--mid-grey)"
-          				d="M488 379h-48V425h48z"/>
+          <g id="pātaka-symbol" fill="var(--pātaka-color)" stroke="var(--outline-color)" stroke-linecap="round" stroke-width=".2" style="opacity: 1;">
+            <path d="M447.3 329.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
+            <path d="M451.6 340.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
           </g>
-          <g stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
-            <rect fill="var(--mid-grey)"
-          				x="344" y="235" width="236" height="145"/>
-            <path fill="var(--mid-grey)"
-          				d="M344 235l8-5 h220 l8 5z"/>
-          </g>
-          <rect id="screen"
-                fill="var(--white)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1"
-  				      x="354" y="243" width="216" height="129"/>
-          <path id="reflection"
-                fill="none" stroke="var(--white)"
-                opacity="0.5" stroke-linecap="round" stroke-width="1"
-  				      d="M571 243v130h-218v-130"/>
-          <g id="pātaka-symbol"
-             fill="var(--pātaka-color)" stroke="var(--outline-color)"
-             stroke-linecap="round" stroke-width=".2">
-            <path d="M447.3 319.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
-            <path d="M451.6 330.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
-          </g>
-          <g id="pātaka-files"
-             style="transform:translate(25px, 0)">
-            <rect id="copy-a"
-                  style="opacity: 0; transform-origin: 460px 400px 0px;"
-                  x="420" y="285" width="40" height="40"
-                  fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
-                  rx="5" stroke-width="5"/>
-            <rect id="file-a"
-                  style="transform-origin: 490px 400px 0px;"
-                  x="420" y="285" width="40" height="40"
-                  fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
-                  rx="5" stroke-width="5"/>
-            <rect id="copy-b"
-                  style="opacity: 0; transform-origin: 490px 400px 0px;"
-                  x="470" y="285" width="40" height="40"
-                  fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
-                  rx="5" stroke-width="5"/>
-            <rect id="file-b"
-                  style="transform-origin: 490px 400px 0px;"
-                  x="470" y="285" width="40" height="40"
-                  fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
-                  rx="5" stroke-width="5"/>
+          <g id="pātaka-files" style="transform: translate(25px) translateX(0px);">
+            <rect id="copy-a" style="opacity: 0; transform-origin: 460px 400px 0px; transform: scale(1);" x="420" y="285" width="40" height="40" fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)" rx="5" stroke-width="5"/>
+            <rect id="file-a" style="transform-origin: 490px 400px 0px; opacity: 0; transform: scale(0.5);" x="420" y="285" width="40" height="40" fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)" rx="5" stroke-width="5"/>
+            <rect id="copy-b" style="opacity: 0; transform-origin: 490px 400px 0px; transform: scale(1);" x="470" y="285" width="40" height="40" fill="var(--imac-user-tint)" stroke="var(--imac-user-color)" rx="5" stroke-width="5"/>
+            <rect id="file-b" style="transform-origin: 490px 400px 0px; opacity: 0; transform: scale(0.5);" x="470" y="285" width="40" height="40" fill="var(--imac-user-tint)" stroke="var(--imac-user-color)" rx="5" stroke-width="5"/>
           </g>
         </g>
       </g>
     </g>
 
-    <g id="router-top"
-      class="secondary"
-      transform="translate(824, 48)rotate(90)"
-      stroke-linecap="round" stroke-linejoin="miter">
-      <rect fill="var(--pātaka-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
-      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4"
-              cx="386.27" cy="290.74" r="5.95"/>
-      <path fill="var(--pātaka-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
-      <g id="waves-top"
-         fill="none" stroke="var(--pātaka-color)" stroke-opacity="0.5" stroke-width="1">
+
+    <g id="router-top" transform="translate(824, 48)rotate(90)" stroke-linecap="round" stroke-linejoin="miter" style="opacity: 1;">
+      <rect fill="var(--pātaka-medium-tint)" stroke="var(--outline-color)" stroke-width=".6" width="19.84" height="111.65" x="376.89" y="279.38" ry="1"/>
+      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4" cx="386.27" cy="290.74" r="5.95"/>
+      <path fill="var(--pātaka-medium-tint)" stroke="var(--outline-color)" stroke-width=".6" d="M383.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
+      <g id="waves-top" fill="none" stroke="var(--pātaka-color)" stroke-opacity="0.5" stroke-width="1">
         <path d="M331.08 279.38a9.74 9.74 0 014.15-12.99"/>
         <path d="M323.14 282.8a17.5 17.5 0 017.4-23.8"/>
         <path d="M315.2 286.95a26.33 26.33 0 0111.37-35.71"/>
       </g>
-      <g id="lights-top"
-         fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
+      <g id="lights-top" fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
         <circle cx="387.89" cy="380.02" r="2.71"/>
         <circle cx="387.89" cy="369.02" r="2.71"/>
         <circle cx="387.89" cy="357.84" r="2.71"/>
@@ -718,78 +732,38 @@
 
   </g>
 
-  <g id="house-left"
-     transform="translate(0, 400)">
-    <path id="house-outline-left"
-      class="secondary"
-          fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-			    d="M411 264l-195-113 l-195 113
-          l12.3-7 v297 h365.4 v-297z"/>
+  <g id="house-left" transform="translate(0, 400)" style="opacity: 1;">
+    <use id="house-outline-left" xlink:href="#house-shape" x="218" y="370" fill="var(--imac-user-tint)" style="opacity: 1;"/>
 
-    <g id="imac"
-       class="whānau-member"
-       style="transform-origin:240px 510px 0px"
-       stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
-      <path fill="var(--devices-color)"
-            d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
-      <path fill="var(--mid-grey)"
-            d="M184.37 534.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
-      <path fill="none" stroke="var(--outline-color)"
-            d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
-      <rect fill="var(--devices-color)" stroke="var(--outline-color)"
-            width="199.45" height="121.54" x="118.35" y="390.11" rx="7.87" ry="7.88"/>
-      <circle fill="var(--mid-grey)"
-              cx="219.76" cy="394.05" r="1.97"/>
-      <rect fill="var(--white)"
-            width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
+    <g id="imac" style="transform-origin: 250px 510px 0px; opacity: 1; transform: scale(1);" stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
+      <path fill="var(--devices-color)" d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+      <path fill="var(--mid-grey)" d="M184.37 534.16c6.74-6.75 7.86-8.44 10.4-14.63 15.72 11.53 30.9 11.53 46.62 0 2.25 6.75 3.1 7.03 10.68 14.63z"/>
+      <path fill="none" stroke="var(--outline-color)" d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
+      <rect fill="var(--devices-color)" stroke="var(--outline-color)" width="199.45" height="121.54" x="118.35" y="390.11" rx="7.87" ry="7.88"/>
+      <circle fill="var(--mid-grey)" cx="219.76" cy="394.05" r="1.97"/>
+      <rect fill="var(--white)" width="191.58" height="101.84" x="122.29" y="397.99" rx="0" ry="0"/>
 
-      <circle id="copy-kuia-left"
-              style="transform:scale(0); transform-origin:255px 400px 0px;"
-              cx="170.5" cy="443.5" r="22"
-              fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
-              stroke-width="5"/>
-      <use id="kuia-imac"
-           xlink:href="#kuia"
-           x="150" y="423" />
-      <path id="link-left"
-            style="transform: scale(0); transform-origin: 195px 444px 0px;"
-            d="M195,444 h41.5"
-            stroke="var(--devices-color)" stroke-width="2"/>
-      <g id="add-icon-left"
-         style="opacity: 0; transform-origin:260.6px 443.18px 0px"
-         stroke-width="2" fill="var(--imac-user-color)" stroke="var(--white)">
+      <circle id="copy-kuia-left" style="transform: scale(0); transform-origin: 255px 400px 0px; opacity: 1;" cx="170.5" cy="443.5" r="22" fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)" stroke-width="5"/>
+      <use id="kuia-imac" xlink:href="#kuia" x="150" y="423" style="opacity: 0;"/>
+      <path id="link-left" style="transform: scale(0); transform-origin: 195px 444px 0px;" d="M195,444 h41.5" stroke="var(--devices-color)" stroke-width="2"/>
+      <g id="add-icon-left" style="opacity: 0; transform-origin: 260.6px 443.18px 0px; transform: scale(1);" stroke-width="2" fill="var(--imac-user-color)" stroke="var(--white)">
          <circle cx="260.6" cy="443.18" r="18"/>
          <path d="M248.6 443.18 h24 m-12 -12 v24"/>
       </g>
-      <circle id="copy-koro-left"
-              style="opacity: 0; transform-origin:226.89px 400px 0px;"
-              cx="260.5" cy="443.5" r="22"
-              fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
-              stroke-width="5"/>
-      <use id="koro-imac"
-           xlink:href="#koro"
-           x="240" y="423" />
+      <circle id="copy-koro-left" style="opacity: 0; transform-origin: 226.89px 400px 0px; transform: scale(1);" cx="260.5" cy="443.5" r="22" fill="var(--imac-user-tint)" stroke="var(--imac-user-color)" stroke-width="5"/>
+      <use id="koro-imac" xlink:href="#koro" x="240" y="423" style="opacity: 0;"/>
     </g>
 
-    <g id="router-l"
-      class="secondary"
-      stroke-linecap="round" stroke-linejoin="miter">
-      <rect fill="var(--imac-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            width="19.84" height="111.65" x="377.89" y="279.38" ry="3.79"/>
-      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4"
-              cx="387.27" cy="290.74" r="5.95"/>
-      <path fill="var(--imac-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            d="M384.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
-      <g id="waves-l"
-         fill="none" stroke="var(--imac-user-color)" stroke-opacity="0.7" stroke-width="1">
+    <g id="router-l" stroke-linecap="round" stroke-linejoin="miter" style="opacity: 1;">
+      <rect fill="var(--imac-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6" width="19.84" height="111.65" x="377.89" y="279.38" ry="3.79"/>
+      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4" cx="387.27" cy="290.74" r="5.95"/>
+      <path fill="var(--imac-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6" d="M384.75 293.8l-44.2-15.87c-4.15-1.62-2.88-6.3 1.8-5.23l45.1 13.17c5.6 1.8 3.25 10.1-2.7 7.94z"/>
+      <g id="waves-l" fill="none" stroke="var(--imac-user-color)" stroke-opacity="0.7" stroke-width="1">
         <path d="M332.08 279.38a9.74 9.74 0 014.15-12.99"/>
         <path d="M324.14 282.8a17.5 17.5 0 017.4-23.8"/>
         <path d="M316.2 286.95a26.33 26.33 0 0111.37-35.71"/>
       </g>
-      <g id="lights-l"
-         fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6"
-         >
+      <g id="lights-l" fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
         <circle cx="387.89" cy="380.02" r="2.71"/>
         <circle cx="387.89" cy="369.02" r="2.71"/>
         <circle cx="387.89" cy="357.84" r="2.71"/>
@@ -798,248 +772,100 @@
 
   </g>
 
-  <g id="house-right"
-     transform="translate(0, 400)">
-    <path id="house-outline-right"
-      class="secondary"
-         fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
-         stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-         d="M590 264l195-113 l195 113
-         l-12.3-7 v297 h-365.4 v-297z"/>
+  <g id="house-right" transform="translate(0, 400)" style="opacity: 1;">
+    <use id="house-outline-right" xlink:href="#house-shape" x="782.9" y="370" fill="var(--laptop-user-tint)" style="opacity: 1;"/>
 
-    <g id="laptop"
-      class="whānau-member"
-       style="transform-origin:782.9px 520px 0px;"
-       stroke-linecap="butt" stroke-linejoin="round">
-     <path id="screen-bg"
-           fill="var(--devices-color)" stroke-width="2"
-     d="M859.34 508.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
-     <path id="keyboard-bg"
-           fill="var(--devices-color)" stroke-width="2"
-     d="M706.46 508.64L684 528.07v5.77h200.55v-5.77l-25.2-19.43z"/>
-     <rect id="screen"
-           fill="var(--white)" stroke-width="2"
-           width="151.2" height="75.6" x="707.3" y="424.64" rx="0" ry="0"/>
-     <circle id="camera"
-             fill="var(--mid-grey)" stroke="none" stroke-width="1.22"
-             cx="782.9" cy="420.44" r="1.05" />
-     <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M758.54 521.24h46.2l8.4 8.4h-63z"/>
-     <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M704.78 521.24h49.56m54.6 0h54.6"/>
-     <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M712.34 512.84h142.8"/>
-     <path id="keyboard"
-           fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M708.14 517.04h151.2"/>
-     <path id="front-edge"
-           fill="none" stroke="var(--mid-grey)" stroke-width="1.2"
-           d="M884.54 529.64h-199.5"/>
-     <path id="edge-shadow"
-           fill="none" stroke="var(--mid-grey)" stroke-width="2.02"
-           d="M884.54 533.84h-199.5"/>
-     <path id="outline"
-           fill="none" stroke="var(--outline-color)" stroke-width="2.02"
-           d="M684 528.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
+    <g id="router-r" stroke-linecap="round" style="opacity: 1;">
+      <rect fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6" width="19.84" height="111.65" x="603.26" y="279.38" ry="1"/>
+      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4" cx="613.72" cy="290.74" r="5.95"/>
+      <path id="antenna-1" fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6" d="M616.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
 
-      <g id="add-icon-right"
-        style="opacity: 0; transform-origin:752.5px 457.5px 0px"
-        stroke-width="2" fill="var(--laptop-user-color)" stroke="var(--white)">
-        <circle cx="752.5" cy="457.5" r="18"/>
-        <path d="M740.5 457.5 h24 m-12 -12 v24" />
-      </g>
-      <circle id="copy-kuia-right"
-              style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
-              cx="752.5" cy="457.5" r="22"
-              fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
-              stroke-width="5"/>
-      <use id="kuia-laptop"
-           xlink:href="#kuia"
-           x="732" y="437"
-           style="opacity:0;"/>
-      <path id="link-right"
-            style="transform: scale(0); transform-origin: 774px 457px 0px;"
-            d="M774,457 h21.6"
-            stroke="var(--devices-color)" stroke-width="2"/>
-      <circle id="copy-koro-right"
-              style="transform: scale(0); transform-origin:775px 425px 0px;"
-              cx="817" cy="457.5" r="22"
-              fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
-              stroke-width="5"/>
-      <use id="koro-laptop"
-          xlink:href="#koro"
-          x="796.5" y="437"
-          style="opacity:0;"/>
-    </g>
-
-    <g id="router-r"
-       class="secondary"
-       stroke-linecap="round">
-      <rect fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            width="19.84" height="111.65" x="603.26" y="279.38" ry="3.79"/>
-      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4"
-              cx="613.72" cy="290.74" r="5.95" />
-      <path id="antenna-1"
-            fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            d="M616.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
-      <g id="waves-r"
-			   fill="none" stroke="var(--laptop-user-color)" stroke-opacity="0.5" stroke-width="1">
+      <g id="waves-r" fill="none" stroke="var(--laptop-user-color)" stroke-opacity="0.5" stroke-width="1">
         <path d="M668.91 279.38a9.74 9.74 0 00-4.14-12.99"/>
         <path d="M676.85 282.8a17.5 17.5 0 00-7.4-23.8"/>
         <path d="M684.79 286.95a26.33 26.33 0 00-11.37-35.71"/>
       </g>
-      <g id="lights-r"
-         fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
+
+      <g id="lights-r" fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
         <circle cx="613.1" cy="380.02" r="2.71"/>
         <circle cx="613.1" cy="369.02" r="2.71"/>
         <circle cx="613.1" cy="357.84" r="2.71"/>
       </g>
+
+    </g>
+
+    <g id="laptop" style="transform-origin: 766px 520px 0px; opacity: 1; transform: scale(1);" stroke-linecap="butt" stroke-linejoin="round">
+      <use xlink:href="#laptop-flat" style="transform-origin:782.9px 520px 0px;" x="782.9" y="480" fill="var(--devices-color)"/>
+
+      <g id="add-icon-right" style="opacity: 0; transform-origin: 752.5px 457.5px 0px; transform: scale(1);" stroke-width="2" fill="var(--laptop-user-color)" stroke="var(--white)">
+        <circle cx="752.5" cy="457.5" r="18"/>
+        <path d="M740.5 457.5 h24 m-12 -12 v24"/>
+      </g>
+
+      <circle id="copy-kuia-right" style="transform: scale(0); transform-origin: 752.5px 457.5px 0px;" cx="752.5" cy="457.5" r="22" fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)" stroke-width="5"/>
+      <use id="kuia-laptop" xlink:href="#kuia" x="732" y="437" style="opacity: 0;"/>
+      <path id="link-right" style="transform: scale(0); transform-origin: 774px 457px 0px;" d="M774,457 h21.6" stroke="var(--devices-color)" stroke-width="2"/>
+      <circle id="copy-koro-right" style="transform: scale(0); transform-origin: 775px 425px 0px; opacity: 1;" cx="817" cy="457.5" r="22" fill="var(--imac-user-tint)" stroke="var(--imac-user-color)" stroke-width="5"/>
+      <use id="koro-laptop" xlink:href="#koro" x="796.5" y="437" style="opacity: 0;"/>
     </g>
 
   </g>
 
-  <g id="internet"
-     class="internet"
-  	 fill="var(--internet-color)" stroke="var(--internet-tint)">
-    <circle stroke-width="1"
-            cx="500" cy="580" r="71.5"/>
-    <ellipse stroke-width="1"
-            cx="500" cy="580" rx="52.37" ry="71.5"/>
-    <ellipse stroke-width="1"
-            cx="500" cy="580" rx="19.13" ry="71.5"/>
-    <path id="latitude-lines"
-          fill="none" stroke-width="1"
-          d="m 430.68,563.4975 a 950.82,950.82 0 0 1 138.85,0
-            m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21
-            m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13
-            m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
+  <g id="internet" fill="var(--internet-color)" stroke="var(--internet-tint)" style="opacity: 1;">
+    <circle stroke-width="1" cx="500" cy="580" r="71.5"/>
+    <ellipse stroke-width="1" cx="500" cy="580" rx="52.37" ry="71.5"/>
+    <ellipse stroke-width="1" cx="500" cy="580" rx="19.13" ry="71.5"/>
+    <path id="latitude-lines" fill="none" stroke-width="1" d="m 430.68,563.4975 a 950.82,950.82 0 0 1 138.85,0             m 0,33.23 a 947.7,947.7 0 0 1 -69.4,2.42 c -25.27,0 -49.07,-0.92 -69.66,-2.21             m 13.18,-60.75 a 402.33,402.33 0 0 1 113.35,0.13             m -0.44,87.57 c -38.67,4.92 -76.26,5.4 -112.91,0"/>
   </g>
 
   <g id="packets">
-    <path id="right-to-top-packet" class="packet"
-          pathLength="1"
-          fill="none" stroke="var(--laptop-user-medium-tint)"
-          d="M500 508.5c5.47-.25 11.34 10.17 14.3 24 3.03 14.19 3.44 17.79 4.15 28.64 15.12.3 23.18.7 32.3 1.17 4.06 17.29.48 47.46-10.47 63.4 3.74-.24 16.28-1.82 16.28-1.82"/>
-    <path id="top-to-left-packet" class="packet"
-          pathLength="1"
-          fill="none" stroke="var(--pātaka-medium-tint)"
-          d="M443.65 623.89c8.16 1.17 26.55 3.44 42.07 3.68-5.48-23.25-4.83-50.32-4.24-66.43-11.14-.4-22.02.8-32.22 1.18 3.95-24.37 22.64-53.47 50.74-53.82"/>
-    <path id="left-to-top-packet" class="packet"
-          pathLength="1"
-          fill="none" stroke="var(--imac-user-medium-tint)"
-          d="M500 508.5c-6.5-.3-12.68 13.94-14.3 24 8.25-.48 28.6 0 28.6 0 3.83 12.31 6.3 51.58 4.14 66.48-12.42.74-58.64-.25-69.13-1.02.46 5.23 5.85 20.9 10.53 27.91-5.5-.51-16.19-1.98-16.19-1.98"/>
-    <path id="top-to-right-packet" class="packet"
-          pathLength="1"
-          fill="none" stroke="var(--pātaka-medium-tint)"
-          d="M556.56 623.89s-12.54 1.58-16.28 1.81c5.02-7.64 9.2-20.22 10.42-27.81-12.45.53-47.5 1.93-69.14 1.1-2.28-22.5.4-52.49 4.14-66.5 3.35-12.52 7.8-23.8 14.3-23.99"/>
+    <path id="right-to-top-packet" class="packet" pathLength="1" fill="none" stroke="var(--laptop-user-medium-tint)" d="M500 508.5c5.47-.25 11.34 10.17 14.3 24 3.03 14.19 3.44 17.79 4.15 28.64 15.12.3 23.18.7 32.3 1.17 4.06 17.29.48 47.46-10.47 63.4 3.74-.24 16.28-1.82 16.28-1.82" style="stroke-dashoffset: 0.148px; opacity: 0;"/>
+    <path id="top-to-left-packet" class="packet" pathLength="1" fill="none" stroke="var(--pātaka-medium-tint)" d="M443.65 623.89c8.16 1.17 26.55 3.44 42.07 3.68-5.48-23.25-4.83-50.32-4.24-66.43-11.14-.4-22.02.8-32.22 1.18 3.95-24.37 22.64-53.47 50.74-53.82" style="stroke-dashoffset: 0.148px; opacity: 0;"/>
+    <path id="left-to-top-packet" class="packet" pathLength="1" fill="none" stroke="var(--imac-user-medium-tint)" d="M500 508.5c-6.5-.3-12.68 13.94-14.3 24 8.25-.48 28.6 0 28.6 0 3.83 12.31 6.3 51.58 4.14 66.48-12.42.74-58.64-.25-69.13-1.02.46 5.23 5.85 20.9 10.53 27.91-5.5-.51-16.19-1.98-16.19-1.98" style="stroke-dashoffset: 0.148px; opacity: 0;"/>
+    <path id="top-to-right-packet" class="packet" pathLength="1" fill="none" stroke="var(--pātaka-medium-tint)" d="M556.56 623.89s-12.54 1.58-16.28 1.81c5.02-7.64 9.2-20.22 10.42-27.81-12.45.53-47.5 1.93-69.14 1.1-2.28-22.5.4-52.49 4.14-66.5 3.35-12.52 7.8-23.8 14.3-23.99" style="stroke-dashoffset: 0.148px; opacity: 0;"/>
   </g>
 
-  <g id="top-arrows"
-     transform="translate(0, 400)"
-     fill="none" stroke="var(--pātaka-color)"
-     stroke-width="2" marker-end="url(#marker-top)">
+  <g id="top-arrows" transform="translate(0, 400)" fill="none" stroke="var(--pātaka-color)" stroke-width="2" marker-end="url(#marker-top)">
 
     <g id="top-to-left-arrows">
-      <path id="pātaka-to-router-top-left"
-            style="transform-origin:475px -55px 0px;"
-            d="M475,-55 l20 80"/>
-      <path id="router-top-to-internet-left"
-            style="transform-origin:500px 46px 0px;"
-            d="M500 46v60"/>
-      <path id="internet-to-router-left"
-            style="transform-origin:444px 224px 0px;"
-            d="M444 224l-44 70"/>
-      <path id="router-left-to-imac"
-            style="transform-origin:376.89px 300px 0px;"
-           d="M376.89 300l-120 35"/>
+      <path id="pātaka-to-router-top-left" style="transform-origin: 475px -55px 0px; transform: scale(0); opacity: 1;" d="M475,-55 l20 80"/>
+      <path id="router-top-to-internet-left" style="transform-origin: 500px 46px 0px; transform: scale(0); opacity: 1;" d="M500 46v60"/>
+      <path id="internet-to-router-left" style="transform-origin: 444px 224px 0px; transform: scale(0); opacity: 1;" d="M444 224l-44 70"/>
+      <path id="router-left-to-imac" style="transform-origin: 376.89px 300px 0px; transform: scale(0); opacity: 1;" d="M376.89 300l-120 35"/>
     </g>
 
     <g id="top-to-right-arrows">
-      <path id="pātaka-to-router-top-right"
-            style="transform-origin:490px -55px 0px;"
-            d="M490,-55 l10 80"/>
-      <path id="router-top-to-internet-right"
-            style="transform-origin:500px 46px 0px;"
-            d="M500 46v60"/>
-      <path id="internet-to-router-right"
-            style="transform-origin:556px 224px 0px;"
-            d="m 556,224 l44,70"/>
-      <path id="router-right-to-laptop"
-            style="transform-origin:625.1px 300px 0px;"
-            d="m 625.1,300 120,45"/>
+      <path id="pātaka-to-router-top-right" style="transform-origin: 490px -55px 0px; transform: scale(0); opacity: 1;" d="M490,-55 l10 80"/>
+      <path id="router-top-to-internet-right" style="transform-origin: 500px 46px 0px; transform: scale(0); opacity: 1;" d="M500 46v60"/>
+      <path id="internet-to-router-right" style="transform-origin: 556px 224px 0px; transform: scale(0); opacity: 1;" d="m 556,224 l44,70"/>
+      <path id="router-right-to-laptop" style="transform-origin: 625.1px 300px 0px; transform: scale(0); opacity: 1;" d="m 625.1,300 120,45"/>
     </g>
 
   </g>
 
-  <g id="left-arrows"
-     transform="translate(0, 400)"
-     fill="none" stroke="var(--imac-user-color)"
-     stroke-width="2" marker-end="url(#marker-left)">
-    <path id="imac-to-router-left"
-          style="transform-origin:314px 392px 0px;"
-          d="m 314,392 l60,-59"/>
-    <path id="router-left-to-internet"
-          style="transform-origin:396.73px 315px 0px;"
-          d="m 396.73,315 l46,-88"/>
-    <path id="internet-left-to-router-top"
-          style="transform-origin:500px 108px 0px;"
-          d="m 500,108 v-60"/>
-    <path id="router-top-left-to-pātaka"
-          style="transform-origin:500px 25px 0px;"
-					d="M500,25 v-80"/>
+  <g id="left-arrows" transform="translate(0, 400)" fill="none" stroke="var(--imac-user-color)" stroke-width="2" marker-end="url(#marker-left)">
+    <path id="imac-to-router-left" style="transform-origin: 314px 392px 0px; transform: scale(0); opacity: 1;" d="m 314,392 l60,-59"/>
+    <path id="router-left-to-internet" style="transform-origin: 396.73px 315px 0px; transform: scale(0); opacity: 1;" d="m 396.73,315 l46,-88"/>
+    <path id="internet-left-to-router-top" style="transform-origin: 500px 108px 0px; transform: scale(0); opacity: 1;" d="m 500,108 v-60"/>
+    <path id="router-top-left-to-pātaka" style="transform-origin: 500px 25px 0px; transform: scale(0); opacity: 1;" d="M500,25 v-80"/>
   </g>
 
-  <g id="right-arrows"
-     transform="translate(0, 400)"
-     fill="none" stroke="var(--laptop-user-color)"
-     stroke-width="2" marker-end="url(#marker-right)">
-    <path id="laptop-to-router-r"
-          style="transform-origin:706px 416.24px 0px;"
-      		d="M706 416.24L625.1 350"/>
-    <path id="router-r-to-internet"
-          style="transform-origin:605.26px 335.2px 0px;"
-					d="M605.26 335.2l-48,-110"/>
-    <path id="internet-to-router-top-right"
-          style="transform-origin:500px 108px 0px;"
-          d="M500 108 v-60"/>
-    <path id="router-top-right-to-pātaka"
-          style="transform-origin:500px 25px 0px;"
-					d="M500,25 l-20-80"/>
+  <g id="right-arrows" transform="translate(0, 400)" fill="none" stroke="var(--laptop-user-color)" stroke-width="2" marker-end="url(#marker-right)">
+    <path id="laptop-to-router-r" style="transform-origin: 706px 416.24px 0px; transform: scale(0); opacity: 1;" d="M706 416.24L625.1 350"/>
+    <path id="router-r-to-internet" style="transform-origin: 605.26px 335.2px 0px; transform: scale(0); opacity: 1;" d="M605.26 335.2l-48,-110"/>
+    <path id="internet-to-router-top-right" style="transform-origin: 500px 108px 0px; transform: scale(0); opacity: 1;" d="M500 108 v-60"/>
+    <path id="router-top-right-to-pātaka" style="transform-origin: 500px 25px 0px; transform: scale(0); opacity: 1;" d="M500,25 l-20-80"/>
   </g>
 
-  <g id="labels"
-    font-family="'Dosis', sans-serif"
-    font-size="32px"
-    text-anchor="middle">
-    <text id="pātaka-label"
-      class="pātaka"
-          fill="var(--pātaka-color)"
-          x="500" y="140">
+  <g id="labels" font-family="'Dosis', sans-serif" font-size="32px" text-anchor="middle" style="opacity: 0;">
+    <text id="pātaka-label" fill="var(--pātaka-color)" x="500" y="140" style="opacity: 1;">
           Pātaka</text>
-    <text id="internet-label"
-          class="internet"
-          fill="var(--internet-shade)"
-          x="500" y="495">
+    <text id="internet-label" fill="var(--internet-shade)" x="500" y="495" style="opacity: 1;">
           Internet</text>
-    <text id="whānau-member-left"
-      class="whānau-member"
-          fill="var(--imac-user-color)"
-          x="220" y="770">
+    <text id="whānau-member-left" fill="var(--imac-user-color)" x="220" y="770" style="opacity: 1;">
           Whānau Member</text>
-    <text id="whānau-member-right"
-      class="whānau-member"
-          fill="var(--laptop-user-color)"
-          x="790" y="770">
+    <text id="whānau-member-right" fill="var(--laptop-user-color)" x="790" y="770" style="opacity: 1;">
           Whānau Member</text>
   </g>
-  <style>
-    /* <![CDATA[ */
-    @font-face {
-      font-family: 'Dosis';
-      src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
-    /* ]]> */
-  </style>
+
 </svg>

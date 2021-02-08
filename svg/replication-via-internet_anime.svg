@@ -55,6 +55,7 @@
       --icon-bg-color: hsl(180, 25.4%, 40%);
       --outline-color: hsl(0, 0%, 22%);
       --white: hsl(0, 0%, 100%);
+      --light-grey: hsl(0, 0%, 90%);
       --mid-grey: hsl(0, 0%, 41.2%);
       --devices-color: hsl(0, 0%, 29.8%);
       --pounamu: hsl(118, 100.0%, 9.4%);
@@ -231,59 +232,116 @@
         <path d="M414.3 411.8c-1.7 0-3.3-1-4-2.6l-40.2-86.8a4.4 4.4 0 018-3.6l40.2 86.8a4.4 4.4 0 01-4 6.2z"/>
       </g>
     </g>
+
+    <path id="house-shape"
+          fill="var(--light-grey)"
+          stroke="none"
+          filter="url(#shadow)"
+          d="M195 -110 l-195-113 l-195 113
+          l12.3,0 v297 h365.4 v-297z"/>
+
+    <g id="monitor"
+       stroke="none"
+       stroke-linecap="round"  stroke-width="1">
+
+      <rect id="stand-front"
+            fill="var(--devices-color)"
+            x="-14" y="60"
+            width="30" height="40"/>
+      <rect id="baseplate"
+            x="-39" y="95.1"
+            width="80" height="5" rx="1" ry="1"
+            style="transform-origin: 0px 93.8px 0px;"
+            fill="var(--mid-grey)"
+            />
+      <rect id="screen-frame"
+            fill="var(--devices-color)"
+            x="-109" y="-62"
+            width="218" height="132.2" rx="2" ry="2"
+            />
+      <rect id="pc-screen"
+            fill="var(--white)" opacity="0.93"
+            x="-104" y="-56" width="208" height="121"/>
+    </g>
+
+    <g id="laptop-flat"
+       transform="scale(5)"
+       stroke-width=".5">
+      <path id="laptop-screen-bg"
+             stroke="none"
+             d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v21.84z"/>
+      <path id="laptop-screen-bg-overlay"
+            stroke="none" fill="var(--outline-color)" fill-opacity=".2"
+            d="m 18.42,8.2 0,-21.84 a 0.29,0.29 0 0 0 -0.29,-0.29 h -36.26 a 0.29,0.29 0 0 0 -0.29,0.29 v 21.84z"/>
+      <rect id="laptop-screen"
+            fill="var(--white)" fill-opacity="0.95" stroke="none"
+            x="-18" y="-12"
+            width="36" height="18.67" />
+      <circle id="laptop-camera"
+              fill="var(--mid-light-grey)"
+              cx="0" cy="-12.5" r=".25" />
+      <path id="laptop-keyboard"
+            d="M-24,8 h48 q0,2-0.5,2 h-47 q -0.5, 0 -0.5, -2"
+            width="48" height="2"
+            stroke="none"
+            />
+      <path id="touchpad"
+            d="M-24,8 h48 v0.4 h-20 l-0.5,0.75 h-7 l-0.5,-0.75 h-20z"
+            stroke="none"
+            fill="var(--mid-grey)"
+            />
+
+    </g>
+
+    <filter id="shadow" x="-35%" y="-35%" height="170%" width="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="1" dy="2" result="offsetblur"/>
+
+      <feComponentTransfer in="offsetblur" result="first">
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0.25" dy="0.75" result="offsetblurtwo"/>
+
+      <feComponentTransfer in="offsetblurtwo" result="second">
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+
+      <feMerge>
+        <feMergeNode in="second"/>
+        <feMergeNode in="first"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
   </defs>
 
   <g id="house-top">
-    <path id="house-outline-top"
-          class="secondary"
-          style="transform-origin:500px 0px 0px;"
-          transform="scale(1)"
-          fill="var(--pātaka-tint)" stroke="var(--pātaka-color)"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-          d="M695 155 l-195-113 l-195 113
-          l12.3-7 v297 h365.4 v-297z"/>
+    <use id="house-outline-top"
+         xlink:href="#house-shape"
+         x="500" y="260" />
 
     <g id="pc"
-       class="pātaka"
        stroke-linejoin="round" stroke-miterlimit="4"
        style="transform-origin:500px 200px 0px;">
+       <use xlink:href="#monitor" x="455" y="239" />
       <g transform="translate(60, -30) scale(.85)">
-        <g stroke-linecap="butt" stroke-width="1" transform="translate(0, 5)">
-          <path fill="var(--devices-color)" stroke="var(--devices-color)"
-  				d="M609.5 282.9l-51.4-40.2v145.4l51.4 40.1z"/>
-          <rect width="80.8" height="145.4" x="609.5" y="282.9" fill="var(--mid-grey)" stroke="var(--outline-color)" ry="0"/>
-          <path fill="var(--mid-grey)" stroke="var(--outline-color)"
-  				d="M609.5 282.9l-51.4-40.2H639l51.4 40.2z"/>
+        <g stroke-linecap="butt" stroke-width="1.5" transform="translate(0, 5)">
+
+          <rect width="80.8" height="165.4" x="609.5" y="262.9" fill="var(--mid-grey)" stroke="var(--outline-color)" ry="0"/>
+
           <circle cx="650.3" cy="385.6" r="10.6" fill="var(--mid-grey)" stroke="var(--outline-color)"/>
           <rect width="56.9" height="16.3" x="622" y="304.1" fill="var(--mid-grey)" stroke="var(--devices-color)" ry="0.5"/>
           <rect width="56.9" height="16.3" x="622" y="330.1" fill="var(--mid-grey)" stroke="var(--devices-color)" ry="0.5"/>
         </g>
 
         <g id="screen">
-          <g stroke="var(--outline-color)" stroke-linecap="round" stroke-width="1">
-            <path fill="var(--mid-grey)"
-          				d="M424 420h80l14 10h-108z"/>
-            <path fill="var(--mid-grey)"
-          				d="M488 379h-48V425h48z"/>
-          </g>
-          <g stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1">
-            <rect fill="var(--mid-grey)"
-          				x="344" y="235" width="236" height="145"/>
-            <path fill="var(--mid-grey)"
-          				d="M344 235l8-5 h220 l8 5z"/>
-          </g>
-          <rect id="screen"
-                fill="var(--white)" stroke="var(--outline-color)" stroke-linecap="butt" stroke-width="1"
-  				      x="354" y="243" width="216" height="129"/>
-          <path id="reflection"
-                fill="none" stroke="var(--white)"
-                opacity="0.5" stroke-linecap="round" stroke-width="1"
-  				      d="M571 243v130h-218v-130"/>
           <g id="pātaka-symbol"
              fill="var(--pātaka-color)" stroke="var(--outline-color)"
              stroke-linecap="round" stroke-width=".2">
-            <path d="M447.3 319.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
-            <path d="M451.6 330.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
+            <path d="M447.3 329.6v-10.8l-4.4 4.3-4.3-4.3 25-25v-5.4h2.1v5.4l25 25-4.3 4.3-4.2-4.1-.2 10.6h-4.3v-15.2l-13-13-13 13v15.2z"/>
+            <path d="M451.6 340.5v-8.7h-8.7v-2.2h43.5v2.2h-8.7v8.7h-2.2v-8.7h-21.7v8.7z"/>
           </g>
           <g id="pātaka-files"
              style="transform:translate(25px, 0)">
@@ -312,12 +370,12 @@
       </g>
     </g>
 
+
     <g id="router-top"
-      class="secondary"
       transform="translate(824, 48)rotate(90)"
       stroke-linecap="round" stroke-linejoin="miter">
       <rect fill="var(--pātaka-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            width="19.84" height="111.65" x="376.89" y="279.38" ry="3.79"/>
+            width="19.84" height="111.65" x="376.89" y="279.38" ry="1"/>
       <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4"
               cx="386.27" cy="290.74" r="5.95"/>
       <path fill="var(--pātaka-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
@@ -340,16 +398,12 @@
 
   <g id="house-left"
      transform="translate(0, 400)">
-    <path id="house-outline-left"
-      class="secondary"
-          fill="var(--imac-user-tint)" stroke="var(--imac-user-color)"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-			    d="M411 264l-195-113 l-195 113
-          l12.3-7 v297 h365.4 v-297z"/>
+    <use id="house-outline-left"
+         xlink:href="#house-shape"
+         x="218" y="370" fill="var(--imac-user-tint)" />
 
     <g id="imac"
-       class="whānau-member"
-       style="transform-origin:240px 510px 0px"
+       style="transform-origin:250px 510px 0px"
        stroke-linecap="round" stroke-linejoin="round" stroke-width=".26">
       <path fill="var(--devices-color)"
             d="M253.19 534.72h-70.23c7.87-7.31 11.8-11.25 11.8-19.13 0-11.82-3.93-11.82-3.93-11.82h54.78s-3.94 0-3.94 11.82c0 7.88 3.94 11.82 11.24 19.13z"/>
@@ -393,7 +447,6 @@
     </g>
 
     <g id="router-l"
-      class="secondary"
       stroke-linecap="round" stroke-linejoin="miter">
       <rect fill="var(--imac-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
             width="19.84" height="111.65" x="377.89" y="279.38" ry="3.79"/>
@@ -420,47 +473,42 @@
 
   <g id="house-right"
      transform="translate(0, 400)">
-    <path id="house-outline-right"
-      class="secondary"
-         fill="var(--laptop-user-tint)" stroke="var(--laptop-user-color)"
-         stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
-         d="M590 264l195-113 l195 113
-         l-12.3-7 v297 h-365.4 v-297z"/>
+    <use id="house-outline-right"
+         xlink:href="#house-shape"
+         x="782.9" y="370" fill="var(--laptop-user-tint)" />
+
+    <g id="router-r"
+       stroke-linecap="round">
+      <rect fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
+            width="19.84" height="111.65" x="603.26" y="279.38" ry="1"/>
+      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4"
+              cx="613.72" cy="290.74" r="5.95" />
+      <path id="antenna-1"
+            fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
+            d="M616.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
+
+      <g id="waves-r"
+			   fill="none" stroke="var(--laptop-user-color)" stroke-opacity="0.5" stroke-width="1">
+        <path d="M668.91 279.38a9.74 9.74 0 00-4.14-12.99"/>
+        <path d="M676.85 282.8a17.5 17.5 0 00-7.4-23.8"/>
+        <path d="M684.79 286.95a26.33 26.33 0 00-11.37-35.71"/>
+      </g>
+
+      <g id="lights-r"
+         fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
+        <circle cx="613.1" cy="380.02" r="2.71"/>
+        <circle cx="613.1" cy="369.02" r="2.71"/>
+        <circle cx="613.1" cy="357.84" r="2.71"/>
+      </g>
+
+    </g>
 
     <g id="laptop"
-      class="whānau-member"
-       style="transform-origin:782.9px 520px 0px;"
+       style="transform-origin:766px 520px 0px;"
        stroke-linecap="butt" stroke-linejoin="round">
-     <path id="screen-bg"
-           fill="var(--devices-color)" stroke-width="2"
-     d="M859.34 508.64v-92.4H708.98a1.22 1.22 0 00-1.26 0v92.4z"/>
-     <path id="keyboard-bg"
-           fill="var(--devices-color)" stroke-width="2"
-     d="M706.46 508.64L684 528.07v5.77h200.55v-5.77l-25.2-19.43z"/>
-     <rect id="screen"
-           fill="var(--white)" stroke-width="2"
-           width="151.2" height="75.6" x="707.3" y="424.64" rx="0" ry="0"/>
-     <circle id="camera"
-             fill="var(--mid-grey)" stroke="none" stroke-width="1.22"
-             cx="782.9" cy="420.44" r="1.05" />
-     <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M758.54 521.24h46.2l8.4 8.4h-63z"/>
-     <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M704.78 521.24h49.56m54.6 0h54.6"/>
-     <path fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M712.34 512.84h142.8"/>
-     <path id="keyboard"
-           fill="none" stroke="var(--mid-grey)" stroke-width=".59"
-           d="M708.14 517.04h151.2"/>
-     <path id="front-edge"
-           fill="none" stroke="var(--mid-grey)" stroke-width="1.2"
-           d="M884.54 529.64h-199.5"/>
-     <path id="edge-shadow"
-           fill="none" stroke="var(--mid-grey)" stroke-width="2.02"
-           d="M884.54 533.84h-199.5"/>
-     <path id="outline"
-           fill="none" stroke="var(--outline-color)" stroke-width="2.02"
-           d="M684 528.07v5.77h200.54v-5.77l-25.2-19.43v-92.4h-151.2c-.84 0-1.26 0-1.26 4.2v88.2zm22.88-19.43h152.46"/>
+      <use xlink:href="#laptop-flat"
+           style="transform-origin:782.9px 520px 0px;"
+           x="782.9" y="480" fill="var(--devices-color)"/>
 
       <g id="add-icon-right"
         style="opacity: 0; transform-origin:752.5px 457.5px 0px"
@@ -468,6 +516,7 @@
         <circle cx="752.5" cy="457.5" r="18"/>
         <path d="M740.5 457.5 h24 m-12 -12 v24" />
       </g>
+
       <circle id="copy-kuia-right"
               style="transform: scale(0); transform-origin:752.5px 457.5px 0px;"
               cx="752.5" cy="457.5" r="22"
@@ -492,34 +541,9 @@
           style="opacity:0;"/>
     </g>
 
-    <g id="router-r"
-       class="secondary"
-       stroke-linecap="round">
-      <rect fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            width="19.84" height="111.65" x="603.26" y="279.38" ry="3.79"/>
-      <circle fill="var(--devices-color)" stroke="var(--outline-color)" stroke-width=".4"
-              cx="613.72" cy="290.74" r="5.95" />
-      <path id="antenna-1"
-            fill="var(--laptop-user-medium-tint)" stroke="var(--outline-color)" stroke-width=".6"
-            d="M616.25 293.8l44.19-15.87c4.14-1.62 2.88-6.3-1.8-5.23l-45.1 13.17c-5.6 1.8-3.25 10.1 2.7 7.94z"/>
-      <g id="waves-r"
-			   fill="none" stroke="var(--laptop-user-color)" stroke-opacity="0.5" stroke-width="1">
-        <path d="M668.91 279.38a9.74 9.74 0 00-4.14-12.99"/>
-        <path d="M676.85 282.8a17.5 17.5 0 00-7.4-23.8"/>
-        <path d="M684.79 286.95a26.33 26.33 0 00-11.37-35.71"/>
-      </g>
-      <g id="lights-r"
-         fill="var(--white)" stroke="var(--outline-color)" stroke-width=".6">
-        <circle cx="613.1" cy="380.02" r="2.71"/>
-        <circle cx="613.1" cy="369.02" r="2.71"/>
-        <circle cx="613.1" cy="357.84" r="2.71"/>
-      </g>
-    </g>
-
   </g>
 
   <g id="internet"
-     class="internet"
   	 fill="var(--internet-color)" stroke="var(--internet-tint)">
     <circle stroke-width="1"
             cx="500" cy="580" r="71.5"/>
@@ -632,22 +656,18 @@
     font-size="32px"
     text-anchor="middle">
     <text id="pātaka-label"
-      class="pātaka"
           fill="var(--pātaka-color)"
           x="500" y="140">
           Pātaka</text>
     <text id="internet-label"
-          class="internet"
           fill="var(--internet-shade)"
           x="500" y="495">
           Internet</text>
     <text id="whānau-member-left"
-      class="whānau-member"
           fill="var(--imac-user-color)"
           x="220" y="770">
           Whānau Member</text>
     <text id="whānau-member-right"
-      class="whānau-member"
           fill="var(--laptop-user-color)"
           x="790" y="770">
           Whānau Member</text>
@@ -667,8 +687,8 @@
     });
 
     const tl = anime.timeline({
-      autoplay: true,
-      loop: true,
+      autoplay: false,
+      loop: false,
       duration: 500,
       easing: 'easeInOutQuad'
     })
@@ -679,19 +699,19 @@
         opacity: [0, 1],
         duration: 100
       }, 1000)
-      .add({ targets: '.pātaka',
+      .add({ targets: '#pc, #pātaka-label',
         opacity: [0, 1],
         duration: 1000
       }, '-=250')
-      .add({ targets: '.internet',
+      .add({ targets: '#internet, #internet-label',
         opacity: [0, 1],
         duration: 1000
       }, '-=250')
-      .add({ targets: '.whānau-member',
+      .add({ targets: '#imac, #laptop, #whānau-member-left, #whānau-member-right',
         opacity: [0, 1],
         duration: 1000
       }, '-=250')
-      .add({ targets: '.secondary',
+      .add({ targets: '#house-outline-top, #router-top, #house-outline-left, #router-l, #house-outline-right, #router-r',
         opacity: [0, 1],
         duration: 1000
       }, '+=600')
@@ -702,7 +722,7 @@
 
       // laptop user creates whakapapa record
       .add({ targets: '#laptop',
-        scale: [1, 2]
+        scale: [1, 1.7]
       }, '+=1200')
       .add({ targets: '#add-icon-right',
         keyframes: [
@@ -729,7 +749,7 @@
         ]
       }, '+=200')
       .add({ targets: '#laptop',
-        scale: [2, 1],
+        scale: [1.7, 1],
         duration: 800
       }, '-=600')
       .add({ targets: '#laptop-to-router-r, #router-r-to-internet',
@@ -933,6 +953,8 @@
         opacity: [1, 0],
         duration: 1000
       }, '+=5000')
+      // tl.seek(15000)
+      tl.play()
 
     // ]]>
   </script>
