@@ -2,7 +2,12 @@
 
 This is a helper script to convert an anime.js timeline into CSS animation.
 
-The aim is to have self-contained looping SVG animations which can be used as the source of an `<img>` element, and therefore can be used in places where you're not able to use inline SVG (such as Github Markdown). `<img>` elements cannot access any external resources or even run an inline `<script>`, so if you want a looping SVG animation in your `<img>`, it has to be animated with CSS, or ye olde [SMIL](https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL).
+The aim is to have self-contained looping SVG animations which can be used as the source of an `<img>` element, and therefore can be used in places where you're not able to use inline SVG - such as Github Markdown:
+
+![a super-complex CSS animation looping like a GIF](../svg/multiple-pātaka_css.svg)
+_This SVG was animated with anime.js, it's a [2000-line file](../svg/multiple-pātaka_anime.svg), and it runs for 2 minutes. I've then converted it to CSS animations with this script so it can be embedded here. You **cannot** write something like this manually in CSS._ 
+
+`<img>` elements cannot access any external resources or even run an inline `<script>`, so if you want a looping SVG animation in your `<img>`, it has to be animated with CSS, or ye olde [SMIL](https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL).
 
 I've written complex CSS animations before, and it's a horrible experience - I much prefer the straightforward and flexible approach to animation writing that anime.js timelines offer.
 
